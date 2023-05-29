@@ -10,24 +10,24 @@ int main(void)
     {
         start = get_int("Start size: ");
     }
-    while (n < 1);
+    while (start < 1);
 
     printf("Start size: %i\n", start);
 
     // TODO: Prompt for end size
     int end = get_int("End size: ");
-    printf("End size: %i\n, end);
+    printf("End size: %i\n", end);
 
     if (end < start) {
-        printf(%i\n, end)
+        printf("End size:%i\n", end);
     }
 
-    printf( %i\n, start);
+    printf("End size: %i\n", start);
 
 
     // TODO: Calculate number of years until we reach threshold
-    int years = get int(years + years / 12);
+    int years = get_int(years + years / 12);
 
     // TODO: Print number of years
-    printf("Years: %i\n, years);
+    printf("Years: %i\n", years);
 }
