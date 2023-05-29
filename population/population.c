@@ -30,7 +30,7 @@ int main(void)
 
     for (int i = start; i < end; i++)
     {
-        years = get_int(start = start + (start / 12));
+        years = get_int(start = start + (start / 3) - (start / 4));
     }
 
     // TODO: Print number of years
