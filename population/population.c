@@ -10,7 +10,7 @@ int main(void)
         printf(%i\n, start)
     }
 
-    printf( %i\n, start);
+    printf(%i\n, start);
 
     // TODO: Prompt for end size
     int end = get_int("End size: ");
