@@ -16,7 +16,7 @@ int main(void)
 
     // TODO: Prompt for end size
     int end = get_int("End size: ");
-    printf( %i\n, end);
+    printf("End size: %i\n, end);
 
     if (end < start) {
         printf(%i\n, end)
