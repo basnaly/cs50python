@@ -4,6 +4,7 @@
 int main(void)
 {
     // TODO: Prompt for start size
+    int start = 
 
     // TODO: Prompt for end size
 
