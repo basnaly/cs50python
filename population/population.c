@@ -4,15 +4,17 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    int start = get_int("Start size: ");
+    int start
 
-    
-
-    if (start < 1) {
-        printf(%i\n, start)
+    do
+    {
+        start = get_int("Start size: ");
     }
+    while (n > 1)
 
-    printf(%i\n, start);
+        printf(%i\n, start)
+
+    printf("Start size: %i\n", start);
 
     // TODO: Prompt for end size
     int end = get_int("End size: ");
