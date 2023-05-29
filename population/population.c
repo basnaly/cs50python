@@ -18,7 +18,7 @@ int main(void)
     int end = get_int("End size: ");
     printf("End size: %i\n", end);
 
-    if (end < start) {
+    while (end < start) {
         printf("End size:%i\n", end);
     }
 
