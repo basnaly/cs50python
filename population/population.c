@@ -6,6 +6,8 @@ int main(void)
     // TODO: Prompt for start size
     int start = get_int("Start size: ");
 
+    
+
     if (start < 1) {
         printf(%i\n, start)
     }
