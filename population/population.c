@@ -31,7 +31,7 @@ int main(void)
     for (int i = 0; start < end; i++)
     {
         start = start + (start / 3) - (start / 4);
-        printf(start)
+        printf("Start: %i\n", start);
         years = i;
     }
 
