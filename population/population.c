@@ -10,7 +10,7 @@ int main(void)
     {
         start = get_int("Start size: ");
     }
-    while (n > 1);
+    while (n < 1);
 
     printf("Start size: %i\n", start);
 
