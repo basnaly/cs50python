@@ -30,7 +30,8 @@ int main(void)
 
     for (int i = 0; start < end; i++)
     {
-        start = start + trunc(start / 3) - trunc(start / 4);
+        start = start + (start / 3) - (start / 4);
+        printf(start)
         years = i;
     }
 
