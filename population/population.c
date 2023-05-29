@@ -4,15 +4,13 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    int start
+    int start;
 
     do
     {
         start = get_int("Start size: ");
     }
-    while (n > 1)
-
-        printf(%i\n, start)
+    while (n > 1);
 
     printf("Start size: %i\n", start);
 
