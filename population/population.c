@@ -26,11 +26,11 @@ int main(void)
 
 
     // TODO: Calculate number of years until we reach threshold
-    int years;
+    char years;
 
     for (int i = start; i < end; i++)
     {
-        years = get_int(start = start + (start / 3) - (start / 4));
+        years = get_char(start = start + (start / 3) - (start / 4));
     }
 
     // TODO: Print number of years
