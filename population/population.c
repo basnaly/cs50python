@@ -26,7 +26,7 @@ int main(void)
 
 
     // TODO: Calculate number of years until we reach threshold
-    int years = get_int(years + years / 12);
+    int years = get_int(start + start / 12);
 
     // TODO: Print number of years
     printf("Years: %i\n", years);
