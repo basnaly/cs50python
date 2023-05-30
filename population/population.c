@@ -30,9 +30,9 @@ int main(void)
 
     while(start < end)
     {
-        start = start + (start / 3) - (start /4);
+        years = start + (start / 3) - (start /4);
     }
 
     // TODO: Print number of years
-    int years;
+    printf()
 }
