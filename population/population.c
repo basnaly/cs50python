@@ -10,7 +10,7 @@ int main(void)
     {
         start = get_int("Start size: ");
     }
-    while start < 9
+    while (start < 9)
 
     printf("Start size: %i\n", start);
 
@@ -21,14 +21,14 @@ int main(void)
     {
         end = get_int("End size: ");
     }
-    while (end < start)
+    while (end < start);
 
     printf("End size: %i\n", end);
 
     // TODO: Calculate number of years until we reach threshold
     int years = 0;
 
-    while(start < end)
+    while(start < end);
     {
         start = start + (start / 3) - (start /4);
         years++
