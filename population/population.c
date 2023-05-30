@@ -28,9 +28,11 @@ int main(void)
     // TODO: Calculate number of years until we reach threshold
     int years;
 
-    while()
+    while(start < end)
     {
-        
+        int i = 1
+        start = start + (start / 3) - (start /4)
+        i++;
     }
 
     // TODO: Print number of years
