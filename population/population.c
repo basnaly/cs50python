@@ -26,13 +26,14 @@ int main(void)
     printf("End size: %i\n", end);
 
     // TODO: Calculate number of years until we reach threshold
-    int years;
+    int years = 0;
 
     while(start < end)
     {
-        years = start + (start / 3) - (start /4);
+        start = start + (start / 3) - (start /4);
+        years++
     }
 
     // TODO: Print number of years
-    printf()
+    printf("Years: %i\n, years");
 }
