@@ -17,9 +17,13 @@ int main(void)
 
         for (char j = 0; j < size; j++)
         {
-            if (size - i < j )
+            if (size - i < j + 2)
             {
                 printf("#");
+            }
+            else if (size - i > j + 3)
+            {
+                printf("..");
             }
             else
             {
