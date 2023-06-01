@@ -14,9 +14,11 @@ int main(void)
 
     for (char i = 0; i < size; i++)
     {
-        for (char j = 1; j < i; j++) {
-            printf("#\n");
+        for (char j = 1; j < size; j++)
+        {
+            printf("#");
         }
+        printf("./n");
 
     }
 
