@@ -17,22 +17,20 @@ int main(void)
 
         for (char j = 0; j < size; j++)
         {
-            if (size - i < j + 1)
+            if (size - i < j + 2)
             {
                 printf("#");
             }
 
             else
             {
-                printf(".");
+                printf(" ");
             }
         }
-        printf("..");
+        printf("  ");
 
-        for (char k = 0; k < size; k++)
+        for (char k = 0; k < i + 1; k++)
         {
-            if (size - i < k + 1)
-            {
                 printf("#");
             }
         }
