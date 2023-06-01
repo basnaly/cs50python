@@ -14,13 +14,17 @@ int main(void)
 
     for (char i = 0; i < size; i++)
     {
-        for (char j = 0; j <  size; j++)
+        for (char j = 0; j < size; j++)
         {
-            if ()
-            printf("#");
+            if (i > j)
+            {
+                printf("#");
+            }
+            else
+            {
+                printf(".");
+            }
         }
         printf(".\n");
-
     }
-
 }
