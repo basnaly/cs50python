@@ -16,13 +16,13 @@ int main(void)
     {
         for (char j = 0; j < size; j++)
         {
-            if (i >= j)
+            if (size - i >= j)
             {
-                printf("#");
+                printf(".");
             }
             else
             {
-                printf(".");
+                printf("#");
             }
         }
         printf("\n");
