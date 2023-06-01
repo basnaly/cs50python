@@ -9,9 +9,17 @@ int main(void)
     {
         size = get_int("Height: ");
     }
-    while(size < 1 || size > 8)
+    while(size < 1 || size > 8);
 
     printf("Height: %i\n", size);
 
-    for(int = i; i < size;)
+    for (char = i; i < size; i++) {
+
+        for (int = j; j < size; j++)
+        {
+            printf("#");
+        }
+
+        printf("./n");
+    }
 }
