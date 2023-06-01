@@ -10,7 +10,7 @@ int main(void)
     {
         size = get_int("Height: ");
     }
-    while (size < 1 || size > 9);
+    while (size < 1 || size > 8);
 
     for (char i = 0; i < size; i++)
     {
