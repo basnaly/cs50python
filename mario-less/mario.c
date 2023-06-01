@@ -16,7 +16,7 @@ int main(void)
     {
         for (char j = 0; j < size; j++)
         {
-            if (size - i >= j)
+            if (size - i > j+1)
             {
                 printf(".");
             }
