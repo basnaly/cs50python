@@ -7,11 +7,11 @@ int main(void)
 
     do
     {
-        size = get_int("Height: ")
+        size = get_int("Height: ");
     }
     while(size < 1 || size > 8)
 
     printf("Height: %i\n", size);
 
-
+    for(int = i; i < size;)
 }
