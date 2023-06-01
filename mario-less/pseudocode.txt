@@ -1,2 +1,3 @@
-Prompt user for height.
-If height is less than 1 or greater that 8 or notan integer return to step 1.
+Ask user for height.
+If height is less than 1 or greater that 8 or not an integer return to step 1.
+Iterate from 0 to height - 1.
