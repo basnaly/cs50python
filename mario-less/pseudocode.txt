@@ -1,5 +1,4 @@
 1. Ask user for height.
 2. If height is less than 1 or greater that 8 or not an integer return to step 1.
 3. Iterate from 0 to (height - 1) with variable i.
-    3.1. Iterate from 0 to (height - 1) with variable j.
-        3.1.1. On line i column j print (height )
+    3.1. Iterate from 0 to (height - 1) with variable j. On line i print (height - i) of spaces, using internal loop with variable j
