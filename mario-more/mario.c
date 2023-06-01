@@ -21,7 +21,7 @@ int main(void)
             {
                 printf("#");
             }
-            else if (size - i > j + 3)
+            else if (size - i < j - 1)
             {
                 printf("..");
             }
@@ -31,6 +31,7 @@ int main(void)
             }
 
         }
+        
 
         printf("\n");
     }
