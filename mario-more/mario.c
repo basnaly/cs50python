@@ -5,12 +5,10 @@ int main(void)
 {
     int size;
 
-    size = get_int("Height: ");
-
     do
     {
-        size = get_int
-        printf("Height, %i\n", size);
+        size = get_int("Height: ");
+        printf("Height: %i\n", size);
     }
     while (size < 1 || size > 8);
 
