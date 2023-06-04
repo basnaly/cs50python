@@ -10,7 +10,6 @@ int main(void)
     do
     {
         printf("Height, %i\n", size);
-
     }
     while (size < 1 || size > 8);
 
@@ -27,10 +26,10 @@ int main(void)
                 printf("#");
             }
         }
-             printf("  ");
+        printf("  ");
         for (int k = 0; k < size; k++)
         {
-            if ( size - i < k + 2)
+            if (i < k)
             {
                 printf("  ");
             }
@@ -38,9 +37,7 @@ int main(void)
             {
                 printf("#");
             }
-
         }
         printf("\n");
-
     }
 }
