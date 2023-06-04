@@ -8,11 +8,8 @@ int main(void)
     do
     {
         size = get_int("Height: ");
-        printf("Height: %i\n", size);
     }
     while (size < 1 || size > 8);
-
-
 
     for (int i = 0; i < size; i++)
     {
