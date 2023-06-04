@@ -27,10 +27,20 @@ int main(void)
                 printf("#");
             }
         }
+             printf("  ");
+        for (int k = 0; k < size; k++)
+        {
+            if (size - i > j + 1)
+            {
+                printf("#");
+            }
+            else
+            {
+                printf("  ");
+            }
 
-        for (int k = 0; k < size; k++) {
-            printf("  ");
         }
         printf("\n");
+
     }
 }
