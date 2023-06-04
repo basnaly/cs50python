@@ -9,9 +9,11 @@ int main(void)
 
     do
     {
-        printf("Height, %i\n", size);
+        siprintf("Height, %i\n", size);
     }
     while (size < 1 || size > 8);
+
+
 
     for (int i = 0; i < size; i++)
     {
