@@ -29,7 +29,7 @@ int main(void)
         {
             if (i < k)
             {
-                printf("  ");
+                printf("");
             }
             else
             {
