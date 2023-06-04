@@ -18,10 +18,15 @@ int main(void)
     {
         for (int j = 0; j < size; j++)
         {
-            if (size - i > j)
-            printf(".");
+            if (size - i > j + 1)
+            {
+                printf(".");
+            }
+            else
+            {
+                printf("#");
+            }
         }
-        printf("#");
 
         for (int k = 0; k < size; k++) {
             printf("#");
