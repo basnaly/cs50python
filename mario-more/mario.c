@@ -19,7 +19,7 @@ int main(void)
         {
             if (size - i > j + 1)
             {
-                printf(".");
+                printf(" ");
             }
             else
             {
