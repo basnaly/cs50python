@@ -9,7 +9,8 @@ int main(void)
 
     do
     {
-        siprintf("Height, %i\n", size);
+        size = get_int
+        printf("Height, %i\n", size);
     }
     while (size < 1 || size > 8);
 
