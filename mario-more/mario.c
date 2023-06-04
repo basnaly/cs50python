@@ -30,7 +30,7 @@ int main(void)
              printf("  ");
         for (int k = 0; k < size; k++)
         {
-            if (size - i > k + 1)
+            if ( k + 2 > size - i)
             {
                 printf("  ");
             }
