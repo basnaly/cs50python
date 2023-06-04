@@ -30,13 +30,13 @@ int main(void)
              printf("  ");
         for (int k = 0; k < size; k++)
         {
-            if (size - i > k + 2)
+            if (size - k < i + 1)
             {
-                printf("#");
+                printf("  ");
             }
             else
             {
-                printf("  ");
+                printf("#");
             }
 
         }
