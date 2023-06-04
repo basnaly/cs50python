@@ -29,7 +29,7 @@ int main(void)
         }
 
         for (int k = 0; k < size; k++) {
-            printf("");
+            printf("  ");
         }
         printf("\n");
     }
