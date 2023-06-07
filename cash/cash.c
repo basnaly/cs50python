@@ -30,6 +30,7 @@ int main(void)
     // Calculate the number of dimes to give the customer
     int dimes = calculate_dimes(cents);
 
+    dimes = cents / 10; 
     
     cents = cents - dimes * 10;
 
