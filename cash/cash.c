@@ -49,7 +49,7 @@ int get_cents(void)
     }
     while (cents < 0);
 
-    printf("Number of cents: %i\n", cents);
+    // printf("Number of cents: %i\n", cents);
 
     return cents;
 }
