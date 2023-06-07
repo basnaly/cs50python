@@ -56,7 +56,7 @@ int calculate_quarters(int cents)
 {
     // TODO
 
-    quarters = cents / 25;
+    int quarters = cents / 25;
 
     return quarters;
 }
@@ -64,7 +64,9 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     // TODO
-    dimes = cents / 10;
+
+    int dimes = cents / 10;
+
     return dimes;
 }
 
@@ -80,6 +82,6 @@ int calculate_pennies(int cents)
     // TODO
 
     pennies = cents / 1;
-    
+
     return pennies;
 }
