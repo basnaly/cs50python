@@ -25,14 +25,10 @@ int main(void)
     // Calculate the number of nickels to give the customer
     int nickels = calculate_nickels(cents);
 
-    nickels = cents / 5;
-
     cents = cents - nickels * 5;
 
     // Calculate the number of pennies to give the customer
     int pennies = calculate_pennies(cents);
-
-    pennies = cents / 1;
 
     cents = cents - pennies * 1;
 
@@ -58,6 +54,8 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
+    // TODO
+
     quarters = cents / 25;
 
     return quarters;
@@ -65,6 +63,7 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
+    // TODO
     dimes = cents / 10;
     return dimes;
 }
@@ -72,11 +71,15 @@ int calculate_dimes(int cents)
 int calculate_nickels(int cents)
 {
     // TODO
+    nickels = cents / 5;
     return nickels;
 }
 
 int calculate_pennies(int cents)
 {
     // TODO
+
+    pennies = cents / 1;
+    
     return pennies;
 }
