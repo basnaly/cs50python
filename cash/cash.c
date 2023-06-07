@@ -41,6 +41,8 @@ int main(void)
 
 int get_cents(void)
 {
+    int cents;
+
     do
     {
         cents = get_int("Number of cents: ");
@@ -73,7 +75,9 @@ int calculate_dimes(int cents)
 int calculate_nickels(int cents)
 {
     // TODO
-    nickels = cents / 5;
+
+    int nickels = cents / 5;
+
     return nickels;
 }
 
@@ -81,7 +85,7 @@ int calculate_pennies(int cents)
 {
     // TODO
 
-    pennies = cents / 1;
+    int pennies = cents / 1;
 
     return pennies;
 }
