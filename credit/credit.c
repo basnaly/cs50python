@@ -5,9 +5,9 @@
 long get_number();
 int calc_sum(long number);
 bool is_valid();
-bool american(long number);
-bool master(long number);
-bool visa(long number);
+bool is_american(long number);
+bool is_master(long number);
+bool is_visa(long number);
 bool card_type();
 
 int main(void)
@@ -24,15 +24,15 @@ int main(void)
     bool is_valid = calcilate_sum % 10 == 0;
 
     // Check if a credit card number is American express
-    bool american = is_american();
+    bool is_american = false;
 
     // Check if a credit card number is MasterCard
-    bool master = is_master();
+    bool is_master = false;
 
     // Check if a credit card number is Visa
-    bool visa = is_visa();
+    bool is_visa = false;
 
-    bool card_type = is_type(is_american(), is_master(), is_visa())
+    bool card_type = is_type(is_american, is_master, is_visa)
 
 }
 
@@ -77,7 +77,7 @@ int calc_sum(long number)
     return sum;
 }
 
-bool american(long number)
+bool is_american(long number)
 {
     int start1 = 34;
     int start2 = 37;
@@ -93,7 +93,7 @@ bool american(long number)
     }
 }
 
-bool master(long number)
+bool is_master(long number)
 {
     int start1 = 51;
     int start2 = 52;
@@ -112,7 +112,7 @@ bool master(long number)
     }
 }
 
-bool visa(long number)
+bool is_visa(long number)
 {
     int start = 4;
     int digits1 = 13;
