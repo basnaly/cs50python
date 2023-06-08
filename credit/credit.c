@@ -155,6 +155,6 @@ bool card_type()
     }
     else
     {
-        printf("INVALID ");
+        return "INVALID";
     }
 }
