@@ -47,14 +47,14 @@ int calc_sum(long number)
         }
         else
         {
-            int double_rem = 
-            if (rem *2 )
+            int double_rem = rem * 2;
+            if (double_rem > 9) {
+                double_rem = 1 + double_rem -10
+            }
             sum_odd = sum_odd + rem * 2;
         }
     }
-    for (int i = 0; sum_odd > 0; i++) {
-
-    }
+    
 }
 
 bool is_valid(calculate_sum)
