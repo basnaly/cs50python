@@ -32,8 +32,7 @@ int main(void)
     // Check if a credit card number is Visa
     bool is_visa = false;
 
-    bool card_type = is_type(is_american, is_master, is_visa)
-
+    bool card_type = false;
 }
 
 long get_number(void)
