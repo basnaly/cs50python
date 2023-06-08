@@ -9,6 +9,6 @@ int main(void)
     {
         number = get_long("Enter your credit card number: "):
     }
-    while (size)
+    while (size > 0)
 
 }
