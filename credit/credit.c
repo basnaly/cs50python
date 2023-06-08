@@ -50,7 +50,7 @@ int calc_sum(long number)
             sum_odd = sum_odd + rem * 2; // 14
         }
     }
-    
+    for(int j = 0; j <)
 }
 
 bool is_valid(calculate_sum)
