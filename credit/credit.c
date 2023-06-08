@@ -7,11 +7,11 @@ int main(void)
     long number = get_number();
 
     // Check if a credit card number is (syntactically) valid
-    int sum = get_sum(number);
+    int calcilate_sum = calc_sum(long number);
 
 }
 
-int get_number(void)
+long get_number(void)
 {
     long number;
 
@@ -21,3 +21,5 @@ int get_number(void)
     }
     while (size < 0);
 }
+
+int sum =
