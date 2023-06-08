@@ -5,7 +5,7 @@
 long get_number();
 int calc_sum(long number);
 bool is_valid();
-bool is_american(long number);
+bool is_american(long number, is_valid(true));
 bool is_master(long number);
 bool is_visa(long number);
 bool card_type();
@@ -21,7 +21,7 @@ int main(void)
     printf("Your card is: %d\n", card_type());
 
     // Check if a credit card number is valid
-    bool is_valid = calcilate_sum % 10 == 0;
+    bool is_valid = false;
 
     // Check if a credit card number is American express
     bool is_american = false;
@@ -74,6 +74,18 @@ int calc_sum(long number)
         }
     }
     return sum;
+}
+
+bool is_valid()
+{
+    if (calcilate_sum % 10 == 0)
+    {
+        return true
+    }
+    else
+    {
+        return false
+    }
 }
 
 bool is_american(long number)
