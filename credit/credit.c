@@ -93,6 +93,41 @@ bool american(long number)
     }
 }
 
+bool master(long number)
+{
+    int start1 = 51;
+    int start2 = 52;
+    int start2 = 53;
+    int start2 = 54;
+    int start2 = 55;
+    int digits = 16;
+
+    if ((number / 10 ^ (digits - 2)) == 51 || (number / 10 ^ (digits - 2)) == 52 || (number / 10 ^ (digits - 2)) == 53 || (number / 10 ^ (digits - 2)) == 54 || (number / 10 ^ (digits - 2)) == 55)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool visa(long number)
+{
+    int start = 4;
+    int digits1 = 15;
+    int digits1 = 15;
+
+    if ((number / 10 ^ (digits - 2)) == 34 || (number / 10 ^ (digits - 2)) == 37)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 bool card_type(is_american(), is_master(), is_visa())
 {
     if (is_american(true) && is_valid(true))
