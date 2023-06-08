@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 long get_number();
 int calc_sum(long number);
@@ -19,7 +19,6 @@ int main(void)
     int calculate_sum = calc_sum(number);
     printf("Sum: %i\n", calculate_sum);
     printf("Your card is: %s\n", card_type(number, calculate_sum));
-
 }
 
 long get_number(void)
@@ -40,7 +39,7 @@ int calc_sum(long number)
     int sum_even = 0;
     for (int i = 0; number > 0; i++)
     {
-        int rem = number % 10; // 3, 2
+        int rem = number % 10;        // 3, 2
         number = (number - rem) / 10; // 12, 1
         if (i % 2 == 0)
         {
@@ -49,19 +48,9 @@ int calc_sum(long number)
         else
         {
             sum_odd = sum_odd + rem * 2; // 14
-            if (sum > 9)
-            {
-                int sum1 = sum; //14
-                for (int j = 0; sum1 >= 10; j++)
-                {
-                    int rem1 = sum1 % 10; //4
-                    sum1 = (sum - rem1) / 10; //1
-                    sum = sum + sum1 + rem1; // 5
-                }
-            }
         }
     }
-    return sum;
+    
 }
 
 bool is_valid(calculate_sum)
@@ -101,7 +90,8 @@ bool is_master(long number)
     int start5 = 55;
     int digits = 16;
 
-    if ((number / 10 ^ (digits - 2)) == 51 || (number / 10 ^ (digits - 2)) == 52 || (number / 10 ^ (digits - 2)) == 53 || (number / 10 ^ (digits - 2)) == 54 || (number / 10 ^ (digits - 2)) == 55)
+    if ((number / 10 ^ (digits - 2)) == 51 || (number / 10 ^ (digits - 2)) == 52 || (number / 10 ^ (digits - 2)) == 53 ||
+        (number / 10 ^ (digits - 2)) == 54 || (number / 10 ^ (digits - 2)) == 55)
     {
         return true;
     }
