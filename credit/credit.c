@@ -113,14 +113,16 @@ bool is_visa(long number)
     int digits2 = 16;
 
     for (int i = 0; i <= 16; i++) {
-        number = number / 10;
-    if (number == 4 && (i == digits1 || i == digits2))
-        return true;
+        int rem = number % 10;
+        number = (number - rem) / 10;
+        printf("Ren)
+        if (rem == 4 && (i == digits1 || i == digits2))
+        {
+            return true;
+        }
     }
-    else
-    {
-        return false;
-    }
+    return false;
+
 }
 
 string card_type(long number, int sum)
