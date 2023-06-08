@@ -24,5 +24,5 @@ long get_number(void)
 
 int calcilate_sum(long number)
 {
-    
+    int sum1 = 
 }
