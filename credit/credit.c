@@ -127,7 +127,7 @@ bool is_visa(long number)
     }
 }
 
-bool card_type()
+bool card_type(is_valid(true))
 {
     if (is_american(true))
     {
