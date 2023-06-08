@@ -129,7 +129,7 @@ bool is_visa(long number)
 
 bool card_type()
 {
-    if (is_american(true) && is_valid(true))
+    if (is_american(true))
     {
         return "AMERICAN EXPRESS";
     }
