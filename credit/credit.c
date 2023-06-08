@@ -40,13 +40,14 @@ int calc_sum(long number)
     for (int i = 0; number > 0; i++)
     {
         int rem = number % 10;
-        number = (number - rem) / 10; 
+        number = (number - rem) / 10;
         if (i % 2 == 0)
         {
             sum_even = sum_even + rem;
         }
         else
         {
+            if (rem )
             sum_odd = sum_odd + rem * 2;
         }
     }
