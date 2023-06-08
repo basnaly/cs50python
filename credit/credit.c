@@ -7,7 +7,7 @@ bool is_valid();
 bool american(long number);
 bool master(long number);
 bool visa(long number);
-bool card_type(is_american(), is_master(), is_visa())
+bool card_type(is_american(), is_master(), is_visa());
 
 int main(void)
 {
@@ -83,11 +83,23 @@ bool american(long number)
 
     if ((number / 10 ^ (digits - 2)) == 34 || (number / 10 ^ (digits - 2)) == 37)
     {
-        printf("AMERICAN EXPRESS ");
+        return true;
     }
     else
     {
-        printf("false ");
+        return false;
     }
-    return
+}
+
+bool card_type(is_american(), is_master(), is_visa())
+{
+    if (is_american(true))
+    {
+        return "AMERICAN EXPRESS"
+    }
+    else if ( is_master(true))
+    {
+        
+    }
+
 }
