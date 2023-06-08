@@ -112,12 +112,9 @@ bool is_visa(long number)
     int digits1 = 13;
     int digits2 = 16;
 
-    printf("print: %i, %li\n", 10 ** (digits1 - 1), number / (10 ** (digits1 - 1)));
-    if (for i = 0; i <= 13; i++) {
-        number = number / 10
-    }
-    if ((number / (10 ^ (digits1 - 1))) == 4 || (number / (10 ^ (digits2 - 1))) == 4)
-    {
+    for (int i = 0; i <= 16; i++) {
+        number = number / 10;
+    if (number == 4 && (i == digits1 || i == digits2))
         return true;
     }
     else
