@@ -82,4 +82,8 @@ bool american(long number)
     {
         printf("AMERICAN EXPRESS ");
     }
+    else
+    {
+        printf("INVALID ");
+    }
 }
