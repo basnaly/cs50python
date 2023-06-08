@@ -141,15 +141,15 @@ bool is_visa(long number)
 
 bool card_type()
 {
-    if (is_american(true))
+    if (is_american(true) && is_valid(true))
     {
         return "AMERICAN EXPRESS";
     }
-    else if (is_master(true))
+    else if (is_master(true) && is_valid(true))
     {
         return "MASTER CARD";
     }
-    else if (is_visa(true))
+    else if (is_visa(true) && is_valid(true))
     {
         return "VISA";
     }
