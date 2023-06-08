@@ -8,7 +8,7 @@ bool is_valid();
 bool is_american(long number);
 bool is_master(long number);
 bool is_visa(long number);
-bool card_type(is_valid(true));
+bool card_type();
 
 int main(void)
 {
