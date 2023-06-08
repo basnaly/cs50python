@@ -115,8 +115,7 @@ bool is_visa(long number)
     for (int i = 0; i <= 16; i++) {
         int rem = number % 10;
         number = (number - rem) / 10;
-        printf("Rem: %i\n", rem)
-        if (rem == 4 && (i == digits1 || i == digits2))
+        if (rem == 4 && (i == digits1 - 1 || i == digits2 - 1))
         {
             return true;
         }
