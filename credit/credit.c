@@ -28,14 +28,14 @@ long get_number(void)
 
 int calc_sum(long number)
 {
-    int sum;
-    for (int i = 0; number>= 10; i++)
+    int sum = 0;
+    for (int i = 0; number>= ; i++)
     {
-        int rem = number % 10;
-        number = (number - rem) / 10;
+        int rem = number % 10; // 3, 2
+        number = (number - rem) / 10; // 12, 1
         if (i % 2 == 0)
         {
-            sum = sum + rem;
+            sum = sum + rem; // 3
         }
         else
         {
