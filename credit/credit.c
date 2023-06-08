@@ -39,18 +39,20 @@ int calc_sum(long number)
     int sum_even = 0;
     for (int i = 0; number > 0; i++)
     {
-        int rem = number % 10;        // 3, 2
-        number = (number - rem) / 10; // 12, 1
+        int rem = number % 10;
+        number = (number - rem) / 10; 
         if (i % 2 == 0)
         {
-            sum_even = sum_even + rem; // 3
+            sum_even = sum_even + rem;
         }
         else
         {
-            sum_odd = sum_odd + rem * 2; // 14
+            sum_odd = sum_odd + rem * 2;
         }
     }
-    for(int j = 0; j <)
+    for (int i = 0; sum_odd > 0; i++) {
+
+    }
 }
 
 bool is_valid(calculate_sum)
