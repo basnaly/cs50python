@@ -20,19 +20,6 @@ int main(void)
     printf("Sum: %i\n", calculate_sum);
     printf("Your card is: %s\n", card_type());
 
-    // Check if a credit card number is valid
-    bool is_valid = false;
-
-    // Check if a credit card number is American express
-    bool is_american = false;
-
-    // Check if a credit card number is MasterCard
-    bool is_master = false;
-
-    // Check if a credit card number is Visa
-    bool is_visa = false;
-
-    bool card_type = false;
 }
 
 long get_number(void)
