@@ -96,9 +96,9 @@ bool is_master(long number)
 {
     int start1 = 51;
     int start2 = 52;
-    int start2 = 53;
-    int start2 = 54;
-    int start2 = 55;
+    int start3 = 53;
+    int start4 = 54;
+    int start5 = 55;
     int digits = 16;
 
     if ((number / 10 ^ (digits - 2)) == 51 || (number / 10 ^ (digits - 2)) == 52 || (number / 10 ^ (digits - 2)) == 53 || (number / 10 ^ (digits - 2)) == 54 || (number / 10 ^ (digits - 2)) == 55)
@@ -115,7 +115,7 @@ bool is_visa(long number)
 {
     int start = 4;
     int digits1 = 13;
-    int digits1 = 16;
+    int digits2 = 16;
 
     if ((number / 10 ^ (digits1 - 1)) == 44 || (number / 10 ^ (digits2 - 1)) == 4)
     {
@@ -127,22 +127,22 @@ bool is_visa(long number)
     }
 }
 
-bool card_type(is_american(), is_master(), is_visa())
+bool card_type()
 {
     if (is_american(true) && is_valid(true))
     {
-        return "AMERICAN EXPRESS"
+        return "AMERICAN EXPRESS";
     }
     else if (is_master(true))
     {
-        return "MASTER CARD"
+        return "MASTER CARD";
     }
     else if (is_visa(true))
     {
-        return "VISA"
+        return "VISA";
     }
     else
     {
-        return "INVALID"
+        return "INVALID";
     }
 }
