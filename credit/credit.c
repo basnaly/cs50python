@@ -7,6 +7,7 @@ bool is_valid();
 bool american(long number);
 bool master(long number);
 bool visa(long number);
+bool card_type(is_american(), is_master(), is_visa())
 
 int main(void)
 {
@@ -28,6 +29,8 @@ int main(void)
 
     // Check if a credit card number is Visa
     bool visa = is_visa();
+
+    bool card_type = is_type(is_american(), is_master(), is_visa())
 
 }
 
@@ -84,7 +87,7 @@ bool american(long number)
     }
     else
     {
-        printf("INVALID ");
+        printf("false ");
     }
-    return 
+    return
 }
