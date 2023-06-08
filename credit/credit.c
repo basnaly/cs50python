@@ -4,8 +4,9 @@
 int main(void)
 {
     // Ask credit card number
-    int number = get_number();
+    long number = get_number();
 
+    // Check if a credit card number is (syntactically) valid
     
 
 }
