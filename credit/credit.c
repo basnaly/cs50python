@@ -22,4 +22,4 @@ long get_number(void)
     while (size < 0);
 }
 
-int sum =
+int calcilate_sum()
