@@ -4,7 +4,7 @@
 
 long get_number();
 int calc_sum(long number);
-bool is_valid(calculate_sum);
+bool is_valid();
 bool is_american(long number);
 bool is_master(long number);
 bool is_visa(long number);
@@ -17,7 +17,7 @@ int main(void)
 
     // Calculate sum of the credit card number digits
     int calculate_sum = calc_sum(number);
-    printf("Sum: %i\n", calcilate_sum);
+    printf("Sum: %i\n", calculate_sum);
     printf("Your card is: %d\n", card_type());
 
     // Check if a credit card number is valid
@@ -80,11 +80,11 @@ bool is_valid(calculate_sum)
 {
     if (calculate_sum % 10 == 0)
     {
-        return true
+        return true;
     }
     else
     {
-        return false
+        return false;
     }
 }
 
