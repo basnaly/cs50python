@@ -36,29 +36,29 @@ long get_number(void)
 
 int calc_sum(long number)
 {
-    int sum odd = 0;
-    int sum even = 0;
+    int sum_odd = 0;
+    int sum_even = 0;
     for (int i = 0; number > 0; i++)
     {
         int rem = number % 10; // 3, 2
         number = (number - rem) / 10; // 12, 1
         if (i % 2 == 0)
         {
-            sum = sum + rem; // 3
+            sum_even = sum_even + rem; // 3
         }
         else
         {
-            sum = sum + rem * 2; // 14
-            // if (sum > 9)
-            // {
-            //     int sum1 = sum; //14
-            //     for (int j = 0; sum1 >= 10; j++)
-            //     {
-            //         int rem1 = sum1 % 10; //4
-            //         sum1 = (sum - rem1) / 10; //1
-            //         sum = sum + sum1 + rem1; // 5
-            //     }
-            // }
+            sum_odd = sum_odd + rem * 2; // 14
+            if (sum > 9)
+            {
+                int sum1 = sum; //14
+                for (int j = 0; sum1 >= 10; j++)
+                {
+                    int rem1 = sum1 % 10; //4
+                    sum1 = (sum - rem1) / 10; //1
+                    sum = sum + sum1 + rem1; // 5
+                }
+            }
         }
     }
     return sum;
