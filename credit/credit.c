@@ -48,13 +48,14 @@ int calc_sum(long number)
         else
         {
             int double_rem = rem * 2;
-            if (double_rem > 9) {
-                double_rem = 1 + double_rem -10
+            if (double_rem > 9)
+            {
+                double_rem = 1 + double_rem - 10;
             }
-            sum_odd = sum_odd + rem * 2;
+            sum_odd = sum_odd + double_rem;
         }
     }
-    
+    return sum_even + sum_odd;
 }
 
 bool is_valid(calculate_sum)
@@ -111,7 +112,7 @@ bool is_visa(long number)
     int digits1 = 13;
     int digits2 = 16;
 
-    if ((number / 10 ^ (digits1 - 1)) == 44 || (number / 10 ^ (digits2 - 1)) == 4)
+    if ((number / (10 ^ (digits1 - 1))) == 4 || (number / (10 ^ (digits2 - 1))) == 4)
     {
         return true;
     }
