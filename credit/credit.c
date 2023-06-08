@@ -86,4 +86,5 @@ bool american(long number)
     {
         printf("INVALID ");
     }
+    return 
 }
