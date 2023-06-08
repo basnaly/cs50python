@@ -78,5 +78,8 @@ bool american(long number)
     int start2 = 37;
     int digits = 15;
 
-    if ()
+    if ((number / 10 ^ (digits - 2)) == 34 || (number / 10 ^ (digits - 2)) == 37)
+    {
+        printf("AMERICAN EXPRESS ");
+    }
 }
