@@ -1,13 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
 
+long get_number();
+int calc_sum(long number);
+
 int main(void)
 {
     // Ask credit card number
     long number = get_number();
 
     // Calculate sum of the credit card number digits
-    int calcilate_sum = calc_sum(long number);
+    int calcilate_sum = calc_sum(number);
 
 }
 
@@ -19,11 +22,11 @@ long get_number(void)
     {
         number = get_long("Enter your credit card number: ");
     }
-    while (size < 0);
+    while (number < 0);
     return number;
 }
 
-int calcilate_sum(long number)
+int calc_sum(long number)
 {
     int sum;
     for (int i = 0; i < number.length; i++)
