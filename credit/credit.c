@@ -4,9 +4,9 @@
 long get_number();
 int calc_sum(long number);
 bool is_valid();
-bool american();
-bool master();
-bool visa();
+bool american(long number);
+bool master(long number);
+bool visa(long number);
 
 int main(void)
 {
@@ -72,7 +72,11 @@ int calc_sum(long number)
     return sum;
 }
 
-bool american()
+bool american(long number)
 {
-    
+    int start1 = 34;
+    int start2 = 37;
+    int digits = 15;
+
+    if ()
 }
