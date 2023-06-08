@@ -6,7 +6,7 @@ int main(void)
     // Ask credit card number
     long number = get_number();
 
-    // Check if a credit card number is (syntactically) valid
+    // Calculate sum of the credit card number digits
     int calcilate_sum = calc_sum(long number);
 
 }
@@ -20,9 +20,10 @@ long get_number(void)
         number = get_long("Enter your credit card number: ");
     }
     while (size < 0);
+    return number;
 }
 
 int calcilate_sum(long number)
 {
-    int sum1 = 
+    int sum =
 }
