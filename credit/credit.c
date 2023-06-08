@@ -36,7 +36,8 @@ long get_number(void)
 
 int calc_sum(long number)
 {
-    int sum = 0;
+    int sum odd = 0;
+    int sum even = 0;
     for (int i = 0; number > 0; i++)
     {
         int rem = number % 10; // 3, 2
