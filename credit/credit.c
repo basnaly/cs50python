@@ -11,7 +11,7 @@ int main(void)
 
     // Calculate sum of the credit card number digits
     int calcilate_sum = calc_sum(number);
-
+    printf("Sum: %i\n", calcilate_sum);
 }
 
 long get_number(void)
