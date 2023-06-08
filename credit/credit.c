@@ -7,7 +7,7 @@ int main(void)
     long number = get_number();
 
     // Check if a credit card number is (syntactically) valid
-    
+    bool ifValid = 
 
 }
 
