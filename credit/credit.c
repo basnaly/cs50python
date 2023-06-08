@@ -47,7 +47,8 @@ int calc_sum(long number)
         }
         else
         {
-            if (rem )
+            int double_rem = 
+            if (rem *2 )
             sum_odd = sum_odd + rem * 2;
         }
     }
