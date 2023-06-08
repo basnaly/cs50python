@@ -25,5 +25,26 @@ long get_number(void)
 
 int calcilate_sum(long number)
 {
-    int sum =
+    int sum;
+    for (int i = 0; i < number.length; i++)
+    {
+        int rem = number % 10;
+        number = (number - rem) / 10;
+        if (i % 2 == 0)
+        {
+            sum = sum + rem;
+        }
+        else
+        {
+            sum = sum + rem * 2;
+            if (sum > 9)
+            {
+                for (int j = 0; j < sum.length; i++)
+                {
+                    int rem1 = sum % 10;
+                    sum = ()
+                }
+            }
+        }
+    }
 }
