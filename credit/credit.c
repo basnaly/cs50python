@@ -18,7 +18,7 @@ int main(void)
     // Calculate sum of the credit card number digits
     int calcilate_sum = calc_sum(number);
     printf("Sum: %i\n", calcilate_sum);
-    printf("%d\n", card_type());
+    printf("Your card is: %d\n", card_type());
 
     // Check if a credit card number is valid
     bool is_valid = calcilate_sum % 10 == 0;
