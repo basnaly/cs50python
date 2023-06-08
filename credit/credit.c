@@ -43,9 +43,10 @@ int calcilate_sum(long number)
                 {
                     int rem1 = sum % 10;
                     int sum1 = (sum - rem1) / 10;
-                    sum1 = sum1 + rem1
+                    sum1 = sum1 + rem1;
                 }
             }
         }
     }
+    return sum;
 }
