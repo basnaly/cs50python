@@ -115,10 +115,10 @@ bool master(long number)
 bool visa(long number)
 {
     int start = 4;
-    int digits1 = 15;
-    int digits1 = 15;
+    int digits1 = 13;
+    int digits1 = 16;
 
-    if ((number / 10 ^ (digits - 2)) == 34 || (number / 10 ^ (digits - 2)) == 37)
+    if ((number / 10 ^ (digits1 - 1)) == 44 || (number / 10 ^ (digits2 - 1)) == 4)
     {
         return true;
     }
