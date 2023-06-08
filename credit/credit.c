@@ -3,6 +3,7 @@
 
 long get_number();
 int calc_sum(long number);
+bool is_valid();
 
 int main(void)
 {
@@ -13,9 +14,18 @@ int main(void)
     int calcilate_sum = calc_sum(number);
     printf("Sum: %i\n", calcilate_sum);
 
-    // Calculate sum of the credit card number digits
+    // Check if a credit card number is valid
     bool is_valid = calcilate_sum % 10 == 0;
-    
+
+    // Check if a credit card number is American express
+    bool is_american = 
+
+    // Check if a credit card number is MasterCard
+    bool is_master =
+
+    // Check if a credit card number is Visa
+    bool is_visa =
+
 }
 
 long get_number(void)
