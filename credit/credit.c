@@ -18,10 +18,10 @@ int main(void)
     bool is_valid = calcilate_sum % 10 == 0;
 
     // Check if a credit card number is American express
-    bool is_american = 
+    bool is_american = false;
 
     // Check if a credit card number is MasterCard
-    bool is_master =
+    bool is_master = false
 
     // Check if a credit card number is Visa
     bool is_visa =
