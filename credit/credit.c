@@ -97,9 +97,16 @@ bool card_type(is_american(), is_master(), is_visa())
     {
         return "AMERICAN EXPRESS"
     }
-    else if ( is_master(true))
+    else if (is_master(true))
     {
-        
+        return "MASTER CARD"
     }
-
+    else if (is_visa(true))
+    {
+        return "VISA"
+    }
+    else
+    {
+        return "INVALID"
+    }
 }
