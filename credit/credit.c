@@ -42,7 +42,8 @@ int calcilate_sum(long number)
                 for (int j = 0; j < sum.length; i++)
                 {
                     int rem1 = sum % 10;
-                    sum = ()
+                    int sum1 = (sum - rem1) / 10;
+                    sum1 = sum1 + 
                 }
             }
         }
