@@ -45,9 +45,9 @@ int calc_sum(long number)
                 int sum1 = sum; //14
                 for (int j = 0; sum1 >= 10; j++)
                 {
-                    int rem1 = sum % 10; //4
+                    int rem1 = sum1 % 10; //4
                     sum1 = (sum - rem1) / 10; //1
-                    sum = sum1 + rem1; // 5
+                    sum = sum + sum1 + rem1; // 5
                 }
             }
         }
