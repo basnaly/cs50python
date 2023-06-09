@@ -42,7 +42,7 @@ int calculate_sum(long number)
             int double = i * 2;
             if (double > 9)
             {
-                double = 1 + (double - 10)
+                double = 1 + (double - 10);
             }
             sum_odd = sum_odd + double;
         }
@@ -50,4 +50,11 @@ int calculate_sum(long number)
     return sum_even + sum_odd;
 }
 
-i
+bool is_valid(sum)
+{
+    if (sum % 10 === 0)
+    {
+        return true;
+    }
+    return false;
+}
