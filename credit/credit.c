@@ -8,7 +8,7 @@ bool is_valid(int sum);
 bool is_amex(false);
 bool is_master(false);
 bool is_visa(false);
-string c
+string check_card(is_valid(true))
 
 int main(void)
 {
@@ -111,4 +111,9 @@ bool is_visa(long number)
         }
         return false
     }
+}
+
+string check_card()
+{
+    
 }
