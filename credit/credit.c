@@ -24,7 +24,6 @@ int main(void)
 long get_number(void)
 {
     long number;
-
     do
     {
         number = get_long("Enter your credit card number: ");
