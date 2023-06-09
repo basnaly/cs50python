@@ -147,3 +147,27 @@ string check_card(int sum, long number)
         return "INVALID";
     }
 }
+
+// void check_card(int sum, long number)
+// {
+//     if (is_valid(sum) == false)
+//     {
+//         printf("INVALID\n");
+//     }
+//     else if (is_amex(number))
+//     {
+//         return "AMEX";
+//     }
+//     else if (is_master(number))
+//     {
+//         return "MASTERCARD";
+//     }
+//     else if (is_visa(number))
+//     {
+//         return "VISA";
+//     }
+//     else
+//     {
+//         return "INVALID";
+//     }
+// }
