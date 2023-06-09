@@ -97,10 +97,13 @@ bool is_master(long number)
     int start5 = 55;
     int digits = 16;
 
-    for (int i = 0; i < )
-
-    if ((number / 10 ^ (digits - 2)) == 51 || (number / 10 ^ (digits - 2)) == 52 || (number / 10 ^ (digits - 2)) == 53 ||
-        (number / 10 ^ (digits - 2)) == 54 || (number / 10 ^ (digits - 2)) == 55)
+    for (int i = 0; i <= digits; i++)
+    {
+        int rem = number % 10;
+        number = (number - rem) /10;
+        if ((number == start1 && i == (digits - 2)) || (number == start2 && i == (digits - 2)) || (number == start3 && i == (digits - 2)) ||
+        (number == start4 && i == (digits - 2)) || (number == start5 && i == (digits - 2)))
+    }
     {
         return true;
     }
