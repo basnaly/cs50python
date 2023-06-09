@@ -27,5 +27,6 @@ long get_number(void)
 
 int calculate_sum(long number)
 {
+    
     return 0;
 }
