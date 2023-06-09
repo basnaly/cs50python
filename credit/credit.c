@@ -113,21 +113,21 @@ bool is_visa(long number)
     }
 }
 
-string check_card()
+string check_card(int sum, long number)
 {
     if (is_valid(sum))
     {
         return "INVALID";
     }
-    else if (is_amex(true))
+    else if (is_amex(number))
     {
         return "AMEX";
     }
-    else if (is_master(true))
+    else if (is_master(number))
     {
         return "MASTERCARD";
     }
-    else if (is_visa(true))
+    else if (is_visa(number))
     {
         return "VISA";
     }
