@@ -17,8 +17,8 @@ int main(void)
 
     // Calculate sum of the credit card number digits
     int calculate_sum = calc_sum(number);
-    printf("Sum: %i\n", calculate_sum);
-    printf("Your card is: %s\n", card_type(number, calculate_sum));
+    // printf("Sum: %i\n", calculate_sum);
+    printf("%s\n", card_type(number, calculate_sum));
 }
 
 long get_number(void)
