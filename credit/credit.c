@@ -27,6 +27,8 @@ long get_number(void)
 
 int calculate_sum(long number)
 {
-    
+    int sum_even;
+    int sum_odd;
+    for (int i = 0; )
     return 0;
 }
