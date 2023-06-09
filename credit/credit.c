@@ -8,7 +8,7 @@ bool is_valid(int sum);
 bool is_amex(false);
 bool is_master(false);
 bool is_visa(false);
-string check_card(is_valid(true))
+string check_card()
 
 int main(void)
 {
