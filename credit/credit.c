@@ -57,9 +57,9 @@ int calc_sum(long number)
     return sum_even + sum_odd;
 }
 
-bool is_valid(calculate_sum)
+bool is_valid(int sum)
 {
-    if (calculate_sum % 10 == 0)
+    if (sum % 10 == 0)
     {
         return true;
     }
