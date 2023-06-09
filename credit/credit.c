@@ -131,7 +131,7 @@ string card_type(long number, int sum)
 {
     if (is_american(number) && is_valid(sum))
     {
-        return "AMERICAN EXPRESS";
+        return "AMEX";
     }
     else if (is_master(number) && is_valid(sum))
     {
