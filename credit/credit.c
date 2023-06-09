@@ -10,14 +10,17 @@ int main(void)
     long number = get_number();
 
     // Calculate sum of credit card digts
-    int sum = calculate_sum(long number);
+    int sum = calculate_sum(number);
 
 }
 
-long get_number()
+long get_number(void)
+{
     long number;
     do
     {
-        printf("Number: %li\n", number)
+        number = get_long("Number: ");
     }
-    while (number < 0)
+    while (number < 0);
+    return number;
+}
