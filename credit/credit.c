@@ -135,7 +135,7 @@ string card_type(long number, int sum)
     }
     else if (is_master(number) && is_valid(sum))
     {
-        return "MASTER CARD";
+        return "MASTERCARD";
     }
     else if (is_visa(number) && is_valid(sum))
     {
