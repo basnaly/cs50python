@@ -76,7 +76,13 @@ bool is_american(long number)
     int start2 = 37;
     int digits = 15;
 
-    if ((number / 10 ^ (digits - 2)) == 34 || (number / 10 ^ (digits - 2)) == 37)
+    for (int i = 0; i <= digits; i++)
+    {
+        rem = number % 10;
+        number = (number - rem) / 10;
+    }
+
+    if (number == start1 && i == digits - 2 || (number / 10 ^ (digits - 2)) == 37)
     {
         return true;
     }
