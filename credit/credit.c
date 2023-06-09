@@ -103,14 +103,10 @@ bool is_master(long number)
         number = (number - rem) /10;
         if ((number == start1 && i == (digits - 2)) || (number == start2 && i == (digits - 2)) || (number == start3 && i == (digits - 2)) ||
         (number == start4 && i == (digits - 2)) || (number == start5 && i == (digits - 2)))
-    }
     {
         return true;
     }
-    else
-    {
-        return false;
-    }
+    return false;
 }
 
 bool is_visa(long number)
@@ -119,7 +115,8 @@ bool is_visa(long number)
     int digits1 = 13;
     int digits2 = 16;
 
-    for (int i = 0; i <= digits2; i++) {
+    for (int i = 0; i <= digits2; i++)
+    {
         int rem = number % 10;
         number = (number - rem) / 10;
         if (rem == 4 && (i == digits1 - 1 || i == digits2 - 1))
@@ -128,7 +125,6 @@ bool is_visa(long number)
         }
     }
     return false;
-
 }
 
 string card_type(long number, int sum)
