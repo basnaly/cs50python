@@ -29,6 +29,11 @@ int calculate_sum(long number)
 {
     int sum_even;
     int sum_odd;
-    for (int i = 0; )
+    for (int i = 0; i <= 0; i++) {
+        if (i % 2 == 0)
+        {
+            sum_even = sum_even + i;
+        }
+    }
     return 0;
 }
