@@ -129,15 +129,19 @@ bool is_visa(long number)
 
 string card_type(long number, int sum)
 {
-    if (is_american(number) && is_valid(sum))
+    if (is_valid(sum) == false)
+    {
+        return "INVALID";
+    }
+    else if (is_american(number))
     {
         return "AMEX";
     }
-    else if (is_master(number) && is_valid(sum))
+    else if (is_master(number))
     {
         return "MASTERCARD";
     }
-    else if (is_visa(number) && is_valid(sum))
+    else if (is_visa(number))
     {
         return "VISA";
     }
