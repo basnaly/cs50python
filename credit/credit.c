@@ -21,7 +21,7 @@ int main(void)
     //
     string check_card(sum, number)
     {
-        printf("%s\n", )
+        printf("%s\n", card);
     }
 }
 
@@ -121,6 +121,7 @@ bool is_visa(long number)
 
 string check_card(int sum, long number)
 {
+    string card = get_string()
     if (is_valid(sum))
     {
         return "INVALID";
@@ -141,4 +142,5 @@ string check_card(int sum, long number)
     {
         return "INVALID";
     }
+    return card;
 }
