@@ -112,7 +112,7 @@ bool is_visa(long number)
     int digits1 = 13;
     int digits2 = 16;
 
-    for (int i = 0; i <= 16; i++) {
+    for (int i = 0; i <= digits2; i++) {
         int rem = number % 10;
         number = (number - rem) / 10;
         if (rem == 4 && (i == digits1 - 1 || i == digits2 - 1))
