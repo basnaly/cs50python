@@ -29,7 +29,7 @@ int calculate_sum(long number)
 {
     int sum_even;
     int sum_odd;
-    for (int i = 0; i <= 0; i++)
+    for (int i = 0; number <= 0; i++)
     {
         if (i % 2 == 0)
         {
