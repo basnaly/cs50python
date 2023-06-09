@@ -24,3 +24,8 @@ long get_number(void)
     while (number < 0);
     return number;
 }
+
+int calculate_sum(long number)
+{
+    return 0;
+}
