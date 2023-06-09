@@ -80,7 +80,7 @@ bool is_american(long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
-        if ((number == start1 && i == digits - 2) || (number == start2 && i == digits - 2))
+        if ((number == start1 && i == digits - 3) || (number == start2 && i == digits - 3))
         {
         return true;
         }
