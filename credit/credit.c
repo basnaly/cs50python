@@ -115,7 +115,7 @@ bool is_visa(long number)
 
 string check_card()
 {
-    if (is_valid(false))
+    if (is_valid(sum))
     {
         return "INVALID";
     }
