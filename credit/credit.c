@@ -6,6 +6,9 @@ long get_number(void);
 int calculate_sum(long number);
 bool is_valid(int sum);
 bool is_amex(false);
+bool is_master(false);
+bool is_visa(false);
+string c
 
 int main(void)
 {
@@ -61,5 +64,51 @@ bool is_valid(int sum)
 
 bool is_amex(long number)
 {
-    
+    int start1 = 34;
+    int start2 = 37;
+    int digits = 15;
+    for (int i = 0; i < digits; i++) {
+        rem = number % 10;
+        number = (number - rem) /10;
+        if ((number == start1 && i == (digits - 3)) || (number == start2 && i == (digits - 3)))
+        {
+            return true
+        }
+        return false
+    }
+}
+
+bool is_master(long number)
+{
+    int start1 = 51;
+    int start2 = 52;
+    int start3 = 53;
+    int start4 = 54;
+    int start5 = 55;
+    int digits = 16;
+    for (int i = 0; i < digits; i++) {
+        rem = number % 10;
+        number = (number - rem) /10;
+        if ((number == start1 && i == (digits - 3)) || (number == start2 && i == (digits - 3)) || (number == start3 && i == (digits - 3)) || (number == start4 && i == (digits - 3)) || (number == start5 && i == (digits - 3)))
+        {
+            return true
+        }
+        return false
+    }
+}
+
+bool is_visa(long number)
+{
+    int start = 4;
+    int digits1 = 13;
+    int digits2 = 16;
+    for (int i = 0; i < digits; i++) {
+        rem = number % 10;
+        number = (number - rem) /10;
+        if ((number == start && i == (digits1 - 2)) || (number == start && i == (digits2 - 2)))
+        {
+            return true
+        }
+        return false
+    }
 }
