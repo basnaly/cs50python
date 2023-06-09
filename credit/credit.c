@@ -4,7 +4,8 @@
 
 long get_number(void);
 int calculate_sum(long number);
-bool is_valid(sum);
+bool is_valid(int sum);
+bool is_amex(false);
 
 int main(void)
 {
@@ -13,7 +14,6 @@ int main(void)
 
     // Calculate sum of credit card digts
     int sum = calculate_sum(number);
-
 }
 
 long get_number(void)
@@ -50,11 +50,16 @@ int calculate_sum(long number)
     return sum_even + sum_odd;
 }
 
-bool is_valid(sum)
+bool is_valid(int sum)
 {
     if (sum % 10 === 0)
     {
         return true;
     }
     return false;
+}
+
+bool is_amex(long number)
+{
+    
 }
