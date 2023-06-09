@@ -46,12 +46,12 @@ int calculate_sum(long number)
         }
         else
         {
-            int double = i * 2;
-            if (double > 9)
+            int doubled = i * 2;
+            if (doubled > 9)
             {
-                double = 1 + (double - 10);
+                doubled = 1 + (doubled - 10);
             }
-            sum_odd = sum_odd + double;
+            sum_odd = sum_odd + doubled;
         }
     }
     return sum_even + sum_odd;
