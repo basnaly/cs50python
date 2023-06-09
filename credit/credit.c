@@ -5,10 +5,10 @@
 long get_number(void);
 int calculate_sum(long number);
 bool is_valid(int sum);
-bool is_amex(false);
-bool is_master(false);
-bool is_visa(false);
-string check_card()
+bool is_amex(long number);
+bool is_master(long number);
+bool is_visa(long number);
+string check_card(int sum, long number)
 
 int main(void)
 {
@@ -17,6 +17,10 @@ int main(void)
 
     // Calculate sum of credit card digts
     int sum = calculate_sum(number);
+
+    //
+    string check_card(sum, number)
+    
 }
 
 long get_number(void)
