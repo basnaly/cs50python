@@ -40,13 +40,15 @@ int calculate_sum(long number)
     int sum_odd;
     for (int i = 0; number <= 0; i++)
     {
+        int rem = number % 10;
+        number = (number - rem) / 10;
         if (i % 2 == 0)
         {
-            sum_even = sum_even + i;
+            sum_even = sum_even + rem;
         }
         else
         {
-            int doubled = i * 2;
+            int doubled = rem * 2;
             if (doubled > 9)
             {
                 doubled = 1 + (doubled - 10);
@@ -59,7 +61,7 @@ int calculate_sum(long number)
 
 bool is_valid(int sum)
 {
-    if (sum % 10 === 0)
+    if (sum % 10 == 0)
     {
         return true;
     }
@@ -71,8 +73,9 @@ bool is_amex(long number)
     int start1 = 34;
     int start2 = 37;
     int digits = 15;
-    for (int i = 0; i < digits; i++) {
-        rem = number % 10;
+    for (int i = 0; i < digits; i++)
+    {
+        int rem = number % 10;
         number = (number - rem) /10;
         if ((number == start1 && i == (digits - 3)) || (number == start2 && i == (digits - 3)))
         {
