@@ -8,7 +8,7 @@ bool is_valid(int sum);
 bool is_amex(long number);
 bool is_master(long number);
 bool is_visa(long number);
-string check_card(int sum, long number)
+string check_card(int sum, long number);
 
 int main(void)
 {
@@ -20,7 +20,9 @@ int main(void)
 
     //
     string check_card(sum, number)
-    
+    {
+        printf("%s\n", )
+    }
 }
 
 long get_number(void)
