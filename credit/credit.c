@@ -72,9 +72,9 @@ bool is_amex(long number)
         number = (number - rem) /10;
         if ((number == start1 && i == (digits - 3)) || (number == start2 && i == (digits - 3)))
         {
-            return true
+            return true;
         }
-        return false
+        return false;
     }
 }
 
@@ -91,9 +91,9 @@ bool is_master(long number)
         number = (number - rem) /10;
         if ((number == start1 && i == (digits - 3)) || (number == start2 && i == (digits - 3)) || (number == start3 && i == (digits - 3)) || (number == start4 && i == (digits - 3)) || (number == start5 && i == (digits - 3)))
         {
-            return true
+            return true;
         }
-        return false
+        return false;
     }
 }
 
@@ -107,9 +107,9 @@ bool is_visa(long number)
         number = (number - rem) /10;
         if ((number == start && i == (digits1 - 2)) || (number == start && i == (digits2 - 2)))
         {
-            return true
+            return true;
         }
-        return false
+        return false;
     }
 }
 
