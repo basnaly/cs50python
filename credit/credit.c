@@ -115,5 +115,24 @@ bool is_visa(long number)
 
 string check_card()
 {
-    if (is_valid(true))
+    if (is_valid(false))
+    {
+        return "INVALID";
+    }
+    else if (is_amex(true))
+    {
+        return "AMEX";
+    }
+    else if (is_master(true))
+    {
+        return "MASTERCARD";
+    }
+    else if (is_visa(true))
+    {
+        return "VISA";
+    }
+    else
+    {
+        return "INVALID";
+    }
 }
