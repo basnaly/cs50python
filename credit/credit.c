@@ -1,8 +1,10 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 long get_number(void);
 int calculate_sum(long number);
+bool is_valid(sum);
 
 int main(void)
 {
@@ -47,3 +49,5 @@ int calculate_sum(long number)
     }
     return sum_even + sum_odd;
 }
+
+i
