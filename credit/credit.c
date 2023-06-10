@@ -17,6 +17,7 @@ int main(void)
 
     // Check type card
     string = check_type(number);
+    printf()
 }
 
 long get_number()
