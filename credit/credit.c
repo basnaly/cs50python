@@ -104,7 +104,6 @@ string check_type(bool is_valid(), long number)
         {
             return "VISA";
         }
-
-        return "INVALID";
     }
+    return "INVALID";
 }
