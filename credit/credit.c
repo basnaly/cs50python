@@ -92,17 +92,17 @@ string check_type(int sum, long number)
         number = (number - rem) / 10;
         printf("Rem: %i\n", rem);
         printf("i: %i\n", i);
-        if ((rem == start_amex1 && i == (digits_amex - 3)) || (rem == start_amex2 && i == (digits_amex - 3)))
+        if ((rem == start_amex1 && i == (digits_amex - 2)) || (rem == start_amex2 && i == (digits_amex - 2)))
         {
             return "AMEX";
         }
-        else if ((number == start_master1 && i == (digits_master - 3)) || (number == start_master2 && i == (digits_master - 3)) ||
-                 (number == start_master3 && i == (digits_master - 3)) || (number == start_master4 && i == (digits_master - 3)) ||
-                 (number == start_master5 && i == (digits_master - 3)))
+        else if ((rem == start_master1 && i == (digits_master - 2)) || (number == start_master2 && i == (digits_master - 2)) ||
+                 (rem == start_master3 && i == (digits_master - 2)) || (number == start_master4 && i == (digits_master - 2)) ||
+                 (number == start_master5 && i == (digits_master - 2)))
         {
             return "MASTERCARD";
         }
-        else if ((rem == start_visa && i == (digits_visa1 - 2)) || (rem == start_visa && i == (digits_visa2 - 2)))
+        else if ((rem == start_visa && i == (digits_visa1 - 1)) || (rem == start_visa && i == (digits_visa2 - 1)))
         {
             return "VISA";
         }
