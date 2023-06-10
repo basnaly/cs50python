@@ -54,5 +54,17 @@ int calc_sum(long number)
 
 string check_type(number)
 {
-    
+    int digits_amex = 15;
+    int digits_master = 16;
+    int digits_visa1 = 13;
+    int digits_visa1 = 16;
+
+    int start_amex1 = 34;
+    int start_amex2 = 37;
+    int start_master1 = 51;
+    int start_master2 = 52;
+    int start_master3 = 53;
+    int start_master4 = 54;
+    int start_master5 = 55;
+    int start_visa = 4;
 }
