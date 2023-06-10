@@ -107,4 +107,5 @@ string check_type(bool is_valid(), long number)
             return "INVALID";
         }
     }
+    return 
 }
