@@ -1,8 +1,10 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 long get_number();
 int calc_sum(number);
+bool is_valid(sum);
 string check_type(number);
 
 int main(void)
@@ -52,7 +54,16 @@ int calc_sum(long number)
     return sum;
 }
 
-string check_type(number)
+bool is_valid(int sum)
+{
+    if (sum % 10 == 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+string check_type(int sum, long number)
 {
     int digits_amex = 15;
     int digits_master = 16;
@@ -67,4 +78,14 @@ string check_type(number)
     int start_master4 = 54;
     int start_master5 = 55;
     int start_visa = 4;
+
+    if (is_valid() == false)
+    {
+        return "INVALID";
+    }
+
+    for (int i = 0; i <= digits_master; i++)
+    {
+        
+    }
 }
