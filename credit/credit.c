@@ -96,9 +96,9 @@ string check_type(int sum, long number)
         {
             return "AMEX";
         }
-        else if ((rem == start_master1 && i == (digits_master - 2)) || (number == start_master2 && i == (digits_master - 2)) ||
-                 (rem == start_master3 && i == (digits_master - 2)) || (number == start_master4 && i == (digits_master - 2)) ||
-                 (number == start_master5 && i == (digits_master - 2)))
+        else if ((rem == start_master1 && i == (digits_master - 2)) || (rem == start_master2 && i == (digits_master - 2)) ||
+                 (rem == start_master3 && i == (digits_master - 2)) || (rem == start_master4 && i == (digits_master - 2)) ||
+                 (rem == start_master5 && i == (digits_master - 2)))
         {
             return "MASTERCARD";
         }
