@@ -52,4 +52,7 @@ int calc_sum(long number)
     return sum;
 }
 
-string
+string check_type(number)
+{
+    
+}
