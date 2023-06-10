@@ -1,13 +1,20 @@
 #include <cs50.h>
 #include <stdio.h>
 
+long get_number();
+int calc_sum(number);
+string check_type(number);
+
 int main(void)
 {
     // Get a credit card number
     long number = get_number();
 
     // Calculate sum of credit card numver digits
-    int sum = calc_sum();
+    int sum = calc_sum(number);
+
+    // Check type card
+    string = check_type(number);
 }
 
 long get_number()
@@ -21,7 +28,7 @@ long get_number()
     return number;
 }
 
-int sum = calc_sum(long number)
+int calc_sum(long number)
 {
     int sum = 0;
     for (int i = 0; number <= 0; i++)
@@ -42,4 +49,7 @@ int sum = calc_sum(long number)
             sum = sum + doubled;
         }
     }
+    return sum;
 }
+
+string
