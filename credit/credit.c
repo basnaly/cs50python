@@ -35,7 +35,7 @@ long get_number()
 int calc_sum(long number)
 {
     int sum = 0;
-    for (int i = 0; number <= 0; i++)
+    for (int i = 0; number > 0; i++)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
