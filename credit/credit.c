@@ -97,7 +97,7 @@ string check_type(bool is_valid(), long number)
         {
             return "MASTERCARD";
         }
-        else if ((number == start_visa1 && i == (digits_visa - 2)) || (number == start_visa2 && i == (digits_visa - 2)))
+        else if ((number == start_visa && i == (digits_visa1 - 2)) || (number == start_visa && i == (digits_visa2 - 2)))
         {
             return "VISA";
         }
@@ -105,6 +105,6 @@ string check_type(bool is_valid(), long number)
         {
             return "INVALID";
         }
-        return 0;
     }
+    return 0;
 }
