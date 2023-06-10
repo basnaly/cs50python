@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 long get_number();
 int calc_sum(long number);
@@ -94,7 +94,9 @@ string check_type(bool is_valid(), long number)
         {
             return "AMEX";
         }
-        else if ((number == start_master1 && i == (digits_master - 3)) || (number == start_master2 && i == (digits_master - 3)) || (number == start_master3 && i == (digits_master - 3)) || (number == start_master4 && i == (digits_master - 3)) || (number == start_master5 && i == (digits_master - 3)))
+        else if ((number == start_master1 && i == (digits_master - 3)) || (number == start_master2 && i == (digits_master - 3)) ||
+                 (number == start_master3 && i == (digits_master - 3)) || (number == start_master4 && i == (digits_master - 3)) ||
+                 (number == start_master5 && i == (digits_master - 3)))
         {
             return "MASTERCARD";
         }
@@ -102,10 +104,7 @@ string check_type(bool is_valid(), long number)
         {
             return "VISA";
         }
-        else
-        {
-            return "INVALID";
-        }
+
+        return "INVALID";
     }
-    return 
 }
