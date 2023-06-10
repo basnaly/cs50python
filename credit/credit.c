@@ -90,7 +90,9 @@ string check_type(bool is_valid(), long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
-        if ((number == start_amex1 && i == (digits_amex - 3)) || (number == start_amex2 && i == (digits_amex - 3)))
+        printf("Rem: %i\n", rem);
+        printf("i: %i\n", i);
+        if ((rem == start_amex1 && i == (digits_amex - 3)) || (rem == start_amex2 && i == (digits_amex - 3)))
         {
             return "AMEX";
         }
@@ -100,7 +102,7 @@ string check_type(bool is_valid(), long number)
         {
             return "MASTERCARD";
         }
-        else if ((number == start_visa && i == (digits_visa1 - 2)) || (number == start_visa && i == (digits_visa2 - 2)))
+        else if ((rem == start_visa && i == (digits_visa1 - 2)) || (rem == start_visa && i == (digits_visa2 - 2)))
         {
             return "VISA";
         }
