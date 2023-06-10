@@ -20,3 +20,8 @@ long get_number()
     while (number < 0);
     return number;
 }
+
+int sum = calc_sum(long number)
+{
+    
+}
