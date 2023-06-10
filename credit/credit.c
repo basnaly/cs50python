@@ -86,7 +86,7 @@ string check_type(bool is_valid(), long number)
         return "INVALID";
     }
 
-    for (int i = 0; i <= digits_master; i++)
+    for (int i = 0; i > digits_master; i++)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
