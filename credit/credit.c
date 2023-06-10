@@ -5,7 +5,7 @@
 long get_number();
 int calc_sum(long number);
 bool is_valid(int sum);
-string check_type(bool is_valid(), long number);
+string check_type(int sum, long number);
 
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
     printf("Sum: %i\n", sum);
 
     // Check type card
-    string card = check_type(is_valid, number);
+    string card = check_type(sum, number);
     printf("%s\n", card);
 }
 
