@@ -16,7 +16,7 @@ int main(void)
     int sum = calc_sum(number);
 
     // Check type card
-    string card = check_type(number);
+    string card = check_type(is_valid, number);
     printf("%s\n", card);
 }
 
