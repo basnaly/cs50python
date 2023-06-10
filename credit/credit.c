@@ -5,7 +5,7 @@
 long get_number();
 int calc_sum(number);
 bool is_valid(sum);
-string check_type(number);
+string check_type(is_valid(), number);
 
 int main(void)
 {
@@ -16,8 +16,8 @@ int main(void)
     int sum = calc_sum(number);
 
     // Check type card
-    string = check_type(number);
-    printf()
+    string card = check_type(number);
+    printf("%s\n", card);
 }
 
 long get_number()
@@ -64,7 +64,7 @@ bool is_valid(int sum)
     return false;
 }
 
-string check_type(int sum, long number)
+string check_type(bool is_valid(), long number)
 {
     int digits_amex = 15;
     int digits_master = 16;
@@ -105,5 +105,6 @@ string check_type(int sum, long number)
         {
             return "INVALID";
         }
+        return 0;
     }
 }
