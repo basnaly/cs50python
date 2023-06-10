@@ -3,9 +3,9 @@
 #include <stdbool.h>
 
 long get_number();
-int calc_sum(number);
-bool is_valid(sum);
-string check_type(is_valid(), number);
+int calc_sum(long number);
+bool is_valid(int sum);
+string check_type(bool is_valid(), long number);
 
 int main(void)
 {
