@@ -88,6 +88,21 @@ string check_type(int sum, long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
-        if (number == 34 && i ==)
+        if ((number == start_amex1 && i == (digits_amex - 3)) || (number == start_amex2 && i == (digits_amex - 3)))
+        {
+            return "AMEX";
+        }
+        else if ((number == start_master1 && i == (digits_master - 3)) || (number == start_master2 && i == (digits_master - 3)) || (number == start_master3 && i == (digits_master - 3)) || (number == start_master4 && i == (digits_master - 3)) || (number == start_master5 && i == (digits_master - 3)))
+        {
+            return "MASTERCARD";
+        }
+        else if ((number == start_visa1 && i == (digits_visa - 2)) || (number == start_visa2 && i == (digits_visa - 2)))
+        {
+            return "VISA";
+        }
+        else
+        {
+            return "INVALID";
+        }
     }
 }
