@@ -65,7 +65,7 @@ bool is_valid(int sum)
     return false;
 }
 
-string check_type(bool is_valid(), long number)
+string check_type(int sum, long number)
 {
     int digits_amex = 15;
     int digits_master = 16;
@@ -81,7 +81,7 @@ string check_type(bool is_valid(), long number)
     int start_master5 = 55;
     int start_visa = 4;
 
-    if (is_valid() == false)
+    if (is_valid(sum) == false)
     {
         return "INVALID";
     }
