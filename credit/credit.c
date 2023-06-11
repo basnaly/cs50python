@@ -67,8 +67,11 @@ bool is_valid(int sum)
 
 string check_type(int sum, long number)
 {
+    // American Express uses 15-digit numbers
     int amex_digits = 15;
+    // MasterCard uses 16-digit numbers,
     int master_digits = 16;
+    // Visa uses 13- and 16-digit numbers
     int visa_digits1 = 13;
     int visa_digits2 = 16;
 
@@ -91,16 +94,19 @@ string check_type(int sum, long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
+        // American Express numbers start with 34 or 37
         if ((number == amex_start1 && i == (amex_digits - 3)) || (number == amex_start2 && i == (amex_digits - 3)))
         {
             return "AMEX";
         }
+        // MasterCard numbers start with 51, 52, 53, 54, or 55
         else if ((number == master_start1 && i == (master_digits - 3)) || (number == master_start2 && i == (master_digits - 3))
                  || (number == master_start3 && i == (master_digits - 3)) || (number == master_start4 && i == (master_digits - 3))
                  || (number == master_start5 && i == (master_digits - 3)))
         {
             return "MASTERCARD";
         }
+        // Visa numbers start with 4
         else if ((number == visa_start && i == (visa_digits1 - 2)) || (number == visa_start && i == (visa_digits2 - 2)))
         {
             return "VISA";
