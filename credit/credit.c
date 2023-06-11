@@ -94,7 +94,7 @@ string check_type(int sum, long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
-        if (((rem == amex_start1 && i == (amex_digits - 1)) || (rem == amex_start2 && i == (amex_digits - 1))) && number == 0)
+        if ((rem == amex_start1 && i == (amex_digits - 1)) || (rem == amex_start2 && i == (amex_digits - 1)))
         {
             return "AMEX";
         }
