@@ -5,7 +5,7 @@
 long get_number(void);
 int calc_sum(long number);
 bool is_valid(int sum);
-string check_type(long number);
+string check_type(int sum, long number);
 
 int main(void)
 {
@@ -19,7 +19,7 @@ int main(void)
     bool is_valid();
 
     // Check the type of the credit card
-    string type = check_type(sum, number);
+    string type = check_type();
     printf("Sum: %i\n", sum);
     printf("%s\n", type);
 
