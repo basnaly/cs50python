@@ -39,7 +39,7 @@ long get_number(void)
 int calc_sum(long number)
 {
     int sum = 0;
-    for (int i = 0; i <= number; i++)
+    for (int i = 0; number > 0; i++)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
@@ -90,7 +90,7 @@ string check_type(int sum, long number)
         return "INVALID";
     }
 
-    for (int i = 0; i < number; i++)
+    for (int i = 0; i < master_digits; i++)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
