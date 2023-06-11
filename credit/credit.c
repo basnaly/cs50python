@@ -97,8 +97,8 @@ string check_type(int sum, long number)
             return "AMEX";
         }
         else if ((number == master_start1 && i == (master_digits - 3)) || (number == master_start2 && i == (master_digits - 3))
-        || (number == master_start3 && i == (master_digits - 3)) || (number == master_start4 && i == (master_digits - 3))
-                || (number == master_start5 && i == (master_digits - 3)))
+                 || (number == master_start3 && i == (master_digits - 3)) || (number == master_start4 && i == (master_digits - 3))
+                 || (number == master_start5 && i == (master_digits - 3)))
         {
             return "MASTERCARD";
         }
