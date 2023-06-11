@@ -55,7 +55,7 @@ int calc_sum(long number)
     return sum;
 }
 
-bool is_valid(sum)
+bool is_valid(int sum)
 {
     if (sum % 10 == 0)
     {
