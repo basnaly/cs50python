@@ -19,7 +19,9 @@ int main(void)
     bool is_valid(sum);
 
     // Check the type of the credit card
-    string type = check_type()
+    string type = check_type(sum, number);
+    printf("Sum: %i\n", sum);
+    printf("%s\n", type);
 
 }
 
@@ -92,6 +94,18 @@ string check_type(int sum, long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
-        if ()
+        if ((rem == amex_start1 && i = (amex_digits - 1)) || (rem == amex_start2 && i = (amex_digits - 1)))
+        {
+            return "AMEX";
+        }
+        else if ((rem == master_start1 && i = (master_digits - 2)) || (rem == master_start2 && i = (master_digits - 2)) || (rem == master_start3 && i = (master_digits - 2)) || (rem == master_start4 && i = (master_digits - 2)) || (rem == master_start5 && i = (master_digits - 2)))
+        {
+            return "MASTERCARD";
+        }
+        else if ((rem == visa_start && i = (visa_digits1 - 1)) || (rem == visa_start && i = (visa_digits2 - 1)))
+        {
+            return "VISA";
+        }
     }
+    return "INVALID";
 }
