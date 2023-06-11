@@ -23,7 +23,7 @@ int main(void)
 
 }
 
-long get number()
+long get number(void)
 {
     long number;
     do
