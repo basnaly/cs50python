@@ -92,6 +92,6 @@ string check_type(int sum, long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
-        if 
+        if ()
     }
 }
