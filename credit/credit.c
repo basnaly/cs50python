@@ -15,9 +15,6 @@ int main(void)
     // Calc the sum of the credit card number's digits
     int sum = calc_sum(number);
 
-    // Check if the credit card number is valid
-    bool is_valid();
-
     // Check the type of the credit card
     string type = check_type(sum, number);
     printf("%s\n", type);
@@ -83,6 +80,7 @@ string check_type(int sum, long number)
     int master_start5 = 55;
     int visa_start = 4;
 
+    // Check if the credit card number is valid
     if (is_valid(sum) == false)
     {
         return "INVALID";
