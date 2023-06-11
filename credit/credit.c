@@ -28,7 +28,8 @@ long get number()
     long number;
     do
     {
-        
+
     }
-    while ()
+    while (number <);
+    return number;
 }
