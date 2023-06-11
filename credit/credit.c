@@ -39,7 +39,7 @@ long get_number(void)
 int calc_sum(long number)
 {
     int sum = 0;
-    for (int i = 0; i < number; i++)
+    for (int i = 0; i <= number; i++)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
