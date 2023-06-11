@@ -33,3 +33,8 @@ long get number()
     while (number < 0);
     return number;
 }
+
+int calc_sum()
+{
+
+}
