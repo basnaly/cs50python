@@ -39,6 +39,30 @@ int calc_sum(long number)
     int sum = 0;
     for (int i = 0; i < number; i++)
     {
-        rem = 
+        rem = number % 10;
+        number = (number - rem) / 10;
+        if (i % 2 == 0)
+        {
+            sum = sum + rem;
+        }
+        else
+        {
+            doubled = rem * 2;
+            if (doubled > 9)
+            {
+                doubled = 1 + (doubled - 10);
+            }
+            sum = sum + doubled;
+        }
     }
+    return sum;
+}
+
+bool is_valid(sum)
+{
+    if (sum % 10 == 0)
+    {
+        return true;
+    }
+    return false;
 }
