@@ -3,8 +3,9 @@
 #include <stdbool.h>
 
 long get_number(void);
-int get_sum(long number);
-
+int calc_sum(long number);
+bool is_valid(int sum);
+string check_type();
 
 int main(void)
 {
@@ -12,11 +13,22 @@ int main(void)
     long number = get_number();
 
     // Calc the sum of the credit card number's digits
-    int sum = get_sum(number)
+    int sum = calc_sum(number);
 
     // Check if the credit card number is valid
-    bool is
+    bool is_valid(sum);
 
     // Check the type of the credit card
+    string type = check_type()
 
+}
+
+long get number()
+{
+    long number;
+    do
+    {
+        
+    }
+    while ()
 }
