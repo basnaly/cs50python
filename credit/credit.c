@@ -5,7 +5,7 @@
 long get_number(void);
 int calc_sum(long number);
 bool is_valid(int sum);
-string check_type();
+string check_type(long number);
 
 int main(void)
 {
@@ -58,6 +58,10 @@ int calc_sum(long number)
     return sum;
 }
 
+string check_type(long number)
+{
+    
+}
 bool is_valid(sum)
 {
     if (sum % 10 == 0)
