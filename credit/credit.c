@@ -28,8 +28,8 @@ long get number()
     long number;
     do
     {
-
+        number = get_long("Number: ");
     }
-    while (number <);
+    while (number < 0);
     return number;
 }
