@@ -16,7 +16,7 @@ int main(void)
     int sum = calc_sum(number);
 
     // Check if the credit card number is valid
-    bool is_valid(sum);
+    bool is_valid();
 
     // Check the type of the credit card
     string type = check_type(sum, number);
@@ -60,7 +60,7 @@ int calc_sum(long number)
     return sum;
 }
 
-bool is_valid(sum)
+bool is_valid()
 {
     if (sum % 10 == 0)
     {
