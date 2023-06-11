@@ -60,7 +60,7 @@ int calc_sum(long number)
 
 string check_type(long number)
 {
-    
+    int 
 }
 bool is_valid(sum)
 {
