@@ -34,7 +34,11 @@ long get number()
     return number;
 }
 
-int calc_sum()
+int calc_sum(long number)
 {
-
+    int sum = 0;
+    for (int i = 0; i < number; i++)
+    {
+        rem = 
+    }
 }
