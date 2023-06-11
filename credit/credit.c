@@ -39,7 +39,7 @@ int calc_sum(long number)
     int sum = 0;
     for (int i = 0; i < number; i++)
     {
-        rem = number % 10;
+        int rem = number % 10;
         number = (number - rem) / 10;
         if (i % 2 == 0)
         {
@@ -67,7 +67,7 @@ bool is_valid(sum)
     return false;
 }
 
-string check_type(long number)
+string check_type(int sum, long number)
 {
     int amex_digits = 15;
     int master_digits = 16;
@@ -88,8 +88,10 @@ string check_type(long number)
         return "INVALID";
     }
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < number; i++)
     {
-        
+        int rem = number % 10;
+        number = (number - rem) / 10;
+        if 
     }
 }
