@@ -20,9 +20,7 @@ int main(void)
 
     // Check the type of the credit card
     string type = check_type(sum, number);
-    printf("Sum: %i\n", sum);
     printf("%s\n", type);
-
 }
 
 long get_number(void)
