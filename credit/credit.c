@@ -83,7 +83,7 @@ string check_type(int sum, long number)
     int master_start3 = 53;
     int master_start4 = 54;
     int master_start5 = 55;
-    int visa_starts = 4;
+    int visa_start = 4;
 
     if (is_valid(sum) == false)
     {
@@ -94,15 +94,15 @@ string check_type(int sum, long number)
     {
         int rem = number % 10;
         number = (number - rem) / 10;
-        if ((rem == amex_start1 && i = (amex_digits - 1)) || (rem == amex_start2 && i = (amex_digits - 1)))
+        if ((rem == amex_start1 && i == (amex_digits - 1)) || (rem == amex_start2 && i == (amex_digits - 1)))
         {
             return "AMEX";
         }
-        else if ((rem == master_start1 && i = (master_digits - 2)) || (rem == master_start2 && i = (master_digits - 2)) || (rem == master_start3 && i = (master_digits - 2)) || (rem == master_start4 && i = (master_digits - 2)) || (rem == master_start5 && i = (master_digits - 2)))
+        else if ((rem == master_start1 && i == (master_digits - 2)) || (rem == master_start2 && i == (master_digits - 2)) || (rem == master_start3 && i == (master_digits - 2)) || (rem == master_start4 && i == (master_digits - 2)) || (rem == master_start5 && i == (master_digits - 2)))
         {
             return "MASTERCARD";
         }
-        else if ((rem == visa_start && i = (visa_digits1 - 1)) || (rem == visa_start && i = (visa_digits2 - 1)))
+        else if ((rem == visa_start && i == (visa_digits1 - 1)) || (rem == visa_start && i == (visa_digits2 - 1)))
         {
             return "VISA";
         }
