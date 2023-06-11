@@ -19,13 +19,13 @@ int main(void)
     bool is_valid();
 
     // Check the type of the credit card
-    string type = check_type();
+    string type = check_type(sum, number);
     printf("Sum: %i\n", sum);
     printf("%s\n", type);
 
 }
 
-long get number(void)
+long get_number(void)
 {
     long number;
     do
@@ -49,7 +49,7 @@ int calc_sum(long number)
         }
         else
         {
-            doubled = rem * 2;
+            int doubled = rem * 2;
             if (doubled > 9)
             {
                 doubled = 1 + (doubled - 10);
@@ -60,7 +60,7 @@ int calc_sum(long number)
     return sum;
 }
 
-bool is_valid()
+bool is_valid(sum)
 {
     if (sum % 10 == 0)
     {
