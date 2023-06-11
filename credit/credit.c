@@ -58,10 +58,6 @@ int calc_sum(long number)
     return sum;
 }
 
-string check_type(long number)
-{
-    int 
-}
 bool is_valid(sum)
 {
     if (sum % 10 == 0)
@@ -69,4 +65,28 @@ bool is_valid(sum)
         return true;
     }
     return false;
+}
+
+string check_type(long number)
+{
+    int amex_digits = 15;
+    int master_digits = 16;
+    int visa_digits1 = 13;
+    int visa_digits2 = 16;
+
+    int amex_start1 = 34;
+    int amex_start2 = 37;
+    int master_start1 = 51;
+    int master_start2 = 52;
+    int master_start3 = 53;
+    int master_start4 = 54;
+    int master_start5 = 55;
+    int visa_starts = 4;
+
+    if (is_valid(sum) == false)
+    {
+        return "INVALID";
+    }
+
+    for (int i = 0; i )
 }
