@@ -34,6 +34,7 @@ long get_number(void)
 int calc_sum(long number)
 {
     int sum = 0;
+    // The loop goes until number = 0
     for (int i = 0; number > 0; i++)
     {
         int rem = number % 10;
