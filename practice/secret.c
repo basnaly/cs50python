@@ -11,7 +11,12 @@ int main(void)
     }
 }
 
-bool check_phrase(string)
+bool check_phrase(string phrase)
 {
-    
+    string pasword = "Please";
+    is (strcmp(phrase, password) == 0)
+    {
+        return true;
+    }
+    return false;
 }
