@@ -10,5 +10,8 @@ int main(void)
     {
         printf("Wrong guess!");
     }
-    printf("You're correct!");
+    else
+    {
+        printf("You're correct!");
+    }
 }
