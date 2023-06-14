@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <strcmp.h>
+#include <string.h>
 
 bool check_phrase(string);
 
@@ -18,7 +18,7 @@ int main(void)
 
 bool check_phrase(string phrase)
 {
-    string pasword = "Please";
+    string password = "Please";
     if (strcmp(phrase, password) == 0)
     {
         return true;
