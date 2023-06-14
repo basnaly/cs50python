@@ -1,10 +1,15 @@
 #include <cs50.h>
+#include <stdio.h>
+#include <strcmp.h>
 
 bool check_phrase(string);
 
 int main(void)
 {
-    string phrase = get string("What's the secret phrase? ");
+    string phrase = get_string("What's the secret phrase? ");
+
+    bool correct = check_phrase(phrase);
+
     if (correct == true)
     {
         printf("Come on in!\n");
@@ -14,7 +19,7 @@ int main(void)
 bool check_phrase(string phrase)
 {
     string pasword = "Please";
-    is (strcmp(phrase, password) == 0)
+    if (strcmp(phrase, password) == 0)
     {
         return true;
     }
