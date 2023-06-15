@@ -3,7 +3,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void 
+int main
 
 
 // What it will return?
