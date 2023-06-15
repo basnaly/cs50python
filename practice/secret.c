@@ -19,9 +19,9 @@ int main(void)
 bool check_phrase(string phrase)
 {
     string password = "Please";
-    
-    // if (strcmp(phrase, password) == 0)
-    if (phrase == password)
+
+    if (strcmp(phrase, password) == 0)
+    // if (phrase == password)
     {
         return true;
     }
