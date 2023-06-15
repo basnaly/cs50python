@@ -8,11 +8,10 @@ int main(void)
     int length = 100;
     int array[length];
 
-    // array[0] = 0;
     for (int i = 0; i < length; i++)
     {
-        array[i] = array[i] + 1;
-        printf("%d ", array[i]);
+        array[i] = i + 1;
+        printf("%d \n", array[i]);
     }
     return 0;
 }
