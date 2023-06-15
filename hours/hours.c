@@ -32,7 +32,7 @@ float calc_hours(int hours[], int weeks, char output)
 }
 
 // calc quantity of hours
-int hours(int hours[week])
+int hours(int hours[], int week)
 {
     int total_hours;
     for (int i = hours[j]; i < week; i++)
