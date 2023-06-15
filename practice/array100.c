@@ -5,7 +5,8 @@
 
 int main(void)
 {
-    
+    void set_array(int array[100]);
+    int a = 0
 }
 
 
