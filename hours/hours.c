@@ -28,12 +28,6 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
-
-}
-
-// calc quantity of hours
-int hours(int hours[], int week)
-{
     int total_hours;
     for (int i = hours[j]; i < week; i++)
     {
