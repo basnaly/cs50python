@@ -29,3 +29,5 @@ float calc_hours(int hours[], int weeks, char output)
 {
 
 }
+
+// calc quantity of hours
