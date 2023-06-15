@@ -3,7 +3,10 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main
+int main(void)
+{
+    
+}
 
 
 // What it will return?
