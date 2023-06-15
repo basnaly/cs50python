@@ -9,11 +9,11 @@ int main(void)
     int array[length];
 
     array[0] = 0;
-    for (int i = 1; i < length - 1; i++)
+    for (int i = 1; i < length; i++)
     {
         array[i] = array[i] + 1;
     }
-    printf("%i\n", array[]);
+    printf("%d", array[i]);
 }
 
 
