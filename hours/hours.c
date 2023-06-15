@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 float calc_hours(int hours[], int weeks, char output);
-int hours(int hours[week] = {})
+int hours(int hours[week] = {hours});
 
 int main(void)
 {
@@ -32,3 +32,7 @@ float calc_hours(int hours[], int weeks, char output)
 }
 
 // calc quantity of hours
+int hours(int hours[week] = {hours})
+{
+    
+}
