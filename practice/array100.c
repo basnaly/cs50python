@@ -11,8 +11,9 @@ int main(void)
     for (int i = 0; i < length; i++)
     {
         array[i] = i + 1;
-        printf("%d \n", array[i]);
+        printf("%d ", array[i]);
     }
+    printf("\n");
     return 0;
 }
 
