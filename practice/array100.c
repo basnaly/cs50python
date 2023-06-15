@@ -5,8 +5,15 @@
 
 int main(void)
 {
-    void set_array(int array[100]);
-    int a = 0
+    int length = 100;
+    int array[length];
+
+    array[0] = 0;
+    for (int i = 1; i < length - 1; i++)
+    {
+        array[i] = array[i] + 1;
+    }
+    printf("%i\n", array[]);
 }
 
 
