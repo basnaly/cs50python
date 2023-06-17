@@ -28,7 +28,7 @@ string replace(string word)
     int length = strlen(word);
     for (int i = 0; i < length; i++)
     {
-        if 
+        if
     }
 
     char letter;
@@ -46,12 +46,12 @@ string replace(string word)
             printf(1);
             break;
 
-        case "o":
+        case 'o':
             printf(0);
             break;
 
         default:
-            printf();
+            printf(i);
             break;
     }
 }
