@@ -10,5 +10,5 @@ string replace(string)
 
 int main(int argc, string argv[])
 {
-
+    string argv[1];
 }
