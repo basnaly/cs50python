@@ -23,3 +23,15 @@ int main(int argc, string argv[])
 }
 
 string replace(string letter)
+{
+    string letter;
+    switch(letter)
+    {
+        case "a":
+            printf(6);
+            break;
+
+        case "":
+        
+    }
+}
