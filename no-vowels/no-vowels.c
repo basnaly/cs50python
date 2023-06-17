@@ -21,6 +21,8 @@ int main(int argc, string argv[])
         printf("%s\n", argv[1]);
         return 0;
     }
+    string replaced = replace(word);
+    printf("%s\n", replaced);
 }
 
 string replace(string word)
@@ -50,4 +52,5 @@ string replace(string word)
             printf(i);
             break;
     }
+    return word
 }
