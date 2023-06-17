@@ -34,7 +34,7 @@ string replace(string word)
     switch(word[i])
     {
         case 'a':
-            printf("6");
+            word[i] = '6';
             break;
 
         case 'e':
