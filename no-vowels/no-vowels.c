@@ -11,7 +11,7 @@ string replace(string letter);
 
 int main(int argc, string argv[])
 {
-    if (argc == 0 || argc > 1)
+    if (argc == 0 || argc > 2)
     {
         printf("Error \n");
         return 1;
