@@ -11,15 +11,7 @@ string replace(string letter);
 
 int main(int argc, string argv[])
 {
-    if (argc == 0 || argc > 2)
-    {
-        printf("Error \n");
-        return 1;
-    }
-    string word = argv[1];
-
-    string replaced = replace(word);
-    printf("%s\n", replaced);
+    
 }
 
 string replace(string word)
