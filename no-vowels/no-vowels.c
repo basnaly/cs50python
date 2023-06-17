@@ -31,22 +31,22 @@ string replace(string word)
     int length = strlen(word);
     for (int i = 0; i < length; i++)
 
-    switch(word)
+    switch(word[i])
     {
-        case word[i] == 'a':
-            printf(6);
+        case 'a':
+            printf("6");
             break;
 
-        case word[i] == 'e':
-            printf(3);
+        case 'e':
+            printf("3");
             break;
 
-        case word[i] == 'i':
-            printf(1);
+        case 'i':
+            printf("1");
             break;
 
-        case word[i] == 'o':
-            printf(0);
+        case 'o':
+            printf("0");
             break;
 
         default:
