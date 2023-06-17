@@ -10,6 +10,7 @@ string replace(string letter)
 
 int main(int argc, string argv[])
 {
+    string word = argv[1];
     if (argc == 0 || argc > 1)
     {
         printf("Error");
@@ -22,8 +23,9 @@ int main(int argc, string argv[])
     }
 }
 
-string replace(string letter)
+string replace(string word)
 {
+    for (int i = 0; i < )
     string letter;
     switch(letter)
     {
