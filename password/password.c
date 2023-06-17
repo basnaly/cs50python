@@ -27,7 +27,7 @@ bool valid(string password)
     int length = strlen(password);
     for (let i = 0;  i < length; i++)
     {
-        if (isdigit(password[i])
+        if ((isdigit(password[i]) || )
     }
     return false;
 }
