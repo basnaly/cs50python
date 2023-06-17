@@ -10,12 +10,16 @@ string replace(string)
 
 int main(int argc, string argv[])
 {
-    int length = 1;
-    string argv[length];
-    if (length == 0 || length > 1)
+    if (argc == 0 || argc > 1)
     {
         printf("Error");
         return 1;
     }
     else
+    {
+        printf("%s\n", argv[1]);
+        return 0;
+    }
 }
+
+string replace(string letter)
