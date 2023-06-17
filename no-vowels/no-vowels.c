@@ -50,8 +50,8 @@ string replace(string word)
             break;
 
         default:
-            printf(i);
+            printf("%c", word[i]);
             break;
     }
-    return word
+    return word;
 }
