@@ -38,7 +38,7 @@ string replace(string word)
             break;
 
         case 'e':
-            printf("3");
+            word[i] = '3';
             break;
 
         case 'i':
