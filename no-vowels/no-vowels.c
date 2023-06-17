@@ -13,15 +13,12 @@ int main(int argc, string argv[])
 {
     if (argc == 0 || argc > 1)
     {
-        printf("Error");
+        printf("Error \n");
         return 1;
     }
-    else
-    {
-        string word = argv[1];
-        printf("%s\n", argv[1]);
-        return 0;
-    }
+    string word = argv[1];
+    printf("%s\n", argv[1]);
+
     string replaced = replace(word);
     printf("%s\n", replaced);
 }
@@ -42,15 +39,14 @@ string replace(string word)
             break;
 
         case 'i':
-            printf("1");
+            word[i] = '1';
             break;
 
         case 'o':
-            printf("0");
+            word[i] = '0';
             break;
 
         default:
-            printf("%c", word[i]);
             break;
     }
     return word;
