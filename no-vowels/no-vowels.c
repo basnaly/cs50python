@@ -14,6 +14,7 @@ int main(int argc, string argv[])
     string argv[length];
     if (length == 0 || length > 1)
     {
-        printf("%s\n", "Error")
+        printf("Error");
+        return 1;
     }
 }
