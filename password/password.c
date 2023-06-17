@@ -32,19 +32,19 @@ bool valid(string password)
     bool is_punct;
     for (int i = 0;  i < length; i++)
     {
-        if (isdigit(password[i])
+        if (isdigit(password[i]))
         {
-            is_digit == true;
+            is_digit = true;
         }
-        else if (islower(password[i])
+        else if (islower(password[i]))
         {
             is_lower == true;
         }
-        else if (isupper(password[i])
+        else if (isupper(password[i]))
         {
             is_upper == true;
         }
-        else if (ispunct(password[i])
+        else if (ispunct(password[i]))
         {
             is_punct == true;
         }
