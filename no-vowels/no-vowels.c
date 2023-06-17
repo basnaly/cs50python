@@ -6,7 +6,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-string replace(string)
+string replace(string letter)
 
 int main(int argc, string argv[])
 {
