@@ -27,26 +27,23 @@ string replace(string word)
 {
     int length = strlen(word);
     for (int i = 0; i < length; i++)
-    {
-        if
-    }
 
     char letter;
     switch(letter)
     {
-        case 'a':
+        case i == 'a':
             printf(6);
             break;
 
-        case 'e':
+        case i == 'e':
             printf(3);
             break;
 
-        case 'i':
+        case i == 'i':
             printf(1);
             break;
 
-        case 'o':
+        case i == 'o':
             printf(0);
             break;
 
