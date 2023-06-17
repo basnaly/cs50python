@@ -26,12 +26,15 @@ int main(void)
 bool valid(string password)
 {
     int length = strlen(password);
-    bool is_digit =
+    bool is_digit;
+    bool is_lower;
+    bool is_upper;
+    bool is_punct;
     for (let i = 0;  i < length; i++)
     {
         if ((isdigit(password[i]) || islower(password[i]) || isupper(password[i]) || ispunct(password[i]))
         {
-            is_valid = ;
+        
         }
     }
     return false;
