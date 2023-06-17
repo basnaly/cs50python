@@ -10,5 +10,10 @@ string replace(string)
 
 int main(int argc, string argv[])
 {
-    string argv[1];
+    int length = 1;
+    string argv[length];
+    if (length == 0 || length > 1)
+    {
+        printf("%s\n", "Error")
+    }
 }
