@@ -17,4 +17,5 @@ int main(int argc, string argv[])
         printf("Error");
         return 1;
     }
+    else
 }
