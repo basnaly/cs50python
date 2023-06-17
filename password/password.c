@@ -25,12 +25,13 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    bool is_valid;
     int length = strlen(password);
     for (let i = 0;  i < length; i++)
     {
         if ((isdigit(password[i]) || islower(password[i]) || isupper(password[i]) || ispunct(password[i]))
         {
-            return true;
+            is_valid == true;
         }
     }
     return false;
