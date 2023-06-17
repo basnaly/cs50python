@@ -25,19 +25,24 @@ int main(int argc, string argv[])
 
 string replace(string word)
 {
-    for (int i = 0; i < )
-    string letter;
+    int length = strlen(word);
+    for (int i = 0; i < length; i++)
+    {
+        if 
+    }
+
+    char letter;
     switch(letter)
     {
-        case "a":
+        case 'a':
             printf(6);
             break;
 
-        case "e":
+        case 'e':
             printf(3);
             break;
 
-        case "i":
+        case 'i':
             printf(1);
             break;
 
