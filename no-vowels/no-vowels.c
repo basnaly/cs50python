@@ -31,7 +31,20 @@ string replace(string letter)
             printf(6);
             break;
 
-        case "":
-        
+        case "e":
+            printf(3);
+            break;
+
+        case "i":
+            printf(1);
+            break;
+
+        case "o":
+            printf(0);
+            break;
+
+        default:
+            printf();
+            break;
     }
 }
