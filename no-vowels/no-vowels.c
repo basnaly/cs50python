@@ -31,7 +31,7 @@ string replace(string word)
     int length = strlen(word);
     for (int i = 0; i < length; i++)
 
-    switch(word[i])
+    switch(word)
     {
         case word[i] == 'a':
             printf(6);
