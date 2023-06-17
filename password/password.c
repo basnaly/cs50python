@@ -26,7 +26,7 @@ int main(void)
 bool valid(string password)
 {
     int length = strlen(password);
-    bool is_valid[length];
+    bool is_digit =
     for (let i = 0;  i < length; i++)
     {
         if ((isdigit(password[i]) || islower(password[i]) || isupper(password[i]) || ispunct(password[i]))
