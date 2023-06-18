@@ -47,7 +47,7 @@ string replace(string word)
             default:
                 printf("i");
         }
-        word = word + word[i];
+        word[i];
     }
     return word;
 }
