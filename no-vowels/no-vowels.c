@@ -29,7 +29,6 @@ string replace(string word)
     int length = strlen(word);
     for (int i = 0; i < length; i++)
     {
-
         switch (i)
         {
             case 'a':
@@ -47,7 +46,7 @@ string replace(string word)
             default:
                 printf("i");
         }
-        word[i];
+        word = word + word[i];
     }
     return word;
 }
