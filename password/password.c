@@ -33,6 +33,6 @@ bool valid(string password)
 
    for (int i = 0; i < length; i++)
    {
-        if (isdigit(i) )
+        if (isdigit(i) =)
    }
 }
