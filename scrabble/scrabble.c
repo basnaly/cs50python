@@ -28,6 +28,6 @@ int compute_score(string word)
     int length = word[];
     for (int i = 0; i < length; i++)
     {
-        printf()
+        printf("i is %i\n", i)
     }
 }
