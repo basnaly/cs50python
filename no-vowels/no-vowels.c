@@ -25,5 +25,5 @@ int main(int argc, string argv[])
 
 string replace(string word)
 {
-    string word = argv[1]
+    string word = argv[1];
 }
