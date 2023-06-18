@@ -26,27 +26,27 @@ int main(int argc, string argv[])
 
 string replace(string word)
 {
-    int length = srtlen(word);
+    int length = strlen(word);
     for (int i = 0; i < length; i ++){
 
     switch (i)
     {
         case 'a':
-            printf('6');
+            printf("6");
             break;
         case 'e':
-            printf('3');
+            printf("3");
             break;
         case 'i':
-            printf('1');
+            printf("1");
             break;
         case 'o':
-            printf('0');
+            printf("0");
             break;
         default:
-            printf(i);
+            printf("i");
     }
-    word = word = word[i];
+    word = word + word[i];
     }
     return word;
 }
