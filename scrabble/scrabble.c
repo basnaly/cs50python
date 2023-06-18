@@ -42,7 +42,7 @@ int compute_score(string word)
 
     for (int i = 0; i < length; i++)
     {
-        if ((word[i] < 97 || word[i] > 122) || (word[i] < 65 || word[i] > 90))
+        if ((word[i] < 97 && word[i] > 122) || (word[i] < 65 && word[i] > 90))
         {
             sum = 0;
         }
