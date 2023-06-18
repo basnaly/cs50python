@@ -43,10 +43,15 @@ int compute_score(string word)
     for (int i = 0; i < length; i++)
     {
         if (word[i] < 65 || word[i] > 90)
-        // (word[i] < 97 || word[i] > 122))
         {
             sum = 0;
         }
+
+        else if (word[i] < 97 || word[i] > 122)
+        {
+            sum = 0;
+        }
+
         else if (islower(word[i]) != 0)
         {
             sum = sum + POINTS[word[i] - 97];
