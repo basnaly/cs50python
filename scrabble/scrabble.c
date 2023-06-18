@@ -42,12 +42,7 @@ int compute_score(string word)
 
     for (int i = 0; i < length; i++)
     {
-        if (word[i] < 65 || word[i] > 90)
-        {
-            sum = 0;
-        }
-
-        else if (word[i] < 97 || word[i] > 122)
+        if (isalpha(word[i]) != 0)
         {
             sum = 0;
         }
