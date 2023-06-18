@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(string letter);
+string replace(string word);
 
 int main(int argc, string argv[])
 {
