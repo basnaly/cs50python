@@ -18,6 +18,7 @@ int main(int argc, string argv[])
     }
     else
     {
+        string word = argv[1];
         string replaced = replace(word);
         printf(replaced\n);
     }
@@ -25,5 +26,5 @@ int main(int argc, string argv[])
 
 string replace(string word)
 {
-    string word = argv[1];
+    
 }
