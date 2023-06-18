@@ -11,16 +11,17 @@ string replace(string word);
 
 int main(int argc, string argv[])
 {
-    if (argc == 1 || argc > 2)
-    {
-        printf("Error \n");
-        return 1;
-    }
-    else
+    if (argc == 2)
     {
         string word = argv[1];
         string replaced = replace(word);
         printf("%s\n", replaced);
+    }
+
+    else
+    {
+        printf("Error \n");
+        return 1;
     }
 }
 
