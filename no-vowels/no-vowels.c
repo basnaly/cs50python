@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     {
         string word = argv[1];
         string replaced = replace(word);
-        printf("replaced \n");
+        printf("%s\n", replaced);
     }
 }
 
