@@ -32,20 +32,20 @@ string replace(string word)
 
         switch (i)
         {
-        case 'a':
-            printf("6");
-            break;
-        case 'e':
-            printf("3");
-            break;
-        case 'i':
-            printf("1");
-            break;
-        case 'o':
-            printf("0");
-            break;
-        default:
-            printf("i");
+            case 'a':
+                printf("6");
+                break;
+            case 'e':
+                printf("3");
+                break;
+            case 'i':
+                printf("1");
+                break;
+            case 'o':
+                printf("0");
+                break;
+            default:
+                printf("i");
         }
         word = word + word[i];
     }
