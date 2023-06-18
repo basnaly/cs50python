@@ -25,7 +25,7 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-   int length = strlen(password)
+   int length = strlen(password);
    bool is_digit = false;
    bool is_lower = false;
    bool is_upper = false;
@@ -45,12 +45,12 @@ bool valid(string password)
         {
             is_upper = true;
         }
-        else if (is_punct(i) == true)
+        else if (ispunct(i) == true)
         {
             is_punct = true;
         }
    }
-   if (is_digit = true && is_lower = true && is_upper = true && is_punct = true)
+   if (is_digit == true && is_lower == true && is_upper == true && is_punct == true)
    {
         return true;
    }
