@@ -26,6 +26,11 @@ int main(void)
 bool valid(string password)
 {
    int length = strlen(password)
+   bool is_digit = false;
+   bool is_lower = false;
+   bool is_upper = false;
+   bool is_punct = false;
+   
    for (int i = 0; i < length; i++)
    {
         if ()
