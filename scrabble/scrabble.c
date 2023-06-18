@@ -30,7 +30,7 @@ int compute_score(string word)
     int sum = 0;
     for (int i = 0; i < length; i++)
     {
-        sum = sum + word[i];
+        sum = sum + POINTS[word[i] - 97];
     }
     return sum;
 }
