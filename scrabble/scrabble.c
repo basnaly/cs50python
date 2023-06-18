@@ -25,5 +25,9 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
 
-    int length = word[]
+    int length = word[];
+    for (int i = 0; i < length; i++)
+    {
+        
+    }
 }
