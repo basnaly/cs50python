@@ -26,5 +26,14 @@ int main(int argc, string argv[])
 
 string replace(string word)
 {
-    
+    for (int i = 0; i < )
+    switch (word)
+    {
+        case 'a':
+            printf('6');
+            break;
+        case 'a':
+            printf('6');
+            break;
+    }
 }
