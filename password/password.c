@@ -3,9 +3,9 @@
 // Practice using the ctype library
 
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 bool valid(string password);
 
@@ -25,14 +25,14 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-   int length = strlen(password);
-   bool is_digit = false;
-   bool is_lower = false;
-   bool is_upper = false;
-   bool is_punct = false;
+    int length = strlen(password);
+    bool is_digit = false;
+    bool is_lower = false;
+    bool is_upper = false;
+    bool is_punct = false;
 
-   for (int i = 0; i < length; i++)
-   {
+    for (int i = 0; i < length; i++)
+    {
         if (isdigit(password[i]) != 0)
         {
             is_digit = true;
@@ -49,10 +49,10 @@ bool valid(string password)
         {
             is_punct = true;
         }
-   }
-   if (is_digit == true && is_lower == true && is_upper == true && is_punct == true)
-   {
+    }
+    if (is_digit == true && is_lower == true && is_upper == true && is_punct == true)
+    {
         return true;
-   }
-   return false;
+    }
+    return false;
 }
