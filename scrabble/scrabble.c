@@ -47,7 +47,7 @@ int compute_score(string word)
         //     sum = 0;
         // }
 
-        else if (islower(word[i]) != 0)
+        if (islower(word[i]) != 0)
         {
             sum = sum + POINTS[word[i] - 97];
         }
