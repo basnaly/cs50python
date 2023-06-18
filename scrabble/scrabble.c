@@ -50,7 +50,7 @@ int compute_score(string word)
         {
             sum = sum + POINTS[word[i] - 97];
         }
-        else if (supper(word[i]) != 0)
+        else if (isupper(word[i]) != 0)
         {
             sum = sum + POINTS[word[i] - 65];
         }
