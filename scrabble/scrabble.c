@@ -42,10 +42,10 @@ int compute_score(string word)
 
     for (int i = 0; i < length; i++)
     {
-        if (isalpha(word[i]) != 0)
-        {
-            sum = 0;
-        }
+        // if (isalpha(word[i]) != 0)
+        // {
+        //     sum = 0;
+        // }
 
         else if (islower(word[i]) != 0)
         {
