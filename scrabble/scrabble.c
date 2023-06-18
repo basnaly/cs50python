@@ -26,9 +26,10 @@ int compute_score(string word)
     // TODO: Compute and return score for string
 
     int length = strlen(word);
+    int sum = 0;
     for (int i = 0; i < length; i++)
     {
-        printf("i is %i\n", i);
+        sum = sum + sum[i];
     }
-    printf("\n");
+    return sum;
 }
