@@ -29,7 +29,7 @@ int main(void)
     }
     else
     {
-        printf("Tie! %i, %i\n", score1, score2);
+        printf("Tie!\n");
     }
 }
 
