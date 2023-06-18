@@ -42,11 +42,6 @@ int compute_score(string word)
 
     for (int i = 0; i < length; i++)
     {
-        // if (isalpha(word[i]) != 0)
-        // {
-        //     sum = 0;
-        // }
-
         if (islower(word[i]) != 0)
         {
             sum = sum + POINTS[word[i] - 97];
