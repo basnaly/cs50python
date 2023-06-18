@@ -26,14 +26,26 @@ int main(int argc, string argv[])
 
 string replace(string word)
 {
-    for (int i = 0; i < )
-    switch (word)
+    int length = srtlen(word);
+    for (int i = 0; i < length; i ++){
+
+    switch (i)
     {
         case 'a':
             printf('6');
             break;
-        case 'a':
-            printf('6');
+        case 'e':
+            printf('3');
             break;
+        case 'i':
+            printf('1');
+            break;
+        case 'o':
+            printf('0');
+            break;
+        default:
+            printf(i);
+    }
+    
     }
 }
