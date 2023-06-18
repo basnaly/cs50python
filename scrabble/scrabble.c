@@ -30,5 +30,5 @@ int compute_score(string word)
     {
         printf("i is %i\n", i);
     }
-    return i
+    printf("\n");
 }
