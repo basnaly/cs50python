@@ -33,6 +33,26 @@ bool valid(string password)
 
    for (int i = 0; i < length; i++)
    {
-        if (isdigit(i) =)
+        if (isdigit(i) == true)
+        {
+            is_digit = true;
+        }
+        else if (islower(i) == true)
+        {
+            is_lower = true;
+        }
+        else if (isupper(i) == true)
+        {
+            is_upper = true;
+        }
+        else if (is_punct(i) == true)
+        {
+            is_punct = true;
+        }
    }
+   if (is_digit = true && is_lower = true && is_upper = true && is_punct = true)
+   {
+        return true;
+   }
+   return false;
 }
