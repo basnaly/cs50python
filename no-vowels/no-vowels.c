@@ -11,7 +11,7 @@ string replace(string word);
 
 int main(int argc, string argv[])
 {
-    if (argc < 0 || argc > 2)
+    if (argc == 1 || argc > 2)
     {
         printf("Error \n");
         return 1;
