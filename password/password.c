@@ -30,9 +30,9 @@ bool valid(string password)
    bool is_lower = false;
    bool is_upper = false;
    bool is_punct = false;
-   
+
    for (int i = 0; i < length; i++)
    {
-        if ()
+        if (isdigit(i) )
    }
 }
