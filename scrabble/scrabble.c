@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -30,7 +30,16 @@ int compute_score(string word)
     int sum = 0;
     for (int i = 0; i < length; i++)
     {
-        sum = sum + POINTS[word[i] - 97];
+        if (word[i] < 97 || word[i] > 122)
+        {
+            sum = 0;
+        }
+        else if 
+        {
+        }
+        {
+            sum = sum + POINTS[word[i] - 97];
+        }
     }
     return sum;
 }
