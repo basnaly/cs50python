@@ -11,10 +11,10 @@ int main(void)
     // TODO
     string message = get_string("What's your message? ");
     int length = strlen(message);
-    int array[length];
+    
     for (int i = 0; i < length; i++)
     {
-        printf("%i\n", array[i]);
+        printf("%i\n", message[i]);
     }
 }
 
