@@ -12,12 +12,13 @@ int main(void)
     string message = get_string("What's your message? ");
 
     int length = strlen(message);
+
     int binary_number[BITS_IN_BYTE];
 
     for (int i = 0; i < length; i++)
     {
         printf("%i\n", message[i]);
-
+        for (int j = 0)
         int rem = message[i] % 2;
         message[i] = message[i] - rem;
         binary_number[i] = rem;
