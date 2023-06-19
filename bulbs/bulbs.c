@@ -18,7 +18,7 @@ int main(void)
     {
         printf("%i\n", message[i]);
 
-        rem[i] = message[i] % 2;
+        int rem[i] = message[i] % 2;
         message[i] = message[i] - rem[i];
         binary_number[i] = rem[i];
         printf("%i\n", binary_number[i]);
