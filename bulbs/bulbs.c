@@ -22,7 +22,10 @@ int main(void)
             int rem = message[i] % 2;
             message[i] = (message[i] - rem) / 2;
             binary_number[j] = rem;
-            print_bulb(binary_number[j]);
+        }
+        for (int k = 0; k < BITS_IN_BYTE; k++)
+        {
+            print_bulb(binary_number[k]);
         }
         printf("\n");
     }
