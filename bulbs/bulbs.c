@@ -25,6 +25,7 @@ int main(void)
             binary_number[i] = rem;
             printf("%i", binary_number[i]);
         }
+        printf("\n");
     }
 }
 
