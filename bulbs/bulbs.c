@@ -9,26 +9,7 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    string message = get_string("What's your message? ");
-
-    int length = strlen(message);
-
-    int binary_number[BITS_IN_BYTE];
-
-    for (int i = 0; i < length; i++)
-    {
-        for (int j = 0; j < BITS_IN_BYTE; j++)
-        {
-            int rem = message[i] % 2;
-            message[i] = (message[i] - rem) / 2;
-            binary_number[j] = rem;
-        }
-        for (int k = 0; k < BITS_IN_BYTE; k++)
-        {
-            print_bulb(binary_number[BITS_IN_BYTE - k - 1]);
-        }
-        printf("\n");
-    }
+    
 }
 
 void print_bulb(int bit)
