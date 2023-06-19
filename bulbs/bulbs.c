@@ -14,7 +14,7 @@ int main(void)
     int array[length];
     for (int i = 0; i < length; i++)
     {
-        printf("%i ", array[i]);
+        printf("%i\n", array[i]);
     }
 }
 
