@@ -17,8 +17,11 @@ int main(void)
     for (int i = 0; i < length; i++)
     {
         printf("%i\n", message[i]);
-        rem = message[i] % 2
-        binary_number[i] = message[i] % 2
+
+        rem[i] = message[i] % 2;
+        message[i] = message[i] - rem[i];
+        binary_number[i] = rem[i];
+        printf("%i\n", binary_number[i]);
     }
 }
 
