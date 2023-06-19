@@ -22,8 +22,8 @@ int main(void)
         {
             int rem = message[i] % 2;
             message[i] = message[i] - rem;
-            binary_number[i] = rem;
-            printf("%i", binary_number[i]);
+            binary_number[j] = rem;
+            printf("%i", binary_number[j]);
         }
         printf("\n");
     }
