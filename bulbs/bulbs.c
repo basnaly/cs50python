@@ -17,7 +17,8 @@ int main(void)
     for (int i = 0; i < length; i++)
     {
         printf("%i\n", message[i]);
-        message[i] % 2 
+        rem = message[i] % 2
+        binary_number[i] = message[i] % 2
     }
 }
 
