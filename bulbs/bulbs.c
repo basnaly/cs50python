@@ -11,10 +11,10 @@ int main(void)
     // TODO
     string message = get_string("What's your message? ");
     int length = strlen(message);
-    int arr[len]
+    int arr[length];
     for (int i = 0; i < length; i++)
     {
-
+        
     }
 }
 
