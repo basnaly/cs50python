@@ -70,11 +70,11 @@ char rotate(char letter, int key)
 
     if (isupper(letter))
     {
-        rotated_letter = (char) ((int) letter + key - 65) % 26;
+        rotated_letter = (char) (((int) letter + key - 65) % 26) + 65;
     }
     else if (islower(letter))
     {
-       rotated_letter = (char) ((int) letter + key - 97) % 26;
+       rotated_letter = (char) (((int) letter + key - 97) % 26) + 97;
     }
 
     return rotated_letter;
