@@ -40,5 +40,5 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-
+    if 
 }
