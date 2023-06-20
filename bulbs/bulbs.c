@@ -22,12 +22,14 @@ int main(void)
         {
             int rem = message[i] % 2;
             message[i] = (message[i] - rem) / 2;
-            // printf("%i", rem);
+            binary_number[j] = rem;
+            printf("%i", binary_number[j]);
         }
+        printf("\n");
 
         for (int k = 0; k < BITS_IN_BYTE - k - 1; k++)
         {
-            print_bulb("%i", rem);
+            print_bulb("%i", binary_number[k]);
         }
     }
 
