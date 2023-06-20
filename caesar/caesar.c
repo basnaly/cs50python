@@ -30,7 +30,7 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int length = strlen(plain_text);
 
-    string ciphertext = "";
+    string ciphertext = plain_text;
 
     for(int i = 0; i < length; i++)
     {
