@@ -25,12 +25,14 @@ int main(void)
             binary_number[j] = rem;
             printf("%i", binary_number[j]);
         }
-        // printf("\n");
+
 
         for (int k = 0; k < BITS_IN_BYTE - k - 1; k++)
         {
             print_bulb(binary_number[k]);
         }
+        printf("\n");
+
     }
 
 }
