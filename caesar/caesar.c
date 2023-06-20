@@ -38,7 +38,7 @@ int main(int argc, string argv[])
         else if (isupper(plain_text[i]) || islower(plain_text[i]))
         {
             rotate(plain_text[i], k);
-            
+
             prinf("%)
         }
     }
@@ -64,5 +64,5 @@ bool only_digits(string sla)
 
 char rotate(char word, int key)
 {
-    word = (int) word + key;
+    word = ((int) word + key) % 26;
 }
