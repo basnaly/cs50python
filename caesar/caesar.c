@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+char UPPERCASE[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', ''}
+
 bool only_digits(string sla);
 
 char rotate(char word, int key);
