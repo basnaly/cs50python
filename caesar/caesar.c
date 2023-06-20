@@ -39,7 +39,7 @@ int main(int argc, string argv[])
         {
             rotate(plain_text[i], k);
 
-            prinf("%)
+            prinf("%")
         }
     }
 
