@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     string plain = get_string("Plaintext: ");
 
 
-    
+    only_digits(argv[1])
 
     return 0;
 
