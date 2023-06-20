@@ -66,6 +66,8 @@ bool only_digits(string sla)
 
 char rotate(char letter, int key)
 {
+    char rotated_letter;
+    
     if (isupper(letter))
     {
         char rotated_letter = (char) ((int) letter + key - 65) % 26;
