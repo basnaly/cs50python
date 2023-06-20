@@ -22,7 +22,7 @@ int main(void)
         {
             int rem = message[i] % 2;
             message[i] = (message[i] - rem) / 2;
-            printf("%i\n", binary_number[j]);
+            printf("%i\n", message[i]);
         }
     }
 
