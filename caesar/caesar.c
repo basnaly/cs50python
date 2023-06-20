@@ -25,7 +25,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Transform k fron string to integer
+    // Transform k from string to integer
     int k = atoi(argv[1]);
 
     string plain_text = get_string("plaintext: ");
@@ -50,6 +50,7 @@ bool only_digits(string sla)
 
     for (int i = 0; i < length; i++)
     {
+        // Check if letter[i] is not digit
         if (!isdigit(sla[i]))
         {
             return false;
@@ -60,15 +61,18 @@ bool only_digits(string sla)
 
 char rotate(char letter, int key)
 {
-    // Save the char letter to a new variable rotated_letter to return the initial letter if it is not alphabet
+    // Save the char letter to a new variable rotated_letter
+    // to return the initial letter if it is not alphabet
     char rotated_letter = letter;
 
     if (isupper(letter))
     {
+        // Rotate uppercase letter
         rotated_letter = (char)(((int) letter + key - 65) % 26) + 65;
     }
     else if (islower(letter))
     {
+        // Rotate lowercase letter
         rotated_letter = (char)(((int) letter + key - 97) % 26) + 97;
     }
 
