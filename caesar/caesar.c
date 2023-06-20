@@ -42,7 +42,6 @@ int main(int argc, string argv[])
         {
             ciphertext[i] = rotate(plain_text[i], k);
         }
-
     }
 
     // string cipher_text = get_string("ciphertext: ");
