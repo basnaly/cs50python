@@ -15,18 +15,6 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // string argument = argv[1];
-    // int length = strlen(argument);
-
-    // for (int i = 0; i < length; i++)
-    // {
-    //     if (!isdigit(argument[i]))
-    //     {
-    //         printf("Usage:  ./caesar key\n");
-    //         return 1;
-    //     }
-    // }
-
     // int k;
     // k = atoi(argv[1]);
 
@@ -52,6 +40,6 @@ bool only_digits(string s)
         {
             return false;
         }
-        return true;
     }
+    return true;
 }
