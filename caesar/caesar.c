@@ -40,11 +40,8 @@ bool only_digits(string s)
 {
     if (!isdigit(s))
     {
-        printf("Usage:  ./caesar key\n");
-        return 1;
+        return false;
     }
-    else
-    {
-        return 0;
-    }
+    return true;
+
 }
