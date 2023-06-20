@@ -12,11 +12,18 @@ int main(void)
     string message = get_string("What's your nessage: ");
     int length = strlen(message);
 
-    int binary_number[];
+    int binary_number[BITS_IN_BYTE];
 
-    for (let i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
-        printf("%i", message[i]);
+        printf("%i\n", message[i]);
+
+        for (int j = 0; j < BITS_IN_BYTE; j++)
+        {
+            int rem = message[i] % 2;
+            binary_number[j] = (message[i] - rem) \ 2;
+            printf("%i\n", binary_number[j]);
+        }
     }
 
 }
