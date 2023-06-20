@@ -33,7 +33,6 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < length; i++)
     {
-
         ciphertext[i] = rotate(plain_text[i], k);
     }
 
