@@ -30,8 +30,7 @@ int main(void)
 
         for (int k = 0; k < BITS_IN_BYTE - k - 1; k++)
         {
-            binary_number[k] = rem;
-            printf("%i", binary_number[k]);
+            printf("%i", rem);
         }
         printf("\n");
 
