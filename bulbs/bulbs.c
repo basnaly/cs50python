@@ -16,7 +16,7 @@ int main(void)
 
     for (int i = 0; i < length; i++)
     {
-        printf("%i\n", message[i]);
+        // printf("%i\n", message[i]);
 
         for (int j = 0; j < BITS_IN_BYTE; j++)
         {
@@ -25,11 +25,11 @@ int main(void)
             binary_number[j] = rem;
             printf("%i", binary_number[j]);
         }
-        printf("\n");
+        // printf("\n");
 
         for (int k = 0; k < BITS_IN_BYTE - k - 1; k++)
         {
-            print_bulb("%i", binary_number[k]);
+            print_bulb(binary_number[k]);
         }
     }
 
