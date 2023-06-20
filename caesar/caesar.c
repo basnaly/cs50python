@@ -4,9 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-bool only_digits(string s);
+bool only_digits(string sla);
 
-char rotate(char word, int key)
+char rotate(char word, int key);
 
 int main(int argc, string argv[])
 {
@@ -34,16 +34,21 @@ int main(int argc, string argv[])
 
 }
 
-bool only_digits(string s)
+bool only_digits(string sla)
 {
-    int length = strlen(s);
+    int length = strlen(sla);
 
     for (int i = 0; i < length; i++)
     {
-        if (!isdigit(s[i]))
+        if (!isdigit(sla[i]))
         {
             return false;
         }
     }
     return true;
+}
+
+char rotate(char word, int key)
+{
+    
 }
