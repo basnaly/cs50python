@@ -37,9 +37,8 @@ int main(int argc, string argv[])
         if (!isalpha(plain_text[i]))
         {
              ciphertext = ciphertext + plain_text[i];
-
         }
-        else if (isupper(plain_text[i]) || islower(plain_text[i]))
+        else
         {
             ciphertext = ciphertext + rotate(plain_text[i], k);
 
