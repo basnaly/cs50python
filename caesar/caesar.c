@@ -29,9 +29,9 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
 
 
+
+
     return 0;
-
-
 }
 
 bool only_digits(string sla)
