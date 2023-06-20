@@ -11,7 +11,8 @@ int main(void)
     // TODO
     string message = get_string("What's your nessage: ");
 
-    int 
+    int binary_number[];
+    
 }
 
 void print_bulb(int bit)
