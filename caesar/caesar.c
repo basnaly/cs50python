@@ -42,11 +42,11 @@ int main(int argc, string argv[])
         {
             ciphertext = ciphertext + rotate(plain_text[i], k);
         }
-        return ciphertext;
+    printf("ciphertext: %s\n", ciphertext);
     }
 
     // string cipher_text = get_string("ciphertext: ");
-    printf("ciphertext: %s\n", ciphertext);
+
 
     return 0;
 }
