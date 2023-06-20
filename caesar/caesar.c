@@ -6,7 +6,7 @@
 
 bool only_digits(string s);
 
-char rotate(char letter, int key)
+char rotate(char word, int key)
 
 int main(int argc, string argv[])
 {
