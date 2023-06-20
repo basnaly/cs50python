@@ -36,11 +36,11 @@ int main(int argc, string argv[])
     {
         if (!isalpha(plain_text[i]))
         {
-             ciphertext = ciphertext + plain_text[i];
+             ciphertext[i] = plain_text[i];
         }
         else
         {
-            ciphertext = ciphertext + rotate(plain_text[i], k);
+            ciphertext[i] = rotate(plain_text[i], k);
         }
 
     }
