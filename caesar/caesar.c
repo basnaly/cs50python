@@ -67,7 +67,6 @@ char rotate(char letter, int key)
     else if (islower(letter))
     {
         rotated_letter = (char) (((int) letter + key - 97) % 26) + 97;
-        // printf("%c", rotated_letter);
     }
 
     return rotated_letter;
