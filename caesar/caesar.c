@@ -27,7 +27,7 @@ int main(int argc, string argv[])
 
     int k = atoi(argv[1]);
 
-    string plain_text = get_string("plaintext: "); // 10milk
+    string plain_text = get_string("plaintext: ");
     int length = strlen(plain_text);
 
     string ciphertext = "";
@@ -66,7 +66,7 @@ bool only_digits(string sla)
 
 char rotate(char letter, int key)
 {
-    char rotated_letter;
+    char rotated_letter = "";
 
     if (isupper(letter))
     {
