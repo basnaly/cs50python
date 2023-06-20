@@ -7,7 +7,7 @@
 
 bool only_digits(string sla);
 
-char rotate(char word, int key);
+char rotate(char letter, int key);
 
 int main(int argc, string argv[])
 {
@@ -63,7 +63,7 @@ bool only_digits(string sla)
     return true;
 }
 
-char rotate(char word, int key)
+char rotate(char letter, int key)
 {
-    word = ((int) word + key) % 26;
+    letter = ((int) letter + key) % 26;
 }
