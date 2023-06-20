@@ -31,7 +31,14 @@ int main(int argc, string argv[])
 
     for(int i = 0; i < length; i++)
     {
-        if (plain_text[i])
+        if (isdigit(plain_text[i]) || ispunct(plain_text[i]))
+        {
+            return plain_text[i];
+        }
+        else if (isupper(plain_text[i]))
+        {
+            
+        }
     }
 
 
