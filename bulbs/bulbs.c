@@ -9,7 +9,7 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    
+    string
 }
 
 void print_bulb(int bit)
