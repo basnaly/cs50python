@@ -6,6 +6,8 @@
 
 bool only_digits(string s);
 
+
+
 int main(int argc, string argv[])
 {
 
@@ -15,18 +17,20 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // int k;
-    // k = atoi(argv[1]);
-
     bool s = only_digits(argv[1]);
     if (s == false)
     {
         printf("Usage:  ./caesar key\n");
         return 1;
     }
+
+    int k = atoi(argv[1]);
+
+    string plain = get_string("plaintext: ");
+
+
     return 0;
 
-    string plain = get_string("Plaintext: ");
 
 }
 
