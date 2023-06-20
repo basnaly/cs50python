@@ -65,5 +65,7 @@ bool only_digits(string sla)
 
 char rotate(char letter, int key)
 {
-    letter = ((int) letter + key) % 26;
+    char rotated_letter = (char) ((int) letter + key) % 26;
+
+    return rotated_letter;
 }
