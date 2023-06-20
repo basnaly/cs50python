@@ -27,7 +27,7 @@ int main(void)
         }
 
         for (int k = 0; k < BITS_IN_BYTE; k++)
-        // for (int k = BITS_IN_BYTE - 1; k >= 0; k--) && print_bulb(binary_number[k]);
+// for (int k = BITS_IN_BYTE - 1; k >= 0; k--) && print_bulb(binary_number[k]);
         {
             print_bulb(binary_number[BITS_IN_BYTE - k - 1]);
         }
