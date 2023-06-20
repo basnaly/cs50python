@@ -17,7 +17,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-// Check if argv[1] has only digits
+    // Check if argv[1] has only digits
     bool is_digit = only_digits(argv[1]);
     if (is_digit == false)
     {
@@ -25,13 +25,13 @@ int main(int argc, string argv[])
         return 1;
     }
 
-// Transform k fron string to integer
+    // Transform k fron string to integer
     int k = atoi(argv[1]);
 
     string plain_text = get_string("plaintext: ");
     int length = strlen(plain_text);
 
-// Save the plain text to a new variable ciphertext with the same length
+    // Save the plain text to a new variable ciphertext with the same length
     string ciphertext = plain_text;
 
     for (int i = 0; i < length; i++)
