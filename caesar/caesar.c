@@ -46,7 +46,8 @@ int main(int argc, string argv[])
         }
     }
 
-
+    string cipher_text = get_string("ciphertext: ");
+    printf("%s\n", )
 
     return 0;
 }
