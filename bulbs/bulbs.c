@@ -9,7 +9,9 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    string message = get_string("")
+    string message = get_string("What's your nessage: ");
+
+    int 
 }
 
 void print_bulb(int bit)
