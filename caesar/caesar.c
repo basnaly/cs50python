@@ -43,7 +43,6 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    char s = [];
     int length = strlen(s);
 
     for (int i = 0; i < length; i++)
