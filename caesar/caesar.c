@@ -37,7 +37,7 @@ int main(int argc, string argv[])
         }
         else if (isupper(plain_text[i]))
         {
-            plain_text[i] = (int) plain_text[i] + 
+            plain_text[i] = (int) plain_text[i] +
         }
     }
 
@@ -62,5 +62,5 @@ bool only_digits(string sla)
 
 char rotate(char word, int key)
 {
-
+    word = (int) word + key
 }
