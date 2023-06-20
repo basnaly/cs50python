@@ -13,6 +13,7 @@ int main(void)
     int length = strlen(message);
 
     int binary_number[BITS_IN_BYTE];
+    int rem;
 
     for (int i = 0; i < length; i++)
     {
@@ -20,7 +21,7 @@ int main(void)
 
         for (int j = 0; j < BITS_IN_BYTE; j++)
         {
-            int rem = message[i] % 2;
+            rem = message[i] % 2;
             message[i] = (message[i] - rem) / 2;
             binary_number[j] = rem;
             printf("%i", binary_number[j]);
@@ -29,6 +30,7 @@ int main(void)
 
         for (int k = 0; k < BITS_IN_BYTE - k - 1; k++)
         {
+            binary_number[k] = rem;
             printf("%i", binary_number[k]);
         }
         printf("\n");
