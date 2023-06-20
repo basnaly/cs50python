@@ -31,14 +31,14 @@ int main(int argc, string argv[])
     // k = atoi(argv[1]);
     string plain = get_string("Plaintext: ");
 
-    only_digits(argv[1])
+    only_digits(argv[1]);
 
         // return 0;
 }
 
 bool only_digits(string s)
 {
-    if (!isdigit(argument[i]))
+    if (!isdigit(s))
     {
         printf("Usage:  ./caesar key\n");
         return 1;
