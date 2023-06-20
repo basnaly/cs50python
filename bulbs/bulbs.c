@@ -10,9 +10,15 @@ int main(void)
 {
     // TODO
     string message = get_string("What's your nessage: ");
+    int length = strlen(message);
 
     int binary_number[];
-    
+
+    for (let i = 0; i < length; i++)
+    {
+        printf("%i", message[i]);
+    }
+
 }
 
 void print_bulb(int bit)
