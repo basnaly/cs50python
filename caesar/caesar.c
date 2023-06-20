@@ -3,5 +3,10 @@
 
 int main(int argc, string argv[])
 {
-    if ()
+    int k;
+    if (argc == 1 || argc > 2)
+    {
+        printf("Error ");
+        return 1;
+    }
 }
