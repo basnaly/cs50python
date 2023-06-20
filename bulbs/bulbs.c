@@ -28,9 +28,9 @@ int main(void)
         }
         printf("\n");
 
-        for (int k = 0; k < BITS_IN_BYTE - k - 1; k++)
+        for (int k = 0; k < BITS_IN_BYTE; k++)
         {
-            printf("%i", rem);
+            printf("%i", binary_number[k]);
         }
         printf("\n");
 
