@@ -31,7 +31,7 @@ int main(int argc, string argv[])
 
     for(int i = 0; i < length; i++)
     {
-        if (isdigit(plain_text[i]) || ispunct(plain_text[i]))
+        if (!isalpha(plain_text[i]))
         {
             return plain_text[i];
         }
