@@ -37,7 +37,7 @@ int main(int argc, string argv[])
         }
         else if (isupper(plain_text[i]))
         {
-            plain_text[i] = (int) plain_text[i] +
+            rotate
         }
     }
 
