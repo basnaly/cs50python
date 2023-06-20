@@ -6,7 +6,7 @@
 
 bool only_digits(string s);
 
-
+char rotate(char , int )
 
 int main(int argc, string argv[])
 {
