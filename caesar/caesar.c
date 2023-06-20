@@ -30,15 +30,18 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: "); // 10milk
     int length = strlen(plain_text);
 
+    string ciphertext = "";
+
     for(int i = 0; i < length; i++)
     {
         if (!isalpha(plain_text[i]))
         {
-             plain_text[i];
+             ciphertext = ciphertext + plain_text[i];
+
         }
         else if (isupper(plain_text[i]) || islower(plain_text[i]))
         {
-            rotate(plain_text[i], k);
+            ciphertext = ciphertext + rotate(plain_text[i], k);
 
             prinf("%")
         }
