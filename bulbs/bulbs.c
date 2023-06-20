@@ -21,7 +21,7 @@ int main(void)
         for (int j = 0; j < BITS_IN_BYTE; j++)
         {
             int rem = message[i] % 2;
-            binary_number[j] = (message[i] - rem) / 2;
+            message[i] = (message[i] - rem) / 2;
             printf("%i\n", binary_number[j]);
         }
     }
