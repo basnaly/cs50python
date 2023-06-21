@@ -9,9 +9,14 @@ bool is_valid_key(string argument);
 
 int main(int argc, string argv[])
 {
-    if ((argc == 1 || argc > 2) || (is_alphabetic(argv[1]) == false))
+    if (argc == 1 || argc > 2)
     {
         printf("Usage:  ./substitution key\n");
+        return 1;
+    }
+    else if ((is_alphabetic(argv[1]) == false))
+    {
+        printf("Key must only contain alphabetic characters.\n");
         return 1;
     }
     else if (is_valid_key(argv[1]) == false)
