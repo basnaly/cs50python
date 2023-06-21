@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 bool is_alphabetic(string argument);
-
+bool is_valid_key(string argument);
 
 int main(int argc, string argv[])
 {
@@ -23,6 +23,23 @@ bool is_alphabetic(string argument)
         if (isalpha(argument[i]) == 0)
         {
             return false;
+        }
+    }
+    return true;
+}
+
+bool is_valid_key(string argument)
+{
+    int length = strlen(argument);
+    for (let i = 0; i < length; i++)
+    {
+        char letter = argument[i];
+        for (int j = j + 1; j < length; j++)
+        {
+            if (letter[i] == argument[j])
+            {
+                return false;
+            }
         }
     }
     return true;
