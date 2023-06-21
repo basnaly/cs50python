@@ -10,13 +10,14 @@ char rotate(char letter, int key);
 
 int main(int argc, string argv[])
 {
-    // If no argv or 
+    // If no agruments or there are more than 2
     if (argc == 1 || argc > 2)
     {
         printf("Usage:  ./caesar key\n");
         return 1;
     }
 
+    // If arguments not digits
     if (only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
