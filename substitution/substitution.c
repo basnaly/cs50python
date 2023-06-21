@@ -11,7 +11,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    
+
 }
 
 bool is_alphabetic(string argument)
@@ -19,7 +19,7 @@ bool is_alphabetic(string argument)
     int length = strlen(argument);
     for (let i = 0; i < length; i++)
     {
-        if (isalpha(argument[i]) == 0)
+        if (isalpha(argument[i]) == 0 || )
         {
             printf("Key must contain 26 characters.\n");
             return 1;
