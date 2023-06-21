@@ -3,6 +3,7 @@
 
 bool is_alphabetic(string argument);
 
+
 int main(int argc, string argv[])
 {
     if (argc == 1 || argc > 2)
@@ -23,6 +24,6 @@ bool is_alphabetic(string argument)
         {
             return false;
         }
-        
     }
+    return true;
 }
