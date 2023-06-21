@@ -21,8 +21,8 @@ bool is_alphabetic(string argument)
     {
         if (isalpha(argument[i]) == 0)
         {
-
-            return 1;
+            return false;
         }
+        else if
     }
 }
