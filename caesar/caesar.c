@@ -45,7 +45,6 @@ int main(int argc, string argv[])
 
 bool only_digits(string argument)
 {
-    // 
     int length = strlen(argument);
     for (int i = 0; i < length; i++)
     {
@@ -62,11 +61,13 @@ char rotate(char letter, int key)
     char cipher_letter = letter;
     if (isupper(cipher_letter) != 0)
     {
+        // If the letter has uppercase rotate it according ASCII on key positions
         cipher_letter = ((int)((cipher_letter) - 65 + key) % 26) + 65;
     }
 
     else if (islower(cipher_letter) != 0)
     {
+        // If the letter has lowercase rotate it according ASCII on key positions
         cipher_letter = ((int)((cipher_letter) - 97 + key) % 26) + 97;
     }
     return cipher_letter;
