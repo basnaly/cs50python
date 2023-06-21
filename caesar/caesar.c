@@ -31,7 +31,7 @@ int main(int argc, string argv[])
 
     for (let i = 0; i < length; i++)
     {
-        if (rotate(siper_text[i], key))
+        siper_text = siper_text + rotate(siper_text[i], key)
     }
 
 }
