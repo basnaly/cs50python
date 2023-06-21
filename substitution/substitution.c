@@ -11,7 +11,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
+// printf("Key must contain 26 characters.\n");
 }
 
 bool is_alphabetic(string argument)
@@ -21,7 +21,7 @@ bool is_alphabetic(string argument)
     {
         if (isalpha(argument[i]) == 0)
         {
-            printf("Key must contain 26 characters.\n");
+
             return 1;
         }
     }
