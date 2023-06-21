@@ -16,12 +16,12 @@ int main(int argc, string argv[])
     }
     else if (is_valid_key(argv[1]) == false)
     {
-        printf("Key must contain 26 characters.\n");
+        printf("Key must contain 26 unique characters.\n");
         return 1;
     }
 
     string plain_text = get_string("plaintext: \n");
-    
+
     return 0;
 }
 
