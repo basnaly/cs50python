@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-bool only_digits(string text);
+bool only_digits(string argument);
 
 int main(int argc, string argv[])
 {
@@ -14,21 +14,22 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string plain_text = get_string("plaintext: ");
-
-    if (only_digits(plain_text) == false)
+    if (only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
+
+    string plain_text = get_string("plaintext: ");
+
 }
 
-bool only_digits(string text)
+bool only_digits(string argument)
 {
-    int length = strlen(text);
+    int length = strlen(argument);
     for (int i = 0; i < length; i++)
     {
-        if (isdigit(text[i]) == 0)
+        if (isdigit(argument[i]) == 0)
         {
             return false;
         }
