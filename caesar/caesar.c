@@ -52,11 +52,15 @@ bool only_digits(string argument)
 
 char rotate(char letter ,int key)
 {
-    if (isupper(letter) )
-    {
-
-    }
     char siper_letter = letter;
-    (int)(letter) -
+    if (isupper(siper_letter) != 0)
+    {
+        siper_letter = ((int)((siper_letter) - 65 + key) % 26)+ 65;
+    }
 
+    else if (islower(siper_letter) != 0)
+    {
+        siper_letter = ((int)((siper_letter) - 97 + key) % 26) + 97;
+    }
+    return 
 }
