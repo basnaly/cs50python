@@ -32,6 +32,7 @@ int main(int argc, string argv[])
     for (let i = 0; i < length; i++)
     {
         siper_text = siper_text + rotate(siper_text[i], key);
+        printf("ciphertext: %c\n", siper_text);
     }
 
 }
@@ -51,5 +52,7 @@ bool only_digits(string argument)
 
 char rotate(char letter ,int key)
 {
+    char siper_letter = letter;
+    
 
 }
