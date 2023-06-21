@@ -24,15 +24,19 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    // Transform the key fron string to integer
     int key = atoi(argv[1]);
 
+    // Ask fot user type text
     string plain_text = get_string("plaintext: ");
     int length = strlen(plain_text);
 
+    // Create new variable with the same length
     string cipher_text = plain_text;
 
     for (int i = 0; i < length; i++)
     {
+        // Change each letter of the text in for loop;
         cipher_text[i] = rotate(cipher_text[i], key);
     }
     printf("ciphertext: %s\n", cipher_text);
@@ -41,6 +45,7 @@ int main(int argc, string argv[])
 
 bool only_digits(string argument)
 {
+    // 
     int length = strlen(argument);
     for (int i = 0; i < length; i++)
     {
