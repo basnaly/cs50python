@@ -16,7 +16,8 @@ int main(int argc, string argv[])
 
     string plain_text = get_string("plaintext: ");
 
-    
+
+    if ()
 }
 
 bool only_digits(string, text)
