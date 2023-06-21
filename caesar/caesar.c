@@ -20,6 +20,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    int atoi()
     string plain_text = get_string("plaintext: ");
 
 }
