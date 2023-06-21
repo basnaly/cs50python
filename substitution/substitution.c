@@ -58,6 +58,7 @@ bool is_length_key_valid(string argument)
     {
         return false;
     }
+    return true;
 }
 
 bool is_valid_key(string argument)
