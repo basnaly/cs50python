@@ -40,6 +40,7 @@ bool is_alphabetic(string argument)
 bool is_valid_key(string argument)
 {
     int length = strlen(argument);
+  
     for (int i = 0; i < length; i++)
     {
         char letter = argument[i];
