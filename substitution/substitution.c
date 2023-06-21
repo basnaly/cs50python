@@ -6,17 +6,19 @@ bool is_valid_key(string argument);
 
 int main(int argc, string argv[])
 {
-    if (argc == 1 || argc > 2)
+    if ((argc == 1 || argc > 2) || (is_alphabetic(argv[1]) == false))
     {
         printf("Usage:  ./substitution key\n");
         return 1;
     }
-    else if (is_alphabetic(argv[1]))
+    else if (is_valid_key(argv[1]) == false)
     {
-
+        printf("Key must contain 26 characters.\n");
+        return 1;
     }
 
-// printf("Key must contain 26 characters.\n");
+
+    return 0;
 }
 
 bool is_alphabetic(string argument)
