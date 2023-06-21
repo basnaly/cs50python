@@ -22,8 +22,15 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    int key = atoi(argv[1])
+    int key = atoi(argv[1]);
+
     string plain_text = get_string("plaintext: ");
+    int length = strlen(plain_text);
+
+    for (let i = 0; i < length; i++)
+    {
+        
+    }
 
 }
 
