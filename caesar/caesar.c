@@ -56,6 +56,7 @@ char rotate(char letter ,int key)
     if (isupper(cipher_letter) != 0)
     {
         cipher_letter = ((int)((cipher_letter) - 65 + key) % 26)+ 65;
+        
     }
 
     else if (islower(cipher_letter) != 0)
