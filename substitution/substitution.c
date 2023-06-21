@@ -23,6 +23,6 @@ bool is_alphabetic(string argument)
         {
             return false;
         }
-        else if
+        
     }
 }
