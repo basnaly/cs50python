@@ -44,9 +44,9 @@ bool is_valid_key(string argument)
     for (int i = 0; i < length; i++)
     {
         char letter = argument[i];
-        for (int j = j + 1; j < length; j++)
+        for (int j = i + 1; j < length; j++)
         {
-            if (letter[i] == argument[j])
+            if (letter == argument[j])
             {
                 return false;
             }
