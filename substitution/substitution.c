@@ -28,7 +28,7 @@ int main(int argc, string argv[])
 
     else if (is_valid_key(argv[1]) == false)
     {
-        printf("Key must contain 26 unique characters.\n");
+        printf("Key must not contain repeated characters.\n");
         return 1;
     }
 
