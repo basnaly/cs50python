@@ -10,7 +10,7 @@ int main(int argc, string argv[])
 {
     if (argc == 1 || argc > 2)
     {
-        printf("Usage: ./caesar key\n");
+        printf("Usage:  ./caesar key\n");
         return 1;
     }
 
