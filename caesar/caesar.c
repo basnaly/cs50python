@@ -16,8 +16,11 @@ int main(int argc, string argv[])
 
     string plain_text = get_string("plaintext: ");
 
-
-    if ()
+    if (only_digits(plain_text) == false)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
 }
 
 bool only_digits(string, text)
