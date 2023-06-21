@@ -27,12 +27,12 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int length = strlen(plain_text);
 
-    string siper_text = plain_text;
+    string cipher_text = plain_text;
 
     for (int i = 0; i < length; i++)
     {
-        siper_text = siper_text + rotate(siper_text[i], key);
-        printf("ciphertext: %s\n", siper_text);
+        cipher_text = cipher_text + rotate(cipher_text[i], key);
+        printf("ciphertext: %s\n", cipher_text);
     }
 
 }
