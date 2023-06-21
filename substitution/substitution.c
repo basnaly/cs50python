@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 bool is_alphabetic(string argument);
+bool is_length_key_valid(string argument);
 bool is_valid_key(string argument);
 
 int main(int argc, string argv[])
@@ -19,6 +20,12 @@ int main(int argc, string argv[])
         printf("Key must only contain alphabetic characters.\n");
         return 1;
     }
+    else if ((is_length_key_valid(argv[1]) == false))
+    {
+        printf("Key must only contain 26 characters.\n");
+        return 1;
+    }
+
     else if (is_valid_key(argv[1]) == false)
     {
         printf("Key must contain 26 unique characters.\n");
@@ -43,7 +50,7 @@ bool is_alphabetic(string argument)
     return true;
 }
 
-bool is_valid_key(string argument)
+bool is_length_key_valid(string argument)
 {
     int length = strlen(argument);
 
@@ -51,6 +58,11 @@ bool is_valid_key(string argument)
     {
         return false;
     }
+}
+
+bool is_valid_key(string argument)
+{
+    int length = strlen(argument);
 
     for (int i = 0; i < length; i++)
     {
