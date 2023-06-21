@@ -6,6 +6,8 @@
 
 bool only_digits(string argument);
 
+chat rotate(char letter ,int key);
+
 int main(int argc, string argv[])
 {
     if (argc == 1 || argc > 2)
@@ -36,4 +38,9 @@ bool only_digits(string argument)
         }
     }
     return true;
+}
+
+chat rotate(char letter ,int key)
+{
+    
 }
