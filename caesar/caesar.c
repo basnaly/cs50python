@@ -27,9 +27,11 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int length = strlen(plain_text);
 
+    string siper_text = plain_text;
+
     for (let i = 0; i < length; i++)
     {
-        
+        if (rotate())
     }
 
 }
@@ -47,8 +49,7 @@ bool only_digits(string argument)
     return true;
 }
 
-chat rotate(char letter ,int key)
+char rotate(char letter ,int key)
 {
-    for (int = i; i )
-    int
+
 }
