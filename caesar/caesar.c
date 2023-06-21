@@ -6,10 +6,11 @@
 
 bool only_digits(string argument);
 
-char rotate(char letter ,int key);
+char rotate(char letter, int key);
 
 int main(int argc, string argv[])
 {
+    // If no argv or 
     if (argc == 1 || argc > 2)
     {
         printf("Usage:  ./caesar key\n");
@@ -50,7 +51,7 @@ bool only_digits(string argument)
     return true;
 }
 
-char rotate(char letter ,int key)
+char rotate(char letter, int key)
 {
     char cipher_letter = letter;
     if (isupper(cipher_letter) != 0)
