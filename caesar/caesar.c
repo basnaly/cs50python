@@ -6,7 +6,7 @@
 
 bool only_digits(string argument);
 
-chat rotate(char letter ,int key);
+char rotate(char letter ,int key);
 
 int main(int argc, string argv[])
 {
@@ -29,10 +29,10 @@ int main(int argc, string argv[])
 
     string siper_text = plain_text;
 
-    for (let i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         siper_text = siper_text + rotate(siper_text[i], key);
-        printf("ciphertext: %c\n", siper_text);
+        printf("ciphertext: %s\n", siper_text);
     }
 
 }
@@ -58,7 +58,7 @@ char rotate(char letter ,int key)
         cipher_letter = ((int)((cipher_letter) - 65 + key) % 26)+ 65;
     }
 
-    else if (islower(siper_letter) != 0)
+    else if (islower(cipher_letter) != 0)
     {
         cipher_letter = ((int)((cipher_letter) - 97 + key) % 26) + 97;
     }
