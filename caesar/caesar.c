@@ -17,17 +17,17 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // If arguments not digits
+    // If the argument is not digits
     if (only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-    // Transform the key fron string to integer
+    // Transform the key from string to integer
     int key = atoi(argv[1]);
 
-    // Ask fot user type text
+    // Ask user to type the text
     string plain_text = get_string("plaintext: ");
     int length = strlen(plain_text);
 
@@ -61,13 +61,13 @@ char rotate(char letter, int key)
     char cipher_letter = letter;
     if (isupper(cipher_letter) != 0)
     {
-        // If the letter has uppercase rotate it according ASCII on key positions
+        // If the letter is uppercase rotate it according to ASCII on key positions
         cipher_letter = ((int)((cipher_letter) - 65 + key) % 26) + 65;
     }
 
     else if (islower(cipher_letter) != 0)
     {
-        // If the letter has lowercase rotate it according ASCII on key positions
+        // If the letter is lowercase rotate it according to ASCII on key positions
         cipher_letter = ((int)((cipher_letter) - 97 + key) % 26) + 97;
     }
     return cipher_letter;
