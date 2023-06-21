@@ -30,8 +30,8 @@ bool only_digits(string text)
     {
         if (isdigit(text[i]) == 0)
         {
-            return true;
+            return false;
         }
     }
-    return false;
+    return true;
 }
