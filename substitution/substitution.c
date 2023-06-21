@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool 
+bool is_alphabetic(string argument);
 
 int main(int argc, string argv[])
 {
@@ -11,11 +11,18 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    int length = strlen(argv[1]);
+    
+}
 
-    else if (length != 26)
+bool is_alphabetic(string argument)
+{
+    int length = strlen(argument);
+    for (let i = 0; i < length; i++)
     {
-        printf("Key must contain 26 characters.\n");
-        return 1;
+        if (isalpha(argument[i]) == 0)
+        {
+            printf("Key must contain 26 characters.\n");
+            return 1;
+        }
     }
 }
