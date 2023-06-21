@@ -41,6 +41,11 @@ bool is_valid_key(string argument)
 {
     int length = strlen(argument);
 
+    if (length != 26)
+    {
+        return false;
+    }
+
     for (int i = 0; i < length; i++)
     {
         char letter = argument[i];
