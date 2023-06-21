@@ -28,7 +28,7 @@ bool only_digits(string text)
     int length = strlen(text);
     for (int i = 0; i < length; i++)
     {
-        if (isdigit(text[i]) != 0)
+        if (isdigit(text[i]) == 0)
         {
             return true;
         }
