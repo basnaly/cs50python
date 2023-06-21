@@ -11,6 +11,10 @@ int main(int argc, string argv[])
         printf("Usage:  ./substitution key\n");
         return 1;
     }
+    else if (is_alphabetic(argv[1]))
+    {
+
+    }
 
 // printf("Key must contain 26 characters.\n");
 }
