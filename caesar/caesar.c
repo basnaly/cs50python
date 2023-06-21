@@ -16,7 +16,7 @@ int main(int argc, string argv[])
 
     string plain_text = get_string("plaintext: ");
 
-
+    
 }
 
 bool only_digits(string, text)
@@ -24,6 +24,10 @@ bool only_digits(string, text)
     int length = strlen(text);
     for (int i = 0; i < length; i++)
     {
-        if (isdigits)
+        if (isdigits(text[i]))
+        {
+            return true;
+        }
     }
+    return false;
 }
