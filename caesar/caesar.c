@@ -42,5 +42,6 @@ bool only_digits(string argument)
 
 chat rotate(char letter ,int key)
 {
-    
+    for (int = i; i )
+    int
 }
