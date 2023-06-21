@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-
+bool only_digits(string, text);
 
 int main(int argc, string argv[])
 {
@@ -15,7 +15,11 @@ int main(int argc, string argv[])
     }
 
     string plain_text = get_string("plaintext: ");
-    
+
 
 }
 
+bool only_digits(string, text)
+{
+    
+}
