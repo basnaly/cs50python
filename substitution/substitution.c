@@ -50,7 +50,7 @@ int main(int argc, string argv[])
 
             if (isupper(plain_text[i]))
             {
-                cipher_text[i] = cipher_text[i] + 32;
+                cipher_text[i] = cipher_text[i] + 0;
             }
             else if (islower(plain_text[i]))
             {
