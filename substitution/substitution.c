@@ -47,7 +47,12 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
-        plain_text = key[(int)]
+        int is_letter_uppercase = isupper(plane_text[i])
+        if (is_letter_uppercase)
+        {
+            
+        }
+        plain_text[i] = key[(int(plain_text[i] - 97))];
     }
 
     return 0;
