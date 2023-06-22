@@ -57,10 +57,10 @@ int main(int argc, string argv[])
             {
                 cipher_text[i] = cipher_text[i] + 32;
             }
-            else if (islower(plain_text[i]))
-            {
-                cipher_text[i] = cipher_text[i] - 32;
-            }
+            // else if (islower(plain_text[i]))
+            // {
+            //     cipher_text[i] = cipher_text[i] - 32;
+            // }
         }
     }
     printf("ciphertext: %s\n", cipher_text);
