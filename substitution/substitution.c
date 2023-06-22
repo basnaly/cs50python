@@ -47,8 +47,8 @@ int main(int argc, string argv[])
         if (isalpha(plain_text[i]) > 0)
         {
             cipher_text[i] = key[change(plain_text[i])];
-            
-            if (isupper(plain_text[i]) > 0)
+
+            if (isupper(plain_text[i]) > 0 && is)
             {
                 cipher_text[i] = cipher_text[i] + (97 - 65);
             }
