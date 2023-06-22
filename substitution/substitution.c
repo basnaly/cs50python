@@ -35,26 +35,11 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-    // TODO: 
+    // TODO:
 
     string plain_text = get_string("plaintext: ");
-    int text_length = strlen(plain_text);
 
-    for (int i = 0; i < text_length; i++)
-    {
-        if (isalpha(plain_text[i]))
-        {
-            int is_letter_uppercase = isupper(plain_text[i]);
-
-            plain_text[i] = key[change(plain_text[i])];
-
-            if (is_letter_uppercase)
-            {
-                plain_text[i] = plain_text[i] - 32;
-            }
-        }
-    }
-    printf("ciphertext: %s\n", plain_text);
+    // TODO:
 
     return 0;
 }
