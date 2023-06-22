@@ -46,7 +46,7 @@ int main(int argc, string argv[])
     {
         if (isalpha(cipher_text[i]) != 0)
         {
-            cipher_text[i]
+            cipher_text[i];
         }
         cipher_text[i] = key[change(plain_text[i])];
     }
