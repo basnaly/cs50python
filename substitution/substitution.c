@@ -53,7 +53,7 @@ int main(int argc, string argv[])
         {
             cipher_text[i] = key[change(plain_text[i])];
 
-            if (isupper(cipher_text[i]))
+            if (isupper(plain_text[i]))
             {
                 cipher_text[i] = cipher_text[i] + 32;
             }
