@@ -44,23 +44,21 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
 
-    string cipher_text = plain_text;
-
     for (int i = 0; i < text_length; i++)
     {
         if (isalpha(plain_text[i]))
         {
             int is_letter_uppercase = isupper(plain_text[i]);
 
-            cipher_text[i] = key[change(plain_text[i])];
+            plain_text[i] = key[change(plain_text[i])];
 
             if (is_letter_uppercase)
             {
-                cipher_text[i] = cipher_text[i] - 32;
+                plain_text[i] = plain_text[i] - 32;
             }
         }
     }
-    printf("ciphertext: %s\n", cipher_text);
+    printf("ciphertext: %s\n", plain_text);
 
     return 0;
 }
