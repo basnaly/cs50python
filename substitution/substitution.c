@@ -35,11 +35,7 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-    int key_length = strlen(key);
-    for (int i = 0; i < key_length; i++)
-    {
-        key[i] = tolower(key[i]);
-    }
+    // TODO: 
 
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
