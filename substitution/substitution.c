@@ -34,7 +34,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string key = argv[1];
+    string key = tolower(argv[1]);
     int key_length = strlen(key);
 
     string plain_text = get_string("plaintext: ");
