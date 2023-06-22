@@ -49,11 +49,11 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
-        if (isalpha(plain_text[i]) > 0)
+        if (isalpha(plain_text[i]))
         {
             cipher_text[i] = key[change(plain_text[i])];
 
-            if (isupper(plain_text[i]))
+            if (isupper(cipher_text[i]))
             {
                 cipher_text[i] = cipher_text[i] + 32;
             }
