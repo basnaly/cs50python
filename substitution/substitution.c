@@ -97,7 +97,11 @@ int change(char letter)
 {
     char cipher_letter = letter;
 
-    if (isupper(letter) != 0)
+    if (isalpha(letter) != 0)
+    {
+        
+    }
+    else if (isupper(letter) != 0)
     {
         cipher_letter = (int)(cipher_letter - 65);
     }
