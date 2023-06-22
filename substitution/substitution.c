@@ -44,11 +44,10 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
-        if (isalpha(cipher_text[i]) != 0)
+        if (isalpha(plain_text[i]) > 0)
         {
             cipher_text[i] = key[change(plain_text[i])];
         }
-
     }
     printf("ciphertext: %s\n", cipher_text);
 
