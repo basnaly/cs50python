@@ -35,25 +35,25 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-    int key_length = strlen(key)
+    int key_length = strlen(key);
     for (int i = 0; i < key_length; i++)
     {
         key[i] = tolower(key[i]);
     }
-    printf("key: %s\n", key)
+    printf("key: %s\n", key);
 
     string plain_text = get_string("plaintext: ");
-    int text_length = strlen(plain_text)
+    int text_length = strlen(plain_text);
 
     for (int i = 0; i < text_length; i++)
     {
-        int is_letter_uppercase = isupper(plane_text[i]);
+        int is_letter_uppercase = isupper(plain_text[i]);
 
         if (is_letter_uppercase)
         {
-            plain_text[i] = key[(int(change(plane_text[i])) - 32)];
+            plain_text[i] = key[(int(change(plain_text[i])) - 32)];
         }
-        plain_text[i] = key[(int(change(plane_text[i])))];
+        plain_text[i] = key[(int(change(plain_text[i])))];
     }
     printf("chiphertext: %s\n", plain_text);
 
