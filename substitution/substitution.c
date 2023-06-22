@@ -34,7 +34,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string key = tolower(argv[1]);
+    string key = argv[1];
     int key_length = strlen(key);
 
     string plain_text = get_string("plaintext: ");
@@ -47,6 +47,7 @@ int main(int argc, string argv[])
         if (isalpha(plain_text[i]) > 0)
         {
             cipher_text[i] = key[change(plain_text[i])];
+            
             if (isupper(plain_text[i]) > 0)
             {
                 cipher_text[i] = cipher_text[i] + (97 - 65);
