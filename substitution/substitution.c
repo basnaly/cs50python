@@ -1,8 +1,8 @@
 #include <cs50.h>
-#include <stdio.h>
-#include <string.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 bool is_alphabetic(string argument);
 bool is_length_key_valid(string argument);
@@ -49,15 +49,14 @@ int main(int argc, string argv[])
     {
         if (isalpha(plain_text[i]))
         {
-            
-        }
-        int is_letter_uppercase = isupper(plain_text[i]);
+            int is_letter_uppercase = isupper(plain_text[i]);
 
-        plain_text[i] = key[(int)(change(plain_text[i]))];
+            plain_text[i] = key[(int) (change(plain_text[i]))];
 
-        if (is_letter_uppercase)
-        {
-            plain_text[i] = plain_text[i] - 32;
+            if (is_letter_uppercase)
+            {
+                plain_text[i] = plain_text[i] - 32;
+            }
         }
     }
     printf("chiphertext: %s\n", plain_text);
@@ -113,11 +112,11 @@ int change(char letter)
 
     if (isupper(letter) != 0)
     {
-        cipher_letter = (int)(cipher_letter - 65);
+        cipher_letter = (int) (cipher_letter - 65);
     }
     else if (islower(letter) != 0)
     {
-        cipher_letter = (int)(cipher_letter - 97);
+        cipher_letter = (int) (cipher_letter - 97);
     }
     return cipher_letter;
 }
