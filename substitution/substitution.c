@@ -48,13 +48,13 @@ int main(int argc, string argv[])
         {
             cipher_text[i] = key[change(plain_text[i])];
 
-            if (isupper(plain_text[i]) > 0)
+            if (isupper(plain_text[i]))
             {
-                cipher_text[i] = cipher_text[i] - (97 - 65);
+                cipher_text[i] = cipher_text[i] + 32;
             }
-            else if (islower(plain_text[i]) > 0)
+            else if (islower(plain_text[i]))
             {
-                cipher_text[i] = cipher_text[i] + (97 - 65);
+                cipher_text[i] = cipher_text[i] - 32;
             }
         }
     }
