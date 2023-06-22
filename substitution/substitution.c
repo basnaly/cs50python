@@ -8,6 +8,8 @@ bool is_alphabetic(string argument);
 bool is_length_key_valid(string argument);
 bool is_valid_key(string argument);
 
+int change(char plaintext);
+
 int main(int argc, string argv[])
 {
     if (argc == 1 || argc > 2)
@@ -32,7 +34,19 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string plain_text = get_string("plaintext: \n");
+    string key = argv[1];
+    int key_length = strlen(key);
+
+    string plain_text = get_string("plaintext: ");
+    int text_length = strlen(plain_text);
+
+    string cipher_text = plain_text;
+
+    for (int i = 0; i < text_length; i++)
+    {
+        cipher_text[i] = key[change(plain_text[i])];
+    }
+    printf("ciphertext: %s\n", cipher_text);
 
     return 0;
 }
@@ -77,4 +91,19 @@ bool is_valid_key(string argument)
         }
     }
     return true;
+}
+
+int change(char letter)
+{
+    char cipher_letter = letter;
+
+    if (isupper(letter) != 0)
+    {
+        cipher_letter = (int)(cipher_letter - 65);
+    }
+    else if (islower(letter) != 0)
+    {
+        cipher_letter = (int)(cipher_letter - 97);
+    }
+    return cipher_letter;
 }
