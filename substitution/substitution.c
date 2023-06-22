@@ -54,7 +54,7 @@ int main(int argc, string argv[])
             }
             else if (islower(plain_text[i]))
             {
-                cipher_text[i] = cipher_text[i] - 0;
+                cipher_text[i] = cipher_text[i] - 32;
             }
         }
     }
