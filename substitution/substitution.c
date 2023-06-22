@@ -49,11 +49,12 @@ int main(int argc, string argv[])
     {
         int is_letter_uppercase = isupper(plain_text[i]);
 
+        plain_text[i] = key[(int)(change(plain_text[i]))];
+
         if (is_letter_uppercase)
         {
             plain_text[i] = plain_text[i] - 32;
         }
-        plain_text[i] = key[(int)(change(plain_text[i]))];
     }
     printf("chiphertext: %s\n", plain_text);
 
