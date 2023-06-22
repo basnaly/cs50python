@@ -52,7 +52,7 @@ int main(int argc, string argv[])
             {
                 cipher_text[i] = cipher_text[i] + (97 - 65);
             }
-            else if (islower(plain_text[i]) > 0 
+            else if (islower(plain_text[i]) > 0)
             {
                 cipher_text[i] = cipher_text[i] - (97 - 65);
             }
