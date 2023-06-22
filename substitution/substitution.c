@@ -47,7 +47,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
-        
+        plain_text = key[(int)]
     }
 
     return 0;
