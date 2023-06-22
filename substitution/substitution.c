@@ -40,7 +40,6 @@ int main(int argc, string argv[])
     {
         key[i] = tolower(key[i]);
     }
-    printf("key: %s\n", key);
 
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
