@@ -51,7 +51,8 @@ int main(int argc, string argv[])
     {
         if (isalpha(plain_text[i]))
         {
-            
+            int is_letter_uppercase = isupper(plain_text[i]);
+
             cipher_text[i] = key[change(plain_text[i])];
 
             if (isupper(plain_text[i]))
