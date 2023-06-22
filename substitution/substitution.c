@@ -51,7 +51,7 @@ int main(int argc, string argv[])
 
         if (is_letter_uppercase)
         {
-            plain_text[i] = key[(int)(change(plain_text[i]) - 32)];
+            plain_text[i] = key[(int)(change(plain_text[i]))] - 32;
         }
         plain_text[i] = key[(int)(change(plain_text[i]))];
     }
