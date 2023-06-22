@@ -47,6 +47,10 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
+        if (isalpha(plain_text[i]))
+        {
+            
+        }
         int is_letter_uppercase = isupper(plain_text[i]);
 
         plain_text[i] = key[(int)(change(plain_text[i]))];
