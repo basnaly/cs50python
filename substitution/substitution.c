@@ -36,6 +36,10 @@ int main(int argc, string argv[])
 
     string key = argv[1];
     int key_length = strlen(key);
+    for (int i = 0; i < key_length; i++)
+    {
+        key = key + tolower(key[i])
+    }
 
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
@@ -50,7 +54,7 @@ int main(int argc, string argv[])
 
             if (isupper(plain_text[i]))
             {
-                cipher_text[i] = cipher_text[i] + 0;
+                cipher_text[i] = cipher_text[i] + 32;
             }
             else if (islower(plain_text[i]))
             {
