@@ -44,6 +44,10 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
+        if (isalpha(cipher_text[i]) != 0)
+        {
+            cipher_text[i]
+        }
         cipher_text[i] = key[change(plain_text[i])];
     }
     printf("ciphertext: %s\n", cipher_text);
@@ -97,11 +101,7 @@ int change(char letter)
 {
     char cipher_letter = letter;
 
-    if (isalpha(letter) != 0)
-    {
-        
-    }
-    else if (isupper(letter) != 0)
+    if (isupper(letter) != 0)
     {
         cipher_letter = (int)(cipher_letter - 65);
     }
