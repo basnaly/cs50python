@@ -55,9 +55,9 @@ int main(int argc, string argv[])
 
             cipher_text[i] = key[change(plain_text[i])];
 
-            if (isupper(plain_text[i]))
+            if (is_letter_uppercase)
             {
-                cipher_text[i] = cipher_text[i] + 32;
+                cipher_text[i] = cipher_text[i] - 32;
             }
             // else if (islower(plain_text[i]))
             // {
