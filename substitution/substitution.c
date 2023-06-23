@@ -61,7 +61,7 @@ int main(int argc, string argv[])
 
         if (is_upper)
         {
-            plain_text[i] = plain_text[i] + 32;
+            plain_text[i] = plain_text[i] - 32;
         }
     }
     printf("ciphertext: %s\n", plain_text);
