@@ -12,28 +12,35 @@ int change(char plaintext);
 
 int main(int argc, string argv[])
 {
+    // Check a CLA
     if (argc == 1 || argc > 2)
     {
         printf("Usage:  ./substitution key\n");
         return 1;
     }
+
+    // Check if the CLA is alphabetic
     else if ((is_alphabetic(argv[1]) == false))
     {
         printf("Key must only contain alphabetic characters.\n");
         return 1;
     }
+
+    // Check if the CLA' s length valid
     else if ((is_length_key_valid(argv[1]) == false))
     {
         printf("Key must only contain 26 characters.\n");
         return 1;
     }
 
+    // Check if the CLA has only uniqe characters
     else if (is_valid_key(argv[1]) == false)
     {
         printf("Key must not contain repeated characters.\n");
         return 1;
     }
 
+    // Transfer the key (CLA) to lowercase
     string key = argv[1];
     int key_length = strlen(key);
     for (int i = 0; i < key_length; i++)
@@ -42,24 +49,21 @@ int main(int argc, string argv[])
     }
     printf("key: %s\n", key);
 
+    // Ask user to type text
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
 
     for (int i = 0; i < text_length; i++)
     {
-        if (isalpha(plain_text[i]))
+        int is_upper = plain_text[i];
+
+        if (is_upper)
         {
-            int is_letter_uppercase = isupper(plain_text[i]);
-
-            plain_text[i] = key[(int) (change(plain_text[i]))];
-
-            if (is_letter_uppercase)
-            {
-                plain_text[i] = plain_text[i] - 32;
-            }
+            plain_text[i] = plain_text[i] - 32;
         }
+        plain_text[i] = key[(change(plain_text[i]))];
     }
-    printf("chiphertext: %s\n", plain_text);
+    printf("ciphertext: %s\n", plain_text);
 
     return 0;
 }
@@ -106,17 +110,19 @@ bool is_valid_key(string argument)
     return true;
 }
 
+// Check if letter of plain_text uppercase or lowercase and return the changed
+// letter in according case
 int change(char letter)
 {
-    char cipher_letter = letter;
+    char cipher_index = letter;
 
-    if (isupper(letter) != 0)
+    if (isupper(letter))
     {
-        cipher_letter = (int) (cipher_letter - 65);
+        cipher_index = (int)(cipher_index - 65);
     }
-    else if (islower(letter) != 0)
+    else if (islower(letter))
     {
-        cipher_letter = (int) (cipher_letter - 97);
+        cipher_index = (int)(cipher_index - 97);
     }
-    return cipher_letter;
+    return cipher_index;
 }
