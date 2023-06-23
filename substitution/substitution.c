@@ -55,7 +55,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
-        int is_upper = plain_text[i];
+        int is_upper = isupper(plain_text[i]);
 
         if (is_upper)
         {
