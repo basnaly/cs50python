@@ -57,7 +57,7 @@ int main(int argc, string argv[])
     {
         int is_upper = isupper(plain_text[i]);
 
-        if (is_upper > 0)
+        if (is_upper)
         {
             plain_text[i] = plain_text[i] - 32;
         }
