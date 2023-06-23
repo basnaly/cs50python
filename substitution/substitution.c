@@ -53,17 +53,7 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
 
-    for (int i = 0; i < text_length; i++)
-    {
-        int is_upper = isupper(plain_text[i]);
-
-        plain_text[i] = key[(change(plain_text[i]))];
-
-        if (is_upper)
-        {
-            plain_text[i] = plain_text[i] - 32;
-        }
-    }
+    
     printf("ciphertext: %s\n", plain_text);
 
     return 0;
