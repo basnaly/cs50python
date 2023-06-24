@@ -27,7 +27,9 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
-    int k = argv[1];
+    
+    // Transform the key from string to integer
+    int k = atoi(argv[1]);
 
     if (k == 1)
     {
