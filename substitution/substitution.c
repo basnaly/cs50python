@@ -43,6 +43,7 @@ int main(int argc, string argv[])
     // Transfer the key (CLA) to lowercase
     string key = argv[1];
     int key_length = strlen(key);
+
     for (int i = 0; i < key_length; i++)
     {
         key[i] = tolower(key[i]);
@@ -55,7 +56,11 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < text_length; i++)
     {
-        int is
+        char letter = plain_text[i];
+
+        plain_text[i] = key[(int)(change(plain_text[i]))]
+
+        if ()
     }
 
 
