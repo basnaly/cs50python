@@ -29,10 +29,10 @@ int main(int argc, string argv[])
     // TODO #1
     int k = argv[1];
 
-    if (argc == 1)
+    if (k == 0)
     {
         printf("Usage:  ./wordle wordsiz\n");
-        return 1
+        return 1;
     }
 
     int wordsize = 0;
@@ -40,7 +40,11 @@ int main(int argc, string argv[])
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
 
-    if ()
+    if (k < 5 || k > 8)
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
+    }
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
