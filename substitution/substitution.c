@@ -58,11 +58,13 @@ int main(int argc, string argv[])
     {
         char letter = plain_text[i];
 
-        plain_text[i] = key[(int)(change(plain_text[i]))]
+        plain_text[i] = key[(int)(change(plain_text[i]))];
 
-        if ()
+        if (isupper(letter))
+        {
+            plain_text[i] = plain_text[i] + 32;
+        }
     }
-
 
     printf("ciphertext: %s\n", plain_text);
 
