@@ -53,7 +53,12 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
 
-    
+    for (int i = 0; i < text_length; i++)
+    {
+        int is
+    }
+
+
     printf("ciphertext: %s\n", plain_text);
 
     return 0;
