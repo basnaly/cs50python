@@ -12,35 +12,35 @@ int change(char plaintext);
 
 int main(int argc, string argv[])
 {
-    // Check a CLA
+    // Check the argument
     if (argc == 1 || argc > 2)
     {
         printf("Usage:  ./substitution key\n");
         return 1;
     }
 
-    // Check if the CLA is alphabetic
+    // Check if the argument is alphabetic
     else if ((is_alphabetic(argv[1]) == false))
     {
         printf("Key must only contain alphabetic characters.\n");
         return 1;
     }
 
-    // Check if the CLA' s length valid
+    // Check if the argument's length is valid
     else if ((is_length_key_valid(argv[1]) == false))
     {
         printf("Key must only contain 26 characters.\n");
         return 1;
     }
 
-    // Check if the CLA has only uniqe characters
+    // Check if the argument has only uniqe characters
     else if (is_valid_key(argv[1]) == false)
     {
         printf("Key must not contain repeated characters.\n");
         return 1;
     }
 
-    // Transfer the key (CLA) to lowercase
+    // Transfer the key (argument) to lowercase
     string key = argv[1];
     int key_length = strlen(key);
 
@@ -54,6 +54,7 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int text_length = strlen(plain_text);
 
+    // Change each letter of the text
     for (int i = 0; i < text_length; i++)
     {
         char letter = plain_text[i];
@@ -113,8 +114,8 @@ bool is_valid_key(string argument)
     return true;
 }
 
-// Check if letter of plain_text uppercase or lowercase and return the changed
-// letter in according case
+// Check if the letter of plain_text uppercase or lowercase and return the changed
+// letter in according to its case
 int change(char letter)
 {
     char cipher_index = letter;
