@@ -76,6 +76,7 @@ int main(int argc, string argv[])
     return 0;
 }
 
+// 
 bool is_alphabetic(string argument)
 {
     int length = strlen(argument);
