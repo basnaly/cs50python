@@ -56,13 +56,16 @@ int main(int argc, string argv[])
     // Change each letter of the text
     for (int i = 0; i < text_length; i++)
     {
-        char letter = plain_text[i];
-
-        plain_text[i] = key[(int)(change(plain_text[i]))];
-
-        if (isupper(letter))
+        if (isalpha(plain_text[i]))
         {
-            plain_text[i] = plain_text[i] - 32;
+            char letter = plain_text[i];
+
+            plain_text[i] = key[(int) (change(plain_text[i]))];
+
+            if (isupper(letter))
+            {
+                plain_text[i] = plain_text[i] - 32;
+            }
         }
     }
 
@@ -121,11 +124,11 @@ int change(char letter)
 
     if (isupper(letter))
     {
-        cipher_index = (int)(cipher_index - 65);
+        cipher_index = (int) (cipher_index - 65);
     }
     else if (islower(letter))
     {
-        cipher_index = (int)(cipher_index - 97);
+        cipher_index = (int) (cipher_index - 97);
     }
     return cipher_index;
 }
