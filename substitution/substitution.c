@@ -56,12 +56,14 @@ int main(int argc, string argv[])
     // Change each letter of the text
     for (int i = 0; i < text_length; i++)
     {
+        // Check if the plain_text[i] alphabetic, change each letter according to the key
         if (isalpha(plain_text[i]))
         {
             char letter = plain_text[i];
 
-            plain_text[i] = key[(int) (change(plain_text[i]))];
+            plain_text[i] = key[(int)(change(plain_text[i]))];
 
+            // If the input letter is uppercase change the output letter to uppercase
             if (isupper(letter))
             {
                 plain_text[i] = plain_text[i] - 32;
