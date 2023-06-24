@@ -62,7 +62,7 @@ int main(int argc, string argv[])
 
         if (isupper(letter))
         {
-            plain_text[i] = plain_text[i] + 32;
+            plain_text[i] = plain_text[i] - 32;
         }
     }
 
