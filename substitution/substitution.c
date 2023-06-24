@@ -124,11 +124,11 @@ int change(char letter)
 
     if (isupper(letter))
     {
-        cipher_index = (int) (cipher_index - 65);
+        cipher_index = (int)(cipher_index - 65);
     }
     else if (islower(letter))
     {
-        cipher_index = (int) (cipher_index - 97);
+        cipher_index = (int)(cipher_index - 97);
     }
     return cipher_index;
 }
