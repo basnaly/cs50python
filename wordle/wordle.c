@@ -29,9 +29,7 @@ int main(int argc, string argv[])
     // TODO #1
     // Transform the key from string to integer
 
-    string k = argv[1];
-
-    if (k == "1")
+    if (argc == 1)
     {
         printf("Usage:  ./wordle wordsiz\n");
         return 1;
