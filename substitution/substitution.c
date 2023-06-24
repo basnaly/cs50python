@@ -48,7 +48,6 @@ int main(int argc, string argv[])
     {
         key[i] = tolower(key[i]);
     }
-    printf("key: %s\n", key);
 
     // Ask user to type text
     string plain_text = get_string("plaintext: ");
