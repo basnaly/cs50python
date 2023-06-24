@@ -27,6 +27,13 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
+    int k = argv[1];
+
+    if (argc == 1)
+    {
+        printf("Usage:  ./wordle wordsiz\n");
+        return 1
+    }
 
     int wordsize = 0;
 
@@ -79,7 +86,7 @@ int main(int argc, string argv[])
         int score = check_word(guess, wordsize, status, choice);
 
         printf("Guess %i: ", i + 1);
-        
+
         // Print the guess
         print_word(guess, wordsize, status);
 
