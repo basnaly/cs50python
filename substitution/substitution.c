@@ -76,7 +76,7 @@ int main(int argc, string argv[])
     return 0;
 }
 
-// 
+// This function check if the argument is alphabetic
 bool is_alphabetic(string argument)
 {
     int length = strlen(argument);
@@ -90,6 +90,7 @@ bool is_alphabetic(string argument)
     return true;
 }
 
+// This function check if the argument's string has 26 characters
 bool is_length_key_valid(string argument)
 {
     int length = strlen(argument);
@@ -101,6 +102,8 @@ bool is_length_key_valid(string argument)
     return true;
 }
 
+// This function check if each argument's characters are uniqe
+// and are not repeated in the argument's string
 bool is_valid_key(string argument)
 {
     int length = strlen(argument);
