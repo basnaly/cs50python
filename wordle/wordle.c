@@ -196,7 +196,7 @@ void print_word(string guess, int wordsize, int status[])
 
     for (int i = 0; i < wordsize; i++)
     {
-        if ()
+        if (guess[i])
 
     }
 
