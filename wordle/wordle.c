@@ -139,7 +139,7 @@ string get_guess(int wordsize)
             guess[i] = tolower(guess[i]);
         }
     }
-    printf("guess: %s\n ",guess);
+    // printf("guess: %s\n ",guess);
 
     return guess;
 }
