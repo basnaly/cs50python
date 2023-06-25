@@ -29,14 +29,14 @@ int main(int argc, string argv[])
     // ensure proper usage
     // TODO #1
 
-    // Check if there is any argument except of "./wordle"
+    // Check if there is only one argument except of "./wordle"
     if (argc == 1 || argc > 2)
     {
         printf("Usage:  ./wordle wordsiz\n");
         return 1;
     }
 
-    // Transform the argument k from string of argv array to integer
+    // Transform the argument k from string argv[1] to integer
     int k = atoi(argv[1]);
 
     int wordsize = 0;
