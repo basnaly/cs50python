@@ -174,7 +174,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
             if (choice[j] == guess[i] && j == i)
             {
                 score = score + 2;
-                status[i] = score;
+                status[i] = score[i];
             }
             else if (choice[j] == guess[i])
             {
