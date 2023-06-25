@@ -72,8 +72,7 @@ int main(int argc, string argv[])
 
     // pseudorandomly select a word for this game
     srand(time(NULL));
-    string choice = "about";
-    // options[rand() % LISTSIZE];
+    string choice = options[rand() % LISTSIZE];
 
     // allow one more guess than the length of the word
     int guesses = wordsize + 1;
@@ -118,7 +117,14 @@ int main(int argc, string argv[])
     // Print the game's result
     // TODO #7
 
-    
+    if (won)
+    {
+        printf("You won!\n");
+    }
+    else
+    {
+        printf("%s\n", choice)
+    }
 
     // that's all folks!
     return 0;
@@ -175,13 +181,13 @@ int check_word(string guess, int wordsize, int status[], string choice)
         {
             if (choice[j] == guess[i] && j == i)
             {
-                score = score + 2;
-                status[i] = 2;
+                score = score + EXACT;
+                status[i] = EXACT;
             }
             else if (choice[j] == guess[i])
             {
-                score = score + 1;
-                status[i] = 1;
+                score = score + CLOSE;
+                status[i] = CLOSE;
             }
         }
     }
@@ -198,15 +204,15 @@ void print_word(string guess, int wordsize, int status[])
 
     for (int i = 0; i < wordsize; i++)
     {
-        if (status[i] == 2)
+        if (status[i] == EXACT)
         {
             printf(GREEN"%c"RESET"\n", guess[i]);
         }
-        else if (status[i] == 1)
+        else if (status[i] == CLOSE)
         {
             printf(YELLOW"%c"RESET"\n", guess[i]);
         }
-        else if (status[i] == 0)
+        else if (status[i] == WRONG)
         {
             printf(RED"%c"RESET"\n", guess[i]);
         }
