@@ -173,15 +173,14 @@ int check_word(string guess, int wordsize, int status[], string choice)
         {
             if (choice[j] == guess[i])
             {
-                score = 1;
+                score = score + 1;
             }
             else if (choice[j] == guess[i] && j == i)
             {
-                score = 2;
+                score = score + 2;
             }
         }
     }
-    score += score;
 
     printf("score: %i\n", score);
 
