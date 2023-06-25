@@ -128,7 +128,6 @@ string get_guess(int wordsize)
     {
         guess = get_string("Input a %i-letter word: ", wordsize);
         guess_length = strlen(guess);
-        printf("guess_length: %i\n ",guess_length);
     }
     while (guess_length != wordsize);
 
@@ -138,10 +137,10 @@ string get_guess(int wordsize)
     {
         if (is_upper(guess[i]))
         {
-            
+            guess[i] = tolower(guess[i]);
         }
     }
-
+    printf("guess: %s\n ",guess);
 
     return guess;
 }
