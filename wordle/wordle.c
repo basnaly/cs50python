@@ -30,7 +30,7 @@ int main(int argc, string argv[])
     // TODO #1
 
     // Check if there is any argument except of "./wordle"
-    if (argc == 1)
+    if (argc == 1 || argc > 2)
     {
         printf("Usage:  ./wordle wordsiz\n");
         return 1;
