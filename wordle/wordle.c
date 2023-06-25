@@ -131,11 +131,9 @@ string get_guess(int wordsize)
     }
     while (guess_length != wordsize);
 
-    int is_upper = 0;
-
     for (int i = 0 ; i < guess_length; i++)
     {
-        if (is_upper(guess[i]))
+        if (isupper(guess[i]))
         {
             guess[i] = tolower(guess[i]);
         }
