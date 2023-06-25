@@ -95,7 +95,7 @@ int main(int argc, string argv[])
         // TODO #4
 
         for (int j = 0; j < wordsize; j++) {
-            status[j] = 0;
+            status[j] = WRONG;
         }
 
         // Calculate score for the guess
@@ -123,7 +123,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("%s\n", choice)
+        printf("%s\n", choice);
     }
 
     // that's all folks!
