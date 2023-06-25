@@ -171,13 +171,13 @@ int check_word(string guess, int wordsize, int status[], string choice)
     {
         for (int j = 0; j < length_choice; j++)
         {
-            if (choice[j] == guess[i])
-            {
-                score = score + 1;
-            }
-            else if (choice[j] == guess[i] && j == i)
+            if (choice[j] == guess[i] && j == i)
             {
                 score = score + 2;
+            }
+            else if (choice[j] == guess[i])
+            {
+                score = score + 1;
             }
         }
     }
