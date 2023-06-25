@@ -180,6 +180,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
             }
         }
     }
+    score = score + score[i]
 
     return score;
 }
