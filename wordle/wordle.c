@@ -181,6 +181,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
         }
     }
     score = score + score[i]
+    printf("score: %s\n", score)
 
     return score;
 }
