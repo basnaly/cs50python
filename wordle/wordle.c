@@ -95,10 +95,8 @@ int main(int argc, string argv[])
         // TODO #4
 
         for (int i = 0; i < wordsize; i++) {
-            
+            status[i] = 0
         }
-
-        status = {0, 0, 0};
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
