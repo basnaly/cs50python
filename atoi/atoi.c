@@ -28,4 +28,7 @@ int convert(string input)
     // TODO
 
     while (input[i] && (input[i] >= '0' && input[i] <= '9'))
+    {
+        
+    }
 }
