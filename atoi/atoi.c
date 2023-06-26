@@ -25,7 +25,9 @@ int main(void)
 
 int convert(string input)
 {
-    // TODOi
+    // TODO
+
+    long number = 0;
 
     int length = strlen(input);
 
@@ -38,7 +40,7 @@ int convert(string input)
     // remove last char from string
     input[length - 1] = '\0';
 
-    
+    number = convert(input) * 10 + last_int;
 
-
+    return number;
 }
