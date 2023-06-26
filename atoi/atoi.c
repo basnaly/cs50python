@@ -29,10 +29,12 @@ int convert(string input)
     long num = 0;
     int i = 0;
 
-    if (input[i] && (input[i] >= '0' && input[i] <= '9'))
+    int length = strlen(input);
+
+    if (i > length))
     {
 
     }
-    return number = 
+    return number =
 
 }
