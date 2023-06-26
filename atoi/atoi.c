@@ -35,6 +35,7 @@ int convert(string input)
     while (input[i] && (input[i] >= '0' || input[i] <= '9'))
     {
         num = num * 10 + (input[i] - '0');
+        i++;
     }
     return num;
 }
