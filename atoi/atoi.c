@@ -26,4 +26,14 @@ int main(void)
 int convert(string input)
 {
     // TODO
+
+    char input[];
+    long num = 0;
+    int i = 0;
+
+    while (input[i] && (input[i] >= '0' || input[i] <= '9'))
+    {
+        num = num * 10 + (input[i] - '0');
+    }
+    return num;
 }
