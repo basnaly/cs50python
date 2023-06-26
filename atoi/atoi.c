@@ -28,6 +28,7 @@ int convert(string input)
     // TODO
     int length = strlen(input);
     char letter[length];
+    
     long num = 0;
     int i = 0;
 
