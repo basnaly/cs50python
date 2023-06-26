@@ -26,14 +26,14 @@ int main(void)
 int convert(string input)
 {
     // TODO
-
-    // char input[];
+    int length = strlen(input);
+    char letter[length];
     long num = 0;
     int i = 0;
 
-    while (input[i] && (input[i] >= '0' || input[i] <= '9'))
+    while (letter[i] && (letter[i] >= '0' || letter[i] <= '9'))
     {
-        num = num * 10 + (input[i] - '0');
+        num = num * 10 + (letter[i] - '0');
     }
     return num;
 }
