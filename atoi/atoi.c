@@ -31,15 +31,17 @@ int convert(string input)
 
     int length = strlen(input);
 
-    if (length == 0)
-        return 0;
+    // Base case
+    if (length == 0) return 0;
 
+    // Define last char of the string and transform it to integer
     char last_char = input[length - 1];
     int last_int = last_char - '0';
 
     // remove last char from string
     input[length - 1] = '\0';
 
+    // 
     number = convert(input) * 10 + last_int;
 
     return number;
