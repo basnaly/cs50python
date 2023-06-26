@@ -25,15 +25,13 @@ int main(void)
 
 int convert(string input)
 {
-    // TODO
-    long num = 0;
-    int i = 0;
+    // TODOi
 
     int length = strlen(input);
 
-    if (i > length))
+    if (length == 0)
     {
-
+        return 
     }
     return number =
 
