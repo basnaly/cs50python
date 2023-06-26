@@ -32,7 +32,11 @@ int convert(string input)
     if (length == 0)
         return 0;
 
-    char last = 
+    char last_char = input[length - 1];
+    int last_int = last_char - '0';
+
+    // remove last char from string
+    input[length - 1] = '\0';
 
 
 }
