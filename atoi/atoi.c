@@ -38,5 +38,7 @@ int convert(string input)
     // remove last char from string
     input[length - 1] = '\0';
 
+    
+
 
 }
