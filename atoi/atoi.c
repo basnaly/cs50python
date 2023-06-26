@@ -30,9 +30,9 @@ int convert(string input)
     int length = strlen(input);
 
     if (length == 0)
-    {
-        return 
-    }
-    return number =
+        return 0;
+
+    char last = 
+
 
 }
