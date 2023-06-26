@@ -27,8 +27,6 @@ int convert(string input)
 {
     // TODO
 
-    while ()
-    {
-        if (input[i] && (input[i] >= '0' && input[i] <= '9'))
-    }
+    if (input[i] && (input[i] >= '0' && input[i] <= '9'))
+    
 }
