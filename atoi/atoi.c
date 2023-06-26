@@ -27,7 +27,7 @@ int convert(string input)
 {
     // TODO
 
-    char input[];
+    // char input[];
     long num = 0;
     int i = 0;
 
