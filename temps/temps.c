@@ -3,6 +3,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 #define NUM_CITIES 10
 
@@ -16,6 +17,7 @@ avg_temp;
 avg_temp temps[NUM_CITIES];
 
 void sort_cities(void);
+
 
 int main(void)
 {
@@ -63,4 +65,16 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
+    int temps[] = {97, 82, 85, 90};
+    int length = strlen(temps);
+    int small_temp = 0;
+
+    for (int i = 0; i < length; i++)
+    {
+        if (temps[i] < temps[i + 1])
+        {
+            small_temp = temps[i]
+        }
+    }
+
 }
