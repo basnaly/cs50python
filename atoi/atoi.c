@@ -43,7 +43,8 @@ int convert(string input)
     // Remove last char from the string
     input[length - 1] = '\0';
 
-    number = convert(input) + 10 * last_int;
+    number = convert(input) * 10;
+
     return number;
 }
 
