@@ -70,15 +70,19 @@ void sort_cities(void)
 
     for (int i = 0; i < length; i++)
     {
-        int min = temps[0]; //97
-        int current = temp[i]; //97
+        int min = temps[0];
+        int current = temp[i + 1];
 
-        if (temps[i] < min)
+        for (int j = i; j < length; j++)
         {
-            temps[i] = min; //82
+            if (temps[j] < min)
+            {
+                temps[j] = min;
+            }
         }
-        temp[0] = min; // 82
-        current = temp[i] // 97 = temp[1]
+
+        temp[i] = min;
+        current = temp[i]
 
     }
 
