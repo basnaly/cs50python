@@ -13,6 +13,7 @@ int main(void)
     string text = get_string("Text: ");
 
     printf("%i letters\n", count_letters(text));
+    printf("%i words\n", count_words(text));
 }
 
 int count_letters(string text)
@@ -32,5 +33,5 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    
+
 }
