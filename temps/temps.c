@@ -74,6 +74,7 @@ void sort_cities(void)
         if (temps[i] < temps[i + 1])
         {
             small_temp = temps[i]
+            s
         }
     }
 
