@@ -23,6 +23,6 @@ int main(void)
         }
 
         temps[i] = min;
-        
+        temps[i]
     }
 }
