@@ -80,7 +80,7 @@ void sort_cities(void)
             }
         }
         temps[i] = min;
-        c
+        temp[j] = 
     }
 
 }
