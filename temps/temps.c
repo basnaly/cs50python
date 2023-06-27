@@ -75,6 +75,7 @@ void sort_cities(void)
         {
             small_temp = temps[i];
             temps[0] = small_temp;
+            
         }
     }
 
