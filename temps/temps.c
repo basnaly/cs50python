@@ -83,7 +83,7 @@ void sort_cities(void)
             }
         }
 
-        temp[i] = min;
+        min = temp[i];
         index_min = i;
         current = temp[i]
     }
