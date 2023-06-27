@@ -78,7 +78,7 @@ void sort_cities(void)
         {
             if (temps[j] < min)
             {
-                temps[j] = min;
+                min = temps[j];
                 index_min = j;
             }
         }
