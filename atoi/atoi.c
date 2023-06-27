@@ -34,7 +34,9 @@ int convert(string input)
     long number = 0;
     int length = strlen(input);
 
-    // Define last char
+    if (length == 0)
+    {
+        // Define last char
     char last_char = input[length - 1];
 
     // Transform char to the int
@@ -43,7 +45,8 @@ int convert(string input)
     // Remove last char from the string
     input[length - 1] = '\0';
 
-    number = convert(input) * 10;
+    number = convert(input) * 10 + last_int;
+    }
 
     return number;
 }
