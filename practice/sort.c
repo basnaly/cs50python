@@ -5,12 +5,12 @@
 int main(void)
 {
     int length = 4;
-    int temps[length] = {97, 82, 85, 90};
+    int temps[] = {97, 82, 85, 90};
 
     for (int i = 0; i < length; i++)
     {
         int min = temps[i];
-        int current = temp[i];
+        int current = temps[i];
         int index_min = i;
 
         for (int j = i; j < length; j++)
@@ -22,8 +22,8 @@ int main(void)
             }
         }
 
-        temp[i] = min;
+        temps[i] = min;
         index_min = i;
-        current = temp[i]
+        current = temps[i];
     }
 }
