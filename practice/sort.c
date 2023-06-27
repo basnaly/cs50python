@@ -11,18 +11,18 @@ int main(void)
     {
         int min = temps[i];
         int current = temps[i];
-        int index_min = i;
+        int index = i;
 
         for (int j = i; j < length; j++)
         {
             if (temps[j] < min)
             {
                 min = temps[j];
-                index_min = j;
+                index = j;
             }
         }
 
         temps[i] = min;
-        temps[index_min] = current;
+        temps[index] = current;
     }
 }
