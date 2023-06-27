@@ -72,6 +72,9 @@ void sort_cities(void)
     {
         int min = temps[i];
         for (int j = i; j < length; j++)
+        {
+            
+        }
     }
 
 }
