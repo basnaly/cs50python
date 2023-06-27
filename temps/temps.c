@@ -73,8 +73,8 @@ void sort_cities(void)
     {
         if (temps[i] < temps[i + 1])
         {
-            small_temp = temps[i]
-            s
+            small_temp = temps[i];
+            temps[0] = small_temp;
         }
     }
 
