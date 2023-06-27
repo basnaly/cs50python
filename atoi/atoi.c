@@ -26,9 +26,16 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int length = strlen(input);
-    for (int i = 0; i < length; i++)
-    {
-        
-    }
+
+    int length = strlen(input)
+
+    // Define last char
+    char last_char = input[length - 1];
+
+    // Transform char to the int
+    int last_int = last_chat - '0';
+
+    // Remove last char from the string
+    input[length - 1] = '\0';
+    
 }
