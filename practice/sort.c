@@ -7,7 +7,7 @@ int main(void)
     int length = 4;
     int temps[] = {97, 82, 85, 90};
 
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < length - 1; i++)
     {
         int min = temps[i];
         int current = temps[i];
