@@ -23,7 +23,6 @@ int main(void)
         }
 
         temps[i] = min;
-        index_min = i;
-        current = temps[i];
+        
     }
 }
