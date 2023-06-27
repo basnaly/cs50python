@@ -36,6 +36,8 @@ int convert(string input)
 
     if (length == 0)
     {
+        return 0;
+    }
         // Define last char
     char last_char = input[length - 1];
 
@@ -46,7 +48,6 @@ int convert(string input)
     input[length - 1] = '\0';
 
     number = convert(input) * 10 + last_int;
-    }
 
     return number;
 }
