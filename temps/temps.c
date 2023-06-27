@@ -65,14 +65,13 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    int temps[] = {97, 82, 85, 90};
-    int length = strlen(temps);
-    int min_temp = 0;
-    int current = 0;
+    int length = 4;
+    int temps[length] = {97, 82, 85, 90};
 
     for (int i = 0; i < length; i++)
     {
-        int min = temps[i]
+        int min = temps[i];
+        for (int j = 0; j < length; j++)
     }
 
 }
