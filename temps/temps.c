@@ -74,14 +74,15 @@ void sort_cities(void)
         int index = i;
         for (int j = i; i < length; i++)
         {
-            if (temp[j] > max)
+            if (temps[j] > max)
             {
-                max = temp[j];
+                max = temps[j];
                 index = j;
             }
         }
-        temp[i] = max;
+        temps[i] = max;
         temps[index] = current;
+        printf("%i\n", temps[i])
     }
 
 }
