@@ -25,5 +25,5 @@ int main(void)
         temps[i] = min;
         temps[index] = current;
     }
-    printf()
+    printf("%i ", temps[i]);
 }
