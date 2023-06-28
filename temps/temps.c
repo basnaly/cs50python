@@ -69,20 +69,20 @@ void sort_cities(void)
 
     for (int i = 0; i < length; i++)
     {
-        int max = temps[i].temp;
-        int current = temps[i];
+        avg_temp max = temps[i];
+        avg_temp current = temps[i];
         int index = i;
         for (int j = i; i < length; i++)
         {
-            if (sort_temps[j] > max)
+            if (temps[j] > max)
             {
-                max = sort_temps[j];
+                max = temps[j];
                 index = j;
             }
         }
-        sort_temps[i] = max;
-        sort_temps[index] = current;
-        printf("%i\n", sort_temps[i])
+        temps[i] = max;
+        temps[index] = current;
+        printf("%i\n", temps[i])
     }
 
 }
