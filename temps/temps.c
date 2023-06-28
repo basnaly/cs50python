@@ -69,8 +69,8 @@ void sort_cities(void)
 
     for (int i = 0; i < length; i++)
     {
-        int max = sort_temps[i];
-        int current = sort_temps[i];
+        int max = temps[i].temp;
+        int current = temps[i];
         int index = i;
         for (int j = i; i < length; i++)
         {
