@@ -49,7 +49,7 @@ int convert(string input)
     input[length - 1] = '\0';
 
     // Transform the string to int
-    number = convert(input) + last_int;
+    number = convert(input) * 10 + last_int;
 
     return number;
 }
