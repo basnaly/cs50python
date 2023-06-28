@@ -7,7 +7,7 @@ int main(void)
     int length = 4;
     int temps[] = {97, 82, 85, 90};
 
-    for (int i = 0; i < length - 1; i++)
+    for (int i = 0; i < length; i++)
     {
         int min = temps[i];
         int current = temps[i];
@@ -24,6 +24,7 @@ int main(void)
 
         temps[i] = min;
         temps[index] = current;
+        printf("%i\n", temps[i]);
     }
-    printf("%i ", temps[i]);
+
 }
