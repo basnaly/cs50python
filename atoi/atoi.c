@@ -34,7 +34,19 @@ int convert(string input)
     long number = 0;
     int length = strlen(input);
 
-    
+    // Get last char
+    char last_char = input[length - 1];
+
+    // Transform the last char to int
+    int last_int = last_char + '0';
+
+    // Remove the last char from the string;
+    input[length - 1] = '\0';
+
+    // Transform the string to int
+    number = convert(input) + 10 * last_int;
+
+    return number;
 }
 
 // int convert_loop(string input)
