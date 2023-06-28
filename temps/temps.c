@@ -65,24 +65,25 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
+    struct sort_temps == avg_temp;
     int length = NUM_CITIES;
 
     for (int i = 0; i < length; i++)
     {
-        int max = avg_temp[i];
-        int current = avg_temp[i];
+        int max = sort_temps[i];
+        int current = sort_temps[i];
         int index = i;
         for (int j = i; i < length; i++)
         {
-            if (avg_temp[j] > max)
+            if (sort_temps[j] > max)
             {
-                max = avg_temp[j];
+                max = sort_temps[j];
                 index = j;
             }
         }
-        avg_temp[i] = max;
-        avg_temp[index] = current;
-        printf("%i\n", avg_temp[i])
+        sort_temps[i] = max;
+        sort_temps[index] = current;
+        printf("%i\n", sort_temps[i])
     }
 
 }
