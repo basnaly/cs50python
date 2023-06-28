@@ -36,7 +36,7 @@ int convert(string input)
 
     if (length == 0)
     {
-        return 
+        return 1;
     }
 
     // Get last char
