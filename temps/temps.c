@@ -65,7 +65,7 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    struct sort_temps == avg_temp;
+    strncpy(sort.temp, avg_temp.temp, sizeof(NUM_CITIES));
     int length = NUM_CITIES;
 
     for (int i = 0; i < length; i++)
