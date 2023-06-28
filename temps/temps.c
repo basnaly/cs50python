@@ -65,7 +65,6 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    memcpy(&sort_temps, &avg_temp, sizeof(NUM_CITIES));
     int length = NUM_CITIES;
 
     for (int i = 0; i < length; i++)
