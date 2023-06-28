@@ -43,7 +43,7 @@ int convert(string input)
     char last_char = input[length - 1];
 
     // Transform the last char to int
-    int last_int = last_char + '0';
+    int last_int = last_char - '0';
 
     // Remove the last char from the string;
     input[length - 1] = '\0';
