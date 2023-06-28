@@ -50,6 +50,9 @@ int convert(string input)
 
     // Transform the string to int
     number = convert(input) * 10 + last_int;
+    // number (1) = 0 * 10 + 1 => 1
+    // number (12) = 1 * 10 + 2 => 12
+    // number (123) = 12 * 10 + 3 => 123
 
     return number;
 }
