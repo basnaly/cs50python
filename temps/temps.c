@@ -72,10 +72,10 @@ void sort_cities(void)
         avg_temp max = temps[i];
         avg_temp current = temps[i];
         int index = i;
-        
+
         for (int j = i; i < length; i++)
         {
-            if (temps[j] > max)
+            if (temps[j].temp > max.temp)
             {
                 max = temps[j];
                 index = j;
