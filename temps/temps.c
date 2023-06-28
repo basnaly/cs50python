@@ -83,6 +83,6 @@ void sort_cities(void)
         }
         temps[i] = max;
         temps[index] = current;
-        printf("%s, %i\n", temps[i].city, temps[i].temp);
+        // printf("%s, %i\n", temps[i].city, temps[i].temp);
     }
 }
