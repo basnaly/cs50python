@@ -80,7 +80,8 @@ void sort_cities(void)
                 index = j;
             }
         }
-        temp[i] = 
+        temp[i] = max;
+        temps[index] = current;
     }
 
 }
