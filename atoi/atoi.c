@@ -34,6 +34,11 @@ int convert(string input)
     long number = 0;
     int length = strlen(input);
 
+    if (length == 0)
+    {
+        return 
+    }
+
     // Get last char
     char last_char = input[length - 1];
 
