@@ -65,27 +65,22 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    int length = 4;
-    int temps[length] = {97, 82, 85, 90};
+    int length = NUM_CITIES;
 
     for (int i = 0; i < length; i++)
     {
-        int min = temps[i];
-        int current = temp[i];
-        int index_min = i;
-
-        for (int j = i; j < length; j++)
+        int max = temps[i];
+        int current = temps[i];
+        int index = i;
+        for (int j = i; i < length; i++)
         {
-            if (temps[j] < min)
+            if (temp[j] > max)
             {
-                min = temps[j];
-                index_min = j;
+                max = temp[j];
+                index = j;
             }
         }
-
-        temp[i] = min;
-        index_min = i;
-        current = temp[i]
+        temp[i] = 
     }
 
 }
