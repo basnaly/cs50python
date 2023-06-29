@@ -14,6 +14,7 @@ time ./sort1 reversed5000.txt
     real    0m0.152s
     user    0m0.074s
     sys     0m0.017s
+
 time ./sort1 sorted5000.txt
     real    0m0.021s
     user    0m0.004s
@@ -56,10 +57,12 @@ time ./sort3 random50000.txt
     real    0m3.417s
     user    0m2.624s
     sys     0m0.157s
+
 time ./sort3 reversed5000.txt
     real    0m0.067s
     user    0m0.024s
     sys     0m0.024s
+    
 time ./sort3 sorted5000.txt
     real    0m0.086s
     user    0m0.035s
