@@ -132,8 +132,7 @@ string to_lowercase(string item_name)
     {
         if (isupper(item_name[i]))
         {
-            char letter = tolower(item_name[i]);
-            item_name[i] = letter;
+            item_name[i] = item_name[i] - 32;
         }
     }
 
