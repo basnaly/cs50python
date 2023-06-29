@@ -69,23 +69,23 @@ void sort_cities(void)
 
     for (int i = 0; i < length; i++)
     {
-        // Save max temperature as the element [i] of the temps array
+        // Save temps[i] struct (city, temperature) to the max variable
         avg_temp max = temps[i];
 
-        // Save the current temperature as the element [i]
+        // Save temps[i] struct (city, temperature) to the current variable
         avg_temp current = temps[i];
 
-        // Save index of element i
+        // Save index i
         int index = i;
 
         for (int j = i; j < length; j++)
         {
             if (temps[j].temp > max.temp || (temps[j].temp == max.temp && temps[j].city <= max.city))
             {
-                // Overide the max temperature if it fit the condition above
+                // Overide the max struct if it matches the condition above
                 max = temps[j];
 
-                // Save the index of max temperature
+                // Save the index of max struct
                 index = j;
             }
         }
