@@ -42,9 +42,6 @@ void add_items(void);
 // Calculate total cost
 float get_cost(string item);
 
-// Tranform string to lower case
-string to_lowercase(string item_name);
-
 int main(void)
 {
     add_items();
@@ -116,25 +113,11 @@ float get_cost(string item)
 
     for (int i = 0; i < length; i++)
     {
+        // 
         if (strcasecmp(item, menu[i].item) == 0)
         {
             cost = menu[i].price;
         }
     }
     return cost;
-}
-
-string to_lowercase(string item_name)
-{
-    int length = strlen(item_name);
-
-    for (int i = 0; i < length; i++)
-    {
-        if (isupper(item_name[i]))
-        {
-            item_name[i] = item_name[i] + 32;
-        }
-    }
-
-    return item_name;
 }
