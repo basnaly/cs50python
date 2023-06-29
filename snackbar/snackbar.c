@@ -113,7 +113,7 @@ float get_cost(string item)
 
     for (int i = 0; i < length; i++)
     {
-        // 
+        // Compare 2 strings ignoring case
         if (strcasecmp(item, menu[i].item) == 0)
         {
             cost = menu[i].price;
