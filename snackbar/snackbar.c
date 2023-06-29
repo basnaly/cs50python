@@ -111,14 +111,12 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-
-
     int length = NUM_ITEMS;
     float cost = 0;
 
     for (int i = 0; i < length; i++)
     {
-        if (item == menu[i].item)
+        if (to_lowercase(item) == to_lowercase(menu[i].item))
         {
             cost = menu[i].price;
         }
@@ -130,7 +128,7 @@ string to_lowercase(string item_name)
 {
     int length = strlen(item_name);
 
-    for (let i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         if (isupper(item_name[i]))
         {
