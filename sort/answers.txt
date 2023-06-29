@@ -5,15 +5,15 @@ time ./sort1 random5000.txt
     real    0m0.072s
     user    0m0.059s
     sys     0m0.012s
-time ./sort1 random50000.txt
-    real    0m7.797s
-    user    0m6.930s
-    sys     0m0.171s
+time ./sort2 random5000.txt
+    real    0m0.023s
+    user    0m0.007s
+    sys     0m0.012s
+time ./sort3 random5000.txt
+    real    0m0.047s
+    user    0m0.031s
+    sys     0m0.016s
 
-time ./sort1 reversed5000.txt
-    real    0m0.152s
-    user    0m0.074s
-    sys     0m0.017s
 
 time ./sort1 sorted5000.txt
     real    0m0.021s
@@ -30,10 +30,7 @@ This algorithm sorted the sorted array more faster then sort 3. It has Ω(n).
 sort2 uses: TODO
 This is a merge sort algorithm
 
-time ./sort2 random5000.txt
-    real    0m0.023s
-    user    0m0.007s
-    sys     0m0.012s
+
 time ./sort2 reversed5000.txt
     real    0m0.040s
     user    0m0.003s
