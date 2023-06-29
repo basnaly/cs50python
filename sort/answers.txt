@@ -24,7 +24,7 @@ time ./sort3 sorted10000.txt
     sys     0m0.001s
 
 How do you know?: TODO
-This algorithm sorted the sorted array more faster then sort 3. It has Ω(n).
+This algorithm sorted the sorted array more faster then sort 3. It has Ω(n^2).
 
 sort2 uses: TODO
 This is a merge sort algorithm
