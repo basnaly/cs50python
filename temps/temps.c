@@ -90,10 +90,11 @@ void sort_cities(void)
             }
         }
 
-        // Save the max temperature in index i
+        // Swap max and current
+        // Save the max struct in index i
         temps[i] = max;
 
-        // Save the current temperature in the index of max temperature
+        // Save the current struct in the index of the max struct
         temps[index] = current;
 
         // printf("%s, %i\n", temps[i].city, temps[i].temp);
