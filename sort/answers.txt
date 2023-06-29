@@ -1,20 +1,14 @@
-sort1 uses: TODO
-This is a buble sort algotithm
+sort1 uses: buble sort
 
-How do you know?: TODO
-This algorithm sorted the sorted array faster then sort 3 algorithm - Ω(n).
+How do you know?: This algorithm sorted the sorted array faster then sort 3 algorithm - Ω(n).
 
-sort2 uses: TODO
-This is a merge sort algorithm
+sort2 uses: merge sort
 
-How do you know?: TODO
-It is the fastiest algorithm for random data compared to sort 1 and sort 3 algorithms. It has O(n logn) and Ω(n log n).
+How do you know?: It is the fastiest algorithm for random data compared to sort 1 and sort 3 algorithms. It has O(n logn) and Ω(n log n).
 
-sort3 uses: TODO
-This is a selection sort algorithm
+sort3 uses: selection sort
 
-How do you know?: TODO
-It takes the longest time to sort sorted array - Ω(n^2).
+How do you know?: It takes the longest time to sort sorted array - Ω(n^2).
 
 time ./sort1 random10000.txt
     real    0m0.298s
