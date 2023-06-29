@@ -116,7 +116,7 @@ float get_cost(string item)
 
     for (int i = 0; i < length; i++)
     {
-        if (to_lowercase(item) == to_lowercase(strcmp(menu[i].item))
+        if (strcasecmp(item, menu[i].item))
         {
             cost = menu[i].price;
         }
