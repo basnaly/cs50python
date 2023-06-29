@@ -1,19 +1,27 @@
 sort1 uses: TODO
 This is a buble sort algotithm
 
-time ./sort1 random5000.txt
+time ./sort1 random10000.txt
     real    0m0.072s
     user    0m0.059s
     sys     0m0.012s
-time ./sort2 random5000.txt
+time ./sort2 random10000.txt
     real    0m0.023s
     user    0m0.007s
     sys     0m0.012s
-time ./sort3 random5000.txt
+time ./sort3 random10000.txt
     real    0m0.047s
     user    0m0.031s
     sys     0m0.016s
 
+time ./sort1 sorted10000.txt
+    real    0m0.086s
+    user    0m0.035s
+    sys     0m0.026s
+time ./sort3 sorted10000.txt
+    real    0m0.086s
+    user    0m0.035s
+    sys     0m0.026s
 
 How do you know?: TODO
 This algorithm sorted the sorted array more faster then sort 3. It has Ω(n).
@@ -26,29 +34,6 @@ It is the fastiest algorithm to compare with sort 1 and sort 3 algorithms. It ha
 
 sort3 uses: TODO
 This is a selection sort algorithm
-
-time ./sort3 random5000.txt
-    real    0m0.047s
-    user    0m0.031s
-    sys     0m0.016s
-time ./sort3 random50000.txt
-    real    0m3.417s
-    user    0m2.624s
-    sys     0m0.157s
-
-time ./sort3 reversed5000.txt
-    real    0m0.067s
-    user    0m0.024s
-    sys     0m0.024s
-
-time ./sort3 sorted5000.txt
-    real    0m0.086s
-    user    0m0.035s
-    sys     0m0.026s
-time ./sort3 sorted50000.txt
-    real    0m3.928s
-    user    0m2.667s
-    sys     0m0.165s
 
 How do you know?: TODO
 It takes the longest time to sort sorted array. It has Ω(n^2).
