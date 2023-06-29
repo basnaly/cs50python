@@ -69,19 +69,31 @@ void sort_cities(void)
 
     for (int i = 0; i < length; i++)
     {
+        // Save max temperature as the element [i] of the temps array
         avg_temp max = temps[i];
+
+        // Save the current temperature as the element [i]
         avg_temp current = temps[i];
+
+        // Save index of element i
         int index = i;
 
         for (int j = i; j < length; j++)
         {
             if (temps[j].temp > max.temp || (temps[j].temp == max.temp && temps[j].city <= max.city))
             {
+                // Overide the max temperature if it fit the condition above
                 max = temps[j];
+
+                // Save the index of max temperature
                 index = j;
             }
         }
+
+        // Save the max temperature on place[i]
         temps[i] = max;
+
+        // 
         temps[index] = current;
         // printf("%s, %i\n", temps[i].city, temps[i].temp);
     }
