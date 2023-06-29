@@ -15,7 +15,7 @@ time ./sort1 sorted5000.txt
     sys     0m0.017s
 
 How do you know?: TODO
-It is the fastiest of sort 1 and sort 3, because its O(n logn)
+This algorithm sorted the sorted array more faster then sort 3, because its O(n logn)
 
 sort2 uses: TODO
 This is a merge sort algorithm
