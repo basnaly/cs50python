@@ -90,11 +90,12 @@ void sort_cities(void)
             }
         }
 
-        // Save the max temperature on place[i]
+        // Save the max temperature in index i
         temps[i] = max;
 
-        // 
+        // Save the current temperature in the index of max temperature
         temps[index] = current;
+
         // printf("%s, %i\n", temps[i].city, temps[i].temp);
     }
 }
