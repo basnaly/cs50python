@@ -120,5 +120,5 @@ float get_cost(string item)
             cost = menu[i].price;
         }
     }
-    return 0.0;
+    return cost;
 }
