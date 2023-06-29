@@ -1,14 +1,14 @@
-sort1 uses: buble sort
+sort1 uses: selection sort
 
-How do you know?: This algorithm sorted the sorted array faster then sort 3 algorithm - Ω(n).
+How do you know?: It takes the longest time to sort sorted array - Ω(n^2).
 
 sort2 uses: merge sort
 
 How do you know?: It is the fastiest algorithm for random data compared to sort 1 and sort 3 algorithms. It has O(n logn) and Ω(n log n).
 
-sort3 uses: selection sort
+sort3 uses: buble sort
 
-How do you know?: It takes the longest time to sort sorted array - Ω(n^2).
+How do you know?: This algorithm sorted the sorted array faster then sort 3 algorithm - Ω(n).
 
 time ./sort1 random10000.txt
     real    0m0.298s
