@@ -103,8 +103,6 @@ void add_items(void)
 
     menu[9].item = "Soda";
     menu[9].price = 2.00;
-
-    return;
 }
 
 // Search through the menu array to find an item's cost
