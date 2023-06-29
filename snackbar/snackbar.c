@@ -42,6 +42,9 @@ void add_items(void);
 // Calculate total cost
 float get_cost(string item);
 
+// Tranform string to lower case
+string to_lowercase(string item_name);
+
 int main(void)
 {
     add_items();
@@ -123,4 +126,15 @@ float get_cost(string item)
     return cost;
 }
 
-string to_lowercase(string )
+string to_lowercase(string item_name)
+{
+    int length = strlen(item_name);
+
+    for (let i = 0; i < length; i++)
+    {
+        if (item_name < 97 || item_name > 122)
+        {
+            
+        }
+    }
+}
