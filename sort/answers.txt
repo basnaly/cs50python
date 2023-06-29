@@ -1,5 +1,5 @@
 sort1 uses: TODO
-time .sort1 random5000.txt.    
+time .sort1 random5000.txt      real    0m0.001s
 time .sort1 reversed5000.txt
 time .sort1 sorted5000.txt
 
