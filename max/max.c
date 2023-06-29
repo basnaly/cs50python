@@ -33,7 +33,7 @@ int max(int array[], int n)
     {
         if (array[i] > max_el)
         {
-            array[i] = max_el;
+            max_el = array[i];
         }
     }
     return max_el;
