@@ -74,8 +74,36 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    temps[0].city = "Burger";
-    temps[0].temp = 9.5;
+    menu[0].item = "Burger";
+    menu[0].price = 9.5;
+
+    menu[0].item = "Vegan Burger";
+    menu[0].price = 11;
+
+    menu[0].item = "Hot Dog";
+    menu[0].price = 5;
+
+    menu[0].item = "Cheese Dog";
+    menu[0].price = 7;
+
+    menu[0].item = "Fries";
+    menu[0].price = 5;
+
+    menu[0].item = "Cheese Fries";
+    menu[0].price = 6;
+
+    menu[0].item = "Cold Pressed Juic";
+    menu[0].price = 7;
+
+    menu[0].item = "Cold Brew";
+    menu[0].price = 3;
+
+    menu[0].item = "Water";
+    menu[0].price = 2;
+
+    menu[0].item = "Soda";
+    menu[0].price = 2;
+
     return;
 }
 
