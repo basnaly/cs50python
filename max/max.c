@@ -34,7 +34,7 @@ int max(int array[], int n)
     {
         if (array[i] > max_el)
         {
-            // Overide 
+            // Overide the max if element i is more than max
             max_el = array[i];
         }
     }
