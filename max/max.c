@@ -28,6 +28,7 @@ int main(void)
 // TODO: return the max value
 int max(int array[], int n)
 {
+    // Save max element as the first element of the array
     int max_el = array[0];
     for (int i = 0; i < n; i++)
     {
