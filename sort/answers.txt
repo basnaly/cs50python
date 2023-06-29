@@ -65,9 +65,9 @@ time ./sort3 sorted5000.txt
     user    0m0.035s
     sys     0m0.026s
 time ./sort3 sorted50000.txt
-    real    0m0.086s
-    user    0m0.035s
-    sys     0m0.026s
+    real    0m3.928s
+    user    0m2.667s
+    sys     0m0.165s
 
 How do you know?: TODO
 It takes the longest time to sort sorted array. It has Ω(n^2).
