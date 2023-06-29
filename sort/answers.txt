@@ -1,10 +1,15 @@
 sort1 uses: TODO
-time ./sort1 random5000.txt
 This is a buble sort algotithm
 
+time ./sort1 random5000.txt
     real    0m0.072s
     user    0m0.059s
     sys     0m0.012s
+time ./sort1 random50000.txt
+    real    0m0.072s
+    user    0m0.059s
+    sys     0m0.012s
+
 time ./sort1 reversed5000.txt
     real    0m0.152s
     user    0m0.074s
