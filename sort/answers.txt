@@ -15,33 +15,14 @@ time ./sort3 random5000.txt
     sys     0m0.016s
 
 
-time ./sort1 sorted5000.txt
-    real    0m0.021s
-    user    0m0.004s
-    sys     0m0.017s
-time ./sort1 sorted50000.txt
-    real    0m3.049s
-    user    0m0.036s
-    sys     0m0.162s
-
 How do you know?: TODO
 This algorithm sorted the sorted array more faster then sort 3. It has Ω(n).
 
 sort2 uses: TODO
 This is a merge sort algorithm
 
-
-time ./sort2 reversed5000.txt
-    real    0m0.040s
-    user    0m0.003s
-    sys     0m0.020s
-time ./sort2 sorted5000.txt
-    real    0m0.044s
-    user    0m0.003s
-    sys     0m0.021s
-
 How do you know?: TODO
-It is the fastiest algorithm compare to sort 1 and sort 3. It has O(n logn) and Ω(n log n).
+It is the fastiest algorithm to compare with sort 1 and sort 3 algorithms. It has O(n logn) and Ω(n log n).
 
 sort3 uses: TODO
 This is a selection sort algorithm
