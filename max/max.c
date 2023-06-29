@@ -37,5 +37,4 @@ int max(int array[], int n)
         }
     }
     return max_el;
-    return 0;
 }
