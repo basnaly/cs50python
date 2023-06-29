@@ -37,6 +37,8 @@ How do you know?: TODO
 It is the fastiest of sort 1 and sort 3, becouse its O(n logn)
 
 sort3 uses: TODO
+This is a selection sort algorithm
+
 time ./sort3 random5000.txt
     real    0m0.047s
     user    0m0.031s
