@@ -74,6 +74,8 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
+    temps[0].city = "Burger";
+    temps[0].temp = 9.5;
     return;
 }
 
