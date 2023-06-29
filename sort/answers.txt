@@ -34,7 +34,7 @@ time ./sort2 sorted5000.txt
     sys     0m0.021s
 
 How do you know?: TODO
-It is the fastiest algorithm compare to sort 1 and sort 3, because its O(n logn) and Ω(n log n).
+It is the fastiest algorithm compare to sort 1 and sort 3. It has O(n logn) and Ω(n log n).
 
 sort3 uses: TODO
 This is a selection sort algorithm
@@ -53,4 +53,4 @@ time ./sort3 sorted5000.txt
     sys     0m0.026s
 
 How do you know?: TODO
-It takes the longest time to sort sorted array
+It takes the longest time to sort sorted array. It has Ω(n^2).
