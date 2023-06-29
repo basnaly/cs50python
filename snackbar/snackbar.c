@@ -132,9 +132,9 @@ string to_lowercase(string item_name)
 
     for (let i = 0; i < length; i++)
     {
-        if (item_name[i] < 97)
+        if (isupper(item_name[i]))
         {
-            item_name[i] = item_name[i] + 32
+            item_name[i] = tolower(item_name[i]);
         }
     }
 
