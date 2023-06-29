@@ -28,6 +28,14 @@ int main(void)
 // TODO: return the max value
 int max(int array[], int n)
 {
-    int length = strlen()
+    int max_el = array[0];
+    for (int i = 0; i < n; i++)
+    {
+        if (array[i] > max_el)
+        {
+            array[i] = max_el;
+        }
+    }
+    return max_el;
     return 0;
 }
