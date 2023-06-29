@@ -19,9 +19,9 @@ time ./sort1 sorted10000.txt
     user    0m0.009s
     sys     0m0.036s
 time ./sort3 sorted10000.txt
-    real    0m0.001s
-    user    0m0.000s
-    sys     0m0.001s
+    real    0m0.161s
+    user    0m0.117s
+    sys     0m0.025s
 
 How do you know?: TODO
 This algorithm sorted the sorted array more faster then sort 3. It has Ω(n^2).
