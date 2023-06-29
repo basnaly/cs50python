@@ -2,6 +2,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int max(int array[], int n);
 
@@ -11,7 +12,7 @@ int main(void)
     do
     {
         n = get_int("Number of elements: ");
-    } 
+    }
     while (n < 1);
 
     int arr[n];
@@ -27,5 +28,6 @@ int main(void)
 // TODO: return the max value
 int max(int array[], int n)
 {
+    int length = strlen()
     return 0;
 }
