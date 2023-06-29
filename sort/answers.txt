@@ -1,14 +1,47 @@
 sort1 uses: TODO
-time .sort1 random5000.txt      real    0m0.001s
-time .sort1 reversed5000.txt
-time .sort1 sorted5000.txt
+time ./sort1 random5000.txt
+    real    0m0.072s
+    user    0m0.059s
+    sys     0m0.012s
+time ./sort1 reversed5000.txt
+    real    0m0.152s
+    user    0m0.074s
+    sys     0m0.017s
+time ./sort1 sorted5000.txt
+    real    0m0.021s
+    user    0m0.004s
+    sys     0m0.017s
 
 How do you know?: TODO
 
 sort2 uses: TODO
+time ./sort2 random5000.txt
+    real    0m0.023s
+    user    0m0.007s
+    sys     0m0.012s
+time ./sort2 reversed5000.txt
+    real    0m0.040s
+    user    0m0.003s
+    sys     0m0.020s
+time ./sort2 sorted5000.txt
+    real    0m0.044s
+    user    0m0.003s
+    sys     0m0.021s
 
 How do you know?: TODO
 
 sort3 uses: TODO
+time ./sort3 random5000.txt
+    real    0m0.047s
+    user    0m0.031s
+    sys     0m0.016s
+time ./sort3 reversed5000.txt
+    real    0m0.067s
+    user    0m0.024s
+    sys     0m0.024s
+time ./sort3 sorted5000.txt
+    real    0m0.086s
+    user    0m0.035s
+    sys     0m0.026s
 
 How do you know?: TODO
