@@ -83,7 +83,7 @@ void print_winner(void)
 {
     // TODO
 
-    int max_votes = 0;
+    int max_votes = -1;
 
     for (int i = 0; i < MAX; i++)
     {
