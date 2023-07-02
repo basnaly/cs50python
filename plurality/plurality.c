@@ -67,6 +67,10 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    for (int i = 0; i < MAX; i++)
+    {
+        if (candidates[i].name )
+    }
     return false;
 }
 
