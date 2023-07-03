@@ -156,7 +156,7 @@ void tabulate(void)
             if (!candidates[candidate_index].eliminated)
             {
                 candidates[candidate_index].votes += 1;
-                printf("candidates[candidate_index].name: %i\n", candidates[candidate_index].votes);
+                printf("%s: %i\n",candidates[candidate_index].name, candidates[candidate_index].votes);
                 break;
             }
         }
@@ -169,7 +169,9 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    return false;
+    // return false;
+    return true;
+
 }
 
 // Return the minimum number of votes any remaining candidate has
