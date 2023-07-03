@@ -14,8 +14,7 @@ typedef struct
     string name;
     int votes;
     bool eliminated;
-}
-candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -149,10 +148,13 @@ void tabulate(void)
     // TODO
     for (int i = 0; i < voter_count; i++)
     {
-        if (candidate[i].eliminated)
+        for (int j = 0; j < candidate_count; j++)
         {
-            preferences[i][0] == 0;
-            candidate[i].votes += 1;
+            if (candidate[i].eliminated)
+            {
+                preferences[i][j] == 0;
+                candidate[i].votes += 1;
+            }
         }
     }
 
