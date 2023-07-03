@@ -147,6 +147,8 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+
+    
     return;
 }
 
