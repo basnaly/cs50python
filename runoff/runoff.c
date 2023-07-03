@@ -153,6 +153,11 @@ void tabulate(void)
             if (!candidate[j].eliminated && preferences[i][0])
             {
                 candidate[j].votes += 1;
+                printf("candidate[j].name: %i\n", candidate[j].votes);
+            }
+            else if (candidate[j].eliminated && preferences[i][1])
+            {
+                candidate[j].votes += 1;
             }
         }
     }
