@@ -131,11 +131,11 @@ bool vote(int voter, int rank, string name)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidate[i].name == NULL)
+        if (candidates[i].name == NULL)
         {
             return false;
         }
-        else if (strcmp(candidate[i].name, name) == 0)
+        else if (strcmp(candidates[i].name, name) == 0)
         {
             preferences[voter][rank] = i;
             return true;
@@ -152,14 +152,14 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (!candidate[j].eliminated && preferences[i][0])
+            if (!candidates[j].eliminated && preferences[i][0])
             {
-                candidate[j].votes += 1;
-                printf("candidate[j].name: %i\n", candidate[j].votes);
+                candidates[j].votes += 1;
+                printf("candidate[j].name: %i\n", candidates[j].votes);
             }
-            else if (candidate[j].eliminated && preferences[i][1])
+            else if (candidates[j].eliminated && preferences[i][1])
             {
-                candidate[j].votes += 1;
+                candidates[j].votes += 1;
             }
         }
     }
