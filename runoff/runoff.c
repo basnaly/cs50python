@@ -153,14 +153,11 @@ void tabulate(void)
         for (int rank = 0; rank < candidate_count; rank++)
         {
             int candidate = preferences[voter][rank];
-            if (!candidates[j].eliminated && preferences[voter][0])
+            if (!candidates[candidate].eliminated)
             {
-                candidates[j].votes += 1;
-                printf("candidate[j].name: %i\n", candidates[j].votes);
-            }
-            else if (candidates[j].eliminated && preferences[voter][1])
-            {
-                candidates[j].votes += 1;
+                candidates[candidate].votes += 1;
+                break;
+                // printf("candidate[j].name: %i\n", candidates[j].votes);
             }
         }
     }
