@@ -150,9 +150,9 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (!candidate[i].eliminated && preferences[i][0])
+            if (!candidate[j].eliminated && preferences[i][0])
             {
-                candidate[i].votes += 1;
+                candidate[j].votes += 1;
             }
         }
     }
