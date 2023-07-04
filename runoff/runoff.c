@@ -189,7 +189,8 @@ int find_min(void)
     {
         if (candidates[i].votes < min_vote)
         {
-            min_vote = candidates[i].votes
+            min_vote = candidates[i].votes;
+            printf("%s: %i\n", candidates[i].name, candidates[i].votes);
         }
     }
     return 0;
