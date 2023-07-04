@@ -202,7 +202,8 @@ bool is_tie(int min)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        int count = 0;
+        if ()
     }
     return false;
 }
