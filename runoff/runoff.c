@@ -129,39 +129,14 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (candidates[i].name == NULL)
-        {
-            return false;
-        }
-        else if (strcmp(candidates[i].name, name) == 0)
-        {
-            preferences[voter][rank] = i;
-            return true;
-        }
-    }
-    return false;
+
 }
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
     // TODO
-    for (int voter = 0; voter < voter_count; voter++)
-    {
-        for (int rank = 0; rank < candidate_count; rank++)
-        {
-            int candidate_index = preferences[voter][rank];
-            if (!candidates[candidate_index].eliminated)
-            {
-                candidates[candidate_index].votes += 1;
-                printf("%s: %i\n",candidates[candidate_index].name, candidates[candidate_index].votes);
-                break;
-            }
-        }
-    }
-
+    int max = 0;
     return;
 }
 
