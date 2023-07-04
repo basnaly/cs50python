@@ -153,9 +153,9 @@ void tabulate(void)
     {
         for (int rank = 0; rank < candidate_count; rank++)
         {
-            if (candidates.eliminated == true)
+            if (candidates[i].eliminated == true)
             {
-                
+
                 break;
             }
         }
