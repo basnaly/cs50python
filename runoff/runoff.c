@@ -191,6 +191,7 @@ int find_min(void)
         {
             min_vote = candidates[i].votes;
             printf("%s: %i\n", candidates[i].name, candidates[i].votes);
+            return min_vote;
         }
     }
     return 0;
