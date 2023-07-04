@@ -158,7 +158,7 @@ void tabulate(void)
             if (candidates[candidate_index].eliminated != true)
             {
                 candidates[candidate_index].votes += 1;
-                printf("%s: %i\n", candidates[candidate_index].name, candidates[candidate_index].votes);
+                // printf("%s: %i\n", candidates[candidate_index].name, candidates[candidate_index].votes);
                 break;
             }
         }
