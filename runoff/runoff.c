@@ -221,9 +221,9 @@ void eliminate(int min)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (andidates[i].votes == true && min == candidates[i].votes)
+        if (candidates[i].votes != true && min == candidates[i].votes)
         {
-
+            candidates[i].eliminated = true;
         }
 
     }
