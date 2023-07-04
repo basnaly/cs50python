@@ -156,7 +156,7 @@ void tabulate(void)
             if (candidates[rank].eliminated != true)
             {
                 candidates[rank].votes += 1;
-                printf("candidates[rank].name: %i\n", candidates[rank].votes);
+                printf("%s: %i\n", candidates[rank].name, candidates[rank].votes);
                 break;
             }
         }
