@@ -132,11 +132,17 @@ bool vote(int voter, int rank, string name)
 
     for (int i = 0; i < candidate_count; i++)
     {
+        if (candidates.name == NULL)
+        {
+            return false;
+        }
         if (strcmp(candidates.name, name) == 0)
         {
-            preference[i]
+            preference[voter][rank];
+            return true;
         }
     }
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
