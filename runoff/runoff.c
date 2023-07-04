@@ -170,9 +170,11 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    // return false;
-    return true;
-
+    if (candidates.votes > (voter_count /2) )
+    {
+        return true;
+    }
+    return false;
 }
 
 // Return the minimum number of votes any remaining candidate has
