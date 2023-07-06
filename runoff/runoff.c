@@ -180,7 +180,15 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    
+    for (int candidate_index = 0; i < candidate_count; candidate_index++)
+    {
+        int min_votes = 
+        if (candidate[candidate_index].votes > voter_count / 2)
+        {
+
+        }
+    }
+
     return 0;
 }
 
