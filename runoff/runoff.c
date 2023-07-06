@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -130,11 +131,11 @@ bool vote(int voter, int rank, string name)
     // TODO
     for (int candidate_index = 0; candidate_index < candidate_count; candidate_index++)
     {
-        if (candidate[candidate_index].name == NULL)
+        if (candidates[candidate_index].name == NULL)
         {
             return false;
         }
-        else if (strcmp(candidate[candidate_index].name, name) == 0)
+        else if (strcmp(candidates[candidate_index].name, name) == 0)
         {
             preferences[voter][rank] = candidate_index;
             return true;
@@ -152,9 +153,9 @@ void tabulate(void)
         for (int rank = 0; rank < candidate_count; rank++)
         {
             int candidate_index = preferences[voter][rank];
-            if (candidate[candidate_index].eliminated != true)
+            if (candidates[candidate_index].eliminated != true)
             {
-                candidate[candidate_index].votes += 1;
+                candidates[candidate_index].votes += 1;
             }
         }
     }
@@ -165,11 +166,11 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    for (int candidate_index = 0; i < candidate_count; candidate_index++)
+    for (int candidate_index = 0; candidate_index < candidate_count; candidate_index++)
     {
-        if (candidate[candidate_index].votes > voter_count / 2)
+        if (candidates[candidate_index].votes > voter_count / 2)
         {
-            printf("%s\n", candidate[candidate_index].name);
+            printf("%s\n", candidates[candidate_index].name);
             return true;
         }
     }
@@ -180,12 +181,12 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    for (int candidate_index = 0; i < candidate_count; candidate_index++)
+    for (int candidate_index = 0; candidate_index < candidate_count; candidate_index++)
     {
         int min_votes = candidate_count;
-        if ((candidate[candidate_index].votes < candidate_count) && (candidate[candidate_index].eliminated != true))
+        if ((candidates[candidate_index].votes < candidate_count) && (candidates[candidate_index].eliminated != true))
         {
-            min_votes = candidate[candidate_index].votes;
+            min_votes = candidates[candidate_index].votes;
             return min_votes;
         }
     }
@@ -197,9 +198,9 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    for (int candidate_index = 0; i < candidate_count; candidate_index++)
+    for (int candidate_index = 0; candidate_index < candidate_count; candidate_index++)
     {
-        if ((candidate[candidate_index].eliminated != true) && (candidate[candidate_index].votes > min))
+        if ((candidates[candidate_index].eliminated != true) && (candidates[candidate_index].votes > min))
         {
             return false;
         }
@@ -211,11 +212,11 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    for (int candidate_index = 0; i < candidate_count; candidate_index++)
+    for (int candidate_index = 0; candidate_index < candidate_count; candidate_index++)
     {
-        if ((candidate[candidate_index].eliminated != true) && (candidate[candidate_index].votes == min))
+        if ((candidates[candidate_index].eliminated != true) && (candidates[candidate_index].votes == min))
         {
-            candidate[candidate_index].eliminated == true;
+            candidates[candidate_index].eliminated = true;
         }
     }
     return;
