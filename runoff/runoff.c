@@ -165,7 +165,10 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    if (candidate[candidate_index].votes > )
+    if (candidate[candidate_index].votes > voter_count / 2)
+    {
+        return true;
+    }
     return false;
 }
 
