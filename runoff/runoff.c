@@ -128,6 +128,18 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    for (int candidate_index = 0; i <int candidate_count; candidate_index++)
+    {
+        if (candidate[candidate_index].name == NULL)
+        {
+            return false;
+        }
+        else if (strcmp(candidate[candidate_index].name, name) == 0)
+        {
+            preferences[voter][rank] = candidate_index;
+            return true;
+        }
+    }
     return false;
 }
 
@@ -135,6 +147,13 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    for (int i = 0; i < voter_count; i++)
+    {
+        for (int j = 0; j <int candidate_count; j++)
+        {
+            
+        }
+    }
     return;
 }
 
