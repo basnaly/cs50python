@@ -197,6 +197,10 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
+    for (int candidate_index = 0; i < candidate_count; candidate_index++)
+    {
+        
+    }
     return false;
 }
 
