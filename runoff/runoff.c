@@ -128,7 +128,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    for (int candidate_index = 0; i < candidate_count; candidate_index++)
+    for (int candidate_index = 0; candidate_index < candidate_count; candidate_index++)
     {
         if (candidate[candidate_index].name == NULL)
         {
