@@ -151,7 +151,8 @@ void tabulate(void)
     {
         for (int rank = 0; rank < candidate_count; rank++)
         {
-            if (candidate[j].eliminated != true)
+            int candidate_index = 0;
+            if (candidate[candidate_index].eliminated != true)
             {
 
             }
