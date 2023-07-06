@@ -180,6 +180,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    
     return 0;
 }
 
