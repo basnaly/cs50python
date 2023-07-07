@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    flose(new_file);
+    fclose(new_file);
 
     free(filename);
 }
