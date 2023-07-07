@@ -21,6 +21,13 @@ int main(int argc, char *argv[])
 
     // Open new file under the name stored at the filename memory
     FILE *new_file = fopen(filename,"w");
+    if (new_file == NULL)
+    {
+        printf("Could not create file.\n");
+        return 1;
+    }
+
+    flose(new_file);
 
     free(filename);
 }
