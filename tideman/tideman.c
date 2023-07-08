@@ -140,7 +140,7 @@ void add_pairs(void)
         for (int j = i + 1; j < candidate_count; j++)
         {
             if (preferences[i] > max)
-            preferences[i] = max;
+            max = preferences[i];
             pair[j].winner = i;
             pair[j].loser = ;
         }
