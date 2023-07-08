@@ -103,7 +103,11 @@ bool vote(int rank, string name, int ranks[])
     // TODO
     for (int i = 0; i < MAX; i++)
     {
-        if ()
+        if (candidates[i] == NULL)
+        {
+            return false;
+        }
+        else if 
     }
     return false;
 }
