@@ -141,7 +141,7 @@ void add_pairs(void)
         {
             if (preferences[i] > max)
             preferences[i] = max;
-            pair[i].winner = max;
+            pair[j].winner = i;
             pair[j].loser = ;
         }
     }
