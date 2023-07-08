@@ -107,7 +107,10 @@ bool vote(int rank, string name, int ranks[])
         {
             return false;
         }
-        else if 
+        else if (strcmp(candidates[i], name) == 0)
+        {
+            
+        }
     }
     return false;
 }
