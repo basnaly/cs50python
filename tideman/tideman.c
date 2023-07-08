@@ -155,7 +155,38 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    
+    // Add your code here
+    int length = NUM_CITIES;
+
+    for (int i = 0; i < length; i++)
+    {
+        // Save temps[i] struct (city, temperature) to the max variable
+        avg_temp max = temps[i];
+
+        // Save temps[i] struct (city, temperature) to the current variable
+        avg_temp current = temps[i];
+
+        // Save index i
+        int index = i;
+
+        for (int j = i; j < length; j++)
+        {
+            if (temps[j].temp > max.temp || (temps[j].temp == max.temp && temps[j].city <= max.city))
+            {
+                // Overide the max struct if it matches the condition above
+                max = temps[j];
+
+                // Save the index of max struct
+                index = j;
+            }
+        }
+
+        // Swap max and current
+        // Save the max struct in index i
+        temps[i] = max;
+
+        // Save the current struct in the index of the max struct
+        temps[index] = current;
     return;
 }
 
