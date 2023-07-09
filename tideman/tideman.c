@@ -187,6 +187,7 @@ void sort_pairs(void)
 
         // Save the current struct in the index of the max struct
         temps[index] = current;
+    }
     return;
 }
 
