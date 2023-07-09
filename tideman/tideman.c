@@ -159,10 +159,10 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         // Save temps[i] struct (city, temperature) to the max variable
-        int max = temps[i];
+        int max = pairs[i];
 
         // Save temps[i] struct (city, temperature) to the current variable
-        int current = temps[i];
+        int current = pairs[i];
 
         // Save index i
         int pairs_index = i;
@@ -181,10 +181,10 @@ void sort_pairs(void)
 
         // Swap max and current
         // Save the max struct in index i
-        temps[i] = max;
+        pairs[i] = max;
 
         // Save the current struct in the index of the max struct
-        temps[index] = current;
+        pairs[index] = current;
     }
     return;
 }
