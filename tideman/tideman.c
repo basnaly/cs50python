@@ -169,7 +169,7 @@ void sort_pairs(void)
 
         for (int j = i; j < candidate_count; j++)
         {
-            if (pairs[j].winner > max || (pairs[j].temp == max.temp && temps[j].city <= max.city))
+            if (pairs[j].winner > max || (pairs[j].winner == max && pairs[j].winner <= max))
             {
                 // Overide the max struct if it matches the condition above
                 max = temps[j];
