@@ -155,13 +155,11 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    // Add your code here
-    int length = NUM_CITIES;
 
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         // Save temps[i] struct (city, temperature) to the max variable
-        avg_temp max = temps[i];
+        pairs_temp max = temps[i];
 
         // Save temps[i] struct (city, temperature) to the current variable
         avg_temp current = temps[i];
