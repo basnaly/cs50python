@@ -159,10 +159,10 @@ void sort_pairs(void)
     for (int i = 0; i < candidate_count; i++)
     {
         // Save temps[i] struct (city, temperature) to the max variable
-        pairs_winner max = temps[i];
+        pair.winner max = temps[i];
 
         // Save temps[i] struct (city, temperature) to the current variable
-        pairs_winner current = temps[i];
+        pair.winner current = temps[i];
 
         // Save index i
         int pairs_index = i;
