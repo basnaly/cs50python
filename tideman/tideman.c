@@ -172,7 +172,7 @@ void sort_pairs(void)
             if (pairs[j] > max || (pairs[j] == max && pairs[j].winner <= max))
             {
                 // Overide the max struct if it matches the condition above
-                max = temps[j];
+                max = pairs[j];
 
                 // Save the index of max struct
                 index = j;
