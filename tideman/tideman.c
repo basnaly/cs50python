@@ -156,36 +156,36 @@ void sort_pairs(void)
 {
     // TODO
 
-    for (int i = 0; i < pair_count; i++)
-    {
-        // Save temps[i] struct (city, temperature) to the max variable
-        int max = pairs[i];
+    // for (int i = 0; i < pair_count; i++)
+    // {
+    //     // Save temps[i] struct (city, temperature) to the max variable
+    //     int max = pairs[i];
 
-        // Save temps[i] struct (city, temperature) to the current variable
-        int current = pairs[i];
+    //     // Save temps[i] struct (city, temperature) to the current variable
+    //     int current = pairs[i];
 
-        // Save index i
-        int pairs_index = i;
+    //     // Save index i
+    //     int pairs_index = i;
 
-        for (int j = i; j < pair_count; j++)
-        {
-            if (pairs[j] > max || (pairs[j] == max && pairs[j].winner <= max))
-            {
-                // Overide the max struct if it matches the condition above
-                max = pairs[j];
+    //     for (int j = i; j < pair_count; j++)
+    //     {
+    //         if (pairs[j] > max || (pairs[j] == max && pairs[j].winner <= max))
+    //         {
+    //             // Overide the max struct if it matches the condition above
+    //             max = pairs[j];
 
-                // Save the index of max struct
-                index = j;
-            }
-        }
+    //             // Save the index of max struct
+    //             index = j;
+    //         }
+    //     }
 
-        // Swap max and current
-        // Save the max struct in index i
-        pairs[i] = max;
+    //     // Swap max and current
+    //     // Save the max struct in index i
+    //     pairs[i] = max;
 
-        // Save the current struct in the index of the max struct
-        pairs[index] = current;
-    }
+    //     // Save the current struct in the index of the max struct
+    //     pairs[index] = current;
+    // }
     return;
 }
 
