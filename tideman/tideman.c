@@ -175,7 +175,7 @@ void sort_pairs(void)
             int preferences_row_max = max.winner; // 0
             int preferences_column_max = max.loser; // 2
 
-
+                // 2 > 2
             if (preferences[preferences_row][preferences_column] > preferences[preferences_row_max][preferences_column_max])
             {
                 // Overide the max struct if it matches the condition above
