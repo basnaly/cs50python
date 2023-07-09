@@ -156,7 +156,7 @@ void sort_pairs(void)
 {
     // TODO
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         // Save temps[i] struct (city, temperature) to the max variable
         pair.winner max = temps[i];
@@ -167,7 +167,7 @@ void sort_pairs(void)
         // Save index i
         int pairs_index = i;
 
-        for (int j = i; j < candidate_count; j++)
+        for (int j = i; j < pair_count; j++)
         {
             if (pairs[j].winner > max || (pairs[j].winner == max && pairs[j].winner <= max))
             {
