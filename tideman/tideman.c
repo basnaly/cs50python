@@ -169,8 +169,9 @@ void sort_pairs(void)
 
         for (int j = i; j < pair_count; j++)
         {
-            int preferences_row = 
-            if (preferences[pairs[j].winner][pairs[j].loser] > max || (pairs[j] == max && pairs[j].winner <= max))
+            int preferences_row = pairs[j].winner;
+            int preferences_column = pairs[j].loser;
+            if (preferences[preferences_row][preferences_column] > max || (pairs[j] == max && pairs[j].winner <= max))
             // {
             //     // Overide the max struct if it matches the condition above
             //     max = pairs[j];
