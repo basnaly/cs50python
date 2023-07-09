@@ -169,14 +169,14 @@ void sort_pairs(void)
 
         for (int j = i; j < pair_count; j++)
         {
-            if (pairs[j] > max || (pairs[j] == max && pairs[j].winner <= max))
-            {
-                // Overide the max struct if it matches the condition above
-                max = pairs[j];
+            // if (pairs[j] > max || (pairs[j] == max && pairs[j].winner <= max))
+            // {
+            //     // Overide the max struct if it matches the condition above
+            //     max = pairs[j];
 
-                // Save the index of max struct
-                index = j;
-            }
+            //     // Save the index of max struct
+            //     index = j;
+            // }
         }
 
         // Swap max and current
