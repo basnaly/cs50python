@@ -182,7 +182,7 @@ void sort_pairs(void)
                 max = pairs[j];
 
                 // Save the index of max struct
-                index = j;
+                pairs_index = j;
             }
         }
 
