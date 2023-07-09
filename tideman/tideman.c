@@ -12,13 +12,13 @@ int preferences[MAX][MAX];
 bool locked[MAX][MAX];
 
 // Each pair has a winner, loser
+
 typedef struct
 {
     int winner;
     int loser;
 }
 pair;
-
 // Array of candidates
 string candidates[MAX];
 pair pairs[MAX * (MAX - 1) / 2];
@@ -159,10 +159,10 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         // Save temps[i] struct (city, temperature) to the max variable
-        int max = pairs[i];
+        pair max = pairs[i];
 
         // Save temps[i] struct (city, temperature) to the current variable
-        int current = pairs[i];
+        pair current = pairs[i];
 
         // Save index i
         int pairs_index = i;
