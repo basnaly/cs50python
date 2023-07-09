@@ -184,7 +184,7 @@ void sort_pairs(void)
         pairs[i] = max;
 
         // Save the current struct in the index of the max struct
-        pairs[index] = current;
+        pairs[pairs_index] = current;
     }
     return;
 }
