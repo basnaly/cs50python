@@ -60,7 +60,7 @@ int main(int argc, string argv[])
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            locked[i][j] = false;
+            locked[i][j ] = false;
         }
     }
 
