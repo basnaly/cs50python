@@ -101,6 +101,7 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
+c
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i] == NULL)
@@ -128,7 +129,6 @@ void record_preferences(int ranks[])
         }
     }
     return;
-
 }
 
 // Record pairs of candidates where one is preferred over the other
