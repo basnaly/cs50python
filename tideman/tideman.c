@@ -101,54 +101,21 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (candidates[i] == NULL)
-        {
-            return false;
-        }
-        else if (strcmp(candidates[i], name) == 0)
-        {
-            ranks[rank] = i;
-            return true;
-        }
-    }
-    return false;
+
 }
 
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
     // TODO
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = i + 1; j < candidate_count; j++)
-        {
-            preferences[ranks[i]][ranks[j]] += 1;
-        }
-    }
-    return;
+
 }
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
     // TODO
-    int pairs_index = 0;
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (preferences[i][j] > preferences[j][i])
-            {
-                pairs[pairs_index].winner = i;
-                pairs[pairs_index].loser = j;
-                pairs_index++;
-            }
-        }
-    }
-    pair_count = pairs_index;
-    return;
+
 }
 
 // Sort pairs in decreasing order by strength of victory
@@ -156,43 +123,6 @@ void sort_pairs(void)
 {
     // TODO
 
-    for (int i = 0; i < pair_count; i++)
-    {
-        // Save temps[i] struct (city, temperature) to the max variable
-        pair max = pairs[i];
-
-        // Save temps[i] struct (city, temperature) to the current variable
-        pair current = pairs[i];
-
-        // Save index i
-        int pairs_index = i;
-
-        for (int j = i; j < pair_count; j++)
-        {
-            int preferences_row = pairs[j].winner; // 1 next 1
-            int preferences_column = pairs[j].loser; // 0 next 2
-
-            int preferences_row_max = max.winner; // 0
-            int preferences_column_max = max.loser; // 2
-
-                // 2 > 2 next 3> 2
-            if (preferences[preferences_row][preferences_column] > preferences[preferences_row_max][preferences_column_max])
-            {
-                // Overide the max struct if it matches the condition above
-                max = pairs[j];
-
-                // Save the index of max struct
-                pairs_index = j;
-            }
-        }
-
-        // Swap max and current
-        // Save the max struct in index i
-        pairs[i] = max;
-
-        // Save the current struct in the index of the max struct
-        pairs[pairs_index] = current;
-    }
     return;
 }
 
