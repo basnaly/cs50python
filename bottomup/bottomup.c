@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
     BITMAPINFOHEADER bi;
     fread(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
 
+
     // Ensure infile is (likely) a 24-bit uncompressed BMP 4.0
     if (bf.bfType != 0x4d42 || bf.bfOffBits != 54 || bi.biSize != 40 ||
         bi.biBitCount != 24 || bi.biCompression != 0)
@@ -63,7 +64,7 @@ int main(int argc, char *argv[])
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // Iterate over infile's scanlines
-    for (int i = 0, biHeight = -1; i < biHeight; i++) // abs(bi.biHeight)
+    for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++) // --
     {
         // Iterate over pixels in scanline
         for (int j = 0; j < bi.biWidth; j++)
