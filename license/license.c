@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -31,7 +32,8 @@ int main(int argc, char *argv[])
 
         // Save plate number in array
 
-        plates[idx] = buffer;
+        plates[idx] = plate_number;
+        printf("%s\n", plate_number);
         idx++;
     }
 
