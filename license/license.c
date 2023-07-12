@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         buffer[6] = '\0';
 
         // Create an arr of chars for each plate in memory
-        char* plate_number = malloc(sizeof(char) * 7);
+        char *plate_number = malloc(sizeof(char) * 7);
         strcpy(plate_number, buffer);
 
         // Save plate number in array
