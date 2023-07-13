@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 
     // Read infile's BITMAPINFOHEADER
     BITMAPINFOHEADER bi;
+    bi.biHeight = -1 * biHeight;
     fread(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
 
     // Ensure infile is (likely) a 24-bit uncompressed BMP 4.0
@@ -52,7 +53,7 @@ int main(int argc, char *argv[])
         printf("Unsupported file format.\n");
         return 4;
     }
-    
+
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
