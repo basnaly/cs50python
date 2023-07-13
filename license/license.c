@@ -34,14 +34,13 @@ int main(int argc, char *argv[])
 
         // Save plate number in array
         plates[idx] = plate_number;
-
         idx++;
     }
 
     for (int i = 0; i < 8; i++)
     {
         printf("%s\n", plates[i]);
-
+        free(plates[idx]);
     }
 
     fclose(infile);
