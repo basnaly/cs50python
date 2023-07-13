@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         // copying buffer to plate_number
         strcpy(plate_number, buffer);
 
-        // Save plate number in array
+        // Save pointer to plate number in array
         plates[idx] = plate_number;
         idx++;
     }
