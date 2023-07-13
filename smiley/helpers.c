@@ -10,9 +10,9 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
         {
             if (image[height][width] == 0)
             {
-                pixel.rgbtBlue = 00001100;
-                pixel.rgbtGreen = 00001011;
-                pixel.rgbtRed = 01001001;
+                pixel.rgbtBlue = 230;
+                pixel.rgbtGreen = 100;
+                pixel.rgbtRed = 230;
             }
         }
     }
