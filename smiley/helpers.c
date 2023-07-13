@@ -11,9 +11,9 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
             pixel = image[i][j];
             if (pixel.rgbtBlue == 0 && pixel.rgbtGreen == 0 && pixel.rgbtRed == 0)
             {
-                pixel.rgbtBlue = 230;
-                pixel.rgbtGreen = 100;
-                pixel.rgbtRed = 230;
+                pixel.rgbtBlue = 200;
+                pixel.rgbtGreen = 120;
+                pixel.rgbtRed = 50;
             }
         }
     }
