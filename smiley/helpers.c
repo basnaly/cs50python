@@ -8,7 +8,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if (image[height][width] == 0)
+            if (image[i][j] == 0)
             {
                 pixel.rgbtBlue = 230;
                 pixel.rgbtGreen = 100;
