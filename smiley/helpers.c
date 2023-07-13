@@ -4,12 +4,13 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
 {
     // Change all black pixels to a color of your choosing
 
-    // Save memory of image[0][0] into pointer of pixel
+    // Save memory of image[0][0] into pixel variable (pointer)
     RGBTRIPLE *pixel = &image[0][0];
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            // Save memory of image[0][0] into pixel variable (pointer)
             pixel = &image[i][j];
             if ((*pixel).rgbtBlue == 0 && (*pixel).rgbtGreen == 0 && (*pixel).rgbtRed == 0)
             {
