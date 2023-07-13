@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < 8; i++)
     {
         printf("%s\n", plates[i]);
-        free(plates[idx]);
+        free(plates[i]);
     }
 
     fclose(infile);
