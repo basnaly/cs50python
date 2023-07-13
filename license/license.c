@@ -34,8 +34,9 @@ int main(int argc, char *argv[])
 
         // Save plate number in array
         plates[idx] = plate_number;
+        free(plate_number);
         idx++;
-        free();
+
     }
 
     for (int i = 0; i < 8; i++)
