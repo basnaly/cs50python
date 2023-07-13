@@ -41,7 +41,6 @@ int main(int argc, char *argv[])
 
     // Read infile's BITMAPINFOHEADER
     BITMAPINFOHEADER bi;
-    bi.biHeight = -1 * bi.biHeight;
     fread(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
 
     // Ensure infile is (likely) a 24-bit uncompressed BMP 4.0
@@ -58,6 +57,7 @@ int main(int argc, char *argv[])
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
     // Write outfile's BITMAPINFOHEADER
+    // bi.biHeight = -1 * bi.biHeight;
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
 
     // Determine padding for scanlines
