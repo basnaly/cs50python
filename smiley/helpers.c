@@ -10,7 +10,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            // Save memory of image[0][0] into pixel variable (pointer)
+            // Save memory of image[i][j] into pixel variable
             pixel = &image[i][j];
             if ((*pixel).rgbtBlue == 0 && (*pixel).rgbtGreen == 0 && (*pixel).rgbtRed == 0)
             {
