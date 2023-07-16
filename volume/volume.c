@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
     // Read the header from the input file
     FILE *input = fread(&buffer, sizeof(header), 1, input)
 
+    // Write the header to the input file
 
     // TODO: Read samples from input file and write updated data to output file
 
