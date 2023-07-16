@@ -4,7 +4,6 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
 {
     // Change all black pixels to a color of your choosing
 
-
     for (int i = 0; i < width; i++)
     {
         for (int j = 0; j < height; j++)
@@ -16,7 +15,6 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
                 (*pixel).rgbtGreen = 120;
                 (*pixel).rgbtRed = 250;
             }
-
         }
     }
     return 0;
