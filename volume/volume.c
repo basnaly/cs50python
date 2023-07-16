@@ -50,9 +50,7 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     while (fread(&buffer, 2, 1, input))
     {
-        printf("%i\n", buffer);
         buffer = factor * buffer;
-        printf("%i\n", buffer);
         fwrite(&buffer, 2, 1, output);
     }
 
