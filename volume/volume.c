@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
     // Create a “buffer” to store audio samples that will be read from the WAV file
     int16_t buffer;
 
+    // 
+
     // Read the header from the input file
     FILE *input = fread(&buffer, sizeof(header), 1, input)
 
