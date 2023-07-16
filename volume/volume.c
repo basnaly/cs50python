@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
 
     // Create an array of bytes to store the data from the WAV file header of input file
-    uint8_t header[n];
+    uint8_t header[HEADER_SIZE];
 
     BITMAPINFOHEADER bi;
     fread(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
