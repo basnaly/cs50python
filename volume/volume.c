@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     int16_t buffer;
 
     //
-    FILE *input = fread(&buffer, sizeof(header), 1, input)
+    FILE *input = fread(&buffer, sizeof(header), 2, input)
 
 
     // TODO: Read samples from input file and write updated data to output file
