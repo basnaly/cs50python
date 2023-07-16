@@ -36,12 +36,12 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
 
     // Create an array of bytes to store the data from the WAV file header of input file
-    uint8_t header[HEADER_SIZE];
+    uint8_t header[HEADER_SIZE] = malloc(sizeof(uint8_t) * );
 
     // Create a “buffer” to store audio samples that will be read from the WAV file
     int16_t buffer;
 
-    // 
+    //
 
     // Read the header from the input file
     FILE *input = fread(&buffer, sizeof(header), 1, input)
