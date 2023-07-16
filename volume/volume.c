@@ -48,10 +48,10 @@ int main(int argc, char *argv[])
     fwrite(&buffer, sizeof(header), 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
-    while (fread(&buffer, sizeof(header), 1, input))
+    while (fread(&buffer, 2, 1, input))
     {
         buffer = factor * buffer;
-        fwrite(&buffer, sizeof(header), 1, output);
+        fwrite(&buffer, 2, 1, output);
     }
 
     // Close files
