@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
     // Create a “buffer” to store audio samples that will be read read from the WAV file
     int16_t buffer;
 
+    //
     BITMAPINFOHEADER bi;
     fread(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
 
