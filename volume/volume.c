@@ -42,8 +42,7 @@ int main(int argc, char *argv[])
     int16_t buffer;
 
     //
-    BITMAPINFOHEADER buffer;
-    fread(&buffer, sizeof(BITMAPINFOHEADER), 1, inptr);
+    FILE *input = fread(&buffer, sizeof(header), )
 
 
     // TODO: Read samples from input file and write updated data to output file
