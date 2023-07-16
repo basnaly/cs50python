@@ -45,9 +45,10 @@ int main(int argc, char *argv[])
     FILE *input = fread(header, sizeof(header), 1, input)
 
     // Write the header to the input file
+     FILE *output = fwrite(header, sizeof(header), 1, output)
 
     // TODO: Read samples from input file and write updated data to output file
-    FILE *output = fwrite(header, sizeof(header), 1, output)
+    for (int i = 0; i < )
 
     // Close files
     fclose(input);
