@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     uint8_t header[HEADER_SIZE];
 
     // Create a buffer to store audio samples from the WAV file
-    uint16_t buffer;
+    int16_t buffer;
 
     // Read the header from the input file
     fread(&header, sizeof(uint8_t) * HEADER_SIZE, 1, input);
@@ -55,10 +55,8 @@ int main(int argc, char *argv[])
 
     while(fread(&buffer, sizeof(uint16_t), 1, input))
     {
-        // printf("%i\n", buffer);
-        uint16_t buffer1 = floor((float)buffer * factor);
-        // printf("%i\n", buffer);
-        fwrite(&buffer1, sizeof(uint16_t), 1, output);
+        buffer = buffer * factor;
+        fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
     // Close files
