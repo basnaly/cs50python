@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
 
     // Read the rest of the data from the input file
-    fread(&buffer, sizeof(unit16_t) * HEADER_SIZE, 1, input)
+    fread(&buffer, sizeof(unit16_t) * 2, 1, input)
 
     // Close files
     fclose(input);
