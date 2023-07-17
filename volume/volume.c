@@ -36,25 +36,25 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
 
     // Create an array of bytes to store the data from the WAV file of the input file.
-    unit8_t (*header)[HEADER_SIZE];
+    uint8_t header[HEADER_SIZE];
 
     // Create a buffer to store audio samples from the WAV file
-    unit16_t buffer;
+    uint16_t buffer;
 
     // Read the header from the input file
-    fread(&header, sizeof(unit8_t) * HEADER_SIZE, 1, input);
+    fread(&header, sizeof(uint8_t) * HEADER_SIZE, 1, input);
 
     // Write the header to the output file
-    fwrite(&header, sizeof(unit8_t) * HEADER_SIZE, 1, output);
+    fwrite(&header, sizeof(uint8_t) * HEADER_SIZE, 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
 
     // Read the rest of the data from the input file
 
-    while(fread(&buffer, sizeof(unit16_t), 1, input))
+    while(fread(&buffer, sizeof(uint16_t), 1, input))
     {
-        &buffer = &buffer * factor;
-        fwrite(&buffer, sizeof(unit18_t), 1, output);
+        buffer = buffer * factor;
+        fwrite(&buffer, sizeof(uint16_t), 1, output);
     }
 
 
