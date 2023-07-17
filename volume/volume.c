@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     while(fread(&buffer, sizeof(uint16_t), 1, input))
     {
         printf("%i\n", buffer);
-        buffer = buffer * factor;
+        buffer = (float)buffer * factor;
         printf("%i\n", buffer);
         fwrite(&buffer, sizeof(uint16_t), 1, output);
     }
