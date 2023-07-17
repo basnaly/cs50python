@@ -54,9 +54,9 @@ int main(int argc, char *argv[])
 
     while(fread(&buffer, sizeof(uint16_t), 1, input))
     {
-        printf("%i\n", buffer);
-        buffer = round((float)buffer * factor);
-        printf("%i\n", buffer);
+        // printf("%i\n", buffer);
+        buffer = round(buffer * factor);
+        // printf("%i\n", buffer);
         fwrite(&buffer, sizeof(uint16_t), 1, output);
     }
 
