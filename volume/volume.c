@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
 
-    // 
+    // Create an array of bytes to store the data from the WAV file header that you’ll read from the input file.
 
     // TODO: Read samples from input file and write updated data to output file
 
