@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 
     // Read the rest of the data from the input file
 
-    while(fread(&buffer, sizeof(uint16_t), 1, input))
+    while (fread(&buffer, sizeof(uint16_t), 1, input))
     {
         buffer = buffer * factor;
         fwrite(&buffer, sizeof(int16_t), 1, output);
