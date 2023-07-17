@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
     }
 
     float factor = atof(argv[3]);
+    printf("%f\n", factor);
 
     // TODO: Copy header from input file to output file
 
@@ -55,9 +56,9 @@ int main(int argc, char *argv[])
     while(fread(&buffer, sizeof(uint16_t), 1, input))
     {
         // printf("%i\n", buffer);
-        buffer = round(buffer * factor);
+        uint16_t buffer1 = buffer * factor;
         // printf("%i\n", buffer);
-        fwrite(&buffer, sizeof(uint16_t), 1, output);
+        fwrite(&buffer1, sizeof(uint16_t), 1, output);
     }
 
     // Close files
