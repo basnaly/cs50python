@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     unit16_t buffer;
 
     // Read header from the input file
-    
+    fread(&header, sizeof(unit8_t) * HEADER_SIZE, 1, input)
 
     // TODO: Read samples from input file and write updated data to output file
 
