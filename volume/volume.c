@@ -42,15 +42,22 @@ int main(int argc, char *argv[])
     unit16_t buffer;
 
     // Read the header from the input file
-    fread(&header, sizeof(unit8_t) * HEADER_SIZE, 1, input)
+    fread(&header, sizeof(unit8_t) * HEADER_SIZE, 1, input);
 
     // Write the header to the output file
-    fwrite(&header, sizeof(unit8_t) * HEADER_SIZE, 1, output)
+    fwrite(&header, sizeof(unit8_t) * HEADER_SIZE, 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
 
     // Read the rest of the data from the input file
-    fread(&buffer, sizeof(unit16_t), 1, input)
+
+    while(fread(&buffer, sizeof(unit16_t), 1, input))
+    {
+        &buffer = &buffer * factor;
+        fwrite(&buffer, sizeof(unit18_t), 1, output);
+    }
+
+
 
     // Close files
     fclose(input);
