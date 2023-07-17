@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
@@ -54,7 +55,7 @@ int main(int argc, char *argv[])
     while(fread(&buffer, sizeof(uint16_t), 1, input))
     {
         printf("%i\n", buffer);
-        buffer = (float)buffer * factor;
+        buffer = round((float)buffer * factor);
         printf("%i\n", buffer);
         fwrite(&buffer, sizeof(uint16_t), 1, output);
     }
