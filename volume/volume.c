@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
 
     // Create an array of bytes to store the data from the WAV file of the input file.
-    unit8_t header[HEADER_SIZE];
+    unit8_t (*header)[HEADER_SIZE];
 
     // Create a buffer to store audio samples from the WAV file
     unit16_t buffer;
