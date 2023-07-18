@@ -1,4 +1,5 @@
 #include "helpers.h"
+#include<math.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -14,7 +15,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < height; j++)
         {
             int *pixel = &image[i][j];
-            int average_pixel = (((*pixel).rgbtBlue + (*pixel).rgbtBlue + (*pixel).rgbtBlue) / 3)
+            int average_pixel = round(((*pixel).rgbtBlue + (*pixel).rrgbtGreen + (*pixel).rgbtRed) / 3)
         }
     }
     return;
