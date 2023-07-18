@@ -16,7 +16,10 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
             RGBTRIPLE *pixel = &image[i][j];
             int average_pixel = round(((*pixel).rgbtBlue + (*pixel).rrgbtGreen + (*pixel).rgbtRed) / 3);
-            
+
+            (*pixel).rgbtBlue = average_pixel;
+            (*pixel).rrgbtGreen = average_pixel;
+            (*pixel).rgbtRed = average_pixel;
         }
     }
     return;
