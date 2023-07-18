@@ -67,8 +67,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
         for (int = j; j < width; j++)
         {
-
+            reflect_right = pixel[j];
+            index i = j
         }
+        temps[i] = max;
+
+        // Save the current struct in the index of the max struct
+        temps[index] = current;
     }
     return;
 }
