@@ -13,7 +13,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < height; j++)
         {
-            
+            int *pixel = &image[i][j]
         }
     }
     return;
