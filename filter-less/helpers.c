@@ -4,9 +4,9 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < width; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < height; j++)
+        for (int j = 0; j < width; j++)
         {
             RGBTRIPLE *pixel = &image[i][j];
             int average_pixel = round((pixel->rgbtBlue + pixel->rgbtGreen + pixel->rgbtRed) / 3);
