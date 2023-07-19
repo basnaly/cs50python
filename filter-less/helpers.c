@@ -1,10 +1,10 @@
 #include "helpers.h"
-#include<math.h>
+#include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-int max();
-int min();
+int max(int i, int j);
+int min(int i, int j);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -107,7 +107,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
             pixel->rgbtRed = round((float)sum_red / count_pixel);
             pixel->rgbtBlue = round((float)sum_blue / count_pixel);
-            pixel->rgbtGreen = round((float)sum_blue / count_pixel);
+            pixel->rgbtGreen = round((float)sum_green / count_pixel);
         }
     }
     return;
