@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int max(int i, int j);
-int min(int i, int j);
+// int max(int i, int j);
+// int min(int i, int j);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
