@@ -87,10 +87,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             int count_pixel = 0;
 
-            int min, max;
+            // int min, max;
 
             for (int ii = max(0, i - 1); ii <= min(i + 1, height - 1); ii++)
             {
+                min = max = i;
                 for (int jj = max(0, j - 1); jj <= min(j + 1, width - 1); jj++)
                 {
                     sum_red += image[ii][jj].rgbtRed;
