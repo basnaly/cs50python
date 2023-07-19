@@ -88,7 +88,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int jj = max(0, j - 1); jj <= min(j + 1, width - 1); jj++)
                 {
-                    blur_red = pixel->rgbtRed
+                    blur_red = pixel[ii][jj]->rgbtRed
                 }
             }
         }
