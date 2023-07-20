@@ -29,7 +29,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     for (int j = 0; j < width; i++)
     {
         RGBTRIPLE *pixel = &image[i][j];
-        
+        int gray = round((float)(pixel->rgbtBlue + pixel->rgbtGreen + pixel->rgbtRed) / 3.0);
     }
    }
     return;
