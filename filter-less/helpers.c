@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int max(int i, int j)
+int max(i, j)
 {
     if (i < j)
     {
@@ -12,7 +12,7 @@ int max(int i, int j)
     return i;
 }
 
-int min(int i, int j)
+int min(i, j)
 {
     if (i < j)
     {
