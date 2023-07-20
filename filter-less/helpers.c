@@ -49,7 +49,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
             RGBTRIPLE *pixel = &image[i][j];
 
-            
+            int sepiaRed = 0;
+            int sepiaGreen = 0;
+            int sepiaBlue = 0;
         }
     }
     return;
