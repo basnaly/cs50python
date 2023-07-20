@@ -136,12 +136,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    blur_red += image[ii][jj].rgbtRed;
+                    blur_red += copy_image[ii][jj].rgbtRed;
                     count_pixels += 1;
 
-                    blur_green += image[ii][jj].rgbtGreen;
+                    blur_green += copy_image[ii][jj].rgbtGreen;
 
-                    blur_blue += image[ii][jj].rgbtBlue;
+                    blur_blue += copy_image[ii][jj].rgbtBlue;
                 }
             }
             pixel->rgbtRed = round((float) blur_red / (float) count_pixels);
