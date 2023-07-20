@@ -105,9 +105,29 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            RGBTRIPLE *pixel = &image[i][j]
+            RGBTRIPLE *pixel = &image[i][j];
 
-            for (int ii = 0; ii < max(0, ii - 1); ii++)
+            int blur_red = 0;
+            int blur_green = 0;
+            int blur_blue = 0;
+
+            int count_pixels = 0;
+
+            for (int ii = 0; ii < max(0, ii + 1); ii++)
+            {
+                for (int jj = 0; jj < max(0, jj + 1); jj++)
+                {
+                    blur_red += image[ii][jj];
+                    count_pixels += 1;
+
+                    blur_green += image[ii][jj];
+
+                    blur_blue += image[ii][jj];
+                }
+            }
+            pixel->rgbtRed = round((float)blur_red / (float) count_pixels);
+            pixel->rgbtGreen = round((float)blur_green / (float) count_pixels);
+            pixel->rgbtBlue = round((float)blur_blue / (float) count_pixels);
         }
     }
     return;
