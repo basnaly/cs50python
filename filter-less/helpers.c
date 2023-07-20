@@ -3,24 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// int max(i, j)
-// {
-//     if (i < j)
-//     {
-//         return j;
-//     }
-//     return i;
-// }
-
-// int min(i, j)
-// {
-//     if (i < j)
-//     {
-//         return i;
-//     }
-//     return j;
-// }
-
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -132,7 +114,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                 for (int jj = j - 1; jj <= j + 1; jj++)
                 {
-                    if (jj < 0 || ii > width - 1)
+                    if (jj < 0 || jj > width - 1)
                     {
                         continue;
                     }
