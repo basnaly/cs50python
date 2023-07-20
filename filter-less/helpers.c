@@ -107,9 +107,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             RGBTRIPLE *pixel = &image[i][j];
 
-            int blur_red = 0;
-            int blur_green = 0;
-            int blur_blue = 0;
+            RGBTRIPLE blur_red = 0;
+            RGBTRIPLE blur_green = 0;
+            RGBTRIPLE blur_blue = 0;
 
             int count_pixels = 0;
 
