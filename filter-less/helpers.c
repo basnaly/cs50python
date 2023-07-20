@@ -3,23 +3,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int max(i, j)
-{
-    if (i < j)
-    {
-        return j;
-    }
-    return i;
-}
+// int max(i, j)
+// {
+//     if (i < j)
+//     {
+//         return j;
+//     }
+//     return i;
+// }
 
-int min(i, j)
-{
-    if (i < j)
-    {
-        return i;
-    }
-    return j;
-}
+// int min(i, j)
+// {
+//     if (i < j)
+//     {
+//         return i;
+//     }
+//     return j;
+// }
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -113,10 +113,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             int count_pixels = 0;
 
-            for (int ii = max(i - 1, 0); ii <= min(height - 1, i + 1); ii++)
+            for (int ii = i - 1; ii <= i + 1; ii++)
             {
-                for (int jj = 0; jj < min(0, width - jj - 1); jj++)
+                if (ii < 0 || ii > height - 1)
                 {
+                    continue;
+                }
+
+                for (int jj = j - 1; jj <= j + 1; jj++)
+                {
+                    if (jj < 0 || ii > width - 1)
+                {
+                    continue;
+                }
                     blur_red += image[ii][jj].rgbtRed;
                     count_pixels += 1;
 
