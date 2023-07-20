@@ -1,7 +1,7 @@
 #include "helpers.h"
 #include <math.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 // int max(i, j)
 // {
@@ -24,19 +24,19 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-   for (int i = 0; i < height; i++)
-   {
-    for (int j = 0; j < width; j++)
+    for (int i = 0; i < height; i++)
     {
-        RGBTRIPLE *pixel = &image[i][j];
+        for (int j = 0; j < width; j++)
+        {
+            RGBTRIPLE *pixel = &image[i][j];
 
-        int average = round((float)(pixel->rgbtBlue + pixel->rgbtGreen + pixel->rgbtRed) / 3.0);
+            int average = round((float) (pixel->rgbtBlue + pixel->rgbtGreen + pixel->rgbtRed) / 3.0);
 
-        pixel->rgbtBlue = average;
-        pixel->rgbtGreen = average;
-        pixel->rgbtRed = average;
+            pixel->rgbtBlue = average;
+            pixel->rgbtGreen = average;
+            pixel->rgbtRed = average;
+        }
     }
-   }
     return;
 }
 
@@ -123,20 +123,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for (int jj = j - 1; jj <= j + 1; jj++)
                 {
                     if (jj < 0 || ii > width - 1)
-                {
-                    continue;
-                }
+                    {
+                        continue;
+                    }
                     blur_red += image[ii][jj].rgbtRed;
                     count_pixels += 1;
 
                     blur_green += image[ii][jj].rgbtGreen;
 
-                    blur_blue += image[ii][jj].rgbtBlue ;
+                    blur_blue += image[ii][jj].rgbtBlue;
                 }
             }
-            pixel->rgbtRed = round((float)blur_red / (float) count_pixels);
-            pixel->rgbtGreen = round((float)blur_green / (float) count_pixels);
-            pixel->rgbtBlue = round((float)blur_blue / (float) count_pixels);
+            pixel->rgbtRed = round((float) blur_red / (float) count_pixels);
+            pixel->rgbtGreen = round((float) blur_green / (float) count_pixels);
+            pixel->rgbtBlue = round((float) blur_blue / (float) count_pixels);
         }
     }
     return;
