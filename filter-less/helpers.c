@@ -87,10 +87,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             RGBTRIPLE *pixel = &image[i][j];
 
-            int right = image[i][j];
-            int left = image[i][length - j - 1];
+            RGBTRIPLE right = image[i][j];
+            RGBTRIPLE left = image[i][width - j - 1];
 
-            image[i][length - j - 1] = right;
+            image[i][width - j - 1] = right;
             image[i][j] = left;
         }
     }
