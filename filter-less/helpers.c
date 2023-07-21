@@ -112,12 +112,18 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (j == 0)
                     {
-                        ii = 0;
+                        jj = 0;
                     }
-                    else if (i = height - i)
+                    else if (j = height - i)
                     {
-                        ii = height - i;
+                        jj = height - i;
                     }
+
+                    blur_red += pixel->rgbtRed;
+                    count_pixels += 1;
+
+                    blur_green += pixel->rgbtGreen;
+                    blur_blue += pixel->rgbtBlue;
                 }
             }
         }
