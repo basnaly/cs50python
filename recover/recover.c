@@ -45,12 +45,6 @@ int main(int argc, char *argv[])
         fwrite(buffer, sizeof(1),BLOCK_SIZE, img);
     }
 
-
-
-
-     // data: pointer to bytes that will be written to file
-     // outprt: FILE * to write to
-
     // Stop at end of the file, fread returns number of items were read
 
         // Else ...
