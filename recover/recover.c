@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef uint8_t BYTE;
+typedef uint8_t BYTE; // unit_8 == BYTE
 
-uint8_t BLOCK_SIZE = 512;
+int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    buffer[BLOCK_SIZE];
+    uint8_t buffer[BLOCK_SIZE];
 
     // Repeat until end of card
     while (fread(&buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
