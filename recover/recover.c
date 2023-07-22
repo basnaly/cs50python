@@ -32,19 +32,27 @@ int main(int argc, char *argv[])
 
         // If first jpeg...
     // Look for beginning of jpeg and read 512 bytes into a buffer
-    buffer[0] == 0xff
-    buffer[1] == 0xd8
-    buffer[2] == 0xff
-    (buffer[3] & 0xf0) == 0xe0
+    if ( buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+    {
+        // Make a new jpeg file
+        sprintf(filename, "%03i.jpg", 2)
 
-    // Make a new jpeg file
-    sprintf(filename, "%03i.jpg", 2)
+        // Create a new jpeg file
+        FILE *img = fopen(filename, "w")
 
-    // Create a new jpeg file
-    FILE *img = fopen(filename, "w")
+        // Make a new jpeg file
+        sprintf(filename, "%03i.jpg", 2)
 
-     // Write  512 bytesof a new jpeg file
-     fwrite(data, 512, 1, outprt)
+        // Create a new jpeg file
+        FILE *img = fopen(filename, "w")
+
+        // Write  512 bytesof a new jpeg file
+        fwrite(data, 512, 1, outprt)
+    }
+
+
+
+
      // data: pointer to bytes that will be written to file
      // outprt: FILE * to write to
 
