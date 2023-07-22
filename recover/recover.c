@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int BLOCK_SIZE = 512
+
 int main(int argc, char *argv[])
 {
     // Ensure proper usage
