@@ -25,4 +25,6 @@ int main(int argc, char *argv[])
     // Open a new jpeg file
 
     // Write 512 bytes until a new jpeg is found
+
+    // Stop at end of the file
 }
