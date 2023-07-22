@@ -20,7 +20,9 @@ int main(int argc, char *argv[])
     }
 
     // Look for beginning of jpeg
-    else if()
+    buffer[0] == 0xff
+    buffer[1] == 0xd8
+    buffer[2] == 0xff
 
     // Open a new jpeg file
 
