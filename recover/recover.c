@@ -20,7 +20,11 @@ int main(int argc, char *argv[])
     }
 
     // Repeat until end of card
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+{
 
+
+}
     // Read 512 bytes into a buffer
 
     // If start of new jpeg
