@@ -12,4 +12,6 @@ int main(int argc, char *argv[])
 
     // Open file (card.raw)
     FILE *file = fopen(argv[1], "r");
+
+    
 }
