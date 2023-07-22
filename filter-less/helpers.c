@@ -83,62 +83,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            copy[i][j] = image[i][j];
-        }
-    }
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            RGBTRIPLE *pixel = &image[i][j];
-
-            int blur_red = 0;
-            int blur_green = 0;
-            int blur_blue = 0;
-
-            int count_pixels = 0;
-
-            for (int ii = i - 1; ii <= height - i + 1; ii++)
-            {
-                if (i == 0)
-                {
-                    ii = 0;
-                }
-                else if (i == height - i)
-                {
-                    ii = height - i;
-                }
-
-                for (int jj = j - 1 ; jj <= width - j + 1; jj++)
-                {
-                    if (j == 0)
-                    {
-                        jj = 0;
-                    }
-                    else if (j == height - i)
-                    {
-                        jj = height - i;
-                    }
-
-                    blur_red += pixel->rgbtRed;
-                    count_pixels += 1;
-
-                    blur_green += pixel->rgbtGreen;
-                    blur_blue += pixel->rgbtBlue;
-                }
-            }
-            copy_pixel->rgbtRed = round((float)blur_red / (float)count_pixels);
-            copy_pixel->rgbtGreen = round((float)blur_green / (float)count_pixels);
-            copy_pixel->rgbtBlue = round((float)blur_blue / (float)count_pixels);
-        }
-    }
+    
 
     return;
 }
