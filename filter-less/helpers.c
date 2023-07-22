@@ -127,7 +127,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
         copy->rgbtRed = round((float) blur_red / (float) count_pixels);
         copy->rgbtGreen = round((float) blur_green / (float) count_pixels);
-        copy->rgbtBlue = round((float) blur_blue / (float)c ount_pixels);
+        copy->rgbtBlue = round((float) blur_blue / (float) count_pixels);
     }
 
     return;
