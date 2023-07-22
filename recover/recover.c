@@ -48,4 +48,6 @@ int main(int argc, char *argv[])
         // Else ...
     // Else
         // If already found jpeg
+
+    // Close any remaining files
 }
