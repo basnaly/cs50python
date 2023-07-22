@@ -13,5 +13,11 @@ int main(int argc, char *argv[])
     // Open file (card.raw)
     FILE *file = fopen(argv[1], "r");
 
+    if (inptr == NULL)
+    {
+        printf("Could not open %s.\n", infile);
+        return 2;
+    }
+
     
 }
