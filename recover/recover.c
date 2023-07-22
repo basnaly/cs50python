@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    
+    buffer[BLOCK_SIZE];
 
     // Repeat until end of card
     while (fread(&buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
