@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
     // If start of new jpeg
 
-    // If first jpeg...
+        // If first jpeg...
     // Look for beginning of jpeg and read 512 bytes into a buffer
     buffer[0] == 0xff
     buffer[1] == 0xd8
@@ -45,5 +45,7 @@ int main(int argc, char *argv[])
 
     // Stop at end of the file, fread returns number of items were read
 
-    // Else ...
+        // Else ...
+    // Else
+        // If already found jpeg
 }
