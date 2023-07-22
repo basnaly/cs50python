@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
     buffer[2] == 0xff
     (buffer[3] & 0xf0) == 0xe0
 
-    // Open a new jpeg file
+    // Create a new jpeg file
+    sprintf(filename, "%03i.jpg", 2)
 
     // Write 512 bytes until a new jpeg is found
 
