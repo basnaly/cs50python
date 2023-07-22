@@ -19,5 +19,10 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+    // Look for beginning of jpeg
     else if()
+
+    // Open a new jpeg file
+
+    // Write 512 bytes until a new jpeg is found
 }
