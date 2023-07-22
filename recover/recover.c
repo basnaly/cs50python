@@ -26,11 +26,9 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
 
     // Repeat until end of card
+    // Read 512 bytes into a buffer
     while (fread(&buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-
-    // Read 512 bytes into a buffer
-
     // If start of new jpeg
 
         // If first jpeg...
