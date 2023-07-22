@@ -10,6 +10,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Open card 
+    // Open file (card.raw)
     FILE *file = fopen(argv[1], "r");
 }
