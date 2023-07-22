@@ -39,10 +39,10 @@ int main(int argc, char *argv[])
         sprintf(filename, "%03i.jpg", 2);
 
         // Create a new jpeg file
-        FILE *img = fopen(filename, "w")
+        FILE *img = fopen(filename, "w");
 
         // Write  512 bytesof a new jpeg file
-        fwrite(data, 512, 1, outprt)
+        fwrite(buffer, BLOCK_SIZE, 1, img);
     }
 
 
