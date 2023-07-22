@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     if (inptr == NULL)
     {
         printf("Could not open %s.\n", infile);
-        return 2;
+        return 1;
     }
 
     // Look for beginning of jpeg
