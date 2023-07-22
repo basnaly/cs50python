@@ -35,14 +35,8 @@ int main(int argc, char *argv[])
     // Look for beginning of jpeg and read 512 bytes into a buffer
     if ( buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
-        // Make a new jpeg file
+        // Make a name for jpeg file
         sprintf(filename, "%03i.jpg", 2);
-
-        // Create a new jpeg file
-        FILE *img = fopen(filename, "w")
-
-        // Make a new jpeg file
-        sprintf(filename, "%03i.jpg", 2)
 
         // Create a new jpeg file
         FILE *img = fopen(filename, "w")
