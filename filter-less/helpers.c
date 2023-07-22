@@ -117,7 +117,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         continue;
                     }
 
-                    blur_red += pixel->rgbtRed;
+                    blur_red += pixel[ii][jj]->rgbtRed;
                     count_pixels += 1;
 
                     blur_green += pixel->rgbtGreen;
