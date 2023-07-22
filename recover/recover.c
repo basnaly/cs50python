@@ -17,9 +17,9 @@ int main(int argc, char *argv[])
     // Open file (card.raw)
     FILE *file = fopen(argv[1], "r");
 
-    if (inptr == NULL)
+    if (file == NULL)
     {
-        printf("Could not open %s.\n", infile);
+        printf("Could not open %s.\n", argv[1]);
         return 1;
     }
 
