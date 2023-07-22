@@ -31,12 +31,10 @@ int main(int argc, char *argv[])
     // Create a new jpeg file
     FILE *img = fopen(filename, "w")
 
-     // Writing a new jpeg file
+     // Write  512 bytesof a new jpeg file
      fwrite(data, 512, 1, outprt)
      // data: pointer to bytes that will be written to file
      // outprt: FILE * to write to
-
-    // Write 512 bytes until a new jpeg is found
 
     // Stop at end of the file
 }
