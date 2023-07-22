@@ -19,7 +19,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Look for beginning of jpeg
+    // Repeat until end of card
+
+    // Look for beginning of jpeg and read 512 bytes into a buffer
     buffer[0] == 0xff
     buffer[1] == 0xd8
     buffer[2] == 0xff
