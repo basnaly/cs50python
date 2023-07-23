@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
     // Read 512 bytes into a buffer
     while (fread(&buffer, sizeof(BYTE), BLOCK_SIZE, file) == BLOCK_SIZE)
     {
+        int count_files = 0;
     // If start of new jpeg
 
         // If first jpeg...
@@ -42,10 +43,12 @@ int main(int argc, char *argv[])
         // Create a new jpeg file
         FILE *img = fopen(filename, "w");
 
+        count_files += 1;
+
         // Write  512 bytesof a new jpeg file
         fwrite(buffer, sizeof(BYTE),BLOCK_SIZE, img);
 
-        fclose(img);
+        fclose(img);1
     }
 
     // Stop at end of the file, fread returns number of items were read
