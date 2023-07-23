@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
     char filename[8];
 
-    FILE *img;
+    FILE *img = NULL;
 
     // Repeat until end of card
     // Read 512 bytes into a buffer
@@ -43,8 +43,12 @@ int main(int argc, char *argv[])
         // Look for beginning of jpeg and read 512 bytes into a buffer
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            // Make a name for jpeg file
+            if (img != NULL)
+            {
+                fclose(img);
+            }
 
+            // Make a name for jpeg file
             sprintf(filename, "%03i.jpg", count_files);
             printf("%s\n", filename);
 
@@ -54,7 +58,6 @@ int main(int argc, char *argv[])
             // Write  512 bytesof a new jpeg file
             fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
-            
         }
         else
         {
