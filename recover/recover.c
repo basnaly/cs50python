@@ -28,6 +28,8 @@ int main(int argc, char *argv[])
 
     int count_files = 0;
 
+    char filename[8];
+
     // Repeat until end of card
     // Read 512 bytes into a buffer
     while (fread(&buffer, sizeof(BYTE), BLOCK_SIZE, file) == BLOCK_SIZE)
@@ -40,7 +42,7 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             // Make a name for jpeg file
-            char filename[8];
+
             sprintf(filename, "%03i.jpg", count_files);
             printf("%s\n", filename);
 
@@ -51,6 +53,10 @@ int main(int argc, char *argv[])
             fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
             fclose(img);
+        }
+        else
+        {
+
         }
 
         // Stop at end of the file, fread returns number of items were read
