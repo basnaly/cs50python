@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
             FILE *img = fopen(filename, "w");
 
             // Write  512 bytesof a new jpeg file
-            fwrite(buffer, sizeof(BYTE), BLOCK_SIZE, img);
+            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
             fclose(img);
         }
