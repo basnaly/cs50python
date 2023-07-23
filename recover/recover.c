@@ -30,6 +30,8 @@ int main(int argc, char *argv[])
 
     char filename[8];
 
+    FILE *img;
+
     // Repeat until end of card
     // Read 512 bytes into a buffer
     while (fread(&buffer, sizeof(BYTE), BLOCK_SIZE, file) == BLOCK_SIZE)
@@ -47,16 +49,16 @@ int main(int argc, char *argv[])
             printf("%s\n", filename);
 
             // Create a new jpeg file
-            FILE *img = fopen(filename, "w");
+            img = fopen(filename, "w");
 
             // Write  512 bytesof a new jpeg file
             fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
-            fclose(img);
+            
         }
         else
         {
-
+             fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
         }
 
         // Stop at end of the file, fread returns number of items were read
