@@ -46,17 +46,11 @@ int main(int argc, char *argv[])
 
         fclose(img);
     }
-    
+
     // Stop at end of the file, fread returns number of items were read
-    if ()
-
-
-        // Else ...
-    // Else
-        // If already found jpeg
-
-    // Close any remaining files
+    if (feof(file))
+    {
+         fclose(argv[1]);
     }
-    fclose(argv[1]);
     return 0;
 }
