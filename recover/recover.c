@@ -43,8 +43,6 @@ int main(int argc, char *argv[])
         // Create a new jpeg file
         FILE *img = fopen(filename, "w");
 
-        count_files += 1;
-
         // Write  512 bytesof a new jpeg file
         fwrite(buffer, sizeof(BYTE),BLOCK_SIZE, img);
 
