@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
     {
         // Make a name for jpeg file
         sprintf(filename, "%03i.jpg", 4);
+        printf()
 
         // Create a new jpeg file
         FILE *img = fopen(filename, "w");
