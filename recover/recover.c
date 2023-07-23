@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef uint8_t BYTE; // unit_8 == BYTE
+typedef uint8_t BYTE;
 
 int BLOCK_SIZE = 512;
 
@@ -23,11 +23,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    uint8_t buffer[BLOCK_SIZE];
+    BYTE buffer[BLOCK_SIZE];
 
     // Repeat until end of card
     // Read 512 bytes into a buffer
-    while (fread(&buffer, sizeof(1), BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    while (fread(&buffer, sizeof(BYTE), BLOCK_SIZE, file) == BLOCK_SIZE)
     {
     // If start of new jpeg
 
