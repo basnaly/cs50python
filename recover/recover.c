@@ -52,6 +52,8 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", count_files);
             printf("%s\n", filename);
 
+            count_files++;
+
             // Create a new jpeg file
             img = fopen(filename, "w");
 
@@ -63,7 +65,7 @@ int main(int argc, char *argv[])
         {
              fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
         }
-        count_files++;
+
     }
     fclose(img);
 
