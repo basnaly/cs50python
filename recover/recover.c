@@ -26,11 +26,13 @@ int main(int argc, char *argv[])
 
     BYTE buffer[BLOCK_SIZE];
 
+    int count_files = 0;
+
     // Repeat until end of card
     // Read 512 bytes into a buffer
     while (fread(&buffer, sizeof(BYTE), BLOCK_SIZE, file) == BLOCK_SIZE)
     {
-        int count_files = 0;
+
     // If start of new jpeg
 
         // If first jpeg...
@@ -39,9 +41,8 @@ int main(int argc, char *argv[])
     {
         // Make a name for jpeg file
         char filename[4];
-        int i = 4;
-        sprintf(filename, "%03i.jpg", i);
-        printf(filename)
+        sprintf(filename, "%03i.jpg", count_files);
+        printf("filename)
 
         // Create a new jpeg file
         FILE *img = fopen(filename, "w");
