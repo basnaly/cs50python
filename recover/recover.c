@@ -46,8 +46,10 @@ int main(int argc, char *argv[])
 
         fclose(img);
     }
-
+    
     // Stop at end of the file, fread returns number of items were read
+    if ()
+
 
         // Else ...
     // Else
