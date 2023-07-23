@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     // Stop at end of the file, fread returns number of items were read
     if (feof(file))
     {
-         fclose(argv[1]);
+         fclose(filename);
     }
     return 0;
 }
