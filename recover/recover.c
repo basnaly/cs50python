@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
         }
 
     }
-    
+   
     if (feof(file))
         {
             fclose(file);
