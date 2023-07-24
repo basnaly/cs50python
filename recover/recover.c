@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
             fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
         }
     }
-
+    fclose(img);
     if (feof(file))
         {
             fclose(file);
