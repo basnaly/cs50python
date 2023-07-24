@@ -44,16 +44,16 @@ int main(int argc, char *argv[])
             img = fopen(filename, "w");
 
             // Write the buffer to the img file
-            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img)
+            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
         }
         else if (img != NULL)
         {
             // Write the buffer to the img file
-            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img)
+            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
         }
 
     }
-   
+
     if (feof(file))
         {
             fclose(file);
