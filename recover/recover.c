@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
             fopen(img, "w");
 
             // Write the data from buffer to the img file
-            fwrite(&buffer, )
+            fwrite(&buffer, sizeof(BLOCK_SIZE), BYTE, &img);
         }
         else
     }
