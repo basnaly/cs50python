@@ -23,9 +23,9 @@ int main(int argc, char *argv[])
     BYTE BLOCK_SIZE = 512;
     int buffer = 0;
 
-    while (fread(&buffer, sizeof(BLOCK_SIZE), BYTE, card_file) == BLOCK_SIZE)
+    while (fread(&buffer, sizeof(BLOCK_SIZE), BYTE, *card_file) == BLOCK_SIZE)
     {
-
+        
     }
 
 }
