@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     while (fread(&buffer, sizeof(BYTE), BLOCK_SIZE, card_file) == BLOCK_SIZE)
     {
         // Look for beggining of a jpeg
-        if (buffer[0] = 0xff && buffer[1] = 0xd8 && buffer[2] = 0xff && (buffer[3] & 0xf0) = 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             if (img != NULL)
             {
