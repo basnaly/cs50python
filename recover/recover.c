@@ -20,7 +20,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
+    BYTE BLOCK_SIZE = 512;
+    
     while (fread())
 
     while
