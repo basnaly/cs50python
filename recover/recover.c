@@ -12,9 +12,16 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    FILE *card_file = 
+
     if (argv[1] == NULL)
     {
-        printf("");
+        printf("Could not open %s file.\n", argv[1]);
         return 1;
     }
+
+
+    while (fread())
+
+    while
 }
