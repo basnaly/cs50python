@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     // Read the memory card in loop and save the data in buffer
     while (fread(&buffer, sizeof(BLOCK_SIZE), BYTE, *card_file) == BLOCK_SIZE)
     {
-
+        if (buffer[0] = )
     }
 
 }
