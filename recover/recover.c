@@ -22,7 +22,9 @@ int main(int argc, char *argv[])
 
     BYTE BLOCK_SIZE = 512;
 
-    while (fread(&card_file, sizeof(BLOCK_SIZE), BYTE, ))
+    while (fread(&card_file, sizeof(BLOCK_SIZE), BYTE, ) == BLOCK_SIZE)
+    {
+        
+    }
 
-    while
 }
