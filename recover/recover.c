@@ -12,5 +12,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    
+    if (argv[1] == NULL)
+    {
+        printf("");
+        return 1;
+    }
 }
