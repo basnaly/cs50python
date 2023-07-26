@@ -46,13 +46,17 @@ int main(int argc, char *argv[])
             img = fopen(img_name, "w");
 
             // Write the data from buffer to the img file
-            fwrite(&buffer, sizeof(BYTE), BYTE, &img);
+            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, &img);
         }
         else
         {
             // Write the data from buffer to the img file
-            fwrite(&buffer, sizeof(BYTE), , &img);
+            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, &img);
         }
     }
-    fclose(img)
+    fclose(img);
+    if (feof)
+    {
+        fclose(card_file);
+    }
 }
