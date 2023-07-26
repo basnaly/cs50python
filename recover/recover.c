@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
     }
 
     BYTE BLOCK_SIZE = 512;
-    
-    while (fread())
+
+    while (fread(&card_file, sizeof(BLOCK_SIZE), ))
 
     while
 }
