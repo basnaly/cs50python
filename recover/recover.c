@@ -50,8 +50,11 @@ int main(int argc, char *argv[])
         }
         else
         {
-            // Write the data from buffer to the img file
-            fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
+            if (img != NULL)
+            {
+                // Write the data from buffer to the img file
+                fwrite(&buffer, sizeof(BYTE), BLOCK_SIZE, img);
+            }
         }
     }
     fclose(img);
