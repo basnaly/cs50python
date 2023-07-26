@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     }
 
     int BLOCK_SIZE = 512;
-    BYTE buffer[BLOCK_SIZE];
+    BYTE buffer[BLOCK_SIZE]; // to store the same data of BLOCK_SIZE
     FILE *img;
     char img_name[8];
     int count_img = 0;
