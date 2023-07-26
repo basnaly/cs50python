@@ -33,7 +33,11 @@ int main(int argc, char *argv[])
         // Look for beggining of a jpeg
         if (buffer[0] = 0xff && buffer[1] = 0xd8 && buffer[2] = 0xff && (buffer[3] & 0xf0) = 0xe0)
         {
-            fclose(img);
+            if (img != NULL)
+            {
+                fclose(img);
+            }
+
             // Create the name of the new jpeg file
             sprintf(img_name, "%03i.jpg", count_img);
             count_img += 1;
