@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *card_file = 
+    FILE *card_file = fopen(argv[1], "r");
 
     if (argv[1] == NULL)
     {
