@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
 
     BYTE BLOCK_SIZE = 512;
     int buffer = 0;
-    FILE jpeg_file;
+    FILE jpg_file;
+    int count_jpg_files = 0;
 
     // Read the memory card in loop and save the data in buffer
     while (fread(&buffer, sizeof(BLOCK_SIZE), BYTE, *card_file) == BLOCK_SIZE)
@@ -32,7 +33,8 @@ int main(int argc, char *argv[])
         if (buffer[0] = 0xff && buffer[1] = 0xd8 && buffer[2] = 0xff && (buffer[3] & 0xf0) = 0xe0)
         {
             // Create the name of the new jpeg file
-            jpeg_file = 
+            sprintf(jpeg_file, "%03i.jpg", count_jpg_files);
+            count_jpg_files += 1;
         }
         else
     }
