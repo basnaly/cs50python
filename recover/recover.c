@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
     FILE *card_file = fopen(argv[1], "r");
 
-    if (argv[1] == NULL)
+    if (card_file == NULL)
     {
         printf("Could not open %s file.\n", argv[1]);
         return 1;
