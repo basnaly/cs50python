@@ -46,12 +46,12 @@ int main(int argc, char *argv[])
             img = fopen(img_name, "w");
 
             // Write the data from buffer to the img file
-            fwrite(&buffer, sizeof(BLOCK_SIZE), BYTE, &img);
+            fwrite(&buffer, sizeof(BYTE), BYTE, &img);
         }
         else
         {
             // Write the data from buffer to the img file
-            fwrite(&buffer, sizeof(BLOCK_SIZE), BYTE, &img);
+            fwrite(&buffer, sizeof(BYTE), , &img);
         }
     }
     fclose(img)
