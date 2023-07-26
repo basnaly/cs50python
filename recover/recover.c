@@ -39,10 +39,13 @@ int main(int argc, char *argv[])
             // Open the new img file
             fopen(img, "w");
 
+
+        }
+        else
+        {
             // Write the data from buffer to the img file
             fwrite(&buffer, sizeof(BLOCK_SIZE), BYTE, &img);
         }
-        else
     }
 
 }
