@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
     BYTE BLOCK_SIZE = 512;
     int buffer = 0;
     FILE *img;
+    char img_name[8];
     int count_img = 0;
 
     // Read the memory card in loop and save the data in buffer
@@ -34,11 +35,11 @@ int main(int argc, char *argv[])
         {
             fclose(img);
             // Create the name of the new jpeg file
-            sprintf(img, "%03i.jpg", count_img);
+            sprintf(img_name, "%03i.jpg", count_img);
             count_img += 1;
 
             // Open the new img file
-            fopen(img, "w");
+            fopen(img_name, "w");
 
             // Write the data from buffer to the img file
             fwrite(&buffer, sizeof(BLOCK_SIZE), BYTE, &img);
