@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
             count_img += 1;
 
             // Open the new img file
-            fopen(img_name, "w");
+            img = fopen(img_name, "w");
 
             // Write the data from buffer to the img file
             fwrite(&buffer, sizeof(BLOCK_SIZE), BYTE, &img);
