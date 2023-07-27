@@ -112,7 +112,7 @@ bool check(char* word)
 {
     for (int i = 0; i < SIZE_OF_ALPHABET; i++)
     {
-        root->children[i] = word[i]
+        root->children[i] = word[i];
         if (word[i] < NULL)
         {
             return true;
