@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    for (int i = 0, int length = strlen(word); i < length; i++)
+    for (int i = 0, length = strlen(word); i < length; i++)
     {
         int index = tolower(word[i]) - 'a';
         if (cursor->children[index] == NULL)
