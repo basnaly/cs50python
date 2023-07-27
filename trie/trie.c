@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    for (int i = 0; i < SIZE_OF_ALPHABET; i++)
+    for (int i = 0; n = strlen(word), i < n; i++)
     {
         root->children[i] = word[i];
         if (word[i] < NULL)
