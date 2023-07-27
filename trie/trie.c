@@ -119,6 +119,7 @@ bool check(char* word)
         {
             return false;
         }
+        else if (children[index] == )
     }
     return true;
 }
