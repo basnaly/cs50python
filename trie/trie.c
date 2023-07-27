@@ -119,7 +119,7 @@ bool check(char* word)
         {
             return false;
         }
-        else if (children[index] == node)
+        else 
         {
             cursor = cursor->children[index];
         }
