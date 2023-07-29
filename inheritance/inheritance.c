@@ -45,9 +45,7 @@ person *create_family(int generations)
     {
         return 1;
     }
-
-    p->alleles
-
+    
     // If there are still generations left to create
     if (generations > 1)
     {
