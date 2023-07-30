@@ -40,7 +40,7 @@ int main(void)
 person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
-   person *p = malloc(sizeof(person))
+   person *p = malloc(sizeof(person));
    if (p == NULL)
    {
         return 1;
@@ -50,7 +50,8 @@ person *create_family(int generations)
     if (generations > 1)
     {
         // Create two new parents for current person by recursively calling create_family
-        p->person = person0
+        p->person0 = create_family(GENERATIONS);
+        p->person1 = create_family(GENERATIONS);
 
         // TODO: Set parent pointers for current person
 
@@ -63,7 +64,7 @@ person *create_family(int generations)
     else
     {
         // TODO: Set parent pointers to NULL
-
+        p->
 
         // TODO: Randomly assign alleles
 
