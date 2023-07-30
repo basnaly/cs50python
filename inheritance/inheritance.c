@@ -50,15 +50,17 @@ person *create_family(int generations)
     if (generations > 1)
     {
         // Create two new parents for current person by recursively calling create_family
+        // define person0: it's type person * because create family returns person *
         person *person0 = create_family(GENERATIONS - 1);
         person *person1 = create_family(GENERATIONS - 1);
 
         // TODO: Set parent pointers for current person
+        // Person0 and person1 are parents of p
         p->parents[0] = person0;
         p->parents[1] = person1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        p->alleles[0] = person0->alleles[]
+        p->alleles[0] = person0->alleles[rand() % 2]
     }
 
     // If there are no generations left to create
