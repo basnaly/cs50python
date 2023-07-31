@@ -52,6 +52,9 @@ bool load(const char *dictionary)
     // copy word into node using strcpy
 
     // Hash word to obtain a hash value
+    // use the hash function
+    // Function takes a string and returns an index
+
 
     // Insert node into hash table at that location
 
