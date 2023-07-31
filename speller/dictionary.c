@@ -44,7 +44,7 @@ bool load(const char *dictionary)
 
     // Read strings from file one at a time
     // fscanf(file, "%s", word)
-    // fscanf will return EOF 
+    // fscanf will return EOF once it reaches end of the file
 
     // Create a new node for each word
 
