@@ -39,15 +39,19 @@ bool load(const char *dictionary)
     // TODO
 
     // Open dictionary file
+    // use fopen
+    // remember to check if return value is NULL
 
     // Read strings from file one at a time
+    // fscanf(file, "%s", word)
+    // fscanf will 
 
     // Create a new node for each word
 
     // Hash word to obtain a hash value
 
     // Insert node into hash table at that location
-    
+
     return false;
 }
 
