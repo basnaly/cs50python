@@ -47,6 +47,9 @@ bool load(const char *dictionary)
     // fscanf will return EOF once it reaches end of the file
 
     // Create a new node for each word
+    // use malloc
+    // remember to check if return value is NULL
+    // copy word into node using strcpy
 
     // Hash word to obtain a hash value
 
