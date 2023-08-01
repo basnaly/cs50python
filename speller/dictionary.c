@@ -86,7 +86,7 @@ bool load(const char *dictionary)
                 if (ptr->next == NULL)
                 {
                     // Append node
-                    ptr->next = n;
+                    ptr->next = dict_word;
                     break;
                 }
             }
