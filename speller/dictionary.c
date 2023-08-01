@@ -78,7 +78,7 @@ bool load(const char *dictionary)
             // recall that hash table is an array of linked lists
         else
         {
-            
+
         }
 
             // Be sure to set pointers in the correct order
@@ -90,10 +90,6 @@ bool load(const char *dictionary)
     {
         fclose(dict_file);
     }
-
-
-
-
 
     return false;
 }
