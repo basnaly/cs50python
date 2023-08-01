@@ -67,6 +67,7 @@ bool load(const char *dictionary)
 
         // Hash word to obtain a hash value
             // use the hash function
+            hash(const char *word)
             // Function takes a string and returns an index
 
         // Insert node into hash table at that location
