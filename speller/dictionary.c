@@ -45,7 +45,7 @@ bool load(const char *dictionary)
         if (dict_file == NULL)
         {
             return NULL;
-        }
+        } 
 
     // Read strings from file one at a time
         // fscanf(file, "%s", word)
