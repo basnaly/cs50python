@@ -74,12 +74,12 @@ bool load(const char *dictionary)
         if (table[index] == NULL)
         {
             table[index] = dict_word;
-            dict_word->next = NULL; 
+            dict_word->next = NULL;
         }
             // recall that hash table is an array of linked lists
         else
         {
-
+            node *linked_list = table[index];
         }
 
             // Be sure to set pointers in the correct order
