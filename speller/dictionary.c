@@ -38,7 +38,7 @@ bool load(const char *dictionary)
     // TODO
 
     // Open dictionary file
-    // use fopen
+    // use fopen sava in memory
     FILE *dict_file = fopen(dictionary, "r");
     // remember to check if return value is NULL
     if (dict_file == NULL)
@@ -49,7 +49,7 @@ bool load(const char *dictionary)
     // Read strings from file one at a time
     // fscanf(file, "%s", word)
     char word[LENGTH + 1];
-    
+
     while (fscanf(dict_file, "%s", word) == 1)
     {
         // Create a new node for each word
