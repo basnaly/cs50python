@@ -52,7 +52,10 @@ bool load(const char *dictionary)
         fscanf(dict_file, "%s", word)
 
         // fscanf will return EOF once it reaches end of the file
-        if ()
+        if (feof(dict_file))
+        {
+            fclose(dict_file);
+        }
 
     // Create a new node for each word
         // use malloc
