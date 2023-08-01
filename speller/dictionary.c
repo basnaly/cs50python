@@ -40,7 +40,7 @@ bool load(const char *dictionary)
 
     // Open dictionary file
         // use fopen
-        FILE *dict_file = fopen*dictionary, "r");
+        FILE *dict_file = fopen(*dictionary, "r");
         // remember to check if return value is NULL
         if (dict_file == NULL)
         {
@@ -49,7 +49,10 @@ bool load(const char *dictionary)
 
     // Read strings from file one at a time
         // fscanf(file, "%s", word)
+        fscanf(dict_file, "%s", word)
+
         // fscanf will return EOF once it reaches end of the file
+        if ()
 
     // Create a new node for each word
         // use malloc
