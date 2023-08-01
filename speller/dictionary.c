@@ -63,7 +63,7 @@ bool load(const char *dictionary)
 
         // copy word into node using strcpy
         strcpy(dict_word->word, word);
-        *dict_word->next = NULL;
+        dict_word->next = NULL;
     }
 
     // fscanf will return EOF once it reaches end of the file
