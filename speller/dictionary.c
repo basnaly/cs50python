@@ -49,7 +49,10 @@ bool load(const char *dictionary)
 
     // Read strings from file one at a time
         // fscanf(file, "%s", word)
-        fscanf(*dict_file, "%s", dict_file->word)
+        while(fscanf(*dict_file, "%s", dict_file->word))
+        {
+            
+        }
 
         // fscanf will return EOF once it reaches end of the file
         if (feof(dict_file))
