@@ -54,17 +54,17 @@ bool load(const char *dictionary)
     {
         // Create a new node for each word
         // use malloc
-        node *dict_word = malloc(sizeof(node));
+        node *new_node = malloc(sizeof(node));
 
         // remember to check if return value is NULL
-        if (dict_word == NULL)
+        if (new_node == NULL)
         {
             return NULL;
         }
 
         // copy word into node using strcpy
-        strcpy(dict_word->word, word);
-        dict_word->next = NULL;
+        strcpy(new_node->word, word);
+        new_node->next = NULL;
 
         // Hash word to obtain a hash value
             // use the hash function
@@ -74,8 +74,8 @@ bool load(const char *dictionary)
         // Insert node into hash table at that location
         if (table[index] == NULL)
         {
-            table[index] = dict_word;
-            dict_word->next = NULL;
+            table[index] = new_node;
+            new_node->next = NULL;
         }
             // recall that hash table is an array of linked lists
         else
@@ -87,7 +87,7 @@ bool load(const char *dictionary)
                 if (ptr->next == NULL)
                 {
                     // Append node
-                    ptr->next = dict_word;
+                    ptr->next = new_node;
                     break;
                 }
             }
