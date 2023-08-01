@@ -10,8 +10,7 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
@@ -39,29 +38,20 @@ bool load(const char *dictionary)
     // TODO
 
     // Open dictionary file
-        // use fopen
-        FILE *dict_file = fopen(dictionary, "r");
-        // remember to check if return value is NULL
-        if (dict_file == NULL)
-        {
-            return NULL;
-        }
+    // use fopen
+    FILE *dict_file = fopen(dictionary, "r");
+    // remember to check if return value is NULL
+    if (dict_file == NULL)
+    {
+        return NULL;
+    }
 
     // Read strings from file one at a time
-        // fscanf(file, "%s", word)
-        char word[LENGTH + 1];
-        while (fscanf(dict_file, "%s", word) == 1)
-        {
-            
-        }
-
-        // fscanf will return EOF once it reaches end of the file
-        if (feof(dict_file))
-        {
-            fclose(dict_file);
-        }
-
-    // Create a new node for each word
+    // fscanf(file, "%s", word)
+    char word[LENGTH + 1];
+    while (fscanf(dict_file, "%s", word) == 1)
+    {
+        // Create a new node for each word
         // use malloc
         node *dict_word = malloc(sizeof(node));
 
@@ -71,17 +61,24 @@ bool load(const char *dictionary)
             return NULL;
         }
 
-     // copy word into node using strcpy
+        // copy word into node using strcpy
         strcpy(dict_word->word, word);
         *dict_word->next = NULL;
+    }
+
+    // fscanf will return EOF once it reaches end of the file
+    if (feof(dict_file))
+    {
+        fclose(dict_file);
+    }
 
     // Hash word to obtain a hash value
-        // use the hash function
-        // Function takes a string and returns an index
+    // use the hash function
+    // Function takes a string and returns an index
 
     // Insert node into hash table at that location
-        // recall that hash table is an array of linked lists
-        // Be sure to set pointers in the correct order
+    // recall that hash table is an array of linked lists
+    // Be sure to set pointers in the correct order
 
     return false;
 }
