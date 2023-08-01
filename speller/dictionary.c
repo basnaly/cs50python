@@ -68,7 +68,12 @@ bool load(const char *dictionary)
         }
 
         // copy word into node using strcpy
-        
+        char str1[20] = "C programming";
+        char str2[20];
+
+  // copying str1 to str2
+        strcpy(str2, word);
+
 
     // Hash word to obtain a hash value
         // use the hash function
