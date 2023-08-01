@@ -49,7 +49,7 @@ bool load(const char *dictionary)
 
     // Read strings from file one at a time
         // fscanf(file, "%s", word)
-        fscanf(dict_file, "%s", word)
+        fscanf(dict_file, "%s", *word)
 
         // fscanf will return EOF once it reaches end of the file
         if (feof(dict_file))
@@ -59,10 +59,16 @@ bool load(const char *dictionary)
 
     // Create a new node for each word
         // use malloc
-        root = malloc(sizeof(node));
-        if 
+        word = malloc(sizeof(node));
+
         // remember to check if return value is NULL
+        if (word == NULL)
+        {
+            return NULL;
+        }
+
         // copy word into node using strcpy
+        
 
     // Hash word to obtain a hash value
         // use the hash function
