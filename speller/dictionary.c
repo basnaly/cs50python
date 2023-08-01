@@ -71,8 +71,15 @@ bool load(const char *dictionary)
             unsigned int index = hash(word);
 
         // Insert node into hash table at that location
-            table[N] = ;
+        if (table[index] == NULL)
+        {
+            table[index] = dict_word;
+        }
             // recall that hash table is an array of linked lists
+        else
+        {
+            
+        }
 
             // Be sure to set pointers in the correct order
 
