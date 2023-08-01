@@ -78,7 +78,7 @@ bool load(const char *dictionary)
             // recall that hash table is an array of linked lists
         else
         {
-            sllnode* insert(sllnode* head, VALUE val);
+            
         }
 
             // Be sure to set pointers in the correct order
