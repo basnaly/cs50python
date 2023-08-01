@@ -40,7 +40,12 @@ bool load(const char *dictionary)
 
     // Open dictionary file
         // use fopen
+        FILE *dic_file = fopen(argv[1], "r");
         // remember to check if return value is NULL
+        if (dic_file == NULL)
+        {
+            return NULL;
+        }
 
     // Read strings from file one at a time
         // fscanf(file, "%s", word)
