@@ -80,7 +80,7 @@ bool load(const char *dictionary)
         else
         {
             // put new node in the start of linked list
-            
+            new_node
 
             // put in the end of the linked list
             //node *linked_list = table[index];
