@@ -38,7 +38,7 @@ bool load(const char *dictionary)
     // TODO
 
     // Open dictionary file
-    // use fopen sava in memory
+    // use fopen to save the dictionary in memory
     FILE *dict_file = fopen(dictionary, "r");
     // remember to check if return value is NULL
     if (dict_file == NULL)
@@ -81,9 +81,8 @@ bool load(const char *dictionary)
         {
             // put new node in the start of linked list
             node *linked_list = table[index];
-            
-            table[index] = new_node;
             new_node->next = linked_list;
+            table[index] = new_node;
 
             // put in the end of the linked list
             //node *linked_list = table[index];
