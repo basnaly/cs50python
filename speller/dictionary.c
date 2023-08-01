@@ -69,7 +69,7 @@ bool load(const char *dictionary)
 
      // copy word into node using strcpy
         strcpy(dict_word->word, )word;
-
+        *dict_word->next = NULL;
 
     // Hash word to obtain a hash value
         // use the hash function
