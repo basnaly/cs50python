@@ -79,17 +79,21 @@ bool load(const char *dictionary)
             // recall that hash table is an array of linked lists
         else
         {
-            node *linked_list = table[index];
-            for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
-            {
-                // If at end of list
-                if (ptr->next == NULL)
-                {
-                    // Append node
-                    ptr->next = new_node;
-                    break;
-                }
-            }
+            // put new node in the start of linked list
+            
+
+            // put in the end of the linked list
+            //node *linked_list = table[index];
+            // for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
+            // {
+            //     // If at end of list
+            //     if (ptr->next == NULL)
+            //     {
+            //         // Append node
+            //         ptr->next = new_node;
+            //         break;
+            //     }
+            // }
         }
 
             // Be sure to set pointers in the correct order
