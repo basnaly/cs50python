@@ -75,7 +75,6 @@ bool load(const char *dictionary)
         if (table[index] == NULL)
         {
             table[index] = new_node;
-            new_node->next = NULL;
         }
             // recall that hash table is an array of linked lists
         else
