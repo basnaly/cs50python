@@ -80,6 +80,16 @@ bool load(const char *dictionary)
         else
         {
             node *linked_list = table[index];
+            for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
+            {
+                // If at end of list
+                if (ptr->next == NULL)
+                {
+                    // Append node
+                    ptr->next = n;
+                    break;
+                }
+            }
         }
 
             // Be sure to set pointers in the correct order
