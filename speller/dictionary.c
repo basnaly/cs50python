@@ -59,20 +59,16 @@ bool load(const char *dictionary)
 
     // Create a new node for each word
         // use malloc
-        word = malloc(sizeof(node));
+        dict_word = malloc(sizeof(node));
 
         // remember to check if return value is NULL
-        if (word == NULL)
+        if (dict_word == NULL)
         {
             return NULL;
         }
 
-        // copy word into node using strcpy
-        char str1[20] = "C programming";
-        char str2[20];
-
-  // copying str1 to str2
-        strcpy(str2, word);
+    // copy word into node using strcpy
+        strcpy(node.word, dict_word);
 
 
     // Hash word to obtain a hash value
