@@ -40,9 +40,9 @@ bool load(const char *dictionary)
 
     // Open dictionary file
         // use fopen
-        FILE *dic_file = fopen(argv[1], "r");
+        FILE *dict_file = fopen*dictionary, "r");
         // remember to check if return value is NULL
-        if (dic_file == NULL)
+        if (dict_file == NULL)
         {
             return NULL;
         }
