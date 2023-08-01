@@ -40,7 +40,7 @@ bool load(const char *dictionary)
 
     // Open dictionary file
         // use fopen
-        FILE *dict_file = fopen(*dictionary, "r");
+        FILE *dict_file = fopen(dictionary, "r");
         // remember to check if return value is NULL
         if (dict_file == NULL)
         {
@@ -49,9 +49,10 @@ bool load(const char *dictionary)
 
     // Read strings from file one at a time
         // fscanf(file, "%s", word)
-        while(fscanf(*dict_file, "%s", dict_file->word))
+        char *word;
+        while (fscanf(dict_file, "%s", word))
         {
-            
+
         }
 
         // fscanf will return EOF once it reaches end of the file
