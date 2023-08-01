@@ -82,6 +82,7 @@ bool load(const char *dictionary)
             // recall that hash table is an array of linked lists
         else
         {
+            // Be sure to set pointers in the correct order
             // put new node in the start of linked list
             node *linked_list = table[index];
             new_node->next = linked_list;
@@ -100,9 +101,6 @@ bool load(const char *dictionary)
             //     }
             // }
         }
-
-            // Be sure to set pointers in the correct order
-
     }
 
     // fscanf will return EOF once it reaches end of the file
