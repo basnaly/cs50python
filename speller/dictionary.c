@@ -84,7 +84,7 @@ bool load(const char *dictionary)
         {
             // Be sure to set pointers in the correct order
             // put new node in the start of linked list
-            node *linked_list = table[index];
+            // node *linked_list = table[index];
             new_node->next = table[index];
             table[index] = new_node;
 
