@@ -167,15 +167,11 @@ bool unload(void)
     {
         node *linked_list = table[index];
 
-        for (node *cursor = linked_list; cursor != NULL; cursor = cursor->next)
+        while (cursor != NULL)
             {
                 node *tmp = cursor;
-                // cursor = cursor->next;
+                cursor = cursor->next;
                 free(tmp);
-                if (cursor == NULL)
-                {
-                    return true;
-                }
             }
     }
     return false;
