@@ -26,13 +26,13 @@ bool check(const char *word)
 {
     // TODO
     // Hash word to obtain a hash value
+    hash(word)
 
 
     // Access linked list at that index in the hash table
     node *linked_list = table[index];
 
     // Traverse linked list, looking for the word using strcasecmp()
-
 
         for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
             {
@@ -80,6 +80,7 @@ bool load(const char *dictionary)
     // Open dictionary file
     // use fopen to save the dictionary in memory
     FILE *dict_file = fopen(dictionary, "r");
+    
     // remember to check if return value is NULL
     if (dict_file == NULL)
     {
