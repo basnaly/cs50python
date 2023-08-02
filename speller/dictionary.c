@@ -33,16 +33,16 @@ bool check(const char *word)
 
     // Traverse linked list, looking for the word using strcasecmp()
 
-        for (node cursor = linked_list; cursor != NULL; cursor = cursor->next)
-        
-            {
-                if (strcasecmp(word, ptr->word) == 0)
-            }
-
         // Start with cursor set to first item in linked list
-
         // Keep moving cursor until you get to NULL, checking each node for the word.
 
+        for (node cursor = linked_list; cursor != NULL; cursor = cursor->next)
+            {
+                if (strcasecmp(word, cursor->word) == 0)
+                {
+                    return true;
+                }
+            }
     return false;
 }
 
