@@ -170,7 +170,8 @@ bool unload(void)
         for (node *cursor = linked_list; cursor != NULL; cursor = cursor->next)
             {
                 node *tmp = cursor;
-                free(cursor);
+                cursor = cursor->next
+                free(tmp);
             }
     }
     return false;
