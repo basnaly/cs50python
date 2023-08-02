@@ -25,7 +25,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    // Hash word to obtain a hash value
+    // Hash word to obtain a index
     unsigned int index = hash(word);
 
     // Access linked list at that index in the hash table
