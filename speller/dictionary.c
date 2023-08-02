@@ -35,7 +35,7 @@ bool check(const char *word)
 
         for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
             {
-                
+                if (strcasecmp(word, s2) == 0)
             }
 
         // Start with cursor set to first item in linked list
