@@ -62,7 +62,7 @@ unsigned int hash(const char *word)
     {
         sum = toupper(word[0]) - 'A';
     }
-    if (word_length >= 2)
+    if (word_length >= 2 && word )
     {
         sum = sum + (toupper(word[1]) - 'A') * 26;
     }
