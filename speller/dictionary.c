@@ -117,18 +117,7 @@ bool load(const char *dictionary)
             new_node->next = table[index];
             table[index] = new_node;
 
-            // put in the end of the linked list
-            //node *linked_list = table[index];
-            // for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
-            // {
-            //     // If at end of list
-            //     if (ptr->next == NULL)
-            //     {
-            //         // Append node
-            //         ptr->next = new_node;
-            //         break;
-            //     }
-            // }
+
         }
     }
 
@@ -148,6 +137,17 @@ unsigned int size(void)
     // TODO
     int total_words = 0;
 
+    node *linked_list = table[N];
+    for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
+            {
+                // If at end of list
+                if (ptr->next == NULL)
+                {
+                    // Append node
+                    ptr->next = new_node;
+                    break;
+                }
+            }
 
     return 0;
 }
