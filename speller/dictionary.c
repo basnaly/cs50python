@@ -148,13 +148,8 @@ unsigned int size(void)
     // TODO
     int total_words = 0;
 
-    if (load(*dictionary))
-    {
-       
-    }
-    return total_words;
-    else
-        return 0;
+
+    return 0;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
