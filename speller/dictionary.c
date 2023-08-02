@@ -162,6 +162,16 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+
+    for (int index = 0; index < N; index++)
+    {
+        node *linked_list = table[index];
+
+        for (node *cursor = linked_list; cursor != NULL; cursor = cursor->next)
+            {
+                free(cursor);
+            }
+    }
     return false;
 }
 
