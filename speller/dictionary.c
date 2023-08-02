@@ -34,7 +34,7 @@ bool check(const char *word)
         // Start with cursor set to first item in linked list
 
         // Keep moving cursor until you get to NULL, checking each node for the word.
-        
+
     return false;
 }
 
@@ -150,10 +150,7 @@ unsigned int size(void)
 
     if (load(*dictionary))
     {
-        while(!feof(dictionary))
-        {
-
-        }
+       
     }
     return total_words;
     else
