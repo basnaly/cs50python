@@ -26,10 +26,17 @@ bool check(const char *word)
 {
     // TODO
     // Hash word to obtain a hash value
+    node *linked_list = table[index];
 
     // Access linked list at that index in the hash table
 
     // Traverse linked list, looking for the word using strcasecmp()
+
+
+        for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
+            {
+                total_words += 1;
+            }
 
         // Start with cursor set to first item in linked list
 
