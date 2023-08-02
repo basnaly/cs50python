@@ -165,7 +165,7 @@ bool unload(void)
 
     for (int index = 0; index < N; index++)
     {
-        node *linked_list = table[index];
+        node *cursor = table[index];
 
         while (cursor != NULL)
             {
@@ -174,7 +174,7 @@ bool unload(void)
                 free(tmp);
             }
     }
-    return false;
+    return true;
 }
 
 // int main()
