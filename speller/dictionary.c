@@ -29,8 +29,12 @@ bool check(const char *word)
 
     // Access linked list at that index in the hash table
 
-    // Traverse linked list, looking for the word
-    // strcasecmp
+    // Traverse linked list, looking for the word using strcasecmp()
+
+        // Start with cursor set to first item in linked list
+
+        // Keep moving cursor until you get to NULL, checking each node for the word.
+        
     return false;
 }
 
