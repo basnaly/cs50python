@@ -143,14 +143,9 @@ unsigned int size(void)
 
         for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
             {
-                if (ptr->next == NULL)
-                {
-                    // Append node
-                    ptr->next = new_node;
-                    break;
-                }
+                total_words += 1;
             }
-    |
+    }
 
     return 0;
 }
