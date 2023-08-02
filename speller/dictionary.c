@@ -16,7 +16,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = ('Z' - 'A') + ('Z' - 'A') * 26 + ('Z' - 'A') * 52 + 1;
 
 // Hash table
 node *table[N];
@@ -32,7 +32,26 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    // return toupper(word[0]) - 'A';
+
+    int sum = 0;
+
+    int word_length = strlen(word);
+
+    if (word_length >= 1)
+    {
+        sum = toupper(word[0]) - 'A';
+    }
+    if (word_length >= 2)
+    {
+        sum = sum + (toupper(word[1]) - 'A') * 26;
+    }
+    if (word_length >= 3)
+    {
+        sum = sum + (toupper(word[2]) - 'A') * 52;
+    }
+    printf("%i\n", sum);
+    return sum;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -107,6 +126,7 @@ bool load(const char *dictionary)
     if (feof(dict_file))
     {
         fclose(dict_file);
+        return true;
     }
 
     return false;
@@ -116,7 +136,18 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    int total_words = 0;
+    
+    if (load(*dictionary))
+    {
+        while(!feof(dictionary))
+        {
+
+        }
+    }
+    return total_words;
+    else
+        return 0;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
@@ -125,3 +156,9 @@ bool unload(void)
     // TODO
     return false;
 }
+
+// int main()
+// {
+//     char *word = "a";
+//     hash(word);
+// }
