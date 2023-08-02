@@ -70,7 +70,7 @@ unsigned int hash(const char *word)
     {
         sum = sum + (toupper(word[2]) - 'A') * 52;
     }
-    printf("%i\n", sum);
+    // printf("%i\n", sum);
     return sum;
 }
 
