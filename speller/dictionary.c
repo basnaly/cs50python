@@ -25,6 +25,12 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // Hash word to obtain a hash value
+
+    // Access linked list at that index in the hash table
+
+    // Traverse linked list, looking for the word
+    // strcasecmp
     return false;
 }
 
@@ -137,7 +143,7 @@ unsigned int size(void)
 {
     // TODO
     int total_words = 0;
-    
+
     if (load(*dictionary))
     {
         while(!feof(dictionary))
