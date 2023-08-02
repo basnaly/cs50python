@@ -35,7 +35,7 @@ bool check(const char *word)
 
         for (node *ptr = linked_list; ptr != NULL; ptr = ptr->next)
             {
-                total_words += 1;
+                
             }
 
         // Start with cursor set to first item in linked list
