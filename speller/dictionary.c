@@ -176,9 +176,3 @@ bool unload(void)
     }
     return true;
 }
-
-// int main()
-// {
-//     char *word = "a";
-//     hash(word);
-// }
