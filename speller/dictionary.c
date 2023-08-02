@@ -116,8 +116,6 @@ bool load(const char *dictionary)
             // node *linked_list = table[index];
             new_node->next = table[index];
             table[index] = new_node;
-
-
         }
     }
 
