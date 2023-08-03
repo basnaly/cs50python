@@ -59,20 +59,22 @@ bool load(const char *dictionary)
         while(fscanf(*dict_file, "%s", dict_word) == 1)
         {
 
+            // Create a new node for each word
+
+            // Hash word to obtain a hash value
+
+            // Insert node into hash table at that location
         }
 
 
         // fscan will return EOF once it reaches end of file
-        if (feof(*dict_file))
+        if (feof(dict_file))
         {
-            
+            fclose((dict_file)
+            return true;
         }
 
-    // Create a new node for each word
 
-    // Hash word to obtain a hash value
-
-    // Insert node into hash table at that location
 
 
     // node *n = malloc(sizeof(node));
