@@ -121,13 +121,14 @@ unsigned int size(void)
 {
     // TODO
 
-    sum total_words = 0;
+    int sum total_words = 0;
 
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
     {
         printf("%i\n", ptr->number);
     }
-    return 0;
+    
+    return sum;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
