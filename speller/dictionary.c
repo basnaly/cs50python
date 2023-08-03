@@ -56,7 +56,7 @@ bool load(const char *dictionary)
         char dict_word[LENGTH + 1];
 
         // fscanf(file, "%s", word)
-        while(fscanf(*dict_file, "%s", dict_word) == 1)
+        while(fscanf(dict_file, "%s", dict_word) == 1)
         {
 
             // Create a new node for each word
@@ -90,7 +90,6 @@ bool load(const char *dictionary)
                     table[index] = new_node;
                 }
         }
-
 
         // fscan will return EOF once it reaches end of file
         if (feof(dict_file))
