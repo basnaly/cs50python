@@ -48,8 +48,8 @@ bool load(const char *dictionary)
         }
 
     // Read string from file one at a time
-        // fscan(file, "%s", word)
-        while(fscan(dict_file, "%s", word) == 1)
+        // fscanf(file, "%s", word)
+        while(fscanf(dict_file, "%s", word) == 1)
         {
 
         }
