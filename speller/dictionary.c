@@ -125,8 +125,7 @@ unsigned int size(void)
 
     for (int index = 0; index < N; index++)
     {
-
-        for (node *ptr = node; ptr != NULL; ptr = ptr->next)
+        for (node *ptr = table[index]; ptr != NULL; ptr = ptr->next)
         {
             total_words += 1;
         }
