@@ -33,7 +33,7 @@ bool check(const char *word)
     // Access linked list at that index in the hash table;
     table[index] = new_node->word;
 
-    for (node *ptr = table[index]; ptr != NULL; ptr = ptr->next)
+    for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
             strcasecmp()
         }
