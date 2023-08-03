@@ -86,15 +86,9 @@ bool load(const char *dictionary)
         // fscan will return EOF once it reaches end of file
         if (feof(dict_file))
         {
-            fclose((dict_file)
+            fclose(dict_file);
             return true;
         }
-
-
-
-
-    // node *n = malloc(sizeof(node));
-    //
 
     return false;
 }
