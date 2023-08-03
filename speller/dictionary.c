@@ -27,6 +27,9 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // Return true if the word is in the dictionary, false otherwise
+    // Case insensitive
+    
     return false;
 }
 
