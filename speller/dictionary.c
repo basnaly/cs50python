@@ -75,9 +75,11 @@ bool load(const char *dictionary)
             // Hash word to obtain a hash value
                 // Use the hash function
                 // function takes a string and return the index
-            unsigned int 
+            unsigned int index = hash(*word)
 
             // Insert node into hash table at that location
+                // Recall that hash table is an array of linked lists
+                // Be shure to set pointers in the correct order
         }
 
 
