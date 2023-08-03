@@ -60,6 +60,9 @@ bool load(const char *dictionary)
         {
 
             // Create a new node for each word
+                // use malloc
+                // remember to check if return value is NULL
+                // Copy word into node using strcpy
 
             // Hash word to obtain a hash value
 
