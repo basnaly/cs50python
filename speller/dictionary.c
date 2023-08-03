@@ -35,7 +35,7 @@ bool check(const char *word)
 
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
-            strcasecmp(new_node->word, *word) ==
+            strcasecmp(cursor->word, *word) ==
         }
 
     // Return true if the word is in the dictionary, false otherwise
