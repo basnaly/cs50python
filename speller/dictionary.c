@@ -34,7 +34,22 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+
+    int sum = 0;
+
+    if (word[0] <= 1)
+    {
+        sum += toupper(word[0]) - 'A';
+    }
+    else if (word[0] <= 2)
+    {
+        sum += (toupper(word[0]) - 'A') * 26;
+    }
+    else if (word[0] <= 3)
+    {
+        sum += (toupper(word[0]) - 'A') * 52;
+    }
+    return sum;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
