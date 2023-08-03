@@ -87,7 +87,8 @@ bool load(const char *dictionary)
                 }
                 else
                 {
-                    table[index] = 
+                    table[index] = new_node_word;
+                    
                 }
         }
 
