@@ -123,12 +123,15 @@ unsigned int size(void)
 
     int sum total_words = 0;
 
-    for ()
+    for (int index = 0; index < N; index++)
+    {
 
         for (node *ptr = list; ptr != NULL; ptr = ptr->next)
         {
             printf("%i\n", ptr->number);
         }
+    }
+
 
     return sum;
 }
