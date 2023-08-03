@@ -64,6 +64,9 @@ bool load(const char *dictionary)
 
         // fscan will return EOF once it reaches end of file
         if (feof(*dict_file))
+        {
+            
+        }
 
     // Create a new node for each word
 
