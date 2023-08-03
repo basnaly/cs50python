@@ -73,6 +73,7 @@ bool load(const char *dictionary)
             new_node->next = NULL;
 
             // Hash word to obtain a hash value
+            
 
             // Insert node into hash table at that location
         }
