@@ -83,6 +83,10 @@ bool load(const char *dictionary)
                 // Be shure to set pointers in the correct order
                 if (new_node == NULL)
                 {
+                    word = new_node
+                }
+                else
+                {
                     
                 }
         }
