@@ -28,14 +28,14 @@ bool check(const char *word)
 {
     // TODO
     // Hash word to obtain a hash value
-    unsigned int index = hash(new_node->word);
+    unsigned int index = hash(word);
 
     // Access linked list at that index in the hash table;
-    table[index] = new_node->word;
+    // table[index] = new_node->word;
 
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
-            strcasecmp(new_node->word, *word) == 
+            strcasecmp(new_node->word, *word) ==
         }
 
     // Return true if the word is in the dictionary, false otherwise
