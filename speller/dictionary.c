@@ -31,7 +31,8 @@ bool check(const char *word)
     unsigned int index = hash(new_node->word);
 
     // Access linked list at that index in the hash table;
-    table[index] = 
+    table[index] = new_node->word;
+    
     // Return true if the word is in the dictionary, false otherwise
     // Case insensitive
 
