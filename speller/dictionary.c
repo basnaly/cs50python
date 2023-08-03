@@ -122,7 +122,11 @@ unsigned int size(void)
     // TODO
 
     sum total_words = 0;
-    
+
+    for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+    {
+        printf("%i\n", ptr->number);
+    }
     return 0;
 }
 
