@@ -4,6 +4,8 @@
         "random": "c",
         "limits": "c",
         "algorithm": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "stdbool.h": "c",
+        "stdio.h": "c"
     }
 }
