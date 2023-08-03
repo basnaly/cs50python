@@ -38,6 +38,8 @@ bool load(const char *dictionary)
 {
     // TODO
     // Open dictionary file
+        // Use fopen
+        FILE *dict = fopen()
 
     // Read string from file one at a time
 
