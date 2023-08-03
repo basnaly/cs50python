@@ -39,7 +39,9 @@ bool load(const char *dictionary)
     // TODO
     // Open dictionary file
         // Use fopen
-        FILE *dict = fopen()
+        FILE *dict = fopen(dictionary, "r");
+
+        // Remember to check if 
 
     // Read string from file one at a time
 
