@@ -120,6 +120,9 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+
+    sum total_words = 0;
+    
     return 0;
 }
 
