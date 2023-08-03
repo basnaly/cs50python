@@ -27,9 +27,14 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // Hash word to obtain a hash value
+    unsigned int index = hash(new_node->word);
+
+    // Access linked list at that index in the hash table;
+
     // Return true if the word is in the dictionary, false otherwise
     // Case insensitive
-    
+
     return false;
 }
 
