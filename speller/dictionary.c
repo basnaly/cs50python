@@ -87,7 +87,7 @@ bool load(const char *dictionary)
                 }
                 else
                 {
-                    
+                    table[index] = 
                 }
         }
 
