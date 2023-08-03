@@ -32,7 +32,12 @@ bool check(const char *word)
 
     // Access linked list at that index in the hash table;
     table[index] = new_node->word;
-    
+
+    for (node *ptr = table[index]; ptr != NULL; ptr = ptr->next)
+        {
+            strcasecmp()
+        }
+
     // Return true if the word is in the dictionary, false otherwise
     // Case insensitive
 
