@@ -69,9 +69,9 @@ bool load(const char *dictionary)
                 return NULL;
             }
                 // Copy word into node using strcpy
-            strcpy(n->word, "Hello);
-            n->next = NULL;
-            
+            strcpy(new_node->word, );
+            new_node->next = NULL;
+
             // Hash word to obtain a hash value
 
             // Insert node into hash table at that location
