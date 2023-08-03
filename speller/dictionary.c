@@ -37,15 +37,15 @@ unsigned int hash(const char *word)
 
     int sum = 0;
 
-    if (word[0] <= 1)
+    if (word[0] >= 1)
     {
         sum += toupper(word[0]) - 'A';
     }
-    else if (word[0] <= 2)
+    if (word[0] >= 2)
     {
         sum += (toupper(word[0]) - 'A') * 26;
     }
-    else if (word[0] <= 3)
+    if (word[0] >= 3)
     {
         sum += (toupper(word[0]) - 'A') * 52;
     }
