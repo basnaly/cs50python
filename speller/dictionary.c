@@ -48,6 +48,14 @@ bool load(const char *dictionary)
         }
 
     // Read string from file one at a time
+        // fscan(file, "%s", word)
+        while(fscan(dict_file, "%s", word) == 1)
+        {
+
+        }
+
+
+        // fscan will return EOF once it reaches end of file
 
     // Create a new node for each word
 
