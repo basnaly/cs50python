@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
+#include <cs50.h>
 
 #include "dictionary.h"
 
@@ -34,7 +35,7 @@ bool check(const char *word)
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
             // Return true if the word is in the dictionary, false otherwise
-            if (strcasecmp(cursor->word, *word) == 0)
+            if (strcasecmp(cursor->word, word) == 0)
             return true;
         }
     return false;
@@ -86,9 +87,9 @@ bool load(const char *dictionary)
         while(fscanf(dict_file, "%s", dict_word) == 1)
         {
 
-            // Create a new node for each word
-                // use malloc
-            node *new_node = malloc(sizeof(node))
+            // Create a new node for each word. Use malloc
+
+            node *new_node = malloc(sizeof(node));
 
                 // remember to check if return value is NULL
             if (new_node = NULL)
@@ -113,7 +114,7 @@ bool load(const char *dictionary)
                 }
                 else
                 {
-                    new_node->next = table[index]
+                    new_node->next = table[index];
                     table[index] = new_node;
                 }
         }
@@ -151,8 +152,11 @@ bool unload(void)
     // TODO
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
-            node *temp = cursor;
+            node *tmp = cursor;
             free(tmp);
+        }
+        if (cursor == NULL)
+        {
             return true;
         }
     return false;
