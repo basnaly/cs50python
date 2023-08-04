@@ -152,8 +152,7 @@ bool unload(void)
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
             node *temp = cursor;
-            // Return true if the word is in the dictionary, false otherwise
-            if (strcasecmp(cursor->word, *word) == 0)
+            free(tmp);
             return true;
         }
     return false;
