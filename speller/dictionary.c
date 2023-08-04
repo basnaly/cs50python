@@ -156,6 +156,4 @@ bool unload(void)
             return true;
         }
     return false;
-
-    return false;
 }
