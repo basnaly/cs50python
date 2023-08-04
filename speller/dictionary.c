@@ -157,10 +157,11 @@ bool unload(void)
         {
             node *tmp = cursor;
             free(tmp);
+            if (tmp == NULL)
+            {
+                return true;
+            }
         }
-    
     }
-
-
     return false;
 }
