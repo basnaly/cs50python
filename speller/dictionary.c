@@ -92,7 +92,7 @@ bool load(const char *dictionary)
             node *new_node = malloc(sizeof(node));
 
                 // remember to check if return value is NULL
-            if (new_node = NULL)
+            if (new_node == NULL)
             {
                 return NULL;
             }
@@ -150,7 +150,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
+    for (node *cursor = table[N]; cursor != NULL; cursor = cursor->next)
         {
             node *tmp = cursor;
             free(tmp);
