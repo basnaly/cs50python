@@ -48,18 +48,20 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    
+    int length = strlen(word);
 
     int sum = 0;
 
-    if (word[0] >= 1)
+    if (length >= 1 && isalpha(word[0]))
     {
         sum += toupper(word[0]) - 'A';
     }
-    if (word[0] >= 2)
+    if (length >= 2 && isalpha(word[1]))
     {
         sum += (toupper(word[0]) - 'A') * 26;
     }
-    if (word[0] >= 3)
+    if (length >= 3 && isalpha(word[1]))
     {
         sum += (toupper(word[0]) - 'A') * 52;
     }
