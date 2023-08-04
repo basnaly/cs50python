@@ -31,17 +31,12 @@ bool check(const char *word)
     unsigned int index = hash(word);
 
     // Access linked list at that index in the hash table;
-    // table[index] = new_node->word;
-
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
             // Return true if the word is in the dictionary, false otherwise
             if (strcasecmp(cursor->word, *word) == 0)
             return true;
         }
-
-
-
     return false;
 }
 
