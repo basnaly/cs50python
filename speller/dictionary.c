@@ -150,7 +150,9 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    for (node *cursor = table[N]; cursor != NULL; cursor = cursor->next)
+    unsigned int index = hash(N);
+
+    for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
         {
             node *tmp = cursor;
             free(tmp);
