@@ -1,7 +1,7 @@
 
 answer = input("Greeting: ")
 
-uppercase = answer.upper()
+uppercase = answer.upper().strip()
 if uppercase.startswith("HELLO"):
     print("$0")
 elif uppercase.startswith("H"):
