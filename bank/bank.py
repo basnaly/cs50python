@@ -1,5 +1,5 @@
 
-answer = input("Greeting: ");
+q = input("Greeting: ");
 print("answer")
 
 if answer == "Hello":
