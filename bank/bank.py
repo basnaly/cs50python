@@ -2,9 +2,9 @@
 answer = input("Greeting: ")
 
 uppercase = answer.upper()
-if answer.startswith("HELLO"):
+if uppercase.startswith("HELLO"):
     print("$0")
-elif answer.startswith("HE"):
+elif uppercase.startswith("HE"):
     print("$20")
 else:
     print("$100")
