@@ -7,4 +7,4 @@ if answer = "Hello":
 elif answer[0] = "H":
     print("20")
 else:
-    
+    printf("100")
