@@ -1,9 +1,10 @@
 
-answer = input("Greeting: ");
+answer = input("Greeting: ")
 
-if answer == "Hello":
+
+if answer.startswith("Hello"):
     print("$0")
-elif answer[0] == "H":
+elif answer.startswith("H"):
     print("$20")
 else:
     print("$100")
