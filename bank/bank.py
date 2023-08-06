@@ -1,6 +1,5 @@
 
-string = input("Greeting: ");
-print()
+answer = input("Greeting: ");
 
 if answer == "Hello":
     print("0")
