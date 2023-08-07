@@ -21,7 +21,8 @@ def main():
             print("Output: ")
             print(figlet.renderText(str))
         elif len(argv) == 2:
-            if (argv[1] == "-f" || argv[1] == "--font") && argv[2] == 
+            font_name = 
+            if (argv[1] == "-f" || argv[1] == "--font") && argv[2] ==
             pass
 
     except e:
