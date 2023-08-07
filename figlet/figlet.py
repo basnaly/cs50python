@@ -15,7 +15,7 @@ def main():
     try:
         if len(argv) == 1:
             index = random.randint(0, len(figlet.getFonts()))
-            figlet.getFonts()
+            figlet.getFonts()[index]
             print(f"Output:  {figlet.renderText(str)}")
         elif len(argv) == 3:
             pass
