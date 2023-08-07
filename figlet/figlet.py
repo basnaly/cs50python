@@ -27,9 +27,8 @@ def main():
                 print(figlet.renderText(str))
             else:
                 sys.exit("Error: ")
-
-    except e:
-        sys.exit(f"Error: {e}")
+    except:
+        sys.exit("Error: ")
 
 
 main()
