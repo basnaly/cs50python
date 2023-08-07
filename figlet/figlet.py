@@ -19,13 +19,15 @@ def main():
             figlet.setFont(font=random_font)
             print("Output: ")
             print(figlet.renderText(str))
+        elif len(argv) == 2:
+            sys.exit("Error: ")
         elif len(argv) == 3:
             if (argv[1] == "-f" or argv[1] == "--font") and argv[2].strip() in fonts:
                 figlet.setFont(font=argv[2].strip())
                 print("Output: ")
                 print(figlet.renderText(str))
             else:
-                sys.exit(f"Error: ")
+                sys.exit("Error: ")
     except e:
         sys.exit(f"Error: {e}")
 
