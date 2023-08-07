@@ -12,11 +12,15 @@ def main():
     str = input("Input: ")
 
     try:
-    if len(argv) == 0:
-        random.figlet.getFonts()
-        print("Output: " {figlet.renderText(str)})
-    elif len(argv) == 2:
-        # figlet.setFont(font=f) || figlet.setFont(font=font)
-        # print("Output: " figlet.renderText(s))
-    else:
+        if len(argv) == 0:
+            random.figlet.getFonts()
+            print(f"Output:  {figlet.renderText(str)}")
+        elif len(argv) == 2:
+            pass
+            # figlet.setFont(font=f) || figlet.setFont(font=font)
+            # print("Output: " figlet.renderText(s))
+    except:
         sys.exit("Error")
+
+
+main()
