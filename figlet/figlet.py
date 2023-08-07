@@ -16,7 +16,7 @@ def main():
             index = randint(0, len(figlet.getFonts()))
             random_font = figlet.getFonts()[index]
             figlet.setFont(font=random_font)
-            print(f"Output: ")
+            print("Output: ")
             print(figlet.renderText(str))
         elif len(argv) == 3:
             pass
