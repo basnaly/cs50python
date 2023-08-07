@@ -11,7 +11,6 @@ def main():
     fonts = figlet.getFonts()
 
     str = input("Input: ")
-    # print(figlet.getFonts())
 
     try:
         if len(argv) == 1:
