@@ -25,10 +25,10 @@ def main():
                 figlet.setFont(font=argv[2].strip)
                 print("Output: ")
                 print(figlet.renderText(str))
-            else e:
-                sys.exit(f"Error: {e}")
-    except:
-        sys.exit("Error: ")
+            else:
+                sys.exit(f"Error: ")
+    except e:
+        sys.exit(f"Error: {e}")
 
 
 main()
