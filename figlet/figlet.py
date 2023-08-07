@@ -25,7 +25,7 @@ def main():
                 print("Output: ")
                 print(figlet.renderText(str))
             else:
-                sys.exit("Error: ")
+                sys.exit("Invalid usage ")
     except e:
         sys.exit(f"Error: {e}")
 
