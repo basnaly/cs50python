@@ -20,9 +20,10 @@ def main():
             figlet.setFont(font=random_font)
             print("Output: ")
             print(figlet.renderText(str))
-        elif len(argv) == 3:
+        elif len(argv) == 2:
+            if (argv[1] == "-f" || argv[1] == "--font") && argv[2] == 
             pass
-            
+
     except e:
         sys.exit(f"Error: {e}")
 
