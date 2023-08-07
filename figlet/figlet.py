@@ -1,5 +1,6 @@
 from sys import argv
 from pyfiglet import Figlet
+from random import randint
 import sys
 
 
@@ -8,11 +9,11 @@ def main():
     figlet = Figlet()
 
     str = input("Input: ")
-    print(figlet.getFonts())
+    # print(figlet.getFonts())
 
     try:
         if len(argv) == 1:
-            index = random.randint(0, len(figlet.getFonts()))
+            index = randint(0, len(figlet.getFonts()))
             random_font = figlet.getFonts()[index]
             figlet.setFont(font=random_font)
             print(f"Output:  {figlet.renderText(str)}")
