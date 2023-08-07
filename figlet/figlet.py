@@ -12,3 +12,4 @@ elif len(argv) == 2:
     figlet.setFont(font=f) || figlet.setFont(font=font)
     print(figlet.renderText(s))
 else:
+    sys.exit
