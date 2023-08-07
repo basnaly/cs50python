@@ -7,10 +7,8 @@ def main():
 
     figlet = Figlet()
 
-    figlet.getFonts()
-
     str = input("Input: ")
-    # print(argv[1])
+    print(figlet.getFonts())
 
     try:
         if len(argv) == 1:
@@ -22,8 +20,8 @@ def main():
             pass
             # figlet.setFont(font=f) || figlet.setFont(font=font)
             # print("Output: " figlet.renderText(s))
-    except:
-        sys.exit("Error")
+    except e:
+        sys.exit(f"Error: {e}")
 
 
 main()
