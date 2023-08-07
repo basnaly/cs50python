@@ -8,13 +8,15 @@ def main():
 
     figlet = Figlet()
 
+    fonts = figlet.getFonts()
+
     str = input("Input: ")
     # print(figlet.getFonts())
 
     try:
         if len(argv) == 1:
-            index = randint(0, len(figlet.getFonts()))
-            random_font = figlet.getFonts()[index]
+            index = randint(0, len(fonts))
+            random_font = fonts[index]
             figlet.setFont(font=random_font)
             print("Output: ")
             print(figlet.renderText(str))
