@@ -2,11 +2,12 @@ from sys import argv
 from pyfiglet import Figlet
 import sys
 
-def main():
-    try:
 figlet = Figlet()
 
 figlet.getFonts()
+
+def main():
+    try:
 
 str = input("Input: ")
 
