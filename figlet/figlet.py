@@ -22,7 +22,7 @@ def main():
             print(figlet.renderText(str))
         elif len(argv) == 3:
             if (argv[1] == "-f" or argv[1] == "--font") and argv[2].strip() in fonts:
-                figlet.setFont(font=argv[2].strip)
+                figlet.setFont(font=argv[2].strip())
                 print("Output: ")
                 print(figlet.renderText(str))
             else:
