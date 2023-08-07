@@ -10,8 +10,9 @@ def main():
 
     fonts = figlet.getFonts()
 
-    if len(argv) != 1 and len(argv) != 3
-    and (argv[1] == "-f" or argv[1] == "--font") and argv[2].strip() in fonts:
+    if len(argv) != 1 and len(argv) != 3:
+        sys.exit("Invalid usage ")
+    if len(argv) == 3 and ((argv[1] != "-f" and argv[1] != "--font") or argv[2].strip() not in fonts):
         sys.exit("Invalid usage ")
 
     str = input("Input: ")
