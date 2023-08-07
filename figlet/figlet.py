@@ -5,19 +5,18 @@ import sys
 
 def main():
 
-figlet = Figlet()
+    figlet = Figlet()
 
-figlet.getFonts()
+    figlet.getFonts()
 
-str = input("Input: ")
+    str = input("Input: ")
 
-try:
-if len(argv) == 0:
-    random(figlet.getFonts())
-    print("Output: " figlet.renderText(str))
-elif len(argv) == 2:
-    # figlet.setFont(font=f) || figlet.setFont(font=font)
-    # print("Output: " figlet.renderText(s))
-else:
-    sys.exit("Error")
-    
+    try:
+    if len(argv) == 0:
+        random.figlet.getFonts()
+        print("Output: " {figlet.renderText(str)})
+    elif len(argv) == 2:
+        # figlet.setFont(font=f) || figlet.setFont(font=font)
+        # print("Output: " figlet.renderText(s))
+    else:
+        sys.exit("Error")
