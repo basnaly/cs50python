@@ -21,11 +21,11 @@ def main():
             print("Output: ")
             print(figlet.renderText(str))
         elif len(argv) == 3:
-            if (argv[1] == "-f" or argv[2] == "--font") and argv[3].strip() in fonts:
-                figlet.setFont(font=argv[3].strip)
+            if (argv[1] == "-f" or argv[1] == "--font") and argv[2].strip() in fonts:
+                figlet.setFont(font=argv[2].strip)
                 print("Output: ")
                 print(figlet.renderText(str))
-            else:
+            else e:
                 sys.exit("Error: ")
     except:
         sys.exit("Error: ")
