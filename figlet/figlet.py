@@ -10,9 +10,10 @@ def main():
 
     fonts = figlet.getFonts()
 
-    if len(argv) != 1 and len(argv) != 3:
+    if len(argv) != 1 and len(argv) != 3
+    and (argv[1] == "-f" or argv[1] == "--font") and argv[2].strip() in fonts:
         sys.exit("Invalid usage ")
-        
+
     str = input("Input: ")
 
     try:
@@ -23,12 +24,9 @@ def main():
             print("Output: ")
             print(figlet.renderText(str))
         elif len(argv) == 3:
-            if (argv[1] == "-f" or argv[1] == "--font") and argv[2].strip() in fonts:
-                figlet.setFont(font=argv[2].strip())
-                print("Output: ")
-                print(figlet.renderText(str))
-            else:
-                sys.exit("Invalid usage ")
+            figlet.setFont(font=argv[2].strip())
+            print("Output: ")
+            print(figlet.renderText(str))
     except e:
         sys.exit(f"Error: {e}")
 
