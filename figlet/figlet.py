@@ -6,7 +6,9 @@ figlet = Figlet()
 figlet.getFonts()
 
 if len(argv) == 0:
-    print()
+
+    print(figlet.renderText(s))
 elif len(argv) == 2:
-    print()
+    figlet.setFont(font=f) || figlet.setFont(font=font)
+    print(figlet.renderText(s))
 else:
