@@ -10,12 +10,13 @@ def main():
     figlet.getFonts()
 
     str = input("Input: ")
+    # print(argv[1])
 
     try:
-        if len(argv) == 0:
+        if len(argv) == 1:
             random.figlet.getFonts()
             print(f"Output:  {figlet.renderText(str)}")
-        elif len(argv) == 2:
+        elif len(argv) == 3:
             pass
             # figlet.setFont(font=f) || figlet.setFont(font=font)
             # print("Output: " figlet.renderText(s))
