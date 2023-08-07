@@ -22,8 +22,7 @@ def main():
             print(figlet.renderText(str))
         elif len(argv) == 3:
             pass
-            # figlet.setFont(font=f) || figlet.setFont(font=font)
-            # print("Output: " figlet.renderText(s))
+            
     except e:
         sys.exit(f"Error: {e}")
 
