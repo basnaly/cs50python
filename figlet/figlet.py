@@ -10,6 +10,9 @@ def main():
 
     fonts = figlet.getFonts()
 
+    if len(argv) != 1 and len(argv) != 3:
+        sys.exit("Invalid usage ")
+        
     str = input("Input: ")
 
     try:
