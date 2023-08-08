@@ -6,7 +6,7 @@ def main():
 
     figlet = Figlet()
 
-    if len(argv) == 1:
-        
+    if (argv[1] != "-f" or argv[1] !=["--font"]) and argv[2] != name :
+
 
     figlet.getFonts()
