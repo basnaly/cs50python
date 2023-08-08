@@ -6,6 +6,7 @@ def main():
 
     figlet = Figlet()
 
-    if len()
+    if len(argv) == 1:
+        
 
     figlet.getFonts()
