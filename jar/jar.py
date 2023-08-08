@@ -2,7 +2,7 @@
 
 class Jar:
     def __init__(self, capacity=12):
-        if self.size < 0:
+        if capacity < 0:
             raise ValueError
         self.capacity = capacity
         self.size = 0
@@ -32,5 +32,5 @@ def main():
     jar = Jar()
 
     print(str(jar.capacity))
-    
+
 main()
