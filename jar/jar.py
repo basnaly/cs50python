@@ -1,3 +1,8 @@
+def main():
+    jar = Jar()
+
+    print(str(jar.capacity))
+
 class Jar:
     def __init__(self, capacity=12):
         if size < 0:
@@ -25,3 +30,5 @@ class Jar:
     @property
     def size(self):
         return self.size
+
+main()
