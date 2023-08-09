@@ -45,7 +45,7 @@ def calculate(reader):
             new_cases[state] = []
 
         new_daily_case = cases - previous_cases[state]
-        new_cases[state].append()
+        new_cases[state].append(new_daily_case)
 
         if len(new_cases[state]) > 14:
             new_cases[state].pop(0)
