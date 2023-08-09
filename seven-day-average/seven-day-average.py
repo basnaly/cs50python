@@ -39,7 +39,7 @@ def calculate(reader):
     previous_cases = []
 
     for row in reader:
-        print(row)
+        print(row[(len-1):(14 * 50)])
 
     return new_cases
 
