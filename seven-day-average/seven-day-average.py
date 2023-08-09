@@ -38,15 +38,7 @@ def calculate(reader):
     new_cases = dict()
     previous_cases = []
 
-    all_cases = []
     for row in reader:
-        all_cases.append(row)
-
-    last = len(all_cases)
-    all_cases = all_cases[last - 14 * 50:]
-    # print(all_cases)
-
-    for row in all_cases:
         state = row["state"]
         cases = row["cases"]
         if (state not in new_cases):
