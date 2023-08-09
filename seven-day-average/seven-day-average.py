@@ -52,7 +52,8 @@ def calculate(reader):
         else:
             print(state, cases, previous_cases[state])
             print("----")
-            new_daily_case = cases - previous_cases[state]
+            new_daily_case = cases
+            # - previous_cases[state]
 
         new_cases[state].append(new_daily_case)
 
