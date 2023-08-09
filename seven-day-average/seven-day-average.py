@@ -47,7 +47,7 @@ def calculate(reader):
         new_cases[state].append(cases)
 
         if len(new_cases[state]) > 14:
-            new_cases[state].
+            new_cases[state].pop(0)
 
     # new_cases["state"] = all_cases[state]
     # new_cases["cases"] = all_cases[cases]
