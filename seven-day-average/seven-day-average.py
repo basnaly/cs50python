@@ -44,6 +44,9 @@ def calculate(reader):
         if (state not in new_cases):
             new_cases[state] = []
 
+        print(state, cases, previous_cases[state])
+        print("----")
+
         if (state not in previous_cases):
              new_daily_case = cases
 
