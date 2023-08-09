@@ -59,7 +59,7 @@ def calculate(reader):
 
         previous_cases[state] = cases
 
-    print(new_cases)
+    # print(new_cases)
 
     return new_cases
 
