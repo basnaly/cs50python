@@ -47,10 +47,13 @@ def calculate(reader):
     print(all_cases)
 
     for row in all_cases:
+        state = row["state"]
+        cases = row["cases"]
+
         
 
-    new_cases["state"] = all_cases[state]
-    new_cases["cases"] = all_cases[cases]
+    # new_cases["state"] = all_cases[state]
+    # new_cases["cases"] = all_cases[cases]
     print(new_cases)
 
     return new_cases
