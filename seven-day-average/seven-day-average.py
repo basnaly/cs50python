@@ -52,7 +52,7 @@ def calculate(reader):
         if (state not in new_cases):
             new_cases[state] = []
 
-        new_cases[state] = cases
+        new_cases[state].append(cases)
 
     # new_cases["state"] = all_cases[state]
     # new_cases["cases"] = all_cases[cases]
