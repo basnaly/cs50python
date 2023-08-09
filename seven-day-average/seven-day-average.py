@@ -48,8 +48,8 @@ def calculate(reader):
              new_daily_case = cases
 
         else:
-            print(state, cases, previous_cases[state])
-            print("----")
+            # print(state, cases, previous_cases[state])
+            # print("----")
             new_daily_case = int(cases) - int(previous_cases[state])
 
         new_cases[state].append(new_daily_case)
@@ -59,7 +59,7 @@ def calculate(reader):
 
         previous_cases[state] = cases
 
-    print(new_cases, previous_cases)
+    print(new_cases)
 
     return new_cases
 
@@ -67,7 +67,9 @@ def calculate(reader):
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
 
-    
+    week_data = new_cases[state].slice(7:)
+
+    print(week_data)
 
 
 main()
