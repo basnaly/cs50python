@@ -76,6 +76,6 @@ def comparative_averages(new_cases, states):
     try:
         numerator / denominator
     except ZeroDivisionError:
-
+        
 
 main()
