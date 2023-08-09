@@ -46,8 +46,8 @@ def calculate(reader):
     all_cases = all_cases[last - 14 * 50:]
     print(all_cases)
 
-    new_cases["state"] = all_cases.state
-    new_cases["cases"] = all_cases.cases
+    new_cases["state"] = all_cases[1]
+    new_cases["cases"] = all_cases[3]
     print(new_cases)
 
     return new_cases
