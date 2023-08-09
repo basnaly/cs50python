@@ -50,7 +50,7 @@ def calculate(reader):
         state = row["state"]
         cases = row["cases"]
 
-        
+        new_cases[state] = 
 
     # new_cases["state"] = all_cases[state]
     # new_cases["cases"] = all_cases[cases]
