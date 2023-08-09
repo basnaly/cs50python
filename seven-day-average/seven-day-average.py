@@ -36,10 +36,11 @@ def main():
 def calculate(reader):
 
     new_cases = []
+    new_cases.append(reader)
     previous_cases = []
 
-    for row in reader:
-        print(row[len(reader):(14 * 50)])
+    for row in new_cases:
+        print(row[len(new_cases):(14 * 50)])
 
     return new_cases
 
