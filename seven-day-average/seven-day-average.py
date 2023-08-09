@@ -68,6 +68,7 @@ def calculate(reader):
 def comparative_averages(new_cases, states):
 
     week_data = new_cases[states[0]][7:]
+    numerator = 
 
     print(week_data)
 
