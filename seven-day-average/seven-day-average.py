@@ -49,8 +49,8 @@ def calculate(reader):
         if len(new_cases[state]) > 14:
             new_cases[state].pop(0)
 
-        previous_cases[state] =
-        
+        previous_cases[state] = cases
+
     print(new_cases)
 
     return new_cases
