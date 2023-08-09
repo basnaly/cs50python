@@ -39,9 +39,14 @@ def calculate(reader):
     # new_cases.append(reader)
     previous_cases = []
 
-    last = reader[-1]
+    all_cases = []
     for row in reader:
-        print(row[last:700])
+        all_cases.append(row)
+
+    last = len(all_cases)
+    # for row in all_cases:
+
+    print(all_cases[last:701])
 
     return new_cases
 
