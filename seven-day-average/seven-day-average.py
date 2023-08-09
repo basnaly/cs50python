@@ -49,7 +49,8 @@ def calculate(reader):
     for row in all_cases:
         state = row["state"]
         cases = row["cases"]
-        if ()
+        if (state not in new_cases):
+            new_cases[state] = []
 
         new_cases[state] = cases
 
