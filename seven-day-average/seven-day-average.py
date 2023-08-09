@@ -36,7 +36,6 @@ def main():
 def calculate(reader):
 
     new_cases = dict()
-    previous_cases = []
 
     for row in reader:
         state = row["state"]
@@ -44,7 +43,7 @@ def calculate(reader):
         if (state not in new_cases):
             new_cases[state] = []
 
-        new_cases[state].append(cases)
+        new_cases[state].append(cases - 1)
 
         if len(new_cases[state]) > 14:
             new_cases[state].pop(0)
