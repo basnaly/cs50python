@@ -14,19 +14,6 @@ menu = {
 
 def main():
 
-    total = 0
-    while True:
-        try:
-            item = input("Item: ")
-            array = item.strip().lower().split(" ")
-            array = [x.capitalize() for x in array]
-            transformed = " ".join(array)
-            if transformed not in menu:
-                continue
-            else:
-                total += menu[transformed]
-                print("Total: $%.2f" % total)
-        except EOFError:
-            break
+    
 
 main()
