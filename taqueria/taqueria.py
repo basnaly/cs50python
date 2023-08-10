@@ -20,7 +20,7 @@ def main():
             item = input("Item: ")
             array = item.strip().lower().split(" ")
             array = [x.capitalize() for x in array]
-            transformed = array.join(" ")
+            transformed = " ".join(array)
             if transformed not in menu:
                 continue
             else:
