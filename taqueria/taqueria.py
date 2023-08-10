@@ -19,10 +19,10 @@ def main():
         try:
             item = input("Item: ")
             transformed = item.lower().capitalize().strip()
-            if item not in menu:
+            if transformed not in menu:
                 continue
             else:
-                total += menu[item]
+                total += menu[transformed]
                 print(f"Total: {total}")
         except EOFError:
             break
