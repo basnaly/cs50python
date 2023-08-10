@@ -17,9 +17,12 @@ def main():
     while true:
         try:
             item = input("Item: \n")
-        except EOFError:
-            item not in menu[]
+            if item not in menu[item]
             item = input("Item: \n")
+
+        except EOFError:
+            break;
+
 
 
 
