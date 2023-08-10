@@ -14,16 +14,16 @@ menu = {
 
 def main():
 
-    while true:
+    total = 0
+    while True:
         try:
-            item = input("Item: \n")
+            item = input("Item: ")
             if item not in menu:
-                item = input("Item: \n")
-
+                continue
+            else:
+                total += menu[item]
+                print(f"Total: {total}")
         except EOFError:
-            break;
-
-
-
+            break
 
 main()
