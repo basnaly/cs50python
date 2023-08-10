@@ -25,7 +25,7 @@ def main():
                 continue
             else:
                 total += menu[transformed]
-                print(f"Total: ${total}")
+                print("Total: $%.2f" % total)
         except EOFError:
             break
 
