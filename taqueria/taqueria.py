@@ -17,8 +17,8 @@ def main():
     while true:
         try:
             item = input("Item: \n")
-            if item not in menu[item]
-            item = input("Item: \n")
+            if item not in menu:
+                item = input("Item: \n")
 
         except EOFError:
             break;
