@@ -14,11 +14,12 @@ menu = {
 
 def main():
 
-    try:
-        item = input("Item: \n")
-    except EOFError:
-        item not in menu[]
-        item = input("Item: \n")
+    while true:
+        try:
+            item = input("Item: \n")
+        except EOFError:
+            item not in menu[]
+            item = input("Item: \n")
 
 
 
