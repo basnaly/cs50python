@@ -21,6 +21,7 @@ def main():
     try:
         item = input()
     except EOFError:
+        item not in menu 
 
 
 
