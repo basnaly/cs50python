@@ -18,7 +18,7 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            transformed = item.lower().split().capitalize().strip()
+            transformed = item.split().lower().capitalize().strip()
             if transformed not in menu:
                 continue
             else:
