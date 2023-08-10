@@ -17,7 +17,7 @@ def main():
     try:
         item = input("Item: \n")
     except EOFError:
-        item not in menu.dish
+        item not in menu[]
         item = input("Item: \n")
 
 
