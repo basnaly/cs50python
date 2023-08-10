@@ -18,7 +18,9 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            transformed = item.strip().lower().split(", ").join(" ").capitalize()
+            array = item.strip().lower().split(" ")
+            array = [x.capitalize() for x in array]
+            transformed = array.join(" ")
             if transformed not in menu:
                 continue
             else:
