@@ -21,11 +21,8 @@ def main():
             array = item.strip().lower().split(" ")
             array = [x.capitalize() for x in array]
             transformed = " ".join(array)
-            if transformed not in menu:
-                continue
-            else:
-                total += menu[transformed]
-                print(f"Total: {total}")
+            total += menu[transformed]
+            print(f"Total: {total}")
         except EOFError:
             break
 
