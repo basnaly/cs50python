@@ -19,10 +19,10 @@ menu =
 def main():
 
     try:
-        item = input()
+        item = input("Item ")
     except EOFError:
-        item not in menu 
-
+        item not in menu.dish
+        item = input("Item ")
 
 
 
