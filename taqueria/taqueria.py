@@ -18,6 +18,7 @@ def main():
     while True:
         try:
             item = input("Item: ")
+            transformed = item.lower().capitalize().strip()
             if item not in menu:
                 continue
             else:
