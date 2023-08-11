@@ -17,6 +17,7 @@ def main():
     sum = 0
     try:
         item = input("Item: ")
+        if 
     except EOFError:
         break
 
