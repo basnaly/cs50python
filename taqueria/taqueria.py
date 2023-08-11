@@ -21,7 +21,7 @@ def main():
             array = item.strip().lower().title().split(" ")
             transformed = " ".join(array)
             sum += menu[transformed]
-            print(f"Total: ${sum}")
+            print(f"Total: $ %.2f" % {sum})
         except EOFError:
             break
 
