@@ -18,6 +18,7 @@ def main():
     while True:
         try:
             item = input("Item: ")
+            array = 
             sum += menu[item]
             print(f"Total: ${sum}")
         except EOFError:
