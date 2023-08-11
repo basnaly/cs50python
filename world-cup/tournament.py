@@ -22,9 +22,9 @@ def main():
 
         for row in reader:
             team = row["team"]
-            rating = int(row["rating"])
+            rating = row["rating"]
 
-            teams.append(row)
+            teams.append({row["team"]: int(row["rating"])})
 
         print(teams)
 
