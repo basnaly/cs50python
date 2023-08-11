@@ -18,7 +18,7 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            array = item.strip().lower().ttle().split(" ")
+            array = item.strip().lower().title().split(" ")
             transformed = " ".join(array)
             sum += menu[transformed]
             print(f"Total: ${sum}")
