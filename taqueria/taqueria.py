@@ -15,10 +15,11 @@ menu = {
 def main():
 
     sum = 0
-    try:
-        item = input("Item: ")
-        sum += menu[item]
-    except EOFError:
-        break
+    while true
+        try:
+            item = input("Item: ")
+            sum += menu[item]
+        except EOFError:
+            break
 
 main()
