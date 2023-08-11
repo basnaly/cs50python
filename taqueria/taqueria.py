@@ -14,6 +14,8 @@ menu = {
 
 def main():
 
-    
+    try:
+        item = input("Item: ")
+    except EOFError:
 
 main()
