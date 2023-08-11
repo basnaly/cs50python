@@ -24,9 +24,9 @@ def main():
             team = row["team"]
             rating = row["rating"]
 
-            teams.append({row["team"]: int(row["rating"])})
+            teams.append({"team": row["team"], "rating": int(row["rating"])})
 
-        print(teams)
+        # print(teams)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -64,8 +64,8 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
 
-
-    winners = simulate_round(teams)
+    while len(winners) != 1
+        winners = simulate_round(teams)
 
     print(winners)
 
