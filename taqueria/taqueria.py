@@ -18,7 +18,8 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            array = 
+            array = item.strip().lower().split(" ")
+            transformed = 
             sum += menu[item]
             print(f"Total: ${sum}")
         except EOFError:
