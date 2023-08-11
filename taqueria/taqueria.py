@@ -17,13 +17,13 @@ def main():
     sum = 0
     while True:
         try:
-            if item in menu:
+            if menu[key] in menu:
                 item = input("Item: ")
                 transformed = item.strip().lower().title()
                 sum += menu[transformed]
                 print("Total: $%.2f" % sum)
             else:
-                item = input("Item: ")
+                continue
         except EOFError:
             break
 
