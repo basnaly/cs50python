@@ -17,7 +17,7 @@ def main():
     sum = 0
     try:
         item = input("Item: ")
-        if 
+        sum += menu[item]
     except EOFError:
         break
 
