@@ -24,7 +24,7 @@ def main():
             team = row["team"]
             rating = row["rating"]
 
-            teams.append({team: rating})
+            teams.append(row)
 
         print(teams)
 
