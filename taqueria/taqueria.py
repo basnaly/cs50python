@@ -21,6 +21,8 @@ def main():
             transformed = item.strip().lower().title()
             sum += menu[transformed]
             print("Total: $%.2f" % sum)
+            if item not in menu:
+                item = input("Item: ")
         except EOFError:
             break
 
