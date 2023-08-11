@@ -18,8 +18,8 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            if item in menu:
-                transformed = item.strip().lower().title()
+            transformed = item.strip().lower().title()
+            if transformed in menu:
                 sum += menu[transformed]
                 print("Total: $%.2f" % sum)
             else:
