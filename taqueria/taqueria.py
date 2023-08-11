@@ -1,4 +1,4 @@
-nacho
+
 
 menu = {
     "Baja Taco": 4.00,
@@ -21,8 +21,7 @@ def main():
             array = item.strip().lower().title().split(" ")
             transformed = " ".join(array)
             sum += menu[transformed]
-            rounded_sum = round(sum, 2)
-            print(f"Total: ${rounded_sum}")
+            print("Total: $%.2f" % sum)
         except EOFError:
             break
 
