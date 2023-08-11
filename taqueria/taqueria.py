@@ -17,11 +17,12 @@ def main():
     sum = 0
     while True:
         try:
-            item = input("Item: ")
-            transformed = item.strip().lower().title()
-            sum += menu[transformed]
-            print("Total: $%.2f" % sum)
-            if item not in menu:
+            if item in menu:
+                item = input("Item: ")
+                transformed = item.strip().lower().title()
+                sum += menu[transformed]
+                print("Total: $%.2f" % sum)
+            else:
                 item = input("Item: ")
         except EOFError:
             break
