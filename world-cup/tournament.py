@@ -64,5 +64,7 @@ def simulate_tournament(teams):
 
     simulate_round(teams)
 
+    return 
+
 if __name__ == "__main__":
     main()
