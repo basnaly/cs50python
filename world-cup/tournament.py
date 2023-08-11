@@ -1,4 +1,4 @@
-# Simulate a sports tournament
+ # Simulate a sports tournament
 
 import csv
 import sys
