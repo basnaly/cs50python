@@ -15,9 +15,9 @@ menu = {
 def main():
 
     sum = 0
-    item = input("Item: ")
     while True:
         try:
+            item = input("Item: ")
             if item in menu:
                 transformed = item.strip().lower().title()
                 sum += menu[transformed]
