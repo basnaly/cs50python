@@ -14,8 +14,10 @@ menu = {
 
 def main():
 
+    sum = 0
     try:
         item = input("Item: ")
     except EOFError:
+        break
 
 main()
