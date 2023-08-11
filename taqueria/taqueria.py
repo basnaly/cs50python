@@ -21,8 +21,8 @@ def main():
             array = item.strip().lower().title().split(" ")
             transformed = " ".join(array)
             sum += menu[transformed]
-            #print("%.2f" % a)
-            print("Total: $ %.2f {sum}" % )
+            rounded_sum = round(sum, 2)
+            print(f"Total: ${rounded_sum}")
         except EOFError:
             break
 
