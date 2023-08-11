@@ -18,7 +18,7 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            if item not in menu[]:
+            if item not in menu:
                 continue
             else:
                 transformed = item.strip().lower().title()
