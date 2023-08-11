@@ -18,9 +18,12 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            transformed = item.strip().lower().title()
-            sum += menu[transformed]
-            print("Total: $%.2f" % sum)
+            if menu[item] not in menu:
+                continue
+            else:
+                transformed = item.strip().lower().title()
+                sum += menu[transformed]
+                print("Total: $%.2f" % sum)
         except EOFError:
             break
 
