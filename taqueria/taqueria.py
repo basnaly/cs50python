@@ -18,9 +18,9 @@ def main():
     while True:
         try:
             item = input("Item: ")
-            array = item.strip().lower().split(" ")
-            transformed = 
-            sum += menu[item]
+            array = item.strip().lower().ttle().split(" ")
+            transformed = " ".join(array)
+            sum += menu[transformed]
             print(f"Total: ${sum}")
         except EOFError:
             break
