@@ -30,9 +30,10 @@ def main():
 
     score = 0
     for i in range(N):
-        simulate_tournament(teams)
+        winner = simulate_tournament(teams)
+        print(winner)
         score += 1;
-        counts[teams[0]["team"]] = score
+        counts[winner[0]["team"]] = score
     print(counts)
 
     # Print each team's chances of winning, according to simulation
