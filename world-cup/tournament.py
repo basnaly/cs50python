@@ -29,12 +29,13 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
 
     # {"Uruguay": 2, "Portugal": 3}
-    score = 0
     for i in range(N):
         winner = simulate_tournament(teams)
         print(winner)
-        counts[winner: score += 1]
-        counts[winner] = score
+        if winner not in counts:
+            counts[winner] = 1
+        else:
+            counts[winner] += 1
     print(counts)
 
     # Print each team's chances of winning, according to simulation
