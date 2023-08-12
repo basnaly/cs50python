@@ -10,5 +10,5 @@ while True:
         break
 
 for i in range(number):
-    print(" " * (number - 1), "#" * number,)
+    print(" " * i, "#" * i,)
 
