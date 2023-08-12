@@ -62,7 +62,7 @@ def simulate_tournament(teams):
     # TODO
 
     if len(teams) != 1:
-        simulate_round(teams)
+        return simulate_round(teams)
     else:
         return teams[0]["team"]
 
