@@ -2,5 +2,5 @@
 
 number = input("Height: ")
 
-for n in range(number):
+for i in range(number):
     print("#")
