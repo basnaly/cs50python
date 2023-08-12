@@ -1,5 +1,4 @@
 # TODO
 
-print("What is your name? ")
-string = input()
+string = input("What is your name? ")
 print(f"hello, {string}")
