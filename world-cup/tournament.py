@@ -63,7 +63,7 @@ def simulate_tournament(teams):
     if len(teams) != 1:
         simulate_round(teams)
 
-
+    printf(teams)
 
 if __name__ == "__main__":
     main()
