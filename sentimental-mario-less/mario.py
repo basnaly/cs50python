@@ -1,6 +1,6 @@
 # TODO
 
-number = input("Height: ")
+number = int(input("Height: "))
 
 for i in range(number):
     print("#")
