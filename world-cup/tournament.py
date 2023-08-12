@@ -20,6 +20,8 @@ def main():
 
     with open(sys.argv[1]) as file:
       reader = csv.DictReader(file)
+      
+
 
     print(reader)
 
