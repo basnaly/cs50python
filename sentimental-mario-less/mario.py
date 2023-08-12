@@ -6,7 +6,7 @@ while True:
 
     number = get_int("Height: ")
 
-    if (number < 0 or number > 8):
+    if (number > 0 or number > 9):
         break
 
 for i in range(number):
