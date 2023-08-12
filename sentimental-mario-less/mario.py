@@ -8,6 +8,6 @@ while True:
 
     if (number < 1 or number > 8):
         break
-    else:
-        for i in range(number):
-            print("#")
+
+for i in range(number):
+    print("#")
