@@ -61,13 +61,11 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
 
-    a = simulate_round(teams)
-    print(a)
-    if len(a) != 1:
-        simulate_tournament(a)
+    winner_team = simulate_round(teams)
+    if len(winner_team) != 1:
+        simulate_tournament(winner_team)
     else:
-        return a[0]["team"]
-
+        return winner_team[0]["team"]
 
 
 if __name__ == "__main__":
