@@ -32,7 +32,7 @@ def main():
 
     for i in range(N):
         simulate_tournament(teams)
-        counts[team] = teams[0]["team"]
+        counts["team"] = teams[0]["team"]
         # counts["score"] += 1
     print(counts)
 
