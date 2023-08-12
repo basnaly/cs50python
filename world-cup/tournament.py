@@ -33,7 +33,7 @@ def main():
     for i in range(N):
         winner = simulate_tournament(teams)
         print(winner)
-        score += 1
+        counts[winner: score += 1]
         counts[winner] = score
     print(counts)
 
