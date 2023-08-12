@@ -29,6 +29,7 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
 
     # counts = {"team": "", "score": int}
+    
     for i in range(N):
         simulate_tournament(teams)
         counts["team"] = teams[0]["team"]
