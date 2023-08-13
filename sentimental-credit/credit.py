@@ -40,11 +40,13 @@ def is_valid(sum):
     return false
 
 
-
 while True:
     card_number = get_string("Number: ")
     if int(card_number) > 0:
         break
+
+sum = calc_sum(card_number)
+
 
 pattern_amex = re.search("^34|^37", card_number)
 pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
