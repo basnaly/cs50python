@@ -1,6 +1,6 @@
 # TODO
 
-from cs50 import get_int, get_string
+from cs50 import get_string
 import re
 
 # American Express uses 15-digit numbers
@@ -8,8 +8,7 @@ import re
 # MasterCard uses 16-digit numbers,
 # master_digits = 16;
 # Visa uses 13- and 16-digit numbers
-# visa_digits1 = 13;
-# visa_digits2 = 16;
+visa_digits = [13, 16]
 
 amex_start1 = 34;
 amex_start2 = 37;
@@ -33,6 +32,8 @@ if len(card_number) == 15 and pattern_amex:
     print("AMEX")
 elif len(card_number) == 16 and pattern_master:
     print("MASTER")
-elif len(card_number) == 13 or len(card_number) == 16 and pattern_visa:
-    print("VISA)
+elif len(card_number) in visa_digits and pattern_visa:
+    print("VISA")
+else:
+    print("INVALID")
 
