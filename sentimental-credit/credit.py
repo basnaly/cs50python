@@ -44,8 +44,8 @@ else:
 def calc_sum(card_number):
     sum = 0
     for i in range(len(card_number)):
-        rem = card_number % 10
-        card_number = (card_number - rem) / 10
+        rem = int(card_number) % 10
+        card_number = (int(card_number) - rem) / 10
         if i % 2 == 0:
             sum = sum + rem
         else:
