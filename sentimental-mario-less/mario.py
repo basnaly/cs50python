@@ -8,4 +8,4 @@ while True:
         break
 
 for i in range(number):
-    print(" " "#")
+    print(" "(number - i - 1) "#")
