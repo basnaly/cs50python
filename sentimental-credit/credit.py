@@ -49,11 +49,11 @@ pattern_amex = re.search("^34|^37", card_number)
 pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
 pattern_visa = re.search("^4", card_number)
 
-if len(card_number) == 15 and pattern_amex and is_valid:
+if len(card_number) == 15 and pattern_amex and is_valid(sum):
     print("AMEX")
-elif len(card_number) == 16 and pattern_master and is_valid:
+elif len(card_number) == 16 and pattern_master and is_valid():
     print("MASTERCARD")
-elif len(card_number) in visa_digits and pattern_visa and is_valid:
+elif len(card_number) in visa_digits and pattern_visa and is_valid():
     print("VISA")
 else:
     print("INVALID")
