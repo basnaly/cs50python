@@ -33,3 +33,5 @@ if rem >= PENNIES:
     rem = round(rem * 1000) / 1000
 
 result = coins["quaters"] + coins["dimes"] + coins["nickels"] + coins["pennies"]
+
+print(result)
