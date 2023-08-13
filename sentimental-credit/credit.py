@@ -20,8 +20,8 @@ master_start5 = 55;
 visa_start = 4;
 
 
-def main():
-    
+
+
 while True:
     card_number = get_string("Number ")
     if int(card_number) > 0:
