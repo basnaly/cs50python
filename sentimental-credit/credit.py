@@ -18,3 +18,7 @@ master_start3 = 53;
 master_start4 = 54;
 master_start5 = 55;
 visa_start = 4;
+
+while True:
+    card_number = get_string("Number ")
+    
