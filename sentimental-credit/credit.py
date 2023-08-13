@@ -39,9 +39,8 @@ else:
 
 def calc_sum(number):
     sum = 0
-    for (i = 0; number > 0; i++)
-    {
-        int rem = number % 10;
+    for i in range(card_number):
+        rem = number % 10;
         number = (number - rem) / 10;
         if (i % 2 == 0)
         {
