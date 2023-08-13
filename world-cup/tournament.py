@@ -65,11 +65,11 @@ def simulate_tournament(teams):
     # TODO
 
     winner_team = simulate_round(teams)
-    # print(winner_team)
-
-    while len(winner_team) != 1:
-        winner_team = simulate_tournament(winner_team)
     print(winner_team)
+
+    # while len(winner_team) != 1:
+    #     winner_team = simulate_tournament(winner_team)
+    # print(winner_team)
 
 
 if __name__ == "__main__":
