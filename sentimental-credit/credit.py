@@ -4,12 +4,12 @@ from cs50 import get_int, get_string
 import re
 
 # American Express uses 15-digit numbers
-    amex_digits = 15;
+# amex_digits = 15;
 # MasterCard uses 16-digit numbers,
-    master_digits = 16;
+# master_digits = 16;
 # Visa uses 13- and 16-digit numbers
-    visa_digits1 = 13;
-    visa_digits2 = 16;
+# visa_digits1 = 13;
+# visa_digits2 = 16;
 
 amex_start1 = 34;
 amex_start2 = 37;
@@ -29,4 +29,4 @@ pattern_amex = re.search("^34|37")
 
 if len(card_number) == 15 and pattern_amex:
     print("abc")
-if
+
