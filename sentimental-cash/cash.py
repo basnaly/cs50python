@@ -7,3 +7,5 @@ while True:
     if value > 0:
         break
 
+quarters = calculate_quarters(cents);
+    cents = cents - quarters * 25;
