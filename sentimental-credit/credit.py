@@ -24,4 +24,6 @@ while True:
     if card_number > 0:
         break
 
-for
+if len((card_number) != 13 or len(card_number) != 15 or len(card_number) != 16)
+    print("INVALID")
+if 
