@@ -19,6 +19,9 @@ master_start4 = 54;
 master_start5 = 55;
 visa_start = 4;
 
+
+def main():
+    
 while True:
     card_number = get_string("Number ")
     if int(card_number) > 0:
@@ -40,20 +43,13 @@ else:
 def calc_sum(number):
     sum = 0
     for i in range(card_number):
-        rem = number % 10;
-        number = (number - rem) / 10;
-        if (i % 2 == 0)
-        {
-            sum = sum + rem;
-        }
-        else
-        {
-            int doubled = rem * 2;
-            if (doubled > 9)
-            {
-                doubled = 1 + (doubled - 10);
-            }
-            sum = sum + doubled;
-        }
-    }
-    return sum;
+        rem = card_number % 10;
+        card_number = (card_number - rem) / 10;
+        if i % 2 == 0:
+            sum = sum + rem
+        else:
+            doubled = rem * 2
+            if doubled > 9:
+                doubled = 1 + (doubled - 10)
+            sum = sum + doubled
+    print(sum)
