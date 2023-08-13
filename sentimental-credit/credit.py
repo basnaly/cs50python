@@ -10,14 +10,14 @@ import re
 # Visa uses 13- and 16-digit numbers
 visa_digits = [13, 16]
 
-amex_start1 = 34;
-amex_start2 = 37;
-master_start1 = 51;
-master_start2 = 52;
-master_start3 = 53;
-master_start4 = 54;
-master_start5 = 55;
-visa_start = 4;
+# amex_start1 = 34;
+# amex_start2 = 37;
+# master_start1 = 51;
+# master_start2 = 52;
+# master_start3 = 53;
+# master_start4 = 54;
+# master_start5 = 55;
+# visa_start = 4;
 
 
 def calc_sum(card_number):
@@ -41,7 +41,7 @@ def is_valid(sum):
 
 
 while True:
-    card_number = get_string("Number ")
+    card_number = get_string("Number: ")
     if int(card_number) > 0:
         break
 
