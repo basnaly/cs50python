@@ -24,6 +24,8 @@ def main():
         team = row["team"]
         rating = int(row["rating"])
 
+        
+
     print(teams)
 
     counts = {}
