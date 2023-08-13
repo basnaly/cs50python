@@ -31,11 +31,11 @@ pattern_amex = re.search("^34|^37", card_number)
 pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
 pattern_visa = re.search("^3", card_number)
 
-if len(card_number) == 15 and pattern_amex:
+if len(card_number) == 15 and pattern_amex and sum % 10 == 0:
     print("AMEX")
-elif len(card_number) == 16 and pattern_master:
+elif len(card_number) == 16 and pattern_master and sum % 10 == 0:
     print("MASTER")
-elif len(card_number) in visa_digits and pattern_visa:
+elif len(card_number) in visa_digits and pattern_visa and sum % 10 == 0:
     print("VISA")
 else:
     print("INVALID")
@@ -53,7 +53,7 @@ def calc_sum(card_number):
             if doubled > 9:
                 doubled = 1 + (doubled - 10)
             sum = sum + doubled
-    print(sum)
+    return sum
 
 calc_sum(card_number)
 
