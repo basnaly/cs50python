@@ -34,7 +34,7 @@ def calc_sum(card_number):
             sum = sum + doubled
     return sum
 
-def is_valid(sum)
+def is_valid(sum):
     if sum % 10 == 0:
         return true
     return false
