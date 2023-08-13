@@ -36,8 +36,8 @@ def calc_sum(card_number):
 
 def is_valid(sum):
     if sum % 10 == 0:
-        return true
-    return false
+        return True
+    return False
 
 
 while True:
