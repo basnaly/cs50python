@@ -40,7 +40,7 @@ elif len(card_number) in visa_digits and pattern_visa:
 else:
     print("INVALID")
 
-def calc_sum(number):
+def calc_sum(card_number):
     sum = 0
     for i in range(card_number):
         rem = card_number % 10;
