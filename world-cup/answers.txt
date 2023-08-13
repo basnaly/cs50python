@@ -11,9 +11,9 @@ Questions:
 
 Which predictions, if any, proved incorrect as you increased the number of simulations?:
 
-Less than 100 simulations
+With a small number of simulations (less than 100 simulations), the results seem less correct
 
 Suppose you're charged a fee for each second of compute time your program uses.
 After how many simulations would you call the predictions "good enough"?:
 
-After 1000 simulations
+It seems like the predictions stabilized after about 1000 simulations.
