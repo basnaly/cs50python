@@ -2,5 +2,10 @@
 
 from cs50 import get_int
 
-while 
-number = get_int("Height: ")
+while True:
+    number = get_int("Height: ")
+    if number < 1 or number > 8:
+        break
+
+for i in range(number):
+    print("#")
