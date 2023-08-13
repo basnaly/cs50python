@@ -20,27 +20,6 @@ master_start5 = 55;
 visa_start = 4;
 
 
-
-
-while True:
-    card_number = get_string("Number ")
-    if int(card_number) > 0:
-        break
-
-pattern_amex = re.search("^34|^37", card_number)
-pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
-pattern_visa = re.search("^3", card_number)
-
-if len(card_number) == 15 and pattern_amex and sum  10 == 0:
-    print("AMEX")
-elif len(card_number) == 16 and pattern_master and sum % 10 == 0:
-    print("MASTER")
-elif len(card_number) in visa_digits and pattern_visa and sum % 10 == 0:
-    print("VISA")
-else:
-    print("INVALID")
-
-
 def calc_sum(card_number):
     sum = 0
     for i in range(len(card_number)):
@@ -55,6 +34,28 @@ def calc_sum(card_number):
             sum = sum + doubled
     return sum
 
-calc_sum(card_number)
+def is_valid(sum)
+    if sum % 10 == 0:
+        return true
+    return false
+
+
+while True:
+    card_number = get_string("Number ")
+    if int(card_number) > 0:
+        break
+
+pattern_amex = re.search("^34|^37", card_number)
+pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
+pattern_visa = re.search("^3", card_number)
+
+if len(card_number) == 15 and pattern_amex and is_valid:
+    print("AMEX")
+elif len(card_number) == 16 and pattern_master and is_valid:
+    print("MASTER")
+elif len(card_number) in visa_digits and pattern_visa and is_valid:
+    print("VISA")
+else:
+    print("INVALID")
 
 # 5105105105105100
