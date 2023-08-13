@@ -20,8 +20,8 @@ master_start5 = 55;
 visa_start = 4;
 
 while True:
-    card_number = get_string("Number ")
+    card_number = get_int("Number ")
     if card_number > 0:
         break
 
-
+for
