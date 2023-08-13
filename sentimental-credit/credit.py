@@ -27,6 +27,6 @@ while True:
 
 pattern_amex = re.search("^34|37")
 
-if len((card_number) != 13 or len(card_number) != 15 or len(card_number) != 16)
+if len((card_number) == 15  or len(card_number) != 15 or len(card_number) != 16)
     print("INVALID")
 if
