@@ -10,8 +10,10 @@ Times:
 Questions:
 
 Which predictions, if any, proved incorrect as you increased the number of simulations?:
+
 100 simulations
 
 Suppose you're charged a fee for each second of compute time your program uses.
 After how many simulations would you call the predictions "good enough"?:
-after 1000 simulations
+
+After 1000 simulations
