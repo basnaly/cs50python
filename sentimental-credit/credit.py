@@ -25,6 +25,7 @@ while True:
     if card_number > 0:
         break
 
+re = ^amex_start1 | amex_start2 | master_start1 | master_start2 | master_start3 | master_start4 | master_start5 | visa_start
 if len((card_number) != 13 or len(card_number) != 15 or len(card_number) != 16)
     print("INVALID")
 if
