@@ -56,3 +56,5 @@ def calc_sum(card_number):
     print(sum)
 
 calc_sum(card_number)
+
+# 5105105105105100
