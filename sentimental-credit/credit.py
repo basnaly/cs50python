@@ -21,4 +21,7 @@ visa_start = 4;
 
 while True:
     card_number = get_string("Number ")
-    
+    if card_number > 0:
+        break
+
+
