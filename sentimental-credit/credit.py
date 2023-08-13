@@ -21,11 +21,11 @@ master_start5 = 55;
 visa_start = 4;
 
 while True:
-    card_number = get_int("Number ")
+    card_number = get_string("Number ")
     if card_number > 0:
         break
 
-pattern_amex = re.search("^amex_start1 | amex_start2")
+pattern_amex = re.search("^34|37")
 
 if len((card_number) != 13 or len(card_number) != 15 or len(card_number) != 16)
     print("INVALID")
