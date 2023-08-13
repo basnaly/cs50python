@@ -37,3 +37,6 @@ elif len(card_number) in visa_digits and pattern_visa:
 else:
     print("INVALID")
 
+def calc_sum(number):
+    sum = 0
+    
