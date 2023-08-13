@@ -39,4 +39,22 @@ else:
 
 def calc_sum(number):
     sum = 0
-    
+    for (i = 0; number > 0; i++)
+    {
+        int rem = number % 10;
+        number = (number - rem) / 10;
+        if (i % 2 == 0)
+        {
+            sum = sum + rem;
+        }
+        else
+        {
+            int doubled = rem * 2;
+            if (doubled > 9)
+            {
+                doubled = 1 + (doubled - 10);
+            }
+            sum = sum + doubled;
+        }
+    }
+    return sum;
