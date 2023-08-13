@@ -40,6 +40,7 @@ def is_valid(sum):
     return false
 
 
+
 while True:
     card_number = get_string("Number: ")
     if int(card_number) > 0:
