@@ -52,7 +52,7 @@ pattern_visa = re.search("^3", card_number)
 if len(card_number) == 15 and pattern_amex and is_valid:
     print("AMEX")
 elif len(card_number) == 16 and pattern_master and is_valid:
-    print("MASTER")
+    print("MASTERCARD")
 elif len(card_number) in visa_digits and pattern_visa and is_valid:
     print("VISA")
 else:
