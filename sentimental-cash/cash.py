@@ -38,4 +38,3 @@ print(rem)
 result = coins["quaters"] + coins["dimes"] + coins["nickels"] + coins["pennies"]
 
 print(result)
-
