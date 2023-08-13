@@ -31,7 +31,7 @@ pattern_amex = re.search("^34|^37", card_number)
 pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
 pattern_visa = re.search("^3", card_number)
 
-if len(card_number) == 15 and pattern_amex and sum % 10 == 0:
+if len(card_number) == 15 and pattern_amex and sum  10 == 0:
     print("AMEX")
 elif len(card_number) == 16 and pattern_master and sum % 10 == 0:
     print("MASTER")
