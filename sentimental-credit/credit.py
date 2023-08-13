@@ -25,7 +25,7 @@ while True:
     if int(card_number) > 0:
         break
 
-pattern_amex = re.search("^34|37")
+pattern_amex = re.search("^34|37", card_number)
 
 if len(card_number) == 15 and pattern_amex:
     print("abc")
