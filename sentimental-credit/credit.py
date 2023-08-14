@@ -35,7 +35,7 @@ def check_card(card_number):
 def is_valid(sum):
     if sum % 10 == 0:
         return True
-    return false
+    return False
 
 while True:
     card_number = get_string("Number: ")
