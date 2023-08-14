@@ -37,7 +37,8 @@ def check_card(card_number):
     #     # print(sum)
 
     sum = 0
-    for
+    for i in range(len(card_number)):
+        if len(card_number) % 2 == 0
 
     return sum
 
