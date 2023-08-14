@@ -46,8 +46,8 @@ def check_card(card_number):
             sum = sum + doubled
         else:
             sum = sum + reverse_number[i]
-
-    return sum
+        print(sum)
+        return sum
 
 def is_valid(sum):
     if sum % 10 == 0:
