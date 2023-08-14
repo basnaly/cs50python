@@ -23,7 +23,7 @@ def check_card(card_number):
     sum = 0
     while (int(card_number) > 0):
         rem = int(card_number) % 10
-        card_number = card_number - rem
+        card_number = int(card_number) - rem
         if card_number % 2 == 0:
             sum = sum + rem
         else:
@@ -42,7 +42,7 @@ while True:
     if int(card_number) > 0:
         break
 
-sum = check_card(card_number)
+sum = check_card(int(card_number))
 
 pattern_amex = re.search("^34|^37", card_number)
 pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
