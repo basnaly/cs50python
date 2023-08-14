@@ -30,7 +30,8 @@ def check_card(card_number):
             doubled = rem * 2
             if doubled > 9:
                 doubled = 1 + (doubled - 10)
-    return sum + doubled
+            sum = sum + doubled
+    return sum
 
 def is_valid(sum):
     if sum % 10 == 0:
