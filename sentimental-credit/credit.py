@@ -24,15 +24,15 @@ def check_card(card_number):
     while (int(card_number) > 0):
         rem = int(card_number) % 10
         card_number = (int(card_number) - rem) / 10
-        print(str(card_number))
         if len(str(card_number)) % 2 != 0:
+            print(rem)
             sum = sum + rem
         else:
             doubled = rem * 2
             if doubled > 9:
                 doubled = 1 + (doubled - 10)
             sum = sum + doubled
-        print(sum)
+        # print(sum)
     return sum
 
 def is_valid(sum):
