@@ -31,6 +31,7 @@ def check_card(card_number):
             if doubled > 9:
                 doubled = 1 + (doubled - 10)
             sum = sum + doubled
+            print(sum)
     return sum
 
 def is_valid(sum):
