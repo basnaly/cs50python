@@ -37,7 +37,7 @@ def check_card(card_number):
     #     # print(sum)
 
     sum = 0
-    reverse_number = card_number.reverse()
+    reverse_number = reverse(card_number)
     for i in range(len(card_number)):
         if len(reverse_number) % 2 != 0:
             doubled = reverse_number[i] * 2
