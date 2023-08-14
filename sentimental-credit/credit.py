@@ -21,6 +21,7 @@ visa_digits = [13, 16]
 
 def check_card(card_number):
     sum = 0
+    i = 0
     while (int(card_number) > 0):
         length = len(str(card_number))
         print(length)
