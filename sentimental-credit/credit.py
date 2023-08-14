@@ -30,7 +30,7 @@ def check_card(card_number):
             doubled = rem * 2
             if doubled > 9:
                 doubled = 1 + (doubled - 10)
-                sum = sum + doubled
+            sum = sum + doubled
         print(sum)
     return sum
 
