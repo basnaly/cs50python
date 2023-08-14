@@ -20,21 +20,25 @@ visa_digits = [13, 16]
 # visa_start = 4;
 
 def check_card(card_number):
+    # sum = 0
+    # i = 0
+    # while (int(card_number) > 0):
+    #     rem = int(card_number) % 10
+    #     card_number = (int(card_number) - rem) / 10
+    #     if i % 2 == 0:
+    #         # print(rem)
+    #         sum = sum + rem
+    #     else:
+    #         doubled = rem * 2
+    #         if doubled > 9:
+    #             doubled = 1 + (doubled - 10)
+    #         sum = sum + doubled
+    #     i += 1
+    #     # print(sum)
+
     sum = 0
-    i = 0
-    while (int(card_number) > 0):
-        rem = int(card_number) % 10
-        card_number = (int(card_number) - rem) / 10
-        if i % 2 == 0:
-            # print(rem)
-            sum = sum + rem
-        else:
-            doubled = rem * 2
-            if doubled > 9:
-                doubled = 1 + (doubled - 10)
-            sum = sum + doubled
-        i += 1
-        # print(sum)
+    for
+
     return sum
 
 def is_valid(sum):
