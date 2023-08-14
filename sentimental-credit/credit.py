@@ -37,23 +37,22 @@ def is_valid(sum):
         return True
     return false
 
-sum = 
-
 while True:
     card_number = get_string("Number: ")
     if int(card_number) > 0:
         break
 
+sum = check_card(card_number)
+
 pattern_amex = re.search("^34|^37", card_number)
 pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
 pattern_visa = re.search("^4", card_number)
 
-if pattern_amex and len(card_number) == 15:
+if pattern_amex and len(card_number) == 15 and is_valid(sum):
     print("AMEX")
-if pattern_master and len(card_number) == 16:
+if pattern_master and len(card_number) == 16 and is_valid(sum):
     print("MASTERCARD")
-if pattern_visa and len(card_number) in visa_digits:
+if pattern_visa and len(card_number) in visa_digits and is_valid(sum):
     print("VISA")
-
 else:
     print("INVALID")
