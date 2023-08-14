@@ -19,3 +19,31 @@ visa_digits = [13, 16]
 # master_start5 = 55;
 # visa_start = 4;
 
+def check_card(card_number):
+    sum = 0
+    while (int(card_number) > 0):
+        rem = int(card_number) % 10
+        card_number = card_number - rem
+        if card_number % 2 == 0:
+            sum = sum + rem
+        else:
+            doubled = rem * 2
+            if (doubled > 9)
+            doubled = 1 + (doubled - 10)
+    return sum + doubled
+
+def is_valid(sum):
+    if sum % 10 == 0:
+        return True
+    return false
+
+while True:
+    card_number = get_string("Number: ")
+    if int(card_number) > 0:
+        break
+
+pattern_amex = re.search("^34|^37", card_number)
+pattern_master = re.search("^51|^52|^53|^54|^55", card_number)
+pattern_visa = re.search("^4", card_number)
+
+
