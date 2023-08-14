@@ -33,6 +33,7 @@ def check_card(card_number):
             if doubled > 9:
                 doubled = 1 + (doubled - 10)
             sum = sum + doubled
+        i += 1
         # print(sum)
     return sum
 
