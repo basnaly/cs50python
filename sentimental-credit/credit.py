@@ -45,7 +45,7 @@ def check_card(card_number):
                 doubled = 1 + (doubled - 10)
             sum = sum + doubled
         else:
-            sum = sum + reverse_number[i]
+            sum = sum + int(reverse_number[i])
         print(sum)
     return sum
 
