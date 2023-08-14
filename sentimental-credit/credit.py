@@ -37,7 +37,7 @@ def check_card(card_number):
     #     # print(sum)
 
     sum = 0
-    reverse_number = reverse(card_number)
+    reverse_number = card_number[::-1]
     for i in range(len(card_number)):
         if len(reverse_number) % 2 != 0:
             doubled = reverse_number[i] * 2
@@ -47,7 +47,7 @@ def check_card(card_number):
         else:
             sum = sum + reverse_number[i]
         print(sum)
-        return sum
+    return sum
 
 def is_valid(sum):
     if sum % 10 == 0:
