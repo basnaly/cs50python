@@ -55,9 +55,9 @@ pattern_visa = re.search("^4", card_number)
 
 if pattern_amex and len(card_number) == 15 and is_valid(sum):
     print("AMEX")
-if pattern_master and len(card_number) == 16 and is_valid(sum):
+elif pattern_master and len(card_number) == 16 and is_valid(sum):
     print("MASTERCARD")
-if pattern_visa and len(card_number) in visa_digits and is_valid(sum):
+elif pattern_visa and len(card_number) in visa_digits and is_valid(sum):
     print("VISA")
 else:
     print("INVALID")
