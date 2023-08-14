@@ -40,7 +40,12 @@ def check_card(card_number):
     reverse_number = card_number.reverse()
     for i in range(len(card_number)):
         if len(reverse_number) % 2 != 0:
-
+            doubled = reverse_number[i] * 2
+            if doubled > 9:
+                doubled = 1 + (doubled - 10)
+            sum = sum + doubled
+        else:
+            sum = sum + 
 
     return sum
 
