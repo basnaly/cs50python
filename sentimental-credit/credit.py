@@ -24,7 +24,7 @@ def check_card(card_number):
     while (int(card_number) > 0):
         rem = int(card_number) % 10
         card_number = int((int(card_number) - rem) / 10)
-        if len(str(card_number)) % 2 == 0:
+        if len(str(card_number)) % 2 != 0:
             print(rem)
             sum = sum + rem
         else:
