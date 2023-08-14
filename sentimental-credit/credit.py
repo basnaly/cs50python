@@ -28,8 +28,8 @@ def check_card(card_number):
             sum = sum + rem
         else:
             doubled = rem * 2
-            if (doubled > 9)
-            doubled = 1 + (doubled - 10)
+            if doubled > 9:
+                doubled = 1 + (doubled - 10)
     return sum + doubled
 
 def is_valid(sum):
