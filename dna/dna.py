@@ -19,8 +19,10 @@ def main():
         for row in reader_db:
             name = row["name"]
             AGATC = int(row["AGATC"])
-            
-            db.append({"name": name, "AGATC": AGATC})
+            AATG = int(row["AATG"])
+            TATC = int(row["TATC"])
+
+            db.append({"name": name, "AGATC": AGATC, "AATG": AATG, "TATC": TATC})
 
         print(db)
 
