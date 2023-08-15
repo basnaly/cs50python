@@ -16,6 +16,12 @@ def main():
         reader_db = csv.DictReader(file)
         print(reader_db)
 
+        for row in reader_db:
+            name = row["name"]
+            AGATC = int(row["AGATC"])
+
+            teams.append({"name": name, "AGATC": AGATC})
+
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2], "r") as file: # file = open(sys.argv[2], "r")
