@@ -42,8 +42,8 @@ def main():
     #         else:
     #             print("No match ")
 
-    for person in db:
-        print("person: ", person)
+    for object in db:
+        print("object: ", object)
         for subsequence in dna_dict:
             print("subsequence: ", subsequence)
             print("dna_dict: ", dna_dict)
