@@ -19,7 +19,7 @@ def main():
 
         print(db)
 
-    subsequences = db[0].keys()
+    subsequences = list(db[0].keys())[1:]
     print(subsequences)
     return
 
