@@ -17,12 +17,8 @@ def main():
         reader_db = csv.DictReader(file)
 
         for row in reader_db:
-            name = row["name"]
-            AGATC = int(row["AGATC"])
-            AATG = int(row["AATG"])
-            TATC = int(row["TATC"])
 
-            db.append({"name": name, "AGATC": AGATC, "AATG": AATG, "TATC": TATC})
+            db.append(row)
 
         print(db)
 
