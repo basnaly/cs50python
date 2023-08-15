@@ -15,7 +15,6 @@ def main():
         reader_db = csv.DictReader(file)
 
         for row in reader_db:
-
             db.append(row)
 
         print(db)
@@ -28,7 +27,7 @@ def main():
         sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-        for i in range()
+        # for i in range()
         agatc_number = longest_match(sequence, subsequences[0])
         aatg_number = longest_match(sequence, subsequences[1])
         tatc_number = longest_match(sequence, subsequences[2])
