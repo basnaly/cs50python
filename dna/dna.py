@@ -25,11 +25,11 @@ def main():
     with open(sys.argv[2], "r") as file: # file = open(sys.argv[2], "r")
         sequence = file.read()
 
-    dna_list = []
     # TODO: Find longest match of each STR in DNA sequence
-        for i in range(len(sequence))
+        for i in range(len(sequence)):
             longest_match(sequence, subsequences)
-
+            dna_list = [{"subsequences": subsequences, "number": number}]
+            print(dna_list)
 
         # agatc_number = longest_match(sequence, subsequences[0])
         # aatg_number = longest_match(sequence, subsequences[1])
