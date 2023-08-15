@@ -37,15 +37,6 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    # for object in db:
-    #     print("object: ", object)
-    #     for subsequence in dna_dict:
-    #         print("subsequence: ", subsequence)
-    #         print("dna_dict: ", dna_dict)
-    #         if dna_dict[subsequence] != int(object[subsequence]):
-    #             break
-    # print("No match ")
-
     is_found = False
 
     for object in db:
