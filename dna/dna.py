@@ -42,8 +42,10 @@ def main():
     #         else:
     #             print("No match ")
 
-    for subsequences in db:
+    for person in db:
+        print("person: ", person)
         for number in dna_dict:
+            
             if dna_dict[subsequences] == db[i].subsequences:
                 print(db[i].name)
             else:
