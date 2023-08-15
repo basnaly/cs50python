@@ -26,14 +26,14 @@ def main():
         sequence = file.read()
     # dict[key] = value
 
-    dna_dict = {} # {"AGATC": 28}
+    dna_list = [] # {"AGATC": 28}
 
     # TODO: Find longest match of each STR in DNA sequence
 
     for i in range(len(subsequences)):
         number = longest_match(sequence, subsequences[i])
-        dna_dict[subsequences[i]] = str(number)
-    print(dna_dict)
+        dna_list.append(str(number))
+    print(dna_list)
 
     # TODO: Check database for matching profiles
 
