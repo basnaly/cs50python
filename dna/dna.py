@@ -1,8 +1,6 @@
 import csv
 import sys
 
-subsequences = ["AGATC", "AATG", "TATC"]
-
 def main():
 
     # TODO: Check for command-line usage
@@ -21,6 +19,8 @@ def main():
             db.append(row)
 
         print(db)
+
+    subsequences = []
 
     # TODO: Read DNA sequence file into a variable
 
