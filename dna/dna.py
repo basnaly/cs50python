@@ -44,10 +44,10 @@ def main():
 
     for person in db:
         print("person: ", person)
-        for dna in dna_dict:
-            print("dna: ", dna)
+        for subsequence in dna_dict:
+            print("subsequence: ", subsequence)
             print("dna_dict: ", dna_dict)
-            if dna_dict[subsequences] == db[i].subsequences:
+            if dna_dict[subsequence] == db[i].subsequences:
                 print(db[i].name)
             else:
                 print("No match ")
