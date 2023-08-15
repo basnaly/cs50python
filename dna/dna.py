@@ -27,7 +27,9 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
         for i in range(len(sequence))
-        
+            longest_match(sequence, subsequences)
+
+            
         # agatc_number = longest_match(sequence, subsequences[0])
         # aatg_number = longest_match(sequence, subsequences[1])
         # tatc_number = longest_match(sequence, subsequences[2])
