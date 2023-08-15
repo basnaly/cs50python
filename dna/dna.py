@@ -37,7 +37,7 @@ def main():
 
     for person in db:
         for i in range(len(subsequences)):
-            if dna_dict[subsequences[i]] == db[i].subsequences:
+            if dna_dict[subsequences[i]] == db[i].keys:
                 print(db[i].name)
             else:
                 print("No match ")
