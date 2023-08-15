@@ -46,14 +46,16 @@ def main():
     #             break
     # print("No match ")
 
-    db1 = db[0]
-    print(list(db1.values())[1:])
-    for object in db:
-        if db1 == dna_dict:
-            print(object[name])
-        else:
-            print("No much")
+    is_found = False
 
+    for object in db:
+        db1 = list(object.values())[1:]
+        if db1 == dna_list:
+            is_found = True
+            print(object["name"])
+
+    if is_found == False:
+        print("No match")
 
     return
 
