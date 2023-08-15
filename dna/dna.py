@@ -28,7 +28,7 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
         for i in range(len(sequence)):
             longest_match(sequence, subsequences)
-            dna_list = [{"subsequences": subsequences, "number": number}]
+            dna_list = [{"subsequences": subsequences, "number": longest_run}]
             print(dna_list)
 
         # agatc_number = longest_match(sequence, subsequences[0])
