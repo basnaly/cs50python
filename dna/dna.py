@@ -36,7 +36,8 @@ def main():
     # TODO: Check database for matching profiles
 
     for person in db:
-        for 
+        for i in range(len(subsequences)):
+            if 
 
 
     return
