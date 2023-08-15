@@ -49,7 +49,7 @@ def main():
     is_found = False
 
     for object in db:
-        db1 = list(object.values())[1:]
+        db1 = list(object.values())[1:] # db = {Alice: [3,6,8], Bob:[...]} db[object]
         if db1 == dna_list:
             is_found = True
             print(object["name"])
