@@ -46,6 +46,9 @@ def main():
     #             break
     # print("No match ")
 
+    db1 = db[1:]
+    if db1 == dna_dict:
+        print(db)
 
 
     return
