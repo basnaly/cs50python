@@ -50,7 +50,7 @@ def main():
     print(db1)
     for object in db:
         if db1 == dna_dict:
-            print(object[subsequence])
+            print(object[name])
         else:
             print("No much")
 
