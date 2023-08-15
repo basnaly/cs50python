@@ -46,6 +46,7 @@ def main():
         print("person: ", person)
         for dna in dna_dict:
             print("dna: ", dna)
+            print("dna_dict: ", dna_dict)
             if dna_dict[subsequences] == db[i].subsequences:
                 print(db[i].name)
             else:
