@@ -12,14 +12,15 @@ def main():
 
     # TODO: Read database file into a variable
 
-    db = {}
+    db = []
     with open(sys.argv[1]) as file:
         reader_db = csv.DictReader(file)
 
         for row in reader_db:
             name = row["name"]
             AGATC = int(row["AGATC"])
-        db.append({"name": name, "AGATC": AGATC})
+            
+            db.append({"name": name, "AGATC": AGATC})
 
         print(db)
 
