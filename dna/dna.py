@@ -19,7 +19,9 @@ def main():
 
         print(db)
 
-    subsequences = []
+    subsequences = db[0].keys()
+    print(subsequences)
+    return
 
     # TODO: Read DNA sequence file into a variable
 
@@ -37,7 +39,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-        
+
 
     return
 
