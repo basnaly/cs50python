@@ -28,18 +28,11 @@ def main():
 
     dna_dict = {} # {"AGATC": 28}
     # TODO: Find longest match of each STR in DNA sequence
-        for i in range(len(subsequences)):
-            longest_match(sequence, subsequences[i])
-            dna_dict[subsequences[i]] = 
-            print(dna_list)
-
-        # agatc_number = longest_match(sequence, subsequences[0])
-        # aatg_number = longest_match(sequence, subsequences[1])
-        # tatc_number = longest_match(sequence, subsequences[2])
-        # print("agatc_number: ", agatc_number)
-        # print("aatg_number: ", aatg_number)
-        # print("tatc_number: ", tatc_number)
-
+    for i in range(len(subsequences)):
+        number = longest_match(sequence, subsequences[i])
+        dna_dict[subsequences[i]] = number
+    print(dna_dict)
+    
     # TODO: Check database for matching profiles
 
 
