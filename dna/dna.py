@@ -47,7 +47,7 @@ def main():
     # print("No match ")
 
     db1 = db[0]
-    print(db1[1:])
+    print(db1.values()[1:])
     for object in db:
         if db1 == dna_dict:
             print(object[name])
