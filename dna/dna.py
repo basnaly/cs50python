@@ -32,28 +32,21 @@ def main():
 
     for i in range(len(subsequences)):
         number = longest_match(sequence, subsequences[i])
-        dna_dict[subsequences[i]] = number
+        dna_dict[subsequences[i]] = str(number)
     print(dna_dict)
 
     # TODO: Check database for matching profiles
 
-    # for person in db:
-    #     for i in range(len(subsequences)):
-    #         if dna_dict[subsequences[i]] == db[i].keys:
-    #             print(db[i].name)
-    #         else:
-    #             print("No match ")
+    # for object in db:
+    #     print("object: ", object)
+    #     for subsequence in dna_dict:
+    #         print("subsequence: ", subsequence)
+    #         print("dna_dict: ", dna_dict)
+    #         if dna_dict[subsequence] != int(object[subsequence]):
+    #             break
+    # print("No match ")
 
-    for object in db:
-        print("object: ", object)
-        for subsequence in dna_dict:
-            print("subsequence: ", subsequence)
-            print("dna_dict: ", dna_dict)
-            if dna_dict[subsequence] != int(object[subsequence]):
-                break
-
-    print("No match ")
-
+    
 
     return
 
