@@ -47,9 +47,12 @@ def main():
     # print("No match ")
 
     db1 = db[1:]
+    print(db1)
     for object in db:
         if db1 == dna_dict:
-            print(db)
+            print(object[subsequence])
+        else:
+            print("No much")
 
 
     return
