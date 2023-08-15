@@ -37,7 +37,7 @@ def main():
 
     for person in db:
         for i in range(len(subsequences)):
-            if 
+            if i
 
 
     return
