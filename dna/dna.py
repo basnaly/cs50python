@@ -37,7 +37,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-        if agatc_number =
+        
 
     return
 
