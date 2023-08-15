@@ -46,7 +46,7 @@ def main():
     #             break
     # print("No match ")
 
-    
+
 
     return
 
@@ -89,4 +89,4 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-# main()
+main()
