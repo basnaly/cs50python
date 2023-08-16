@@ -10,4 +10,4 @@ UPDATE INITCAP (title) FROM shows;
 
 UPDATE shows SET title = LOWER(title);
 
-UPDATE shows SET title = LOWER(title);
+UPDATE shows SET title = INITCAP(LOWER(title));
