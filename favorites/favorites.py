@@ -10,6 +10,6 @@ def main():
     for row in rows:
         print(row)
         title = row["title"].title()
-        db.execute("UPDATE shows SET title = ? WHERE title = ? ", (title, row["title"]))
+        db.execute("UPDATE shows SET title = ? WHERE title = ? ", title, row["title"])
 
 main()
