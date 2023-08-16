@@ -8,7 +8,8 @@ def main():
     rows = db.execute("SELECT * FROM shows")
 
     for row in rows:
-        title = row.title()
+        print(row)
+        title = row["title"].title()
         db.execute("UPDATE shows SET title = ?", title)
 
 main()
