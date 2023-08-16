@@ -34,7 +34,7 @@ def main():
     for i in range(len(subsequences)):
         number = longest_match(sequence, subsequences[i])
         dna_list.append(str(number))
-    print(dna_list)
+    # print(dna_list)
 
     # TODO: Check database for matching profiles
 
@@ -42,6 +42,7 @@ def main():
 
     for object in db:
         db1 = list(object.values())[1:] # db = {Alice: [3,6,8], Bob:[...]} db[object]
+        print(db1)
         if db1 == dna_list:
             is_found = True
             print(object["name"])
