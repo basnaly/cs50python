@@ -34,7 +34,7 @@ def main():
     for i in range(len(subsequences)):
         number = longest_match(sequence, subsequences[i])
         dna_list.append(str(number))
-    #print(dna_list)
+    print(dna_list)
 
     # TODO: Check database for matching profiles
 
