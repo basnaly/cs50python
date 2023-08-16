@@ -2,4 +2,8 @@ sqlite3 favorites.db
 
 .schema
 
-UPDATE INITCAP(title) AS new_title FROM shows;
+SELECT * FROM shows;
+
+UPDATE INITCAP (title) AS new_title FROM shows;
+
+UPDATE INITCAP (title) FROM shows;
