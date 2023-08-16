@@ -17,8 +17,8 @@ def main():
         for row in reader_db:
             db.append(row)
 
-    subsequences = list(db[0].keys())[1:]
     print(db)
+    subsequences = list(db[0].keys())[1:]
 
     # TODO: Read DNA sequence file into a variable
 
