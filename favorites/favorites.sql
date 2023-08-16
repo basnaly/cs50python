@@ -8,4 +8,6 @@ UPDATE INITCAP (title) AS new_title FROM shows;
 
 UPDATE INITCAP (title) FROM shows;
 
-UPDATE LOWER(title) FROM shows;
+UPDATE shows SET title = LOWER(title);
+
+UPDATE shows SET title = LOWER(title);
