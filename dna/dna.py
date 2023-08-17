@@ -22,7 +22,7 @@ def main():
 
     # print(db)
 
-    subsequences = list(db[0].keys())[1:]
+    subsequence = list(db[0].keys())[1:]
     # print(subsequences)
 
     # TODO: Read DNA sequence file into a variable
@@ -34,9 +34,9 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
 
-    for subsequence in sequence:
-        number = longest_match(sequence, subsequence)
-        # print(number)
+    for i in sequence:
+        number = longest_match(sequence, subsequence[i])
+        print(number)
 
     # TODO: Check database for matching profiles
 
