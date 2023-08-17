@@ -41,9 +41,9 @@ def main():
     # TODO: Check database for matching profiles
 
     is_found = False
-
-    for object in db:
-        db_compare = list((db[object].value())[1:])
+    db_compare=[]
+    for i in db:
+        db_compare = list(db[i].keys())
         print(db_compare)
             # if db_compare == dna:
             #     is_found = True
