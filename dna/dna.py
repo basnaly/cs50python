@@ -21,6 +21,7 @@ def main():
             db.append(row)
             db_compare = list(row.values())[1:]
 
+    print(db)
     print(db_compare)
 
     subsequence = list(db[0].keys())[1:]
@@ -46,6 +47,7 @@ def main():
         print("No match ")
     else:
         
+
 
     return
 
