@@ -12,17 +12,14 @@ def main():
     # TODO: Read database file into a variable
 
     db = []
-    db_compare =[]
 
     with open(sys.argv[1]) as file:
         reader_data = csv.DictReader(file)
 
         for row in reader_data:
             db.append(row)
-            db_compare.append(list(row.values())[1:])
 
     print(db)
-    print(db_compare)
 
     subsequence = list(db[0].keys())[1:]
     # print(subsequences)
