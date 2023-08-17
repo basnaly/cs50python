@@ -42,12 +42,12 @@ def main():
 
     is_found = False
     db_compare = []
-    for i in db:
-        db_compare = list(db[i].values())
+    for object in db:
+        db_compare = list(object.values())[1:]
         print(db_compare)
-            # if db_compare == dna:
-            #     is_found = True
-            #     print(db["name"])
+            if db_compare == dna:
+                is_found = True
+                print(db["name"])
 
     # print("No match ")
 
