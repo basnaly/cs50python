@@ -19,7 +19,8 @@ def main():
 
         for row in reader_data:
             db.append(row)
-            db_compare = list(db_compare) + list(row.values())[1:]
+
+            db_compare = db.values()
 
     print(db)
     print(db_compare)
