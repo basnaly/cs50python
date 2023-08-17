@@ -19,7 +19,7 @@ def main():
 
     for row in reader_data:
         db.append(row)
-        print(db)
+    print(db)
 
     # TODO: Find longest match of each STR in DNA sequence
 
