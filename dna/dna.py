@@ -22,6 +22,8 @@ def main():
 
     # print(db)
 
+    db_compare = list(db)
+
     subsequence = list(db[0].keys())[1:]
     # print(subsequences)
 
@@ -33,12 +35,15 @@ def main():
     # print(sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    dna = []
     for i in range(len(subsequence)):
         number = longest_match(sequence, subsequence[i])
-        print(number)
+        dna.append(number)
+    print(dna)
 
     # TODO: Check database for matching profiles
+
+
 
     return
 
