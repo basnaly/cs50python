@@ -26,8 +26,6 @@ def main():
     subsequence = list(db[0].keys())[1:]
     # print(subsequences)
 
-
-
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2], 'r') as file:
@@ -39,7 +37,7 @@ def main():
     dna = []
     for i in range(len(subsequence)):
         number = longest_match(sequence, subsequence[i])
-        dna.append(number)
+        dna.append(str(number))
     print(dna)
 
     # TODO: Check database for matching profiles
