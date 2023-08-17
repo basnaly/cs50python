@@ -19,6 +19,7 @@ def main():
 
         for row in reader_data:
             db.append(row)
+            dna_number = 
             db_compare
 
     # print(db)
