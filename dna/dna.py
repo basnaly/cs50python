@@ -41,13 +41,13 @@ def main():
     # TODO: Check database for matching profiles
 
     is_found = False
-    db_compare = []
+
     for object in db:
         db_compare = list(object.values())[1:]
         print(db_compare)
             if db_compare == dna:
                 is_found = True
-                print(db["name"])
+                print(object["name"])
 
     # print("No match ")
 
