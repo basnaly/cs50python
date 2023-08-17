@@ -12,22 +12,21 @@ def main():
     # TODO: Read database file into a variable
 
     db = []
-    # subsequences = []
+    db_compare =[]
 
     with open(sys.argv[1]) as file:
         reader_data = csv.DictReader(file)
 
         for row in reader_data:
             db.append(row)
+            db_compare
 
     # print(db)
 
     subsequence = list(db[0].keys())[1:]
     # print(subsequences)
 
-    db_compare =[]
-    for object in db:
-        
+
 
     # TODO: Read DNA sequence file into a variable
 
