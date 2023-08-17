@@ -22,10 +22,12 @@ def main():
 
     # print(db)
 
-    db_compare = list(db)
-
     subsequence = list(db[0].keys())[1:]
     # print(subsequences)
+
+    db_compare =[]
+    for object in db:
+        
 
     # TODO: Read DNA sequence file into a variable
 
