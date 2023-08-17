@@ -27,8 +27,8 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
 
-    with open(sys.argv[2], 'r') :
-        sequence = open(file, "r")
+    with open(sys.argv[2], 'r') as file:
+        sequence = read(file)
 
     print(sequence)
 
