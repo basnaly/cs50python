@@ -43,10 +43,9 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    if dna != db_compare:
-        print("No match ")
-    else:
-        
+    for object in db:
+        if 
+
 
 
     return
