@@ -22,7 +22,7 @@ def main():
 
     print(db)
 
-    subsequence = db[0].keys()[1]
+    subsequence = db[0].keys()
     print(subsequence)
 
     # TODO: Read DNA sequence file into a variable
