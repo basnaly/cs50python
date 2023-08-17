@@ -49,7 +49,7 @@ def main():
         if db_compare == dna:
             if_found = True
             print(db["name"])
-            
+
     print("No match ")
 
 
