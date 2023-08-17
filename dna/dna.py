@@ -19,10 +19,9 @@ def main():
 
         for row in reader_data:
             db.append(row)
-            dna_number = 
-            db_compare
+            db_compare = list(row[keys])
 
-    # print(db)
+    print(db_compare)
 
     subsequence = list(db[0].keys())[1:]
     # print(subsequences)
