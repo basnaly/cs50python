@@ -12,15 +12,17 @@ def main():
     # TODO: Read database file into a variable
 
     db = []
-    # db_compare =[]
+    db_compare =[]
 
     with open(sys.argv[1]) as file:
         reader_data = csv.DictReader(file)
 
         for row in reader_data:
             db.append(row)
+            # db_compare = list(row.values())[1:]
 
-        db_compare = list(db.values())
+        for key, value in db.items():
+            db_compare = value
 
     print(db)
     print(db_compare)
