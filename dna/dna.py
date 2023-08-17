@@ -12,6 +12,7 @@ def main():
     # TODO: Read database file into a variable
 
     db = []
+    subsequence = []
 
     with open(sys.argv[1]) as file:
         reader_data = csv.DictReader(file)
@@ -21,8 +22,8 @@ def main():
 
     print(db)
 
-    subsequence = []
-    
+    subsequence = db[0].keys()[1:]
+    print(subsequence)
 
     # TODO: Read DNA sequence file into a variable
 
