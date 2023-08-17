@@ -49,9 +49,8 @@ def main():
             is_found = True
             print(object["name"])
 
-    print("No match ")
-
-
+    if (is_found == False):
+        print("No match ")
 
     return
 
