@@ -34,7 +34,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
 
-    for i in sequence:
+    for i in range(len(subsequence)):
         number = longest_match(sequence, subsequence[i])
         print(number)
 
