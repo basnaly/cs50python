@@ -45,11 +45,11 @@ def main():
     for object in db:
         db_compare = list(object.values())[1:]
         print(db_compare)
-            if db_compare == dna:
-                is_found = True
-                print(object["name"])
+        if db_compare == dna:
+            is_found = True
+            print(object["name"])
 
-    # print("No match ")
+    print("No match ")
 
 
 
