@@ -30,11 +30,13 @@ def main():
     with open(sys.argv[2]) as file:
         sequence = open(file, "r")
 
+    print(sequence)
+
     # TODO: Find longest match of each STR in DNA sequence
 
     for subsequence in sequence:
         number = longest_match(sequence, subsequence)
-        print(number)
+        # print(number)
 
     # TODO: Check database for matching profiles
 
