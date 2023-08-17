@@ -21,7 +21,7 @@ def main():
             db.append(row)
             # db_compare = list(row.values())[1:]
 
-        for key, value in db.items():
+        for value in db:
             db_compare = value
 
     print(db)
