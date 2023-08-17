@@ -20,18 +20,19 @@ def main():
         for row in reader_data:
             db.append(row)
 
-    print(db)
+    # print(db)
 
     subsequences = list(db[0].keys())[1:]
-    print(subsequences)
+    # print(subsequences)
 
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2]) as file:
         sequence = open(file, "r")
-    
 
     # TODO: Find longest match of each STR in DNA sequence
+
+    number = longest_match(sequence, subsequence)
 
     # TODO: Check database for matching profiles
 
