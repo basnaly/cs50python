@@ -44,7 +44,8 @@ def main():
     # TODO: Check database for matching profiles
 
     for object in db:
-        if 
+        if db_compare == dna:
+            print(db["name"])
 
 
 
