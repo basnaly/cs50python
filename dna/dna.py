@@ -22,12 +22,13 @@ def main():
 
     print(db)
 
-    subsequence = list(db[0].keys())[1:]
-    print(subsequence)
+    subsequences = list(db[0].keys())[1:]
+    print(subsequences)
 
     # TODO: Read DNA sequence file into a variable
 
-
+    with open(sys.argv[2]) as file:
+        sequence = 
 
     # TODO: Find longest match of each STR in DNA sequence
 
