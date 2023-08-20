@@ -17,8 +17,6 @@ with open("students.csv") as file:
             house_names.append(row["house"])
             result = db.execute("INSERT INTO houses (house_name, head_name) VALUES (?, ?)", row["house"], row["head"])
 
-        print(result)
-
         # Add data to assignment table
         db.execute("INSERT INTO assignments (student_id, house_id) VALUES (?, ?)", row["id"], house_names.index(row["house"]) + 1)
 
