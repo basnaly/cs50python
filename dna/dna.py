@@ -39,7 +39,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    user = "Not match"
+    user = "Not match\n"
 
     for el in db:
         db_compare = list(el.values())[1:]
