@@ -9,9 +9,7 @@ with open("students.csv") as file:
         db.append(row)
         db.execute("INSERT INTO students (student_name, id) VALUES (?, ?)", row["student_name"], row["id"])
 
-        db.execute("INSERT INTO houses (house_name, head_name) VALUES (?, ?)", row["house_name"], row["head_name"])
-
-        
-    print(db)
+        result = db.execute("INSERT INTO houses (house_name, head_name) VALUES (?, ?)", row["house_name"], row["head_name"])
+        print(result)
 
 
