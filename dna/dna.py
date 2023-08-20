@@ -17,10 +17,10 @@ def main():
 
         for row in reader:
             db.append(row)
-        print(db)
+        # print(db)
 
     subsequences = list(db[0].keys())[1:]
-    print(subsequences)
+    # print(subsequences)
 
     # TODO: Read DNA sequence file into a variable
 
@@ -35,7 +35,7 @@ def main():
     for el in subsequences:
         number = longest_match(sequence, el)
         dna.append(str(number))
-    print(dna)
+    # print(dna)
 
     # TODO: Check database for matching profiles
 
