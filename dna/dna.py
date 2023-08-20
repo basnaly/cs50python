@@ -40,7 +40,10 @@ def main():
 
     # TODO: Check database for matching profiles
 
-   
+   user = "Not match"
+
+    for el in db:
+        db_compare = 
 
     return
 
