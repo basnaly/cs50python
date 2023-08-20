@@ -42,7 +42,15 @@ def main():
 
     is_found = False
 
-    
+    for el in dna:
+        db_compare = list(el.values())[1:]
+        if (db_compare == dna):
+            is_found = True
+            break
+
+    if (is_found != True):
+        print("No match")
+
     return
 
 
