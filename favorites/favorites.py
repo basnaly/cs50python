@@ -6,5 +6,7 @@ updated_title = row.title()
 
 db = SQL("sqlite:///favorites.db")
 
-for row in db:
-    rows = db.execute("UPDATE shows SET title = ? WHERE title = ?", updated_title, row)
+rows = db.execute("UPDATE shows SET title = ? WHERE title = ?", updated_title, row)
+
+for row in rows:
+    
