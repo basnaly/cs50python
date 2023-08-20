@@ -4,3 +4,4 @@ sqlite3 roster.db
 
 SELECT * FROM students;
 
+sqlite3 database.db
