@@ -1,0 +1,5 @@
+sqlite3 da.db
+
+.schema
+
+SELECT * FROM students;
