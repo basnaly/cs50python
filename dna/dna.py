@@ -49,7 +49,7 @@ def main():
             is_found == True
             print(el["name"])
 
-    else:
+    if (is_found != True):
         print("Not match")
 
     return
