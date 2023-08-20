@@ -40,6 +40,12 @@ def main():
 
     # TODO: Check database for matching profiles
 
+    
+
+    for el in db:
+        db_compare = list(el.values())[1:]
+        if (db_compare == dna)
+
     return
 
 
