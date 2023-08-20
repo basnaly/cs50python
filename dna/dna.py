@@ -44,9 +44,10 @@ def main():
 
     for el in db:
         db_compare = list(el.values())[1:]
+        print(db_compare)
         if (db_compare == dna):
             is_found == True
-            print(el.["name"])
+            # print(el.["name"])
 
     else:
         print("Not match")
