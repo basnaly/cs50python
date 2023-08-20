@@ -17,10 +17,12 @@ CREATE TABLE houses (
     house_name TEXT,
     head_name TEXT,
     PRIMARY KEY(id)
-),
+);
 
 CREATE TABLE assignments (
     student_id INTEGER,
     house_id INTEGER,
-    
-)
+    FOREING KEY (student_id) REFERENCES students(id),
+    FOREING KEY (house_id) REFERENCES houses(id),
+    PRIMARY KEY (student_id, house_id)
+);
