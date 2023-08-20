@@ -22,5 +22,5 @@ with open("students.csv") as file:
         print(result)
 
         # Add data to assignment table
-        db.execute("INSERT INTO assignments (student_id, hous_id) VALUES (?, ?)", row["id"], house_names[])
+        db.execute("INSERT INTO assignments (student_id, hous_id) VALUES (?, ?)", row["id"], house_names.index())
 
