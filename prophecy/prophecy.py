@@ -9,7 +9,10 @@ with open("students.csv") as file:
 
     house_names = []
     for row in reader:
+        # Add data to students table
         db.execute("INSERT INTO students (student_name, id) VALUES (?, ?)", row["student_name"], row["id"])
+
+        # Add data to houses table
         if row["house"] in house_names:
             continue
         else:
@@ -18,4 +21,6 @@ with open("students.csv") as file:
 
         print(result)
 
+        # Add data to assignment table
+        db.execute("INSERT INTO assignments (student_id, hous_id) VALUES (?, ?)", row["student_id"], row["house_id"])
 
