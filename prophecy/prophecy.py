@@ -11,7 +11,7 @@ with open("students.csv") as file:
 
         db.execute("INSERT INTO students (student_name, id) VALUES (?, ?)", row["student_name"], row["id"])
 
-        result = db.execute("INSERT INTO houses (house_name, head_name) VALUES (?, ?)", row["house_name"], row["head_name"])
+        result = db.execute("INSERT INTO houses (house_name, head_name) VALUES (?, ?)", row["house"], row["head"])
         print(result)
 
 
