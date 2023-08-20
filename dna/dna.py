@@ -39,13 +39,14 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    user = "Not match\n"
+    user = "No match"
 
     for el in db:
         db_compare = list(el.values())[1:]
         if db_compare == dna:
             user = el["name"]
-            print(user)
+
+    print(user)
 
     return
 
