@@ -47,9 +47,12 @@ def main():
         print(db_compare)
         if (db_compare == dna):
             is_found == True
-            print(el["name"])
+            ## print(el["name"])
 
-    print("Not match")
+    if (is_found == True):
+        print(el["name"])
+    else:
+        print("Not match")
 
     return
 
