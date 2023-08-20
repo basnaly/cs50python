@@ -35,7 +35,7 @@ def main():
 
     for el in subsequences:
         number = longest_match(sequence, el)
-        dna.append(number)
+        dna.append(str(number))
     print(dna)
 
     # TODO: Check database for matching profiles
@@ -47,7 +47,7 @@ def main():
         print(db_compare)
         if (db_compare == dna):
             is_found == True
-            # print(el.["name"])
+            print(el["name"])
 
     else:
         print("Not match")
