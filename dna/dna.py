@@ -42,7 +42,7 @@ def main():
 
     is_found = False
 
-    for el in dna:
+    for el in db:
         db_compare = list(el.values())[1:]
         print(db_compare)
     #     if (db_compare == dna):
