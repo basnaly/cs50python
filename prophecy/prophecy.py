@@ -13,6 +13,7 @@ with open("students.csv") as file:
 
         house_names = []
         result = db.execute("INSERT INTO houses (house_name, head_name) VALUES (?, ?)", row["house"], row["head"])
+            if 
         print(result)
 
 
