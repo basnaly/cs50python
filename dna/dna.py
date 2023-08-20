@@ -40,17 +40,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    is_found = False
-
-    for el in db:
-        db_compare = list(el.values())[1:]
-        print(db_compare)
-    #     if (db_compare == dna):
-    #         is_found = True
-    #         break
-
-    # if (is_found != True):
-    #     print("No match")
+   
 
     return
 
