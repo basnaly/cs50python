@@ -1,11 +1,11 @@
 import csv
 
-from cs50 import SQL
-
 db = []
 
 with open("students.csv") as file:
     reader = csv.DictReader(file)
+
+rows = db.execute("SELECT * FROM shows")
 
     for row in reader:
         db.append(row)
