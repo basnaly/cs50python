@@ -16,5 +16,9 @@ CREATE TABLE houses (
 CREATE TABLE assignments (
     student_id INTEGER,
     house_id INTEGER,
-    PRIMARY KEY students REFERENCES student_id (id),
-)
+    FOREIGN KEY(student_id) REFERENCES students(id),
+    FOREIGN KEY(house_id) REFERENCES houses(id),
+    PRIMARY KEY(student_id, house_id)
+);
+
+.schema
