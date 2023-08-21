@@ -19,3 +19,5 @@ UPDATE shows SET title = "How I Met Your Mother" WHERE title LIKE "How I Met You
 | 1   | How I Met Your Mother              |
 | 2   | The Sopranos                       |
  ...
+
+ SELECT * FROM shows ORDER BY title;
