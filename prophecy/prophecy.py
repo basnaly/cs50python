@@ -10,6 +10,7 @@ with open("students.csv") as file:
     list_houses = []
     for row in reader:
         # Add data to the student table
+        list_houses.append(row)
         db.execute("INSERT INTO students VALUES(?, ?)", row["student_name"], row["id"])
 
         # Add data to the houses table
