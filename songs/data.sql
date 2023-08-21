@@ -47,3 +47,12 @@ SELECT * FROM songs;
 | 6  | Bazzi               |
 | 7  | Bebe Rexha          |
  ...
+
+
+ SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
+
++-------------+--------------+-------------------+
+| AVG(energy) | AVG(valence) | AVG(danceability) |
++-------------+--------------+-------------------+
+| 0.65906     | 0.484443     | 0.71646           |
++-------------+--------------+-------------------+
