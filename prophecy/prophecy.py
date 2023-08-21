@@ -10,8 +10,11 @@ with open("students.csv") as file:
     list_houses = []
     for row in reader:
         # Add data to the student table
-        db.execute("INSERT INTO students VALUES(?,?)", row["student_name"], row["id"])
+        db.execute("INSERT INTO students VALUES(?, ?)", row["student_name"], row["id"])
 
         # Add data to the houses table
         if row["houses"] not in list_houses:
-            db.execute("INSERT INTO houses VALUES(?,?)", row["house"], row["head"])
+            db.execute("INSERT INTO houses VALUES(?, ?)", row["house"], row["head"])
+
+        # Add data to the assignments table
+        db.execute("INSERT INTO assignments VALUES(?, ?)", row["id"], list_houses.index(row[""]) + 1)
