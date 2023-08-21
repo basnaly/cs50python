@@ -11,12 +11,12 @@ with open("students.csv") as file:
     for row in reader:
         print(row)
         # Add data to the student table
-        db.execute("INSERT INTO students VALUES(?, ?)", row["student_name"], int(row["id"]))
+        db.execute("INSERT INTO students (student_name, id) VALUES(?, ?)", row["student_name"], int(row["id"]))
 
         # Add data to the houses table
-        if row["houses"] not in list_houses:
+        if row["house"] not in list_houses:
             list_houses.append(row["house"])
-            db.execute("INSERT INTO houses VALUES(?, ?)", row["house"], row["head"])
+            db.execute("INSERT INTO houses (house_name, head_name) VALUES(?, ?)", row["house"], row["head"])
 
         # Add data to the assignments table
-        db.execute("INSERT INTO assignments VALUES(?, ?)", int(row["id"]), list_houses.index(row["house"]) + 1)
+        db.execute("INSERT INTO assignments (student_id, house_id) VALUES(?, ?)", int(row["id"]), list_houses.index(row["house"]) + 1)
