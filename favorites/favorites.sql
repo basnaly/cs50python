@@ -21,3 +21,17 @@ UPDATE shows SET title = "How I Met Your Mother" WHERE title LIKE "How I Met You
  ...
 
  SELECT * FROM shows ORDER BY title;
+
+ +-----+------------------------------------+
+| id  |               title                |
++-----+------------------------------------+
+| 116 | Adventure Time                     |
+| 154 | Anne With An E                     |
+| 31  | Archer                             |
+| 100 | Arrested Development               |
+| 24  | Arrow                              |
+| 144 | Atlanta                            |
+| 123 | Avatar                             |
+| 34  | Avatar The Last Airbender          |
+| 51  | Avatar The Last Airbender
+ ...
