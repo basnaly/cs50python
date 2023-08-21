@@ -22,3 +22,5 @@ CREATE TABLE assignments (
 );
 
 .schema
+
+DELETE FROM students;
