@@ -1,4 +1,4 @@
-SELECT count(title) FROM movies;
+SELECT title FROM movies WHERE year = 2008;
 
 
 -- SELECT title FROM movies LIMIT 5;
