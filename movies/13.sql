@@ -5,7 +5,7 @@ SELECT people.name FROM
    WHERE people.name = 'Kevin Bacon') AS Kevin_movies, stars JOIN people
    ON people.id = stars.person_id
    AND Kevin_movies.id = stars.movie_id
-   WHERE ;
+   WHERE NOT people.name = 'Kevin Bacon' ORDER BY people.name;
 
 
 
