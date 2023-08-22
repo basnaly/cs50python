@@ -2,7 +2,8 @@ SELECT people.name FROM
   (SELECT movies.id as Kevin_movies
    FROM people, movies JOIN stars
    ON people.id = stars.person_id AND movies.id = stars.movie_id
-   WHERE people.name = 'Kevin Bacon'),
+   WHERE people.name = 'Kevin Bacon'), stars JOIN people
+   ON people.id = stars.person_id
 
 
 
