@@ -4,7 +4,7 @@ SELECT movies.title
    WHERE people.name IN ('Bradley Cooper', 'Jennifer Lawrence');
 
 
-SELECT bradley_movies FROM
+SELECT movies.title FROM
    (SELECT movies.title as title
    FROM people, movies JOIN stars
    ON people.id = stars.person_id AND movies.id = stars.movie_id
