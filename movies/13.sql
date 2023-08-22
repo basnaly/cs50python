@@ -1,4 +1,4 @@
-SELECT people.name, movies.tirle
+SELECT people.name, movies.title
    FROM people, movies JOIN stars
    ON people.id = stars.person_id AND movies.id = stars.movie_id
    WHERE people.name = 'Kevin Bacon';
