@@ -1,4 +1,4 @@
-SELECT title FROM movies;
+SELECT count(title) FROM movies;
 
 
 -- SELECT title FROM movies LIMIT 5;
