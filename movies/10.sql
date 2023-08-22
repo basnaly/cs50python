@@ -1,8 +1,7 @@
-SELECT DISTINCT people.name
+SELECT DISTINCT people.name, ratings.rating
    FROM people, ratings JOIN directors
-   ON people.id = stars.person_id AND movies.id = stars.movie_id
-   WHERE movies.year = 2004
-   ORDER BY people.birth;
+   ON people.id = directors.person_id AND directors.movie_id = ratings.movie_id
+   WHERE ratings.rating >= 9.0;
 
    list the names of all people who have directed a movie that
    received a rating of at least 9.0.
