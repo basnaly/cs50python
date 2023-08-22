@@ -6,7 +6,7 @@ SELECT movies.title
 
 SELECT DISTINCT title FROM
 
-   (SELECT movies.id as id
+   (SELECT movies.id as id, movies.title as title
    FROM people, movies JOIN stars
    ON people.id = stars.person_id AND movies.id = stars.movie_id
    WHERE people.name ='Bradley Cooper') AS bradley_movies, people
