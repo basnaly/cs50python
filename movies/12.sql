@@ -4,10 +4,10 @@ SELECT movies.title
    WHERE people.name IN ('Bradley Cooper', 'Jennifer Lawrence');
 
 
-(SELECT movies.title
+SELECT movies.title
    FROM people, movies JOIN stars
    ON people.id = stars.person_id AND movies.id = stars.movie_id
-   WHERE people.name ='Bradley Cooper') as Bradly
+   WHERE people.name ='Bradley Cooper' 
 
    'Jennifer Lawrence');
 
