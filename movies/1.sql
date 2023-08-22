@@ -1,7 +1,7 @@
+SELECT title FROM movies;
 
 
-
-SELECT title FROM movies LIMIT 5
+SELECT title FROM movies LIMIT 5;
 
 +-----------------------------+
 |            title            |
