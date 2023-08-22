@@ -1,5 +1,5 @@
-SELECT DISTINCT people.title, people.name
-   FROM people, movies JOIN stars
+SELECT DISTINCT people.title, people.name, ratings.rating
+   FROM people, movies JOIN ratings
    ON people.id = stars.person_id AND movies.id = stars.movie_id
    WHERE people.name = 'Chadwick Boseman'
    ORDER BY people.rating;
