@@ -6,14 +6,14 @@ SELECT movies.title
 
 SELECT title FROM
 
-   (SELECT movies.title as title
+   (SELECT title as title
    FROM people, movies JOIN stars
    ON people.id = stars.person_id AND movies.id = stars.movie_id
    WHERE people.name ='Bradley Cooper') AS bradley_movies, people
 
    JOIN stars
    ON people.id = stars.person_id
-   AND movies.title = bradley_movies.title
+   AND title = bradley_movies.title
    WHERE people.name = 'Jennifer Lawrence';
 
 
