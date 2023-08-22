@@ -1,7 +1,7 @@
-SELECT movies.title
+SELECT people.name, movies.tirle
    FROM people, movies JOIN stars
    ON people.id = stars.person_id AND movies.id = stars.movie_id
-   WHERE people.name IN ('Bradley Cooper', 'Jennifer Lawrence');
+   WHERE people.name = 'Kevin Bacon';
 
 
 
