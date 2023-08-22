@@ -6,7 +6,7 @@ SELECT movies.title
 
 
 -- SELECT movies.title, people.name
---    FROM people, movies JOIN stars
+--    FROM people AS people1, movies JOIN stars 
 --    ON people.id = stars.person_id AND movies.id = stars.movie_id
 --    WHERE people.name IN ('Bradley Cooper', 'Jennifer Lawrence');
 
