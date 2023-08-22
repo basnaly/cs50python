@@ -1,4 +1,4 @@
-SELECT DISTINCT people.name
+SELECT COUNT(DISTINCT people.name)
    FROM people, ratings JOIN directors
    ON people.id = directors.person_id AND directors.movie_id = ratings.movie_id
    WHERE ratings.rating >= 9.0;
