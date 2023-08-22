@@ -4,7 +4,7 @@ SELECT movies.title
    WHERE people.name IN ('Bradley Cooper', 'Jennifer Lawrence');
 
 
-SELECT title FROM
+SELECT DISTINCT title FROM
 
    (SELECT title as title
    FROM people, movies JOIN stars
