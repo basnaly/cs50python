@@ -97,3 +97,46 @@ SELECT airports.city, passengers.passport_number, flights.destination_airport_id
     ON airports.id = flights.origin_airport_id
     AND flights.id = passengers.flight_id
     WHERE flights.month = 7 AND flights.day = 29 AND airports.city = 'Fiftyville';
+
++------------+-----------------+------------------------+
+|    city    | passport_number | destination_airport_id |
++------------+-----------------+------------------------+
+| Fiftyville | 2835165196      | 6                      |
+| Fiftyville | 6131360461      | 6                      |
+| Fiftyville | 3231999695      | 6                      |
+| Fiftyville | 3592750733      | 6                      |
+| Fiftyville | 2626335085      | 6                      |
+| Fiftyville | 6117294637      | 6                      |
+| Fiftyville | 2996517496      | 6                      |
+| Fiftyville | 3915621712      | 6                      |
+| Fiftyville | 4149859587      | 11                     |
+| Fiftyville | 9183348466      | 11                     |
+| Fiftyville | 7378796210      | 11                     |
+| Fiftyville | 7874488539      | 11                     |
+| Fiftyville | 4195341387      | 11                     |
+| Fiftyville | 6263461050      | 11                     |
+| Fiftyville | 3231999695      | 11                     |
+| Fiftyville | 7951366683      | 11                     |
+| Fiftyville | 7214083635      | 4                      |
+| Fiftyville | 1695452385      | 4                      |
+| Fiftyville | 5773159633      | 4                      |
+| Fiftyville | 1540955065      | 4                      |
+| Fiftyville | 8294398571      | 4                      |
+| Fiftyville | 1988161715      | 4                      |
+| Fiftyville | 9878712108      | 4                      |
+| Fiftyville | 8496433585      | 4                      |
+| Fiftyville | 7597790505      | 1                      |
+| Fiftyville | 6128131458      | 1                      |
+| Fiftyville | 6264773605      | 1                      |
+| Fiftyville | 3642612721      | 1                      |
+| Fiftyville | 4356447308      | 1                      |
+| Fiftyville | 7441135547      | 1                      |
+| Fiftyville | 7894166154      | 9                      |
+| Fiftyville | 6034823042      | 9                      |
+| Fiftyville | 4408372428      | 9                      |
+| Fiftyville | 2312901747      | 9                      |
+| Fiftyville | 1151340634      | 9                      |
+| Fiftyville | 8174538026      | 9                      |
+| Fiftyville | 1050247273      | 9                      |
+| Fiftyville | 7834357192      | 9                      |
++------------+-----------------+------------------------+
