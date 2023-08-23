@@ -96,4 +96,4 @@ SELECT airports.city, airports.full_name, passengers.passport_number
     JOIN passengers
     ON airports.id = flights.origin_airport_id
     AND flights.id = passengers.flight_id
-    WHERE month = 7 AND day = 28;
+    WHERE flights.month = 7 AND flights.day = 28 AND airports.city = 'Fiftyville';
