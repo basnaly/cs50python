@@ -91,7 +91,7 @@ SELECT caller, receiver, duration
 | (338) 555-6650 | (704) 555-2131 | 54       |
 +----------------+----------------+----------+
 
-SELECT airports.city, airport.full_name, passengers.passport_number
+SELECT airports.city, airports.full_name, passengers.passport_number
     FROM airports, flights
     JOIN passengers
     ON airports.id = flights.origin_airport_id
