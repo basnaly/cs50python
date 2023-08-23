@@ -50,7 +50,8 @@ SELECT activity, license_plate, hour, minute
 | exit     | G412CB7       | 10   | 20     |
 +----------+---------------+------+--------+
 
--- According to Eugene thief there was withdrawing some money on the ATM on Leggett Street. Find who withdrew.
+-- According to Eugene thief there was withdrawing some money on the ATM on Leggett Street.
+-- Find who withdrew.
 SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, people.license_plate, people.phone_number, people.passport_number
     FROM atm_transactions, bank_accounts
     JOIN people
@@ -73,8 +74,10 @@ SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, pe
 | 81061156       | 438727    | Benista | 8X428L0       | (338) 555-6650 | 9586786673      |
 +----------------+-----------+---------+---------------+----------------+-----------------+
 
--- According to Raymond
-SELECT caller, receiver, duration, people.name
+-- We can assume that the thief is Bruce becouse he's license_plate appears in 2 tables.
+-- According to Raymond, the thief called someone who talked to them for less than a minute.
+-- Find people spoken this day less than 60 sec
+SELECT caller, receiver, duration, people.name, people.passport_number
     FROM phone_calls
     JOIN people
     ON phone_calls.receiver = people.phone_number
@@ -93,6 +96,11 @@ SELECT caller, receiver, duration, people.name
 | (826) 555-1652 | (066) 555-9701 | 55       | Doris      |
 | (338) 555-6650 | (704) 555-2131 | 54       | Anna       |
 +----------------+----------------+----------+------------+
+
+-- The theif Bruce spoke with Robin. So she is his accomplice.
+-- According to Raymond, the thief say that they were planning to take the earliest flight out
+-- of Fiftyville tomorrow.
+-- Find the original city and passport
 
 SELECT airports.city, passengers.passport_number, flights.destination_airport_id
     FROM airports, flights
