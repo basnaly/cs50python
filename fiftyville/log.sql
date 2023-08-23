@@ -33,7 +33,7 @@ SELECT name, transcript
 --         of Fiftyville tomorrow. The thief then asked the person on the
 --         other end of the phone to purchase the flight ticket.
 
--- Find bakery activities
+-- According to Ruth, the thief left the bakery on car, find bakery parking lot activities
 SELECT activity, license_plate, hour, minute
     FROM bakery_security_logs
     WHERE month = 7 AND day = 28 AND hour = 10
@@ -50,6 +50,7 @@ SELECT activity, license_plate, hour, minute
 | exit     | G412CB7       | 10   | 20     |
 +----------+---------------+------+--------+
 
+-- According to Eugene thief there was withdrawing some money on the ATM on Leggett Street. Find who withdrew.
 SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, people.license_plate, people.phone_number, people.passport_number
     FROM atm_transactions, bank_accounts
     JOIN people
@@ -72,6 +73,7 @@ SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, pe
 | 81061156       | 438727    | Benista | 8X428L0       | (338) 555-6650 | 9586786673      |
 +----------------+-----------+---------+---------------+----------------+-----------------+
 
+-- According to Raymond
 SELECT caller, receiver, duration, people.name
     FROM phone_calls
     JOIN people
