@@ -77,7 +77,7 @@ SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, pe
 -- We can assume that the thief is Bruce becouse he's license_plate appears in 2 tables.
 -- According to Raymond, the thief called someone who talked to them for less than a minute.
 -- Find people spoken this day less than 60 sec
-SELECT caller, receiver, duration, people.name, people.passport_number
+SELECT caller, receiver, duration, people.name
     FROM phone_calls
     JOIN people
     ON phone_calls.receiver = people.phone_number
@@ -100,7 +100,7 @@ SELECT caller, receiver, duration, people.name, people.passport_number
 -- The theif Bruce spoke with Robin. So she is his accomplice.
 -- According to Raymond, the thief say that they were planning to take the earliest flight out
 -- of Fiftyville tomorrow.
--- Find the original city and passport
+-- Find the original city and passport of the thief.
 
 SELECT airports.city, passengers.passport_number, flights.destination_airport_id
     FROM airports, flights
