@@ -15,28 +15,16 @@ SELECT description
 SELECT activity, license_plate, hour, minute
     FROM bakery_security_logs
     WHERE month = 7 AND day = 28 AND hour = 10
-    AND minute BETWEEN 5 AND 30;
+    AND minute BETWEEN 5 AND 20;
++----------+---------------+------+--------+
+| activity | license_plate | hour | minute |
++----------+---------------+------+--------+
+| entrance | R3G7486       | 10   | 8      |
+| entrance | 13FNH73       | 10   | 14     |
+| exit     | 5P2BI95       | 10   | 16     |
+| exit     | 94KL13X       | 10   | 18     |
+| exit     | 6P58WS2       | 10   | 18     |
+| exit     | 4328GD8       | 10   | 19     |
+| exit     | G412CB7       | 10   | 20     |
++----------+---------------+------+--------+
 
-+----------+---------------+
-| activity | license_plate |
-+----------+---------------+
-| entrance | R3G7486       |
-| entrance | 13FNH73       |
-+----------+---------------+
-
-SELECT activity, license_plate
-    FROM bakery_security_logs
-    WHERE month = 7 AND day = 28 AND hour = 10
-    AND minute BETWEEN 15 AND 30 AND activity = 'exit'
-
-+----------+---------------+
-| activity | license_plate |
-+----------+---------------+
-| entrance | R3G7486       |
-| entrance | 13FNH73       |
-| exit     | 5P2BI95       |
-| exit     | 94KL13X       |
-| exit     | 6P58WS2       |
-| exit     | 4328GD8       |
-| exit     | G412CB7       |
-+----------+---------------+
