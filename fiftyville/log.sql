@@ -51,7 +51,7 @@ SELECT activity, license_plate, hour, minute
 | exit     | G412CB7       | 10   | 20     |
 +----------+---------------+------+--------+
 
-SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, people.license_plate, 
+SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, people.license_plate, people.phone_number, people.passport_number
     FROM atm_transactions, bank_accounts
     JOIN people
     ON atm_transactions.account_number = bank_accounts.account_number
