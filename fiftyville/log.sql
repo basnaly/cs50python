@@ -74,7 +74,8 @@ SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, pe
 +----------------+-----------+---------+---------------+----------------+-----------------+
 
 SELECT caller, receiver, duration
-    FROM phone_calls
+    FROM phone_calls,people
+    JOIN
     WHERE month = 7 AND day = 28 AND duration < 60;
 
 +----------------+----------------+----------+
