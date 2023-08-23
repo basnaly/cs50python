@@ -51,6 +51,7 @@ SELECT activity, license_plate, hour, minute
 | exit     | G412CB7       | 10   | 20     |
 +----------+---------------+------+--------+
 
-SELECT account_number, amount
+SELECT account_number, amount, transaction_type
     FROM atm_transactions
-    WHERE month = 7 AND day = 28 AND hour = 10
+    WHERE month = 7 AND day = 28 AND atm_location = 'Leggett Street'
+    AND transaction_type = 'withdraw';
