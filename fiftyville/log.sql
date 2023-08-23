@@ -11,6 +11,12 @@ SELECT description
 -- at the time – each of their interview transcripts mentions the bakery. |
 -- | Littering took place at 16:36. No known witnesses.
 
+-- Find interviews reports
+
+SELECT name, transcript
+    FROM interviews
+    WHERE month = 7 AND day = 28;
+
 -- Find bakery activities
 SELECT activity, license_plate, hour, minute
     FROM bakery_security_logs
