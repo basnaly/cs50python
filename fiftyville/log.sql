@@ -91,4 +91,5 @@ SELECT caller, receiver, duration
 | (338) 555-6650 | (704) 555-2131 | 54       |
 +----------------+----------------+----------+
 
-SELECT 
+SELECT city
+    FROM airports
