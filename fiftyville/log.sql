@@ -14,18 +14,20 @@ SELECT description
 -- Find bakery activities
 SELECT activity, license_plate
     FROM bakery_security_logs
-    WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 5 AND 15
-    AND minute BETWEEN 15 AND 20 AND activity = 'entrance';
+    WHERE month = 7 AND day = 28 AND hour = 10
+    AND minute BETWEEN 5 AND 15 AND activity = 'entrance';
 
 +----------+---------------+
 | activity | license_plate |
 +----------+---------------+
-| exit     | G412CB7       |
+| entrance | R3G7486       |
+| entrance | 13FNH73       |
 +----------+---------------+
 
 SELECT activity, license_plate
     FROM bakery_security_logs
-    WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 0 AND 20;
+    WHERE month = 7 AND day = 28 AND hour = 10
+    AND minute BETWEEN 15 AND 25 AND activity = 'exit'
 
 +----------+---------------+
 | activity | license_plate |
