@@ -27,7 +27,7 @@ SELECT activity, license_plate
 SELECT activity, license_plate
     FROM bakery_security_logs
     WHERE month = 7 AND day = 28 AND hour = 10
-    AND minute BETWEEN 15 AND 25 AND activity = 'exit'
+    AND minute BETWEEN 15 AND 30 AND activity = 'exit'
 
 +----------+---------------+
 | activity | license_plate |
