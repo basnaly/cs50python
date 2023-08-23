@@ -1,21 +1,25 @@
+SELECT DISTINCT movies.title
+   FROM people, movies,
 
-SELECT DISTINCT bradley_movies.title FROM
+   (SELECT movies.id AS id
+   FROM movies, people
+   JOIN stars
+   ON movies.id = stars.movie_id
+   AND people.id = stars.person_id
+   WHERE people.name = 'Bradley Cooper') AS bradley_movie
 
-   (SELECT movies.id as id, movies.title as title
-   FROM people, movies JOIN stars
-   ON people.id = stars.person_id AND movies.id = stars.movie_id
-   WHERE people.name ='Bradley Cooper') AS bradley_movies,
-
-   people JOIN stars
+   JOIN stars
    ON people.id = stars.person_id
-   AND stars.movie_id = bradley_movies.id
-   WHERE people.name = 'Jennifer Lawrence';
+   AND movies.id = stars.movie_id
+   WHERE movies.id = bradley_movie.id AND people.name = 'Jennifer Lawrence';
 
-+-------------------------+
-|          title          |
-+-------------------------+
-| Silver Linings Playbook |
-| Serena                  |
-| American Hustle         |
-| Joy                     |
-+-------------------------+
+
+-- +-------------------------+
+-- |          title          |
+-- +-------------------------+
+-- | Silver Linings Playbook |
+-- | Serena                  |
+-- | American Hustle         |
+-- | Joy                     |
+-- +-------------------------+
+
