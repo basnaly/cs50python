@@ -101,3 +101,10 @@ CREATE TABLE bakery_security_logs (
     license_plate TEXT,
     PRIMARY KEY(id)
 );
+
+.tables
+
+airports              crime_scene_reports   people
+atm_transactions      flights               phone_calls
+bakery_security_logs  interviews
+bank_accounts         passengers
