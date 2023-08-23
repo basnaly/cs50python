@@ -51,4 +51,6 @@ SELECT activity, license_plate, hour, minute
 | exit     | G412CB7       | 10   | 20     |
 +----------+---------------+------+--------+
 
-SELECT
+SELECT account_number, amount
+    FROM atm_transactions
+    WHERE month = 7 AND day = 28 AND hour = 10
