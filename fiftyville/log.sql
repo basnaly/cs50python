@@ -51,7 +51,10 @@ SELECT activity, license_plate, hour, minute
 | exit     | G412CB7       | 10   | 20     |
 +----------+---------------+------+--------+
 
-SELECT account_number, amount
-    FROM atm_transactions
+SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, people.license_plate
+    FROM atm_transactions, bank_accounts
+    JOIN people
+    ON atm_transactions.account_number = bank_accounts.account_number
+    AND bank_accounts.person_id = people.id
     WHERE month = 7 AND day = 28 AND atm_location = 'Leggett Street'
     AND transaction_type = 'withdraw';
