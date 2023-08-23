@@ -12,10 +12,10 @@ SELECT description
 -- | Littering took place at 16:36. No known witnesses.
 
 -- Find bakery activities
-SELECT activity, license_plate
+SELECT activity, license_plate, hour, minute
     FROM bakery_security_logs
     WHERE month = 7 AND day = 28 AND hour = 10
-    AND minute BETWEEN 5 AND 15 AND activity = 'entrance';
+    AND minute BETWEEN 5 AND 30;
 
 +----------+---------------+
 | activity | license_plate |
