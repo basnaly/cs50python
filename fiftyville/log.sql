@@ -59,3 +59,20 @@ SELECT atm_transactions.account_number, bank_accounts.person_id, people.name, pe
     WHERE atm_transactions.month = 7 AND atm_transactions.day = 28
     AND atm_transactions.atm_location = 'Leggett Street'
     AND atm_transactions.transaction_type = 'withdraw';
+
++----------------+-----------+---------+---------------+----------------+-----------------+
+| account_number | person_id |  name   | license_plate |  phone_number  | passport_number |
++----------------+-----------+---------+---------------+----------------+-----------------+
+| 49610011       | 686048    | Bruce   | 94KL13X       | (367) 555-5533 | 5773159633      |
+| 26013199       | 514354    | Diana   | 322W7JE       | (770) 555-1861 | 3592750733      |
+| 16153065       | 458378    | Brooke  | QX4YZN3       | (122) 555-4581 | 4408372428      |
+| 28296815       | 395717    | Kenny   | 30G67EN       | (826) 555-1652 | 9878712108      |
+| 25506511       | 396669    | Iman    | L93JTIZ       | (829) 555-5269 | 7049073643      |
+| 28500762       | 467400    | Luca    | 4328GD8       | (389) 555-5198 | 8496433585      |
+| 76054385       | 449774    | Taylor  | 1106N58       | (286) 555-6063 | 1988161715      |
+| 81061156       | 438727    | Benista | 8X428L0       | (338) 555-6650 | 9586786673      |
++----------------+-----------+---------+---------------+----------------+-----------------+
+
+SELECT caller, receiver, duration
+    FROM phone_calls
+    WHERE month = 7 AND day = 28
