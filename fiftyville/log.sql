@@ -15,7 +15,7 @@ SELECT description
 
 SELECT name, transcript
     FROM interviews
-    WHERE month = 7 AND day = 28;
+    WHERE year = 2021 AND month = 7 AND day = 28;
 
 -- Find bakery activities
 SELECT activity, license_plate, hour, minute
