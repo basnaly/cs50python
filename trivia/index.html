@@ -10,7 +10,6 @@
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
                 const uncorrectItems = document.querySelectorAll(".buttonIncorrect")
-                    console.log(uncorrectItems)
                     uncorrectItems.forEach((button) => {
                         button.onclick = function() {
                             this.style.backgroundColor = "red";
