@@ -11,12 +11,13 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const uncorrectItems = document.querySelectorAll(".buttonIncorrect")
                     console.log(uncorrectItems)
-                    uncorrectItems.onclick = function() {
-                        for (i = 0; i < uncorrectItems.length; i++) {
-                            this[i].style.backgroundColor = "red";
+                    uncorrectItems.forEach((button) => {
+                        button.onclick = function() {
+
+                            this.style.backgroundColor = "red";
                             this.nextElementSibling.style.visibility = "visible";
                         }
-                    }
+                    })
             });
 
             document.addEventListener('DOMContentLoaded', function() {
@@ -35,6 +36,7 @@
             .incorrect {
                 visibility: hidden;
                 color: red;
+                text-align: center;
             }
         </style>
     </head>
