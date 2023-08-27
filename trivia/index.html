@@ -9,7 +9,7 @@
         <script>
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll(".notCorrect").onclick = function() {
+                document.querySelector("#button1").onclick = function() {
                     this.style.backgroundColor = "red";
                 }
             });
@@ -37,12 +37,12 @@
                     What is approximate ratio of people to sheep in New Zealand?
                 </h3>
                 <div class="mt-3 mb-4">
-                    <button class="notCorrect" type="button">6 people per 1 sheep</button>
+                    <button id="button1" type="button">6 people per 1 sheep</button>
                         <!-- <div id="correct"></div> -->
-                    <button class="notCorrect" type="button">3 people per 1 sheep</button>
-                    <button class="notCorrect" type="button">1 person per 1 sheep</button>
-                    <button class="notCorrect" type="button">1 person per 3 sheep</button>
-                    <button id="correct" type="button">1 person per 6 sheep</button>
+                    <button id="button2" type="button">3 people per 1 sheep</button>
+                    <button id="button3" type="button">1 person per 1 sheep</button>
+                    <button id="button4" type="button">1 person per 3 sheep</button>
+                    <button id="button5" type="button">1 person per 6 sheep</button>
                 </div>
             </div>
 
