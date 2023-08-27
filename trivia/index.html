@@ -9,14 +9,14 @@
         <script>
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
-                const uncorrectItems = document.querySelectorAll(".buttonIncorrect")
+                const uncorrectItems = document.querySelectorAll(".buttonIncorrect");
                     console.log(uncorrectItems)
-                uncorrectItems.onclick = function() {
-                    uncorrectItems.forEach(() => {
-                        this.style.backgroundColor = "red";
-                        this.nextElementSibling.style.visibility = "visible";
-                    })
-                }
+                    uncorrectItems.onclick = function() {
+                        uncorrectItems.forEach(() => {
+                            this.style.backgroundColor = "red";
+                            this.nextElementSibling.style.visibility = "visible";
+                        })
+                    }
             });
 
             document.addEventListener('DOMContentLoaded', function() {
