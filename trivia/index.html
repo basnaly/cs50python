@@ -30,6 +30,7 @@
             #correct {
                 visibility: hidden;
                 color: green;
+                text-align: center;
             }
             .notCorrect {
                 visibility: hidden;
@@ -51,16 +52,31 @@
                     What is approximate ratio of people to sheep in New Zealand?
                 </h3>
                 <div class="d-flex mt-3 mb-4">
-                    <button class="d-flex buttonIncorrect" type="button">6 people per 1 sheep</button>
+                    <div>
+                        <button class="d-flex buttonIncorrect" type="button">6 people per 1 sheep</button>
                         <div class="notCorrect">Not correct</div>
-                    <button class="buttonIncorrect" type="button">3 people per 1 sheep</button>
+                    </div>
+
+                    <div>
+                        <button class="buttonIncorrect" type="button">3 people per 1 sheep</button>
                         <div class="notCorrect">Not correct</div>
-                    <button class="buttonIncorrect" type="button">1 person per 1 sheep</button>
+                    </div>
+
+                    <div>
+                        <button class="buttonIncorrect" type="button">1 person per 1 sheep</button>
                         <div class="notCorrect">Not correct</div>
-                    <button class="buttonIncorrect" type="button">1 person per 3 sheep</button>
+                    </div>
+
+                    <div>
+                        <button class="buttonIncorrect" type="button">1 person per 3 sheep</button>
                         <div class="notCorrect">Not correct</div>
-                    <button class="d-flex flex-column" id="buttonCorrect" type="button">1 person per 6 sheep</button>
-                        <div class="d-flex" id="correct">Correct!</div>
+                    </div>
+
+                    <div>
+                        <button  id="buttonCorrect" type="button">1 person per 6 sheep</button>
+                        <div  id="correct">Correct!</div>
+                    </div>
+
                 </div>
             </div>
 
