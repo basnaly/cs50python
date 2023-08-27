@@ -12,10 +12,10 @@
                 const uncorrectItems = document.querySelectorAll(".buttonIncorrect")
                     console.log(uncorrectItems)
                     uncorrectItems.onclick = function() {
-                        uncorrectItems.forEach((button) => {
+
                             this.style.backgroundColor = "red";
                             this.nextElementSibling.style.visibility = "visible";
-                        })
+                        
                     }
             });
 
