@@ -13,9 +13,9 @@
                     console.log(uncorrectItems)
                     uncorrectItems.onclick = function() {
                         for (i = 0; i < uncorrectItems.length; i++) {
-                            this.style.backgroundColor = "red";
+                            uncorrectItems[i].style.backgroundColor = "red";
                             this.nextElementSibling.style.visibility = "visible";
-                        })
+                        }
                     }
             });
 
