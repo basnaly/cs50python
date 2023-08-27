@@ -9,9 +9,11 @@
         <script>
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector(".buttonIncorrect").onclick = function() {
-                    this.style.backgroundColor = "red";
-                    this.nextElementSibling.style.visibility = "visible";
+                const uncorrectItems = document.querySelector(".buttonIncorrect").onclick = function() {
+                    uncorrectItems.for Each(() => {
+                        this.style.backgroundColor = "red";
+                        this.nextElementSibling.style.visibility = "visible";
+                    })
                 }
             });
 
