@@ -9,29 +9,16 @@
         <script>
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector("#button1").onclick = function() {
+                document.querySelector(".buttonIncorrect").onclick = function() {
                     this.style.backgroundColor = "red";
                     this.nextElementSibling.style.visibility = "visible";
                 }
             });
+
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector("#button2").onclick = function() {
-                    this.style.backgroundColor = "red";
-                }
-            });
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector("#button3").onclick = function() {
-                    this.style.backgroundColor = "red";
-                }
-            });
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector("#button4").onclick = function() {
-                    this.style.backgroundColor = "red";
-                }
-            });
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector("#button5").onclick = function() {
+                document.querySelector("#buttonCorrect").onclick = function() {
                     this.style.backgroundColor = "green";
+                    this.nextElementSibling.style.visibility = "visible";
                 }
             });
         </script>
@@ -40,7 +27,7 @@
                 visibility: hidden;
                 color: green;
             }
-            #notCorrect1, #notCorrect2 {
+            .notCorrect {
                 visibility: hidden;
                 color: red;
             }
@@ -60,15 +47,15 @@
                     What is approximate ratio of people to sheep in New Zealand?
                 </h3>
                 <div class="mt-3 mb-4">
-                    <button id="button1" type="button">6 people per 1 sheep</button>
-                        <div id="notCorrect1">Not correct</div>
-                    <button id="button2" type="button">3 people per 1 sheep</button>
-                        <div id="notCorrect2">Not correct</div>
-                    <button id="button3" type="button">1 person per 1 sheep</button>
-                        <div id="notCorrect3">Not correct</div>
-                    <button id="button4" type="button">1 person per 3 sheep</button>
-                        <div id="notCorrect4">Not correct</div>
-                    <button id="button5" type="button">1 person per 6 sheep</button>
+                    <button class="buttonIncorrect" type="button">6 people per 1 sheep</button>
+                        <div class="notCorrect">Not correct</div>
+                    <button class="buttonIncorrect" type="button">3 people per 1 sheep</button>
+                        <div class="notCorrect">Not correct</div>
+                    <button class="buttonIncorrect" type="button">1 person per 1 sheep</button>
+                        <div class="notCorrect">Not correct</div>
+                    <button class="buttonIncorrect" type="button">1 person per 3 sheep</button>
+                        <div class="notCorrect">Not correct</div>
+                    <button id="buttonCorrect" type="button">1 person per 6 sheep</button>
                         <div id="correct">Correct!</div>
                 </div>
             </div>
