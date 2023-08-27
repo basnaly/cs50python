@@ -9,8 +9,8 @@
         <script>
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
-                const uncorrectItems = document.querySelectorAll(".buttonIncorrect")
-                    uncorrectItems.forEach((button) => {
+                const incorrectItems = document.querySelectorAll(".buttonIncorrect")
+                    incorrectItems.forEach((button) => {
                         button.onclick = function() {
                             this.style.backgroundColor = "red";
                             this.nextElementSibling.style.visibility = "visible";
@@ -54,22 +54,22 @@
                 <div class="row justify-content-evenly mt-3 mb-4">
                     <div class="col-2">
                         <button class="d-flex buttonIncorrect" type="button">6 people per 1 sheep</button>
-                        <div class="incorrect">Not correct</div>
+                        <div class="incorrect">Incorrect</div>
                     </div>
 
                     <div class="col-2">
                         <button class="buttonIncorrect" type="button">3 people per 1 sheep</button>
-                        <div class="incorrect">Not correct</div>
+                        <div class="incorrect">Incorrect</div>
                     </div>
 
                     <div class="col-2">
                         <button class="buttonIncorrect" type="button">1 person per 1 sheep</button>
-                        <div class="incorrect">Not correct</div>
+                        <div class="incorrect">Incorrect</div>
                     </div>
 
                     <div class="col-2">
                         <button class="buttonIncorrect" type="button">1 person per 3 sheep</button>
-                        <div class="incorrect">Not correct</div>
+                        <div class="incorrect">Incorrect</div>
                     </div>
 
                     <div class="col-2">
