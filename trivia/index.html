@@ -9,10 +9,10 @@
         <script>
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
-                const uncorrectItems = document.querySelectorAll(".buttonIncorrect");
-                    console.log(uncorrectItems)
-                    uncorrectItems.onclick = function() {
-                        uncorrectItems.forEach(() => {
+                const uncorrectItems = document.querySelectorAll(".buttonIncorrect").onclick = function() {
+                    // console.log(uncorrectItems)
+
+                        uncorrectItems.forEach((item) => {
                             this.style.backgroundColor = "red";
                             this.nextElementSibling.style.visibility = "visible";
                         })
