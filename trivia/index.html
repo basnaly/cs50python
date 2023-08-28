@@ -30,7 +30,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector("#submit").onclick = function() {
                     let country = document.querySelector("#country").value;
-                    let answer = document.querySelector('div');
+                    let answer = document.querySelector('#answer');
                     if (country == "Switzerland") {
                         // text field should turn green
                         document.querySelector('#country').addEventListener('keyup', function() {
@@ -118,7 +118,7 @@
                 <div class="mt-3 mb-4">
                     <input type="text" placeholder="Country" id="country">
                     <button id="submit" type="button">Check Answer</button>
-                    <div></div>
+                    <div id="answer"></div>
                 </div>
             </div>
         </div>
