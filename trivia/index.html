@@ -33,21 +33,17 @@
                     let answer = document.querySelector('#answer');
                     if (country == "Switzerland") {
                         // text field should turn green
-                        document.querySelector('#country').addEventListener('keyup', function() {
-                            this.style.backgroundColor = 'green';
-                        });
+                        document.querySelector('#country').style.backgroundColor = 'green';
                         // text should appear beneath the question that says “Correct!”.
                         answer.innerHTML = 'Correct!'
                     }
                     else {
                         // the input field should turn red
-                        document.querySelector('#country').addEventListener('keyup', function() {
-                            this.style.backgroundColor = 'red';
+                        document.querySelector('#country').style.backgroundColor = 'red';
                         });
                         // text should appear beneath the question that says “Incorrect”.
                         answer.innerHTML = 'Incorrect'
                     }
-                }
             })
 
         </script>
