@@ -28,7 +28,7 @@
             });
 
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('submit').addEventListener('submit', function(e) {
+                document.querySelector("#submit").onclick = function() {
                     let country = document.querySelector("#country").value;
                     let answer = document.querySelector('div');
                     if (country == "Switzerland") {
@@ -50,7 +50,6 @@
                 }
             })
 
-            // Switzerland
         </script>
         <style>
             #correct {
@@ -119,7 +118,7 @@
                 <div class="mt-3 mb-4">
                     <input type="text" placeholder="Country" id="country">
                     <div></div>
-                    <button type="button">Check Answer</button>
+                    <button type="button" id="submit">Check Answer</button>
 
                 </div>
             </div>
