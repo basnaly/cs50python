@@ -28,14 +28,19 @@
             document.addEventListener('DOMContentLoaded', function() {
                 let country = document.querySelector("#country").value;
                 if (country == "Switzerland") {
-                    // text field should turn red
-
-                    // text should appear beneath the question that says “Incorrect”.
+                    // text field should turn green
+                    document.querySelector('#country').addEventListener('click', function() {
+                        this.style.backgroundColor = 'green';
+                    });
+                    // text should appear beneath the question that says “Correct!”.
                 }
                 else {
-                    // the input field should turn green
+                    // the input field should turn red
+                    document.querySelector('#country').addEventListener('click', function() {
+                        this.style.backgroundColor = 'red';
+                    });
 
-                    // text should appear beneath the question that says “Correct!”.
+                    // text should appear beneath the question that says “Incorrect”.
 
                 }
             })
