@@ -35,15 +35,17 @@
                         // text field should turn green
                         document.querySelector('#country').style.backgroundColor = 'green';
                         // text should appear beneath the question that says “Correct!”.
-                        answer.innerHTML = 'Correct!'
+                        answer.innerHTML = 'Correct!';
+                        answer.style.color = 'green';
                     }
                     else {
                         // the input field should turn red
                         document.querySelector('#country').style.backgroundColor = 'red';
-                        });
                         // text should appear beneath the question that says “Incorrect”.
-                        answer.innerHTML = 'Incorrect'
+                        answer.innerHTML = 'Incorrect';
+                        answer.style.color = 'red';
                     }
+                }
             })
 
         </script>
