@@ -46,18 +46,20 @@
 
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector("#confirm").onclick = function() {
-                    let el1 = document.querySelector('# ')
+                    let el1 = document.querySelector('#check1').checked;
+                    console.log(el1);
+                    let is el1Correct = 
 
-                    if (isCheck1Correct && isCheck2Correct && isCheck3Correct && isCheck4Correct) {
-                        document.querySelector('#confirm').style.backgroundColor = 'green';
-                        result.innerHTML = 'Correct!';
-                        result.style.color = 'green';
-                    }
-                    else {
-                        document.querySelector('#confirm').style.backgroundColor = 'red';
-                        result.innerHTML = 'incorrect';
-                        result.style.color = 'red';
-                    }
+                    // if (isCheck1Correct && isCheck2Correct && isCheck3Correct && isCheck4Correct) {
+                    //     document.querySelector('#confirm').style.backgroundColor = 'green';
+                    //     result.innerHTML = 'Correct!';
+                    //     result.style.color = 'green';
+                    // }
+                    // else {
+                    //     document.querySelector('#confirm').style.backgroundColor = 'red';
+                    //     result.innerHTML = 'incorrect';
+                    //     result.style.color = 'red';
+                    // }
                 }
             });
 
