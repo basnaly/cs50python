@@ -47,20 +47,27 @@
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector("#confirm").onclick = function() {
                     let check1 = document.querySelector('#check1').checked;
-                    console.log(check1);
                     let isCheck1Correct = document.querySelector('.wrong') && !check1;
-                    console.log(isCheck1Correct);
 
-                    // if (isCheck1Correct && isCheck2Correct && isCheck3Correct && isCheck4Correct) {
-                    //     document.querySelector('#confirm').style.backgroundColor = 'green';
-                    //     result.innerHTML = 'Correct!';
-                    //     result.style.color = 'green';
-                    // }
-                    // else {
-                    //     document.querySelector('#confirm').style.backgroundColor = 'red';
-                    //     result.innerHTML = 'incorrect';
-                    //     result.style.color = 'red';
-                    // }
+                    let check2 = document.querySelector('#check2').checked;
+                    let isCheck2Correct = document.querySelector('.right') && check2;
+
+                    let check3 = document.querySelector('#check3').checked;
+                    let isCheck3Correct = document.querySelector('.right') && check3;
+
+                    let check4 = document.querySelector('#check4').checked;
+                    let isCheck4Correct = document.querySelector('.wrong') && !check4;
+
+                    if (isCheck1Correct && isCheck2Correct && isCheck3Correct && isCheck4Correct) {
+                        document.querySelector('#confirm').style.backgroundColor = 'green';
+                        result.innerHTML = 'Correct!';
+                        result.style.color = 'green';
+                    }
+                    else {
+                        document.querySelector('#confirm').style.backgroundColor = 'red';
+                        result.innerHTML = 'incorrect';
+                        result.style.color = 'red';
+                    }
                 }
             });
 
