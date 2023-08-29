@@ -24,4 +24,5 @@ body {
     font-size: 1rem;
     justify-content: space-around;
     padding: 0.5rem;
+    background-color: rgba(0,0,0,0.3);
 }
