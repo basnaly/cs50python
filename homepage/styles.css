@@ -17,3 +17,8 @@ body {
     margin: auto;
     margin-top: 12rem;
 }
+
+.footer {
+    color: yellow;
+    font-size: 1rem;
+}
