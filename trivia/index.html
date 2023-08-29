@@ -46,8 +46,8 @@
 
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector("#confirm").onclick = function() {
-                    let us = document.querySelector(".right input=['checked']");
-                    let notUs = document.querySelector(".wrong input=['']");
+                    let us = document.querySelector(".right");
+                    let notUs = document.querySelector(".wrong");
                     if ("#check1" === notUs && "#check2" === us && "#check3" === us $$ "#check4" === notUs) {
                         document.querySelector('#confirm').style.backgroundColor = 'green';
                         result.innerHTML = 'Correct!';
