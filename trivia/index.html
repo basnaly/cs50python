@@ -47,25 +47,28 @@
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector("#confirm").onclick = function() {
                     let checkbox1 = document.querySelector("#check1");
-                    console.log(checkbox.checked); // v -true
-                    console.log(checkbox.className); // 'wrong' 'right'
+                    let isCheck1Correct = !checkbox1.checked && checkbox1.className.includes('wrong')
 
-                    isCheck1Correct = !checkbox1.checked && checkbox1.className.includes('wrong')
-                    if () {
+                    let checkbox2 = document.querySelector("#check2");
+                    let isCheck2Correct = checkbox2.checked && checkbox2.className.includes('right')
 
+                    let checkbox3 = document.querySelector("#check3");
+                    let isCheck3Correct = checkbox3.checked && checkbox3.className.includes('right')
+
+                    let checkbox4 = document.querySelector("#check4");
+                    let isCheck4Correct = !checkbox4.checked && checkbox4.className.includes('wrong')
+
+
+                    if (isCheck1Correct && isCheck2Correct && isCheck3Correct && isCheck4Correct) {
+                        document.querySelector('#confirm').style.backgroundColor = 'green';
+                        result.innerHTML = 'Correct!';
+                        result.style.color = 'green';
                     }
-
-                    let notUs = document.querySelector(".wrong");
-                    // if ("#check1" === notUs && "#check2" === us && "#check3" === us $$ "#check4" === notUs) {
-                    //     document.querySelector('#confirm').style.backgroundColor = 'green';
-                    //     result.innerHTML = 'Correct!';
-                    //     result.style.color = 'green';
-                    // }
-                    // else {
-                    //     document.querySelector('#confirm').style.backgroundColor = 'red';
-                    //     result.innerHTML = 'incorrect';
-                    //     result.style.color = 'red';
-                    // }
+                    else {
+                        document.querySelector('#confirm').style.backgroundColor = 'red';
+                        result.innerHTML = 'incorrect';
+                        result.style.color = 'red';
+                    }
                 }
             });
 
