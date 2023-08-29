@@ -47,7 +47,8 @@
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector("#confirm").onclick = function() {
                     let checkbox = document.querySelector("#check1");
-                    console.log(checkbox);
+                    console.log(checkbox.checked);
+                    console.log(checkbox.classes);
                     // let notUs = document.querySelector(".wrong");
                     // if ("#check1" === notUs && "#check2" === us && "#check3" === us $$ "#check4" === notUs) {
                     //     document.querySelector('#confirm').style.backgroundColor = 'green';
