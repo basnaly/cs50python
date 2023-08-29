@@ -21,4 +21,6 @@ body {
 .footer {
     color: yellow;
     font-size: 1rem;
+    justify-content: space-around;
+    padding: 0.5rem;
 }
