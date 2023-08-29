@@ -58,7 +58,33 @@
                     let check4 = document.querySelector('#check4').checked;
                     let isCheck4Correct = document.querySelector('.wrong') && !check4;
 
-                    if (isCheck1Correct && isCheck2Correct && isCheck3Correct && isCheck4Correct) {
+                    let check5 = document.querySelector('#check5').checked;
+                    let isCheck5Correct = document.querySelector('.right') && check5;
+
+                    let check6 = document.querySelector('#check6').checked;
+                    let isCheck6Correct = document.querySelector('.right') && check6;
+
+                    let check7 = document.querySelector('#check7').checked;
+                    let isCheck7Correct = document.querySelector('.wrong') && !check7;
+
+                    let check8 = document.querySelector('#check8').checked;
+                    let isCheck8Correct = document.querySelector('.wrong') && !check8;
+
+                    let check9 = document.querySelector('#check9').checked;
+                    let isCheck9Correct = document.querySelector('.right') && check9;
+
+                    let check10 = document.querySelector('#check10').checked;
+                    let isCheck10Correct = document.querySelector('.wrong') && !check10;
+
+                    let check11 = document.querySelector('#check11').checked;
+                    let isCheck11Correct = document.querySelector('.wrong') && !check11;
+
+                    let check12 = document.querySelector('#check12').checked;
+                    let isCheck12Correct = document.querySelector('.right') && check12;
+
+                    if (isCheck1Correct && isCheck2Correct && isCheck3Correct && isCheck4Correct &&
+                        isCheck5Correct && isCheck6Correct && isCheck7Correct && isCheck8Correct &&
+                        isCheck9Correct && isCheck10Correct && isCheck11Correct && isCheck12Correct) {
                         document.querySelector('#confirm').style.backgroundColor = 'green';
                         result.innerHTML = 'Correct!';
                         result.style.color = 'green';
