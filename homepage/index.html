@@ -16,46 +16,48 @@
     <title>My Webpage</title>
   </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end" style="color:red;">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav ms-auto me-3 my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Naha</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sapporo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Tokyo</a>
-              </li>
-            </ul>
+  <body class="d-flex flex-column">
+    <div class="vh-100 vw-100 bg-white position-fixed opacity-50"></div>
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end" style="color:red;">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav ms-auto me-3 my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Naha</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sapporo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tokyo</a>
+                </li>
+              </ul>
+            </div>
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
-          <a class="navbar-brand" href="#">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        </nav>
+      </header>
+
+
+      <main>
+        <div class="d-flex">
+          <div class="font">Towards my trip in Japan!</div>
         </div>
-      </nav>
-    </header>
+      </main>
 
-    <main>
-      <div class="d-flex">
-        <div class="font">Towards my trip in Japan!</div>
-      </div>
-    </main>
+      <footer class="mt-auto">
+        <div class="d-flex footer">
+          <div>This is CS50</div>
+          <div>Week 8 HTML, CSS, JavaScript</div>
+          <div>Harvard University 2023</div>
+        </div>
 
-    <footer class="mt-auto">
-      <div class="d-flex footer">
-        <div>This is CS50</div>
-        <div>Week 8 HTML, CSS, JavaScript</div>
-        <div>Harvard University 2023</div>
-      </div>
-
-    </footer>
+      </footer>
 
 
 
