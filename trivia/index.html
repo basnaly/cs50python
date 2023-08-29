@@ -46,12 +46,15 @@
 
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector("#confirm").onclick = function() {
-                    let checkbox = document.querySelector("#check1");
-                    console.log(checkbox.checked);
-                    console.log(checkbox.className);
+                    let checkbox1 = document.querySelector("#check1");
+                    console.log(checkbox.checked); // v -true
+                    console.log(checkbox.className); // 'wrong' 'right'
 
-                    
-                    // let notUs = document.querySelector(".wrong");
+                    if (checkbox1.checked && checkbox1.className.includes('wrong')) {
+                        
+                    }
+
+                    let notUs = document.querySelector(".wrong");
                     // if ("#check1" === notUs && "#check2" === us && "#check3" === us $$ "#check4" === notUs) {
                     //     document.querySelector('#confirm').style.backgroundColor = 'green';
                     //     result.innerHTML = 'Correct!';
