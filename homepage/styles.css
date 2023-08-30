@@ -1,8 +1,13 @@
 body {
     background-image: url("moon.jpg");
     min-height: 100vh;
-
 }
+
+.body-okinawa {
+    background-image: url("ocean.jpg");
+    min-height: 100vh;
+}
+
 .navbar, .nav-link {
     --bs-navbar-brand-color: white;
     --bs-navbar-active-color: yellow;
