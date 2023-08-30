@@ -20,13 +20,13 @@ body {
 }
 
 .header {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(255,255,204,0.2);
 }
 
 .footer {
     color: yellow;
     font-size: 1rem;
     justify-content: space-around;
-    padding: 0.5rem;
-    background-color: rgba(0,0,0,0.2);
+    padding: 0.7rem;
+    background-color: rgba(255,255,204,0.2);
 }
