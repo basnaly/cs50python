@@ -8,6 +8,11 @@ body {
     min-height: 100vh;
 }
 
+.body-sapporo {
+    background-image: url("sapporo.jpg");
+    min-height: 100vh;
+}
+
 .navbar, .nav-link {
     --bs-navbar-brand-color: white;
     --bs-navbar-active-color: yellow;
