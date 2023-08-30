@@ -15,6 +15,12 @@ body {
     background-repeat: round;
 }
 
+.body-tokyo {
+    background-image: url("tokyo.jpg");
+    min-height: 100vh;
+    background-repeat: round;
+}
+
 .navbar, .nav-link {
     --bs-navbar-brand-color: white;
     --bs-navbar-active-color: yellow;
@@ -61,4 +67,12 @@ body {
     justify-content: space-around;
     padding: 0.7rem;
     background-color: rgba(0,76,153,0.6);
+}
+
+.footer-tokyo {
+    color: yellow;
+    font-size: 1rem;
+    justify-content: space-around;
+    padding: 0.7rem;
+    background-color: rgba(255,255,204,0.2);
 }
