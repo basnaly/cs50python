@@ -19,10 +19,15 @@ body {
     margin-top: 12rem;
 }
 
+.header {
+    padding: 0.5rem;
+    background-color: rgba(0,0,0,0.2);
+}
+
 .footer {
     color: yellow;
     font-size: 1rem;
     justify-content: space-around;
     padding: 0.5rem;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
 }
