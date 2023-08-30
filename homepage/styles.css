@@ -3,12 +3,12 @@ body {
     min-height: 100vh;
 }
 
-.body-okinawa {
+.body-naha {
     background-image: url("ocean.jpg");
     min-height: 100vh;
 }
 
-.body-hokkaido {
+.body-sapporo {
     background-image: url("hokkaido.jpg");
     min-height: 100vh;
 }
@@ -41,10 +41,18 @@ body {
     background-color: rgba(255,255,204,0.2);
 }
 
-.footer-okinawa {
+.footer-naha {
     color: yellow;
     font-size: 1rem;
     justify-content: space-around;
     padding: 0.7rem;
     background-color: rgba(0,102,102,0.3);
+}
+
+.footer-sapporo {
+    color: yellow;
+    font-size: 1rem;
+    justify-content: space-around;
+    padding: 0.7rem;
+    background-color: rgba(0,102,102,0.6);
 }
