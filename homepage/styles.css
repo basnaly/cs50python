@@ -56,6 +56,10 @@ body {
     background-color: rgba(0,76,153,0.5);
 }
 
+.header-kobe {
+    background-color: rgba(0,76,153,0.8);
+}
+
 .header-nagoya {
     background-color: rgba(160,160,160,0.9);
 }
@@ -74,6 +78,14 @@ body {
 }
 
 .footer-naha {
+    color: yellow;
+    font-size: 1rem;
+    justify-content: space-around;
+    padding: 0.7rem;
+    background-color: rgba(0,76,153,0.8);
+}
+
+.footer-kobe {
     color: yellow;
     font-size: 1rem;
     justify-content: space-around;
