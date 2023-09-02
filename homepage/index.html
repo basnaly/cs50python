@@ -34,12 +34,12 @@
 
       document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
-          const element = document.getElementById('modal')
+          const element = document.getElementById('modal');
           element.classList.add('show');
           element.style.display = 'block';
           setTimeout(() => {
             element.classList.remove('show');
-            // element.style.display = 'none';
+            element.style.display = 'none';
           }, 10000)
           }, 2000)
 
