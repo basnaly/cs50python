@@ -33,7 +33,13 @@
       });
 
       document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('#modal').element.classList.add('show');
+        setTimeout(() => {
+          document.getElementById('#modal').element.classList.add('show');
+          setTimeout(() => {
+            document.getElementById('#modal').element.classList.remove('show');
+          }, 10000)
+          }, 2000)
+
       });
 
     </script>
