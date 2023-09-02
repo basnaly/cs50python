@@ -48,7 +48,7 @@ body {
     margin-top: 12rem;
 }
 
-.header {
+.header-home {
     background-color: rgba(255,255,204,0.5);
 }
 
@@ -69,12 +69,12 @@ body {
     max-height: 40vh;
 }
 
-.footer {
+.footer-home {
     color: yellow;
     font-size: 1rem;
     justify-content: space-around;
     padding: 0.7rem;
-    background-color: rgba(255,255,204,0.2);
+    background-color: rgba(255,255,204,0.5);
 }
 
 .footer-naha {
