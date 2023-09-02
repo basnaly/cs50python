@@ -25,11 +25,11 @@
         const todayDate = new Date();
         const holidayBegins = new Date('2024-03-23');
         const timeDifference = holidayBegins - todayDate;
-        const daysDifference = math.round(timeDifference / (1000 * 3600 * 24));
+        const daysDifference = Math.round(timeDifference / (1000 * 3600 * 24));
 
         document.addEventListener('DOMContentLoaded', function() {
-          document.getElementById('date').innerHTML = 'Today is' + date;
-          document.getElementById('holiday').innerHTML = daysDifference + 'remain days before my trip!';
+          document.getElementById('date').innerHTML = 'Today is: ' + date;
+          document.getElementById('holiday').innerHTML = daysDifference + ' days remain before my trip!';
       });
 
     </script>
