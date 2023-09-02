@@ -21,18 +21,7 @@ body {
     --bs-accordion-bg: transparent;
 }
 
-.body-sapporo {
-    background-image: url("hokkaido.jpg");
-    height: 100vh;
-    background-repeat: round;
-}
-
-.body-sapporo .accordion {
-    --bs-accordion-btn-bg: rgba(255,255,255,0.5);
-    --bs-accordion-bg: transparent;
-}
-
-.body-tokyo {
+.body-nagoya {
     background-image: url("tokyo.jpg");
     min-height: 100vh;
     background-repeat: round;
