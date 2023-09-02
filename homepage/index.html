@@ -20,7 +20,7 @@
           window.open("https://en.wikipedia.org/wiki/Japan", "_blank")
         }
 
-        const date = new Date().toLocaleTimeString("en", { weekday: "long", hour12: false });
+        const date = new Date().toLocaleString("en", { dateStyle: "full", hour12: false });
 
         document.addEventListener('DOMContentLoaded', function() {
           document.getElementById('date').innerHTML = date;
