@@ -152,9 +152,10 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    margin: 0.5rem
+    margin-bottom: 0.5rem;
 }
 
 .japan {
     font-size: 3rem;
+
 }
