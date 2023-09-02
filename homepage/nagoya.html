@@ -16,9 +16,12 @@
     <title>Nagoya</title>
 
     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('resources').style.display = 'block';
+});
 
     </script>
-    
+
   </head>
 
   <body class="d-flex flex-column body-nagoya overflow-auto">
@@ -149,7 +152,7 @@
         </div>
       </div>
 
-      <div class="mt-auto ms-auto p-4 resource-naha">
+      <div id="resources" class="mt-auto ms-auto p-4 resource-naha">
         <div>
           I used on this page the next resources:
         </div>
