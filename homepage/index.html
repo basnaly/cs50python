@@ -22,6 +22,10 @@
 
         const date = new Date().toLocaleTimeString("en", { weekday: "long" });
 
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('date').innerHTML = date;
+      });
+
     </script>
   </head>
 
@@ -59,8 +63,8 @@
       <main>
 
         <div>
-          <div>
-            Today is: date
+          <div id="date">
+            Today is:
           </div>
           <div>
             days before my trip
