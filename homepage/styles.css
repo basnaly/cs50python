@@ -53,7 +53,7 @@ body {
 }
 
 .header-naha {
-    background-color: rgba(0,76,153,0.5);
+    background-color: rgba(0,153,76,0.7);
 }
 
 .header-kobe {
@@ -82,7 +82,7 @@ body {
     font-size: 1rem;
     justify-content: space-around;
     padding: 0.7rem;
-    background-color: rgba(0,76,153,0.8);
+    background-color: rgba(0,153,76,0.7);
 }
 
 .footer-kobe {
