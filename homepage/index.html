@@ -20,8 +20,7 @@
           window.open("https://en.wikipedia.org/wiki/Japan", "_blank")
         }
 
-        const date = new Date();
-        const formattedDate = format(date, 'MMMM d, yyyy');
+        const date = new Date().toLocaleTimeString("en", { weekday: "long" });
 
     </script>
   </head>
@@ -61,7 +60,7 @@
 
         <div>
           <div>
-            Today is:
+            Today is: date
           </div>
           <div>
             days before my trip
