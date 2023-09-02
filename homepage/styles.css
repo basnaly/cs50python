@@ -125,5 +125,6 @@ body {
 .resource-nagoya {
     color: black;
     font-size: 1rem;
-    background-color: rgba(255,255,153,0.8);
+    background-color: rgba(255,255,230,0.8);
+    border-radius: 0.5rem;
 }
