@@ -49,8 +49,7 @@ body {
     font-family: 'Caveat', cursive;
     color: white;
     font-size: 5rem;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 10rem;
 }
 
 .header-home {
@@ -146,7 +145,7 @@ body {
 }
 
 .modal {
-    margin-top: 7.2rem;
+    margin-top: 8rem;
 }
 
 .modal-body {
