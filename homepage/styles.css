@@ -49,8 +49,8 @@ body {
     font-family: 'Caveat', cursive;
     color: white;
     font-size: 5rem;
-    margin: auto;
-    margin-top: 12rem;
+    margin-top: 8rem;
+    text-align: center;
 }
 
 .header-home {
