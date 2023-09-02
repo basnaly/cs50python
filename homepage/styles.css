@@ -49,11 +49,11 @@ body {
 }
 
 .header {
-    background-color: rgba(255,255,204,0.2);
+    background-color: rgba(255,255,204,0.5);
 }
 
 .header-naha {
-    background-color: rgba(0,76,153,0.2);
+    background-color: rgba(0,76,153,0.5);
 }
 
 .header-nagoya {
@@ -78,7 +78,7 @@ body {
     font-size: 1rem;
     justify-content: space-around;
     padding: 0.7rem;
-    background-color: rgba(0,102,102,0.3);
+    background-color: rgba(0,102,102,0.5);
 }
 
 .footer-nagoya {
