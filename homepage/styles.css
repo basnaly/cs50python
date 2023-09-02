@@ -120,6 +120,8 @@ body {
 .resource-naha {
     color: white;
     font-size: 1rem;
+    background-color: rgba(0,153,76,0.7);
+    border-radius: 0.5rem;
 }
 
 .resource-nagoya {
