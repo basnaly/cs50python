@@ -23,12 +23,13 @@
         const date = new Date().toLocaleString("en", { dateStyle: 'full', timeStyle: 'medium', hour12: false });
 
         const todayDate = new Date();
-        const holidayBegins = new Date('23-03-2024');
+        const holidayBegins = new Date('2024-03-23');
         const timeDifference = holidayBegins - todayDate;
+        const daysDifference = timeDifference / (1000 * 3600 * 24);
 
         document.addEventListener('DOMContentLoaded', function() {
           document.getElementById('date').innerHTML = date;
-          document.getElementById('holiday').innerHTML = timeDifference;
+          document.getElementById('holiday').innerHTML = daysDifference;
       });
 
     </script>
