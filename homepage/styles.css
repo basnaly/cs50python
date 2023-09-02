@@ -113,6 +113,10 @@ body {
     text-align: center;
 }
 
+#resources {
+    visibility: hidden;
+}
+
 .resource-naha {
     color: white;
     font-size: 1rem;
