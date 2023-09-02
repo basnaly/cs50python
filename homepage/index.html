@@ -22,8 +22,13 @@
 
         const date = new Date().toLocaleString("en", { dateStyle: 'full', timeStyle: 'medium', hour12: false });
 
+        const todayDate = new Date();
+        const holidayBegins = new Date('23-03-2024');
+        const timeDifference = holidayBegins - todayDate;
+
         document.addEventListener('DOMContentLoaded', function() {
           document.getElementById('date').innerHTML = date;
+          document.getElementById('holiday').innerHTML = timeDifference;
       });
 
     </script>
@@ -62,12 +67,12 @@
 
       <main>
 
-        <div>
+        <div class="dates">
           <div id="date">
             Today is:
           </div>
-          <div>
-            days before my trip
+          <div id="holiday">
+            Days before my trip:
           </div>
 
         </div>
