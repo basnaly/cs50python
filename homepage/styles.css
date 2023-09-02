@@ -145,10 +145,12 @@ body {
 }
 
 .modal {
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 
 .modal-body {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
+    margin: 0.5rem
 }
