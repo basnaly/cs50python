@@ -19,6 +19,9 @@
       document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
           document.getElementById('resources').style.visibility = "visible";
+          setTimeout(() => {
+            document.getElementById('resources').style.visibility = "hidden";
+          }, 5000)
         }, 5000);
 
       });
