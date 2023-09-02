@@ -27,6 +27,11 @@ body {
     --bs-accordion-bg: transparent;
 }
 
+.body-kobe .accordion {
+    --bs-accordion-btn-bg: rgba(255,255,255,0.5);
+    --bs-accordion-bg: transparent;
+}
+
 .body-nagoya .accordion {
     --bs-accordion-btn-bg: rgba(255,255,255,0.5);
     --bs-accordion-bg: transparent;
