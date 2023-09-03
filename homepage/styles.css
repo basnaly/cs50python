@@ -37,8 +37,8 @@ body {
     --bs-accordion-bg: transparent;
     --bs-accordion-active-bg: rgba(255,255,204,0.9);
     --bs-accordion-active-color: #212529;
-    --bs-accordion-btn-focus-border-color: gray;
-    --bs-accordion-btn-focus-box-shadow: gray;
+    --bs-accordion-btn-focus-border-color: black;
+    --bs-accordion-btn-focus-box-shadow: black;
 }
 
 .navbar, .nav-link {
