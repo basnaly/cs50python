@@ -16,20 +16,20 @@
     <title>My Webpage</title>
 
     <script>
-        function openTab() {
-          window.open("https://en.wikipedia.org/wiki/Japan", "_blank")
-        }
+      function openTab() {
+        window.open("https://en.wikipedia.org/wiki/Japan", "_blank")
+      }
 
-        const date = new Date().toLocaleString("en", { dateStyle: 'full', timeStyle: 'medium', hour12: false });
+      const date = new Date().toLocaleString("en", { dateStyle: 'full', timeStyle: 'medium', hour12: false });
 
-        const todayDate = new Date();
-        const holidayBegins = new Date('2024-03-23');
-        const timeDifference = holidayBegins - todayDate;
-        const daysDifference = Math.round(timeDifference / (1000 * 3600 * 24));
+      const todayDate = new Date();
+      const holidayBegins = new Date('2024-03-23');
+      const timeDifference = holidayBegins - todayDate;
+      const daysDifference = Math.round(timeDifference / (1000 * 3600 * 24));
 
-        document.addEventListener('DOMContentLoaded', function() {
-          document.getElementById('date').innerHTML = 'Today is: ' + date;
-          document.getElementById('holiday').innerHTML = daysDifference + ' days remain before my trip!';
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('date').innerHTML = 'Today is: ' + date;
+        document.getElementById('holiday').innerHTML = daysDifference + ' days remain before my trip!';
       });
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -41,7 +41,7 @@
             element.classList.remove('show');
             element.style.display = 'none';
           }, 10000)
-          }, 2000)
+        }, 2000)
 
       });
 
@@ -50,87 +50,89 @@
 
   <body class="d-flex flex-column">
 
-      <header class="header-home">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end" style="color:red;">
-          <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarScroll">
-              <div>
-                <img src="logo.png" alt="Logo" width="40" height="40" />
-              </div>
-              <ul class="navbar-nav ms-auto me-3 my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                  <a class="nav-link" href="naha.html">Naha</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="kobe.html">Kobe</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="nagoya.html">Nagoya</a>
-                </li>
-              </ul>
+    <header class="header-home">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end" style="color:red;">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <div>
+              <img src="logo.png" alt="Logo" width="40" height="40" />
             </div>
-            <a class="navbar-brand" href="#">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-              aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <ul class="navbar-nav ms-auto me-3 my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link" href="naha.html">Naha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kobe.html">Kobe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nagoya.html">Nagoya</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </header>
-
-
-      <main>
-
-        <div class="dates">
-          <div id="date"></div>
-          <div id="holiday"></div>
+          <a class="navbar-brand" href="#">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+      </nav>
+    </header>
 
-        <div class="d-flex justify-content-center">
-          <div class="font">My next trip starts here!</div>
+
+    <main>
+
+      <div class="dates">
+        <div id="date"></div>
+        <div id="holiday"></div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <div class="font">My next trip starts here!</div>
+      </div>
+
+      <div class="intro mb-4">
+
+        <div>
+          I'm studying the "CS50" course diligently.
         </div>
-
-        <div class="intro mb-4">
-
-          <div>
-            I'm studying the "CS50" course diligently.
-          </div>
-          <div>
-            It's incredibly interesting, and I'm happy to say that I've achieved some small successes.
-          </div>
-          <div>
-            I hope to continue making progress, and as a reward, I plan to treat myself to a trip to Japan in spring 2024! 😊
-          </div>
+        <div>
+          It's incredibly interesting, and I'm happy to say that I've achieved some small successes.
         </div>
-
-        <div class="d-flex justify-content-center">
-          <button onClick="openTab()" type="button" class="btn btn-warning">Learn about Japan</button>
+        <div>
+          I hope to continue making progress, and as a reward, I plan to treat myself to a trip to Japan in spring 2024!
+          😊
         </div>
+      </div>
 
-        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header text-bg-danger d-flex justify-content-center">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Hello!</h1>
-              </div>
-              <div class="modal-body d-flex justify-content-center align-items-center">
-                <span class="japan mx-4">🇯🇵</span>
-                <span>Welcome to Japan!</span>
-                <span class="japan mx-4">🇯🇵</span>
+      <div class="d-flex justify-content-center">
+        <button onClick="openTab()" type="button" class="btn btn-warning">Learn about Japan</button>
+      </div>
+
+      <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-bg-danger d-flex justify-content-center">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Hello!</h1>
+            </div>
+            <div class="modal-body d-flex justify-content-center align-items-center">
+              <span class="japan mx-4">🇯🇵</span>
+              <span>Welcome to Japan!</span>
+              <span class="japan mx-4">🇯🇵</span>
             </div>
           </div>
         </div>
+      </div>
 
-      </main>
+    </main>
 
-      <footer class="mt-auto">
-        <div class="d-flex footer-home">
-          <div>This is CS50</div>
-          <div>Week 8 HTML, CSS, JavaScript</div>
-          <div>Harvard University 2023</div>
-        </div>
+    <footer class="mt-auto">
+      <div class="d-flex footer-home">
+        <div>This is CS50</div>
+        <div>Week 8 HTML, CSS, JavaScript</div>
+        <div>Harvard University 2023</div>
+      </div>
 
-      </footer>
+    </footer>
   </body>
 
 </html>
