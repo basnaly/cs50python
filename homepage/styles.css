@@ -35,6 +35,7 @@ body {
 .body-nagoya .accordion {
     --bs-accordion-btn-bg: rgba(255,255,230,0.9);
     --bs-accordion-bg: transparent;
+    --bs-accordion-active-color: rgba(255,255,230,0.9);
 }
 
 .navbar, .nav-link {
