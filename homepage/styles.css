@@ -35,7 +35,9 @@ body {
 .body-nagoya .accordion {
     --bs-accordion-btn-bg: rgba(255,255,230,0.9);
     --bs-accordion-bg: transparent;
-    --bs-accordion-btn-focus-border-color: gray;
+    --bs-accordion-active-bg: rgba(255,255,153,0.9);
+
+    /* --bs-accordion-btn-focus-border-color: gray; */
     /* --bs-accordion-active-color: rgba(255,255,230,0.9); */
 }
 
