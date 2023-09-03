@@ -37,8 +37,7 @@ body {
     --bs-accordion-bg: transparent;
     --bs-accordion-active-bg: rgba(255,255,204,0.9);
     --bs-accordion-active-color: #212529;
-
-    /* --bs-accordion-btn-focus-border-color: gray; */
+    --bs-accordion-btn-focus-border-color: gray;
     /* --bs-accordion-active-color: rgba(255,255,230,0.9); */
 }
 
