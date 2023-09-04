@@ -16,11 +16,9 @@
                 <h2>Add a Birthday</h2>
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                 <form action="/add" method="post">
-                    {% for birthday_item in birthday_list %}
-                        <input name="name" type="text" placeholder="Name" value="{{ birthday_item.name }}">
-                        <input name="month" type="text" placeholder="Month" value="{{ birthday_item.month }}">
-                        <input name="day" type="text" placeholder="Day" value="{{ birthday_item.day }}">
-                    {% endfor %}
+                    <input name="name" type="text" placeholder="Name" value="">
+                    <input name="month" type="text" placeholder="Month" value="">
+                    <input name="day" type="text" placeholder="Day" value="">
                     <button type="submit">Add Birthday</button>
                 </form>
             </div>
