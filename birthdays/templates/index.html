@@ -39,7 +39,7 @@
                             <tr>
                                 <td>{{ birthday_item.name }}</td>
                                 <td>{{ birthday_item.month }}/{{ birthday_item.day }}</td>
-                                <td></td>
+                                <td><a href="/delete/{{ birthday_item.id }}">Delete</a></td>
                             </tr>
                         {% endfor %}
                     </tbody>
