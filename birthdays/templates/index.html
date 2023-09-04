@@ -18,9 +18,10 @@
                 <form action="/add" method="post">
                     {% for birthday_item in birthday_list %}
                         <input name="name" type="text" placeholder="Name" value="{{ birthday_item.name }}">
-                        <input name="name" type="text" placeholder="Name" value="{{ birthday_item.name }}">
+                        <input name="month" type="text" placeholder="Month" value="{{ birthday_item.month }}">
+                        <input name="day" type="text" placeholder="Day" value="{{ birthday_item.day }}">
                     {% endfor %}
-                    <button type="submit">Add</button>
+                    <button type="submit">Add Birthday</button>
                 </form>
             </div>
 
