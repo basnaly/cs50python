@@ -29,6 +29,12 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for birthday_item in birthday_list %}
+                            <tr>
+                                <td>{{ birthday_item.name }}</td>
+                                <td>{{ birthday_item.birthday }}</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
