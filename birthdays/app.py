@@ -33,9 +33,7 @@ def index():
     else:
 
         # TODO: Display the entries in the database on index.html
-        id = request.form.get("id")
-        if id:
-            db.execute("SELECT * FROM birthdays")
-        return render_template("index.html")
+        birthday_list = db.execute("SELECT * FROM birthdays")
+        return render_template("index.html", birthday_list)
 
 
