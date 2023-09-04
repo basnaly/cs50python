@@ -41,4 +41,6 @@ def index():
         print(birthday_list)
         return render_template("index.html", birthday_list = birthday_list)
 
+@app.route("/delete/:id", method=["DELETE"])
+def delete():
 
