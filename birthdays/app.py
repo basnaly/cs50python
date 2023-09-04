@@ -35,7 +35,9 @@ def index():
         #     printf("Fill all the fields")
 
         db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
-        return redirect("/")
+        # return redirect("/")
+
+        return render_template("index.html")
 
     else:
 
