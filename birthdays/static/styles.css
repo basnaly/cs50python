@@ -84,5 +84,8 @@ tbody tr:nth-of-type(odd) {
 .delete {
     color: #212529;
     text-decoration: none;
-    background-color: lightgray;
+    background-color: white;
+    padding: 0.2rem 0.5rem;
+    border: solid 0.2rem gray;
+    border-radius: 0.2rem;
 }
