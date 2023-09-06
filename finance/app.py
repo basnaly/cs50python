@@ -115,7 +115,7 @@ def register():
         # Check for possible errors
 
         # Insert the new user into users db
-
+        rows = db.execute("INSERT * FROM users WHERE username = ? ?", request.form.get("username"). request.form.get("password"))
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
