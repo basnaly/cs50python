@@ -140,6 +140,7 @@ def register():
         # Insert the new user into users db
         hash_user_password = generate_password_hash(request.form.get("password"))
         username = request.form.get("username")
+        
         new_user = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash_user_password)
 
         # Remember which user has logged in
