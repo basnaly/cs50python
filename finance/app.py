@@ -112,10 +112,17 @@ def register():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
+        
         # Check for possible errors
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
 
         # Insert the new user into users db
-        rows = db.execute("INSERT * FROM users WHERE username = ? ?", request.form.get("username"). request.form.get("password"))
+        rows = db.execute("INSERT INTO users (username, password) VALUES(?, ?)", request.form.get("username"). request.form.get("password"))
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
