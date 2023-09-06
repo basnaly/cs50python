@@ -107,12 +107,14 @@ def quote():
 
 
 @app.route("/register", methods=["GET", "POST"])
-def validate_password(password):
-    if len(password) < 3:
-        return False
+
 
 def register():
     """Register user"""
+
+    def validate_password(password):
+        if len(password) < 3:
+            return False
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
