@@ -123,7 +123,7 @@ def register():
         elif request.form.get("password") != request.form.get("confirm_password"):
             return apology("password does't match to confirm password", 403)
 
-        elif request.form.get("password") != :
+        elif request.form.get("password") != escape(s):
             return apology("the password doesn't match", 403)
 
 
