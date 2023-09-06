@@ -103,6 +103,13 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
+    # When requested via GET, display form to request a stock quote.
+
+
+    # When form is submitted via POST, lookup the stock symbol by calling
+    # the lookup function and display the results.
+
     return apology("TODO")
 
 
