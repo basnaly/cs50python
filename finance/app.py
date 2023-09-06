@@ -112,11 +112,14 @@ def register():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
+        # Check for possible errors
+
+        # Insert the new user into users db
 
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("register.html")
+        return render_template("login.html")
 
     return apology("TODO")
 
