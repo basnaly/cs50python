@@ -112,13 +112,16 @@ def register():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-        
+
         # Check for possible errors
         if not request.form.get("username"):
             return apology("must provide username", 403)
 
         elif not request.form.get("password"):
             return apology("must provide password", 403)
+
+        elif request.form.get("password") != request.form.get("confirm_password"):
+            return apology("password does't match to confirm password", 403)
 
 
         # Insert the new user into users db
