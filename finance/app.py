@@ -107,8 +107,6 @@ def quote():
 
 
 @app.route("/register", methods=["GET", "POST"])
-
-
 def register():
     """Register user"""
 
@@ -127,7 +125,7 @@ def register():
 
         list_users = db.execute("SELECT username FROM users WHERE username LIKE ?", username)
 
-        if users in list_users:
+        if list_users:
             return apology("username is exist", 403)
 
         elif not request.form.get("password"):
