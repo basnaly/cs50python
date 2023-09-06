@@ -110,7 +110,7 @@ def quote():
 def validate_password(password):
     if len(password) < 3:
         return False
-    
+
 def register():
     """Register user"""
 
@@ -132,7 +132,7 @@ def register():
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("confirmation does't match to password", 403)
 
-        elif request.form.get("password") < length:
+        elif request.form.get("password") < password:
             return apology("the password doesn't match", 403)
 
         # Insert the new user into users db
