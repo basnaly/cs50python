@@ -107,6 +107,10 @@ def quote():
 
 
 @app.route("/register", methods=["GET", "POST"])
+def validate_password(password):
+    if len(password) < 3:
+        return False
+    
 def register():
     """Register user"""
 
