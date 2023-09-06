@@ -139,10 +139,10 @@ def register():
 
         # Insert the new user into users db
         hash_user_password = generate_password_hash(request.form.get("password"))
-        rows = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", request.form.get("username"), hash_user_password)
+        new_user = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", request.form.get("username"), hash_user_password)
 
         # Remember which user has logged in
-        session["user_id"] = rows["id"]
+        session["user_id"] = new_user["id"]
 
         # Redirect user to home page
         return redirect("/")
