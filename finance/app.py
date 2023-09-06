@@ -117,6 +117,8 @@ def register():
         if not request.form.get("username"):
             return apology("must provide username", 403)
 
+        elif request.form.get("username") in 
+
         elif not request.form.get("password"):
             return apology("must provide password", 403)
 
