@@ -134,8 +134,7 @@ def register():
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("confirmation does't match to password", 403)
 
-        length = len(request.form.get("password"))
-        elif request.form.get("password") < validate_password(length):
+        elif request.form.get("password") < validate_password(request.form.get("password")):
             return apology("the password doesn't match", 403)
 
         # Insert the new user into users db
