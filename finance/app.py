@@ -142,7 +142,7 @@ def register():
         rows = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", request.form.get("username"), hash_user_password)
 
         # Remember which user has logged in
-        session["user_id"] = rows["id"]
+        session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
         return redirect("/")
