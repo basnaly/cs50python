@@ -119,7 +119,7 @@ def register():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        rows = db.execute("SELECT * FROM users");
+        rows = db.execute("SELECT username FROM users");
         print(rows)
 
         # Check for possible errors
