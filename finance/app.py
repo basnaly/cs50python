@@ -119,14 +119,15 @@ def register():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        rows = db.execute("SELECT username FROM users");
-        print(rows)
+        username = request.form.get("username")
 
         # Check for possible errors
-        if not request.form.get("username"):
+        if not username:
             return apology("must provide username", 403)
 
-        elif request.form.get("username") in rows:
+        list_users = db.execute("SELECT username FROM users WHERE username LIKE ?", username)
+
+        if users in list_users:
             return apology("username is exist", 403)
 
         elif not request.form.get("password"):
