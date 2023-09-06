@@ -133,7 +133,8 @@ def register():
 
 
         # Insert the new user into users db
-        rows = db.execute("INSERT INTO users (username, password) VALUES(?, ?)", request.form.get("username"). request.form.get("password"))
+        hash_user_password = generate_password_hash(request.form.get("password"))
+        rows = db.execute("INSERT INTO users (username, password) VALUES(?, ?)", request.form.get("username"), hash_user_password)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
