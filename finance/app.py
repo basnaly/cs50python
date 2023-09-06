@@ -120,11 +120,13 @@ def register():
     if request.method == "POST":
 
         rows = db.execute("SELECT * FROM users");
+        print(rows)
 
         # Check for possible errors
         if not request.form.get("username"):
             return apology("must provide username", 403)
 
+// nat in 
         elif request.form.get("username") in rows:
             return apology("username is exist", 403)
 
