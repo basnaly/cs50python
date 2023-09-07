@@ -106,10 +106,10 @@ def quote():
 
     # When requested via GET, display form to request a stock quote.
     if request.method = "GET":
-        
+
         # Ensure username was submitted
-        if not request.form.get("username"):
-            return apology("must provide username", 403)
+        if not request.form.get("stock"):
+            return apology("must provide stock", 403)
 
     # When form is submitted via POST, lookup the stock symbol by calling
     # the lookup function and display the results.
