@@ -6,7 +6,7 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
 import math
-import datetime
+from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -87,7 +87,7 @@ def buy():
     if not transactions:
         db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, date DATE);", f"transactions_{user_id}")
 
-    row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.datetime.now())
+    row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.now())
 
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'portfolio_{user_id}';")
