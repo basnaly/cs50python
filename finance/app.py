@@ -58,8 +58,8 @@ def buy():
     if not symbol:
         return apology("must provide symbol", 403)
 
-    
-    if symbol not in symbols:
+    data = lookup(symbol)
+    if data == None:
         return apology("symbol doesnt exists", 403)
 
     if not number:
@@ -72,7 +72,6 @@ def buy():
     print(session)
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", id)
     max_stocks_to_buy = math.floor(user_cash / number)
-
 
     if max_stocks_to_buy < number:
         return apology("can buy {?} stocks",  max_stocks_to_buy, 403)
