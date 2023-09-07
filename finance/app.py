@@ -46,7 +46,7 @@ def buy():
     """Buy shares of stock"""
 
     # When requested via GET, display form to buy a stock.
-    if request.method == "POST":
+    if request.method == "GET":
         return render_template("buy.html")
 
      # When form is submitted via POST, purchase the stock so long
