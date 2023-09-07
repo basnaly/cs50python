@@ -52,16 +52,16 @@ def buy():
      # When form is submitted via POST, purchase the stock so long
      # as user can afford it.
 
-     symbol = request.form.get("symbol")
-     number = request.form.get("number")
+    symbol = request.form.get("symbol")
+    number = request.form.get("number")
 
-     if not symbol:
+    if not symbol:
         return apology("must provide symbol", 403)
 
-     if symbol not in symbols:
+    if symbol not in symbols:
         return apology("symbol doesnt exists", 403)
 
-     if not number:
+    if not number:
         return apology("must provide number", 403)
 
     if number < 0:
