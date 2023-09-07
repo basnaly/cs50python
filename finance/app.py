@@ -51,12 +51,14 @@ def buy():
      # When form is submitted via POST, purchase the stock so long
      # as user can afford it.
 
-     if not request.form.get("username"):
-            return apology("must provide username", 403)
+     if not request.form.get("symbol"):
+            return apology("must provide symbol", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
-            return apology("must provide password", 403)
+    elif not request.form.get("number"):
+            return apology("must provide number", 403)
+
+
     return apology("TODO")
 
 
