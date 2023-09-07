@@ -233,6 +233,8 @@ def sell():
 
 CREATE TABLE portfolio (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                         user_id
-                        
+                        symbol TEXT NOT NULL,
+                        shares TEXT NOT NULL,
+                        date DATE,
 
                         )
