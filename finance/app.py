@@ -53,7 +53,7 @@ def buy():
      # as user can afford it.
 
     symbol = request.form.get("symbol")
-    number = request.form.get("number")
+    shares = request.form.get("shares")
 
     if not symbol:
         return apology("must provide symbol", 403)
@@ -62,10 +62,10 @@ def buy():
     if data == None:
         return apology("symbol doesnt exists", 403)
 
-    if not number:
-        return apology("must provide number", 403)
+    if not shares:
+        return apology("must provide number of shares", 403)
 
-    if int(number) < 0:
+    if int(shares) < 0:
         return apology("must provide positive number", 403)
 
     user_id = session["user_id"]
