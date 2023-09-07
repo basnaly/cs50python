@@ -95,7 +95,7 @@ def buy():
     row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.datetime.now())
 
 
-    portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type="table;" AND name = portfolio_{user_id}";)
+    portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = portfolio_{user_id};")
     if not portfolio:
         db.execute(f"""CREATE TABLE portfolio_{user_id} (
                         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
