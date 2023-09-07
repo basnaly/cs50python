@@ -235,6 +235,6 @@ def sell():
 #                         user_id
 #                         symbol TEXT NOT NULL,
 #                         shares TEXT NOT NULL,
-#                         date TIMESTAMP,
+#                         date DATE,
 
 #                         );
