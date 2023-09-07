@@ -66,7 +66,8 @@ def buy():
     if number < 0:
         return apology("must provide positive number", 403)
 
-
+    list_users = db.execute("SELECT username FROM users WHERE username LIKE ?", username)
+    
     return apology("TODO")
 
 
