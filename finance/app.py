@@ -123,7 +123,7 @@ def quote():
         if data == None:
             return apology("the symbol doesn't exist")
 
-    return apology("TODO")
+        return render_template("quoted.html", data = data)
 
 
 @app.route("/register", methods=["GET", "POST"])
