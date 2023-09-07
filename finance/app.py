@@ -103,7 +103,7 @@ def buy():
                         shares TEXT NOT NULL,
                         );""");
 
-    db.execute(f"SELECT * FROM portfolio_{user_id} WHERE (s)")
+    db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ? AND shares = ?", symbol, shares)
 
 
     return redirect("/")
