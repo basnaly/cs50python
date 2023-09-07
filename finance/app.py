@@ -55,7 +55,7 @@ def buy():
             return apology("must provide symbol", 403)
 
         # Ensure password was submitted
-    elif not request.form.get("number"):
+     if not request.form.get("number"):
             return apology("must provide number", 403)
 
 
