@@ -231,10 +231,10 @@ def sell():
 # CREATE TABLE sqlite_sequence(name,seq);
 # CREATE UNIQUE INDEX username ON users (username);
 
-CREATE TABLE portfolio (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                        user_id
-                        symbol TEXT NOT NULL,
-                        shares TEXT NOT NULL,
-                        date DATE,
+# CREATE TABLE portfolio (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+#                         user_id
+#                         symbol TEXT NOT NULL,
+#                         shares TEXT NOT NULL,
+#                         date DATE,
 
-                        )
+#                         );
