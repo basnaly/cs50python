@@ -90,7 +90,7 @@ def buy():
                         date DATE,
                         );""");
 
-    row = db.execute(f"""INSERT * FROM users WHERE username = ?", request.form.get("username") """);
+    row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", name, month, day);
 
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = portfolio_{user_id}");
