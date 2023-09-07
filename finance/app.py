@@ -65,7 +65,7 @@ def buy():
     if not number:
         return apology("must provide number", 403)
 
-    if number < 0:
+    if int(number) < 0:
         return apology("must provide positive number", 403)
 
     session["user_id"] = id
