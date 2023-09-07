@@ -69,11 +69,13 @@ def buy():
         return apology("must provide positive number", 403)
 
     session["user_id"] = id
+    print(session)
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", id)
     max_stocks_to_buy = math.floor(user_cash / number)
 
+
     if max_stocks_to_buy < number:
-        return apology("must provide positive number", 403)
+        return apology("can buy {?} stocks",  max_stocks_to_buy, 403)
 
     return apology("TODO")
 
