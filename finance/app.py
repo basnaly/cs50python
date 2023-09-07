@@ -77,7 +77,7 @@ def buy():
     max_stocks_to_buy = math.floor(user_cash[0]["cash"] / int(number) * data["price"])
 
     if max_stocks_to_buy < int(number):
-        return apology("can buy {?} stocks",  max_stocks_to_buy, 403)
+        return apology(f"can buy only {max_stocks_to_buy} stocks", 403)
 
     return apology("TODO")
 
