@@ -6,7 +6,7 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
 import math
-import datetime from datetime
+import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -109,11 +109,7 @@ def buy():
     else:
         db.execute("UPDATE portfolio_{user_id} SET shares = shares + VALUE(?)", shares)
 
-
     return redirect("/")
-
-
-
 
 @app.route("/history")
 @login_required
