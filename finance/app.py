@@ -116,10 +116,9 @@ def quote():
             return apology("must provide symbol", 403)
 
         symbol = request.form.get("symbol")
-        
-        lookup(symbol)
 
-
+        data = lookup(symbol)
+        print(data)
 
     return apology("TODO")
 
