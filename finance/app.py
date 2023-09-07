@@ -115,7 +115,9 @@ def quote():
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
 
+        symbol = request.form.get("symbol")
         
+        lookup(symbol)
 
 
 
