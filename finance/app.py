@@ -120,6 +120,9 @@ def quote():
         data = lookup(symbol)
         print(data)
 
+        if data == None:
+            return apology("the symbol doesn't exist")
+
     return apology("TODO")
 
 
