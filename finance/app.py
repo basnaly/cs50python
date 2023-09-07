@@ -66,7 +66,9 @@ def buy():
     if number < 0:
         return apology("must provide positive number", 403)
 
+    session["user_id"] = id
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", id)
+    max_stocks_to_buy = round(user_cash / number)
 
     return apology("TODO")
 
