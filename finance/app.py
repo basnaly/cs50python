@@ -115,6 +115,8 @@ def quote():
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
 
+        
+
 
 
     return apology("TODO")
