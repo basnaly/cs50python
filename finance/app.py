@@ -5,6 +5,8 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
+import math
+
 from helpers import apology, login_required, lookup, usd
 
 # Configure application
@@ -68,7 +70,10 @@ def buy():
 
     session["user_id"] = id
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", id)
-    max_stocks_to_buy = round(user_cash / number)
+    max_stocks_to_buy = math.floor(user_cash / number)
+
+    if max_stocks_to_buy < number:
+        return apology("must provide positive number", 403)
 
     return apology("TODO")
 
