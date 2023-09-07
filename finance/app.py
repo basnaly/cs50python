@@ -106,7 +106,9 @@ def quote():
 
     # When requested via GET, display form to request a stock quote.
     if request.method == "GET":
+        return render_template("quote.html")
 
+    else:
         # Ensure username was submitted
         if not request.form.get("stock"):
             return apology("must provide stock", 403)
