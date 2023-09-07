@@ -58,6 +58,7 @@ def buy():
     if not symbol:
         return apology("must provide symbol", 403)
 
+    
     if symbol not in symbols:
         return apology("symbol doesnt exists", 403)
 
