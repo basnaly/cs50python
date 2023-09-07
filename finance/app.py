@@ -96,9 +96,9 @@ def buy():
 
     row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
     if not row_symbol:
-        db.execute("INSERT INTO portfolio_{user_id} (symbol, shares) VALUES(?, ?)", symbol, int(shares))
+        db.execute(f"INSERT INTO portfolio_{user_id} (symbol, shares) VALUES(?, ?)", symbol, int(shares))
     else:
-        db.execute("UPDATE portfolio_{user_id} SET shares = shares + VALUE(?)", int(shares))
+        db.execute(f"UPDATE portfolio_{user_id} SET shares = shares + VALUE(?)", int(shares))
 
     return redirect("/")
 
