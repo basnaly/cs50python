@@ -42,6 +42,14 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+
+     # When requested via GET, display form to buy a stock.
+
+     if request.method == "POST":
+        return render_template(".html")
+
+     # When form is submitted via POST, purchase the stock so long
+     # as user can afford it.
     return apology("TODO")
 
 
