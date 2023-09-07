@@ -79,7 +79,7 @@ def buy():
     if max_stocks_to_buy < int(shares):
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
 
-    return apology("TODO")
+    return redirect("/")
 
 
 @app.route("/history")
