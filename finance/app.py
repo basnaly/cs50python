@@ -79,7 +79,12 @@ def buy():
     if max_stocks_to_buy < int(shares):
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
 
+    # Adding new SQL table
+    # Decide on table name(s) and fields
+
     return redirect("/")
+
+
 
 
 @app.route("/history")
@@ -225,3 +230,5 @@ def sell():
 #                     cash NUMERIC NOT NULL DEFAULT 10000.00);
 # CREATE TABLE sqlite_sequence(name,seq);
 # CREATE UNIQUE INDEX username ON users (username);
+
+CREATE TABLE 
