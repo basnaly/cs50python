@@ -71,7 +71,7 @@ def buy():
     user_id = session["user_id"]
     print(user_id)
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    max_stocks_to_buy = math.floor(user_cash / number * )
+    max_stocks_to_buy = math.floor(user_cash / number * data["price"])
 
     if max_stocks_to_buy < number:
         return apology("can buy {?} stocks",  max_stocks_to_buy, 403)
