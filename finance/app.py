@@ -105,7 +105,7 @@ def quote():
     """Get stock quote."""
 
     # When requested via GET, display form to request a stock quote.
-    if request.method = "GET":
+    if request.method == "GET":
 
         # Ensure username was submitted
         if not request.form.get("stock"):
