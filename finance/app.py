@@ -97,11 +97,14 @@ def buy():
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = portfolio_{user_id}");
     if not portfolio:
-        db.execute(f"""CREATE TABLE portfolio_{user_id} (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        db.execute(f"""CREATE TABLE portfolio_{user_id} (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                         symbol TEXT NOT NULL,
                         shares TEXT NOT NULL,
                         );""");
-    
+
+    db.execute(f"SELECT * FROM portfolio_{user_id} WHERE (s)")
+
 
     return redirect("/")
 
