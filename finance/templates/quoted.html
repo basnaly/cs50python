@@ -5,6 +5,11 @@
 {% endblock %}
 
 {% block main %}
-    <p> </p>
-
+    <form action="/quoted" method="post">
+        <div>
+            <p>name: {{ data["name"]}} </p>
+            <p>price: {{ data["price"]}} </p>
+            <p>symbol: {{ data["symbol"]}} </p>
+        </div>
+    </form>
 {% endblock %}
