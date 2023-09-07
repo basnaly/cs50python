@@ -60,7 +60,6 @@ def buy():
      if symbol not in symbols:
         return apology("symbol doesnt exists", 403)
 
-        # Ensure password was submitted
      if not number:
         return apology("must provide number", 403)
 
