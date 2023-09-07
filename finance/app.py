@@ -236,5 +236,4 @@ def sell():
 #                         symbol TEXT NOT NULL,
 #                         shares TEXT NOT NULL,
 #                         date DATE,
-
 #                         );
