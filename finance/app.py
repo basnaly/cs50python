@@ -82,7 +82,7 @@ def buy():
     # Adding new SQL table
     # Decide on table name(s) and fields
 
-    transactions = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = transactions_{user_id}");
+    transactions = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = transactions_{user_id}")
     if not transactions:
         db.execute(f"""CREATE TABLE transactions_{user_id} (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                         symbol TEXT NOT NULL,
@@ -90,7 +90,7 @@ def buy():
                         date DATE,
                         );""");
 
-    row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", name, month, day);
+    row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, date)
 
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = portfolio_{user_id}");
