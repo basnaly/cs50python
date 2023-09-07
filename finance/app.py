@@ -58,6 +58,9 @@ def buy():
      if not request.form.get("number"):
             return apology("must provide number", 403)
 
+    if request.form.get("number") < 0:
+        return apology("must provide positive number", 403)
+
 
     return apology("TODO")
 
