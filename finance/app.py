@@ -82,9 +82,9 @@ def buy():
     # Adding new SQL table
     # Decide on table name(s) and fields
 
-    portfolios = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = portfolio_{user_id}");
+    portfolios = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = history_{user_id}");
     if not portfolios:
-        db.execute(f"""CREATE TABLE portfolio_{user_id} (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        db.execute(f"""CREATE TABLE history_{user_id} (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                         symbol TEXT NOT NULL,
                         shares TEXT NOT NULL,
                         date DATE,
