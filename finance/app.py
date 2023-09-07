@@ -69,11 +69,14 @@ def buy():
         return apology("must provide positive number", 403)
 
     user_id = session["user_id"]
-    print(user_id)
-    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    max_stocks_to_buy = math.floor(user_cash / number * data["price"])
 
-    if max_stocks_to_buy < number:
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    if not user_cash:
+        return apology("user doesn't exist", 403)
+
+    max_stocks_to_buy = math.floor(user_cash[0]["cash"] / int(number) * data["price"])
+
+    if max_stocks_to_buy < int(number):
         return apology("can buy {?} stocks",  max_stocks_to_buy, 403)
 
     return apology("TODO")
