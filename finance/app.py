@@ -85,23 +85,14 @@ def buy():
 
     transactions = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'transactions_{user_id}';")
     if not transactions:
-        db.execute("""CREATE TABLE ? (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                        symbol TEXT NOT NULL,
-                        shares TEXT NOT NULL,
-                        date DATE,
-                        );""", f"transactions_{user_id}")
+        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, date DATE);", f"transactions_{user_id}")
 
     row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.datetime.now())
 
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'portfolio_{user_id}';")
     if not portfolio:
-        db.execute("""CREATE TABLE ? (
-                        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                        symbol TEXT NOT NULL,
-                        shares TEXT NOT NULL,
-                        );""", f"portfolio_{user_id}");
+        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL,);", f"portfolio_{user_id}");
 
     row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
     if not row_symbol:
