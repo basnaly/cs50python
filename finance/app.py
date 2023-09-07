@@ -103,7 +103,11 @@ def buy():
                         shares TEXT NOT NULL,
                         );""");
 
-    db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ? AND shares = ?", symbol, shares)
+    row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
+    if not row_symbol:
+        db.execute("INSERT INTO portfolio_{user_id} (symbol, shares) VALUES(?, ?)", symbol, shares)
+    else:
+        db.execute("INSERT INTO portfolio_{user_id} (shares) VALUES(?)", shares)
 
 
     return redirect("/")
