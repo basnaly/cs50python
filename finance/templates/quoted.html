@@ -7,9 +7,9 @@
 {% block main %}
     <form action="/quoted" method="post">
         <div>
-            <p>name: {{ data["name"]}} </p>
-            <p>price: {{ data["price"]}} </p>
-            <p>symbol: {{ data["symbol"]}} </p>
+            <p>name: <strong>{{ data["name"] }}</strong> </p>
+            <p>price: <strong>{{ data["price"] }}</strong> </p>
+            <p>symbol: <strong>{{ data["symbol"] }}</strong> </p>
         </div>
     </form>
 {% endblock %}
