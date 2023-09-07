@@ -85,11 +85,12 @@ def buy():
 
     transactions = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = transactions_{user_id}")
     if not transactions:
-        db.execute(f"""CREATE TABLE transactions_{user_id} (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        db.execute(f"""CREATE TABLE transactions_{user_id} (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                         symbol TEXT NOT NULL,
                         shares TEXT NOT NULL,
                         date DATE,
-                        );""");
+                        );""")
 
     row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.now())
 
@@ -100,6 +101,7 @@ def buy():
                         symbol TEXT NOT NULL,
                         shares TEXT NOT NULL,
                         );""");
+    
 
     return redirect("/")
 
