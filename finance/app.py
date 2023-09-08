@@ -57,7 +57,8 @@ def index():
 
     cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
 
-    total_value = cash[0]["cash"] + sum
+    sum = round(sum, 2)
+    total_value = round(cash[0]["cash"] + sum, 2)
 
     return render_template("index.html", data = data, sum = sum, cash = cash[0]["cash"], total_value = total_value)
 
