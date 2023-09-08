@@ -260,6 +260,7 @@ def sell():
 
     # When requested via GET, display form to sell a stock.
     if request.method == "GET":
+        
         return render_template("sell.html")
 
     # When form is submitted via POST, check for errors and sell the
