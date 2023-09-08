@@ -47,12 +47,13 @@ def index():
     list_shares = db.execute(f"SELECT * FROM portfolio_{user_id}")
 
     for element in list_shares:
+        nn = element["id"]
         symbol = element["symbol"]
         shares = element["shares"]
         price = lookup(symbol)
         total = round((int(shares) * price["price"]), 2)
         sum += total
-        data.append({"symbol": symbol.to_upper(), "shares": shares, "price": price["price"], "total": total})
+        data.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price["price"], "total": total})
 
     cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
 
