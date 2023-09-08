@@ -278,6 +278,10 @@ def sell():
     if not symbol:
         return apology("must provide symbol", 403)
 
+    # If symbol is not in portfolio
+
+    list_symbols = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ")
+
     data = lookup(symbol)
 
     if data == None:
