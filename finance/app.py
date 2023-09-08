@@ -99,6 +99,8 @@ def buy():
     else:
         db.execute(f"UPDATE portfolio_{user_id} SET shares = ?", int(row_symbol[0]["shares"]) + int(shares))
 
+    current_cash = db.execute("SELECT cash FROM users WHERE id = ?", )
+
     return redirect("/")
 
 @app.route("/history")
@@ -266,4 +268,4 @@ def sell():
 # | 6  | qwe      | pbkdf2:sha256:600000$qKteNzpGXVNRebDx$cb23241ec82fad81d4db1f11c2d16ef327b2049c1fe437894e117b5e6ee39a55 | 10000 |
 # +----+----------+--------------------------------------------------------------------------------------------------------+-------+
 
-# 
+#
