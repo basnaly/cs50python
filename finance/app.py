@@ -242,7 +242,7 @@ def sell():
 #                     username TEXT NOT NULL,
 #                     hash TEXT NOT NULL,
 #                     cash NUMERIC NOT NULL DEFAULT 10000.00);
-
+SELECT
 # CREATE TABLE sqlite_sequence(name,seq);
 # CREATE UNIQUE INDEX username ON users (username);
 
