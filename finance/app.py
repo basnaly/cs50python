@@ -258,10 +258,15 @@ def register():
 def sell():
     """Sell shares of stock"""
 
+    user_id = session["user_id"]
+
     # When requested via GET, display form to sell a stock.
     if request.method == "GET":
-        
-        return render_template("sell.html")
+
+        # List of symbols in portfolio
+        list_symbols = db.execute(SELECT )
+
+        return render_template("sell.html", list symbols)
 
     # When form is submitted via POST, check for errors and sell the
     # number of shares of stock and update user's cash
@@ -283,7 +288,7 @@ def sell():
     if int(shares) < 0:
         return apology("must provide positive number", 403)
 
-    user_id = session["user_id"]
+
 
 
 
