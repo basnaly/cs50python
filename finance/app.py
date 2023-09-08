@@ -264,7 +264,17 @@ def sell():
 
     # When form is submitted via POST, check for errors and sell the
     # number of shares of stock and update user's cash
-    
+
+    symbol = request.form.get("symbol")
+    shares = request.form.get("shares")
+
+    if not symbol:
+        return apology("must provide symbol", 403)
+
+    data = lookup(symbol)
+
+    if data == None:
+        return apology("symbol doesnt exists", 403)
 
     return apology("TODO")
 
