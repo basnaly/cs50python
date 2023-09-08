@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Log In
+    Index
 {% endblock %}
 
 {% block main %}
@@ -12,15 +12,22 @@
         <thead>
             <tr>
                 <th>
-                    Search History
+                    <td>NN</td>
+                    <td>Symbol</td>
+                    <td>Price</td>
+                    <td>Shares</td>
+                    <td>Total</td>
                 </th>
             </tr>
         </thead>
         <tbody>
             {%  for row in history %}
                 <tr>
-                    <td>{{ row[id] }}</td>
-                    <td>{{ row[page] }}</td>
+                    <td>{{  }}</td>
+                    <td>{{  }}</td>
+                    <td>{{  }}</td>
+                    <td>{{  }}</td>
+                    <td>{{  }}</td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -36,5 +43,6 @@ nn   symbol  price   shares   total
 1.    aapl    105      3       315
 2.    abc      50      4       200
 total:                         515
-Cash balance = 10 000 - 515 = 
+Cash balance =
+Total value = 515 + cash balance
 table -->
