@@ -264,9 +264,10 @@ def sell():
     if request.method == "GET":
 
         # List of symbols in portfolio
-        list_symbols = db.execute(SELECT )
+        list_symbols = db.execute(f"SELECT symbol FROM portfolio_{user_id}")
+        print(list_symbols)
 
-        return render_template("sell.html", list symbols)
+        return render_template("sell.html", list_symbols = list_symbols)
 
     # When form is submitted via POST, check for errors and sell the
     # number of shares of stock and update user's cash
