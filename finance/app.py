@@ -59,7 +59,6 @@ def index():
 
     return render_template("index.html", data = data, sum = sum, cash = cash[0]["cash"])
 
-
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
