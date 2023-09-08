@@ -45,7 +45,7 @@ def index():
     symbol = data["symbol"]
     price = data["price"]
 
-    shares = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE shares = ?", shares)
+    shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol = ?", symbol)
 
     return apology("TODO")
 
