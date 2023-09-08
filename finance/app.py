@@ -53,6 +53,7 @@ def index():
         total = round((int(shares) * price["price"]), 2)
 
         data.append({"symbol": symbol, "shares": shares, "price": price["price"], "total": total})
+        
 
     return render_template("index.html", data = data)
 
