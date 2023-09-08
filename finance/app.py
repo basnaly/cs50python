@@ -280,7 +280,10 @@ def sell():
 
     # If symbol is not in portfolio
 
-    list_symbols = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ")
+    list_symbols = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
+
+    if not list_symbols:
+        return apology("must provide valid symbol", 403)
 
     data = lookup(symbol)
 
