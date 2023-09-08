@@ -77,6 +77,7 @@ def buy():
 
     max_stocks_to_buy = math.floor(user_cash[0]["cash"] / data["price"])
     print(max_stocks_to_buy, user_cash[0]["cash"], int(shares), data["price"])
+
     if max_stocks_to_buy < int(shares):
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
 
@@ -99,7 +100,7 @@ def buy():
     else:
         db.execute(f"UPDATE portfolio_{user_id} SET shares = ?", int(row_symbol[0]["shares"]) + int(shares))
 
-    updated_cash = db.execute("UPDATE cash FROM users SET cash = ? WHERE id = ?", current_cash["CASH"], user_id)
+    updated_cash = db.execute("UPDATE cash FROM users SET cash = ? WHERE id = ?", user_cash[0]["cash"] - , user_id)
 
     return redirect("/")
 
