@@ -44,16 +44,15 @@ def index():
     data = []
 
     list_shares = db.execute(f"SELECT * FROM portfolio_{user_id}")
-    print(list_shares)
 
     for element in list_shares:
         symbol = element["symbol"]
         shares = element["shares"]
         price = lookup(symbol)
         print(price)
-        total = round((int(shares) * price), 2)
+        total = round((int(shares) * price["price"]), 2)
 
-        data.append({"symbol": symbol, "shares": shares, "price": price, "total": total})
+        data.append({"symbol": symbol, "shares": shares, "price": price["price"], "total": total})
 
     return render_template("index.html", data = data)
 
