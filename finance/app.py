@@ -52,7 +52,7 @@ def index():
         price = lookup(symbol)
         total = round((int(shares) * price["price"]), 2)
         sum += total
-        data.append({"symbol": symbol, "shares": shares, "price": price["price"], "total": total})
+        data.append({"symbol": symbol.to_upper(), "shares": shares, "price": price["price"], "total": total})
 
     cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
 
