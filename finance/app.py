@@ -87,8 +87,7 @@ def buy():
     if not transactions:
         db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, date DATE);", f"transactions_{user_id}")
 
-    row = db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.now())
-
+        db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.now())
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'portfolio_{user_id}';")
     if not portfolio:
@@ -243,6 +242,7 @@ def sell():
 #                     username TEXT NOT NULL,
 #                     hash TEXT NOT NULL,
 #                     cash NUMERIC NOT NULL DEFAULT 10000.00);
+
 # CREATE TABLE sqlite_sequence(name,seq);
 # CREATE UNIQUE INDEX username ON users (username);
 
