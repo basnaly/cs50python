@@ -1,37 +1,37 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Index
+Index
 {% endblock %}
 
 {% block main %}
 
-    <h2>Your current portfolio</h2>
+<h2>Your current portfolio</h2>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    <td>NN</td>
-                    <td>Symbol</td>
-                    <td>Price</td>
-                    <td>Shares</td>
-                    <td>Total</td>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in  data %}
-                <tr>
-                    <td>1</td>
-                    <td>{{ row[symbol] }}</td>
-                    <td>{{ row[price] }}</td>
-                    <td>{{ row[shares] }}</td>
-                    <td>{{ row[total] }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>NN</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Shares</th>
+            <th>Total</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr>
+            <td>1</td>
+            <td>{{ row['symbol'] }}</td>
+            <td>{{ row['price'] }}</td>
+            <td>{{ row['shares'] }}</td>
+            <td>{{ row['total'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 
 
