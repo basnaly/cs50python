@@ -50,7 +50,7 @@ def index():
         symbol = element["symbol"]
         shares = element["shares"]
         price = lookup(symbol)
-        total = round((shares * price), 2)
+        total = round((int(shares) * price), 2)
 
         data.append({"symbol": symbol, "shares": shares, "price": price, "total": total})
 
