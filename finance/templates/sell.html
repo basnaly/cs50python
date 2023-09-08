@@ -8,7 +8,7 @@
     <form action="/sell" method="post">
         <div class="mb-3">
             <select class="form-select w-25 mx-auto" aria-label="Default select example">
-                <option selected>Select menu</option>
+                <option selected>Select symbol</option>
 
                 {% for stock in list_stocks %}
                     <option>{{stock["symbol"].upper()}}</option>
