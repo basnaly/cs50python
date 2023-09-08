@@ -278,6 +278,14 @@ def sell():
 
     return apology("TODO")
 
+    if not shares:
+        return apology("must provide number of shares", 403)
+
+    if int(shares) < 0:
+        return apology("must provide positive number", 403)
+
+    user_id = session["user_id"]
+
 
 
 # sqlite3 finance.db
