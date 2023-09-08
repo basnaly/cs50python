@@ -39,6 +39,10 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    data = lookup(symbol)
+    symbol = data["symbol"]
+    price = data["price"]
+    
 
     return apology("TODO")
 
