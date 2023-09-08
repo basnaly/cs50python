@@ -6,6 +6,26 @@
 
 {% block main %}
 
+    <h2>Your current portfolio</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Search History
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {%  for row in history %}
+                <tr>
+                    <td>{{ row[id] }}</td>
+                    <td>{{ row[page] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 
 
 {% endblock %}
