@@ -44,6 +44,7 @@ def index():
     data = lookup(symbol)
     symbol = data["symbol"]
     price = data["price"]
+    print(data, symbol)
 
     shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol = ?", symbol)
 
