@@ -242,16 +242,18 @@ def sell():
 #                     username TEXT NOT NULL,
 #                     hash TEXT NOT NULL,
 #                     cash NUMERIC NOT NULL DEFAULT 10000.00);
-SELECT
+
 # CREATE TABLE sqlite_sequence(name,seq);
 # CREATE UNIQUE INDEX username ON users (username);
 
-# CREATE TABLE portfolio (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-#                         user_id
-#                         symbol TEXT NOT NULL,
-#                         shares TEXT NOT NULL,
-#                         date DATE,
-#                         );
+# CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+#                 symbol TEXT NOT NULL,
+#                 shares TEXT NOT NULL,
+#                 date DATE);", f"transactions_{user_id}");
+
+# CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+#                 symbol TEXT NOT NULL,
+#                 shares TEXT NOT NULL);", f"portfolio_{user_id});
 
 # +----+----------+--------------------------------------------------------------------------------------------------------+-------+
 # | id | username |                                                  hash                                                  | cash  |
@@ -263,3 +265,5 @@ SELECT
 # | 5  | alex     | pbkdf2:sha256:600000$zfXX1ARPI07E4WvT$9241e6a96d8ac163addfb533162371bd128dd0b3fd8cf47ee5746db430a563a3 | 10000 |
 # | 6  | qwe      | pbkdf2:sha256:600000$qKteNzpGXVNRebDx$cb23241ec82fad81d4db1f11c2d16ef327b2049c1fe437894e117b5e6ee39a55 | 10000 |
 # +----+----------+--------------------------------------------------------------------------------------------------------+-------+
+
+# 
