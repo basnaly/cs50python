@@ -45,8 +45,10 @@ def index():
     print(list_shares)
 
     for element in list_shares:
-        symbol = list_shares[element]["symbol"]
-        shares = list_shares[element]["shares"]
+        symbol = element["symbol"]
+        shares = element["shares"]
+        price = lookup(symbol)
+        total = round((shares * price), 2)
 
     return render_template("index.html")
 
