@@ -42,7 +42,8 @@ def index():
     data = lookup(symbol)
     symbol = data["symbol"]
     price = data["price"]
-    
+
+    shares = db.execute()
 
     return apology("TODO")
 
