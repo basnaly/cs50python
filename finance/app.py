@@ -41,12 +41,12 @@ def index():
 
     user_id = session["user_id"]
 
-    data = lookup(symbol)
-    symbol = data["symbol"]
-    price = data["price"]
-    print(data, symbol)
+    list_shares = db.execute(f"SELECT * FROM portfolio_{user_id}")
+    print(list_shares)
 
-    shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol = ?", symbol)
+    for element in list_shares:
+        symbol = list_shares[element]["symbol"]
+        shares = list_shares[element]["shares"]
 
     return render_template("index.html")
 
