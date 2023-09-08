@@ -10,8 +10,8 @@
             <select class="form-select" aria-label="Default select example">
                 <option selected>Open this select menu</option>
 
-                {% for row in list_stocks %}
-                    <option></option>
+                {% for stock in list_stocks %}
+                    <option>{{stock["symbol"]}}</option>
                 {% endfor %}
         </div>
         <div class="mb-3">
