@@ -31,14 +31,17 @@ Index
         </tr>
         {% endfor %}
         <tr>
-            <td>Total sum:</td>
-            <td colspan="3"></td>
+            <td class="td" colspan="4">Total sum:</td>
             <td>{{ sum }}</td>
         </tr>
         <tr>
-            <td>Your cash:</td>
-            <td colspan="3"></td>
+            <td class="td" colspan="4">Your cash:</td>
             <td>{{ cash }}</td>
+        </tr>
+
+        <tr>
+            <td class="td" colspan="4">Total value of stocks and cash:</td>
+            <td>{{ total_value }}</td>
         </tr>
 
     </tbody>

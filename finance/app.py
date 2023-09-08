@@ -55,9 +55,10 @@ def index():
         data.append({"symbol": symbol, "shares": shares, "price": price["price"], "total": total})
 
     cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
-    print(cash)
 
-    return render_template("index.html", data = data, sum = sum, cash = cash[0]["cash"])
+    total_value = cash[0]["cash"] + sum
+
+    return render_template("index.html", data = data, sum = sum, cash = cash[0]["cash"], total_value = total_value)
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
