@@ -46,8 +46,8 @@ def index():
 
     list_shares = db.execute(f"SELECT * FROM portfolio_{user_id}")
 
-    for element in list_shares:
-        nn = element["id"]
+    for i, element in enumerate (list_shares):
+        nn = i + 1
         symbol = element["symbol"]
         shares = element["shares"]
         price = lookup(symbol)
