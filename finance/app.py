@@ -48,7 +48,7 @@ def index():
 
     shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol = ?", symbol)
 
-    return apology("TODO")
+    return render_template("index.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
