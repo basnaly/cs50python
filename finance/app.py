@@ -39,11 +39,13 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    user_id = session["user_id"]
+
     data = lookup(symbol)
     symbol = data["symbol"]
     price = data["price"]
 
-    shares = db.execute()
+    shares = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE shares = ?", shares)
 
     return apology("TODO")
 
