@@ -276,8 +276,6 @@ def sell():
     if data == None:
         return apology("symbol doesnt exists", 403)
 
-    return apology("TODO")
-
     if not shares:
         return apology("must provide number of shares", 403)
 
@@ -285,6 +283,11 @@ def sell():
         return apology("must provide positive number", 403)
 
     user_id = session["user_id"]
+
+
+
+    return apology("TODO")
+
 
 
 
