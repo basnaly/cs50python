@@ -25,3 +25,11 @@ nav .navbar-brand .green
 .td {
     text-align: left;
 }
+
+.tr_top {
+    border-top: solid black 0.15rem;
+}
+
+.tr_bottom {
+    border-bottom: solid black 0.15rem;
+}
