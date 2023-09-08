@@ -101,7 +101,7 @@ def buy():
 
     current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
 
-    updated_cash = db.execute("UPDATE cash FROM users SET cash = ? WHERE id = ?", current_cash["CASH"] - , user_id)
+    updated_cash = db.execute("UPDATE cash FROM users SET cash = ? WHERE id = ?", current_cash["CASH"], user_id)
 
     return redirect("/")
 
