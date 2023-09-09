@@ -325,9 +325,6 @@ def sell():
 
     return redirect("/")
 
-
-
-
 # sqlite3 finance.db
 # .schema
 # CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
