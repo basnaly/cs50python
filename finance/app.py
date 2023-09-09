@@ -308,7 +308,7 @@ def sell():
 
     # Update shares of symbol in transactions_{user_id}
 
-    db.execute(f"UPDATE transactions_{user_id} SET (shares, date)", user_shares - shares, datetime.now())
+    db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, shares, datetime.now())
 
     # Update shares of symbol in portfolio_{user_id}
 
@@ -316,7 +316,7 @@ def sell():
 
     # Update cash:
 
-
+    
 
 
     return apology("TODO")
