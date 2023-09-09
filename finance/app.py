@@ -98,7 +98,6 @@ def buy():
         return apology("user doesn't exist", 403)
 
     max_stocks_to_buy = math.floor(user_cash[0]["cash"] / data["price"])
-    print(max_stocks_to_buy, user_cash[0]["cash"], int(shares), data["price"])
 
     if max_stocks_to_buy < int(shares):
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
@@ -322,7 +321,6 @@ def sell():
         db.execute(f"DELETE FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
 
     # Update cash:
-    print(round((int(user_cash[0]["cash"]) + sold_stocks), 2))
     db.execute("UPDATE users SET cash = ? WHERE id = ?", round((user_cash[0]["cash"] + sold_stocks), 2), user_id)
 
     return redirect("/")
