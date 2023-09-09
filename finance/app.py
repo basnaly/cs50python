@@ -306,7 +306,9 @@ def sell():
         return apology("user doesn't exist", 403)
 
     # Update shares of symbol
-    
+
+    db.execute(f"""UPDATE transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.now())
+
     # Update cash:
 
 
