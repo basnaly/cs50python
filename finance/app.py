@@ -109,7 +109,7 @@ def buy():
     if not transactions:
         db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, price TEXT NOT NULL, date DATE);", f"transactions_{user_id}")
 
-    db.execute(f"""INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?)""", symbol, shares, price, datetime.now())
+    db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, shares, price, datetime.now())
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'portfolio_{user_id}';")
     if not portfolio:
@@ -314,7 +314,7 @@ def sell():
     sold_shares = int(shares) * -1
 
     # Update shares of symbol in transactions_{user_id}
-    db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, sold_shares, datetime.now())
+    db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, sold_shares, price, datetime.now())
 
     # Update shares of symbol in portfolio_{user_id}
     db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol LIKE ?", user_shares - int(shares), symbol)
