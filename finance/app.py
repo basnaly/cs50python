@@ -262,6 +262,7 @@ def sell():
 
     # When requested via GET, display form to sell a stock.
     if request.method == "GET":
+        
         # List of symbols in portfolio
         list_stocks = db.execute(f"SELECT symbol, shares FROM portfolio_{user_id}")
         print(list_stocks)
@@ -297,7 +298,6 @@ def sell():
 
 
     list_shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
-    print(list_shares)
     if int(shares) > int(list_shares[0]["shares"]):
 
         return apology(f"you have only {list_shares[0]["shares"]}", 403)
