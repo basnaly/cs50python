@@ -296,11 +296,11 @@ def sell():
         return apology("must provide positive number", 403)
 
 
-    user_shares = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE shares LIKE ?", shares)
-    print(user_shares)
-    if shares > list_stocks[0]["shares"]:
+    list_shares = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE shares LIKE ?", shares)
+    print(list_shares)
+    if shares > list_shares:
 
-        return apology(f"you have only {user_shares}", 403)
+        return apology(f"you have only {list_shares}", 403)
 
 
     # user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
