@@ -307,7 +307,7 @@ def sell():
 
     # Update shares of symbol
 
-    db.execute(f"""UPDATE transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)""", symbol, shares, datetime.now())
+    db.execute(f"UPDATE transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, shares, datetime.now())
 
     # Update cash:
 
