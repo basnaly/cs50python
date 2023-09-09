@@ -296,7 +296,7 @@ def sell():
         return apology("must provide positive number", 403)
 
 
-
+    user_shares = db.execute(f"SELECT shares FROM portfolio WHERE id = ?", user_id")
     if shares > list_stocks[0]["shares"]:
         print(list_stocks[0]["shares"])
         return apology(f"you have only {list_stocks[0]['shares']}", 403)
