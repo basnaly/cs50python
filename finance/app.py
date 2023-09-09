@@ -298,7 +298,7 @@ def sell():
 
     list_shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
     print(list_shares)
-    if shares > int(list_shares[0]["shares"]):
+    if int(shares) > int(list_shares[0]["shares"]):
 
         return apology(f"you have only {list_shares}", 403)
 
