@@ -310,7 +310,7 @@ def sell():
     sold_stocks = round(user_shares * int(data["price"])), 2
 
     # Update shares of symbol in transactions_{user_id}
-    db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, shares, datetime.now())
+    db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, + "-" + shares, datetime.now())
 
     # Update shares of symbol in portfolio_{user_id}
     db.execute(f"UPDATE portfolio_{user_id} SET shares = ?", user_shares - int(shares))
