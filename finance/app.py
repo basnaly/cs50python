@@ -301,10 +301,9 @@ def sell():
 
         return apology(f"you have only {list_shares[0]["shares"]}", 403)
 
-
-    # user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    # if not user_cash:
-    #     return apology("user doesn't exist", 403)
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    if not user_cash:
+        return apology("user doesn't exist", 403)
 
 
 
