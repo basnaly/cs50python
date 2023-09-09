@@ -114,7 +114,7 @@ def buy():
     else:
         db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol = ?", int(row_symbol[0]["shares"]) + int(shares), symbol)
 
-    updated_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", round((user_cash[0]["cash"] - (int(shares) * data["price"])), 2), user_id)
+    updated_cash = db.execute("UPDATE users SET cash = CAST(? AS NUMERIC) WHERE id = ?", round((user_cash[0]["cash"] - (int(shares) * data["price"])), 2), user_id)
     print(updated_cash)
 
     return redirect("/")
