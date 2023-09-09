@@ -97,7 +97,7 @@ def buy():
     if not user_cash:
         return apology("user doesn't exist", 403)
 
-    max_stocks_to_buy = math.floor(user_cash[0]["cash"] / data["price"])
+    max_stocks_to_buy = math.floor(user_cash[0]["cash"] / price)
 
     if max_stocks_to_buy < int(shares):
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
@@ -113,7 +113,7 @@ def buy():
     else:
         db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol = ?", int(row_symbol[0]["shares"]) + int(shares), symbol)
 
-    updated_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", round((user_cash[0]["cash"] - (int(shares) * data["price"])), 2), user_id)
+    updated_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", round((user_cash[0]["cash"] - (int(shares) * price)), 2), user_id)
     print(updated_cash)
 
     return redirect("/")
