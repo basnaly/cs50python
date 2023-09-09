@@ -318,7 +318,7 @@ def sell():
 
     # If sold shares = current shares remove row
     if int(shares) == user_shares:
-        db.execute("DELETE FROM users WHERE symbol LIKE ?", symbol)
+        db.execute(f"DELETE FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
 
     # Update cash:
     db.execute("UPDATE users SET cash = ? WHERE id = ?", int(user_cash[0]["cash"]) + sold_stocks, user_id)
