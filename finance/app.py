@@ -316,6 +316,10 @@ def sell():
     # Update shares of symbol in portfolio_{user_id}
     db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol LIKE ?", user_shares - int(shares), symbol)
 
+    # If sold shares = current shares remove row
+    if int(shares) == user_shares:
+        db.execute()
+
     # Update cash:
     db.execute("UPDATE users SET cash = ? WHERE id = ?", int(user_cash[0]["cash"]) + sold_stocks, user_id)
 
