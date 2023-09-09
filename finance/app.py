@@ -300,7 +300,7 @@ def sell():
     print(list_shares)
     if int(shares) > int(list_shares[0]["shares"]):
 
-        return apology(f"you have only {list_shares}", 403)
+        return apology(f"you have only {list_shares[0]["shares"]}", 403)
 
 
     # user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
