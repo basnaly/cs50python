@@ -107,14 +107,12 @@ def buy():
     # Decide on table name(s) and fields
 
     transactions = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'transactions_{user_id}';")
-    if not transactions:
-        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, price TEXT NOT NULL, date DATE);", f"transactions_{user_id}")
 
     db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, shares, price, datetime.now())
 
     portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'portfolio_{user_id}';")
     if not portfolio:
-        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL);", f"portfolio_{user_id}");
+
 
     row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
     if not row_symbol:
@@ -248,6 +246,12 @@ def register():
 
         # Remember which user has logged in
         session["user_id"] = new_user_id
+
+        # Create transactions table
+        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, price TEXT NOT NULL, date DATE);", f"transactions_{new_user_id}")
+
+        # Create portfolio table
+        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL);", f"portfolio_{new_user_id}")
 
         # Redirect user to home page
         return redirect("/")
