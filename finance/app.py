@@ -306,6 +306,8 @@ def sell():
     if not user_cash:
         return apology("user doesn't exist", 403)
 
+    sold_stocks = round(user_shares * int(data["price"])), 2
+
     # Update shares of symbol in transactions_{user_id}
     db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, shares, datetime.now())
 
@@ -313,7 +315,7 @@ def sell():
     db.execute(f"UPDATE portfolio_{user_id} SET shares = ?", user_shares - shares)
 
     # Update cash:
-    db.execute("UPDATE users SET cash = ? WHERE id = ", ,user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ", user_cash - sold_stocks, user_id)
 
 
     return apology("TODO")
