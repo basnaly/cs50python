@@ -323,7 +323,7 @@ def sell():
         db.execute(f"DELETE FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
 
     # Update cash:
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", int(user_cash[0]["cash"]) + sold_stocks, user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", round((int(user_cash[0]["cash"]) + sold_stocks), 2), user_id)
 
     return redirect("/")
 
