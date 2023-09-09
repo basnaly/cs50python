@@ -316,7 +316,7 @@ def sell():
 
     # Update cash:
 
-    
+    db.execute("UPDATE users SET cash = ? WHERE id = ", user_id)
 
 
     return apology("TODO")
