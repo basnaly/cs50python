@@ -303,6 +303,7 @@ def sell():
         return apology(f"you have only {user_shares}", 403)
 
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    
     if not user_cash:
         return apology("user doesn't exist", 403)
 
@@ -315,7 +316,7 @@ def sell():
     db.execute(f"UPDATE portfolio_{user_id} SET shares = ?", user_shares - int(shares))
 
     # Update cash:
-    db.execute("UPDATE users SET cash = ? WHERE id = ", user_cash - sold_stocks, user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ", int(user_cash) - sold_stocks, user_id)
 
 
     return apology("TODO")
