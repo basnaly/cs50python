@@ -307,7 +307,7 @@ def sell():
     if not user_cash:
         return apology("user doesn't exist", 403)
 
-    sold_stocks = round(user_shares * int(data["price"]), 2)
+    sold_stocks = round(int(shares) * int(data["price"]), 2)
     sold_shares = int(shares) * -1
 
     # Update shares of symbol in transactions_{user_id}
