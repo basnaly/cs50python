@@ -106,11 +106,7 @@ def buy():
     # Adding new SQL table
     # Decide on table name(s) and fields
 
-    transactions = db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'transactions_{user_id}';")
-
     db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, shares, price, datetime.now())
-
-    portfolio =  db.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name = 'portfolio_{user_id}';")
 
     row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
     if not row_symbol:
