@@ -297,19 +297,22 @@ def sell():
         return apology("must provide positive number", 403)
 
     list_shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
-    if int(shares) > int(list_shares[0]["shares"]):
+    user_shares = int(list_shares[0]["shares"])
+    if int(shares) > user_shares:
 
-        return apology(f"you have only {list_shares[0]['shares']}", 403)
-
-    user_shares = db.execute("SELECT shares ")
+        return apology(f"you have only {user_shares}", 403)
 
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     if not user_cash:
         return apology("user doesn't exist", 403)
 
-    # Update shares of symbol
+    # Update shares of symbol in transactions_{user_id}
 
-    db.execute(f"UPDATE transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, shares, datetime.now())
+    db.execute(f"UPDATE transactions_{user_id} (symbol, shares, date) VALUES(?, ?, ?)", symbol, user_shares - shares, datetime.now())
+
+    # Update shares of symbol in portfolio_{user_id}
+
+    db.execute(f"UPDATE portfolio _{user_id} (symbol, shares) VALUES(?, ?)", symbol, user_shares - shares)
 
     # Update cash:
 
