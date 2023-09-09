@@ -305,7 +305,6 @@ def sell():
         return apology(f"you have only {user_shares} shares", 403)
 
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    print
     if not user_cash:
         return apology("user doesn't exist", 403)
 
