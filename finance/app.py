@@ -88,7 +88,9 @@ def buy():
     if not shares:
         return apology("must provide number of shares", 403)
 
-    if int(shares) < 0:
+    shares = int(shares)
+
+    if shares < 0:
         return apology("must provide positive number", 403)
 
     user_id = session["user_id"]
@@ -97,7 +99,8 @@ def buy():
     if not user_cash:
         return apology("user doesn't exist", 403)
 
-    max_stocks_to_buy = math.floor(user_cash[0]["cash"] / price)
+    current_user_cash = user_cash[0]["cash"]
+    max_stocks_to_buy = math.floor( current_user_cash / price)
 
     if max_stocks_to_buy < int(shares):
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
