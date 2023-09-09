@@ -323,7 +323,7 @@ def sell():
 
     # Update cash:
     print(round((int(user_cash[0]["cash"]) + sold_stocks), 2))
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", round((int(user_cash[0]["cash"]) + sold_stocks), 2), user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", round((user_cash[0]["cash"] + sold_stocks), 2), user_id)
 
     return redirect("/")
 
