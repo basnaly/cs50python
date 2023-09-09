@@ -131,7 +131,7 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    
+
     return apology("TODO")
 
 
@@ -288,6 +288,7 @@ def sell():
         return apology("must provide valid symbol", 403)
 
     data = lookup(symbol)
+    print(data)
 
     if data == None:
         return apology("symbol doesnt exists", 403)
@@ -302,7 +303,7 @@ def sell():
     user_shares = int(list_shares[0]["shares"])
     if int(shares) > user_shares:
 
-        return apology(f"you have only {user_shares}", 403)
+        return apology(f"you have only {user_shares} shares", 403)
 
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     print
