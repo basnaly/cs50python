@@ -81,7 +81,7 @@ def buy():
         return apology("must provide symbol", 403)
 
     data = lookup(symbol)
-    price = data[0]["price"]
+    price = data["price"]
     if data == None:
         return apology("symbol doesnt exists", 403)
 
@@ -287,7 +287,7 @@ def sell():
         return apology("must provide valid symbol", 403)
 
     data = lookup(symbol)
-    price = data[0]["price"]
+    price = data["price"]
 
     if data == None:
         return apology("symbol doesnt exists", 403)
