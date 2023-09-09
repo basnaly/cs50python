@@ -260,12 +260,11 @@ def sell():
 
     user_id = session["user_id"]
 
-     # List of symbols in portfolio
-    list_stocks = db.execute(f"SELECT symbol, shares FROM portfolio_{user_id}")
-    print(list_stocks)
-
     # When requested via GET, display form to sell a stock.
     if request.method == "GET":
+        # List of symbols in portfolio
+        list_stocks = db.execute(f"SELECT symbol, shares FROM portfolio_{user_id}")
+        print(list_stocks)
 
         return render_template("sell.html", list_stocks = list_stocks)
 
@@ -295,6 +294,7 @@ def sell():
 
     if int(shares) < 0:
         return apology("must provide positive number", 403)
+
 
 
     if shares > list_stocks[0]["shares"]:
