@@ -299,11 +299,16 @@ def sell():
     list_shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
     if int(shares) > int(list_shares[0]["shares"]):
 
-        return apology(f"you have only {list_shares[0]["shares"]}", 403)
+        return apology(f"you have only {list_shares[0]['shares']}", 403)
 
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     if not user_cash:
         return apology("user doesn't exist", 403)
+
+    # Update shares of symbol
+    
+    # Update cash:
+
 
 
 
