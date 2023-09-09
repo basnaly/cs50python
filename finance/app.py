@@ -318,7 +318,7 @@ def sell():
 
     # If sold shares = current shares remove row
     if int(shares) == user_shares:
-        db.execute("DELETE users ")
+        db.execute("DELETE FROM users WHERE shares = ?", )
 
     # Update cash:
     db.execute("UPDATE users SET cash = ? WHERE id = ?", int(user_cash[0]["cash"]) + sold_stocks, user_id)
