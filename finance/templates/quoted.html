@@ -8,7 +8,7 @@
     <form action="/quoted" method="post">
         <div>
             <p>name: <strong>{{ data["name"] }}</strong> </p>
-            <p>price: <strong>{{ data["price"] }}</strong> </p>
+            <p>price: <strong>{{ data["price"] | usd }}</strong> </p>
             <p>symbol: <strong>{{ data["symbol"] }}</strong> </p>
         </div>
     </form>
