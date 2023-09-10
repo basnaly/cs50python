@@ -130,6 +130,7 @@ def history():
     """Show history of transactions"""
 
     user_id = session["user_id"]
+    history = []
 
     history_list = db.execute(f"SELECT * FROM transactions_{user_id}")
     print(history_list)
@@ -140,6 +141,7 @@ def history():
         shares = element["shares"]
         price = element["price"]
         date = element["date"]
+        history.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price" = price, "date" = date})
 
     return render_template("history.html", nn = nn)
 
