@@ -50,17 +50,16 @@ def index():
     for i, element in enumerate (list_shares):
         nn = i + 1
         symbol = element["symbol"]
-        shares = element["shares"]
+        shares = int(element["shares"])
         price = lookup(symbol)
-        total = round((int(shares) * price["price"]), 2)
+        total = (shares) * price["price"]
         sum += total
         data.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price["price"], "total": total})
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = cash[0]["cash"]
 
-    sum = round(sum, 2)
-    total_value = round(cash + sum, 2)
+    total_value = cash + sum
 
     return render_template("index.html", data = data, sum = sum, cash = cash, total_value = total_value)
 
@@ -122,7 +121,7 @@ def buy():
         current_user_shares = int(row_symbol[0]["shares"])
         db.execute("UPDATE ? SET shares = ? WHERE symbol = ?", portfolio_table, current_user_shares + shares, symbol)
 
-    updated_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", round(current_user_cash - (shares * price), 2), user_id)
+    updated_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", current_user_cash - (shares * price), user_id)
 
     return redirect("/")
 
@@ -338,7 +337,7 @@ def sell():
         return apology("user doesn't exist", 403)
 
     current_user_cash = user_cash[0]["cash"]
-    sold_stocks = round(shares * price, 2)
+    sold_stocks = shares * price
     sold_shares = shares * -1
 
     # Update shares of symbol in transactions_{user_id}
@@ -352,7 +351,7 @@ def sell():
         db.execute("DELETE FROM ? WHERE symbol LIKE ?", portfolio_table, symbol)
 
     # Update cash:
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", round((current_user_cash + sold_stocks), 2), user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", current_user_cash + sold_stocks, user_id)
 
     return redirect("/")
 
