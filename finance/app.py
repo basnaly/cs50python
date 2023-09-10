@@ -112,6 +112,8 @@ def buy():
     db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, shares, price, datetime.now())
 
     row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
+    current_user_shares =
+    
     if not row_symbol:
         db.execute(f"INSERT INTO portfolio_{user_id} (symbol, shares) VALUES(?, ?)", symbol, shares)
     else:
