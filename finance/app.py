@@ -288,6 +288,8 @@ def sell():
     user_id = session["user_id"]
 
     portfolio_table = f"portfolio_{user_id}"
+    transactions_table = f"transactions_{user_id}"
+
     # When requested via GET, display form to sell a stock.
     if request.method == "GET":
 
@@ -340,14 +342,14 @@ def sell():
     sold_shares = shares * -1
 
     # Update shares of symbol in transactions_{user_id}
-    db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, sold_shares, price, datetime.now())
+    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, sold_shares, price, datetime.now())
 
     # Update shares of symbol in portfolio_{user_id}
-    db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol LIKE ?", user_shares - shares, symbol)
+    db.execute("UPDATE ? SET shares = ? WHERE symbol LIKE ?", portfolio_table, user_shares - shares, symbol)
 
     # If sold shares = current shares remove row
     if shares == user_shares:
-        db.execute(f"DELETE FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
+        db.execute("DELETE FROM ? WHERE symbol LIKE ?", portfolio_table, symbol)
 
     # Update cash:
     db.execute("UPDATE users SET cash = ? WHERE id = ?", round((current_user_cash + sold_stocks), 2), user_id)
