@@ -114,13 +114,13 @@ def buy():
     db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
 
     portfolio_table = f"portfolio_{user_id}"
-    row_symbol = db.execute(f"SELECT * FROM ? WHERE symbol = ?", portfolio_table, symbol)
+    row_symbol = db.execute("SELECT * FROM ? WHERE symbol = ?", portfolio_table, symbol)
 
     if not row_symbol:
-        db.execute(f"INSERT INTO portfolio_{user_id} (symbol, shares) VALUES(?, ?)", symbol, shares)
+        db.execute("INSERT INTO ? (symbol, shares) VALUES(?, ?)", portfolio_table, symbol, shares)
     else:
         current_user_shares = int(row_symbol[0]["shares"])
-        db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol = ?", current_user_shares + shares, symbol)
+        db.execute("UPDATE ? SET shares = ? WHERE symbol = ?", portfolio_table, current_user_shares + shares, symbol)
 
     updated_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", round(current_user_cash - (shares * price), 2), user_id)
 
