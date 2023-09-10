@@ -20,7 +20,7 @@ History
     </thead>
     <tbody>
         {% for row in history %}
-        <tr>
+        <tr class = {{ row['class_name'] }}>
             <td>{{ row['nn'] }}</td>
             <td>{{ row['symbol'] }}</td>
             <td>{{ row['shares'] }}</td>
