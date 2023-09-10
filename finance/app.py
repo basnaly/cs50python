@@ -143,7 +143,7 @@ def history():
         date = element["date"]
         history.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price" = price, "date" = date})
 
-    return render_template("history.html", nn = nn)
+    return render_template("history.html", history = history)
 
 
 @app.route("/login", methods=["GET", "POST"])
