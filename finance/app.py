@@ -57,7 +57,6 @@ def index():
         data.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price["price"], "total": total})
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    # cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
     cash = cash[0]["cash"]
 
     sum = round(sum, 2)
@@ -114,9 +113,8 @@ def buy():
     transactions_table = f"transactions_{user_id}"
     db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
 
-    transactions_table = f"transactions_{user_id}"
-    row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
-    print(row_symbol)
+    portfolio_table = f"portfolio_{user_id}"
+    row_symbol = db.execute(f"SELECT * FROM ? WHERE symbol = ?", portfolio_table, symbol)
 
     if not row_symbol:
         db.execute(f"INSERT INTO portfolio_{user_id} (symbol, shares) VALUES(?, ?)", symbol, shares)
