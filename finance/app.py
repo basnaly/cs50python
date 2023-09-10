@@ -314,6 +314,7 @@ def sell():
     if not user_cash:
         return apology("user doesn't exist", 403)
 
+    current_user_cash = user_cash[0]["cash"]
     sold_stocks = round(shares * price, 2)
     sold_shares = shares * -1
 
@@ -328,7 +329,7 @@ def sell():
         db.execute(f"DELETE FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
 
     # Update cash:
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", round((user_cash[0]["cash"] + sold_stocks), 2), user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", round((current_user_cash + sold_stocks), 2), user_id)
 
     return redirect("/")
 
