@@ -1,4 +1,8 @@
 /* Size for brand */
+:root {
+    --bs-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 nav .navbar-brand
 {
     font-size: xx-large;
