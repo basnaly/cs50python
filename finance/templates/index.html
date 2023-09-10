@@ -24,23 +24,23 @@ Index
         <tr>
             <td>{{ row['nn'] }}</td>
             <td>{{ row['symbol'] }}</td>
-            <td>{{ row['price'] }}</td>
+            <td>{{ row['price'] | usd }}</td>
             <td>{{ row['shares'] }}</td>
-            <td>{{ row['total'] }}</td>
+            <td>{{ row['total'] | usd }}</td>
         </tr>
         {% endfor %}
         <tr class="tr_top">
             <td class="td px-5 fw-bold" colspan="4">Total sum:</td>
-            <td class="fw-bold">{{ sum }}</td>
+            <td class="fw-bold">{{ sum | usd }}</td>
         </tr>
         <tr>
             <td class="td px-5 fw-bold" colspan="4">Your cash:</td>
-            <td class="fw-bold">{{ cash }}</td>
+            <td class="fw-bold">{{ cash | usd }}</td>
         </tr>
 
         <tr class="tr_bottom">
             <td class="td px-5 fw-bold" colspan="4">Total value of stocks and cash:</td>
-            <td class="fw-bold">{{ total_value }}</td>
+            <td class="fw-bold">{{ total_value | usd }}</td>
         </tr>
 
     </tbody>
