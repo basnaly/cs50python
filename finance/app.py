@@ -137,7 +137,10 @@ def history():
     for i, element in enumerate (history_list):
         nn = i + 1
         symbol = element["symbol"]
-        
+        shares = element["shares"]
+        price = element["price"]
+        date = element["date"]
+
     return apology("TODO")
 
 
