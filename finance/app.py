@@ -218,6 +218,8 @@ def register():
     if request.method == "POST":
 
         username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
 
         # Check for possible errors
         if not username:
@@ -228,17 +230,17 @@ def register():
         if list_users:
             return apology("username is exist", 403)
 
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password", 403)
 
-        elif request.form.get("password") != request.form.get("confirmation"):
+        elif password != confirmation:
             return apology("confirmation does't match to password", 403)
 
-        elif validate_password(request.form.get("password")) == False:
+        elif validate_password(password) == False:
             return apology("the password doesn't match", 403)
 
         # Insert the new user into users db
-        hash_user_password = generate_password_hash(request.form.get("password"))
+        hash_user_password = generate_password_hash(password)
 
         new_user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash_user_password)
 
