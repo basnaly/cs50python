@@ -141,7 +141,7 @@ def history():
         price = element["price"]
         date = element["date"]
 
-    return apology("TODO")
+    return render_template("history.html", nn = nn)
 
 
 @app.route("/login", methods=["GET", "POST"])
