@@ -44,8 +44,8 @@ def index():
     data = []
     sum = 0
 
-    portfolio
-    list_shares = db.execute(f"SELECT * FROM portfolio_{user_id}")
+    portfolio_table = f"portfolio_{user_id}"
+    list_shares = db.execute(f"SELECT * FROM ?", portfolio_table)
 
     for i, element in enumerate (list_shares):
         nn = i + 1
