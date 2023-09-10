@@ -109,6 +109,7 @@ def buy():
     # Adding new SQL table
     # Decide on table name(s) and fields
 
+    transactions_table = (f)
     db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, shares, price, datetime.now())
 
     row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
