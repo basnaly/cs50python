@@ -293,6 +293,7 @@ def sell():
 
     data = lookup(symbol)
     price = data["price"]
+    shares = int(shares)
 
     if data == None:
         return apology("symbol doesnt exists", 403)
@@ -300,12 +301,12 @@ def sell():
     if not shares:
         return apology("must provide number of shares", 403)
 
-    if int(shares) < 0:
+    if shares < 0:
         return apology("must provide positive number", 403)
 
     list_shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
     user_shares = int(list_shares[0]["shares"])
-    if int(shares) > user_shares:
+    if shares > user_shares:
 
         return apology(f"you have only {user_shares} shares", 403)
 
@@ -313,17 +314,17 @@ def sell():
     if not user_cash:
         return apology("user doesn't exist", 403)
 
-    sold_stocks = round(int(shares) * data["price"], 2)
-    sold_shares = int(shares) * -1
+    sold_stocks = round(shares * price, 2)
+    sold_shares = shares * -1
 
     # Update shares of symbol in transactions_{user_id}
     db.execute(f"INSERT INTO transactions_{user_id} (symbol, shares, price, date) VALUES(?, ?, ?, ?)", symbol, sold_shares, price, datetime.now())
 
     # Update shares of symbol in portfolio_{user_id}
-    db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol LIKE ?", user_shares - int(shares), symbol)
+    db.execute(f"UPDATE portfolio_{user_id} SET shares = ? WHERE symbol LIKE ?", user_shares - shares, symbol)
 
     # If sold shares = current shares remove row
-    if int(shares) == user_shares:
+    if shares == user_shares:
         db.execute(f"DELETE FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
 
     # Update cash:
