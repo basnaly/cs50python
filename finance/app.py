@@ -191,11 +191,11 @@ def quote():
     # When form is submitted via POST, lookup the stock symbol by calling
     # the lookup function and display the results.
     else:
-        # Ensure username was submitted
-        if not request.form.get("symbol"):
-            return apology("must provide symbol", 403)
-
         symbol = request.form.get("symbol")
+
+        # Ensure username was submitted
+        if not symbol:
+            return apology("must provide symbol", 403)
 
         data = lookup(symbol)
         print(data)
