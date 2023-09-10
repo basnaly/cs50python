@@ -134,7 +134,8 @@ def history():
     user_id = session["user_id"]
     history = []
 
-    history_list = db.execute(f"SELECT * FROM transactions_{user_id} ORDER BY date DESC")
+    transactions_table = f"transactions_{user_id}"
+    history_list = db.execute("SELECT * FROM ? ORDER BY date DESC", transactions_table)
     print(history_list)
 
     for i, element in enumerate (history_list):
