@@ -45,7 +45,7 @@ def index():
     sum = 0
 
     portfolio_table = f"portfolio_{user_id}"
-    list_shares = db.execute(f"SELECT * FROM ?", portfolio_table)
+    list_shares = db.execute("SELECT * FROM ?", portfolio_table)
 
     for i, element in enumerate (list_shares):
         nn = i + 1
@@ -56,7 +56,8 @@ def index():
         sum += total
         data.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price["price"], "total": total})
 
-    cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    # cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
     cash = cash[0]["cash"]
 
     sum = round(sum, 2)
@@ -111,8 +112,9 @@ def buy():
     # Decide on table name(s) and fields
 
     transactions_table = f"transactions_{user_id}"
-    db.execute(f"INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
+    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
 
+    transactions_table = f"transactions_{user_id}"
     row_symbol = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol = ?", symbol)
     print(row_symbol)
 
