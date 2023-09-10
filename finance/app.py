@@ -129,7 +129,15 @@ def buy():
 def history():
     """Show history of transactions"""
 
+    user_id = session["user_id"]
 
+    history_list = db.execute(f"SELECT * FROM transactions_{user_id}")
+    print(history_list)
+
+    for i, element in enumerate (history_list):
+        nn = i + 1
+        symbol = element["symbol"]
+        
     return apology("TODO")
 
 
