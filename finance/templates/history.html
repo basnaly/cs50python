@@ -1,10 +1,50 @@
+{% extends "layout.html" %}
 
+{% block title %}
+History
+{% endblock %}
 
+{% block main %}
 
+<h2 class="mb-5">Your history</h2>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th>NN</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in history %}
+        <tr>
+            <td>{{ row['nn'] }}</td>
+            <td>{{ row['symbol'] }}</td>
+            <td>{{ row['shares'] }}</td>
+            <td>{{ row['price'] }}</td>
+            <td>{{ row['date'] }}</td>
+        </tr>
+        {% endfor %}
+        <!-- <tr class="tr_top">
+            <td class="td px-5 fw-bold" colspan="4">Total sum:</td>
+            <td class="fw-bold">{{ sum }}</td>
+        </tr>
+        <tr>
+            <td class="td px-5 fw-bold" colspan="4">Your cash:</td>
+            <td class="fw-bold">{{ cash }}</td>
+        </tr>
 
+        <tr class="tr_bottom">
+            <td class="td px-5 fw-bold" colspan="4">Total value of stocks and cash:</td>
+            <td class="fw-bold">{{ total_value }}</td>
+        </tr> -->
+    </tbody>
+</table>
 
-
+{% endblock %}
 
 <!-- table
        History portfolio

@@ -141,7 +141,7 @@ def history():
         shares = element["shares"]
         price = element["price"]
         date = element["date"]
-        history.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price" = price, "date" = date})
+        history.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price, "date": date})
 
     return render_template("history.html", history = history)
 
