@@ -287,11 +287,12 @@ def sell():
 
     user_id = session["user_id"]
 
+    portfolio_table = f"portfolio_{user_id}"
     # When requested via GET, display form to sell a stock.
     if request.method == "GET":
 
         # List of symbols in portfolio
-        list_stocks = db.execute(f"SELECT symbol, shares FROM portfolio_{user_id}")
+        list_stocks = db.execute("SELECT symbol, shares FROM ?", portfolio_table)
 
         return render_template("sell.html", list_stocks = list_stocks)
 
@@ -306,7 +307,7 @@ def sell():
 
     # If symbol is not in portfolio
 
-    list_symbols = db.execute(f"SELECT * FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
+    list_symbols = db.execute("SELECT * FROM ? WHERE symbol LIKE ?", portfolio_table, symbol)
 
     if not list_symbols:
         return apology("must provide valid symbol", 403)
@@ -324,7 +325,7 @@ def sell():
     if shares < 0:
         return apology("must provide positive number", 403)
 
-    list_shares = db.execute(f"SELECT shares FROM portfolio_{user_id} WHERE symbol LIKE ?", symbol)
+    list_shares = db.execute("SELECT shares FROM ? WHERE symbol LIKE ?", portfolio_table, symbol)
     user_shares = int(list_shares[0]["shares"])
     if shares > user_shares:
 
