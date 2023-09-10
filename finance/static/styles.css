@@ -34,3 +34,11 @@ nav .navbar-brand .green
 .tr_bottom {
     border-bottom: solid black 0.15rem;
 }
+
+.buy {
+    color: green;
+}
+
+.sell {
+    color: red;
+}
