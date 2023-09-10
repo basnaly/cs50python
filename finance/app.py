@@ -103,7 +103,7 @@ def buy():
     current_user_cash = user_cash[0]["cash"]
     max_stocks_to_buy = math.floor( current_user_cash / price)
 
-    if max_stocks_to_buy < int(shares):
+    if max_stocks_to_buy < shares:
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
 
     # Adding new SQL table
