@@ -272,7 +272,6 @@ def sell():
 
         # List of symbols in portfolio
         list_stocks = db.execute(f"SELECT symbol, shares FROM portfolio_{user_id}")
-        print(list_stocks)
 
         return render_template("sell.html", list_stocks = list_stocks)
 
