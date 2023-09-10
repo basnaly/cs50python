@@ -260,16 +260,18 @@ def register():
         # Insert the new user into users db
         hash_user_password = generate_password_hash(password)
 
-        new_user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash_user_password)
+        user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash_user_password)
 
         # Remember which user has logged in
-        session["user_id"] = new_user_id
+        session["user_id"] = user_id
 
         # Create transactions table
-        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, price TEXT NOT NULL, date DATE);", f"transactions_{new_user_id}")
+        user_transaction_table = f"transactions_{user_id}"
+        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, price TEXT NOT NULL, date DATE);", user_transaction_table)
 
         # Create portfolio table
-        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL);", f"portfolio_{new_user_id}")
+        user_portfolio_table = f"portfolio_{user_id}"
+        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL);", user_portfolio_table)
 
         # Redirect user to home page
         return redirect("/")
