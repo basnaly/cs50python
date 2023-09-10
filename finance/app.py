@@ -56,11 +56,12 @@ def index():
         data.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price["price"], "total": total})
 
     cash = db.execute(f"SELECT cash FROM users WHERE id = ?", user_id)
+    cash = cash[0]["cash"]
 
     sum = round(sum, 2)
-    total_value = round(cash[0]["cash"] + sum, 2)
+    total_value = round(cash + sum, 2)
 
-    return render_template("index.html", data = data, sum = sum, cash = cash[0]["cash"], total_value = total_value)
+    return render_template("index.html", data = data, sum = sum, cash = cash, total_value = total_value)
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -125,7 +126,7 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    
+
     return apology("TODO")
 
 
