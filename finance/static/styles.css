@@ -1,6 +1,6 @@
 /* Size for brand */
 :root {
-    --bs-font-sans-serif: Montserrat, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --bs-font-sans-serif: 'Montserrat', sans-serif;
 }
 
 nav .navbar-brand
