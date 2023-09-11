@@ -83,7 +83,7 @@ def add_cash():
     user_id = session["user_id"]
 
     current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
- 
+
     if not current_cash:
         return apology("user doesn't exist", 403)
 
@@ -95,7 +95,7 @@ def add_cash():
     price = add_cash
 
     transactions_table = f"transactions_{user_id}"
-    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol.lower(), shares, price, datetime.now())
+    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
 
     return redirect("/")
 
@@ -176,11 +176,15 @@ def history():
     for i, element in enumerate (history_list):
         nn = i + 1
         symbol = element["symbol"]
+
+        if symbol != "add cash":
+            symbol = symbol.upper()
+
         shares = element["shares"]
         price = float(element["price"])
         date = element["date"]
         class_name = "buy" if int(element["shares"]) > 0 else "sell"
-        history.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price, "date": date, "class_name" : class_name})
+        history.append({"nn": nn, "symbol": symbol, "shares": shares, "price": price, "date": date, "class_name" : class_name})
 
     return render_template("history.html", history = history)
 
