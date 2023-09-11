@@ -74,7 +74,6 @@ def add_cash():
     # When form is submitted via POST, add cah to current cash.
 
     add_cash = request.form.get("add_cash")
-    print(add_cash)
 
     if not add_cash:
         return apology("must provide sum of cash", 403)
@@ -84,14 +83,14 @@ def add_cash():
     user_id = session["user_id"]
 
     current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    print(current_cash)
+ 
     if not current_cash:
         return apology("user doesn't exist", 403)
 
     updated_cash = current_cash[0]["cash"] + float(add_cash)
     db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash, user_id)
 
-    symbol = "add_cash"
+    symbol = "add cash"
     shares = "0"
     price = add_cash
 
