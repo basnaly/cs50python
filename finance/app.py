@@ -47,26 +47,36 @@ def index():
     portfolio_table = f"portfolio_{user_id}"
     list_shares = db.execute("SELECT * FROM ?", portfolio_table)
 
-    for i, element in enumerate (list_shares):
+    for i, element in enumerate(list_shares):
         nn = i + 1
         symbol = element["symbol"]
         shares = int(element["shares"])
         price = lookup(symbol)
         total = (shares) * price["price"]
         sum += total
-        data.append({"nn": nn, "symbol": symbol.upper(), "shares": shares, "price": price["price"], "total": total})
+        data.append(
+            {
+                "nn": nn,
+                "symbol": symbol.upper(),
+                "shares": shares,
+                "price": price["price"],
+                "total": total,
+            }
+        )
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = cash[0]["cash"]
 
     total_value = cash + sum
 
-    return render_template("index.html", data = data, sum = sum, cash = cash, total_value = total_value)
+    return render_template(
+        "index.html", data=data, sum=sum, cash=cash, total_value=total_value
+    )
 
-@app.route("/add_cash", methods = ["GET", "POST"])
+
+@app.route("/add_cash", methods=["GET", "POST"])
 @login_required
 def add_cash():
-
     # When requested via GET, display form to buy a cash.
     if request.method == "GET":
         return render_template("add_cash.html")
@@ -95,9 +105,17 @@ def add_cash():
     price = add_cash
 
     transactions_table = f"transactions_{user_id}"
-    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
+    db.execute(
+        "INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)",
+        transactions_table,
+        symbol,
+        shares,
+        price,
+        datetime.now(),
+    )
 
     return redirect("/")
+
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -108,9 +126,7 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-     # When form is submitted via POST, purchase the stock so long
-     # as user can afford it.
-
+    # When form is submitted via POST, purchase the stock so long as user can afford it.
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
 
@@ -137,7 +153,7 @@ def buy():
         return apology("user doesn't exist", 403)
 
     current_user_cash = user_cash[0]["cash"]
-    max_stocks_to_buy = math.floor( current_user_cash / price)
+    max_stocks_to_buy = math.floor(current_user_cash / price)
 
     if max_stocks_to_buy < shares:
         return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
@@ -146,20 +162,42 @@ def buy():
     # Decide on table name(s) and fields
 
     transactions_table = f"transactions_{user_id}"
-    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
+    db.execute(
+        "INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)",
+        transactions_table,
+        symbol,
+        shares,
+        price,
+        datetime.now(),
+    )
 
     portfolio_table = f"portfolio_{user_id}"
     row_symbol = db.execute("SELECT * FROM ? WHERE symbol = ?", portfolio_table, symbol)
 
     if not row_symbol:
-        db.execute("INSERT INTO ? (symbol, shares) VALUES(?, ?)", portfolio_table, symbol, shares)
+        db.execute(
+            "INSERT INTO ? (symbol, shares) VALUES(?, ?)",
+            portfolio_table,
+            symbol,
+            shares,
+        )
     else:
         current_user_shares = int(row_symbol[0]["shares"])
-        db.execute("UPDATE ? SET shares = ? WHERE symbol = ?", portfolio_table, current_user_shares + shares, symbol)
+        db.execute(
+            "UPDATE ? SET shares = ? WHERE symbol = ?",
+            portfolio_table,
+            current_user_shares + shares,
+            symbol,
+        )
 
-    updated_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", current_user_cash - (shares * price), user_id)
+    updated_cash = db.execute(
+        "UPDATE users SET cash = ? WHERE id = ?",
+        current_user_cash - (shares * price),
+        user_id,
+    )
 
     return redirect("/")
+
 
 @app.route("/history")
 @login_required
@@ -172,7 +210,7 @@ def history():
     transactions_table = f"transactions_{user_id}"
     history_list = db.execute("SELECT * FROM ? ORDER BY date DESC", transactions_table)
 
-    for i, element in enumerate (history_list):
+    for i, element in enumerate(history_list):
         nn = i + 1
         symbol = element["symbol"]
 
@@ -190,9 +228,18 @@ def history():
         else:
             class_name = "sell"
 
-        history.append({"nn": nn, "symbol": symbol, "shares": shares, "price": price, "date": date, "class_name" : class_name})
+        history.append(
+            {
+                "nn": nn,
+                "symbol": symbol,
+                "shares": shares,
+                "price": price,
+                "date": date,
+                "class_name": class_name,
+            }
+        )
 
-    return render_template("history.html", history = history)
+    return render_template("history.html", history=history)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -204,7 +251,6 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
@@ -214,10 +260,14 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+        if len(rows) != 1 or not check_password_hash(
+            rows[0]["hash"], request.form.get("password")
+        ):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
@@ -265,7 +315,7 @@ def quote():
         if data == None:
             return apology("the symbol doesn't exist")
 
-        return render_template("quoted.html", data = data)
+        return render_template("quoted.html", data=data)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -278,7 +328,6 @@ def register():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
@@ -287,7 +336,9 @@ def register():
         if not username:
             return apology("must provide username", 403)
 
-        list_users = db.execute("SELECT username FROM users WHERE username LIKE ?", username)
+        list_users = db.execute(
+            "SELECT username FROM users WHERE username LIKE ?", username
+        )
 
         if list_users:
             return apology("username is exist", 403)
@@ -307,18 +358,28 @@ def register():
         # Insert the new user into users db
         hash_user_password = generate_password_hash(password)
 
-        user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash_user_password)
+        user_id = db.execute(
+            "INSERT INTO users (username, hash) VALUES(?, ?)",
+            username,
+            hash_user_password,
+        )
 
         # Remember which user has logged in
         session["user_id"] = user_id
 
         # Create transactions table
         user_transaction_table = f"transactions_{user_id}"
-        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, price TEXT NOT NULL, date DATE);", user_transaction_table)
+        db.execute(
+            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL, price TEXT NOT NULL, date DATE);",
+            user_transaction_table,
+        )
 
         # Create portfolio table
         user_portfolio_table = f"portfolio_{user_id}"
-        db.execute("CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL);", user_portfolio_table)
+        db.execute(
+            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, shares TEXT NOT NULL);",
+            user_portfolio_table,
+        )
 
         # Redirect user to home page
         return redirect("/")
@@ -326,6 +387,7 @@ def register():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
+
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
@@ -339,11 +401,10 @@ def sell():
 
     # When requested via GET, display form to sell a stock.
     if request.method == "GET":
-
         # List of symbols in portfolio
         list_stocks = db.execute("SELECT symbol, shares FROM ?", portfolio_table)
 
-        return render_template("sell.html", list_stocks = list_stocks)
+        return render_template("sell.html", list_stocks=list_stocks)
 
     # When form is submitted via POST, check for errors and sell the
     # number of shares of stock and update user's cash
@@ -356,7 +417,9 @@ def sell():
 
     # If symbol is not in portfolio
 
-    list_symbols = db.execute("SELECT * FROM ? WHERE symbol LIKE ?", portfolio_table, symbol)
+    list_symbols = db.execute(
+        "SELECT * FROM ? WHERE symbol LIKE ?", portfolio_table, symbol
+    )
 
     if not list_symbols:
         return apology("must provide valid symbol", 403)
@@ -374,10 +437,11 @@ def sell():
     if shares < 0:
         return apology("must provide positive number", 403)
 
-    list_shares = db.execute("SELECT shares FROM ? WHERE symbol LIKE ?", portfolio_table, symbol)
+    list_shares = db.execute(
+        "SELECT shares FROM ? WHERE symbol LIKE ?", portfolio_table, symbol
+    )
     user_shares = int(list_shares[0]["shares"])
     if shares > user_shares:
-
         return apology(f"you have only {user_shares} shares", 403)
 
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
@@ -389,16 +453,32 @@ def sell():
     sold_shares = shares * -1
 
     # Update shares of symbol in transactions_{user_id}
-    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, sold_shares, price, datetime.now())
+    db.execute(
+        "INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)",
+        transactions_table,
+        symbol,
+        sold_shares,
+        price,
+        datetime.now(),
+    )
 
     # Update shares of symbol in portfolio_{user_id}
-    db.execute("UPDATE ? SET shares = ? WHERE symbol LIKE ?", portfolio_table, user_shares - shares, symbol)
+    db.execute(
+        "UPDATE ? SET shares = ? WHERE symbol LIKE ?",
+        portfolio_table,
+        user_shares - shares,
+        symbol,
+    )
 
     # If sold shares = current shares remove row
     if shares == user_shares:
         db.execute("DELETE FROM ? WHERE symbol LIKE ?", portfolio_table, symbol)
 
     # Update cash:
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", current_user_cash + sold_stocks, user_id)
+    db.execute(
+        "UPDATE users SET cash = ? WHERE id = ?",
+        current_user_cash + sold_stocks,
+        user_id,
+    )
 
     return redirect("/")
