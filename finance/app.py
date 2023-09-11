@@ -63,7 +63,7 @@ def index():
 
     return render_template("index.html", data = data, sum = sum, cash = cash, total_value = total_value)
 
-@app.route("/add_cash", method=["GET", "POST"])
+@app.route("/add_cash", methods = ["GET", "POST"])
 @login_required
 def add_cash():
 
