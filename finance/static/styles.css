@@ -12,6 +12,9 @@ button.btn {
     background-color: #d5f0e6;
 }
 
+.table>tbody {
+    border-bottom: 2px solid currentColor;
+}
 
 nav .navbar-brand
 {
