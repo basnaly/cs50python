@@ -134,10 +134,12 @@ def buy():
         return apology("must provide symbol", 400)
 
     data = lookup(symbol)
-    price = data["price"]
+
     if data == None:
         return apology("symbol doesnt exists", 400)
 
+    price = data["price"]
+    
     if not shares:
         return apology("must provide number of shares", 400)
 
