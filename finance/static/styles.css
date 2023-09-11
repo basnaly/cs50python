@@ -64,6 +64,6 @@ nav .navbar-brand .green
 .footer {
     position: fixed;
     bottom: 0;
-    margin: 1rem;
+    padding: 1rem;
     background-color: #d5f0e6;
 }
