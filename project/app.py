@@ -15,7 +15,9 @@ def lookup(symbol):
     curl --request POST
     url = 'https://partners.api.skyscanner.net/apiservices/v3/flights/live/search/create'
     headers = {
-        "x-api-key": "sh428739766321522266746152871799"
+        "User-Agent": "python-requests",
+        "Accept": "*/*",
+        "x-api-key": "sh428739766321522266746152871799",
     }
     data = {
         "query":{
@@ -35,13 +37,13 @@ def lookup(symbol):
 
     }
 
-    
-    url = (
-        f"https://query1.finance.yahoo.com/v7/finance/download/{urllib.parse.quote_plus(symbol)}"
-        f"?period1={int(start.timestamp())}"
-        f"&period2={int(end.timestamp())}"
-        f"&interval=1d&events=history&includeAdjustedClose=true"
-    )
+
+    # url = (
+    #     f"https://query1.finance.yahoo.com/v7/finance/download/{urllib.parse.quote_plus(symbol)}"
+    #     f"?period1={int(start.timestamp())}"
+    #     f"&period2={int(end.timestamp())}"
+    #     f"&interval=1d&events=history&includeAdjustedClose=true"
+    # )
 
     # Query API
     try:
