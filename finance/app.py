@@ -250,6 +250,9 @@ def register():
         elif not password:
             return apology("must provide password", 403)
 
+        elif len(password) < 3:
+            return apology("must provide password", 403)
+
         elif password != confirmation:
             return apology("confirmation does't match to password", 403)
 
