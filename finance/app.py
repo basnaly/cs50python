@@ -185,7 +185,7 @@ def history():
 
         if int(element["shares"]) > 0:
             class_name = "buy"
-        elif int(element["shares"]) == 0:
+        elif int(element["shares"]) == "-":
             class_name = "add"
         else:
             class_name = "sell"
