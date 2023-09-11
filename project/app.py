@@ -52,7 +52,7 @@ def lookup():
             url,
             # cookies={"session": str(uuid.uuid4())},
             headers = headers,
-            data = data
+            json = data
         )
         print(response)
 
