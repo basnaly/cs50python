@@ -3,8 +3,6 @@
     --bs-font-sans-serif: 'Montserrat', sans-serif;
 }
 
-
-
 nav.navbar {
     background-color: #d5f0e6;
     color: red;
@@ -61,4 +59,9 @@ nav .navbar-brand .green
 
 .add {
     color: blue;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
 }
