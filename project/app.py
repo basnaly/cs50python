@@ -54,7 +54,9 @@ def lookup():
             headers = headers,
             json = data
         )
-        print(response)
+        session_token = response.json()["session_token"]
+        print(session_token)
+        print(response.json())
 
         # # CSV header: Date,Open,High,Low,Close,Adj Close,Volume
         # quotes = list(csv.DictReader(response.content.decode("utf-8").splitlines()))
