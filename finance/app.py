@@ -171,7 +171,6 @@ def history():
 
     transactions_table = f"transactions_{user_id}"
     history_list = db.execute("SELECT * FROM ? ORDER BY date DESC", transactions_table)
-    print(history_list)
 
     for i, element in enumerate (history_list):
         nn = i + 1
