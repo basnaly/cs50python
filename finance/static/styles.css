@@ -12,7 +12,7 @@ button.btn {
     background-color: #d5f0e6;
 }
 
-.table>(:last-child) {
+.tr:last-child {
     border-bottom: 2px solid currentColor;
 }
 
