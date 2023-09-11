@@ -3,6 +3,11 @@
     --bs-font-sans-serif: 'Montserrat', sans-serif;
 }
 
+.bg {
+    background-color: #d5f0e6;
+}
+
+
 nav .navbar-brand
 {
     font-size: xx-large;
