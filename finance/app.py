@@ -86,6 +86,10 @@ def add_cash():
     if not user_cash:
         return apology("user doesn't exist", 403)
 
+
+
+    return redirect("/")
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
