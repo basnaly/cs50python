@@ -93,10 +93,10 @@ def add_cash():
 
     symbol = "add_cash"
     shares = "0"
-    price = updated_cash
+    price = add_cash
 
     transactions_table = f"transactions_{user_id}"
-    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
+    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol.lower(), shares, price, datetime.now())
 
     return redirect("/")
 
