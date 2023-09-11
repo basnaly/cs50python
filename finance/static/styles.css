@@ -12,8 +12,8 @@ button.btn {
     background-color: #d5f0e6;
 }
 
-.tr:nth-last-child() {
-    border-bottom: 2px solid currentColor;
+tr:last-child {
+    border-bottom: 2px solid black;
 }
 
 nav .navbar-brand
