@@ -139,11 +139,15 @@ def buy():
         return apology("symbol doesnt exists", 400)
 
     price = data["price"]
-    
+
     if not shares:
         return apology("must provide number of shares", 400)
 
-    shares = int(shares)
+    try:
+        shares = int(shares)
+
+    except:
+        return apology("must provide non fractional number of shares", 400)
 
     if shares < 0:
         return apology("must provide positive number", 400)
@@ -429,6 +433,8 @@ def sell():
     data = lookup(symbol)
     price = data["price"]
     shares = int(shares)
+
+    
 
     if data == None:
         return apology("symbol doesnt exists", 400)
