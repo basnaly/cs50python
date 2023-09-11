@@ -3,15 +3,11 @@
     --bs-font-sans-serif: 'Montserrat', sans-serif;
 }
 
-/* .bg {
-    background-color: floralwhite
 
-    /* #CCFFE5 */
-    /* #d5f0e6; */
- */
 
 nav.navbar {
     background-color: #d5f0e6;
+    color: red;
 }
 
 button {
