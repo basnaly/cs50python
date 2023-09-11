@@ -131,20 +131,20 @@ def buy():
     shares = request.form.get("shares")
 
     if not symbol:
-        return apology("must provide symbol", 403)
+        return apology("must provide symbol", 400)
 
     data = lookup(symbol)
     price = data["price"]
     if data == None:
-        return apology("symbol doesnt exists", 403)
+        return apology("symbol doesnt exists", 400)
 
     if not shares:
-        return apology("must provide number of shares", 403)
+        return apology("must provide number of shares", 400)
 
     shares = int(shares)
 
     if shares < 0:
-        return apology("must provide positive number", 403)
+        return apology("must provide positive number", 400)
 
     user_id = session["user_id"]
 
@@ -156,7 +156,7 @@ def buy():
     max_stocks_to_buy = math.floor(current_user_cash / price)
 
     if max_stocks_to_buy < shares:
-        return apology(f"you can buy only {max_stocks_to_buy} stocks", 403)
+        return apology(f"you can buy only {max_stocks_to_buy} stocks", 400)
 
     # Adding new SQL table
     # Decide on table name(s) and fields
@@ -308,7 +308,7 @@ def quote():
 
         # Ensure username was submitted
         if not symbol:
-            return apology("must provide symbol", 403)
+            return apology("must provide symbol", 400)
 
         data = lookup(symbol)
 
@@ -413,7 +413,7 @@ def sell():
     shares = request.form.get("shares")
 
     if not symbol:
-        return apology("must provide symbol", 403)
+        return apology("must provide symbol", 400)
 
     # If symbol is not in portfolio
 
@@ -422,27 +422,27 @@ def sell():
     )
 
     if not list_symbols:
-        return apology("must provide valid symbol", 403)
+        return apology("must provide valid symbol", 400)
 
     data = lookup(symbol)
     price = data["price"]
     shares = int(shares)
 
     if data == None:
-        return apology("symbol doesnt exists", 403)
+        return apology("symbol doesnt exists", 400)
 
     if not shares:
-        return apology("must provide number of shares", 403)
+        return apology("must provide number of shares", 400)
 
     if shares < 0:
-        return apology("must provide positive number", 403)
+        return apology("must provide positive number", 400)
 
     list_shares = db.execute(
         "SELECT shares FROM ? WHERE symbol LIKE ?", portfolio_table, symbol
     )
     user_shares = int(list_shares[0]["shares"])
     if shares > user_shares:
-        return apology(f"you have only {user_shares} shares", 403)
+        return apology(f"you have only {user_shares} shares", 400)
 
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     if not user_cash:
