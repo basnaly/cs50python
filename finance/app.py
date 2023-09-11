@@ -189,7 +189,7 @@ def history():
             class_name = "add"
         else:
             class_name = "sell"
-            
+
         history.append({"nn": nn, "symbol": symbol, "shares": shares, "price": price, "date": date, "class_name" : class_name})
 
     return render_template("history.html", history = history)
@@ -261,7 +261,6 @@ def quote():
             return apology("must provide symbol", 403)
 
         data = lookup(symbol)
-        print(data)
 
         if data == None:
             return apology("the symbol doesn't exist")
