@@ -91,7 +91,8 @@ def add_cash():
     updated_cash = current_cash[0]["cash"] + float(add_cash)
     db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash, user_id)
 
-    db.execute()
+    transactions_table = f"transactions_{user_id}"
+    db.execute("INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)", transactions_table, symbol, shares, price, datetime.now())
 
     return redirect("/")
 
