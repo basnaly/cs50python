@@ -80,6 +80,12 @@ def add_cash():
 
     # Add cash to user table
 
+    user_id = session["user_id"]
+
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    if not user_cash:
+        return apology("user doesn't exist", 403)
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
