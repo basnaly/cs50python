@@ -63,6 +63,23 @@ def index():
 
     return render_template("index.html", data = data, sum = sum, cash = cash, total_value = total_value)
 
+@app.route("/add_cash", method=["GET", "POST"])
+@login_required
+def add_cash():
+
+    # When requested via GET, display form to buy a cash.
+    if request.method == "GET":
+        return render_template("add_cash.html")
+
+    # When form is submitted via POST, add cah to current cash.
+
+    add_cash = request.form.get("add_cash")
+
+    if not add_cash:
+        return apology("must provide sum of cash", 403)
+
+    
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
