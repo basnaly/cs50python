@@ -34,8 +34,8 @@ def lookup():
                 }
             ],
             "adults":1,
-            "cabin_class":"CABIN_CLASS_ECONOMY"}
-
+            "cabin_class":"CABIN_CLASS_ECONOMY"
+        }
     }
 
 
