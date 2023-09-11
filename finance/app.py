@@ -78,7 +78,7 @@ def add_cash():
     if not add_cash:
         return apology("must provide sum of cash", 403)
 
-    
+    # Add cash to user table
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
