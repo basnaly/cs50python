@@ -82,11 +82,11 @@ def add_cash():
 
     user_id = session["user_id"]
 
-    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    if not user_cash:
+    current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    if not current_cash:
         return apology("user doesn't exist", 403)
 
-
+    corrected_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + add_cash, user_id)
 
     return redirect("/")
 
