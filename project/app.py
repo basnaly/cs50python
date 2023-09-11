@@ -30,7 +30,7 @@ def lookup():
                 {
                     "origin_place_id":{"iata":"LHR"},
                     "destination_place_id":{"iata":"SIN"},
-                    "date":{"year":2022,"month":12,"day":22}
+                    "date":{"year":2023,"month":9,"day":12}
                 }
             ],
             "adults":1,
