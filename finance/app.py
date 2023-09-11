@@ -86,7 +86,8 @@ def add_cash():
     if not current_cash:
         return apology("user doesn't exist", 403)
 
-    corrected_cash = db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + add_cash, user_id)
+    updated_cash = int(current_cash) + int(add_cash)
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash, user_id)
 
     return redirect("/")
 
