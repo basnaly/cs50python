@@ -55,7 +55,7 @@ def lookup():
             json = data
         )
         result_json = response.json()
-        session_token = result_json["session_token"]
+        session_token = result_json["sessionToken"]
         print(session_token)
         print(result_json["content"]["results"])
 
@@ -65,7 +65,7 @@ def lookup():
         # price = round(float(quotes[0]["Adj Close"]), 2)
         # return {"name": symbol, "price": price, "symbol": symbol}
 
-    except (requests.RequestException, ValueError, KeyError, IndexError):
+    except (requests.RequestException, ValueError, KeyError, IndexError) as e:
         return None
 
 lookup()
