@@ -334,26 +334,26 @@ def register():
 
         # Check for possible errors
         if not username:
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         list_users = db.execute(
             "SELECT username FROM users WHERE username LIKE ?", username
         )
 
         if list_users:
-            return apology("username is exist", 403)
+            return apology("username is exist", 400)
 
         elif not password:
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         elif len(password) < 3:
-            return apology("password must have at least 3 symbols", 403)
+            return apology("password must have at least 3 symbols", 400)
 
         elif password != confirmation:
-            return apology("confirmation does't match to password", 403)
+            return apology("confirmation does't match to password", 400)
 
         elif validate_password(password) == False:
-            return apology("the password doesn't match", 403)
+            return apology("the password doesn't match", 400)
 
         # Insert the new user into users db
         hash_user_password = generate_password_hash(password)
