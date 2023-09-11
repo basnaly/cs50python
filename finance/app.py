@@ -431,13 +431,16 @@ def sell():
         return apology("must provide valid symbol", 400)
 
     data = lookup(symbol)
-    price = data["price"]
-    shares = int(shares)
-
-    
-
     if data == None:
         return apology("symbol doesnt exists", 400)
+
+    price = data["price"]
+
+    try:
+        shares = int(shares)
+
+    except:
+        return apology("must provide non fractional number of shares", 400)
 
     if not shares:
         return apology("must provide number of shares", 400)
