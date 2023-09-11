@@ -2,17 +2,16 @@ import datetime
 
 from flask import redirect, render_template, session
 
-def lookup(symbol):
+def lookup():
     """Look up quote for symbol."""
 
     # Prepare API request
-    symbol = symbol.upper()
+    # symbol = symbol.upper()
     end = datetime.datetime.now(pytz.timezone("US/Eastern"))
     start = end - datetime.timedelta(days=7)
 
     # Yahoo Finance API
 
-    curl --request POST
     url = 'https://partners.api.skyscanner.net/apiservices/v3/flights/live/search/create'
     headers = {
         "User-Agent": "python-requests",
@@ -47,17 +46,21 @@ def lookup(symbol):
 
     # Query API
     try:
-        response = requests.get(
+        response = requests.post(
             url,
-            cookies={"session": str(uuid.uuid4())},
-            headers={"User-Agent": "python-requests", "Accept": "*/*"},
+            # cookies={"session": str(uuid.uuid4())},
+            headers = headers,
+            data = data
         )
-        response.raise_for_status()
+        print(response)
 
-        # CSV header: Date,Open,High,Low,Close,Adj Close,Volume
-        quotes = list(csv.DictReader(response.content.decode("utf-8").splitlines()))
-        quotes.reverse()
-        price = round(float(quotes[0]["Adj Close"]), 2)
-        return {"name": symbol, "price": price, "symbol": symbol}
+        # # CSV header: Date,Open,High,Low,Close,Adj Close,Volume
+        # quotes = list(csv.DictReader(response.content.decode("utf-8").splitlines()))
+        # quotes.reverse()
+        # price = round(float(quotes[0]["Adj Close"]), 2)
+        # return {"name": symbol, "price": price, "symbol": symbol}
+
     except (requests.RequestException, ValueError, KeyError, IndexError):
         return None
+
+lookup()
