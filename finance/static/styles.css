@@ -4,8 +4,14 @@
 }
 
 .bg {
-    background-color: #CCFFE5
+    background-color: floralwhite
+
+    /* #CCFFE5 */
     /* #d5f0e6; */
+}
+
+.nav_bg {
+    background-color: #d5f0e6;
 }
 
 
