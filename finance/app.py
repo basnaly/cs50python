@@ -182,7 +182,13 @@ def history():
         shares = element["shares"]
         price = float(element["price"])
         date = element["date"]
-        class_name = "buy" if int(element["shares"]) > 0 else "sell"
+
+        if int(element["shares"]) > 0:
+            class_name = "buy"
+        elif int(element["shares"]) == 0:
+            class_name = "add"
+        else:
+            class_name = "sell"
         history.append({"nn": nn, "symbol": symbol, "shares": shares, "price": price, "date": date, "class_name" : class_name})
 
     return render_template("history.html", history = history)
