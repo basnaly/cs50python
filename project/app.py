@@ -42,4 +42,4 @@ def index():
 
         data = lookup(keyword)
 
-        return render_template("index.html", keyword=keyword, data=data or [])
+        return render_template("index.html", keyword=keyword.title(), data=data or [])
