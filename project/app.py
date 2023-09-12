@@ -36,7 +36,7 @@ def index():
     query = request.form.get("query")
 
     data = lookup(query)
-    print(data)
+    # print(data)
 
     # if data == None:
     #     return apology("query doesnt exists", 400)
