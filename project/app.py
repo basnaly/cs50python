@@ -58,4 +58,4 @@ def lookup(query):
     # except (requests.RequestException, ValueError, KeyError, IndexError) as e:
     #     return None
 
-lookup("google")
+lookup("")
