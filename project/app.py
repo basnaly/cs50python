@@ -14,6 +14,9 @@ def lookup():
 
     # Yahoo Finance API
 
+    GET https://newsapi.org/v2/everything?q=Apple&from=2023-09-12&sortBy=popularity&apiKey=API_KEY
+
+
     url = 'https://partners.api.skyscanner.net/apiservices/v3/flights/live/search/create'
     headers = {
         "User-Agent": "python-requests",
