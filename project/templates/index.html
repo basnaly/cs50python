@@ -29,22 +29,25 @@
 
         <button class="btn border" type="submit">Submit</button>
     </form>
+
+    {% for row in data %}
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+            Keyword: Query
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ row['source.name'] }} {{ row['author'] }}</li>
+                <li class="list-group-item">{{ row['title'] }}</li>
+                <li class="list-group-item">{{ row['url'] }}</li>
+                <li class="list-group-item">{{ row['urlToImage'] }}</li>
+                <li class="list-group-item">{{ row['publishedAt'] }}</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Save to my articles</a>
+        </div>
+
+    {% endfor %}
+
 {% endblock %}
 
-{% for row in data %}
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
-        Keyword: Query
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{ row['source.name'] }} {{ row['author'] }}</li>
-            <li class="list-group-item">{{ row['title'] }}</li>
-            <li class="list-group-item">{{ row['url'] }}</li>
-            <li class="list-group-item">{{ row['urlToImage'] }}</li>
-            <li class="list-group-item">{{ row['publishedAt'] }}</li>
-        </ul>
-        <a href="#" class="btn btn-primary">Save to my articles</a>
-    </div>
-
-{% endfor %}
