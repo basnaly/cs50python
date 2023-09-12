@@ -33,6 +33,8 @@ def after_request(response):
 # @login_required
 def index():
 
+    query = request.form.get("query")
+
     data = lookup(query)
 
     if data == None:
