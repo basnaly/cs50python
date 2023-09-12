@@ -16,8 +16,8 @@
           url : '/'
         })
         .done(function(data){
-          $('#output').innerHTML = data;
-          console.log(data)
+          document.getElementById('output').innerHTML = data;
+          //console.log(data)
           console.log($('#output'))
         });
         e.preventDefault();
