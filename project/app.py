@@ -17,6 +17,7 @@ def lookup():
     GET https://newsapi.org/v2/everything?q=Apple&from=2023-09-12&sortBy=popularity&apiKey=API_KEY
 
 
+    # Query API
     url = ('https://newsapi.org/v2/everything?'
        'q=Apple&'
        'from=2023-09-12&'
@@ -27,7 +28,7 @@ def lookup():
 
     print r.json
 
-    # Query API
+
     try:
         response = requests.post(
             url,
