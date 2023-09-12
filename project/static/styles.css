@@ -21,6 +21,10 @@ tr:last-child {
     border-bottom: 2px solid black;
 }
 
+.button {
+    
+}
+
 .footer {
     position: fixed;
     bottom: 0;
