@@ -4,6 +4,8 @@ import requests
 
 from flask import redirect, render_template, session
 
+api_key = "c237f389d5674012bb0ca74e4f86675f"
+
 def lookup():
     """Look up quote for symbol."""
 
@@ -24,7 +26,7 @@ def lookup():
         'q=Apple&'
         'from=2023-09-12&'
         'sortBy=popularity&'
-        'apiKey=API_KEY')
+        f'apiKey={api_key}')
 
         response = requests.get(url)
 
