@@ -30,3 +30,13 @@
         <button class="btn border" type="submit">Submit</button>
     </form>
 {% endblock %}
+
+{% for row in data %}
+        <tr>
+            <td>{{ row['nn'] }}</td>
+            <td>{{ row['symbol'] }}</td>
+            <td>{{ row['price'] | usd }}</td>
+            <td>{{ row['shares'] }}</td>
+            <td>{{ row['total'] | usd }}</td>
+        </tr>
+        {% endfor %}
