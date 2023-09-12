@@ -51,7 +51,8 @@ def lookup(keyword):
         # print(response.json())
 
         articles = response.json()['articles']
-        # print(articles[0])
+        for element in articles:
+            element["publishedAt"] = datetime(element["publishedAt"]).strftime("%Y-%m-%d %H:%M")
         return articles
 
     except (requests.RequestException, ValueError, KeyError, IndexError) as e:
