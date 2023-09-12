@@ -33,6 +33,6 @@ def after_request(response):
 # @login_required
 def index():
 
-    data = []
+    data = lookup()
 
-    return render_template("index.html")
+    return render_template("index.html", data)
