@@ -40,4 +40,4 @@ def index():
 
     data = lookup(keyword)
 
-    return render_template("list_articles.html", data=data or [])
+    return render_template("list_articles.html", keyword=keyword, data=data or [])
