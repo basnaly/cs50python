@@ -39,9 +39,5 @@ def index():
     keyword = request.form.get("keyword")
 
     data = lookup(keyword)
-    # print(data)
-
-    # if data == None:
-    #     return apology("query doesnt exists", 400)
 
     return render_template("list_articles.html", data=data or [])
