@@ -44,4 +44,4 @@ def index():
     # if data == None:
     #     return apology("query doesnt exists", 400)
 
-    return render_template("index.html", data=data or [])
+    return render_template("list_articles.html", data=data or [])
