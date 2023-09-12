@@ -13,8 +13,8 @@ def lookup(query):
 
     # Prepare API request
     # symbol = symbol.upper()
-    # end = datetime.datetime.now(pytz.timezone("US/Eastern"))
-    # start = end - datetime.timedelta(days=7)
+    end = datetime.datetime.now(pytz.timezone("US/Eastern"))
+    start = end - datetime.timedelta(days=1)
 
     # Yahoo Finance API
 
@@ -26,7 +26,7 @@ def lookup(query):
 
         url = ('https://newsapi.org/v2/everything?'
         f'q={query}&'
-        'from=2023-09-11&'
+        f'from={start.strftime("%Y-%m-%d")}&'
         'sortBy=popularity&'
         f'apiKey={api_key}')
 
