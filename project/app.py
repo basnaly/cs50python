@@ -33,9 +33,9 @@ def after_request(response):
 # @login_required
 def index():
 
-    data = lookup(q)
+    data = lookup(query)
 
     if data == None:
-        return apology("symbol doesnt exists", 400)
+        return apology("query doesnt exists", 400)
 
     return render_template("index.html", data)
