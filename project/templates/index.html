@@ -39,16 +39,13 @@
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">{{ row['source.name'] }} {{ row['author'] }}</li>
-            <li class="list-group-item">{{ row[''] }}</li>
-            <li class="list-group-item">{{ row[''] }}</li>
+            <li class="list-group-item">{{ row['title'] }}</li>
+            <li class="list-group-item">{{ row['url'] }}</li>
+            <li class="list-group-item">{{ row['urlToImage'] }}</li>
+            <li class="list-group-item">{{ row['publishedAt'] }}</li>
         </ul>
     </div>
 
-        <tr>
-            <td>{{ row['nn'] }}</td>
-            <td>{{ row['symbol'] }}</td>
-            <td>{{ row['price'] | usd }}</td>
-            <td>{{ row['shares'] }}</td>
-            <td>{{ row['total'] | usd }}</td>
+        
         </tr>
 {% endfor %}
