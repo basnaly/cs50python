@@ -34,10 +34,10 @@ def after_request(response):
 def index():
 
     if request.method == "GET":
-        return render_template("index.html")
+        return render_template("index.html", data = [])
 
     keyword = request.form.get("keyword")
 
     data = lookup(keyword)
 
-    return render_template("list_articles.html", keyword=keyword, data=data or [])
+    return render_template("index.html", keyword=keyword, data=data or [])
