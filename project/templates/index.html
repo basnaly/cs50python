@@ -30,9 +30,11 @@
         <button class="btn border" type="submit">Submit</button>
     </form>
 
+    <div class="d-flex flex-wrap">
+
     {% for row in data %}
 
-        <div class="card" style="width: 18rem;">
+        <div class="card m-2" style="width: 18rem;">
             <div class="card-header">
             Keyword: Query
             </div>
@@ -47,6 +49,7 @@
         </div>
 
     {% endfor %}
+    </div>
 
 {% endblock %}
 
