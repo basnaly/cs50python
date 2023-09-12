@@ -32,6 +32,8 @@ def lookup():
 
         print(response.json())
 
+        articles = response.json()[]
+
     except (requests.RequestException, ValueError, KeyError, IndexError) as e:
         print(e)
         return None
