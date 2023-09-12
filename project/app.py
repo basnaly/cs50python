@@ -29,9 +29,12 @@ def after_request(response):
     return response
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 # @login_required
 def index():
+
+    if request.method == "GET":
+        return render_template("index.html")
 
     keyword = request.form.get("keyword")
 
