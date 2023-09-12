@@ -17,6 +17,7 @@
         })
         .done(function(data){
           $('#output').innerHTML = data;
+          console.log(data)
         });
         e.preventDefault();
       });
@@ -45,8 +46,10 @@
           </select>
 
         <button class="btn border" type="submit">Submit</button>
-        <div id="output"></div>
+
     </form>
+
+    <div id="output"></div>
 
 
 
