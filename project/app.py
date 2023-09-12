@@ -14,35 +14,41 @@ def lookup():
 
     # Yahoo Finance API
 
-    GET https://newsapi.org/v2/everything?q=Apple&from=2023-09-12&sortBy=popularity&apiKey=API_KEY
+    # GET https://newsapi.org/v2/everything?q=Apple&from=2023-09-12&sortBy=popularity&apiKey=API_KEY
 
 
     # Query API
-    url = ('https://newsapi.org/v2/everything?'
-       'q=Apple&'
-       'from=2023-09-12&'
-       'sortBy=popularity&'
-       'apiKey=API_KEY')
-
-    response = requests.get(url)
-
-    print r.json
-
-
     try:
-        response = requests.post(
-            url,
-            # cookies={"session": str(uuid.uuid4())},
-            headers = headers,
-            json = data
-        )
-        result_json = response.json()
-        session_token = result_json["sessionToken"]
-        print(session_token)
-        print(result_json["content"]["results"])
 
+        url = ('https://newsapi.org/v2/everything?'
+        'q=Apple&'
+        'from=2023-09-12&'
+        'sortBy=popularity&'
+        'apiKey=API_KEY')
 
-    except (requests.RequestException, ValueError, KeyError, IndexError) as e:
+        response = requests.get(url)
+
+        print r.json
+
+     except (requests.RequestException, ValueError, KeyError, IndexError) as e:
+        print e
         return None
+
+
+    # try:
+    #     response = requests.post(
+    #         url,
+    #         # cookies={"session": str(uuid.uuid4())},
+    #         headers = headers,
+    #         json = data
+    #     )
+    #     result_json = response.json()
+    #     session_token = result_json["sessionToken"]
+    #     print(session_token)
+    #     print(result_json["content"]["results"])
+
+
+    # except (requests.RequestException, ValueError, KeyError, IndexError) as e:
+    #     return None
 
 lookup()
