@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function() {
       $('#form1').on('submit',function(e){
         $.ajax({
@@ -21,7 +21,7 @@
         e.preventDefault();
       });
     });
-</script>
+</script> -->
 
     <form action="/" method="POST" id="form">
 
@@ -48,6 +48,28 @@
         <button class="btn border" type="submit">Submit</button>
 
     </form>
+
+    <div class="d-flex flex-wrap">
+
+        {% for row in data %}
+
+            <div class="card m-2" style="width: 18rem;">
+                <div class="card-header">
+                Keyword: {{ keyword }}
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ row['source.name'] }} {{ row['author'] }}</li>
+                    <li class="list-group-item">{{ row['title'] }}</li>
+                    <li class="list-group-item">{{ row['url'] }}</li>
+                    <li class="list-group-item">{{ row['urlToImage'] }}</li>
+                    <li class="list-group-item">{{ row['publishedAt'] }}</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Save to my articles</a>
+            </div>
+
+        {% endfor %}
+    </div>
+
 
 {% endblock %}
 
