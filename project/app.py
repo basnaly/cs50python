@@ -24,16 +24,16 @@ def lookup():
 
         url = ('https://newsapi.org/v2/everything?'
         'q=Apple&'
-        'from=2023-09-12&'
+        'from=2023-09-11&'
         'sortBy=popularity&'
         f'apiKey={api_key}')
 
         response = requests.get(url)
 
-        print response.json()
+        print(response.json())
 
-     except (requests.RequestException, ValueError, KeyError, IndexError) as e:
-        print e
+    except (requests.RequestException, ValueError, KeyError, IndexError) as e:
+        print(e)
         return None
 
 
