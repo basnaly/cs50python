@@ -7,7 +7,7 @@
 {% block main %}
 <script type="text/javascript">
     $(document).ready(function() {
-      $('#form').on('submit',function(e){
+      $('#form1').on('submit',function(e){
         $.ajax({
           data : {
             keyword : $('#keyword').val(),
@@ -23,7 +23,7 @@
     });
 </script>
 
-    <form action="{{ url_for('index') }}" method="POST" id="form">
+    <form action="/" method="POST" id="form">
 
         <div class="form-check form-check-inline mb-3">
             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
