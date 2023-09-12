@@ -7,7 +7,7 @@ from flask import redirect, render_template, session
 api_key = "c237f389d5674012bb0ca74e4f86675f"
 
 def lookup(query):
-    """Look up quote for symbol."""
+    """Look for query."""
 
     end = datetime.datetime.now(pytz.timezone("US/Eastern"))
     start = end - datetime.timedelta(days=1)
