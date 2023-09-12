@@ -40,4 +40,4 @@ def index():
     # if data == None:
     #     return apology("query doesnt exists", 400)
 
-    return render_template("index.html")
+    return render_template("index.html", data)
