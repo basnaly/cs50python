@@ -6,8 +6,10 @@ from flask import redirect, render_template, session
 
 api_key = "c237f389d5674012bb0ca74e4f86675f"
 
-def lookup():
+def lookup(query):
     """Look up quote for symbol."""
+
+
 
     # Prepare API request
     # symbol = symbol.upper()
@@ -23,7 +25,7 @@ def lookup():
     try:
 
         url = ('https://newsapi.org/v2/everything?'
-        'q=Apple&'
+        f'q={query}&'
         'from=2023-09-11&'
         'sortBy=popularity&'
         f'apiKey={api_key}')
@@ -56,4 +58,4 @@ def lookup():
     # except (requests.RequestException, ValueError, KeyError, IndexError) as e:
     #     return None
 
-lookup()
+lookup("google")
