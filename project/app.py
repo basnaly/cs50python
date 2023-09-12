@@ -28,7 +28,7 @@ def lookup():
 
         response = requests.get(url)
 
-        print r.json
+        print response.json()
 
      except (requests.RequestException, ValueError, KeyError, IndexError) as e:
         print e
