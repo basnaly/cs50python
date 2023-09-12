@@ -52,7 +52,7 @@ def lookup(keyword):
 
         articles = response.json()['articles']
         for element in articles:
-            element["publishedAt"] = datetime.datetime(element["publishedAt"]).strftime("%Y-%m-%d %H:%M")
+            element["publishedAt"] = datetime.datetime.strptime(element["publishedAt"], ).strftime("%Y-%m-%d %H:%M")
         return articles
 
     except (requests.RequestException, ValueError, KeyError, IndexError) as e:
