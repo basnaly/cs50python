@@ -51,8 +51,9 @@ def lookup(query):
         # print(response.json())
 
         articles = response.json()['articles']
-        print(articles[0])
+        # print(articles[0])
+        return articles
 
     except (requests.RequestException, ValueError, KeyError, IndexError) as e:
         print(e)
-        return None
+        return []
