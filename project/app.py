@@ -36,8 +36,10 @@ def index():
     if request.method == "GET":
         return render_template("index.html", data = [])
 
-    keyword = request.form.get("keyword")
+    else:
 
-    data = lookup(keyword)
+        keyword = request.form.get("keyword")
 
-    return render_template("index.html", keyword=keyword, data=data or [])
+        data = lookup(keyword)
+
+        return render_template("index.html", keyword=keyword, data=data or [])
