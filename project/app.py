@@ -33,9 +33,9 @@ def after_request(response):
 # @login_required
 def index():
 
-    query = request.form.get("query")
+    keyword = request.form.get("keyword")
 
-    data = lookup(query)
+    data = lookup(keyword)
     # print(data)
 
     # if data == None:

@@ -31,8 +31,8 @@ def apology(message, code=400):
     return render_template("apology.html", top=code, bottom=escape(message)), code
 
 
-def lookup(query):
-    """Look for query."""
+def lookup(keyword):
+    """Look for keyword."""
 
     end = datetime.datetime.now(pytz.timezone("US/Eastern"))
     start = end - datetime.timedelta(days=1)
@@ -41,7 +41,7 @@ def lookup(query):
     try:
 
         url = ('https://newsapi.org/v2/everything?'
-        f'q={query}&'
+        f'q={keyword}&'
         f'from={start.strftime("%Y-%m-%d")}&'
         'sortBy=popularity&'
         f'apiKey={api_key}')
