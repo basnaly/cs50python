@@ -17,29 +17,16 @@ def lookup():
     GET https://newsapi.org/v2/everything?q=Apple&from=2023-09-12&sortBy=popularity&apiKey=API_KEY
 
 
-    url = 'https://partners.api.skyscanner.net/apiservices/v3/flights/live/search/create'
-    headers = {
-        "User-Agent": "python-requests",
-        "Accept": "*/*",
-        "x-api-key": "sh428739766321522266746152871799",
-    }
-    data = {
-        "query":{
-            "market":"UK",
-            "locale":"en-GB",
-            "currency":"GBP",
-            "query_legs":
-            [
-                {
-                    "origin_place_id":{"iata":"LHR"},
-                    "destination_place_id":{"iata":"SIN"},
-                    "date":{"year":2023,"month":9,"day":12}
-                }
-            ],
-            "adults":1,
-            "cabin_class":"CABIN_CLASS_ECONOMY"
-        }
-    }
+    url = ('https://newsapi.org/v2/everything?'
+       'q=Apple&'
+       'from=2023-09-12&'
+       'sortBy=popularity&'
+       'apiKey=API_KEY')
+
+    response = requests.get(url)
+
+    print r.json
+
 
 
     # url = (
