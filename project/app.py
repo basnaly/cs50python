@@ -11,7 +11,7 @@ def lookup(query):
 
 
 
-    # Prepacre API request
+    # Prepare API request
     # symbol = symbol.upper()
     end = datetime.datetime.now(pytz.timezone("US/Eastern"))
     start = end - datetime.timedelta(days=1)
