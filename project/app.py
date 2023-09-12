@@ -36,8 +36,9 @@ def index():
     query = request.form.get("query")
 
     data = lookup(query)
+    print(data)
 
     # if data == None:
     #     return apology("query doesnt exists", 400)
 
-    return render_template("index.html")
+    return render_template("index.html", data=data)
