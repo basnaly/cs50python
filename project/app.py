@@ -30,9 +30,10 @@ def lookup():
 
         response = requests.get(url)
 
-        print(response.json())
+        # print(response.json())
 
-        articles = response.json()[]
+        articles = response.json()['articles']
+        print(articles[0])
 
     except (requests.RequestException, ValueError, KeyError, IndexError) as e:
         print(e)
