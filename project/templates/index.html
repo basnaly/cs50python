@@ -41,7 +41,7 @@
         publishedAt: publishedAt
       }
     }
-    request.open("POST", "/save-article", true);
+    request.open("POST", "/save-article", {"Content-Type": "application/json"}, true);
     request.send(JSON.stringify(data));
   }
 </script>
