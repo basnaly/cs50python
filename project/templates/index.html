@@ -56,7 +56,11 @@
   }
 </script>
 
-    <div class="message mb-3" id="message"></div>
+    <!-- <div class="message mb-3" id="message"></div> -->
+    <div class="alert alert-warning alert-dismissible fade show" id="message" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
     <form action="/" method="POST" id="form">
 
