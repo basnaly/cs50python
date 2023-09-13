@@ -29,9 +29,11 @@
     request.onreadystatechange = function(response) {
         if (request.readyState == 4 && request.status == 200){
           const message = JSON.parse(request.response);
-          const abc = document.getElementById('message');
-          abc.innerHTML = message['message'];
-          abc.style.display = 'block'
+          setTimeout(() => {
+            const show_message = document.getElementById('message');
+            show_message.innerHTML = message['message'];
+            show_message.style.display = 'block';
+          }, 5000)
         }
     };
     const data = {
