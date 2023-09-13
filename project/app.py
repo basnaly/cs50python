@@ -245,4 +245,4 @@ def save_article():
         published
     )
 
-    return {"message": "Saved"}
+    return {"message": "The article was saved"}

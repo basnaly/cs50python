@@ -28,8 +28,8 @@
     let request = new XMLHttpRequest();
     request.onreadystatechange = function(response) {
         if (request.readyState == 4 && request.status == 200){
-          const message = request.response.parse()
-          console.log(message)
+          const message = JSON.parse(request.response)
+          console.log(message['message'])
         }
 
     };
