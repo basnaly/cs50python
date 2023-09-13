@@ -22,7 +22,7 @@ tr:last-child {
 }
 
 .button {
-    
+
 }
 
 .footer {
@@ -31,4 +31,8 @@ tr:last-child {
     padding: 1rem;
     background-color: #d5f0e6;
     text-align: center;
+}
+
+.keyword {
+    font-weight: bold;
 }

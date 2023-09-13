@@ -23,53 +23,65 @@
     });
 </script> -->
 
+<script type="text/javascript">
+  function saveArticle(row) {
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200)
+          console.log('abc')
+
+    };
+    request.open("POST", "/save-article", true);
+    request.send(row);
+  }
+</script>
+
     <form action="/" method="POST" id="form">
 
         <div class="form-check form-check-inline mb-3">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">News articles</label>
+            <input class="form-check-input" checked type="radio" name="article_type" id="everything" value="everything">
+            <label class="form-check-label" for="everything">News articles</label>
           </div>
           <div class="form-check form-check-inline mb-3">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Breaking news</label>
+            <input class="form-check-input" type="radio" name="article_type" id="top-headlines" value="top-headlines">
+            <label class="form-check-label" for="top-headlines">Breaking news</label>
           </div>
 
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" id="keyword" name="keyword" placeholder="Keyword or phrase" type="text">
         </div>
 
-        <select class="form-select w-25 mx-auto mb-3" aria-label="Default select example">
-            <option selected>Select your language</option>
-            <option value="en">English</option>
+        <select class="form-select w-25 mx-auto mb-3" name="language" aria-label="Default select example">
+            <option selected value="en">English</option>
             <option value="de">German</option>
-            <option value="fr">France</option>
+            <option value="fr">French</option>
           </select>
 
         <button class="btn border mb-3" type="submit">Submit</button>
 
     </form>
 
-    <div class="d-flex text-align-center">
-        Results for keyword: <strong>{{ keyword }}</strong>
+    <div class="d-flex justify-content-center mb-3">
+        Results for keyword: <span class="keyword ms-2">{{ keyword }}</span>
     </div>
 
     <div class="d-flex flex-wrap justify-content-around">
 
         {% for row in data %}
 
-
             <div class="card mx-3 my-4" style="width: 18rem;">
-                <div class="card-header">
-                Keyword:
-                </div>
+                <div class="card-header">{{ row['title'] }}</div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{ row['source.name'] }} {{ row['author'] }}</li>
-                    <li class="list-group-item">{{ row['title'] }}</li>
                     <li class="list-group-item"><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></li>
                     <li class="list-group-item"><img src="{{ row['urlToImage'] }}" alt="" width="220" height="220"></li>
                     <li class="list-group-item">{{ row['publishedAt'] }}</li>
                 </ul>
-                <a href="#" class="btn btn-primary button mt-auto">Save to my articles</a>
+                {% if isLoggedIn %}
+                  <button type="button" onclick="saveArticle( {{ row['title'] }}, {{ row['source.name'] }}, {{ row['author'] }}, {{ row['url'] }} )" class="btn btn-primary">Save to my articles</button>
+                {% else %}
+                  <a href="/login" class="btn btn-primary button mt-auto">Save to my articles</a>
+                {% endif %}
             </div>
 
         {% endfor %}

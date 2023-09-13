@@ -4,6 +4,8 @@ import requests
 
 from flask import redirect, render_template, session
 
+from functools import wraps
+
 api_key = "c237f389d5674012bb0ca74e4f86675f"
 
 def apology(message, code=400):
@@ -30,9 +32,24 @@ def apology(message, code=400):
 
     return render_template("apology.html", top=code, bottom=escape(message)), code
 
+def login_required(f):
+    """
+    Decorate routes to require login.
 
-def lookup(keyword):
-    """Look for keyword."""
+    http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/
+    """
+
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if session.get("user_id") is None:
+            return redirect("/login")
+        return f(*args, **kwargs)
+
+    return decorated_function
+
+
+def lookup(article_type, keyword, language = 'en'):
+    # Look for article_type
 
     end = datetime.datetime.now(pytz.timezone("US/Eastern"))
     start = end - datetime.timedelta(days=1)
@@ -40,9 +57,10 @@ def lookup(keyword):
     # Query API
     try:
 
-        url = ('https://newsapi.org/v2/everything?'
+        url = (f'https://newsapi.org/v2/{article_type}?'
         f'q={keyword}&'
         f'from={start.strftime("%Y-%m-%d")}&'
+        f'language={language}&'
         'sortBy=popularity&'
         f'apiKey={api_key}')
 
