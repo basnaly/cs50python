@@ -226,15 +226,18 @@ def save_article():
 
     add_article = request.json["article"]
     print(add_article)
+
     user_articles_table = f"articles_{user_id}"
-    # db.execute(
-    #     "INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)",
-    #     nn,
-    #     symbol,
-    #     shares,
-    #     price,
-    #     datetime.now(),
-    # )
+    db.execute(
+        "INSERT INTO ? (nn, keyword, title, source_name, author, url, publishedAt) VALUES(?, ?, ?, ?)",
+        nn,
+        keyword,
+        title,
+        source_name,
+        author,
+        url,
+        publishedAt
+    )
 
 
     return {}
