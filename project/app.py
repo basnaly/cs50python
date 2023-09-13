@@ -195,6 +195,7 @@ def show_history():
     list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
 
     for i, element in enumerate(list_search_history):
+        nn = i + 1
 
 
     return render_template("history.html", data = [])
