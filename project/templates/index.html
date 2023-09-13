@@ -24,15 +24,20 @@
 </script> -->
 
 <script type="text/javascript">
-  function saveArticle(row) {
+  function saveArticle(keyword, title, source_name, author, url, publishedAt) {
     let request = new XMLHttpRequest();
     request.onreadystatechange = function() {
         if (request.readyState == 4 && request.status == 200)
           console.log('abc')
 
     };
+    const data = {
+      article: {
+        keyword, title, source_name, author, url, publishedAt
+      }
+    }
     request.open("POST", "/save-article", true);
-    request.send(row);
+    request.send(JSON.stringify(data));
   }
 </script>
 
