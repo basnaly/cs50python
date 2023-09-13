@@ -112,7 +112,7 @@ def register():
         # Create articles table
         user_articles_table = f"articles_{user_id}"
         db.execute(
-            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, keyword TEXT NOT NULL, source TEXT NOT NULL, author TEXT NOT NULL, title TEXT NOT NULL, url TEXT NOT NULL, image TEXT NOT NULL, published DATE);",
+            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, keyword TEXT NOT NULL, source TEXT NOT NULL, author TEXT NOT NULL, title TEXT NOT NULL, url TEXT NOT NULL, published DATE);",
             user_articles_table,
         )
 
