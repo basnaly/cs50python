@@ -29,14 +29,12 @@
     request.onreadystatechange = function(response) {
         if (request.readyState == 4 && request.status == 200){
           const message = JSON.parse(request.response);
-          // const show_message = document.getElementById('message');
-          // show_message.innerHTML = message['message'];
-          // show_message.style.display = 'block';
-          // setTimeout(() => {
-          //   show_message.style.display = 'none';
-          // }, 5000)
+          const show_message = document.getElementById('message');
+          show_message.show();
 
-          const bsAlert = new bootstrap.Alert('#myAlert')
+          setTimeout(() => {
+            show_message.hide();
+          }, 5000)
 
         }
     };
@@ -57,9 +55,16 @@
 </script>
 
     <!-- <div class="message mb-3" id="message"></div> -->
-    <div class="alert alert-warning alert-dismissible fade show" id="message" role="alert">
-      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div role="alert" aria-live="assertive" aria-atomic="true" id="message" class="toast" data-bs-autohide="false">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
     </div>
 
     <form action="/" method="POST" id="form">
