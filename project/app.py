@@ -244,5 +244,4 @@ def save_article():
         publishedAt
     )
 
-
-    return {}
+    return {"message": "Saved"}
