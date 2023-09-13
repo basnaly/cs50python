@@ -188,7 +188,7 @@ def logout():
 @login_required
 def save_article():
 
-    print(request.json)
+    print(request.json["article"])
     user_id = session["user_id"]
 
     return {}
