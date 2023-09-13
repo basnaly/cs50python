@@ -234,8 +234,8 @@ def save_article():
 
     user_articles_table = f"articles_{user_id}"
     db.execute(
-        "INSERT INTO ? (keyword, title, source_name, author, url, publishedAt) VALUES(?, ?, ?, ?, ?, ?)",
-        user_articles_table
+        "INSERT INTO ? (keyword, title, source_name, author, url, publishedAt) VALUES(?, ?, ?, ?, ?, ?);",
+        user_articles_table,
         keyword,
         title,
         source_name,
