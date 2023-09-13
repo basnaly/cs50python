@@ -196,9 +196,22 @@ def show_history():
 
     for i, element in enumerate(list_search_history):
         nn = i + 1
+        article_type = element["article_type"]
+        keyword = element["keyword"]
+        language = element["language"]
+        date = element["date"]
 
+        data.append(
+            {
+                "nn": nn,
+                "article_type": article_type,
+                "keyword": keyword,
+                "language": language,
+                "date": date,
+            }
+        )
 
-    return render_template("history.html", data = [])
+    return render_template("history.html", data = data)
 
 @app.route("/save-article", methods=["POST"])
 @login_required
