@@ -211,7 +211,7 @@ def show_history():
             }
         )
 
-    return render_template("history.html", data = data)
+    return render_template("history.html", data=data)
 
 @app.route("/save-article", methods=["POST"])
 @login_required

@@ -12,19 +12,19 @@ History
     <thead>
         <tr>
             <th>NN</th>
-            <th>Type article_ty</th>
-            <th>Shares</th>
-            <th>Price</th>
+            <th>Article / Breaking news</th>
+            <th>Keyword</th>
+            <th>Language</th>
             <th>Date</th>
         </tr>
     </thead>
     <tbody>
-        {% for row in history %}
-        <tr class = {{ row['class_name'] }}>
+        {% for row in data %}
+        <tr class="">
             <td>{{ row['nn'] }}</td>
-            <td>{{ row['symbol'] }}</td>
-            <td>{{ row['shares'] }}</td>
-            <td>{{ row['price'] | usd }}</td>
+            <td>{{ row['article_type'] }}</td>
+            <td>{{ row['keyword'] }}</td>
+            <td>{{ row['language'] | usd }}</td>
             <td>{{ row['date'] }}</td>
         </tr>
         {% endfor %}
@@ -32,16 +32,3 @@ History
 </table>
 
 {% endblock %}
-
-<!-- table
-       History portfolio
-
-nn   symbol  price   shares   date
-1.    aapl    105      3    01/09/2020
-2.    abc      50      4    15/10/2020
-3.    aapl    110     -1    08/12/2022
-4.    abc      60     -2    01/09/2023
-table -->
-
-<!-- data = lookup(symbol)
-{'name': 'AAPL', 'price': 178.18, 'symbol': 'AAPL'} -->
