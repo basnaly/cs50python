@@ -192,8 +192,8 @@ def show_history():
     data = []
 
     user_search_history_table = f"search_history_{user_id}"
-    db.execute(
-        "SELECT TABLE ? FROM (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, article_type TEXT NOT NULL, keyword TEXT NOT NULL, language TEXT NOT NULL, date DATE);",
+    list_search_history = db.execute(
+        "SELECT * FROM  ? users WHERE username = ?" ;",
         user_search_history_table,
     )
     list_shares = db.execute("SELECT * FROM ?", portfolio_table)
