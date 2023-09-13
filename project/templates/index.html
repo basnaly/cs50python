@@ -26,9 +26,9 @@
 <script type="text/javascript">
   function saveArticle(keyword, title, source_name, author, url, publishedAt) {
     let request = new XMLHttpRequest();
-    request.onreadystatechange = function() {
+    request.onreadystatechange = function(response) {
         if (request.readyState == 4 && request.status == 200)
-          console.log(request.data)
+          console.log(response)
     };
     const data = {
       article: {
