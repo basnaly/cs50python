@@ -222,7 +222,8 @@ def show_history():
 @login_required
 def save_article():
 
-    print(request.json["article"])
     user_id = session["user_id"]
+
+      list_articles = request.json["article"]
 
     return {}
