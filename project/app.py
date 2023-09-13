@@ -231,7 +231,7 @@ def save_article():
     author = add_article["author"]
     url = add_article["url"]
     published = add_article["publishedAt"]
-    print(keyword, )
+    print(keyword, title)
 
     user_articles_table = f"articles_{user_id}"
     db.execute(
