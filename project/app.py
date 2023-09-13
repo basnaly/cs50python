@@ -231,10 +231,11 @@ def save_article():
     author = add_article["author"]
     url = add_article["url"]
     published = add_article["publishedAt"]
+    print(keyword, )
 
     user_articles_table = f"articles_{user_id}"
     db.execute(
-        "INSERT INTO ? (keyword, title, source, author, url, published) VALUES(?, ?, ?, ?, ?, ?);",
+        "INSERT INTO ? (keyword, title, source, author, url, published) VALUES (?, ?, ?, ?, ?, ?);",
         user_articles_table,
         keyword,
         title,
