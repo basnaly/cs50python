@@ -188,8 +188,7 @@ def logout():
 @login_required
 def save_article():
 
-    print(request)
-
+    print(request.data)
     user_id = session["user_id"]
 
-
+    return {}
