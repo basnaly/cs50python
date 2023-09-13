@@ -192,11 +192,9 @@ def show_history():
     data = []
 
     user_search_history_table = f"search_history_{user_id}"
-    list_search_history = db.execute(
-        "SELECT * FROM  ? users WHERE username = ?" ;",
-        user_search_history_table,
-    )
-    list_shares = db.execute("SELECT * FROM ?", portfolio_table)
+    list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
+
+    for i, element in enumerate(list_search_history):
 
 
     return render_template("history.html", data = [])
