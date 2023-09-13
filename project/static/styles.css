@@ -36,3 +36,7 @@ tr:last-child {
 .keyword {
     font-weight: bold;
 }
+
+.message {
+    display: none;
+}
