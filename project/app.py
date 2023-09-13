@@ -183,6 +183,8 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+@app.route("/" , methods=["GET"])
+
 
 @app.route("/save-article", methods=["POST"])
 @login_required
