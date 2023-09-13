@@ -225,7 +225,7 @@ def save_article():
     user_id = session["user_id"]
 
     add_article = request.json["article"]
-    print(add_article)
+    keyword = add_article["keyword"]
 
     user_articles_table = f"articles_{user_id}"
     db.execute(
