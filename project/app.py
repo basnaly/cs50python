@@ -197,6 +197,10 @@ def show_history():
     for i, element in enumerate(list_search_history):
         nn = i + 1
         article_type = element["article_type"]
+        if article_type == "everything":
+            "Articles"
+        else:
+            
         keyword = element["keyword"]
         language = element["language"]
         date = element["date"]
