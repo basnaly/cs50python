@@ -183,8 +183,19 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
-@app.route("/" , methods=["GET"])
+@app.route("/history" , methods=["GET"])
+@login_required
+def show_history():
 
+    user_id = session["user_id"]
+
+    data = []
+
+    user_articles_table = f"articles_{user_id}"
+    list_shares = db.execute("SELECT * FROM ?", portfolio_table)
+
+
+    return render_template("history.html", data = [])
 
 @app.route("/save-article", methods=["POST"])
 @login_required
