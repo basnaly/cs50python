@@ -227,21 +227,21 @@ def save_article():
     add_article = request.json["article"]
     keyword = add_article["keyword"]
     title = add_article["title"]
-    source_name = add_article["source_name"]
+    source = add_article["source_name"]
     author = add_article["author"]
     url = add_article["url"]
-    publishedAt = add_article["publishedAt"]
+    published = add_article["publishedAt"]
 
     user_articles_table = f"articles_{user_id}"
     db.execute(
-        "INSERT INTO ? (keyword, title, source_name, author, url, publishedAt) VALUES(?, ?, ?, ?, ?, ?);",
+        "INSERT INTO ? (keyword, title, source, author, url, published) VALUES(?, ?, ?, ?, ?, ?);",
         user_articles_table,
         keyword,
         title,
-        source_name,
+        source,
         author,
         url,
-        publishedAt
+        published
     )
 
     return {"message": "Saved"}
