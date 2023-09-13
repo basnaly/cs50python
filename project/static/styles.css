@@ -3,6 +3,10 @@
     --bs-font-sans-serif: 'Montserrat', sans-serif;
 }
 
+main {
+    margin-top: 76px;
+}
+
 nav.navbar {
     background-color: #d5f0e6;
     color: red;
