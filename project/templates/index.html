@@ -33,7 +33,12 @@
     };
     const data = {
       article: {
-        keyword, title, source_name, author, url, publishedAt
+        keyword: keyword,
+        title: title,
+        source_name: source_name,
+        author: author,
+        url: url,
+        publishedAt: publishedAt
       }
     }
     request.open("POST", "/save-article", true);
