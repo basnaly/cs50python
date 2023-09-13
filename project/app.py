@@ -224,6 +224,16 @@ def save_article():
 
     user_id = session["user_id"]
 
-      list_articles = request.json["article"]
+    list_articles = request.json["article"]
+    user_articles_table = f"transactions_{user_id}"
+    db.execute(
+        "INSERT INTO ? (symbol, shares, price, date) VALUES(?, ?, ?, ?)",
+        transactions_table,
+        symbol,
+        shares,
+        price,
+        datetime.now(),
+    )
+
 
     return {}
