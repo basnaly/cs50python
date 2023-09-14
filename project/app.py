@@ -226,7 +226,10 @@ def show_history():
 
     else:
 
-        id_search_article = request.json["article"]
+        id_search_article = request.json["search_article_id"]
+        print(id_search_article)
+
+        return {}
 
 @app.route("/save-article", methods=["POST"])
 @login_required
