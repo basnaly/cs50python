@@ -23,7 +23,7 @@ Articles
       const search_article_id = {
           id: id
       }
-      request.open("POST", "/history", true);
+      request.open("POST", "/articles", true);
       request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       request.send(JSON.stringify(search_article_id));
     }
