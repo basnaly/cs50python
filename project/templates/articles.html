@@ -12,20 +12,24 @@ Articles
     <thead>
         <tr>
             <th>NN</th>
-            <th>Article / Breaking news</th>
             <th>Keyword</th>
-            <th>Language</th>
-            <th>Date</th>
+            <th>Source name</th>
+            <th>Author</th>
+            <th>Title</th>
+            <th>URL</th>
+            <th>Published</th>
         </tr>
     </thead>
     <tbody>
         {% for row in data %}
         <tr class="">
             <td>{{ row['nn'] }}</td>
-            <td>{{ row['article_type'] }}</td>
             <td>{{ row['keyword'] }}</td>
-            <td>{{ row['language'] }}</td>
-            <td>{{ row['date'] }}</td>
+            <td>{{ row['source'] }}</td>
+            <td>{{ row['author'] }}</td>
+            <td>{{ row['title'] }}</td>
+            <td>{{ row['lurl'] }}</td>
+            <td>{{ row['published'] }}</td>
         </tr>
         {% endfor %}
     </tbody>
