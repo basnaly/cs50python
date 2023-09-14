@@ -7,7 +7,7 @@ History
 {% block main %}
 
 <script type="text/javascript">
-    function saveArticle(id) {
+    function searchArticle(id) {
       let request = new XMLHttpRequest();
       request.onreadystatechange = function(response) {
           if (request.readyState == 4 && request.status == 200){
@@ -15,6 +15,7 @@ History
             const pass_history_id = document.getElementById('message');
             pass_history_id.classList.add("show");
       };
+    }
       const data = {
         article: {
           keyword: keyword,
