@@ -199,7 +199,12 @@ def show_history():
         for i, element in enumerate(list_search_history):
             id = element["id"]
             nn = i + 1
-            article_type = element["article_type"]
+            display_article_type = element["article_type"]
+            if display_article_type == "everything":
+                display_article_type = "Articles"
+            else:
+                display_article_type = "Breaking news"
+            query_article_type = element["article_type"]
             keyword = element["keyword"]
             language = element["language"]
             date = element["date"]
@@ -208,8 +213,8 @@ def show_history():
                 {
                     "id": id,
                     "nn": nn,
-                    "article_type": element["article_type"],
-                    "display_article_type":  article_type,
+                    "display_article_type": element["article_type"],
+                    "query_article_type" = element["article_type"],
                     "keyword": keyword,
                     "language": language,
                     "date": date,
