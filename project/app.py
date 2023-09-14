@@ -270,32 +270,41 @@ def saved_articles():
 
     user_id = session["user_id"]
 
-    data = []
+    if request.method == "GET":
 
-    user_saved_articles_table = f"articles_{user_id}"
-    list_saved_articles = db.execute("SELECT * FROM  ?;", user_saved_articles_table)
+        data = []
 
-    for i, element in enumerate(list_saved_articles):
-        id = element["id"]
-        nn = i + 1
-        keyword = element["keyword"]
-        source = element["source"]
-        author = element["author"]
-        title = element["title"]
-        url = element["url"]
-        published = element["published"]
+        user_saved_articles_table = f"articles_{user_id}"
+        list_saved_articles = db.execute("SELECT * FROM  ?;", user_saved_articles_table)
 
-        data.append(
-            {
-                "id": id,
-                "nn": nn,
-                "keyword": keyword,
-                "source": source,
-                "author": author,
-                "title": title,
-                "url": url,
-                "published": published,
-            }
-        )
+        for i, element in enumerate(list_saved_articles):
+            id = element["id"]
+            nn = i + 1
+            keyword = element["keyword"]
+            source = element["source"]
+            author = element["author"]
+            title = element["title"]
+            url = element["url"]
+            published = element["published"]
 
-    return render_template("articles.html", data=data)
+            data.append(
+                {
+                    "id": id,
+                    "nn": nn,
+                    "keyword": keyword,
+                    "source": source,
+                    "author": author,
+                    "title": title,
+                    "url": url,
+                    "published": published,
+                }
+            )
+
+        return render_template("articles.html", data=data)
+
+    else:
+        id_article = request.json["id"]
+        user_articles_table = f"articles_{user_id}"
+        db.execute("DELETE FROM ? WHERE id = ?;", user_articles_table, id_article)
+
+        return {"message": "The article was deleted"}
