@@ -20,7 +20,7 @@ History
           id: id,
         }
       }
-      request.open("POST", "/save-article", true);
+      request.open("POST", "/history", true);
       request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       request.send(JSON.stringify(data));
     }
