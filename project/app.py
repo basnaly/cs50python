@@ -194,7 +194,7 @@ def show_history():
         data = []
 
         user_search_history_table = f"search_history_{user_id}"
-        list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
+        list_search_history = db.execute("SELECT * FROM ?;", user_search_history_table)
 
         for i, element in enumerate(list_search_history):
             id = element["id"]
@@ -230,7 +230,7 @@ def show_history():
         print(id_search_article)
 
         user_search_history_table = f"search_history_{user_id}"
-        db.execute("DELETE FROM ? WHERE id = ?};", user_search_history_table, id_search_article)
+        db.execute("DELETE FROM ? WHERE id = ?;", user_search_history_table, id_search_article)
 
         return {"message": "The article was deleted"}
 
