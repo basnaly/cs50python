@@ -260,3 +260,7 @@ def saved_articles():
 
     user_saved_articles_table = f"articles_{user_id}"
     list_saved_articles = db.execute("SELECT * FROM  ?;", user_saved_articles_table)
+
+    for i, element in enumerate(list_saved_articles):
+        n = i + 1
+        
