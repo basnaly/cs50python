@@ -190,34 +190,38 @@ def show_history():
 
     user_id = session["user_id"]
 
-    data = []
+    if request.method == "GET":
 
-    user_search_history_table = f"search_history_{user_id}"
-    list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
+        data = []
 
-    for i, element in enumerate(list_search_history):
-        nn = i + 1
-        article_type = element["article_type"]
-        if article_type == "everything":
-            article_type = "Articles"
-        else:
-            article_type = "Breaking news"
+        user_search_history_table = f"search_history_{user_id}"
+        list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
 
-        keyword = element["keyword"]
-        language = element["language"]
-        date = element["date"]
+        for i, element in enumerate(list_search_history):
+            nn = i + 1
+            article_type = element["article_type"]
+            if article_type == "everything":
+                article_type = "Articles"
+            else:
+                article_type = "Breaking news"
 
-        data.append(
-            {
-                "nn": nn,
-                "article_type": article_type,
-                "keyword": keyword,
-                "language": language,
-                "date": date,
-            }
-        )
+            keyword = element["keyword"]
+            language = element["language"]
+            date = element["date"]
 
-    return render_template("history.html", data=data)
+            data.append(
+                {
+                    "nn": nn,
+                    "article_type": article_type,
+                    "keyword": keyword,
+                    "language": language,
+                    "date": date,
+                }
+            )
+
+        return render_template("history.html", data=data)
+
+    else:
 
 @app.route("/save-article", methods=["POST"])
 @login_required
