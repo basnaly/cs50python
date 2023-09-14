@@ -28,7 +28,7 @@ Articles
             <td>{{ row['source'] }}</td>
             <td>{{ row['author'] }}</td>
             <td>{{ row['title'] }}</td>
-            <td>{{ row['lurl'] }}</td>
+            <td><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></td>
             <td>{{ row['published'] }}</td>
         </tr>
         {% endfor %}
