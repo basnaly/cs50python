@@ -231,7 +231,7 @@ def show_history():
         search_history_row = db.execute("SELECT * FROM  ? WHERE id = ?;", user_search_history_table, search_article_id)
         print(search_history_row)
 
-        return redirect("/")
+        return {}
 
 @app.route("/save-article", methods=["POST"])
 @login_required
