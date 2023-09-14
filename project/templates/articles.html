@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Articles
+{% endblock %}
+
+{% block main %}
+
+<h2 class="mb-5">Your saved articles</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>NN</th>
+            <th>Article / Breaking news</th>
+            <th>Keyword</th>
+            <th>Language</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr class="">
+            <td>{{ row['nn'] }}</td>
+            <td>{{ row['article_type'] }}</td>
+            <td>{{ row['keyword'] }}</td>
+            <td>{{ row['language'] }}</td>
+            <td>{{ row['date'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
