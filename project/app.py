@@ -183,13 +183,13 @@ def logout():
     return redirect("/")
 
 
-@app.route("/history" , methods=["GET"])
+@app.route("/history" , methods=["GET", "POST"])
 @login_required
 def show_history():
 
     user_id = session["user_id"]
 
-    if request.method == "GET"
+    if request.method == "GET":
 
         data = []
 
@@ -226,7 +226,7 @@ def show_history():
 
     else:
 
-        id_search_article = request.json["search_article_id"]
+        id_search_article = request.json["id"]
         print(id_search_article)
 
         return {}
