@@ -232,9 +232,12 @@ def show_history():
 
         DELETE FROM MySQL_table WHERE id=10;
 
+        user_search_history_table = f"search_history_{user_id}"
+        db.execute(
+            "DELETE FROM ? WHERE id = ?};", ser_search_history_table, id_search_article
+        )
 
-
-        return {}
+        return {"message": "The article was deleted"}
 
 @app.route("/save-article", methods=["POST"])
 @login_required
