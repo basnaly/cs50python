@@ -194,7 +194,7 @@ def show_history():
         data = []
 
         user_search_history_table = f"search_history_{user_id}"
-        list_search_history = db.execute("SELECT * FROM ?;", user_search_history_table)
+        list_search_history = db.execute("SELECT * FROM ? ORDER BY date DESC;", user_search_history_table)
 
         for i, element in enumerate(list_search_history):
             id = element["id"]
