@@ -250,7 +250,7 @@ def save_article():
     return {"message": "The article was saved"}
 
 
-@app.route("/saved_articles", methods=["GET", "POST"])
+@app.route("/articles", methods=["GET", "POST"])
 @login_required
 def saved_articles():
 
