@@ -184,7 +184,7 @@ def logout():
     return redirect("/")
 
 
-@app.route("/history" , methods=["GET"])
+@app.route("/history" , methods=["GET", "POST"])
 @login_required
 def show_history():
 
