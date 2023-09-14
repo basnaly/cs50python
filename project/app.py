@@ -43,7 +43,7 @@ def index():
 
         user_id = session["user_id"]
 
-        if user_id:
+        if user_id and keyword:
 
             # Update search_history table
             user_search_history_table = f"search_history_{user_id}"
