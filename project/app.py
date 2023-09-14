@@ -213,8 +213,8 @@ def show_history():
                 {
                     "id": id,
                     "nn": nn,
-                    "display_article_type": element["article_type"],
-                    "query_article_type" = element["article_type"],
+                    "display_article_type": display_article_type,
+                    "query_article_type": query_article_type,
                     "keyword": keyword,
                     "language": language,
                     "date": date,
