@@ -12,18 +12,12 @@ History
       request.onreadystatechange = function(response) {
           if (request.readyState == 4 && request.status == 200){
             const search_history_id = JSON.parse(request.response);
-            const pass_history_id = document.getElementById('message');
-            pass_history_id.classList.add("show");
+            console.log(search_history_id)
       };
     }
-      const data = {
+      const search_article_id = {
         article: {
-          keyword: keyword,
-          title: title,
-          source_name: source_name,
-          author: author,
-          url: url,
-          publishedAt: publishedAt
+          id: id,
         }
       }
       request.open("POST", "/save-article", true);
