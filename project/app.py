@@ -112,14 +112,21 @@ def register():
         user_articles_table = f"articles_{user_id}"
         db.execute(
             "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, keyword TEXT NOT NULL, source TEXT NOT NULL, author TEXT NOT NULL, title TEXT NOT NULL, url TEXT NOT NULL, published DATE);",
-            user_articles_table,
+            user_articles_table
         )
 
         # Create search history table
         user_search_history_table = f"search_history_{user_id}"
         db.execute(
             "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, article_type TEXT NOT NULL, keyword TEXT NOT NULL, language TEXT NOT NULL, date DATE);",
-            user_search_history_table,
+            user_search_history_table
+        )
+
+        # Create tags table
+        user_tags_table = f"tags_{user_id}"
+        db.execute(
+            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, tag TEXT NOT NULL, color TEXT NOT NULL);",
+            user_tags_table
         )
 
         # Redirect user to home page
