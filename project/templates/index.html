@@ -74,7 +74,7 @@ Index
 
   </div>
   <div class="form-check form-check-inline mb-3">
-    <input class="form-check-input" type="radio" name="article_type" id="top-headlines" value="top-headlines">
+    <input class="form-check-input" type="radio" name="article_type" id="top-headlines" value="top-headlines" {% if article_type == 'top-headlines'%}checked{% endif %}>
     <label class="form-check-label" for="top-headlines">Breaking news</label>
   </div>
 
@@ -84,9 +84,9 @@ Index
   </div>
 
   <select class="form-select w-25 mx-auto mb-3" name="language" aria-label="Default select example">
-    <option selected value="en">English</option>
-    <option value="de">German</option>
-    <option value="fr">French</option>
+    <option value="en" {% if language == 'en'%}selected{% endif %}>English</option>
+    <option value="de" {% if language == 'de'%}selected{% endif %}>German</option>
+    <option value="fr" {% if language == 'fr'%}selected{% endif %}>French</option>
   </select>
 
   <div class="mb-3">
