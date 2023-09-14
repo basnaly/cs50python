@@ -222,6 +222,9 @@ def show_history():
         return render_template("history.html", data=data)
 
     else:
+        search_article_id = request.json["article"]
+        
+
         user_search_history_table = f"search_history_{user_id}"
         search_history_row = db.execute("SELECT * FROM  ? WHERE id = ?;", user_search_history_table, )
 
