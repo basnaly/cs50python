@@ -222,6 +222,8 @@ def show_history():
         return render_template("history.html", data=data)
 
     else:
+        user_search_history_table = f"search_history_{user_id}"
+        search_history_row = db.execute("SELECT * FROM  ? WHERE id = ?;", user_search_history_table, )
 
 @app.route("/save-article", methods=["POST"])
 @login_required
