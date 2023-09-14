@@ -225,6 +225,7 @@ def save_article():
     user_id = session["user_id"]
 
     add_article = request.json["article"]
+    
     keyword = add_article["keyword"]
     title = add_article["title"]
     source = add_article["source_name"]
@@ -246,3 +247,10 @@ def save_article():
     )
 
     return {"message": "The article was saved"}
+
+
+@app.route("/saved_articles", methods=["GET", "POST"])
+@login_required
+def saved_articles():
+
+    user_id = session["user_id"]
