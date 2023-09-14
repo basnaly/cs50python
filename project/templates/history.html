@@ -22,7 +22,18 @@ History
       request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       request.send(JSON.stringify(search_article_id));
     }
-  </script>
+</script>
+
+<div role="alert" aria-live="assertive" aria-atomic="true" id="message" class="toast position-fixed z-3"
+  data-bs-autohide="false">
+  <div class="toast-header">
+    <div>Message:</div>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    This article was successfully deleted!
+  </div>
+</div>
 
 <h2 class="mb-5">Your search history</h2>
 

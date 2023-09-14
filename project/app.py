@@ -229,13 +229,8 @@ def show_history():
         id_search_article = request.json["id"]
         print(id_search_article)
 
-
-        DELETE FROM MySQL_table WHERE id=10;
-
         user_search_history_table = f"search_history_{user_id}"
-        db.execute(
-            "DELETE FROM ? WHERE id = ?};", ser_search_history_table, id_search_article
-        )
+        db.execute("DELETE FROM ? WHERE id = ?};", user_search_history_table, id_search_article)
 
         return {"message": "The article was deleted"}
 
