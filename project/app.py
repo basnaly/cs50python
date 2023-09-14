@@ -277,6 +277,7 @@ def saved_articles():
     list_saved_articles = db.execute("SELECT * FROM  ?;", user_saved_articles_table)
 
     for i, element in enumerate(list_saved_articles):
+        id = element["id"]
         nn = i + 1
         keyword = element["keyword"]
         source = element["source"]
@@ -287,6 +288,7 @@ def saved_articles():
 
         data.append(
             {
+                "id": id,
                 "nn": nn,
                 "keyword": keyword,
                 "source": source,
