@@ -111,7 +111,7 @@ def register():
         # Create articles table
         user_articles_table = f"articles_{user_id}"
         db.execute(
-            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, keyword TEXT NOT NULL, source TEXT NOT NULL, author TEXT NOT NULL, title TEXT NOT NULL, url TEXT NOT NULL, tags TEXT NOT NULL, published DATE);",
+            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, keyword TEXT NOT NULL, source TEXT NOT NULL, author TEXT NOT NULL, title TEXT NOT NULL, url TEXT NOT NULL, tags TEXT, published DATE);",
             user_articles_table
         )
 
@@ -125,7 +125,7 @@ def register():
         # Create tags table
         user_tags_table = f"tags_{user_id}"
         db.execute(
-            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, tag TEXT NOT NULL, color TEXT NOT NULL);",
+            "CREATE TABLE ? (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, tag TEXT NOT NULL, color TEXT);",
             user_tags_table
         )
 
