@@ -287,12 +287,13 @@ def saved_articles():
         for i, element in enumerate(list_saved_articles):
             id = element["id"]
             nn = i + 1
-            keyword = element["keyword"]
-            source = element["source"]
-            author = element["author"]
-            title = element["title"]
-            url = element["url"]
-            published = element["published"]
+            keyword = element.get("keyword")
+            source = element.get("source")
+            author = element.get("author")
+            title = element.get("title")
+            url = element.get("url")
+            tags = element.get("tags", "")
+            published = element.get("published")
 
             data.append(
                 {
@@ -303,6 +304,7 @@ def saved_articles():
                     "author": author,
                     "title": title,
                     "url": url,
+                    "tags": tags,
                     "published": published,
                 }
             )
