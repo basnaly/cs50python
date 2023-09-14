@@ -36,7 +36,7 @@ def index():
         # return render_template("index.html", data = [])
 
         article_type = request.form.get("article_type")
-        keyword = request.form.get("keyword")
+        keyword = request.form.get("keyword") or ""
         language = request.form.get("language")
 
         data = lookup(article_type, keyword, language)

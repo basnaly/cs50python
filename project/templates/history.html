@@ -47,6 +47,9 @@ History
             <td>{{ row['language'] }}</td>
             <td>{{ row['date'] }}</td>
             <td><button type="button" onclick="searchArticle('{{ row['id'] }}')" class="btn btn-success">Search again</button></td>
+
+
+            ?article_type=everything&keyword=abc&language=en
         </tr>
         {% endfor %}
     </tbody>
