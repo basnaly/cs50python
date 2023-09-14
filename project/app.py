@@ -56,7 +56,7 @@ def index():
                 datetime.now(),
             )
 
-        return render_template("index.html", keyword=keyword.title(), data=data or [], isLoggedIn = user_id )
+        return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id )
 
 
 @app.route("/register", methods=["GET", "POST"])
