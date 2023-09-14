@@ -69,7 +69,7 @@ Index
 
   <div class="form-check form-check-inline mb-3">
 
-    <input class="form-check-input" checked={ % if article_type == 'everything'% } "true" {% else %} "false" type="radio" name="article_type" id="everything" value="everything">
+    <input class="form-check-input" { % if article_type == 'everything'% }checked{% endif %} type="radio" name="article_type" id="everything" value="everything">
     <label class="form-check-label" for="everything">News articles</label>
 
   </div>
