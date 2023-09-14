@@ -227,7 +227,6 @@ def show_history():
     else:
 
         id_search_article = request.json["id"]
-        print(id_search_article)
 
         user_search_history_table = f"search_history_{user_id}"
         db.execute("DELETE FROM ? WHERE id = ?;", user_search_history_table, id_search_article)
