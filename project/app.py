@@ -183,6 +183,7 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+
 @app.route("/history" , methods=["GET"])
 @login_required
 def show_history():
@@ -225,7 +226,7 @@ def save_article():
     user_id = session["user_id"]
 
     add_article = request.json["article"]
-    
+
     keyword = add_article["keyword"]
     title = add_article["title"]
     source = add_article["source_name"]
