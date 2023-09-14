@@ -34,7 +34,7 @@ def index():
 
     if request.method == "GET":
         # return render_template("index.html", data = [])
-        print(request.form)
+        print(request.form.to_dict())
         article_type = request.form.get("article_type")
         keyword = request.form.get("keyword") or ""
         language = request.form.get("language")
