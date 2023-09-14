@@ -187,9 +187,9 @@ def logout():
 @login_required
 def show_history():
 
-    if request.method == "GET"
+    user_id = session["user_id"]
 
-        user_id = session["user_id"]
+    if request.method == "GET"
 
         data = []
 
@@ -225,8 +225,8 @@ def show_history():
         return render_template("history.html", data=data)
 
     else:
-        
 
+        id_search_article = request.json["article"]
 
 @app.route("/save-article", methods=["POST"])
 @login_required
