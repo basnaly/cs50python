@@ -200,11 +200,6 @@ def show_history():
             id = element["id"]
             nn = i + 1
             article_type = element["article_type"]
-            if article_type == "everything":
-                article_type = "Articles"
-            else:
-                article_type = "Breaking news"
-
             keyword = element["keyword"]
             language = element["language"]
             date = element["date"]
@@ -213,8 +208,8 @@ def show_history():
                 {
                     "id": id,
                     "nn": nn,
-                    "article_type": article_type,
-                    "display_article_type": 
+                    "article_type": element["article_type"],
+                    "display_article_type":  article_type,
                     "keyword": keyword,
                     "language": language,
                     "date": date,
