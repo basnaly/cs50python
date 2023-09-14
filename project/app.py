@@ -255,3 +255,8 @@ def save_article():
 def saved_articles():
 
     user_id = session["user_id"]
+
+    data = []
+
+    user_saved_articles_table = f"articles_{user_id}"
+    list_saved_articles = db.execute("SELECT * FROM  ?;", user_saved_articles_table)
