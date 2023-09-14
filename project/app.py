@@ -189,37 +189,38 @@ def show_history():
 
     user_id = session["user_id"]
 
-        data = []
+    data = []
 
-        user_search_history_table = f"search_history_{user_id}"
-        list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
+    user_search_history_table = f"search_history_{user_id}"
+    list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
 
-        for i, element in enumerate(list_search_history):
-            id = element["id"]
-            nn = i + 1
-            display_article_type = element["article_type"]
-            if display_article_type == "everything":
-                display_article_type = "Articles"
-            else:
-                display_article_type = "Breaking news"
-            query_article_type = element["article_type"]
-            keyword = element["keyword"]
-            language = element["language"]
-            date = element["date"]
+    for i, element in enumerate(list_search_history):
+        id = element["id"]
+        nn = i + 1
+        display_article_type = element["article_type"]
+        if display_article_type == "everything":
+            display_article_type = "Articles"
+        else:
+            display_article_type = "Breaking news"
 
-            data.append(
-                {
-                    "id": id,
-                    "nn": nn,
-                    "display_article_type": display_article_type,
-                    "query_article_type": query_article_type,
-                    "keyword": keyword,
-                    "language": language,
-                    "date": date,
-                }
-            )
+        query_article_type = element["article_type"]
+        keyword = element["keyword"]
+        language = element["language"]
+        date = element["date"]
 
-        return render_template("history.html", data=data)
+        data.append(
+            {
+                "id": id,
+                "nn": nn,
+                "display_article_type": display_article_type,
+                "query_article_type": query_article_type,
+                "keyword": keyword,
+                "language": language,
+                "date": date,
+            }
+        )
+
+    return render_template("history.html", data=data)
 
 
 @app.route("/save-article", methods=["POST"])
