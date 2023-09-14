@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Index
+Index
 {% endblock %}
 
 {% block main %}
@@ -27,15 +27,15 @@
   function saveArticle(keyword, title, source_name, author, url, publishedAt) {
     let request = new XMLHttpRequest();
     request.onreadystatechange = function(response) {
-        if (request.readyState == 4 && request.status == 200){
-          const message = JSON.parse(request.response);
-          const show_message = document.getElementById('message');
-          show_message.classList.add("show");
-          setTimeout(() => {
-            show_message.classList.remove("show");
-          }, 5000)
+      if (request.readyState == 4 && request.status == 200) {
+        const message = JSON.parse(request.response);
+        const show_message = document.getElementById('message');
+        show_message.classList.add("show");
+        setTimeout(() => {
+          show_message.classList.remove("show");
+        }, 5000)
 
-        }
+      }
     };
     const data = {
       article: {
@@ -53,72 +53,78 @@
   }
 </script>
 
-    <!-- <div class="message mb-3" id="message"></div> -->
-    <div role="alert" aria-live="assertive" aria-atomic="true" id="message" class="toast position-fixed z-3" data-bs-autohide="false">
-      <div class="toast-header">
-        <div>Message:</div>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        This article was successfully saved!
-      </div>
-    </div>
+<!-- <div class="message mb-3" id="message"></div> -->
+<div role="alert" aria-live="assertive" aria-atomic="true" id="message" class="toast position-fixed z-3"
+  data-bs-autohide="false">
+  <div class="toast-header">
+    <div>Message:</div>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    This article was successfully saved!
+  </div>
+</div>
 
-    <form action="/" method="GET" id="form">
+<form action="/" method="GET" id="form">
 
-        <div class="form-check form-check-inline mb-3">
-            <input class="form-check-input" checked type="radio" name="article_type" id="everything" value="everything">
-            <label class="form-check-label" for="everything">News articles</label>
-          </div>
-          <div class="form-check form-check-inline mb-3">
-            <input class="form-check-input" type="radio" name="article_type" id="top-headlines" value="top-headlines">
-            <label class="form-check-label" for="top-headlines">Breaking news</label>
-          </div>
+  <div class="form-check form-check-inline mb-3">
+    <input class="form-check-input" checked type="radio" name="article_type" id="everything" value="everything">
+    <label class="form-check-label" for="everything">News articles</label>
+  </div>
+  <div class="form-check form-check-inline mb-3">
+    <input class="form-check-input" type="radio" name="article_type" id="top-headlines" value="top-headlines">
+    <label class="form-check-label" for="top-headlines">Breaking news</label>
+  </div>
 
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="keyword" name="keyword" placeholder="Keyword or phrase" type="text" value="{{ keyword }}">
-        </div>
+  <div class="mb-3">
+    <input class="form-control mx-auto w-auto" id="keyword" name="keyword" placeholder="Keyword or phrase" type="text"
+      value="{{ keyword }}">
+  </div>
 
-        <select class="form-select w-25 mx-auto mb-3" name="language" aria-label="Default select example">
-            <option selected value="en">English</option>
-            <option value="de">German</option>
-            <option value="fr">French</option>
-          </select>
+  <select class="form-select w-25 mx-auto mb-3" name="language" aria-label="Default select example">
+    <option selected value="en">English</option>
+    <option value="de">German</option>
+    <option value="fr">French</option>
+  </select>
 
-        <button class="btn border mb-3" type="submit">Submit</button>
+  <div class="d-flex">
+    <button class="btn border" type="submit">Submit</button>
+    <a href="/" class="btn btn-primary button">Clear</a>
+  </div>
 
-    </form>
 
-    <div class="d-flex justify-content-center mb-3">
-        Results for keyword: <span class="keyword ms-2">{{ keyword }}</span>
-    </div>
+</form>
 
-    <div class="d-flex flex-wrap justify-content-around">
+<div class="d-flex justify-content-center mb-3">
+  Results for keyword: <span class="keyword ms-2">{{ keyword }}</span>
+</div>
 
-        {% for row in data %}
+<div class="d-flex flex-wrap justify-content-around">
 
-            <div class="card mx-3 my-4" style="width: 18rem;">
-                <div class="card-header">{{ row['title'] }}</div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{ row['source.name'] }} {{ row['author'] }}</li>
-                    <li class="list-group-item"><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></li>
-                    <li class="list-group-item"><img src="{{ row['urlToImage'] }}" alt="" width="220" height="220"></li>
-                    <li class="list-group-item">{{ row['publishedAt'] }}</li>
-                </ul>
+  {% for row in data %}
 
-                {% if isLoggedIn %}
-                  <button type="button" onclick="saveArticle( '{{ keyword }}', '{{ row['title'] }}', '{{ row['source.name'] }}', '{{ row['author'] }}', '{{ row['url'] }}', '{{ row['publishedAt'] }}' )" class="btn btn-primary mt-auto">Save to my articles</button>
-                {% else %}
-                  <a href="/login" class="btn btn-primary button mt-auto">Save to my articles</a>
-                {% endif %}
+  <div class="card mx-3 my-4" style="width: 18rem;">
+    <div class="card-header">{{ row['title'] }}</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ row['source.name'] }} {{ row['author'] }}</li>
+      <li class="list-group-item"><a href="{{ row['url'] }}" target="_blank">{{ row['url'] }}</a></li>
+      <li class="list-group-item"><img src="{{ row['urlToImage'] }}" alt="" width="220" height="220"></li>
+      <li class="list-group-item">{{ row['publishedAt'] }}</li>
+    </ul>
 
-            </div>
+    {% if isLoggedIn %}
+    <button type="button"
+      onclick="saveArticle( '{{ keyword }}', '{{ row['title'] }}', '{{ row['source.name'] }}', '{{ row['author'] }}', '{{ row['url'] }}', '{{ row['publishedAt'] }}' )"
+      class="btn btn-primary mt-auto">Save to my articles</button>
+    {% else %}
+    <a href="/login" class="btn btn-primary button mt-auto">Save to my articles</a>
+    {% endif %}
 
-        {% endfor %}
+  </div>
 
-    </div>
+  {% endfor %}
+
+</div>
 
 
 {% endblock %}
-
-
