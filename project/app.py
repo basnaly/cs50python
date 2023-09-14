@@ -198,6 +198,7 @@ def show_history():
         list_search_history = db.execute("SELECT * FROM  ?;", user_search_history_table)
 
         for i, element in enumerate(list_search_history):
+            id = element["id"]
             nn = i + 1
             article_type = element["article_type"]
             if article_type == "everything":
@@ -211,6 +212,7 @@ def show_history():
 
             data.append(
                 {
+                    "id": id,
                     "nn": nn,
                     "article_type": article_type,
                     "keyword": keyword,
