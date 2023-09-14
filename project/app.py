@@ -263,4 +263,11 @@ def saved_articles():
 
     for i, element in enumerate(list_saved_articles):
         n = i + 1
-        
+        keyword = element["keyword"]
+        source = element["source"]
+        author = element["author"]
+        title = element["title"]
+        url = element["url"]
+        published = element[""]
+
+        keyword TEXT NOT NULL, source TEXT NOT NULL, author TEXT NOT NULL, title TEXT NOT NULL, url TEXT NOT NULL, published DATE)
