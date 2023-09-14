@@ -262,12 +262,24 @@ def saved_articles():
     list_saved_articles = db.execute("SELECT * FROM  ?;", user_saved_articles_table)
 
     for i, element in enumerate(list_saved_articles):
-        n = i + 1
+        nn = i + 1
         keyword = element["keyword"]
         source = element["source"]
         author = element["author"]
         title = element["title"]
         url = element["url"]
-        published = element[""]
+        published = element["published"]
 
-        keyword TEXT NOT NULL, source TEXT NOT NULL, author TEXT NOT NULL, title TEXT NOT NULL, url TEXT NOT NULL, published DATE)
+        data.append(
+            {
+                "nn": nn,
+                "keyword": keyword,
+                "source": source,
+                "author": author,
+                "title": title,
+                "url": url,
+                "published": published,
+            }
+        )
+
+    return render_template("articles.html", data=data)
