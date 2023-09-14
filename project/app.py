@@ -29,13 +29,12 @@ def after_request(response):
     return response
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET"])
 def index():
 
     if request.method == "GET":
-        return render_template("index.html", data = [])
+        # return render_template("index.html", data = [])
 
-    else:
         article_type = request.form.get("article_type")
         keyword = request.form.get("keyword")
         language = request.form.get("language")
