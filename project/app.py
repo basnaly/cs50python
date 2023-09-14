@@ -214,6 +214,7 @@ def show_history():
                     "id": id,
                     "nn": nn,
                     "article_type": article_type,
+                    "display_article_type": 
                     "keyword": keyword,
                     "language": language,
                     "date": date,
