@@ -46,7 +46,7 @@ History
             <td>{{ row['keyword'] }}</td>
             <td>{{ row['language'] }}</td>
             <td>{{ row['date'] }}</td>
-            <td><button type="button" onclick="searchArticle('{{ id }}')" class="btn btn-success">Search again</button></td>
+            <td><button type="button" onclick="searchArticle('{{ row['id'] }}')" class="btn btn-success">Search again</button></td>
         </tr>
         {% endfor %}
     </tbody>
