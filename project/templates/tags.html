@@ -43,17 +43,13 @@
 
         {% for row in data %}
 
-        <div class="card mx-3 my-4" style="width: 18rem;">
+        <div class="card mx-3 my-4 align-items-center" style="width: 18rem;">
           <ul class="list-group list-group-flush">
             <li class="list-group-item" style="background-color: {{ row['color'] }}">{{ row['tag'] }} </li>
           </ul>
 
-          <button type="button"
-            onclick="saveArticle( '{{ keyword }}', '{{ row['title'] }}', '{{ row['source']['name'] }}', '{{ row['author'] }}', '{{ row['url'] }}', '{{ row['publishedAt'] }}' )"
-            class="btn btn-primary mt-auto">Save to my articles</button>
-          {% else %}
-         <a href="/login" class="btn btn-primary button mt-auto">Save to my articles</a>
-          {% endif %}
+         <a href="/delete-tag" class="btn btn-primary button mt-auto">Delete</a>
+
 
         </div>
 
