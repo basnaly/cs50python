@@ -336,7 +336,7 @@ def saved_articles():
                 }
             )
 
-        return render_template("articles.html", data=data, tags=tags, )
+        return render_template("articles.html", data=data, tags=tags)
 
     else:
         id_article = request.json["id"]
