@@ -76,7 +76,7 @@ Articles
                   </button>
                   <ul class="dropdown-menu">
                     {% for row in tags %}
-                      <li><a class="dropdown-item" style="background-color: {{ row['color'] }}" href="#">{{ row['tag'] }}</a></li>
+                      <li><a class="dropdown-item" style="background-color: {{ row['color'] }}" href="{{ row['tag'] }}">{{ row['tag'] }}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
