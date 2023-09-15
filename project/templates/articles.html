@@ -75,8 +75,8 @@ Articles
                     Add
                   </button>
                   <ul class="dropdown-menu">
-                    {% for row in tags %}
-                      <li><a class="dropdown-item" style="background-color: {{ row['color'] }}" href="/save-tags-to-article?id-tag={{ row['tag'] }}&id={{ }}">{{ row['tag'] }}</a></li>
+                    {% for tag in tags %}
+                      <li><a class="dropdown-item" style="background-color: {{ row['color'] }}" href="/save-tags-to-article?id-tag={{ tag['id_tag'] }}&id={{ }}">{{ row['tag'] }}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
