@@ -334,12 +334,16 @@ def tags():
         tag = request.form.get("tag")
         color = request.form.get("color", "")
 
-        data.append()
-
         if user_id and tag:
 
             # Update tag table
             user_tag_table = f"tag_{user_id}"
             db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color,)
+
+            data.append(
+                {
+                    "id": id,
+                }
+            )
 
         return redirect("tags.html", tag, color)
