@@ -34,6 +34,15 @@ nav .navbar-brand
     --bs-btn-disabled-border-color: #0d6efd;
 }
 
+.badge {
+    --bs-badge-padding-x: 0.75em;
+    --bs-badge-padding-y: 0.5em;
+    --bs-badge-font-size: 1.25em;
+    --bs-badge-font-weight: 500;
+    --bs-badge-color: black;
+    --bs-badge-border-radius: var(--bs-border-radius);
+}
+
 tr:last-child {
     border-bottom: 2px solid black;
 }
