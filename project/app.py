@@ -330,8 +330,8 @@ def tags():
     else:
 
         # When form is submitted via POST, add the data to the tags table.
-        tag = request.args.get("tag")
-        color = request.args.get("color", "")
+        tag = request.form.get("tag")
+        color = request.form.get("color", "")
 
         if user_id and tag:
 
