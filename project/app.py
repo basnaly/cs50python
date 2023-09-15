@@ -326,3 +326,16 @@ def tags():
 
     tag = request.args.get("tag")
     color = request.args.get("color", "")
+
+    if user_id and tag:
+
+            # Update tag table
+            user_tag_table = f"tag_{user_id}"
+            db.execute(
+                "INSERT INTO ? (tag, color) VALUES(?, ?)",
+                user_tag_table,
+                tag,
+                color,
+            )
+
+        return render_template("tag.html", tag=tag, color = color )
