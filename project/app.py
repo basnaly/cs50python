@@ -325,8 +325,23 @@ def tags():
     user_id = session["user_id"]
 
     if request.method == "GET":
-        
-        list_tags = db.execute("SELECT * FROM ")
+
+        data= []
+
+        user_tag_table = f"tag_{user_id}"
+        list_tags = db.execute("SELECT * FROM ?", user_tag_table)
+
+        for element in list_tags:
+            id = element.get["id"]
+            tag = element.get["tag"]
+            color = element.get["color"]
+
+            data.append(
+                {
+                    "id": id,
+                    "tag"
+                }
+            )
 
         return render_template("tags.html")
 
