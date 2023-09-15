@@ -48,7 +48,6 @@
             <li class="list-group-item" style="background-color: {{ row['color'] }}">{{ row['tag'] }} </li>
           </ul>
 
-          {% if isLoggedIn %}
           <button type="button"
             onclick="saveArticle( '{{ keyword }}', '{{ row['title'] }}', '{{ row['source']['name'] }}', '{{ row['author'] }}', '{{ row['url'] }}', '{{ row['publishedAt'] }}' )"
             class="btn btn-primary mt-auto">Save to my articles</button>
