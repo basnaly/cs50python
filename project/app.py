@@ -399,4 +399,4 @@ def save_tags_to_article():
 
     user_id = session["user_id"]
 
-    
+    id_tag = request.args.get("id")
