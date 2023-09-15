@@ -399,10 +399,13 @@ def save_tags_to_article():
 
     user_id = session["user_id"]
 
+    id_article = request.args.get("id")
     id_tag = request.args.get("id-tag")
 
     user_saved_articles_table = f"articles_{user_id}"
-    update_list_articles = db.execute("UPDATE ? SET tags = ? WHERE symbol = ?",
-            portfolio_table,
-            current_user_shares + shares,
-            symbol,)
+    update_list_articles = db.execute("UPDATE ? SET tags = ? WHERE id = ?",
+            user_saved_articles_table,
+            id_tag,
+            id_article,)
+
+    return redirect("/articles")
