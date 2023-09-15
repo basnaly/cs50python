@@ -69,7 +69,18 @@ Articles
             {% if row['tags'] %}
               <td>{{ row['tags'] }}</td>
             {% else %}
-              <td><button type="button" class="btn btn-primary">Add</button></td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Add
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+            </td>
             {% endif%}
 
             <td>
