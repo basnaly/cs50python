@@ -39,6 +39,31 @@
 
     <div class="d-flex justify-content-center mb-3">List of your tags:</div>
 
-    
+    <div class="d-flex flex-wrap justify-content-around">
+
+        {% for row in data %}
+
+        <div class="card mx-3 my-4" style="width: 18rem;">
+          <div class="card-header">{{ row['title'] }}</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ row['source']['name'] }} {{ row['author'] }}</li>
+            <li class="list-group-item"><a href="{{ row['url'] }}" target="_blank">{{ row['url'] }}</a></li>
+            <li class="list-group-item"><img src="{{ row['urlToImage'] }}" alt="" width="220" height="220"></li>
+            <li class="list-group-item">{{ row['publishedAt'] }}</li>
+          </ul>
+
+          {% if isLoggedIn %}
+          <button type="button"
+            onclick="saveArticle( '{{ keyword }}', '{{ row['title'] }}', '{{ row['source']['name'] }}', '{{ row['author'] }}', '{{ row['url'] }}', '{{ row['publishedAt'] }}' )"
+            class="btn btn-primary mt-auto">Save to my articles</button>
+          {% else %}
+         <a href="/login" class="btn btn-primary button mt-auto">Save to my articles</a>
+          {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+      </div>
 
 {% endblock %}
