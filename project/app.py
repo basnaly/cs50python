@@ -281,7 +281,13 @@ def saved_articles():
         data = []
 
         user_saved_articles_table = f"articles_{user_id}"
-        list_saved_articles = db.execute("SELECT * FROM ? ORDER BY published DESC;", user_saved_articles_table)
+        user_list_tags_table = f"tags_{user_id}"
+        list_saved_articles = db.execute("SELECT * FROM ? INNER JOIN ? on ?.id = ?.tags ORDER BY published DESC;",
+                                         user_saved_articles_table,
+                                         user_list_tags_table,
+                                         user_list_tags_table,
+                                         user_saved_articles_table,
+                                         )
 
         for i, element in enumerate(list_saved_articles):
             id = element.get("id")
@@ -309,7 +315,6 @@ def saved_articles():
             )
 
         tags = []
-        user_list_tags_table = f"tags_{user_id}"
         list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
 
         for element in list_tags:
