@@ -338,4 +338,4 @@ def tags():
                 color,
             )
 
-        return render_template("tag.html", tag=tag, color = color )
+        return render_template("tags.html", tag=tag, color=color)
