@@ -66,6 +66,11 @@ Articles
             <td><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></td>
             <td>{{ row['published'] }}</td>
             <td>{{ row['tags'] }}</td>
+            <!-- if row['tags'] == "None":
+                    <button type="button">Add</button>
+                  else:
+                    row['tags']
+                  -->
             <td>
                 <button type="button" class="btn btn-primary" onclick="deleteArticleRow('{{ row['id'] }}')">Delete</button>
             </td>
