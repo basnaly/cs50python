@@ -393,7 +393,7 @@ def delete_tag():
     return redirect("/tags")
 
 
-@app.route("/save-tags-to-article", methods=[""GET])
+@app.route("/save-tags-to-article", methods=["GET"])
 @login_required
 def save_tags_to_article():
 
