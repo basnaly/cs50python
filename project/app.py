@@ -332,9 +332,9 @@ def tags():
         list_tags = db.execute("SELECT * FROM ?", user_tag_table)
 
         for element in list_tags:
-            id = element.get["id"]
-            tag = element.get["tag"]
-            color = element.get["color"]
+            id = element.get("id")
+            tag = element.get("tag")
+            color = element.get("color")
 
             data.append(
                 {
@@ -356,7 +356,7 @@ def tags():
         if user_id and tag:
 
             # Update tag table
-            user_tag_table = f"tag_{user_id}"
+            user_tag_table = f"tags_{user_id}"
             db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color,)
 
         return redirect("/tags")

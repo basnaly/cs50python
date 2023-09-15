@@ -10,7 +10,7 @@
             <input class="form-control mx-auto w-auto" id="tag" name="tag" placeholder="Tag" type="text">
         </div>
         <div class="mb-3">
-            <select class="form-select w-25 mx-auto" aria-label="Default select example">
+            <select class="form-select w-25 mx-auto" name="color" aria-label="Default select example">
                 <option selected value="#EEA47F">Peach</option>
                 <option value="#8AAAE5">Baby Blue</option>
                 <option value="#FBEAEB">Pink</option>
@@ -45,8 +45,7 @@
 
         <div class="card mx-3 my-4" style="width: 18rem;">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{ row['tag'] }} </li>
-            <li class="list-group-item">{{ row['color'] }}</li>
+            <li class="list-group-item" style="background-color: {{ row['color'] }}">{{ row['tag'] }} </li>
           </ul>
 
           {% if isLoggedIn %}
