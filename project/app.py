@@ -339,11 +339,12 @@ def tags():
             data.append(
                 {
                     "id": id,
-                    "tag"
+                    "tag": tag,
+                    "color": color,
                 }
             )
 
-        return render_template("tags.html")
+        return render_template("tags.html", data=data)
 
     else:
 
