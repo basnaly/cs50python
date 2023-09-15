@@ -391,3 +391,12 @@ def delete_tag():
     db.execute("DELETE FROM ? WHERE id = ?;", user_tag_table, id_tag)
 
     return redirect("/tags")
+
+
+@app.route("/save-tags-to-article", methods=[""GET])
+@login_required
+def save_tags_to_article():
+
+    user_id = session["user_id"]
+
+    
