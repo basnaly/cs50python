@@ -402,4 +402,4 @@ def save_tags_to_article():
     id_tag = request.args.get("id-tag")
 
     user_saved_articles_table = f"articles_{user_id}"
-    list_saved_articles = db.execute("SELECT * FROM ? ORDER BY published DESC;", user_saved_articles_table)
+    update_list_articles = db.execute("SELECT * FROM ? ORDER BY published DESC;", user_saved_articles_table)
