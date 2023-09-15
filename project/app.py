@@ -282,16 +282,17 @@ def saved_articles():
 
         user_saved_articles_table = f"articles_{user_id}"
         user_list_tags_table = f"tags_{user_id}"
-        list_saved_articles = db.execute("SELECT * FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id ORDER BY published DESC;",
+        list_saved_articles = db.execute("SELECT *, ?.id as id FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id ORDER BY published DESC;",
+                                         user_saved_articles_table,
                                          user_saved_articles_table,
                                          user_list_tags_table,
                                          user_list_tags_table,
                                          user_saved_articles_table,
                                          )
         print(list_saved_articles)
-        
+
         for i, element in enumerate(list_saved_articles):
-            id = element.get(f"{user_saved_articles_table}.id")
+            id = element.get("id")
             nn = i + 1
             keyword = element.get("keyword")
             source = element.get("source")
