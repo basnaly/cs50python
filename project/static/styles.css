@@ -45,3 +45,9 @@ tr:last-child {
     display: none;
     color: red;
 }
+
+.colors {
+    height: 50px;
+    width: 50px;
+    border: 1px solid gray
+}
