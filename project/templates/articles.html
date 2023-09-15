@@ -67,7 +67,7 @@ Articles
             <td>{{ row['published'] }}</td>
 
             {% if row['tag_id'] %}
-              <td>{{ row['tag_text'] }}<span class="badge text-bg-primary">{{ row['tag_text'] }}</span></td>
+              <td><span class="badge" style="background-color: {{ row['tag_color'] }}; color: black;">{{ row['tag_text'] }}</span></td>
             {% else %}
               <td>
                 <div class="dropdown">
