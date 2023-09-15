@@ -47,7 +47,8 @@ tr:last-child {
 }
 
 .colors {
-    height: 50px;
-    width: 50px;
-    border: 1px solid gray
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid gray;
+    display: inline-block;
 }
