@@ -339,4 +339,4 @@ def tags():
             user_tag_table = f"tag_{user_id}"
             db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color,)
 
-        return redirect("tags.html")
+        return redirect("tags.html", tag, color)
