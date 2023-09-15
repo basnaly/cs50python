@@ -317,3 +317,6 @@ def saved_articles():
         db.execute("DELETE FROM ? WHERE id = ?;", user_articles_table, id_article)
 
         return {"message": "The article was deleted"}
+
+
+@app.route("/tags", methods=["GET", "POST"])
