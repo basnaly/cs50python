@@ -360,3 +360,13 @@ def tags():
             db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color,)
 
         return redirect("/tags")
+
+
+@app.route("/delete-tag", methods=["DELETE"])
+@login_required
+def delete_tag(id):
+
+    user_id = session["user_id"]
+
+    user_tag_table = f"tags_{user_id}"
+        db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color,)
