@@ -66,8 +66,8 @@ Articles
             <td><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></td>
             <td>{{ row['published'] }}</td>
 
-            {% if row['tags'] %}
-              <td>{{ row['tags'] }}</td>
+            {% if row['tag_id'] %}
+              <td>{{ row['tag_id'] }}</td>
             {% else %}
               <td>
                 <div class="dropdown">
