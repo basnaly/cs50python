@@ -301,6 +301,8 @@ def saved_articles():
             url = element.get("url")
             tag_id = element.get("tag_id", "")
             published = element.get("published")
+            tag_text = element.get("tag")
+            tag_color = element.get("color")
 
             data.append(
                 {
@@ -313,6 +315,8 @@ def saved_articles():
                     "url": url,
                     "tag_id": tag_id,
                     "published": published,
+                    "tag_text": tag_text,
+                    "tag_color": tag_color,
                 }
             )
 
