@@ -404,11 +404,11 @@ def save_tags_to_article():
 
     user_id = session["user_id"]
 
-    id_article = request.args.get("id")
+    id_article = request.args.get("id-article")
     id_tag = request.args.get("id-tag")
 
     user_saved_articles_table = f"articles_{user_id}"
-    update_list_articles = db.execute("UPDATE ? SET tags = ? WHERE id = ?",
+    update_list_articles = db.execute("UPDATE ? SET tag_id = ? WHERE id = ?",
             user_saved_articles_table,
             id_tag,
             id_article,)
