@@ -282,7 +282,7 @@ def saved_articles():
 
         user_saved_articles_table = f"articles_{user_id}"
         user_list_tags_table = f"tags_{user_id}"
-        list_saved_articles = db.execute("SELECT * FROM ? LEFT OUTER JOIN ? on ?.id = ?.tags ORDER BY published DESC;",
+        list_saved_articles = db.execute("SELECT * FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id ORDER BY published DESC;",
                                          user_saved_articles_table,
                                          user_list_tags_table,
                                          user_list_tags_table,
@@ -297,7 +297,7 @@ def saved_articles():
             author = element.get("author")
             title = element.get("title")
             url = element.get("url")
-            tags = element.get("tag", "")
+            tag_id = element.get("tag_id", "")
             published = element.get("published")
 
             data.append(
@@ -309,7 +309,7 @@ def saved_articles():
                     "author": author,
                     "title": title,
                     "url": url,
-                    "tags": tags,
+                    "tag_id": tag_id,
                     "published": published,
                 }
             )
