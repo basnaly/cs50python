@@ -284,7 +284,7 @@ def saved_articles():
         list_saved_articles = db.execute("SELECT * FROM ? ORDER BY published DESC;", user_saved_articles_table)
 
         for i, element in enumerate(list_saved_articles):
-            id = element["id"]
+            id = element.get("id")
             nn = i + 1
             keyword = element.get("keyword")
             source = element.get("source")
@@ -308,8 +308,22 @@ def saved_articles():
                 }
             )
 
+        tags = []
         user_list_tags_table = f"tags_{user_id}"
         list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
+
+        for element in list_tags:
+            tag_id = element.get("id")
+            tag = element.get("tag")
+            color = element.get("color")
+
+            tags.append(
+                {
+                    "tag_id": tag_id,
+                    "tag": tag,
+                    "color": color,
+                }
+            )
 
         return render_template("articles.html", data=data)
 

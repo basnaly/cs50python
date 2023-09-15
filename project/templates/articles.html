@@ -75,11 +75,9 @@ Articles
                     Add
                   </button>
                   <ul class="dropdown-menu">
-
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    
+                    {% for row in tags %}
+                      <li><a class="dropdown-item" href="#">{{ row['tags'] }}</a></li>
+                    {% endfor %}
                   </ul>
                 </div>
             </td>
