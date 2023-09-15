@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tags
+{% endblock %}
+
+{% block main %}
+    <form action="/tags" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="tag" name="tag" placeholder="Tag" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="color" name="color" placeholder="Color" type="text">
+        </div>
+        <button class="btn border" type="submit">Buy</button>
+    </form>
+{% endblock %}
