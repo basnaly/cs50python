@@ -318,13 +318,13 @@ def saved_articles():
         list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
 
         for element in list_tags:
-            tag_id = element.get("id")
+            id = element.get("id")
             tag = element.get("tag")
             color = element.get("color")
 
             tags.append(
                 {
-                    "tag_id": tag_id,
+                    "id": id,
                     "tag": tag,
                     "color": color,
                 }
