@@ -65,7 +65,10 @@ Articles
             <td>{{ row['title'] }}</td>
             <td><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></td>
             <td>{{ row['published'] }}</td>
+
+            {% if %}
             <td>{{ row['tags'] }}</td>
+
             <!-- if row['tags'] == "None":
                     <button type="button">Add</button>
                   else:
