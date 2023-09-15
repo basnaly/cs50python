@@ -67,7 +67,7 @@ Articles
             <td>{{ row['published'] }}</td>
 
             {% if row['tag_id'] %}
-              <td>{{ row['tag_id'] }}</td>
+              <td>{{ row['tag_text'] }}</td>
             {% else %}
               <td>
                 <div class="dropdown">
@@ -76,7 +76,7 @@ Articles
                   </button>
                   <ul class="dropdown-menu">
                     {% for tag in tags %}
-                      <li><a class="dropdown-item" style="background-color: {{ row['tag_color'] }}" href="/save-tags-to-article?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">{{ tags['tag'] }}</a></li>
+                      <li><a class="dropdown-item" style="background-color: {{ tag['color'] }}" href="/save-tags-to-article?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">{{ tag['tag'] }}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
