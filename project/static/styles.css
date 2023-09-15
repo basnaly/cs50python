@@ -47,8 +47,6 @@ tr:last-child {
 }
 
 .colors {
-    height: 2rem;
-    width: 2rem;
     border: 1px solid gray;
     display: inline-block;
 }
