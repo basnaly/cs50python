@@ -364,9 +364,9 @@ def tags():
 
 @app.route("/delete-tag", methods=["DELETE"])
 @login_required
-def delete_tag(id):
+def delete_tag(id_tag):
 
     user_id = session["user_id"]
 
     user_tag_table = f"tags_{user_id}"
-        db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color,)
+        db.execute("DELETE FROM ? WHERE id = ?;", user_tag_table, id_tag)
