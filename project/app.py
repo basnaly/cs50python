@@ -288,9 +288,10 @@ def saved_articles():
                                          user_list_tags_table,
                                          user_saved_articles_table,
                                          )
-
+        print(list_saved_articles)
+        
         for i, element in enumerate(list_saved_articles):
-            id = element.get("id")
+            id = element.get(f"{user_saved_articles_table}.id")
             nn = i + 1
             keyword = element.get("keyword")
             source = element.get("source")
