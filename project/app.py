@@ -34,7 +34,6 @@ def index():
 
     if request.method == "GET":
         # return render_template("index.html", data = [])
-        print(request.args)
         article_type = request.args.get("article_type")
         keyword = request.args.get("keyword", "")
         language = request.args.get("language")
@@ -320,3 +319,10 @@ def saved_articles():
 
 
 @app.route("/tags", methods=["GET", "POST"])
+@login_required
+def tags():
+
+    user_id = session["user_id"]
+
+    tag = request.args.get("tag")
+    color = request.args.get("color", "")
