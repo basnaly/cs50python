@@ -297,7 +297,7 @@ def saved_articles():
             author = element.get("author")
             title = element.get("title")
             url = element.get("url")
-            tags = element.get("tags", "")
+            tags = element.get("tag", "")
             published = element.get("published")
 
             data.append(
