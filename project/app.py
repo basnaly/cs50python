@@ -308,6 +308,9 @@ def saved_articles():
                 }
             )
 
+        user_list_tags_table = f"tags_{user_id}"
+        list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
+
         return render_template("articles.html", data=data)
 
     else:
