@@ -362,11 +362,13 @@ def tags():
         return redirect("/tags")
 
 
-@app.route("/delete-tag", methods=["DELETE"])
+@app.route("/delete-tag", methods=["GET"])
 @login_required
 def delete_tag(id_tag):
 
     user_id = session["user_id"]
 
     user_tag_table = f"tags_{user_id}"
-        db.execute("DELETE FROM ? WHERE id = ?;", user_tag_table, id_tag)
+    db.execute("DELETE FROM ? WHERE id = ?;", user_tag_table, id_tag)
+
+    return redirect("/tags")
