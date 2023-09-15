@@ -325,6 +325,9 @@ def tags():
     user_id = session["user_id"]
 
     if request.method == "GET":
+        
+        list_tags = db.execute("SELECT * FROM ")
+
         return render_template("tags.html")
 
     else:
@@ -340,10 +343,4 @@ def tags():
             user_tag_table = f"tag_{user_id}"
             db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color,)
 
-            data.append(
-                {
-                    "id": id,
-                }
-            )
-
-        return redirect("tags.html", tag, color)
+        return redirect("/tags")
