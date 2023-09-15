@@ -325,6 +325,9 @@ def tags():
     user_id = session["user_id"]
 
     if request.method == "GET":
+        return render_template("buy.html")
+
+    else:
 
         tag = request.args.get("tag")
         color = request.args.get("color", "")
