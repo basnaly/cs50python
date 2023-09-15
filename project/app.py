@@ -325,17 +325,18 @@ def tags():
     user_id = session["user_id"]
 
     if request.method == "GET":
-        return render_template("buy.html")
+        return render_template("tags.html")
 
     else:
 
+        # When form is submitted via POST, add the data to the tags table.
         tag = request.args.get("tag")
         color = request.args.get("color", "")
 
-        if user_id and tag:
+        if user_id ad:
 
             # Update tag table
             user_tag_table = f"tag_{user_id}"
             db.execute("INSERT INTO ? (tag, color) VALUES(?, ?)", user_tag_table, tag, color)
 
-            return render_template("tags.html", tag=tag, color=color)
+            return redirect("/")
