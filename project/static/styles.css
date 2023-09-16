@@ -7,7 +7,7 @@
 }
 
 .picture {
-    background: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.3)), url("la_paper.jpg");
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("la_paper.jpg");
     background-repeat: round;
 
     /* background-image: url("la_paper.jpg");
