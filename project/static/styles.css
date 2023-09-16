@@ -7,10 +7,9 @@
 }
 
 .picture {
-    background: rgba(255, 255, 255, 0.5) url("la_paper.jpg") no-repeat 0 50%
-    /* background-image: url("la_paper.jpg");
+    background-image: url("la_paper.jpg");
     background-repeat: round;
-    opacity: 0.5; */
+    opacity: 0.5;
 }
 
 main {
