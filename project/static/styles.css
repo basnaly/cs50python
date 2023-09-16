@@ -6,10 +6,10 @@
     --bs-border-color-translucent: black;
 }
 
-.body {
+.picture {
     background-image: url("la_paper.jpg");
     background-repeat: round;
-
+    z-index: -1;
 }
 
 main {
