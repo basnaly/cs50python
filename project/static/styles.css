@@ -4,7 +4,7 @@
 }
 
 .body {
-    background-image: url("springtime.jpg");
+    background-image: url("paper.jpg");
     z-index: 3;
     background-repeat: round;
 }
@@ -14,11 +14,9 @@ main {
 }
 
 nav.navbar {
-    background-color: #00008B;
+    background-color: #d5f0e6;
     color: red;
 }
-
-/* background-color: #d5f0e6; */
 
 nav .navbar-brand
 {
