@@ -57,6 +57,7 @@ nav .navbar-brand
     --bs-badge-font-weight: 500;
     --bs-badge-color: black;
     --bs-badge-border-radius: var(--bs-border-radius);
+    border: 1px solid black;
 }
 
 tr:last-child {
