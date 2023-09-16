@@ -14,9 +14,11 @@ main {
 }
 
 nav.navbar {
-    background-color: #d5f0e6;
+    background-color: #00008B;
     color: red;
 }
+
+/* background-color: #d5f0e6; */
 
 nav .navbar-brand
 {
