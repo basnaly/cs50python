@@ -1,6 +1,7 @@
 
 :root {
     --bs-font-sans-serif: 'Montserrat', sans-serif;
+    --bs-border-color: black;
 }
 
 .body {
