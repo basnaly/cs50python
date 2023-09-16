@@ -72,6 +72,7 @@ tr:last-child {
     padding: 1rem;
     background-color: #89ABE3;
     text-align: center;
+    border: 1px solid black;
 }
 
 .keyword {
