@@ -8,8 +8,8 @@
 
 .body {
     background-image: url("la_paper.jpg");
-    
     background-repeat: round;
+    opacity: 0.5;
 }
 
 main {
