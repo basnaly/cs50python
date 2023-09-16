@@ -3,7 +3,7 @@
     --bs-font-sans-serif: 'Montserrat', sans-serif;
     --bs-border-color: black;
     --bs-body-bg: transparent;
-
+    --bs-border-color-translucent: black;
 }
 
 .body {
