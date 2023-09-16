@@ -5,7 +5,7 @@
 
 .body {
     background-image: url("newspaper.png");
-    opacity: 50%;
+    z-index: 3;
     background-repeat: round;
 }
 
