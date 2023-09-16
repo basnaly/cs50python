@@ -28,7 +28,7 @@ nav .navbar-brand
 
 .btn-primary {
     --bs-btn-color: black;
-    --bs-btn-bg: #d5f0e6;
+    --bs-btn-bg: #89ABE3;
     --bs-btn-border-color: black;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #0b5ed7;
@@ -64,7 +64,7 @@ tr:last-child {
     position: fixed;
     bottom: 0;
     padding: 1rem;
-    background-color: #d5f0e6;
+    background-color: #89ABE3;
     text-align: center;
 }
 
