@@ -13,10 +13,6 @@ main {
     margin-top: 4rem;
 }
 
-table {
-    --bs-table-bg: transparent;
-}
-
 nav.navbar {
     background-color: #d5f0e6;
     color: red;
