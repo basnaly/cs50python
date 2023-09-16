@@ -8,7 +8,6 @@
 
 .body {
     background-image: url("la_paper.jpg");
-    z-index: 3;
     background-repeat: round;
 }
 
