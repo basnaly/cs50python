@@ -24,7 +24,7 @@ main {
 
 nav.navbar {
     background-color: #89ABE3;
-    --bs-emphasis-color-rgb: 255,255,255;
+    --bs-navbar-color: white;
 }
 
 /* background-color: #d5f0e6; */
