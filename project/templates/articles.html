@@ -66,7 +66,7 @@ Articles
             <td><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></td>
             <td>{{ row['published'] }}</td>
 
-            {% if row['tag_id'] %}
+            {% if row['tag_text'] %}
               <td><span class="badge shadow border border-black" style="background-color: {{ row['tag_color'] }}; color: black;">{{ row['tag_text'] }}</span></td>
             {% else %}
               <td>
