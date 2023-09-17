@@ -67,14 +67,14 @@ Articles
             <td>{{ row['published'] }}</td>
 
             {% if row['tag_text'] %}
-              <td>
+              <td class="td-articles">
                 <span class="badge shadow border border-black" style="background-color: {{ row['tag_color'] }}; color: black;">
                   {{ row['tag_text'] }}
                 </span>
                 <div class="delete-tag">❌</div>
               </td>
             {% else %}
-              <td class="td-articles">
+              <td>
                 <div class="dropdown">
                   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Add
