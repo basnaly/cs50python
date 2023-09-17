@@ -102,7 +102,9 @@ tr:last-child {
     color: red;
 }
 
-.colors {
+.tags {
     border: 1px solid gray;
     display: inline-block;
+    width: 20rem;
 }
+
