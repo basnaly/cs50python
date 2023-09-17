@@ -319,6 +319,8 @@ def saved_articles():
                 }
             )
 
+            if tag_text = "":
+
         tags = []
         list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
 
