@@ -58,7 +58,7 @@ nav .navbar-brand
 .btn-danger {
     --bs-btn-color: black;
     --bs-btn-bg: #EA738D;
-    --bs-btn-border-color: #dc3545;
+    --bs-btn-border-color: black;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #bb2d3b;
     --bs-btn-hover-border-color: #b02a37;
