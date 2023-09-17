@@ -34,7 +34,7 @@ def index():
 
     if request.method == "GET":
         # return render_template("index.html", data = [])
-        article_type = request.args.get("article_type") 
+        article_type = request.args.get("article_type")
         keyword = request.args.get("keyword", "")
         language = request.args.get("language")
 
@@ -418,5 +418,7 @@ def save_tags_to_article():
             user_saved_articles_table,
             id_tag,
             id_article,)
+
+    if id_tag
 
     return redirect("/articles")
