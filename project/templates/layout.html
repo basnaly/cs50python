@@ -38,7 +38,7 @@
                     class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse fs-4" id="navbar">
+                <div class="collapse navbar-collapse fs-5" id="navbar">
                     {% if session["user_id"] %}
                     <ul class="navbar-nav me-auto mt-2">
                         <li class="nav-item"><a class="nav-link" href="/history">Search history</a></li>
@@ -72,7 +72,7 @@
             {% block main %}{% endblock %}
         </main>
 
-        <footer class="footer vw-100 small text-muted d-flex justify-content-between">
+        <footer class="footer vw-100 small text-muted d-flex justify-content-between fs-5">
             <span>This is CS50</span>
             <span>Final Project</span>
             <span><a href="https://www.harvard.edu/">Harvard University 2023</a></span>
