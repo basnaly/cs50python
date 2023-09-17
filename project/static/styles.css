@@ -32,6 +32,7 @@ nav.navbar {
 
 nav .navbar-brand
 {
+    --bs-navbar-brand-color: white;
     font-size: xx-large;
 }
 
