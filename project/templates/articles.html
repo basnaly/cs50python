@@ -7,34 +7,43 @@ Articles
 {% block main %}
 
 <script type="text/javascript">
-    function deleteArticleRow(id) {
-      let request = new XMLHttpRequest();
-      request.onreadystatechange = function(response) {
-          if (request.readyState == 4 && request.status == 200){
-            const article_id = JSON.parse(request.response);
-            const show_message = document.getElementById('message');
-            show_message.classList.add("show");
-            setTimeout(() => {
-              show_message.classList.remove("show");
-              location.reload();
-            }, 5000)
+  function deleteArticleRow(id) {
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function(response) {
+      if (request.readyState == 4 && request.status == 200) {
+        const article_id = JSON.parse(request.response);
+        const show_message = document.getElementById('message');
+        show_message.classList.add("show");
+        setTimeout(() => {
+          show_message.classList.remove("show");
+          location.reload();
+        }, 5000)
       };
     }
-      const search_article_id = {
-          id: id
-      }
-      request.open("POST", "/articles", true);
-      request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      request.send(JSON.stringify(search_article_id));
+    const search_article_id = {
+      id: id
     }
+    request.open("POST", "/articles", true);
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    request.send(JSON.stringify(search_article_id));
+  }
 
-    function deleteTag(id) {
-      let request = new XMLHttpRequest();
-      request.onreadystatechange = function(response) {
-          if (request.readyState == 4 && request.status == 200){
-            const tag_id = JSON.parse(request.response);
+
+  function deleteTag(id) {
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function(response) {
+      if (request.readyState == 4 && request.status == 200) {
+        const tag_id = JSON.parse(request.response);
       };
     }
+    const delete_tag_id = {
+      id: id
+    }
+    request.open("POST", "/articles", true);
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    request.send(JSON.stringify(delete_tag_id));
+  }
+
 </script>
 
 <div role="alert" aria-live="assertive" aria-atomic="true" id="message" class="toast position-fixed z-3"
@@ -51,61 +60,62 @@ Articles
 <h2 class="mb-5">Your saved articles</h2>
 
 <table class="table">
-    <thead>
-        <tr>
-            <th>NN</th>
-            <th>Keyword</th>
-            <th>Source</th>
-            <th>Author</th>
-            <th>Title</th>
-            <th>URL</th>
-            <th>Published</th>
-            <th>Tags</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for row in data %}
-        <tr class="">
-            <td>{{ row['nn'] }}</td>
-            <td>{{ row['keyword'] }}</td>
-            <td>{{ row['source'] }}</td>
-            <td>{{ row['author'] }}</td>
-            <td>{{ row['title'] }}</td>
-            <td><a href="{{ row['url'] }}"  target="_blank">{{ row['url'] }}</a></td>
-            <td>{{ row['published'] }}</td>
+  <thead>
+    <tr>
+      <th>NN</th>
+      <th>Keyword</th>
+      <th>Source</th>
+      <th>Author</th>
+      <th>Title</th>
+      <th>URL</th>
+      <th>Published</th>
+      <th>Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in data %}
+    <tr class="">
+      <td>{{ row['nn'] }}</td>
+      <td>{{ row['keyword'] }}</td>
+      <td>{{ row['source'] }}</td>
+      <td>{{ row['author'] }}</td>
+      <td>{{ row['title'] }}</td>
+      <td><a href="{{ row['url'] }}" target="_blank">{{ row['url'] }}</a></td>
+      <td>{{ row['published'] }}</td>
 
-            {% if row['tag_text'] %}
-              <td class="td-articles">
-                <span class="badge shadow border border-black" style="background-color: {{ row['tag_color'] }}; color: black;">
-                  {{ row['tag_text'] }}
-                </span>
-                <div class="p-1" onclick="deleteTag('{{ row['tag_id']}}')">❎</div>
-              </td>
-            {% else %}
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Add
-                  </button>
-                  <ul class="dropdown-menu">
-                    {% for tag in tags %}
-                      <li>
-                        <a class="dropdown-item" style="background-color: {{ tag['color'] }}" href="/save-tags-to-article?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
-                          {{ tag['tag'] }}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-            </td>
-            {% endif%}
+      {% if row['tag_text'] %}
+      <td class="td-articles">
+        <span class="badge shadow border border-black" style="background-color: {{ row['tag_color'] }}; color: black;">
+          {{ row['tag_text'] }}
+        </span>
+        <div class="p-1" onclick="deleteTag('{{ row['tag_id']}}')">❎</div>
+      </td>
+      {% else %}
+      <td>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Add
+          </button>
+          <ul class="dropdown-menu">
+            {% for tag in tags %}
+            <li>
+              <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
+                href="/save-tags-to-article?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
+                {{ tag['tag'] }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </td>
+      {% endif%}
 
-            <td>
-                <button type="button" class="btn btn-danger" onclick="deleteArticleRow('{{ row['id'] }}')">Delete</button>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
+      <td>
+        <button type="button" class="btn btn-danger" onclick="deleteArticleRow('{{ row['id'] }}')">Delete</button>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 
 {% endblock %}
