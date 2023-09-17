@@ -419,6 +419,6 @@ def save_tags_to_article():
             id_tag,
             id_article,)
 
-    if id_tag
+    
 
     return redirect("/articles")
