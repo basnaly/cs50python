@@ -60,9 +60,9 @@ History
             <td>{{ row['keyword'] }}</td>
             <td>{{ row['language'] }}</td>
             <td>{{ row['date'] }}</td>
-            <td><a href="/?article_type={{ row['query_article_type'] }}&keyword={{ row['keyword'] }}&language={{ row['language'] }}" class="btn btn-success-subtle button mt-auto">Search again</a></td>
+            <td><a href="/?article_type={{ row['query_article_type'] }}&keyword={{ row['keyword'] }}&language={{ row['language'] }}" class="btn btn-success button mt-auto">Search again</a></td>
             <td>
-                <button type="button" class="btn btn-danger-subtle" onclick="deleteSearchRow('{{ row['id'] }}')">Delete</button>
+                <button type="button" class="btn btn-danger" onclick="deleteSearchRow('{{ row['id'] }}')">Delete</button>
             </td>
 
 
