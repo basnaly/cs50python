@@ -51,7 +51,7 @@ Tags
 
     {% for row in data %}
 
-    <div class="card border-dark mx-3 my-4 align-items-center" style="width: 18rem;">
+    <div class="card border mx-3 my-4 align-items-center" style="width: 18rem;">
         <div class="align-self-stretch p-3" style="background-color: {{ row['color'] }}">{{ row['tag'] }} </div>
         <a href="/delete-tag?id={{ row['id'] }}" class="btn btn-danger button my-3">Delete</a>
     </div>
