@@ -98,6 +98,7 @@ tr:last-child {
     background-color: #89ABE3;
     text-align: center;
     border: 1px solid black;
+    color: white;
 }
 
 .keyword {
@@ -117,5 +118,4 @@ tr:last-child {
 
 .harvard {
     text-decoration: none;
-    color: white;
 }
