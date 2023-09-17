@@ -133,7 +133,7 @@ tr:last-child {
     margin-top: 0.5rem;
     padding: 0.2rem;
     border: 0.1rem solid black;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     width: 2.5rem;
 
 }
