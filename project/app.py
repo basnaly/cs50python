@@ -289,7 +289,6 @@ def saved_articles():
                                          user_list_tags_table,
                                          user_saved_articles_table,
                                          )
-        print(list_saved_articles)
 
         for i, element in enumerate(list_saved_articles):
             id = element.get("id")
@@ -419,6 +418,6 @@ def save_tags_to_article():
             id_tag,
             id_article,)
 
-    
+
 
     return redirect("/articles")
