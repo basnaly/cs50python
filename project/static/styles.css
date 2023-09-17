@@ -128,3 +128,8 @@ tr:last-child {
     border-bottom: 1px solid black;
     border-radius: 0.375rem;
 }
+
+.delete-tag {
+    padding: 1rem;
+    border: 0.375rem, solid, black;
+}
