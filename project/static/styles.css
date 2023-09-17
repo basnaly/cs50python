@@ -135,11 +135,11 @@ tr:last-child {
     border-radius: 0.375rem;
 }
 
-.delete-tag {
-    /* margin-top: 0.5rem; */
+/* .delete-tag {
+    margin-top: 0.5rem;
     padding: 0.1rem;
-    /* border: 0.1rem solid black;
-    border-radius: 0.375rem; */
-    /* width: 2.5rem; */
+    border: 0.1rem solid black;
+    border-radius: 0.375rem;
+    width: 2.5rem;
 
-}
+} */
