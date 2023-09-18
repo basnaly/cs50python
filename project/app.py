@@ -422,9 +422,9 @@ def save_tags_to_article():
 
     return redirect("/articles")
 
-@app.route("/delete-tags-from-article", methods=["GET"])
+@app.route("/delete-tag-from-article", methods=["GET"])
 @login_required
-def delete_tags_from_article():
+def delete_tag_from_article():
 
     user_id = session["user_id"]
 
