@@ -29,7 +29,7 @@ Articles
   }
 
 
-  function deleteExistTag(id) {
+  function deleteExistingTag(id) {
     let request = new XMLHttpRequest();
     request.onreadystatechange = function(response) {
       if (request.readyState == 4 && request.status == 200) {
@@ -88,7 +88,7 @@ Articles
         <span class="badge shadow border border-black" style="background-color: {{ row['tag_color'] }}; color: black;">
           {{ row['tag_text'] }}
         </span>
-        <div class="p-1" onclick="deleteTag('{{ row['tag_id']}}')">❎</div>
+        <div class="p-1" onclick="deleteExistingTag('{{ row['tag_id']}}')">❎</div>
       </td>
       {% else %}
       <td>
