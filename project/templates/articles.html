@@ -29,7 +29,7 @@ Articles
   }
 
 
-  function deleteTag(id) {
+  function deleteExistTag(id) {
     let request = new XMLHttpRequest();
     request.onreadystatechange = function(response) {
       if (request.readyState == 4 && request.status == 200) {
