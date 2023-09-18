@@ -88,9 +88,9 @@ Articles
         <span class="badge shadow border border-black" style="background-color: {{ row['tag_color'] }}; color: black;">
           {{ row['tag_text'] }}
         </span>
-        <a class="p-1 " style="text-decoration: none;"
+        <a class="delete-tag" style="text-decoration: none;"
           href="/delete-tag-from-article?id-tag=null&id-article={{ row['id'] }}">
-          ❌X
+          x
         </a>
       </td>
       {% else %}
