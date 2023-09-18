@@ -253,7 +253,6 @@ def save_article():
     author = add_article["author"]
     url = add_article["url"]
     published = add_article["publishedAt"]
-    print(keyword, title)
 
     user_articles_table = f"articles_{user_id}"
     db.execute(
@@ -318,8 +317,6 @@ def saved_articles():
                     "tag_color": tag_color,
                 }
             )
-
-            print(data)
 
         tags = []
         list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
