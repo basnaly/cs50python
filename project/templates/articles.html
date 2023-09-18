@@ -88,7 +88,10 @@ Articles
         <span class="badge shadow border border-black" style="background-color: {{ row['tag_color'] }}; color: black;">
           {{ row['tag_text'] }}
         </span>
-        <div class="p-1" >❎</div>
+        <a class="p-1"
+          href="/delete-tags-from-article?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
+          ❎
+        </a>
       </td>
       {% else %}
       <td>
