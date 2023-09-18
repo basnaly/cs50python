@@ -134,5 +134,5 @@ tr:last-child {
 .delete-tag {
     color: #EA738D;
     font-weight: bold;
-    font-size: 2rem;
+    /* font-size: 2rem; */
 }
