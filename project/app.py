@@ -432,8 +432,7 @@ def delete_tag_from_article():
     id_tag = request.args.get("id-tag")
 
     user_articles_table = f"articles_{user_id}"
-    updated_list_articles = db.execute("DELETE tag_id = ? FROM ? WHERE id_article = ?",
-            id_tag,
+    updated_list_articles = db.execute("UPDATE ? SET tag_id = NULL WHERE id = ?",
             user_articles_table,
             id_article,)
 
