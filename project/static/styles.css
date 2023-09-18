@@ -136,5 +136,5 @@ tr:last-child {
     background-color: #EA738D;
     /* font-weight: bold; */
     border: 1px solid black;
-    /* font-size: 2rem; */
+    border-radius: 0.375rem;
 }
