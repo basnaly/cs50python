@@ -132,7 +132,9 @@ tr:last-child {
 }
 
 .delete-tag {
-    color: #EA738D;
+    color: black;
+    background-color: #EA738D;
     font-weight: bold;
+    border: 1px solid black;
     /* font-size: 2rem; */
 }
