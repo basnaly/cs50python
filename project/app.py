@@ -106,7 +106,7 @@ def register():
             return apology("confirmation does't match to password", 400)
 
         if validate_password(password) == False:
-            return apology("the password must have ", 400)
+            return apology("the password must have lower and upper case leters, digits and symbols", 400)
 
         # Insert the new user into users db
         hash_user_password = generate_password_hash(password)
