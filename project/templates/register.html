@@ -1,33 +1,30 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Register
+Register
 {% endblock %}
 
 {% block main %}
-    <form action="/register" method="post">
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirmation" type="password">
-        </div>
+<form action="/register" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username"
+            placeholder="Username" type="text">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirmation"
+            type="password">
+    </div>
 
-        <div class=" fs-5 mb-3 text-danger">
-            <div>Your password must have at least 8 characters:</div>
-                <div class="">
-                    <ul>
-                        <li>lower case letters (a-z)</li>
-                        <li>upper case letters (A-Z)</li>
-                        <li>digits (0-9)</li>
-                        <li>symbols (!@#$%^&*-?).</li>
-                    </ul>
-                </div>
-
-        </div>
-        <button class="btn border" type="submit">Register</button>
-    </form>
+    <div class=" fs-5 mb-3 text-danger">
+        <div>Your password must have at least 8 characters:</div>
+        <div>lower case letters (a-z)</div>
+        <div>upper case letters (A-Z)</div>
+        <div>digits (0-9)</div>
+        <div>symbols (!@#$%^&*-?).</div>
+    </div>
+    <button class="btn border" type="submit">Register</button>
+</form>
 {% endblock %}
