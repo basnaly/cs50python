@@ -1,9 +1,13 @@
+import os
+
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from datetime import datetime
+
+import re
 
 from helpers import login_required, apology, lookup
 
@@ -36,10 +40,11 @@ def index():
         article_type = request.args.get("article_type")
         keyword = request.args.get("keyword", "")
         language = request.args.get("language")
+        user_id = session.get("user_id")
+
+        # user_id = session["user_id"]
 
         data = lookup(article_type, keyword, language)
-
-        user_id = session["user_id"]
 
         if user_id and keyword:
 
@@ -62,8 +67,17 @@ def register():
     """Register user"""
 
     def validate_password(password):
-        if len(password) < 3:
+        if len(password) < 8:
             return False
+        if not re.search("[a-z]", password):
+            return False
+        if not re.search("[A-Z]", password):
+            return False
+        if not re.search("[0-9]", password):
+            return False
+        if not re.search("[!@#$%^&*-?]", password):
+            return False
+        return True
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
@@ -85,14 +99,14 @@ def register():
         if not password:
             return apology("must provide password", 400)
 
-        if len(password) < 3:
-            return apology("password must have at least 3 symbols", 400)
+        if len(password) < 8:
+            return apology("password must have at least 8 symbols", 400)
 
         if password != confirmation:
             return apology("confirmation does't match to password", 400)
 
         if validate_password(password) == False:
-            return apology("the password doesn't match", 400)
+            return apology("the password must have ", 400)
 
         # Insert the new user into users db
         hash_user_password = generate_password_hash(password)
