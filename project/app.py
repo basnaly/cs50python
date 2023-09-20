@@ -57,7 +57,7 @@ def index():
                 datetime.now(),
             )
 
-        return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id, username=username,)
+        return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id,)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -145,7 +145,7 @@ def register():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("register.html")
+        return render_template("register.html", username=username)
 
 
 @app.route("/login", methods=["GET", "POST"])
