@@ -180,7 +180,7 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-        session["username"] = rows[0]["username"]
+        session["username"] = username
 
         # Redirect user to home page
         return redirect("/")
