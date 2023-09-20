@@ -117,6 +117,7 @@ def register():
 
         # Remember which user has logged in
         session["user_id"] = user_id
+        session["username"] = 
 
         # Create articles table
         user_articles_table = f"articles_{user_id}"
