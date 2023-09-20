@@ -42,8 +42,6 @@ def index():
         language = request.args.get("language")
         user_id = session.get("user_id")
 
-        # user_id = session["user_id"]
-
         data = lookup(article_type, keyword, language)
 
         if user_id and keyword:
@@ -173,11 +171,10 @@ def login():
         rows = db.execute(
             "SELECT * FROM users WHERE username = ?", username
         )
+        # [{'id': 4, 'username': 'max', 'hash': '...'}]
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(
-            rows[0]["hash"], password
-        ):
+        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], password):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
