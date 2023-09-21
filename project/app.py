@@ -58,7 +58,8 @@ def index():
             )
 
             # Get username
-            
+            db_username = 
+
 
         return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id,)
 
@@ -120,7 +121,6 @@ def register():
 
         # Remember which user has logged in
         session["user_id"] = user_id
-        session["username"] = username
 
         # Create articles table
         user_articles_table = f"articles_{user_id}"
