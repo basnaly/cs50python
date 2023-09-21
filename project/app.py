@@ -59,6 +59,7 @@ def index():
 
             # Get username
             db_username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+            print(db_username)
 
 
         return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id,)
