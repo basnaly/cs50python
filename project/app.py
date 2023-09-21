@@ -57,6 +57,9 @@ def index():
                 datetime.now(),
             )
 
+            # Get username
+            
+
         return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id,)
 
 
