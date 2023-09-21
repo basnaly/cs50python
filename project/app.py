@@ -58,10 +58,10 @@ def index():
             )
 
             # Get username
-            db_username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
-            print(db_username)
+            username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+            print(username)
 
-        return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id, db_username=db_username)
+        return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn = user_id, username=username)
 
 
 @app.route("/register", methods=["GET", "POST"])
