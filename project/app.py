@@ -44,7 +44,6 @@ def index():
 
         # Get username from db
         username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
-        print(username)
 
         data = lookup(article_type, keyword, language)
 
@@ -183,7 +182,6 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-        session["username"] = username
 
         # Redirect user to home page
         return redirect("/")
