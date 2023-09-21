@@ -42,6 +42,9 @@ def index():
         language = request.args.get("language")
         user_id = session.get("user_id")
 
+        username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+        print(username)
+
         data = lookup(article_type, keyword, language)
 
         if user_id and keyword:
@@ -58,8 +61,7 @@ def index():
             )
 
             # Get username
-            username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
-            print(username)
+
 
         return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn=user_id, username=username)
 
