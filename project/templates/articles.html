@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Articles
+  Articles
 {% endblock %}
 
 {% block main %}
@@ -27,32 +27,15 @@ Articles
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.send(JSON.stringify(search_article_id));
   }
-
-
-  // function deleteExistingTag(id) {
-  //   let request = new XMLHttpRequest();
-  //   request.onreadystatechange = function(response) {
-  //     if (request.readyState == 4 && request.status == 200) {
-  //       const tag_id = JSON.parse(request.response);
-  //     };
-  //   }
-  //   const delete_tag_id = {
-  //     id: id
-  //   }
-  //   request.open("POST", "/articles", true);
-  //   request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-  //   request.send(JSON.stringify(delete_tag_id));
-  // }
-
 </script>
 
 <div role="alert" aria-live="assertive" aria-atomic="true" id="message" class="toast position-fixed z-3"
   data-bs-autohide="false">
-  <div class="toast-header">
+  <div class="toast-header fs-4 justify-content-between message">
     <div>Message:</div>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
-  <div class="toast-body">
+  <div class="toast-body fs-5 message">
     This article was successfully deleted!
   </div>
 </div>
