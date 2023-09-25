@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-  Articles
+Articles
 {% endblock %}
 
 {% block main %}
@@ -76,7 +76,7 @@
           X
         </a>
       </td>
-      
+
       {% else %}
       <td>
         <div class="dropdown">
@@ -84,6 +84,7 @@
             Add
           </button>
           <ul class="dropdown-menu">
+
             {% for tag in tags %}
             <li>
               <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
@@ -92,6 +93,7 @@
               </a>
             </li>
             {% endfor %}
+
           </ul>
         </div>
       </td>
@@ -102,6 +104,7 @@
       </td>
     </tr>
     {% endfor %}
+    
   </tbody>
 </table>
 
