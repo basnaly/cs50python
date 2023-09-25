@@ -66,8 +66,6 @@ def lookup(article_type, keyword, language = 'en'):
 
         response = requests.get(url)
 
-        # print(response.json())
-
         articles = response.json()['articles']
         for element in articles:
             element["publishedAt"] = datetime.datetime.strptime(element["publishedAt"], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d %H:%M")
