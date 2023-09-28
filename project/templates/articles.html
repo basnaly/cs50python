@@ -89,7 +89,7 @@
             <li>
               <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
                 href="/save-tags-to-article?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
-                {{ tag['tag'] }}
+                {{ tag['tag'].title() }}
               </a>
             </li>
             {% endfor %}
