@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Index
+  Index
 {% endblock %}
 
 {% block main %}
@@ -50,13 +50,15 @@ Index
 <form action="/" method="GET" id="form">
 
   <div class="form-check form-check-inline mb-3">
-    <input class="form-check-input" type="radio" name="article_type" id="everything" value="everything" {% if article_type == 'everything'%}checked{% endif %}>
+    <input class="form-check-input" type="radio" name="article_type" id="everything" value="everything" {% if
+      article_type=='everything' %}checked{% endif %}>
     <!-- name = parameter must be request.args.get("article_type") -->
     <label class="form-check-label" for="everything">News articles</label>
   </div>
 
   <div class="form-check form-check-inline mb-3">
-    <input class="form-check-input" type="radio" name="article_type" id="top-headlines" value="top-headlines" {% if article_type == 'top-headlines'%}checked{% endif %}>
+    <input class="form-check-input" type="radio" name="article_type" id="top-headlines" value="top-headlines" {% if
+      article_type=='top-headlines' %}checked{% endif %}>
     <label class="form-check-label" for="top-headlines">Breaking news</label>
   </div>
 
@@ -66,9 +68,9 @@ Index
   </div>
 
   <select class="form-select w-25 mx-auto mb-3" name="language" aria-label="Default select example">
-    <option value="en" {% if language == 'en'%}selected{% endif %}>English</option>
-    <option value="de" {% if language == 'de'%}selected{% endif %}>German</option>
-    <option value="fr" {% if language == 'fr'%}selected{% endif %}>French</option>
+    <option value="en" {% if language=='en' %}selected{% endif %}>English</option>
+    <option value="de" {% if language=='de' %}selected{% endif %}>German</option>
+    <option value="fr" {% if language=='fr' %}selected{% endif %}>French</option>
   </select>
 
   <div class="mb-3">
@@ -84,32 +86,40 @@ Index
 
 <div class="d-flex flex-wrap justify-content-around">
 
-  {% for row in data %}
+  {% if not data and keyword %}
 
-  <div class="card mx-3 my-4" style="width: 18rem;">
-    <div class="card-header">{{ row['title'] }}</div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{ row['source']['name'] }} {{ row['author'] }}</li>
-      <li class="list-group-item"><a href="{{ row['url'] }}" target="_blank">{{ row['url'] }}</a></li>
-      <li class="list-group-item"><img src="{{ row['urlToImage'] }}" alt="" width="220" height="220"></li>
-      <li class="list-group-item">{{ row['publishedAt'] }}</li>
-    </ul>
+  <div class="fs-5">Unfortunately, we didn't find articles according to your request 🥹 !</div>
 
-    {% if isLoggedIn %}
+  {% else %}
 
-    <button type="button"
-      onclick="saveArticle( '{{ keyword }}', '{{ row['title'] }}', '{{ row['source']['name'] }}', '{{ row['author'] }}', '{{ row['url'] }}', '{{ row['publishedAt'] }}' )"
-      class="btn btn-primary mt-auto">Save to my articles</button>
+    {% for row in data %}
 
-    {% else %}
+    <div class="card mx-3 my-4" style="width: 18rem;">
+      <div class="card-header">{{ row['title'] }}</div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ row['source']['name'] }} {{ row['author'] }}</li>
+        <li class="list-group-item"><a href="{{ row['url'] }}" target="_blank">{{ row['url'] }}</a></li>
+        <li class="list-group-item"><img src="{{ row['urlToImage'] }}" alt="" width="220" height="220"></li>
+        <li class="list-group-item">{{ row['publishedAt'] }}</li>
+      </ul>
 
-   <a href="/login" class="btn btn-primary button mt-auto">Save to my articles</a>
+      {% if isLoggedIn %}
 
-    {% endif %}
+      <button type="button"
+        onclick="saveArticle( '{{ keyword }}', '{{ row['title'] }}', '{{ row['source']['name'] }}', '{{ row['author'] }}', '{{ row['url'] }}', '{{ row['publishedAt'] }}' )"
+        class="btn btn-primary mt-auto">Save to my articles</button>
 
-  </div>
+      {% else %}
 
-  {% endfor %}
+      <a href="/register" class="btn btn-primary button mt-auto">Save to my articles</a>
+
+      {% endif %}
+
+    </div>
+
+    {% endfor %}
+
+  {% endif %}
 
 </div>
 

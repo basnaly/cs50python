@@ -42,7 +42,11 @@ def index():
     user_id = session.get("user_id")
 
     # Get username from db
-    username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+    if user_id:
+        username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+        username = (username[0]["username"]).title()
+    else:
+        username = ''
 
     data = lookup(article_type, keyword, language)
 
@@ -58,15 +62,7 @@ def index():
             datetime.now(),
         )
 
-    return render_template(
-        "index.html",
-        article_type=article_type,
-        keyword=keyword.title(),
-        language=language,
-        data=data or [],
-        isLoggedIn=user_id,
-        username=username,
-    )
+    return render_template("index.html", article_type=article_type, keyword=keyword.title(), language=language, data=data or [], isLoggedIn=user_id, username=username,)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -214,6 +210,13 @@ def logout():
 def show_history():
     user_id = session["user_id"]
 
+    # Get username from db
+    if user_id:
+        username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+        username = (username[0]["username"]).title()
+    else:
+        username = ''
+
     if request.method == "GET":
         data = []
 
@@ -248,7 +251,7 @@ def show_history():
                 }
             )
 
-        return render_template("history.html", data=data)
+        return render_template("history.html", data=data, username=username)
 
     else:
         id_search_article = request.json["id"]
@@ -294,6 +297,13 @@ def save_article():
 @login_required
 def saved_articles():
     user_id = session["user_id"]
+
+    # Get username from db
+    if user_id:
+        username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+        username = (username[0]["username"]).title()
+    else:
+        username = ''
 
     if request.method == "GET":
         data = []
@@ -354,7 +364,7 @@ def saved_articles():
                 }
             )
 
-        return render_template("articles.html", data=data, tags=tags)
+        return render_template("articles.html", data=data, tags=tags, username=username,)
 
     else:
         id_article = request.json["id"]
@@ -368,6 +378,13 @@ def saved_articles():
 @login_required
 def tags():
     user_id = session["user_id"]
+
+    # Get username from db
+    if user_id:
+        username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+        username = (username[0]["username"]).title()
+    else:
+        username = ''
 
     if request.method == "GET":
         data = []
@@ -388,7 +405,7 @@ def tags():
                 }
             )
 
-        return render_template("tags.html", data=data)
+        return render_template("tags.html", data=data, username=username,)
 
     else:
         # When form is submitted via POST, add the data to the tags table.
