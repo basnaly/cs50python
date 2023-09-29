@@ -492,4 +492,4 @@ def filter_tags():
         id_article,
     )
 
-    return redirect("/articles")
+    return render_template("/articles")
