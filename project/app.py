@@ -493,15 +493,15 @@ def filter_tags():
 
     data = []
 
-        user_saved_articles_table = f"articles_{user_id}"
-        user_list_tags_table = f"tags_{user_id}"
-        list_saved_articles = db.execute(
-            "SELECT *, ?.id as id FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id ORDER BY published DESC;",
-            user_saved_articles_table,
-            user_saved_articles_table,
-            user_list_tags_table,
-            user_list_tags_table,
-            user_saved_articles_table,
+    user_saved_articles_table = f"articles_{user_id}"
+    user_list_tags_table = f"tags_{user_id}"
+    list_saved_articles = db.execute(
+        "SELECT *, ?.id as id FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id ORDER BY published DESC;",
+        user_saved_articles_table,
+        user_saved_articles_table,
+        user_list_tags_table,
+        user_list_tags_table,
+        user_saved_articles_table,
         )
 
     for i, element in enumerate(list_saved_articles):
@@ -535,4 +535,4 @@ def filter_tags():
 
 
 
-    return render_template("/articles")
+    return render_template("/articles", data=data)
