@@ -496,7 +496,7 @@ def filter_tags():
     user_saved_articles_table = f"articles_{user_id}"
 
     list_saved_articles = db.execute(
-        "SELECT * FROM ? WHERE tag_id = ? ORDER BY published DESC;",
+        "SELECT *, ?.id as id FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id ORDER BY published DESC;",,
         user_saved_articles_table,
         id_tag
         )
