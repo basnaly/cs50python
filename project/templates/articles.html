@@ -62,7 +62,7 @@ Articles
             {% for tag in tags %}
             <li>
               <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
-                href="/filter-tags?id-tag={{ tag['id'] }}">
+                href="/filter-tags?id_tag={{ tag['id'] }}">
                 {{ tag['tag'].title() }}
               </a>
             </li>

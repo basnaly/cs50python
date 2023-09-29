@@ -481,7 +481,7 @@ def filter_tags():
     user_id = session["user_id"]
 
     id_article = request.args.get("id-article")
-    id_tag = request.args.get("tag_id")
+    id_tag = request.args.get("tag_id") 
     print(id_tag)
 
     data = []
