@@ -539,20 +539,20 @@ def filter_tags():
                 }
             )
 
-        tags = []
-        list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
+    tags = []
+    list_tags = db.execute("SELECT * FROM ? ;", user_list_tags_table)
 
-        for element in list_tags:
-            id = element.get("id")
-            tag = element.get("tag")
-            color = element.get("color")
+    for element in list_tags:
+        id = element.get("id")
+        tag = element.get("tag")
+        color = element.get("color")
 
-            tags.append(
-                {
-                    "id": id,
-                    "tag": tag,
-                    "color": color,
-                }
-            )
+        tags.append(
+            {
+                "id": id,
+                "tag": tag,
+                "color": color,
+            }
+        )
 
     return render_template("/articles.html", data=data, username=username, tags=tags)
