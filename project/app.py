@@ -431,6 +431,13 @@ def tags():
 def delete_tag():
     user_id = session["user_id"]
 
+    # Get username from db
+    if user_id:
+        username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+        username = (username[0]["username"]).title()
+    else:
+        username = ''
+
     id_tag = request.args.get("id")
 
     user_tag_table = f"tags_{user_id}"
