@@ -36,7 +36,7 @@ def after_request(response):
 def index():
 
     # return render_template("index.html", data = [])
-    article_type = request.args.get("article_type", "")
+    article_type = request.args.get("article_type", "everything")
     keyword = request.args.get("keyword", "")
     language = request.args.get("language")
     user_id = session.get("user_id")
