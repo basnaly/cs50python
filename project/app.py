@@ -496,11 +496,12 @@ def filter_tags():
     user_saved_articles_table = f"articles_{user_id}"
     user_list_tags_table = f"tags_{user_id}"
     list_saved_articles = db.execute(
-        "SELECT *, ?.id as id FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id WHERE ORDER BY published DESC;",
+        "SELECT *, ?.id as id FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id WHERE ?.tag_id = id_tag ORDER BY published DESC;",
             user_saved_articles_table,
             user_saved_articles_table,
             user_list_tags_table,
             user_list_tags_table,
+            user_saved_articles_table,
             user_saved_articles_table,
     )
 
