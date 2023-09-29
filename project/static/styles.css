@@ -132,6 +132,10 @@ tr:last-child {
 
 .filter:hover {
     color: #EA738D;
-    background-color: white;
+    background-color: gray;
     text-shadow: 0.5px 0.5px black;
+  }
+
+  .filter-bg:hover {
+    background-color: white;
   }
