@@ -63,7 +63,7 @@
             {% for tag in tags %}
             <li>
               <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
-                href="/save-tags-to-article?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
+                href="/filter-tags?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
                 {{ tag['tag'].title() }}
               </a>
             </li>
