@@ -59,14 +59,15 @@
             Add
           </button>
           <ul class="dropdown-menu">
-
-            {% for tag in tags %}
-            <li>
-              <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
-                href="/filter-tags?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
-                {{ tag['tag'].title() }}
-              </a>
-            </li>
+            {% for row in data %}
+              {% for tag in tags %}
+                <li>
+                  <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
+                    href="/filter-tags?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
+                    {{ tag['tag'].title() }}
+                  </a>
+                </li>
+             {% endfor %}
             {% endfor %}
 
           </ul>
