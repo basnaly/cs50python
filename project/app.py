@@ -483,14 +483,6 @@ def filter_tags():
     id_article = request.args.get("id-article")
     id_tag = request.args.get("tag_id")
 
-    # user_articles_table = f"articles_{user_id}"
-    # updated_list_articles = db.execute(
-    #     "UPDATE ? SET tag_id = ? WHERE id = ?",
-    #     user_articles_table,
-    #     id_tag,
-    #     id_article,
-    # )
-
     data = []
 
     user_saved_articles_table = f"articles_{user_id}"
