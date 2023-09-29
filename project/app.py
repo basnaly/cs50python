@@ -537,4 +537,4 @@ def filter_tags():
 
 
 
-    return render_template("/articles", data=data)
+    return render_template("/filter-tags", data=data)
