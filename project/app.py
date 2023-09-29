@@ -496,9 +496,9 @@ def filter_tags():
     user_saved_articles_table = f"articles_{user_id}"
 
     list_saved_articles = db.execute(
-        "SELECT * FROM ? WHERE tag ORDER BY published DESC;",
+        "SELECT * FROM ? WHERE tag_id = ? ORDER BY published DESC;",
         user_saved_articles_table,
-
+        id_tag
         )
 
     for i, element in enumerate(list_saved_articles):
