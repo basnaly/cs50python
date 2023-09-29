@@ -482,6 +482,7 @@ def filter_tags():
 
     id_article = request.args.get("id-article")
     id_tag = request.args.get("tag_id")
+    print(id_tag)
 
     data = []
 
