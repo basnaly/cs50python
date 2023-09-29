@@ -487,7 +487,13 @@ def delete_tag_from_article():
 def filter_tags():
     user_id = session["user_id"]
 
-    id_article = request.args.get("id-article")
+    # Get username from db
+    if user_id:
+        username = db.execute("SELECT username FROM users WHERE id = ?", user_id)
+        username = (username[0]["username"]).title()
+    else:
+        username = ''
+
     id_tag = request.args.get("id_tag")
     print(id_tag)
 
@@ -533,4 +539,4 @@ def filter_tags():
                 }
             )
 
-    return render_template("/articles.html", data=data)
+    return render_template("/articles.html", data=data, username=username, )
