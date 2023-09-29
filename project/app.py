@@ -504,5 +504,35 @@ def filter_tags():
             user_saved_articles_table,
         )
 
+    for i, element in enumerate(list_saved_articles):
+            id = element.get("id")
+            nn = i + 1
+            keyword = element.get("keyword")
+            source = element.get("source")
+            author = element.get("author")
+            title = element.get("title")
+            url = element.get("url")
+            tag_id = element.get("tag_id", "")
+            published = element.get("published")
+            tag_text = element.get("tag")
+            tag_color = element.get("color")
+
+            data.append(
+                {
+                    "id": id,
+                    "nn": nn,
+                    "keyword": keyword,
+                    "source": source,
+                    "author": author,
+                    "title": title,
+                    "url": url,
+                    "tag_id": tag_id,
+                    "published": published,
+                    "tag_text": tag_text,
+                    "tag_color": tag_color,
+                }
+            )
+
+
 
     return render_template("/articles")
