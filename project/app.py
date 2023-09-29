@@ -481,15 +481,28 @@ def filter_tags():
     user_id = session["user_id"]
 
     id_article = request.args.get("id-article")
-
     id_tag = request.args.get("tag_id")
 
-    user_articles_table = f"articles_{user_id}"
-    updated_list_articles = db.execute(
-        "UPDATE ? SET tag_id = ? WHERE id = ?",
-        user_articles_table,
-        id_tag,
-        id_article,
-    )
+    # user_articles_table = f"articles_{user_id}"
+    # updated_list_articles = db.execute(
+    #     "UPDATE ? SET tag_id = ? WHERE id = ?",
+    #     user_articles_table,
+    #     id_tag,
+    #     id_article,
+    # )
+
+    data = []
+
+        user_saved_articles_table = f"articles_{user_id}"
+        user_list_tags_table = f"tags_{user_id}"
+        list_saved_articles = db.execute(
+            "SELECT *, ?.id as id FROM ? LEFT OUTER JOIN ? on ?.id = ?.tag_id ORDER BY published DESC;",
+            user_saved_articles_table,
+            user_saved_articles_table,
+            user_list_tags_table,
+            user_list_tags_table,
+            user_saved_articles_table,
+        )
+
 
     return render_template("/articles")
