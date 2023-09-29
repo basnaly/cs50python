@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-  Articles
+Articles
 {% endblock %}
 
 {% block main %}
@@ -54,24 +54,24 @@
       <th>Published</th>
       <th>
 
-          <!-- <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Add
-            </button>
-            <ul class="dropdown-menu">
-              {% for row in data %}
-                {% for tag in tags %}
-                  <li>
-                    <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
-                      href="/filter-tags?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
-                      {{ tag['tag'].title() }}
-                    </a>
-                  </li>
-              {% endfor %}
-              {% endfor %}
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter
+          </button>
+          <ul class="dropdown-menu">
+            {% for row in data %}
+            {% for tag in tags %}
+            <li>
+              <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
+                href="/filter-tags?id-tag={{ tag['id'] }}&id-article={{ row['id'] }}">
+                {{ tag['tag'].title() }}
+              </a>
+            </li>
+            {% endfor %}
+            {% endfor %}
 
-            </ul>
-          </div> -->
+          </ul>
+        </div>
 
         <span>Tags</span>
       </th>

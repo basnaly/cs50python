@@ -475,18 +475,20 @@ def delete_tag_from_article():
     return redirect("/articles")
 
 
-# @app.route("filter-tags", methods=["GET"])
-# @login_required
-# def filter_tags():
-#     user_id = session["user_id"]
+@app.route("/filter-tags", methods=["GET"])
+@login_required
+def filter_tags():
+    user_id = session["user_id"]
 
-#     id_article = request.args.get("id-article")
+    id_article = request.args.get("id-article")
 
-#     user_articles_table = f"articles_{user_id}"
-#     updated_list_articles = db.execute(
-#         "UPDATE ? SET tag_id = NULL WHERE id = ?",
-#         user_articles_table,
-#         id_article,
-#     )
+    # id_tag = request.args.get("tag_id")
 
-#     return redirect("/articles")
+    user_articles_table = f"articles_{user_id}"
+    updated_list_articles = db.execute(
+        "UPDATE ? SET tag_id = NULL WHERE id = ?",
+        user_articles_table,
+        id_article,
+    )
+
+    return redirect("/articles")
