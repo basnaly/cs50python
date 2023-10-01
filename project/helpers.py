@@ -8,6 +8,8 @@ from functools import wraps
 
 api_key = "c237f389d5674012bb0ca74e4f86675f"
 
+os.environ.get("API_KEY")
+
 def apology(message, code=400):
     """Render message as an apology to user."""
 
