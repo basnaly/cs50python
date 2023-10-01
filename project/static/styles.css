@@ -144,4 +144,6 @@ tr:last-child {
     --bs-btn-font-weight: 600;
     --bs-btn-hover-color: black;
     --bs-btn-hover-bg: white;
+    --bs-btn-bg: transparent;
+    --bs-btn-active-bg: white;
   }
