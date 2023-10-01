@@ -59,7 +59,8 @@ Articles
             Filter
           </button>
           <ul class="dropdown-menu">
-            {% for row in data %}
+            
+            {% for tag in tags %}
             <li>
               <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
                 href="/filter-tags?id_tag={{ tag['id'] }}">
