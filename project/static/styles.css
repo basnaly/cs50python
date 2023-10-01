@@ -132,7 +132,6 @@ tr:last-child {
 
 .filter:hover {
     background-color: gray;
-    text-shadow: 0.5px 0.5px black;
   }
 
   .filter-bg:hover {
@@ -147,4 +146,5 @@ tr:last-child {
   .filter-bg .btn {
     --bs-btn-active-color: black;
     --bs-btn-font-weight: 600;
+    --bs-btn-hover-color: black;
   }
