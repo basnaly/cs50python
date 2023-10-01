@@ -28,6 +28,10 @@ nav.navbar {
     text-shadow: 1px 1px black;
 }
 
+nav.navbar:hover {
+    text-shadow: 1px 1px white;
+}
+
 nav .navbar-brand
 {
     --bs-navbar-brand-color: white;
