@@ -144,3 +144,7 @@ tr:last-child {
   .dropdown-menu {
     background-color: white;
   }
+
+  .filter-bg .btn {
+    --bs-btn-active-color: black;
+  }
