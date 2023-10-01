@@ -59,7 +59,10 @@ Articles
             Filter
           </button>
           <ul class="dropdown-menu">
-            <li class="ms-3 fw-normal">All articles</li>
+            <li class="ms-3 fw-normal">All articles
+              href="/filter-tags?id_tag={{ tag['id'] }}"
+              All article
+            </li>
             {% for tag in tags %}
             <li>
               <a class="dropdown-item" style="background-color: {{ tag['color'] }}"
