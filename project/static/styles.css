@@ -28,7 +28,7 @@ nav.navbar {
     text-shadow: 1px 1px black;
 }
 
-nav.navbar:hover {
+nav.navbar a:hover {
     text-shadow: 1px 1px white;
 }
 
