@@ -60,8 +60,9 @@ Articles
           </button>
           <ul class="dropdown-menu">
             <li class="ms-3 fw-normal">All articles
-              href="/filter-tags?id_tag={{ tag['id'] }}"
-              All article
+              <a href="/filter-tags?id_tag={{ tag['id'] }}">
+                All article
+              </a>
             </li>
             {% for tag in tags %}
             <li>
