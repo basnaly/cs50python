@@ -10,7 +10,7 @@ Every user can register in the app, login and logout. It allows to user save his
 During user registration he must to choose his username and password. Password must have at least 8 characters and consists
 from lower and uppercase words, numbers and some symbols (the allowed symbols is described during registration). Also
 user must type password conformation. After registration finishes the app will add the new user to the sqlite3 database of users
-consists of 
+consists of user id, username and hash password of user.
 
 
 
