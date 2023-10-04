@@ -1,4 +1,4 @@
 # MY ARTICLES APP
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/wZnUGXAsPE0
 #### Description:
-TODO
+My application is intended to find, read and save articles.
