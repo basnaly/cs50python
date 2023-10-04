@@ -17,7 +17,7 @@ from the database by user id.
 
 The app has 3 main features which can be represented by options in the nav bar: Search history, Saved Articles, My tags.
 
-1.
+# 1.
 
 In this app I can search articles by keyword or phrase, save them to my local account and get back to them whenever i want.
 You also have history of your searches that you can clean and rerun again.
