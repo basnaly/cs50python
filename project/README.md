@@ -12,7 +12,8 @@ from lower and uppercase words, numbers and some symbols (the allowed symbols is
 user must type password conformation. After registration finishes the app will add the new user to the sqlite3 database of users
 consists of user id, username and hash password of user.
 
-After user registered or logged in he can see greetin in the right upper corner.
+After user registered or logged in he can see greetin in the right upper corner. To do this, it get username from the database
+according to user id
 
 
 In this app I can search articles by keyword or phrase, save them to my local account and get back to them whenever i want.
