@@ -44,6 +44,14 @@ flask run
 
 You can see my query to news api in `project/helpers.py` function `lookup`
 
+# Application Data
+
+All data is stored in the atticles.db.
+
+There are 4 tables in the database. One of them is user table. Every user is a row in this table.
+
+The articles, history and tags tables are created per user during his registration.
+
 # Application Features
 
 The app has 3 main features which can be represented by options in the nav bar: Search history, Saved Articles, My tags.
@@ -81,3 +89,19 @@ When user have tags he can filter the articles by tag. So user can see all artic
 all articles that he has.
 
 ## 3\. My tags
+
+User can create his own tags to group his atrticles by user's criterias represented as a tag.
+
+User can create his own tag by choosing the tag's name and tag's color in the simple form on the tags page.
+
+User have 10 different colors to select that are presented on the page for user's convenience. After user creates the tag
+
+it appears in the bottom part of the page as a card. The card consists of tag's name colored with selected color and "Delete" button.
+
+User can delete this tag by clicking on this button.
+
+Let's come back to the article's page. After creating user own tags, user can assign the tag to the article by clicking on
+
+the "Add" button and selecting the desired tag. After adding the tag, tag's name colored in the selected color appears instead of "Add" button.
+
+Near the tag also appears "x" button, which allows to delete the tag from the article if user doesn't need it anymore.
