@@ -1,5 +1,5 @@
 def main():
-    voice = input("Hello")
+    voice = input("What is your name?")
     print(voice.capitalize())
 
 
