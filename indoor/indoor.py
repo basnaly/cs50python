@@ -1,6 +1,9 @@
 def main():
     voice = input("")
-    if voice == 
+    if voise == voice.islower():
+        voice.upper()
+    else:
+        voice.lower()
 
 
 main()
