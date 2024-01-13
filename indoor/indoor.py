@@ -2,7 +2,7 @@ def main():
     voice = input("")
     if voice.islower():
         print(voice.upper())
-    elif voice.isupper:
+    else:
         print(voice.lower())
 
 
