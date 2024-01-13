@@ -1,9 +1,9 @@
 def main():
     voice = input("")
     if voice.islower():
-        voice.upper()
-    else:
-        voice.lower()
+        print(voice.upper())
+    elif voice.isupper:
+        print(voice.lower())
 
 
 main()
