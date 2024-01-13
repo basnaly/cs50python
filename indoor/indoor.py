@@ -1,6 +1,6 @@
 def main():
     voice = input("")
-    print(voice.title())
+    print(voice.upper())
 
 
 main()
