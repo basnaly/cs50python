@@ -1,6 +1,6 @@
 def main():
     voice = input("")
-    print(voice.upper())
+    if voice == 
 
 
 main()
