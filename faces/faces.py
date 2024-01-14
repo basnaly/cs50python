@@ -5,3 +5,4 @@ def convert(str):
     return a
 
 face = convert()
+print(face)
