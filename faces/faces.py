@@ -1,8 +1,10 @@
 
-def convert(str):
+def convert(input):
 
-    a = input('')
-    return a
+    user_input = input('')
+    return user_input
 
-face = convert()
-print(face)
+def main(input):
+    convert(input)
+
+main(input)
