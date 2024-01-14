@@ -1,6 +1,7 @@
 def main():
     user_input = input("Type a sentence ")
-    print(user_input.split(' '))
+    new_string = '...'.join(user_input)
+    print(new_string)
 
 
 main()
