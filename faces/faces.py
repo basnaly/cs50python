@@ -5,7 +5,7 @@ def convert(input):
     return user_input
 
 def main(input):
-    convert(input)
-
+    a = convert(input)
+    return a
 
 main(input)
