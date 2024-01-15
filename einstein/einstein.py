@@ -1,7 +1,7 @@
 # Define energy function
 def energy():
     # Prompt user to type a mass
-    m = input("m: ")
+    m = int(input("m: "))
 
     # Calculate the energy using square function with argument of speed of light:
     e = m * square(300000000)
