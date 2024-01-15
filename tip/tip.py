@@ -7,12 +7,11 @@ def main():
 
 
 def dollars_to_float(d):
-    x = int(d)
-    return x
+    # Return integer of d(argument)
+    return int(d)
 
 
 def percent_to_float(p):
-    y = int(p.replace("%", ""))
-    return y/100
+    return int(p.replace("%", ""))/100
 
 main()
