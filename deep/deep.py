@@ -1,6 +1,7 @@
 def deep_func():
     print("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
-    answer = input("")
+    # Convert user's input without considering their case
+    answer = input("").casefold()
 
     if answer == "42" or answer == "forty-two" or answer == "forty two":
         print("Yes")
