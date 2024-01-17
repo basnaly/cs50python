@@ -1,8 +1,10 @@
 def main():
     greet = input('Greeting: ').strip().casefold().split(',')
 
+    # Check the first word in the sentence (if exist)
     if greet[0] == 'hello':
         print('$0')
+    # Check the first letter in the first word of the sentence
     elif greet[0][0] == 'h':
         print('$20')
     else:
