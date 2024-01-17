@@ -1,6 +1,6 @@
 def main():
-    greet = input('Greeting: ').split(',')
-    
+    greet = input('Greeting: ').strip().casefold()
+
 
     if greet == 'Hello':
         print('$0')
