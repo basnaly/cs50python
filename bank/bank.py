@@ -1,5 +1,5 @@
 def main():
-    greet = input('Greeting: ').split(' ')
+    greet = input('Greeting: ').split(',')
 
     if greet == 'Hello':
         print('$0')
