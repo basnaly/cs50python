@@ -14,11 +14,11 @@ def main():
             case 'jpg'| 'jpeg':
                 print('image/jpeg')
             case 'png':
-                print('application/png')
+                print('image/png')
             case 'pdf':
                 print('application/pdf')
             case 'txt':
-                print('application/txt')
+                print('text/plain')
             case 'zip':
                 print('application/zip')
 
