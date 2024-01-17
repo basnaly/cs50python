@@ -7,8 +7,9 @@ def main():
         print('application/octet-stream')
 
     else:
+        # Split user's input by '.'
         file = file.split('.')
-        print(file)
+        # Use last element of file(list)
         match file[-1]:
             case 'gif':
                 print('image/gif')
