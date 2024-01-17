@@ -7,8 +7,8 @@ def main():
         print('application/octet-stream')
 
     else:
-        name, extension = file.split('.')
-        match extension:
+        file = file.split('.')
+        match file[1]:
             case 'gif':
                 print('image/gif')
             case 'jpg'| 'jpeg':
