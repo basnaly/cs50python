@@ -1,6 +1,8 @@
 def main():
+    # Convert user's input to an insensitively case and remove spaces
     file = input('File name: ').strip().casefold()
 
+    # Check if user's input doesn't have '.'
     if file.find('.') == -1:
         print('application/octet-stream')
 
