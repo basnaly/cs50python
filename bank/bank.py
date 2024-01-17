@@ -1,5 +1,5 @@
 def main():
-    greet = input('Greeting: ').strip().casefold().split(' ')
+    greet = input('Greeting: ').strip().casefold().split(',')
     print(greet)
 
     if greet[0] == 'hello':
