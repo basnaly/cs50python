@@ -8,6 +8,7 @@ def main():
 
     else:
         file = file.split('.')
+        print(file)
         match file[1]:
             case 'gif':
                 print('image/gif')
