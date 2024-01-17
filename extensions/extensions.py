@@ -20,7 +20,7 @@ def main():
             case 'txt':
                 print('text/plain')
             case 'zip':
-                print('application/zip')
+                print('application/octet-strea')
 
 
 main()
