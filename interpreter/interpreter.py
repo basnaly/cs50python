@@ -9,7 +9,7 @@ def main():
         case '*':
             print(float(x) * float(z))
         case '/':
-            print(float(x) / float(z))
+            print(f'{float(x) / float(z):.1f}')
 
 
 main()
