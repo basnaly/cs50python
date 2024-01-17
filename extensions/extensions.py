@@ -1,7 +1,11 @@
 def main():
-    file = input('File name: ').split('.')
-    if file[1] = None
-        print('abx')
+    file = input('File name: ').strip().casefold()
+
+    if file.find('.') == -1:
+        print('application/octet-stream')
+
+    else:
+        match
 
 
 main()
