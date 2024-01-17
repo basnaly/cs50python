@@ -4,7 +4,7 @@ def main():
 
     if greet[0] == 'hello':
         print('$0')
-    elif greet[0] == 'h':
+    elif greet[0][0] == 'h':
         print('$20')
     else:
         print('$100')
