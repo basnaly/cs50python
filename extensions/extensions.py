@@ -9,7 +9,7 @@ def main():
     else:
         # Split user's input by '.'
         file = file.split('.')
-        # Use last element of file
+        # Use last element of file to compare
         match file[-1]:
             case 'gif':
                 print('image/gif')
