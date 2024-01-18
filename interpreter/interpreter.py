@@ -1,5 +1,7 @@
 def main():
+    # Remove spaces in user's input
     expression = input("Expression: ").strip()
+    # Split user's input by ' '
     x, y, z = expression.split(' ')
     match y:
         case'+':
