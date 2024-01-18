@@ -15,7 +15,7 @@ def main():
 def convert(time):
     # Split time argument by ':'
     hours, minutes = time.split(':')
-    # Convert the time format into hours
+    # Convert hours and minutes into hours
     converted_time = float(hours) + float(minutes) / 60
     return converted_time
 
