@@ -1,5 +1,7 @@
 def main():
-    a = input("camelCase: ").strip().split()
+    string = input("camelCase: ").strip()
+    list = []
+    for char in string
     print(a)
 
 
