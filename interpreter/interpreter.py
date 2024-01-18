@@ -3,6 +3,7 @@ def main():
     expression = input("Expression: ").strip()
     # Split user's input by ' '
     x, y, z = expression.split(' ')
+    # Calculate the user's expresion depend on y
     match y:
         case'+':
             print(float(x) + float(z))
