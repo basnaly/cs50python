@@ -4,10 +4,11 @@ def main():
     for char in string:
         list.append(char)
         if char.isupper():
-            
-    print(list)
+            char.replace(char, '_' + char.lower())
+            print('snake_case:' list.join())
+        else:
+            print(list.join())
 
-    if
 
 
 main()
