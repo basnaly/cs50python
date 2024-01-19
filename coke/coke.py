@@ -8,7 +8,8 @@ def main():
             continue
         else:
             amount_due = amount_due - coin
-    print(f"Change Owed: {amount_due}")
+    if amount_due < 0:
+        print(f"Change Owed: {amount_due}")
 
 
 main()
