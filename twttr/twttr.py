@@ -6,8 +6,8 @@ def main():
         if char in vowels:
             string = string.replace(char, '')
         # Check if char is in an uppercase in the string
-        if char.isupper():
-            string = string.replace(char, char.upper())
+        # if char.isupper():
+        #     string = string.replace(char, char.upper())
     print(f'Output: {string}')
 
 
