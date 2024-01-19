@@ -1,15 +1,11 @@
 def main():
     string = input("camelCase: ").strip()
-    list = []
+    # Loop on each char in user's string
     for char in string:
-        list.append(char)
+        # If there is an uppercase char in the string
         if char.isupper():
-            char.replace(char, '_' + char.lower())
-            
-            print('snake_case:' list.join())
-        else:
-            print(list.join())
-
+            string = string.replace(char, '_'+ char.lower())
+    print(f"snake_case: {string}")
 
 
 main()
