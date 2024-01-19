@@ -6,7 +6,8 @@ def main():
         coin = input('Insert Coin: ')
         if coin != 25 and coin != 10 and coin != 5:
             continue
-        amount_due = amount_due - coin
+        else:
+            amount_due = amount_due - coin
     print(f"Change Owed: {amount_due}")
 
 
