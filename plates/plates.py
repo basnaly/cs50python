@@ -7,7 +7,8 @@ def main():
 
 
 def is_valid(s):
-    ...
+    is_letters = s[0:2].isalpha():
+
 
 
 main()
