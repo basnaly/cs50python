@@ -8,9 +8,12 @@ def main():
 
 def is_valid(s):
 
-    is_letters = s[0:2].isalpha():
-
     is_letters_numbers = s.isalnum()
+    is_letters = s[0:2].isalpha():
+    min_letters =
+    max_letters =
+
+
 
 
 main()
