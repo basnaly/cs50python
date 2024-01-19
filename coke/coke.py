@@ -9,7 +9,7 @@ def main():
         else:
             amount_due = amount_due - coin
     if amount_due < 0:
-        print(f"Change Owed: {amount_due}")
+        print(f"Change Owed: {abs(amount_due)}")
 
 
 main()
