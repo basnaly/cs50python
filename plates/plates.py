@@ -27,7 +27,6 @@ def is_valid(s):
         return False
 
     # Check if between first_char and last char there is letter
-    print(s[i:])
     if s[i:].isdigit() == False:
         return False
 
