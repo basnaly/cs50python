@@ -25,10 +25,12 @@ def is_valid(s):
         i += 1
 
     # Check if the first digit = 0
-    if first_digit == 0:
+    print(first_digit)
+    if first_digit == '0':
         return False
 
     # Check if between first_digit and end of string there are numbers only
+    print(s[i:])
     if s[i:].isdigit() == False:
         return False
 
