@@ -15,27 +15,31 @@ def is_valid(s):
     if s[0:2].isalpha() == False:
         return False
 
-    first_char = None
+    first_digit = None
     i = 0
-    # Check if the first char = 0
+    # Find the first digit and its index
     for c in s:
         if c.isdigit():
-            first_char == c
+            first_digit == c
             break
         i += 1
-    if first_char == 0:
+
+    # Check if the first digit = 0
+    if first_digit == 0:
         return False
 
-    # Check if between first_char and last char there is letter
+    # Check if between first_digit and end of string there are numbers only
     if s[i:].isdigit() == False:
         return False
 
-    # Check
+    # Count letters in string
     letter_counter = 0
     for c in s:
         if c.isalpha() == True:
             letter_counter += 1
-    if letter_counter < 2 and letter_counter > 6:
+
+    # Check if number of letters less than 2 or more than 6
+    if letter_counter < 2 or letter_counter > 6:
         return False
 
     return True
