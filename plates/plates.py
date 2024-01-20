@@ -29,8 +29,9 @@ def is_valid(s):
         return False
 
     # Check if between first_digit and end of string there are numbers only
-    if first_digit and s[i:].isdigit() == False:
-        return False
+    if first_digit:
+        if s[i:].isdigit() == False:
+            return False
 
     # Count letters in string
     letter_counter = 0
