@@ -38,5 +38,7 @@ def is_valid(s):
     # if letter_counter < 2 and letter_counter > 6:
     #     return False
 
+    return True
+
 
 main()
