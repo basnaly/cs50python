@@ -23,9 +23,9 @@ def main():
         'Watermelon': 80
     }
 
-    # Prompt user to type a fruit and convert the first word in uppercase 
+    # Prompt user to type a fruit and convert the first letter to uppercase
     item = input('Item: ').title()
-    # Check if item in the dict
+    # Check if item is in the dict
     if item in dict:
         print(f'Calories: {dict[item]}')
 
