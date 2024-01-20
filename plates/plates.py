@@ -12,7 +12,7 @@ def is_valid(s):
         break
     if s[0:2].isalpha() == False:
         break
-    if s[3:-2].isdigital = False:
+    if s[3:-2].isdigital() == False:
         break
     count = 0
     for c in s:
