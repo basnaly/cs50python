@@ -18,8 +18,8 @@ def is_valid(s):
     for c in s:
         if c.isalpha():
             count = count + 1
-    if 2 > count > 6:
-        break
+        if 2 > count > 6:
+            break
     else:
         return True
 
