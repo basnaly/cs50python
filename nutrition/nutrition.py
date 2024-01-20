@@ -24,7 +24,7 @@ def main():
 
     item = input('Item: ')
     if 'fruit' in dict == item:
-        print("Calories: dict['calories']")
+        print(f'Calories: {dict["calories"]}')
 
 
 main()
