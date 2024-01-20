@@ -18,6 +18,7 @@ def is_valid(s):
             count = count + 1
     if 2 > count > 6:
         break
+
     
 
 
