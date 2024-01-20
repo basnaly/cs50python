@@ -9,17 +9,17 @@ def main():
 def is_valid(s):
 
     if s.isalnum() == False:
-        break
+        return False
     if s[0:2].isalpha() == False:
-        break
+        return False
     if s[3:-2].isdigital() == False:
-        break
+        return False
     count = 0
     for c in s:
         if c.isalpha():
             count = count + 1
             if 2 > count > 6:
-                break
+                return False
     else:
         return True
 
