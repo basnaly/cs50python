@@ -18,6 +18,7 @@ def is_valid(s):
     for c in s:
         if c.isalpha():
             count = count + 1
+    print(count)
     if count < 2 or count > 6:
         return False
     else:
