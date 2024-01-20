@@ -29,7 +29,7 @@ def is_valid(s):
         return False
 
     # Check if between first_digit and end of string there are numbers only
-    if s[i:].isdigit() == False:
+    if first_digit and s[i:].isdigit() == False:
         return False
 
     # Count letters in string
