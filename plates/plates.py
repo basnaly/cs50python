@@ -12,8 +12,8 @@ def is_valid(s):
         return False
     if s[0:2].isalpha() == False:
         return False
-    if s[-1].isalpha() == False:
-        return False
+    # if s[-1].isalpha() == False:
+    #     return False
     # count = 0
     # for c in s:
     #     if c.isalpha():
