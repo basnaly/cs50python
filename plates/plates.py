@@ -12,7 +12,7 @@ def is_valid(s):
         return False
 
     # Check if 2 first chars are alphabetic
-    if s[0:2].isalpha == False:
+    if s[0:2].isalpha() == False:
         return False
 
     # first_char = None
