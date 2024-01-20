@@ -14,12 +14,12 @@ def is_valid(s):
         return False
     if s[-1].isalpha() == True:
         return False
-    # count = 0
-    # for c in s:
-    #     if c.isalpha():
-    #         count = count + 1
-    #         if 2 > count > 6:
-    #             return False
+    count = 0
+    for c in s:
+        if c.isalpha():
+            count = count + 1
+            if 2 > count > 6:
+                return False
     else:
         return True
 
