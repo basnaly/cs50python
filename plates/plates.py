@@ -26,9 +26,13 @@ def is_valid(s):
     # Check if between first_char and last char there is letter
     if s[i:-1].is.digit == False:
         return False
-    # 
-
-
+    # Check
+    letter_counter = 0
+    for c in s:
+        if c.isalpha() == True
+        letter_counter += 1
+    if letter_counter < 2 and letter_counter > 6:
+        return false
 
 
 main()
