@@ -1,4 +1,5 @@
 def main():
+    # Define dict
     dict = {
         'Apple': 130,
         'Avocado': 50,
@@ -22,7 +23,9 @@ def main():
         'Watermelon': 80
     }
 
+    # Prompt user to type a fruit and 
     item = input('Item: ').title()
+    # Check if item in the dict
     if item in dict:
         print(f'Calories: {dict[item]}')
 
