@@ -22,7 +22,7 @@ def main():
         'Watermelon': 80
     }
 
-    item = input('Item: ')
+    item = input('Item: ').title()
     if item in dict:
         print(f'Calories: {dict[item]}')
 
