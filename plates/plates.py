@@ -12,7 +12,7 @@ def is_valid(s):
         return False
     if s[0:2].isalpha() == False:
         return False
-    if s[-2].isdigit == True and s[-1].isalpha() == True:
+    if s[3:-2].isdigit == True and s[-1].isalpha() == True:
         return False
     count = 0
     for c in s:
