@@ -19,15 +19,15 @@ def is_valid(s):
     i = 0
     # Check if the first char = 0
     for c in s:
-        i += 1
         if c.isdigit():
             first_char == c
             break
+        i += 1
     if first_char == 0:
         return False
 
     # Check if between first_char and last char there is letter
-    print(s[i:-1])
+    print(s[i:])
     if s[i:-1].isdigit() == False:
         return False
 
