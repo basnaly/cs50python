@@ -10,8 +10,8 @@ def is_valid(s):
 
     if s.isalnum() == False:
         return False
-    # if s[0:2].isalpha() == False:
-    #     return False
+    if s[0:2].isalpha() == False:
+        return False
     # if s[3:-2].isdigit() == False:
     #     return False
     # count = 0
