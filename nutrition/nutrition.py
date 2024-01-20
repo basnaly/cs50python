@@ -19,9 +19,12 @@ def main():
         {'fruit': 'Strawberries', 'calories': 50},
         {'fruit': 'Sweet Cherries', 'calories': 100},
         {'fruit': 'Tangerine', 'calories': 50},
-        {'fruit': 'Watermelon', 'calories': 80},
-
+        {'fruit': 'Watermelon', 'calories': 80}
     ]
+
+    item = input('Item: ')
+    if fruit in dict == item:
+        print(f'Calories: {dict['calories']}')
 
 
 
