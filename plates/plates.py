@@ -10,7 +10,9 @@ def is_valid(s):
 
     if s.isalnum() == False:
         break
-    if  s[0:2].isalpha() == False:
+    if s[0:2].isalpha() == False:
+        break
+    if s[3:-2].isdigital = False:
         break
     count = 0
     for c in s:
@@ -18,11 +20,8 @@ def is_valid(s):
             count = count + 1
     if 2 > count > 6:
         break
-
-    
-
-
-
+    else:
+        return True
 
 
 main()
