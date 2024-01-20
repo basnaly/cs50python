@@ -5,6 +5,7 @@ def main():
         {'fruit': 'Banana', 'calories': 110},
         {'fruit': 'Cantaloupe', 'calories': 50},
         {'fruit': 'Grapefruit', 'calories': 60},
+        {'fruit': 'Grapes', 'calories': 90},
         {'fruit': 'Honeydew Melon', 'calories': 50},
         {'fruit': 'Kiwifruit', 'calories': 90},
         {'fruit': 'Lemon', 'calories': 15},
@@ -19,7 +20,7 @@ def main():
         {'fruit': 'Sweet Cherries', 'calories': 100},
         {'fruit': 'Tangerine', 'calories': 50},
         {'fruit': 'Watermelon', 'calories': 80},
-        {'fruit': 'Apple', 'calories': 130},
+
     ]
 
 
