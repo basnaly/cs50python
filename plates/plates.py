@@ -20,17 +20,15 @@ def is_valid(s):
     # Find the first digit and its index
     for c in s:
         if c.isdigit():
-            first_digit == c
+            first_digit = c
             break
         i += 1
 
     # Check if the first digit = 0
-    print(first_digit)
     if first_digit == '0':
         return False
 
     # Check if between first_digit and end of string there are numbers only
-    print(s[i:])
     if s[i:].isdigit() == False:
         return False
 
