@@ -8,7 +8,8 @@ def main():
 
 def is_valid(s):
     # Check if all chars are alphabetic and numeric only
-
+    if s.isalnum() == False
+    
 
     # Check if 2 first chars are alphabetic
 
