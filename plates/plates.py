@@ -12,7 +12,7 @@ def is_valid(s):
         return False
 
     # Check if number of chars in the string less than 2 or more than 6
-    if 2 > len(s) > 6:
+    if len(s) < 2 or len(s) > 6:
         return False
 
     # Check if 2 first chars are alphabetic
