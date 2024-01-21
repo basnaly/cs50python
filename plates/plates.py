@@ -32,7 +32,7 @@ def is_valid(s):
     if first_digit == '0':
         return False
 
-    # Check if string has alphabetic chars only and lengh of the string more than 2 and less than 6
+    # Check if string has alphabetic chars only and lengh of the string more or equal than 2 and less or equal than 6
     if first_digit == None and 2 <= len(s) <= 6:
         return True
 
