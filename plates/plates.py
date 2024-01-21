@@ -9,10 +9,15 @@ def main():
 def is_valid(s):
     # Check if all chars are alphabetic and numeric only
     if s.isalnum() == False
-    
+        return False
+
+    # Check if number of letters less than 2 or more than 6
+    if 2 > len(s) > 6:
+        return False
 
     # Check if 2 first chars are alphabetic
-
+    if s[0:2].isalpha() == False:
+        return False
 
     # Check if string has alphabetic chars only and lengh of the string more than 2 and less than 6
 
@@ -31,7 +36,7 @@ def is_valid(s):
     # Count letters in string
 
 
-    # Check if number of letters less than 2 or more than 6
+
 
 
     return True
