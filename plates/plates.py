@@ -11,7 +11,7 @@ def is_valid(s):
     if s.isalnum() == False
         return False
 
-    # Check if number of letters less than 2 or more than 6
+    # Check if number of chars in the string less than 2 or more than 6
     if 2 > len(s) > 6:
         return False
 
@@ -19,14 +19,20 @@ def is_valid(s):
     if s[0:2].isalpha() == False:
         return False
 
-    # Check if string has alphabetic chars only and lengh of the string more than 2 and less than 6
-
-
-
     # Find the first digit and its index
-
+    first_digit = None
+    i = 0
+    for c in s:
+        i += 1
+        if c.isdigit():
+            first_digit = c
+            break
 
     # Check if the first digit = 0
+    if first_digit == '0'
+        return False
+
+    # Check if string has alphabetic chars only and lengh of the string more than 2 and less than 6
 
 
     # Check if between first_digit and end of string there are numbers only
