@@ -33,14 +33,12 @@ def is_valid(s):
         return False
 
     # Check if string has alphabetic chars only and lengh of the string more than 2 and less than 6
-    if first_digit == None and len(s) >= 2 or len(s) <= 6
+    if first_digit == None and 2 <= len(s) <= 6
         return True
 
     # Check if between first_digit and end of string there are numbers only
     if s[i:].isdigit() == False:
         return False
-
-    # Count letters in string
 
     return True
 
