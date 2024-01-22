@@ -3,10 +3,10 @@ def main():
     while True:
 
         formatted_fraction = input('Fraction: ')
-        if formatted_fraction = '4/4':
+        if formatted_fraction == '4/4':
             print('F')
             return
-        elif formatted_fraction = '0/1':
+        elif formatted_fraction == '0/1':
             print('E')
             return
         else:
@@ -18,6 +18,7 @@ def main():
                     return
                 result = float(fraction[0]) / float(fraction[1]) * 100
                 print(f'{int(result)}%')
+                return
             except ValueError:
                 pass
             except ZeroDivisionError:
