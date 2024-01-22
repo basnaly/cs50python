@@ -3,7 +3,7 @@ def main():
     while True:
         formatted_fraction = input('Fraction: ')
         try:
-            # C
+            # Convert user's input to list of 
             fraction = formatted_fraction.split('/')
             if fraction[0].isdecimal() == False or fraction[1].isdecimal() == False:
                 continue
