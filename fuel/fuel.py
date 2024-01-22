@@ -18,7 +18,7 @@ def main():
             result = round(float(fraction[0]) / float(fraction[1]) * 100)
             if result <= 1:
                 print('E')
-            if result >= 99:
+            elif result >= 99:
                 print('F')
             else:
                 print(f'{int(result)}%')
