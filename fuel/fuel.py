@@ -16,7 +16,8 @@ def main():
                 return
 
             result = round(float(fraction[0]) / float(fraction[1]) * 100)
-            if result <= '1%':
+            print(result)
+            if result <= 1:
                 print('E')
             if result >= '99%':
                 print('F')
