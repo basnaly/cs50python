@@ -13,9 +13,9 @@ def main():
             try:
                 fraction = formatted_fraction.split('/')
                 if fraction[0].isdecimal() == False or fraction[1].isdecimal() == False:
-                    return
+                    pass
                 if int(fraction[0]) > int(fraction[1]):
-                    return
+                    pass
                 result = float(fraction[0]) / float(fraction[1]) * 100
                 print(f'{int(result)}%')
                 return
