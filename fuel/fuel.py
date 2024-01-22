@@ -17,7 +17,7 @@ def main():
                 elif int(fraction[0]) > int(fraction[1]):
                     print(int(fraction[0]) > int(fraction[1]))
                     continue
-                result = float(fraction[0]) / float(fraction[1]) * 100
+                result = round(float(fraction[0]) / float(fraction[1]) * 100, 1)
                 print(f'{int(result)}%')
                 return
             except ValueError:
