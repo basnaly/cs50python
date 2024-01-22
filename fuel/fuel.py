@@ -16,12 +16,12 @@ def main():
                 return
 
             result = round(float(fraction[0]) / float(fraction[1]) * 100)
-            print(result)
             if result <= 1:
                 print('E')
-            if result >= '99%':
+            if result >= 99:
                 print('F')
-            print(f'{int(result)}%')
+            else:
+                print(f'{int(result)}%')
             return
         except ValueError:
             pass
