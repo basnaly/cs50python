@@ -3,7 +3,7 @@ def main():
     while True:
         formatted_fraction = input('Fraction: ')
         try:
-            # Convert user's input to list of 
+            # Split user's input by '/' and get list
             fraction = formatted_fraction.split('/')
             if fraction[0].isdecimal() == False or fraction[1].isdecimal() == False:
                 continue
@@ -16,6 +16,7 @@ def main():
                 print('F')
                 return
 
+            # Calculate percent:
             result = round(float(fraction[0]) / float(fraction[1]) * 100)
             if result <= 1:
                 print('E')
