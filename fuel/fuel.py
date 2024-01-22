@@ -6,7 +6,7 @@ def main():
         if formatted_fraction = '4/4':
             print('F')
             return
-        if formatted_fraction = '0/1':
+        elif formatted_fraction = '0/1':
             print('E')
             return
         else:
@@ -17,4 +17,10 @@ def main():
                 if int(fraction[0]) > int(fraction[1]):
                     return
                 result = float(fraction[0]) / float(fraction[1]) * 100
+                print(f'{int(result)}%')
+            except ValueError:
+                pass
+            except ZeroDivisionError:
+                return
 
+main()
