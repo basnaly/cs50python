@@ -9,7 +9,7 @@ def main():
                 # Add 1 to a count of the same word
                 dict_items[item] += 1
             else:
-                # Set
+                # Set 1 to a count of a new typed word
                 dict_items[item] = 1
             continue
 
