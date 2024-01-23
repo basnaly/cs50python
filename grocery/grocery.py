@@ -1,13 +1,13 @@
 def main():
     dict_items = {}
-    try:
-        item = input().casefold().upper()
-        dict_item[item] = item
-        print(dict)
+    while True:
+        try:
+            item = input().casefold().upper()
+            dict_items[item] = item
+            print(dict_items)
 
-
-    except EOFError:
-        break
+        except EOFError:
+            break
 
 
 
