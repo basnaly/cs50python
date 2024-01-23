@@ -12,9 +12,10 @@ def main():
         except EOFError:
             break
 
-    sorted_dict = dict(sorted(dict_items.item()))
-    print(sorted_dict)
-
+    # From: https://www.freecodecamp.org/news/python-sort-dictionary-by-key/
+    sorted_dict = dict(sorted(dict_items.items()))
+    for item in sorted_dict:
+        print(f'{sorted_dict[item]} {sorted_dict}')
 
 
 main()
