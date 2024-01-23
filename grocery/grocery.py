@@ -1,5 +1,8 @@
 def main():
-    pass
+    try:
+        item = input()
+
+    except: EOFError:
 
 
 main()
