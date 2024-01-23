@@ -1,7 +1,9 @@
 def main():
+    # Define dict of items
     dict_items = {}
     while True:
         try:
+            # Convert user's input to insensitively case with uppercase chars
             item = input().casefold().upper()
             if item in dict_items:
                 dict_items[item] += 1
