@@ -1,8 +1,8 @@
 def main():
     dict_items = {}
     try:
-        item = input()
-        
+        item = input().casefold().upper()
+
 
     except EOFError:
         break
