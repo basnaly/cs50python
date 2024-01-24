@@ -21,30 +21,39 @@ def main():
             list = date.split('/')
             if len(list) == 3: # 7/9/1234
                 year = list[2]
+
                 month = int(list[0])
+                if month > 12:
+                    break
                 if month < 10:
                     month = '0' + str(month)
-                if int(month) > 12:
-                    break
+
                 day = int(list[1])
+                if day > 31:
+                    break
                 if day < 10:
                     day = '0' + str(day)
-                if int(day) > 31:
-                    break
+
             if date[0].isalpha(): # September 8, 1636
                 list = date.split(' ')
                 year = list[2]
+
                 month = MONTHES.index(list[0]) + 1
+                if month > 12:
+                    break
                 if month < 10:
                     month = '0' + str(month)
-                if int(month) > 12:
-                    break
+
                 day = int(list[1].replace(',', ''))
+                if day > 31:
+                    break
                 if day < 10:
                     day = '0' + str(day)
-                if int(day) > 31:
-                    break
+            else:
+                break
+
             break
+
         except ValueError:
             continue
 
