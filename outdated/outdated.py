@@ -14,10 +14,12 @@ MONTHES = [
 ]
 
 def main():
-    date = input('Date: ')
+
     while True:
+        date = input('Date: ')
         try:
             list = date.split('/')
+            print(list)
             if list:
                 year = list[2]
                 # print(f'{year}')
