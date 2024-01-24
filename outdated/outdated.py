@@ -23,7 +23,7 @@ def main():
             if len(list) == 3:
                 year = list[2]
                 print(f'{year}')
-                month = MONTHES.index(int(list[0])) + 1
+                month = list[0]
                 print(f'abc {month}')
                 if month < 10:
                     month = '0' + str(month)
