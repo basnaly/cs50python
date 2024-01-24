@@ -21,14 +21,14 @@ def main():
             list = date.split('/')
             if len(list) == 3: # 7/9/1234
                 year = list[2]
-
+                print(list, list[1])
+                
                 month = int(list[0])
                 if month > 12:
                     break
                 if month < 10:
                     month = '0' + str(month)
 
-                print(list[1])
                 day = int(list[1])
                 if day > 31:
                     break
