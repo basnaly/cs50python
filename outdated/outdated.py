@@ -31,8 +31,10 @@ def main():
                 if day < 10:
                     day = '0' + str(day)
             print(f'{year}-{month}-{day}')
-            if not list:
+            if date[0].isalpha(): # September 8, 1636
                 list = date.split(' ')
+                year = list(2)
+                month = MONTHES.index(int(list[0]))
             break
         except ValueError as e:
             print('cdf', e)
