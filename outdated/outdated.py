@@ -14,7 +14,15 @@ MONTHES = [
 ]
 
 def main():
+    date = input('Date: ')
+    while True:
+        try:
+            list = date.split('/')
+            if list:
+                
 
+        except ValueError:
+            continue
 
 
 main()
