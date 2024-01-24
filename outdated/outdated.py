@@ -21,7 +21,6 @@ def main():
             list = date.split('/')
             if len(list) == 3: # 7/9/1234
                 year = list[2]
-                print(list, list[1])
 
                 month = int(list[0])
                 if month > 12:
