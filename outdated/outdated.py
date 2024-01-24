@@ -20,18 +20,17 @@ def main():
         try:
             list = date.split('/')
             print(list)
-            if len(list) == 3:
+            if len(list) == 3: # 7/9/1234
                 year = list[2]
                 print(f'{year}')
-                month = list[0]
-                print(f'abc {month}')
+                month = int(list[0])
                 if month < 10:
                     month = '0' + str(month)
-
-                day = list[1]
+                print(f'{month}')
+                day = int(list[1])
                 if day < 10:
                     day = '0' + str(day)
-            # print(f'{year}-{month}-{day}')
+            print(f'{year}-{month}-{day}')
             if not list:
                 list = date.split(' ')
             break
