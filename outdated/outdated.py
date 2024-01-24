@@ -21,10 +21,11 @@ def main():
             if list:
                 year = list[2]
                 print(f'{year}')
-                month = MONTHES.index(list[0]) + 1
+                month = int(MONTHES.index(list[0]) + 1)
+                print(f'{month}')
                 if month < 10:
                     month = '0' + str(month)
-                    print(f'{month}')
+
                 #day = list[1]
             #     if day < 10:
             #         day = '0' + str(day)
