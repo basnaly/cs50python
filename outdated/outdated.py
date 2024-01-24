@@ -34,7 +34,7 @@ def main():
                 if day < 10:
                     day = '0' + str(day)
 
-            if date[0].isalpha(): # September 8, 1636
+            elif date[0].isalpha(): # September 8, 1636
                 list = date.split(' ')
                 year = list[2]
 
