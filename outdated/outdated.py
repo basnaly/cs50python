@@ -23,15 +23,17 @@ def main():
                 month = MONTHES.index(list[0]) + 1
                 if month < 10:
                     month = '0' + str(month)
-                day = list[1].replace(',', '')
+                day = list[1]
                 if day < 10:
                     day = '0' + str(day)
-            else:
-                pass
+            print(f'{year}-{month}-{day}')
+            if not list:
+                list = date.split(' ')
             break
-
         except ValueError:
             continue
 
     print(f'{year}-{month}-{day}')
+
+
 main()
