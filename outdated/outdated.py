@@ -22,8 +22,8 @@ def main():
             print(list)
             if len(list) == 3:
                 year = list[2]
-                # print(f'{year}')
-                month = MONTHES.index(list[0]) + 1
+                print(f'{year}')
+                month = MONTHES.index(int(list[0])) + 1
                 print(f'abc {month}')
                 if month < 10:
                     month = '0' + str(month)
@@ -35,7 +35,8 @@ def main():
             if not list:
                 list = date.split(' ')
             break
-        except ValueError:
+        except ValueError as e:
+            print('cdf', e)
             continue
 
     print(f'{year}-{month}-{day}')
