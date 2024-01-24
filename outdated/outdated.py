@@ -24,20 +24,26 @@ def main():
                 month = int(list[0])
                 if month < 10:
                     month = '0' + str(month)
-                day = int(list[1])
-                if month > 12:
+                if int(month) > 12:
                     break
+                day = int(list[1])
                 if day < 10:
                     day = '0' + str(day)
+                if int(day) > 31:
+                    break
             if date[0].isalpha(): # September 8, 1636
                 list = date.split(' ')
                 year = list[2]
                 month = MONTHES.index(list[0]) + 1
                 if month < 10:
                     month = '0' + str(month)
+                if int(month) > 12:
+                    break
                 day = int(list[1].replace(',', ''))
                 if day < 10:
                     day = '0' + str(day)
+                if int(day) > 31:
+                    break
             break
         except ValueError:
             continue
