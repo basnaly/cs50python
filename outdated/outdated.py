@@ -25,7 +25,7 @@ def main():
 
                 month = int(list[0])
                 if month > 12:
-                    continue
+                    return
                 if month < 10:
                     month = '0' + str(month)
 
