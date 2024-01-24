@@ -16,7 +16,7 @@ MONTHES = [
 def main():
 
     while True:
-        date = input('Date: ').
+        date = input('Date: ').strip()
         try:
             list = date.split('/')
             if len(list) == 3: # 7/9/1234
