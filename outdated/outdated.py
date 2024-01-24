@@ -26,6 +26,8 @@ def main():
                 day = list[1].replace(',', '')
                 if day < 10:
                     day = '0' + str(day)
+            else:
+                pass
             break
 
         except ValueError:
