@@ -20,11 +20,11 @@ def main():
         try:
             list = date.split('/')
             print(list)
-            if list:
+            if len(list) == 3:
                 year = list[2]
                 # print(f'{year}')
                 month = MONTHES.index(list[0]) + 1
-                print(f'{month}')
+                print(f'abc {month}')
                 if month < 10:
                     month = '0' + str(month)
 
