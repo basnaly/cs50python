@@ -26,7 +26,7 @@ def main():
                     month = '0' + str(month)
                 day = int(list[1])
                 if month > 12:
-                    
+                    break
                 if day < 10:
                     day = '0' + str(day)
             if date[0].isalpha(): # September 8, 1636
