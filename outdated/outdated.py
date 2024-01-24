@@ -20,15 +20,15 @@ def main():
             list = date.split('/')
             if list:
                 year = list[2]
-                print(f'{year}')
-                month = int(MONTHES.index(list[0]) + 1)
+                # print(f'{year}')
+                month = MONTHES.index(list[0]) + 1
                 print(f'{month}')
                 if month < 10:
                     month = '0' + str(month)
 
-                #day = list[1]
-            #     if day < 10:
-            #         day = '0' + str(day)
+                day = list[1]
+                if day < 10:
+                    day = '0' + str(day)
             # print(f'{year}-{month}-{day}')
             if not list:
                 list = date.split(' ')
@@ -36,7 +36,7 @@ def main():
         except ValueError:
             continue
 
-    # print(f'{year}-{month}-{day}')
+    print(f'{year}-{month}-{day}')
 
 
 main()
