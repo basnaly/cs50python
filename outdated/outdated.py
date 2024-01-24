@@ -44,6 +44,7 @@ def main():
                 if month < 10:
                     month = '0' + str(month)
 
+                if 
                 day = int(list[1].replace(',', ''))
                 if day > 31:
                     continue
