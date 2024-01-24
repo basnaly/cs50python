@@ -22,10 +22,10 @@ def main():
             if len(list) == 3: # 7/9/1234
                 year = list[2]
                 print(list, list[1])
-                
+
                 month = int(list[0])
                 if month > 12:
-                    break
+                    continue
                 if month < 10:
                     month = '0' + str(month)
 
