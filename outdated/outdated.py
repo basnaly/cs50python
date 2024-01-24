@@ -28,11 +28,13 @@ def main():
                 if month < 10:
                     month = '0' + str(month)
 
+                print(list[1])
                 day = int(list[1])
                 if day > 31:
                     break
                 if day < 10:
                     day = '0' + str(day)
+
 
             if date[0].isalpha(): # September 8, 1636
                 list = date.split(' ')
