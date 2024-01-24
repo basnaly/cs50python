@@ -33,6 +33,7 @@ def main():
             print(f'{year}-{month}-{day}')
             if date[0].isalpha(): # September 8, 1636
                 list = date.split(' ')
+                print(list)
                 year = list[2]
                 month = MONTHES.index(int(list[0])) + 1
                 if month < 10:
