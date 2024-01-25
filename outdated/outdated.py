@@ -37,7 +37,6 @@ def main():
                     day = '0' + str(day)
 
             elif len(date_list) == 1: # September 8, 1636
-                print(date_list[0])
                 date_list = date.split(' ')
 
                 year = date_list[2] # '1636'
@@ -49,7 +48,7 @@ def main():
                     month = '0' + str(month)
 
                 day = date_list[1] # '8,'
-                print(len(day))
+
                 if len(day) == 1:
                     continue
                 else:
