@@ -19,8 +19,9 @@ def main():
         date = input('Date: ')
         try:
             date_list = date.split('/') #9/8/1636
+            print(date_list)
             if len(date_list) == 3:
-                print(date_list)
+
                 year = date_list[2] # '1636'
 
                 month = int(date_list[0]) # 9
