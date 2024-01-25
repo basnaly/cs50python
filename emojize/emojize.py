@@ -7,7 +7,7 @@ def main():
             if len(list) == 1:
                 print(f'Output: {emoji.emojize(user_input)}')
             else:
-                index = list.index(':', start)
+                index = list.index(':')
                 print(index)
         except ValueError:
             continue
