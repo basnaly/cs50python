@@ -60,7 +60,7 @@ def main():
         except ValueError:
             continue
 
-    print(f'{year}-{month}-{day}')
+        print(f'{year}-{month}-{day}')
 
 
 main()
