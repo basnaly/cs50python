@@ -4,8 +4,9 @@ def main():
     while True:
         list = input('Input: ').split(' ')
         print(list)
-        
-        index = list.index(':')
+
+        index = 0
+        for 
         print(index)
         try:
             if len(list) == 1:
