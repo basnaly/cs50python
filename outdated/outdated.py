@@ -16,12 +16,14 @@ MONTHES = [
 def main():
 
     while True:
+        # Remove spaces in user's input
         date = input('Date: ').strip()
         try:
+            # Split date string by '/'
             date_list = date.split('/') #9/8/1636
 
             if len(date_list) == 3:
-
+                
                 year = date_list[2] # '1636'
 
                 month = int(date_list[0]) # 9
