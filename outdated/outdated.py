@@ -15,7 +15,13 @@ MONTHES = [
 
 def main():
 
-    
+    while True:
+        date = input('Date: ')
+        try:
+            
+
+        except ValueError:
+            continue
 
     print(f'{year}-{month}-{day}')
 
