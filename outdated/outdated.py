@@ -36,6 +36,7 @@ def main():
                     day = '0' + str(day)
 
             elif date_list[0].isalpha(): # September 8, 1636
+                print(date_list)
 
                 year = date_list[2] # '1636'
 
