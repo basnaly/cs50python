@@ -39,11 +39,23 @@ def main():
 
                 year = date_list[2] # '1636'
 
-                month = MONTHES.index(date_list[1]) + 1
+                month = MONTHES.index(date_list[0]) + 1
                 if month > 12:
                     continue
                 if month < 10:
                     month = '0' + str(month)
+
+                day = date_list[1] # '8,'
+                if len(day) == 1:
+                    continue
+                else:
+                    day = int(day.replace(',', ''))
+                    if day > 31:
+                        continue
+                    if day < 10:
+                        day = '0' + str(day)
+            else:
+                continue
 
         except ValueError:
             continue
