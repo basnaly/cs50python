@@ -4,6 +4,7 @@ def main():
     while True:
         list = input('Input: ').split(' ')
         print(list)
+        
         index = list.index(':')
         print(index)
         try:
