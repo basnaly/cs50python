@@ -18,7 +18,7 @@ def main():
     while True:
         date = input('Date: ')
         try:
-            date_list = date.split('/') #9/8/1636
+            date_list = date.split('/').strip() #9/8/1636
 
             if len(date_list) == 3:
 
