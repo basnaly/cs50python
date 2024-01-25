@@ -18,7 +18,9 @@ def main():
     while True:
         date = input('Date: ')
         try:
-            
+            date_list = date.split('/')
+            if len(date_list) == 3:
+                
 
         except ValueError:
             continue
