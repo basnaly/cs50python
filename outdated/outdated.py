@@ -19,7 +19,7 @@ def main():
         date = input('Date: ')
         try:
             date_list = date.split('/') #9/8/1636
-            print(date_list)
+
             if len(date_list) == 3:
 
                 year = date_list[2] # '1636'
@@ -37,7 +37,8 @@ def main():
                     day = '0' + str(day)
 
             elif date_list[0].isalpha(): # September 8, 1636
-                print(date_list)
+                print(date_list[0])
+                date_list = date.split(' ')
 
                 year = date_list[2] # '1636'
 
