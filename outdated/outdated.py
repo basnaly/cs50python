@@ -16,9 +16,9 @@ MONTHES = [
 def main():
 
     while True:
-        date = input('Date: ')
+        date = input('Date: ').strip()
         try:
-            date_list = date.split('/').strip() #9/8/1636
+            date_list = date.split('/') #9/8/1636
 
             if len(date_list) == 3:
 
@@ -35,6 +35,7 @@ def main():
                     continue
                 if day < 10:
                     day = '0' + str(day)
+                break
 
             elif len(date_list) == 1: # September 8, 1636
                 date_list = date.split(' ')
@@ -57,13 +58,14 @@ def main():
                         continue
                     if day < 10:
                         day = '0' + str(day)
+                break
             else:
                 continue
 
         except ValueError:
             continue
 
-        print(f'{year}-{month}-{day}')
+    print(f'{year}-{month}-{day}')
 
 
 main()
