@@ -7,11 +7,7 @@ def main():
             print(f'Output: {emoji.emojize(list[0])}')
             break
         else:
-            index
-            for string in list:
-                index = string.find(':')
-                if index == 0 and index == -1
-            print(f'Output: {emoji.emojize(list[0])}')
+            print(f'Output: {list[0]} {emoji.emojize(list[1])}')
 
         # try:
         #     if len(list) == 1:
