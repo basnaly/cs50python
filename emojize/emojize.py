@@ -6,14 +6,16 @@ def main():
         print(list)
 
         index = 0
-        for 
+        for string in index:
+            index = string.find(':')
         print(index)
-        try:
-            if len(list) == 1:
-                print(f'Output: {emoji.emojize(user_input)}')
 
-        except ValueError:
-            break
+        # try:
+        #     if len(list) == 1:
+        #         print(f'Output: {emoji.emojize(user_input)}')
+
+        # except ValueError:
+        #     break
 
 
 main()
