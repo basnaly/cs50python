@@ -35,8 +35,15 @@ def main():
                 if day < 10:
                     day = '0' + str(day)
 
-            elif 
+            elif date_list[0].isalpha(): # September 8, 1636
 
+                year = date_list[2] # '1636'
+
+                month = MONTHES.index(date_list[1]) + 1
+                if month > 12:
+                    continue
+                if month < 10:
+                    month = '0' + str(month)
 
         except ValueError:
             continue
