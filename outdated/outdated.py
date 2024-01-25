@@ -23,7 +23,7 @@ def main():
             date_list = date.split('/') #9/8/1636
 
             if len(date_list) == 3:
-                
+
                 year = date_list[2] # '1636'
 
                 month = int(date_list[0]) # 9
@@ -40,10 +40,12 @@ def main():
                 break
 
             elif len(date_list) == 1: # September 8, 1636
+                # Split date string by ' '
                 date_list = date.split(' ')
 
                 year = date_list[2] # '1636'
 
+                # Get index from list of MONTHES
                 month = MONTHES.index(date_list[0]) + 1
                 if month > 12:
                     continue
