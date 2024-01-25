@@ -36,7 +36,7 @@ def main():
                 if day < 10:
                     day = '0' + str(day)
 
-            elif date_list[0].isalpha(): # September 8, 1636
+            elif en(date_list) == 2: # September 8, 1636
                 print(date_list[0])
                 date_list = date.split(' ')
 
