@@ -45,7 +45,7 @@ def main():
 
                 year = date_list[2] # '1636'
 
-                # Get index from list of MONTHES
+                # Get month as number from list of MONTHES
                 month = MONTHES.index(date_list[0]) + 1
                 if month > 12:
                     continue
