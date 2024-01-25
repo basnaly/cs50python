@@ -46,6 +46,7 @@ def main():
                     month = '0' + str(month)
 
                 day = date_list[1] # '8,'
+                print(len(day))
                 if len(day) == 1:
                     continue
                 else:
