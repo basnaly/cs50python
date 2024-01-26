@@ -4,6 +4,8 @@ import sys
 
 figlet = Figlet()
 
+str = input('Input: ')
+
 if len(sys.argv) == 1:
-    random(figlet.getFonts())
-    print()
+    font = random(figlet.getFonts(str))
+    print(font)
