@@ -12,7 +12,7 @@ if len(sys.argv) == 1:
     print(figlet.renderText(str))
 
 if len(sys.argv) == 3:
-    if (sys.argv[1] != '-f' or sys.argv[1] != '--font') and sys.argv[2] not in fonts_list:
+    if sys.argv[1] != '-f' or sys.argv[1] != '--font' and sys.argv[2] not in fonts_list:
         sys.exit('Invalid usage')
     else:
         str = input('Input: ')
