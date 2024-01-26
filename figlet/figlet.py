@@ -18,8 +18,8 @@ elif len(sys.argv) == 3:
     if (argv[1] != '-f' or argv[1] != '--font') and argv[2] not in fonts_list:
         sys.exit('Wrong arguments')
     else:
-
-    # set_font = figlet.setFont(font=random_font)
+        updated_font = figlet.setFont(font=argv[2])
+        print(updated_font)
 
 else:
     sys.exit('Wrong arguments')
