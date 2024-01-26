@@ -17,4 +17,4 @@ elif len(sys.argv) == 3:
     # set_font = figlet.setFont(font=random_font)
 
 else:
-    sys.exit()
+    sys.exit('Wrong arguments')
