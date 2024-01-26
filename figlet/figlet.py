@@ -7,7 +7,7 @@ figlet = Figlet()
 str = input('Input: ')
 
 if len(sys.argv) == 1:
-    font = figlet.getFonts()
-    print(s_font)
+    font = random.choices(figlet.getFonts())
+    print(font)
     # font = figlet.renderText(str)
     # print(font)
