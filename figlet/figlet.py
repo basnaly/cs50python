@@ -4,4 +4,5 @@ import sys
 
 figlet = Figlet()
 
-
+if len(sys.argv) == 1:
+    print()
