@@ -4,7 +4,6 @@ import sys
 
 figlet = Figlet()
 fonts_list = figlet.getFonts()
-print(fonts_list)
 
 str = input('Input: ')
 
