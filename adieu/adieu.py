@@ -1,10 +1,10 @@
 import inflect
 
 p = inflect.engine()
-
+list = ["Adieu", "adieu", "to"]
 
 while True:
-    list = ["Adieu", "adieu", "to"]
+
     try:
         name = input('Name: ')
         list.append(name)
