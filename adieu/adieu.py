@@ -2,5 +2,6 @@ import inflect
 
 p = inflect.engine()
 
-while try:
-    
+while True:
+    name = input('Name: ')
+
