@@ -6,10 +6,11 @@ list = ["Adieu", "adieu", "to"]
 while True:
     try:
         name = input('Name: ')
+        list = p.join(name)
         continue
     except EOFError:
         break
 
-list = p.join(name)
+
 print(list)
 
