@@ -14,5 +14,4 @@ while True:
     except EOFError:
         break
 
- print(list)
-
+print(list)
