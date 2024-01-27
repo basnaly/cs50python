@@ -1,12 +1,12 @@
 import inflect
 
 p = inflect.engine()
-list = []
+list = ["Adieu", "adieu", "to"]
 
 while True:
     try:
         name = input('Name: ')
-        list = p.join("Adieu", "adieu", "to")
+        list = p.join(name)
         continue
     except EOFError:
         break
