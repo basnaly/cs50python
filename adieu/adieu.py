@@ -1,7 +1,7 @@
 import inflect
 
 p = inflect.engine()
-list = ["Adieu", "adieu", "to"]
+list = []
 
 while True:
 
@@ -9,9 +9,9 @@ while True:
         name = input('Name: ')
         list.append(name)
         l = p.join((list), final_sep="")
-        print(l)
+        print("asd "+l)
         continue
     except EOFError:
         break
 
-
+# "Adieu", "adieu", "to"
