@@ -6,7 +6,7 @@ list = ["Adieu", "adieu", "to"]
 while True:
     try:
         name = input('Name: ')
-        list = p.join(name)
+        list = p.join('anc')
         print(list)
         continue
     except EOFError:
