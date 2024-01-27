@@ -1,7 +1,7 @@
 import inflect
 
 p = inflect.engine()
-list = [Adieu, adieu, to]
+list = ["Adieu", "adieu", "to"]
 
 while True:
     try:
