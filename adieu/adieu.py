@@ -8,11 +8,11 @@ while True:
         name = input('Name: ')
         list.append(name)
         l = p.join((list), final_sep="")
-        print(l)
+
         continue
     except EOFError:
         break
 
-
+print(l)
 
 
