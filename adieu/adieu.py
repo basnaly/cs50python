@@ -1,7 +1,14 @@
 import inflect
 
 p = inflect.engine()
+list = [Adieu, adieu, to]
 
 while True:
-    name = input('Name: ')
+    try:
+        name = input('Name: ')
+        continue
+    except EOFError:
+        break
+
+list = p.join(name)
 
