@@ -7,11 +7,11 @@ while True:
     try:
         name = input('Name: ')
         list = p.join(("Adieu", "adieu", "to", name))
-
+        print(list)
         continue
     except EOFError:
         break
 
-print(list)
+
 
 
