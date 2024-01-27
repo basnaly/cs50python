@@ -11,4 +11,5 @@ while True:
         break
 
 list = p.join(name)
+print(list)
 
