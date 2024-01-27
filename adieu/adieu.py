@@ -6,7 +6,7 @@ p = inflect.engine()
 while True:
     try:
         name = input('Name: ')
-        list = p.join((name))
+        list = p.join(("Adieu", "adieu", "to", name))
 
         continue
     except EOFError:
