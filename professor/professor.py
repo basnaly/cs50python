@@ -27,8 +27,8 @@ def generate_integer(level):
     i = 0
     while i < 10:
         if level == 1:
-            x = random.randint(1, 9)
-            y = random.randint(1, 9)
+            x = random.randint(0, 9)
+            y = random.randint(0, 9)
         elif level == 2:
             x = random.randint(10, 99)
             y = random.randint(10, 99)
