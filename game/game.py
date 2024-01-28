@@ -18,9 +18,10 @@ def main():
     while True:
 
         guess = input('Guess: ')
-        guess = int(guess)
+
         if guess.isdecimal() == False:
             continue
+        guess = int(guess)
         if guess < 1:
             continue
         elif guess < random_number:
