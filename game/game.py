@@ -28,8 +28,8 @@ def main():
             print('Too small!')
         elif guess > random_number:
             print('Too large!')
-        else:
-            print('Just right!')
+        print('Just right!')
+        break
 
 
 main()
