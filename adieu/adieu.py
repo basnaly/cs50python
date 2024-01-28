@@ -12,8 +12,6 @@ def main():
             names.append(name)
             list = p.join((names), final_sep="")
 
-            continue
-
         except EOFError:
             break
 
