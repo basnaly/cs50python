@@ -6,8 +6,8 @@ names = []
 
 def main():
     while True:
-        name = input('Name: ')
         try:
+            name = input('Name: ')
             # Add name to the names list
             names.append(name)
             list = p.join((names), final_sep="")
