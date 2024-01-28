@@ -2,7 +2,8 @@ import random
 
 while True:
     level = input('Level: ')
-    if level.isdecimal() == False:
+    if level < 1:
         continue
-    else
+    else:
+        
 
