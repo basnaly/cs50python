@@ -1,7 +1,7 @@
 import inflect
 
 p = inflect.engine()
-list = []
+names = []
 
 def main():
     while True:
@@ -9,7 +9,7 @@ def main():
         try:
             list.append(name)
             l = p.join((list), final_sep="")
-            print(list)
+            print(l)
 
         except EOFError:
             break
