@@ -36,9 +36,10 @@ def generate_integer(level):
             raise ValueError
 
         pattern = input(x + y + ' = ')
+        answer = x + y
 
         i += 1
-
+        continue
 
 
 if __name__ == "__main__":
