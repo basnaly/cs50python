@@ -10,6 +10,7 @@ def get_level():
     while True:
         # Prompt user for level`
         level = input('Level: ')
+        # Convert user's input into integer
         try:
             level = int(level)
         except ValueError:
@@ -27,6 +28,7 @@ def generate_integer(level):
 
     i = 0
     while i < 10:
+        # Get random x and y
         if level == 1:
             x = random.randint(0, 9)
             y = random.randint(0, 9)
@@ -37,6 +39,7 @@ def generate_integer(level):
             x = random.randint(100, 999)
             y = random.randint(100, 999)
 
+        # Check 
         j = 0
         while j < 3:
             pattern = input(str(x) + ' + ' + str(y) + ' = ')
