@@ -2,6 +2,8 @@ import random
 
 def main():
 
+
+
     while True:
 
         level = int(input('Level: '))
@@ -9,6 +11,7 @@ def main():
             continue
         else:
             random_number = random.randint(1, level)
+            
         guess = int(input('Guess: '))
         if guess < 1:
             continue
@@ -18,6 +21,7 @@ def main():
             print('Too large!')
         else:
             print('Just right!')
+        break
 
 
 main()
