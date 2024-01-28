@@ -16,5 +16,4 @@ def main():
         except EOFError:
             break
 
-
 main()
