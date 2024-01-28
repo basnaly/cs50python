@@ -8,6 +8,7 @@ def main():
 
 def get_level():
     while True:
+        # Prompt user for level`
         level = input('Level: ')
         try:
             level = int(level)
@@ -53,7 +54,7 @@ def generate_integer(level):
 
         i += 1
         continue
-    
+
     print(f'Score: {score}')
 
 
