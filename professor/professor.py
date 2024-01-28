@@ -35,10 +35,19 @@ def generate_integer(level):
             y = random.randint(100, 999)
         else:
             raise ValueError
-            
 
         pattern = input(str(x) + ' + ' + str(y) + ' = ')
         answer = x + y
+
+        while j < 2:
+            if answer != int(pattern):
+                input(str(x) + ' + ' + str(y) + ' = ')
+                continue
+            j += 1
+            else:
+                score += 1
+                break
+
 
         i += 1
         continue
