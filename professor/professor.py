@@ -35,8 +35,6 @@ def generate_integer(level):
         else:
             raise ValueError
 
-
-
         j = 0
         while j < 3:
             pattern = input(str(x) + ' + ' + str(y) + ' = ')
