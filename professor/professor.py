@@ -40,7 +40,7 @@ def generate_integer(level):
         sum = x + y
         print(pattern, sum)
 
-        while j < 3:
+        while j < 2:
             if sum == int(pattern):
                 score += 1
                 break
@@ -49,7 +49,6 @@ def generate_integer(level):
                 print('EEE')
                 input(str(x) + ' + ' + str(y) + ' = ')
                 j += 1
-
                 continue
 
         print(f'{x} + {y} = {sum}')
