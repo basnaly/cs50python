@@ -16,7 +16,24 @@ def get_level():
 
 
 def generate_integer(level):
-    ...
+    x = 0
+    y = 0
+    i = 0
+    j = 0
+    score = o
+
+    while i < 10:
+        if level == 1:
+            x = random.randint(1, 9)
+            y = random.randint(1, 9)
+        elif level == 2:
+            x = random.randint(10, 99)
+            y = random.randint(10, 99)
+        elif level == 3:
+            x = random.randint(100, 999)
+            y = random.randint(100, 999)
+        else:
+            raise ValueError
 
 
 if __name__ == "__main__":
