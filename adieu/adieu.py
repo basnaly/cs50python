@@ -7,7 +7,8 @@ names = []
 def main():
     while True:
         try:
-            name = input('Name: ')
+            print('Name: ')
+            name = input()
             # Add name to the names list
             names.append(name)
 
