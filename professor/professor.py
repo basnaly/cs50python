@@ -20,7 +20,7 @@ def generate_integer(level):
     x = 0
     y = 0
     i = 0
-    j = 0
+
     score = 0
 
     while i < 10:
@@ -39,6 +39,7 @@ def generate_integer(level):
         pattern = input(str(x) + ' + ' + str(y) + ' = ')
         sum = x + y
 
+        j = 0
         while j < 2:
             if sum == int(pattern):
                 score += 1
