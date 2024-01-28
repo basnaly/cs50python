@@ -16,6 +16,6 @@ def main():
             break
 
     list = p.join((names), final_sep="")
-    print(f'Adieu, adieu, to {list}')
+    print(f'\nAdieu, adieu, to {list}')
 
 main()
