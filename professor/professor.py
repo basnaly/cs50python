@@ -3,6 +3,7 @@ import random
 
 def main():
     level = get_level()
+    generate_integer(level)
 
 
 def get_level():
@@ -35,7 +36,7 @@ def generate_integer(level):
         else:
             raise ValueError
 
-        pattern = input(x + y + ' = ')
+        pattern = input(str(x) + ' + ' + str(y) + ' = ')
         answer = x + y
 
         i += 1
