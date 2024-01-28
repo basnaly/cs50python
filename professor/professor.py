@@ -39,7 +39,7 @@ def generate_integer(level):
             x = random.randint(100, 999)
             y = random.randint(100, 999)
 
-        # Check 
+        # Check wrong additon 
         j = 0
         while j < 3:
             pattern = input(str(x) + ' + ' + str(y) + ' = ')
