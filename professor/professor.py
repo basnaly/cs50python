@@ -48,10 +48,10 @@ def generate_integer(level):
                 print('EEE')
                 # input(str(x) + ' + ' + str(y) + ' = ')
                 pattern = input(str(x) + ' + ' + str(y) + ' = ')
+                if j == 1:
+                    print(f'{x} + {y} = {sum}')
                 j += 1
                 continue
-
-        print(f'{x} + {y} = {sum}')
 
         i += 1
         continue
