@@ -37,10 +37,11 @@ def generate_integer(level):
             raise ValueError
 
         pattern = input(str(x) + ' + ' + str(y) + ' = ')
-        answer = x + y
+        sum = x + y
+        print(pattern, sum)
 
         while j < 2:
-            if answer != int(pattern):
+            if answer != int(sum):
                 print('EEE')
                 input(str(x) + ' + ' + str(y) + ' = ')
                 continue
