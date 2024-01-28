@@ -41,12 +41,13 @@ def generate_integer(level):
 
         while j < 2:
             if answer != int(pattern):
+                print('EEE')
                 input(str(x) + ' + ' + str(y) + ' = ')
                 continue
             j += 1
-            else:
-                score += 1
-                break
+            # else:
+            #     score += 1
+            #     break
 
 
         i += 1
