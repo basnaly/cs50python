@@ -7,16 +7,12 @@ def main():
     while True:
         name = input('Name: ')
         try:
-            list.append(name)
-            l = p.join((list), final_sep="")
-            print(l)
+            names.append(name)
+            list = p.join((names), final_sep="")
+            print(f'Adieu, adieu, to {list}')
 
         except EOFError:
             break
-
-
-
-# "Adieu", "adieu", "to"
 
 
 main()
