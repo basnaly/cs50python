@@ -9,7 +9,7 @@ def main():
         level = input('Level: ')
         if level.isdecimal() == False:
             continue
-        elif int(level) < 0:
+        elif int(level) < 1:
             continue
         else:
             random_number = random.randint(1, int(level))
