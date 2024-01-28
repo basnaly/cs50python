@@ -2,18 +2,15 @@ import random
 
 
 def main():
-    try:
-        level = get_level()
-        generate_integer(level)
-    except ValueError:
-
+    level = get_level()
+    generate_integer(level)
 
 
 def get_level():
     while True:
         level = input('Level: ')
         level = int(level)
-        if 1 > level > 3:
+        if level < 1 or level > 3:
             continue
         else:
             return level
