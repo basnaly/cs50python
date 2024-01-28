@@ -20,7 +20,7 @@ def generate_integer(level):
     y = 0
     i = 0
     j = 0
-    score = o
+    score = 0
 
     while i < 10:
         if level == 1:
@@ -34,6 +34,8 @@ def generate_integer(level):
             y = random.randint(100, 999)
         else:
             raise ValueError
+
+        pattern = input(x + y)
 
 
 if __name__ == "__main__":
