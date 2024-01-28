@@ -6,12 +6,13 @@ def main():
 
     while True:
 
-        level = int(input('Level: '))
-        
-        if level < 1 and level.isdecimal == False:
+        level = input('Level: ')
+        if level.isdecimal() == False:
+            continue
+        elif int(level) < 1:
             continue
         else:
-            random_number = random.randint(1, level)
+            random_number = random.randint(1, int(level))
             break
 
     while True:
