@@ -44,9 +44,8 @@ def generate_integer(level):
             if sum != int(pattern):
                 print('EEE')
                 input(str(x) + ' + ' + str(y) + ' = ')
-                continue
             j += 1
-        print(f'x + y = {sum}')
+        print(f'{x} + {y} = {sum}')
 
             # else:
             #     score += 1
