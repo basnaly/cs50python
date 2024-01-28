@@ -35,6 +35,7 @@ def generate_integer(level):
             y = random.randint(100, 999)
         else:
             raise ValueError
+            
 
         pattern = input(str(x) + ' + ' + str(y) + ' = ')
         answer = x + y
