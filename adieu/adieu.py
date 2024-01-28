@@ -8,7 +8,7 @@ def main():
         name = input('Name: ')
         try:
             list.append(name)
-            list = p.join((list), final_sep="")
+            l = p.join((list), final_sep="")
             print(list)
 
         except EOFError:
