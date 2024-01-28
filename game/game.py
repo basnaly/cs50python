@@ -1,36 +1,30 @@
 import random
 
-def main():
+while True:
 
-    # random_number = None
+    level = input('Level: ')
+    if level.isdecimal() == False:
+        continue
+    elif int(level) < 1:
+        continue
+    else:
+        random_number = random.randint(1, int(level))
+        break
 
-    while True:
+while True:
 
-        level = input('Level: ')
-        if level.isdecimal() == False:
-            continue
-        elif int(level) < 1:
-            continue
-        else:
-            random_number = random.randint(1, int(level))
-            break
+    guess = input('Guess: ')
 
-    while True:
+    if guess.isdecimal() == False:
+        continue
+    guess = int(guess)
+    if guess < 0:
+        continue
+    elif guess < random_number:
+        print('Too small!')
+    elif guess > random_number:
+        print('Too large!')
+    else:
+        print('Just right!')
+        break
 
-        guess = input('Guess: ')
-
-        if guess.isdecimal() == False:
-            continue
-        guess = int(guess)
-        if guess < 0:
-            continue
-        elif guess < random_number:
-            print('Too small!')
-        elif guess > random_number:
-            print('Too large!')
-        else:
-            print('Just right!')
-            break
-
-
-main()
