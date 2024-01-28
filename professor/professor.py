@@ -41,7 +41,7 @@ def generate_integer(level):
         print(pattern, sum)
 
         while j < 2:
-            if answer != int(sum):
+            if sum != int(pattern):
                 print('EEE')
                 input(str(x) + ' + ' + str(y) + ' = ')
                 continue
