@@ -47,7 +47,7 @@ def generate_integer(level):
             else:
                 print('EEE')
                 input(str(x) + ' + ' + str(y) + ' = ')
-                pattern = input(str(x) + ' + ' + str(y) + ' = ')
+                # pattern = input(str(x) + ' + ' + str(y) + ' = ')
                 j += 1
                 continue
 
