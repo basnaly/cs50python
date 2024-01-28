@@ -19,10 +19,9 @@ def get_level():
 def generate_integer(level):
     x = 0
     y = 0
-    i = 0
-
     score = 0
-
+    
+    i = 0
     while i < 10:
         if level == 1:
             x = random.randint(1, 9)
