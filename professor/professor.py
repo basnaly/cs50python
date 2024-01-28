@@ -8,7 +8,7 @@ def main():
 
 def get_level():
     while True:
-        # Prompt user for level`
+        # Prompt user for level
         level = input('Level: ')
         # Convert user's input into integer
         try:
@@ -28,7 +28,7 @@ def generate_integer(level):
 
     i = 0
     while i < 10:
-        # Get random x and y
+        # Generate random x and y
         if level == 1:
             x = random.randint(0, 9)
             y = random.randint(0, 9)
@@ -39,19 +39,19 @@ def generate_integer(level):
             x = random.randint(100, 999)
             y = random.randint(100, 999)
 
-        # Check wrong additon
+        # Check sum of x and y
         j = 0
         while j < 3:
             pattern = input(str(x) + ' + ' + str(y) + ' = ')
             sum = x + y
-            # If addition was correct, add score
+            # If sum is correct, add score
             if sum == int(pattern):
                 score += 1
                 break
 
             else:
                 print('EEE')
-                # If 3 tries were wrong, show correct answer
+                # If 3 tries are wrong, show the correct sum
                 if j == 2:
                     print(f'{x} + {y} = {sum}')
                 j += 1
