@@ -7,7 +7,7 @@ def main():
     while True:
         name = input('Name: ')
         try:
-            list.append(name)
+            # list.append(name)
             list = p.join((name), final_sep="")
             print(list)
 
