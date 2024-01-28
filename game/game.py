@@ -30,7 +30,6 @@ def main():
             print('Too large!')
         else:
             print('Just right!')
-            break
 
 
 main()
