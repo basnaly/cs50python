@@ -7,7 +7,6 @@ names = []
 def main():
     while True:
         try:
-            print('Name: ')
             name = input()
             # Add name to the names list
             names.append(name)
@@ -17,6 +16,6 @@ def main():
             break
 
     list = p.join((names), final_sep="")
-    print(f'\nAdieu, adieu, to {list}')
+    print(f'Adieu, adieu, to {list}')
 
 main()
