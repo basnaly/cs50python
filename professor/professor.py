@@ -20,7 +20,7 @@ def generate_integer(level):
     x = 0
     y = 0
     score = 0
-    
+
     i = 0
     while i < 10:
         if level == 1:
@@ -47,6 +47,7 @@ def generate_integer(level):
             else:
                 print('EEE')
                 input(str(x) + ' + ' + str(y) + ' = ')
+                pattern = input(str(x) + ' + ' + str(y) + ' = ')
                 j += 1
                 continue
 
