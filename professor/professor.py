@@ -11,10 +11,10 @@ def get_level():
         level = input('Level: ')
         try:
             level = int(level)
-            if level < 1 or level > 3:
-                continue
-        
-
+        except ValueError:
+            continue
+        if level < 1 or level > 3:
+            continue
         else:
             return level
 
