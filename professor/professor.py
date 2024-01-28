@@ -35,19 +35,18 @@ def generate_integer(level):
         else:
             raise ValueError
 
-        pattern = input(str(x) + ' + ' + str(y) + ' = ')
-        sum = x + y
+
 
         j = 0
         while j < 2:
+            pattern = input(str(x) + ' + ' + str(y) + ' = ')
+            sum = x + y
             if sum == int(pattern):
                 score += 1
                 break
 
             else:
                 print('EEE')
-                # input(str(x) + ' + ' + str(y) + ' = ')
-                pattern = input(str(x) + ' + ' + str(y) + ' = ')
                 if j == 1:
                     print(f'{x} + {y} = {sum}')
                 j += 1
