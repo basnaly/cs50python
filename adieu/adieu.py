@@ -11,10 +11,12 @@ def main():
             # Add name to the names list
             names.append(name)
             list = p.join((names), final_sep="")
-            print(f'Adieu, adieu, to {list}')
+
             continue
-        
+
         except EOFError:
             break
+
+    print(f'Adieu, adieu, to {list}')
 
 main()
