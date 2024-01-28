@@ -53,6 +53,8 @@ def generate_integer(level):
 
         i += 1
         continue
+    
+    print(f'Score: {score}')
 
 
 if __name__ == "__main__":
