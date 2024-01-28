@@ -2,8 +2,11 @@ import random
 
 
 def main():
-    level = get_level()
-    generate_integer(level)
+    try:
+        level = get_level()
+        generate_integer(level)
+    except ValueError:
+
 
 
 def get_level():
