@@ -12,7 +12,7 @@ def main():
             names.append(name)
             list = p.join((names), final_sep="")
             print(f'Adieu, adieu, to {list}')
-
+            continue
         except EOFError:
             break
 
