@@ -21,7 +21,8 @@ def main():
     except requests.RequestException:
         print('Error')
 
-def is_
+def is_float(arg)
+    
 
 
 main()
