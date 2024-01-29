@@ -13,11 +13,10 @@ def main():
         response = requests.get(
             'https://api.coindesk.com/v1/bpi/currentprice.json'
         )
-        data = response.json
-        print(data)
-        # currencies = data['bpi']
-        # usd_rate = currencies['USD']['rate_float']
-        # print(usd_rate)
+        data = response.json()
+        usd_rate = data['bpi']['USD']['rate_float']
+        result = float(usd_rate) * float(sys.argv[1])
+        print(f'${result:,.4f}')
 
     except requests.RequestException:
         print('Error')
