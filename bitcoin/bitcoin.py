@@ -21,8 +21,12 @@ def main():
     except requests.RequestException:
         print('Error')
 
-def is_float(arg)
-    
+def is_float(n)
+    try:
+        float(n)
+        return True
+    except ValueError:
+        return False
 
 
 main()
