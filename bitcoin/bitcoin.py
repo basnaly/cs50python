@@ -7,7 +7,7 @@ def main():
     try:
         if len(sys.argv) != 2:
             sys.exit('Missing command-line argument')
-        elif sys.argv[1].isdigit() == False:
+        elif is_float(sys.argv[1]) == False:
             sys.exit('Command-line argument is not a number')
 
         response = requests.get(
