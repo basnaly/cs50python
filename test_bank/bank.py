@@ -1,5 +1,5 @@
 def main():
-    get_money = value(amount)
+    get_money = value(greeting)
     print(f'${get_money}')
 
 
