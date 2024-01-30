@@ -1,13 +1,12 @@
 def main():
-    
-    get_money = value(greeting)
+    greet = input('Greeting: ')
+    get_money = value(greet)
     print(f'${get_money}')
 
 
 def value(greeting):
 
-
-    greet = input('Greeting: ').strip().casefold().split(',')
+    greet = greeting.strip().casefold().split(',')
     # Check the first word in the sentence (if exists)
     if greet[0] == 'hello':
         amount = 0
