@@ -9,16 +9,15 @@ def main():
         sys.exit('Missing command-line argument ')
     try:
         # If user's argument is float save it to amount
-        if float(sys.argv[1]):
-            amount = float(sys.argv[1])
+        amount = float(sys.argv[1])
     except ValueError:
         sys.exit('Command-line argument is not a number ')
 
-    # Create request
+    # Send request
     response = requests.get(
         'https://api.coindesk.com/v1/bpi/currentprice.json'
     )
-    # Get response and transform it to json
+    # Get json from response
     data = response.json()
     usd_rate_float = data['bpi']['USD']['rate_float']
     result = usd_rate_float * amount
