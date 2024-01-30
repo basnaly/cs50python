@@ -5,7 +5,7 @@ def test_lowercase_argument():
     assert shorten('about') == 'bt'
 
 def test_uppercase_vowel():
-    assert shorten('about') == 'bt'
+    assert shorten('Item') == 'tm'
 
 def test_uppercase_argument():
     assert shorten('Room') == 'Rm'
