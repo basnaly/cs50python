@@ -1,4 +1,6 @@
 def main():
+
+    
     vowels = ['a', 'e', 'i', 'o','u']
     string = input('Input: ')
     for char in string:
@@ -8,4 +10,8 @@ def main():
     print(f'Output: {string}')
 
 
-main()
+def shorten(word):
+
+
+if __name__ == '__main__':
+    main()
