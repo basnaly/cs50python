@@ -10,7 +10,7 @@ def shorten(word):
         # Check if char is in the vowels list
         if char.lower() in vowels:
             word = word.replace(char, '')
-        return word
+    return word
 
 if __name__ == '__main__':
     main()
