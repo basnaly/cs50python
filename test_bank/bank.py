@@ -9,13 +9,12 @@ def value(greeting):
     greet = greeting.strip().casefold().split(',')
     # Check the first word in the sentence (if exists)
     if greet[0] == 'hello':
-        amount = 0
+        return 0
     # Check the first letter in the first word of the sentence
     elif greet[0][0] == 'h':
-        amount = 20
+        return 20
     else:
-        amount = 100
-    return amount
+        return 100
 
 
 if __name__ == '__main__':
