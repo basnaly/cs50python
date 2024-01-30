@@ -1,20 +1,21 @@
 def main():
-    get_money = value(greeting)
+    get_money = value(amount)
     print(f'${get_money}')
 
 
 def value(greeting):
-    print(greeting)
 
+    amount = None
     greet = input('Greeting: ').strip().casefold().split(',')
     # Check the first word in the sentence (if exists)
     if greet[0] == 'hello':
-        return 0
+        amount = 0
     # Check the first letter in the first word of the sentence
     elif greet[0][0] == 'h':
-        return 20
+        amount = 20
     else:
-        return 100
+        amount = 100
+    return amount
 
 
 if __name__ == '__main__':
