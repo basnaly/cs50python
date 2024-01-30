@@ -4,7 +4,6 @@ def main():
     print(f'${get_money}')
 
 
-
 def value(greeting):
 
     # Check the first word in the sentence (if exists)
