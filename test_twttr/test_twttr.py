@@ -4,6 +4,9 @@ from twttr import shorten
 def test_lowercase_argument():
     assert shorten('about') == 'bt'
 
+def test_lowercase_argument():
+    assert shorten('about') == 'bt'
+
 def test_uppercase_argument():
     assert shorten('Room') == 'Rm'
 
