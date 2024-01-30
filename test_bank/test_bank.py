@@ -6,3 +6,6 @@ def test_uppercase_argument():
 
 def test_punctuation_argument():
     assert value('Hello, Sir') == 0
+
+def test_alphanumeric_argument():
+    assert value('CS50') == 100
