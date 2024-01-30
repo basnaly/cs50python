@@ -19,6 +19,7 @@ def main():
 
     data = response.json()
     usd_rate_float = data['bpi']['USD']['rate_float']
-    print(usd_rate_float)
+    result = usd_rate_float * amount
+    print(f'${result:,.4f}')
 
 main()
