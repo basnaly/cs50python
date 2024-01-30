@@ -5,7 +5,7 @@ def main():
 
 
 def value(greeting):
-
+    print(greeting)
     # Check the first word in the sentence (if exists)
     if greeting[0] == 'hello':
         return 0
