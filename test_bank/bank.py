@@ -11,4 +11,8 @@ def main():
         print('$100')
 
 
-main()
+def value(greeting):
+
+
+if __name__ == '__main__':
+    main()
