@@ -8,7 +8,7 @@ def main():
     if len(sys.argv) != 2:
         sys.exit('Missing command-line argument ')
     try:
-        elif float(sys.argv[1]):
+        if float(sys.argv[1]):
             amount = float(sys.argv[1])
     except ValueError:
         sys.exit('Command-line argument is not a number ')
