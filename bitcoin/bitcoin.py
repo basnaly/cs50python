@@ -9,8 +9,10 @@ def main():
         print('Missing command-line argument ')
     try:
         elif float(sys.argv[1]):
-
+            amount = float(sys.argv[1])
     except ValueError:
         print('Command-line argument is not a number ')
+
+    
 
 main()
