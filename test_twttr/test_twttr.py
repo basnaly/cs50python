@@ -1,6 +1,6 @@
 import pytest
 
-from twttr import shorten
+import twttr
 
 def test_argument():
     assert shorten('about') == 'bt'
