@@ -25,4 +25,4 @@ def test_empty_argument():
 
 
 def test_exist_persent():
-    assert gauge('50') == '50%'
+    assert gauge(str(50)) == '50%'
