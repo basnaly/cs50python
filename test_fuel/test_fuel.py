@@ -1,3 +1,4 @@
+import pytest
 from fuel import convert, gauge
 
 def test_correct_argument():
@@ -7,7 +8,7 @@ def test_correct_argument():
 #     assert convert('cat/dog') == AttributeError
 
 def test_zero_division():
-    assert pytest.raises(ZeroDivisionError):
+    with pytest.raises(ZeroDivisionError):
         1 / 0
 
 def test_full_argument():
