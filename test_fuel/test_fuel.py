@@ -4,8 +4,9 @@ from fuel import convert, gauge
 def test_correct_argument():
     assert convert('3/4') == 75
 
-# def test_not_numeric_argument():
-#     assert convert('cat/dog') == AttributeError
+def test_not_numeric_argument():
+    with pytest.raises(ValueError, match=r".* cat/dog .*"):
+        convert()
 
 def test_zero_division():
     with pytest.raises(ZeroDivisionError): 1 / 0
