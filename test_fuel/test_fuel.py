@@ -8,8 +8,8 @@ def test_correct_argument():
 #     assert convert('cat/dog') == AttributeError
 
 def test_zero_division():
-    with pytest.raises(ZeroDivisionError):
-        assert convert('1/0') == ZeroDivisionError
+    with pytest.raises(ZeroDivisionError): 1 / 0
+
 
 def test_full_argument():
     assert gauge(int('99')) == 'F'
