@@ -9,7 +9,7 @@ def test_correct_argument():
 
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
-        1 / 0
+        assert convert('1/0') == ZeroDivisionError
 
 def test_full_argument():
     assert gauge(int('99')) == 'F'
