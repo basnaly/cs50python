@@ -5,6 +5,7 @@ def main():
             percentage = convert(fraction)
             result = gauge(percentage)
             print(f'{result}')
+            return
         except ValueError:
             continue
         except ZeroDivisionError:
