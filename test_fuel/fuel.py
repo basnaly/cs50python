@@ -11,7 +11,7 @@ def main():
             return
 
 def convert(fraction):
-        try:
+
             # Split user's input by '/' and get list
             fraction = fraction.split('/')
             if fraction[0].isdecimal() == False or fraction[1].isdecimal() == False:
