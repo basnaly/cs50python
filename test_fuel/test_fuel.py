@@ -9,7 +9,8 @@ def test_not_numeric_argument():
         convert('cat/dog')
 
 def test_zero_division():
-    with pytest.raises(ZeroDivisionError): 1 / 0
+    with pytest.raises(ZeroDivisionError):
+        convert('1/0')
 
 
 def test_full_argument():
