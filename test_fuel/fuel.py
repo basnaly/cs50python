@@ -4,13 +4,12 @@ def main():
     result = gauge(percentage)
     print(f'{result}')
 
-def convert(fraction): 'cat/dog'
-    while True:
+def convert(fraction):
         try:
             # Split user's input by '/' and get list
-            fraction = fraction.split('/') 
+            fraction = fraction.split('/')
             if fraction[0].isdecimal() == False or fraction[1].isdecimal() == False:
-                continue
+                raise ValueError
             if int(fraction[0]) > int(fraction[1]):
                 continue
             if fraction[0] == '0':
