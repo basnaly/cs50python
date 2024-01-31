@@ -16,6 +16,8 @@ def convert(fraction):
     fraction = fraction.split('/')
     if fraction[0].isdecimal() == False or fraction[1].isdecimal() == False:
         raise ValueError
+    if int(fraction[1]) == 0:
+        raise ZeroDivisionError
     if int(fraction[0]) > int(fraction[1]):
         raise ValueError
     if fraction[0] == '0':
