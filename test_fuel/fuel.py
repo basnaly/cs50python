@@ -27,6 +27,7 @@ def convert(fraction):
 
     # Calculate percent:
     percentage = round(float(fraction[0]) / float(fraction[1]) * 100)
+    print(percentage)
     return percentage
 
 
