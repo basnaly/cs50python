@@ -1,8 +1,14 @@
 def main():
-    fraction = input('Fraction: ')
-    percentage = convert(fraction)
-    result = gauge(percentage)
-    print(f'{result}')
+    while True:
+        try:
+            fraction = input('Fraction: ')
+            percentage = convert(fraction)
+            result = gauge(percentage)
+            print(f'{result}')
+        except ValueError:
+            pass
+        except ZeroDivisionError:
+            return
 
 def convert(fraction):
         try:
@@ -11,7 +17,7 @@ def convert(fraction):
             if fraction[0].isdecimal() == False or fraction[1].isdecimal() == False:
                 raise ValueError
             if int(fraction[0]) > int(fraction[1]):
-                continue
+                raise ValueError
             if fraction[0] == '0':
                 return 'E'
             if fraction[0] == fraction[1]:
@@ -21,10 +27,7 @@ def convert(fraction):
             percentage = round(float(fraction[0]) / float(fraction[1]) * 100)
             return percentage
 
-        except ValueError:
-            pass
-        except ZeroDivisionError:
-            return
+
 
 
 def gauge(percentage):
