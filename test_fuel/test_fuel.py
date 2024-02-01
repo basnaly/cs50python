@@ -15,3 +15,15 @@ def test_str_argument():
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         convert('1/0')
+
+
+def test_empty_argument():
+    assert gauge(int('1')) == 'E'
+
+
+def test_full_argument():
+    assert gauge(int('99')) == 'F'
+
+
+def test_persantage_argument():
+    assert gauge(int('75')) == '75%'
