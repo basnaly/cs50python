@@ -11,8 +11,8 @@ def main():
 
         name, extention = sys.argv[1].lstrip().split('.')
         print(name, extention)
-            # if extention != 'py':
-            #     sys.exit('Not a Python file')
+        if extention != 'py':
+            sys.exit('Not a Python file')
 
         try:
             with open(sys.argv[1]) as file:
