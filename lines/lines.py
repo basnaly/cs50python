@@ -16,13 +16,11 @@ def main():
         try:
             with open(sys.argv[1]) as file:
                 for line in file:
-                    count += 1
-
                     if line.lstrip() == '':
                         count -= 1
-                    if  line.startswith('#'):
+                    if line.startswith('#') == True:
                         count -= 1
-
+                    count += 1
                 print(count)
                 break
         except FileNotFoundError:
