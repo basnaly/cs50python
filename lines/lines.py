@@ -19,7 +19,7 @@ def main():
                     count += 1
                     if line == '':
                         count -= 1
-                    if  line.startwith('#'):
+                    if  line.startswith('#'):
                         count -= 1
 
                 print(count)
