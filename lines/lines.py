@@ -21,6 +21,7 @@ def main():
                         count -= 1
                     if line.lstrip().startswith('#') == True:
                         count -= 1
+                print(count)
                 break
         except FileNotFoundError:
             sys.exit('File does not exist')
