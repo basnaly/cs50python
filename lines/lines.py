@@ -19,7 +19,7 @@ def main():
                     count += 1
                     if line.lstrip() == '':
                         count -= 1
-                    if line.lstrip().startswith('#'):
+                    if line.lstrip().startswith('#') == True:
                         count -= 1
                 break
         except FileNotFoundError:
