@@ -10,7 +10,6 @@ def main():
             sys.exit('Too many command-line arguments')
 
         name, extention = sys.argv[1].lstrip().split('.')
-        print(name, extention)
         if extention != 'py':
             sys.exit('Not a Python file')
 
