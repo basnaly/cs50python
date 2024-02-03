@@ -17,6 +17,8 @@ def main():
             with open(sys.argv[1]) as file:
                 for line in file:
                     count += 1
+                    line.lstrip()
+
                     if line == '':
                         count -= 1
                     if  line.startswith('#'):
