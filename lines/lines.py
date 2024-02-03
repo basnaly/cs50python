@@ -9,6 +9,7 @@ def main():
         elif len(sys.argv) > 2:
             sys.exit('Too many command-line arguments')
 
+        # Check if file is python
         name, extention = sys.argv[1].lstrip().split('.')
         if extention != 'py':
             sys.exit('Not a Python file')
@@ -17,6 +18,7 @@ def main():
             # Open file with name in sys.argv[1]
             with open(sys.argv[1]) as file:
                 for line in file:
+                    # If line not an empty string and not comment
                     if line.lstrip() != '' and not line.lstrip().startswith('#'):
                         count += 1
                 print(count)
