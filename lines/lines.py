@@ -14,13 +14,11 @@ def main():
             sys.exit('Not a Python file')
 
         try:
+            # Open file with name in sys.argv[1]
             with open(sys.argv[1]) as file:
                 for line in file:
-                    count += 1
-                    if line.lstrip() == '':
-                        count -= 1
-                    if line.lstrip().startswith('#') == True:
-                        count -= 1
+                    if line.lstrip() != '' and not line.lstrip().startswith('#'):
+                        count += 1
                 print(count)
                 break
         except FileNotFoundError:
