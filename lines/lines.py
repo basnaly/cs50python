@@ -16,6 +16,7 @@ def main():
         try:
             with open(sys.argv[1]) as file:
                 for line in file:
+                    line.lstrip()
                     count += 1
                 print(count)
                 break
