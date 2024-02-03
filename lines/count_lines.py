@@ -1,4 +1,5 @@
 def main():
+
     string = input("camelCase: ").strip()
     # Loop on each char in user's string
     for char in string:
