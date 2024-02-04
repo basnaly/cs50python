@@ -1,5 +1,7 @@
 import sys
+import csv
 from tabulate import tabulate
+
 
 def main():
     if len(sys.argv) < 2:
@@ -14,10 +16,10 @@ def main():
         with open(sys.argv[1]) as file:
             reader = csv.reader(file)
             for row in reader:
-                headers = line.rstrip().split(',')
-                print(headers)
-                name, large, small = line.rstrip().split(',')
-                print(tabulate(name, large, small, headers, tablefmt='grid'))
+                #  headers = line.rstrip().split(',')
+                print(row)
+                # name, large, small = line.rstrip().split(',')
+                # print(tabulate(name, large, small, headers, tablefmt='grid'))
     except FileNotFoundError:
         sys.exit('File does not exist')
 
