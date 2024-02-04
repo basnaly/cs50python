@@ -18,11 +18,12 @@ def main():
             i = 0
             for row in reader:
                 if i == 0:
-                    headers = row
+                    headers = row.rstrip().split(',')
                 print(headers)
-                print(row)
-                name, large, small = line.rstrip().split(',')
+                else:
+                    table = row.rstrip().split(',')
                 i += 1
+                print(table)
                 # print(tabulate(name, large, small, headers, tablefmt='grid'))
     except FileNotFoundError:
         sys.exit('File does not exist')
