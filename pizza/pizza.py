@@ -18,10 +18,9 @@ def main():
             i = 0
             for row in reader:
                 if i == 0:
-                    headers = row.rstrip().split(',')
+                    headers = row.split(',')
                 print(headers)
-                else:
-                    table = row.rstrip().split(',')
+                table = row.rstrip().split(',')
                 i += 1
                 print(table)
                 # print(tabulate(name, large, small, headers, tablefmt='grid'))
