@@ -17,6 +17,7 @@ def main():
             reader = csv.reader(file)
             i = 0
             for row in reader:
+                print(row)
                 if i == 0:
                     headers = row.split(',')
                 print(headers)
