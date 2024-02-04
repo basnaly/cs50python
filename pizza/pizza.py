@@ -23,7 +23,7 @@ def main():
                     headers = row
                     name = headers[0]
                 else:
-                    table.append({'name': row[name], 'large': row['large'], 'small': row['small']})
+                    table.append({'name': row[0], 'large': row[1], 'small': row[2]})
                 i += 1
             print(table)
                 # print(tabulate(name, large, small, headers, tablefmt='grid'))
