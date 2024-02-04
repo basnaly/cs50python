@@ -14,9 +14,9 @@ def main():
         with open(sys.argv[1]) as file:
 
             for line in file:
-                headers = line.split(',')
+                headers = line.rstrip().split(',')
                 print(headers)
-                name, large, small = line[1:].rstrip().split(',')
+                name, large, small = line.rstrip().split(',')
                 print(tabulate(name, large, small, headers, tablefmt='grid'))
     except FileNotFoundError:
         sys.exit('File does not exist')
