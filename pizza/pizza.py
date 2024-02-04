@@ -13,8 +13,10 @@ def main():
     try:
         print(sys.argv[1])
         with open(sys.argv[1]) as file:
+
             for line in file:
-                row = line.rstrip().split('.')
+                headers = line[0].split('.')
+                table = line[1:].rstrip().split('.')
                 print(tabulate(table, headers, tablefmt='grid'))
     except FileNotFoundError:
         sys.exit('File does not exist')
