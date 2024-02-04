@@ -14,10 +14,9 @@ def main():
         with open('sys.argv[1]') as file:
             for line in file:
                 row = line.rstrip().split('.')
-                
-
-
-
+                prit(tabulate(table, headers, tablefmt='grid'))
+    except FileNotFoundError:
+        sys.exit('File does not exist')
 
 
 main()
