@@ -11,7 +11,12 @@ def main():
         sys.exit('Not a CSV file')
 
     try:
-        
+        with open('sys.argv[1]') as file:
+            for line in file:
+                row = line.rstrip().split('.')
+                
+
+
 
 
 
