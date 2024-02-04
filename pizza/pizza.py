@@ -21,12 +21,11 @@ def main():
                 print(row)
                 if i == 0:
                     headers = row
-                    name= headers[0]
-                    print(headers)
+                    name = headers[0]
                 else:
                     table.append({'name': row[name], 'large': row['large'], 'small': row['small']})
-                    i += 1
-                print(table)
+                i += 1
+            print(table)
                 # print(tabulate(name, large, small, headers, tablefmt='grid'))
     except FileNotFoundError:
         sys.exit('File does not exist')
