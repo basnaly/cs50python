@@ -12,6 +12,7 @@ def main():
     if extention != 'csv':
         sys.exit('Not a CSV file')
 
+    table = []
     try:
         with open(sys.argv[1]) as file:
             reader = csv.reader(file)
@@ -19,10 +20,11 @@ def main():
             for row in reader:
                 print(row)
                 if i == 0:
-                    headers = row.split(',')
-                print(headers)
-                table = row.rstrip().split(',')
-                i += 1
+                    headers = row
+                    print(headers)
+                else:
+                    table.append({'name': row['']})
+                    i += 1
                 print(table)
                 # print(tabulate(name, large, small, headers, tablefmt='grid'))
     except FileNotFoundError:
