@@ -17,11 +17,12 @@ def main():
             reader = csv.reader(file)
             i = 0
             for row in reader:
-                if i = 0:
+                if i == 0:
                     headers = row
                 print(headers)
                 print(row)
-                # name, large, small = line.rstrip().split(',')
+                name, large, small = line.rstrip().split(',')
+                i += 1
                 # print(tabulate(name, large, small, headers, tablefmt='grid'))
     except FileNotFoundError:
         sys.exit('File does not exist')
