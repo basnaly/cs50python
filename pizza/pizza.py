@@ -11,7 +11,6 @@ def main():
         sys.exit('Not a CSV file')
 
     try:
-        print(sys.argv[1])
         with open(sys.argv[1]) as file:
             for line in file:
                 headers, table = line.rstrip().split(',')
