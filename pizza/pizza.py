@@ -15,8 +15,11 @@ def main():
     try:
         with open(sys.argv[1]) as file:
             reader = csv.reader(file)
+            i = 0
             for row in reader:
-                #  headers = line.rstrip().split(',')
+                if i = 0:
+                    headers = row
+                print(headers)
                 print(row)
                 # name, large, small = line.rstrip().split(',')
                 # print(tabulate(name, large, small, headers, tablefmt='grid'))
