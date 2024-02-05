@@ -13,9 +13,8 @@ def main():
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             for row in reader:
-                fool_name = row[0:1]
-                # first, last = row[0:1].split(',')
-                print(fool_name)
+                first, last = row['name'].split(',')
+                print(first, last)
 
     except FileNotFoundError:
         sys.exit('File does not exist')
