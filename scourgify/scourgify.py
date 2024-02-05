@@ -11,18 +11,25 @@ def main():
 
     buffer = []
     try:
-        with open(sys.argv[1]) as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                first, last = row['name'].split(',')
-                house = row['house']
-                buffer.append({'first': first, 'last': last, 'house': house})
+        with open(sys.argv[1]) as file_read:
+            with open(sys.argv[2], 'a') as file_write:
+                reader = csv.DictReader(file_read)
+                for row in reader:
+                    first, last = row['name'].split(',')
+                    house = row['house']
 
-        with open(sys.argv[2], 'a') as file:
-            writer = csv.DictWriter(file, fieldnames=['first', 'last', 'house'])
-            writer.writeheader()
-            for row in buffer:
-                writer.writerow(row)
+        # with open(sys.argv[1]) as file:
+        #     reader = csv.DictReader(file)
+        #     for row in reader:
+        #         first, last = row['name'].split(',')
+        #         house = row['house']
+        #         buffer.append({'first': first, 'last': last, 'house': house})
+
+        # with open(sys.argv[2], 'a') as file:
+        #     writer = csv.DictWriter(file, fieldnames=['first', 'last', 'house'])
+        #     writer.writeheader()
+        #     for row in buffer:
+        #         writer.writerow(row)
 
     except FileNotFoundError:
         sys.exit('File does not exist')
