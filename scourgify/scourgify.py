@@ -14,9 +14,13 @@ def main():
         with open(sys.argv[1]) as file_read:
             with open(sys.argv[2], 'a') as file_write:
                 reader = csv.DictReader(file_read)
+                writer = csv.DictWriter(file_write, fieldnames=['first', 'last', 'house'])
+                writer.writeheader()
                 for row in reader:
                     first, last = row['name'].split(',')
                     house = row['house']
+                    writer.writerow({})
+
 
         # with open(sys.argv[1]) as file:
         #     reader = csv.DictReader(file)
