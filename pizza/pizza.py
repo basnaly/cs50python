@@ -15,9 +15,11 @@ def main():
 
     table = []
     try:
+        # Open file with name in sys.argv[1]
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             for row in reader:
+                # Add row to the table list
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt="grid"))
     except FileNotFoundError:
