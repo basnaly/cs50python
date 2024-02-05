@@ -14,7 +14,11 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 first, last = row['name'].split(',')
-                print(first, last)
+                house = row['house']
+
+        with open(sys.argv[2], 'a') as file:
+            writer = csv.DictWriter(file, fieldnames=['first', 'last', 'house'])
+            writer.writerow({'first': first, 'last': last, 'house': house})
 
     except FileNotFoundError:
         sys.exit('File does not exist')
