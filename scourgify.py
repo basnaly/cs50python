@@ -10,6 +10,8 @@ def main():
         sys.exit('Too many command-line arguments')
 
     try:
+        with open(sys.argv[1]) as file:
+            reader = DictReader(file)
 
 
 
