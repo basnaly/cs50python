@@ -17,6 +17,7 @@ def main():
                 first, last = row['name'].split(',')
                 house = row['house']
                 before.append({'first': first, 'last': last, 'house': house})
+            print(before)
 
         with open(sys.argv[2], 'a') as file:
             writer = csv.DictWriter(file, fieldnames=['first', 'last', 'house'])
