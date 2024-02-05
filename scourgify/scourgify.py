@@ -11,10 +11,14 @@ def main():
 
     try:
         with open(sys.argv[1]) as file:
-            reader = DictReader(file)
+            reader = csv.DictReader(file)
             for row in reader:
-                first, last = row.split('""')
-                print(first, last)
+                fool_name = row[0:1]
+                # first, last = row[0:1].split(',')
+                print(fool_name)
+
+    except FileNotFoundError:
+        sys.exit('File does not exist')
 
 
 
