@@ -19,7 +19,7 @@ def main():
                 for row in reader:
                     first, last = row['name'].split(',')
                     house = row['house']
-                    writer.writerow({})
+                    writer.writerow({'first': first, 'last': last, 'house': house})
 
 
         # with open(sys.argv[1]) as file:
