@@ -21,7 +21,7 @@ def main():
         with open(sys.argv[2], 'a') as file:
             writer = csv.DictWriter(file, fieldnames=['first', 'last', 'house'])
             writer.writeheader()
-            writer.writerow({'first': first, 'last': last, 'house': house})
+            writer.writerow(before)
 
     except FileNotFoundError:
         sys.exit('File does not exist')
