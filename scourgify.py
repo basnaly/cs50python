@@ -12,6 +12,9 @@ def main():
     try:
         with open(sys.argv[1]) as file:
             reader = DictReader(file)
+            for row in reader:
+                first, last = row.split('""')
+                print(first, last)
 
 
 
