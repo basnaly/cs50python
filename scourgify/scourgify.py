@@ -12,6 +12,7 @@ def main():
     try:
         with open(sys.argv[1]) as reader_file:
             reader = csv.DictReader(reader_file)
+            for row in reader:
 
     except FileNotFoundError:
         sys.exit(f'Could not read {sys.argv[1]} file')
