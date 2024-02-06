@@ -10,7 +10,7 @@ def main():
 
     # 2-nd concept. Open sys.argv[1] file. Open sys.argv[2] file. Read from sys.argv[1] file.
     # Prepare to write data to sys.argv[2] file and create headers into sys.argv[2] file
-    # Write data directly from sys.argv[1] file to sys.argv[2] file using loop.
+    # Write data line by line from sys.argv[1] file to sys.argv[2] file using loop.
     try:
         with open(sys.argv[1]) as reader_file:
             with open(sys.argv[2], 'a') as writer_file:
