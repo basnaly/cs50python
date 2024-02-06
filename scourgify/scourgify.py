@@ -13,7 +13,7 @@ def main():
     # Write data line by line from sys.argv[1] file to sys.argv[2] file using loop.
     try:
         with open(sys.argv[1]) as reader_file:
-            with open(sys.argv[2], 'a') as writer_file:
+            with open(sys.argv[2], 'w') as writer_file:
                 reader = csv.DictReader(reader_file)
                 writer = csv.DictWriter(writer_file, fieldnames=['first', 'last', 'house'])
                 writer.writeheader()
