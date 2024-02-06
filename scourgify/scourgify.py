@@ -36,7 +36,7 @@ main()
     #     with open(sys.argv[1]) as reader_file:
     #         reader = csv.DictReader(reader_file)
     #         for row in reader:
-    #             first, last = row['name'].split(',')
+    #             last, first = row['name'].split(', ')
     #             house = row['house']
     #             buffer.append({'first': first, 'last': last, 'house': house})
 
