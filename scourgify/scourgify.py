@@ -9,8 +9,8 @@ def main():
         sys.exit('Too many command-line arguments')
 
     # 2-nd concept. Open sys.argv[1] file. Open sys.argv[2] file. Read data from sys.argv[1] file.
-    # Write data to sys.argv[2] file and create headers into sys.argv[2] file
-    # After that open sys.argv[2] file, create headers, write data from buffer to the file using loop.
+    # Prepare to write data to sys.argv[2] file and create headers into sys.argv[2] file
+    # Write data from sys.argv[1] file to sys.argv[2] file using loop.
     try:
         with open(sys.argv[1]) as reader_file:
             with open(sys.argv[2], 'a') as writer_file:
