@@ -10,7 +10,7 @@ def main():
 
 def parse(s):
 
-    url = re.search(r'^https?://{?:www\.}$', s)
+    url = re.search(r'^https?://(?:www\.)youtu.be[^\.com/embed]/$', s)
     return url
 
 
