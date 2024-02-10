@@ -10,11 +10,8 @@ def main():
 
 def parse(s):
 
-    url = re.search(r'^https?://(?:www\.)youtu.be[^\.com/embed]/$', s)
+    url = re.search(r'^https?://(?:www\.)youtu.be[^\.com/embed]/(.+)$', s)
     return url
-
-
-
 
 
 if __name__ == "__main__":
