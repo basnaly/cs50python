@@ -2,7 +2,7 @@ import re
 import sys
 
 
-def nain():
+def main():
     print(validate(input('IPv4 Address: ')))
 
 
