@@ -12,7 +12,7 @@ def validate(ip):
     # 200-249 2[0-4][0-9]
     # 250-255 25[0-5]
 
-    regex_pattern = '([0-1]?[0-9]?[0-9]?)(2[0-4][0-9])(25[0-5])'
+    regex_pattern = '(25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9]?)'
 
     if re.search(f"r'^{regex_pattern}\.{regex_pattern}\.{regex_pattern}\.{regex_pattern}$'", ip):
         return True
