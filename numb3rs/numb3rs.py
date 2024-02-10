@@ -14,7 +14,7 @@ def validate(ip):
 
     regex_pattern = r'(25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9]?)'
 
-    if re.search(f"^{regex_pattern}\.{regex_pattern}\.{regex_pattern}\.{regex_pattern}$", ip):
+    if re.search(fr'^{regex_pattern}\.{regex_pattern}\.{regex_pattern}\.{regex_pattern}$', ip):
         return True
     return False
 
