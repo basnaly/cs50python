@@ -10,7 +10,7 @@ def main():
 
 def parse(s):
 
-    url = re.search(r'^$', s)
+    url = re.search(r'^https?://$', s)
     return url
 
 
