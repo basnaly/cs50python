@@ -13,7 +13,7 @@ def main():
 def parse(s):
 
     string = 'https://youtu.be/'
-    a = re.search(r'^(?:.+src=")(?:https?://)(?:www\.youtube\.com/)(?:embed)(/[a-zA-Z0-9]+)(?:".+)$', s)
+    a = re.search(r'^(?:.+src=")(?:https?://)(?:(?:www\.)?youtube\.com/)(?:embed/)([a-zA-Z0-9]+)(?:".+)$', s)
     if a is None:
         return None
     return string + a.group(1)
