@@ -9,7 +9,9 @@ def main():
 
 
 def parse(s):
-    ...
+
+    url = re.search(r'^$', s)
+    return url
 
 
 
