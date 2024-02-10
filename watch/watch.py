@@ -3,6 +3,8 @@ import sys
 
 
 # https://youtu.be/xvFZjo5PgG0
+# http://youtube.com/embed/xvFZjo5PgG0
+
 
 def main():
     print(parse(input("HTML: ")))
@@ -12,7 +14,7 @@ def parse(s):
 
     # url = re.search(r"^https?://(?:www\.)youtu.be[^\.com/embed]/(.+)$", s)
 
-    url = re.search(r"^(https?://).+$", s)
+    url = re.search(r"^.+(https?://).+$", s)
     return url.group(0)
 
 
