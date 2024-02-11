@@ -11,7 +11,7 @@ def parse(s):
 
     address = 'https://youtu.be/'
 
-    string = re.search(r'^(?:.+)(?:https?://(?:www\.)?)(?:youtube\.com/)(?:embed/)([a-zA-Z0-9]+)(?:.+)$', s)
+    string = re.search(r'^(?:.+)(?:https?://(?:www\.)?)(?:youtube\.com/embed/)([a-zA-Z0-9]+)(?:.+)$', s)
     if string is None:
         return None
     return address + string.group(1)
