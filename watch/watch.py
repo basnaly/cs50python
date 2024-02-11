@@ -7,7 +7,11 @@ def main():
 
 def parse(s):
 
-    url = re.search()
+
+    url = re.search(r'^@', s)
+    if url is None:
+        return None
+    return url
 
 
 if __name__ == "__main__":
