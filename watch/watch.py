@@ -7,7 +7,7 @@ def main():
 
 def parse(s):
 
-
+    url = re.search()
 
 
 if __name__ == "__main__":
