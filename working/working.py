@@ -10,8 +10,10 @@ def convert(s):
     try:
         data = s.split(' ')
         # ['9:00', 'AM', 'to', '5:00', 'PM']
+        print(data[0])
 
     except ValueError:
+        sys.exit('Value error')
 
 
 
