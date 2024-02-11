@@ -13,7 +13,7 @@ def parse(s):
     str = re.search(r'^(?:.+src=")(?:https?://)(?:(?:www\.)?youtube\.com/)(?:embed/)([a-zA-Z0-9]+)(?:".+)@', s)
     if str is None:
         return None
-    return address + str
+    return address + str.
 
 
 if __name__ == "__main__":
