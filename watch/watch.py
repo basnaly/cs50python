@@ -8,8 +8,8 @@ def main():
 def parse(s):
 
     address = 'https://youtu.be/'
-    url = re.search(r'^@', s)
-    if url is None:
+    str = re.search(r'^@', s)
+    if str is None:
         return None
     return url
 
