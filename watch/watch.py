@@ -11,10 +11,12 @@ def parse(s):
 
     address = 'https://youtu.be/'
 
-    str = re.search(r'^(?:.+src=")(?:https?://)(?:(?:www\.)?youtube\.com/)(?:embed/)([a-zA-Z0-9]+)(?:".+)@', s)
-        if str is None:
-            return None
-    return address + str.group(1)
+    a = re.search(r'^(?:.+src=")(?:https?://)(?:(?:www\.)?youtube\.com/)(?:embed/)([a-zA-Z0-9]+)(?:".+)$', s)
+
+    a = re.search(r'^(?:.+src=")(?:https?://)(?:(?:www\.)?youtube\.com/)(?:embed/)([a-zA-Z0-9]+)(?:".+)@', s)
+    if a is None:
+        return None
+    return address + a.group(1)
 
 
 if __name__ == "__main__":
