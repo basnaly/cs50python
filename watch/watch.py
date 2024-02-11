@@ -8,10 +8,10 @@ def main():
 def parse(s):
 
     address = 'https://youtu.be/'
-    str = re.search(r'^(?:.+")(?:https?://)(?:)@', s)
+    str = re.search(r'^(?:.+"?)(?:https?://)(?:(?:www\.)?youtube\.com/embed/)([a-zA-Z0-9])(?:".+)@', s)
     if str is None:
         return None
-    return url
+    return address + str
 
 
 if __name__ == "__main__":
