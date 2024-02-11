@@ -9,8 +9,9 @@ def main():
 def convert(s):
     try:
         data = s.split(' ')
-        # ['9:00', 'AM', 'to', '5:00', 'PM']
-        print(data[0])
+        m_time, am, to, e_time, pm = ['9:00', 'AM', 'to', '5:00', 'PM']
+        # print(m_time[0])
+        if 
 
     except ValueError:
         sys.exit('Value error')
