@@ -7,8 +7,11 @@ def main():
 
 
 def convert(s):
-    data = s.split(' ')
-    print(data)
+    try:
+        data = s.split(' ')
+        # ['9:00', 'AM', 'to', '5:00', 'PM']
+
+    except ValueError:
 
 
 
