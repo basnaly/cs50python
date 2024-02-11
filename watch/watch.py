@@ -10,7 +10,7 @@ def main():
 def parse(s):
 
     address = 'https://youtu.be/'
-    str = re.search(r'^(?:(.+=")?)(?:https?://)(?:(?:www\.)?youtube\.com/embed/)([a-zA-Z0-9]+)(?:".+)@', s)
+    str = re.search(r'^(?:.+")(?:https?://)(?:(?:www\.)?youtube\.com/embed/)([a-zA-Z0-9]+)(?:".+)@', s)
     if str is None:
         return None
     return address + str
