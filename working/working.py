@@ -17,7 +17,7 @@ def convert(s):
 
         data = re.search(fr'^({hours}+)(:{minutes}+)( AM)(?: to )({hours}+)(:{minutes}+)( PM+)$', s)
         start_hour, start_minutes, am, end_hour, end_minutes, pm = data.groups()
-        print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
+        # print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
         # 9 :00  AM 5 :00  PM
 
         start_time = start_hour + start_minutes
