@@ -12,8 +12,8 @@ def convert(s):
         hours = r'2[0-4]|1[0-9]|[0-9]'
         minutes = r'[0-59]'
 
-        matches = re.search(fr'^({hours})$')
-        print(matches.gtoup(1))
+        matches = re.search(fr'^({hours})$', s)
+        print(matches.group(1))
 
     except:
         raise ValueError
