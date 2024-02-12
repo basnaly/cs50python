@@ -21,9 +21,9 @@ def convert(s):
         # 9 :00  AM 5 :00  PM
 
         if start_minutes is None:
-            start_minutes == ':00'
+            start_minutes = ':00'
         if end_minutes is None:
-            end_minutes == ':00'
+            end_minutes = ':00'
 
         start_time = start_hour + start_minutes
         end_time = end_hour + end_minutes
