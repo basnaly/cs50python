@@ -16,13 +16,15 @@ def convert(s):
         minutes = r'[0-59]'
 
         data = re.search(fr'^({hours}+)(:{minutes}+)?( AM)(?: to )({hours}+)(:{minutes}+)?( PM+)$', s)
-        start_hour, start_minutes, am, end_hour, end_minutes, pm = data.groups(':00')
+        start_hour, start_minutes, am, end_hour, end_minutes, pm = data.groups()
         # print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
         # 9 :00  AM 5 :00  PM
 
         start_time = start_hour + start_minutes
         end_time = end_hour + end_minutes
 
+        if minutes is None:
+            minutes == ':00'
 
         if am.lstrip() == 'AM' and int(start_hour) < 10:
             start_time = '0' + start_hour + start_minutes
