@@ -28,6 +28,9 @@ def convert(s):
         if start_format.lstrip() == 'AM' and int(start_hour) < 10:
             start_time = '0' + start_hour + start_minutes
 
+        if start_format.lstrip() == 'AM' and start_hour == '12:00'
+            start_time = '00:00'
+
         if start_format.lstrip() == 'PM':
             start_time = str(int(start_hour) + 12) + start_minutes
 
