@@ -12,13 +12,11 @@ def convert(s):
         hours = r'2[0-4]|1[0-9]|[0-9]?'
         minutes = r'[0-59]'
 
-        matches = re.search(fr'^({hours})$')
+        matches = re.search(fr'^({hours}:)$')
+        print(matches)
 
-
-    except raise ValueError
-
-
-
+    except:
+        raise ValueError
 
 
 if __name__ == "__main__":
