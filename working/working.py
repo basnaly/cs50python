@@ -13,7 +13,7 @@ def convert(s):
         minutes = r'[0-59]'
 
         matches = re.search(fr'^({hours})$')
-        print(matches)
+        print(matches.gtoup(1))
 
     except:
         raise ValueError
