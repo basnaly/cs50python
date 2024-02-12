@@ -20,9 +20,9 @@ def convert(s):
         print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
         # 9 :00  AM 5 :00  PM
 
-        if am == 'AM':
-            start_time = start_hour, start_minutes
-        print(start_time)
+        # if am == 'AM':
+        #     start_time = start_hour, start_minutes
+        print(start_hour + start_minutes)
 
     except:
         raise ValueError
