@@ -23,6 +23,11 @@ def convert(s):
         start_time = start_hour + start_minutes
         end_time = end_hour + end_minutes
 
+        if start_minutes is None:
+            start_minutes == ''
+        if end_minutes is None:
+            end_minutes == ''
+
         if am.lstrip() == 'AM' and int(start_hour) < 10:
             start_time = '0' + start_hour + start_minutes
         print(start_time)
