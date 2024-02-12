@@ -15,7 +15,7 @@ def convert(s):
         hours = r'2[0-4]|1[0-9]|[0-9]'
         minutes = r'[0-59]'
 
-        data = re.search(fr'^({hours}+)(:{minutes}+)( AM)(?: to )({hours}+)(:{minutes}+)( PM+)$', s)
+        data = re.search(fr'^({hours}+)(:{minutes}+)?( AM)(?: to )({hours}+)(:{minutes}+)?( PM+)$', s)
         start_hour, start_minutes, am, end_hour, end_minutes, pm = data.groups()
         # print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
         # 9 :00  AM 5 :00  PM
@@ -23,12 +23,14 @@ def convert(s):
         start_time = start_hour + start_minutes
         end_time = end_hour + end_minutes
 
-        print(am, start_hour)
         if am.lstrip() == 'AM' and int(start_hour) < 10:
             start_time = '0' + start_hour + start_minutes
         print(start_time)
 
-        if 
+        if pm.lstrip() == 'PM':
+            end_time = str(int(end_hour) + 12) + end_minutes
+
+        return start_time + ' to ' + end_time
 
     except:
         raise ValueError
