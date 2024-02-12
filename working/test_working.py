@@ -12,4 +12,5 @@ def test_incorrect_version():
 
 
 def test_omit_minutes():
-    assert convert('9:20 AM 5:00 PM') == '09:20 to 17:00'
+    with pytest.raises(ValueError):
+        convert('9:00 AM to 5: PM')
