@@ -15,7 +15,7 @@ def convert(s):
         hours = r'2[0-4]|1[0-9]|[0-9]'
         minutes = r'[0-59]'
 
-        data = re.search(fr'^({hours})(:{minutes})?( PM)(?: to )({hours})(:{minutes})?( AM)$', s)
+        data = re.search(fr'^({hours})(:{minutes})?( [A|P]M)(?: to )({hours})(:{minutes})?( [A|P]M)$', s)
         start_hour, start_minutes, start_format, end_hour, end_minutes, end_format = data.groups(':00')
         # print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
         # 9 :00  AM 5 :00  PM
