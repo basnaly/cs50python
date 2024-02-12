@@ -8,14 +8,15 @@ def main():
 
 def convert(s):
     try:
-        m_time, am, to, e_time, pm = = s.split(' ')
-        # ['9:00', 'AM', 'to', '5:00', 'PM']
-        # print(m_time[0])
-        if m_time[0] > 12 or e_time[0] > 12
+        # 24: 2[0-4] 1[0-9] [0-9]
+        hours = r'2[0-4]|1[0-9]|[0-9]?'
+        minutes = r'[0-59]'
+
+        matches = re.search(fr'^() $')
 
 
-    except ValueError:
-        sys.exit('Value error')
+    except raise ValueError
+
 
 
 
