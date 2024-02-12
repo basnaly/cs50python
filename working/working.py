@@ -24,9 +24,11 @@ def convert(s):
         end_time = end_hour + end_minutes
 
         print(am, start_hour)
-        if am == 'AM' and int(start_hour) < 10:
+        if am.lstrip() == 'AM' and int(start_hour) < 10:
             start_time = '0' + start_hour + start_minutes
         print(start_time)
+
+        if 
 
     except:
         raise ValueError
