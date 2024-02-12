@@ -14,10 +14,10 @@ def convert(s):
         hours = r'2[0-4]|1[0-9]|[0-9]'
         minutes = r'[0-59]'
 
-        data = re.search(fr'^({hours}+)(:{minutes}+)$', s)
-        start_hour, start_minutes = data.groups()
+        data = re.search(fr'^({hours}+)(:{minutes}+)( AM)$', s)
+        start_hour, start_minutes, am = data.groups()
         print(start_hour, start_minutes)
-        # print(a.group(1), a.group(2))
+        # print(a.group(1), a.group(2), a.group(3))
 
     except:
         raise ValueError
