@@ -21,6 +21,8 @@ def convert(s):
         # 9 :00  AM 5 :00  PM
 
         start_time = start_hour + start_minutes
+        end_time = end_hour + end_minutes
+
         if am == 'AM' and start_hour < 10:
             start_time = '0' + start_hour + start_minutes
         print(start_time)
