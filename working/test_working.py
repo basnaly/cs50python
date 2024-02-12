@@ -1,4 +1,5 @@
 from working import convert
+import pytest
 
 
 def test_correct_version():
@@ -6,4 +7,6 @@ def test_correct_version():
 
 
 def test_incorrect_version():
-    assert convert('9:60 AM to 5:60 PM')
+    with pytest.raises(ValueError):
+        convert('9:60 AM to 5:60 PM')
+
