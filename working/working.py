@@ -15,31 +15,26 @@ def convert(s):
         hours = r'2[0-4]|1[0-9]|[0-9]'
         minutes = r'[0-59]'
 
-        data = re.search(fr'^({hours})(:{minutes})?( A|PM)(?: to )({hours})(:{minutes})?( A|PM)$', s)
-        start_hour, start_minutes, am, end_hour, end_minutes, pm = data.groups(':00')
+        data = re.search(fr'^({hours})(:{minutes})?( [A|P]M)(?: to )({hours})(:{minutes})?( [A|P]M)$', s)
+        start_hour, start_minutes, start_format, end_hour, end_minutes, end_format = data.groups(':00')
         # print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
         # 9 :00  AM 5 :00  PM
-
-        # if start_minutes is None:
-        #     start_minutes = ':00'
-        # if end_minutes is None:
-        #     end_minutes = ':00'
 
         start_time = start_hour + start_minutes
         end_time = end_hour + end_minutes
 
 
 
-        if am.lstrip() == 'AM' and int(start_hour) < 10:
+        if start_format.lstrip() == 'AM' and int(start_hour) < 10:
             start_time = '0' + start_hour + start_minutes
 
-        if am.lstrip() == 'PM':
+        if start_format.lstrip() == 'PM':
             start_time = str(int(start_hour) + 12) + start_minutes
 
-        if pm.lstrip() == 'PM':
+        if end_format.lstrip() == 'PM':
             end_time = str(int(end_hour) + 12) + end_minutes
 
-        if pm.lstrip() == 'AM' and int(end_hour) < 10:
+        if end_format.lstrip() == 'AM' and int(end_hour) < 10:
             end_time = '0' + end_hour + end_minutes
 
         return start_time + ' to ' + end_time
