@@ -15,15 +15,15 @@ def convert(s):
         hours = r'2[0-4]|1[0-9]|[0-9]'
         minutes = r'[0-59]'
 
-        data = re.search(fr'^({hours}+)(:{minutes}+)?( AM)(?: to )({hours}+)(:{minutes}+)?( PM+)$', s)
-        start_hour, start_minutes, am, end_hour, end_minutes, pm = data.groups()
+        data = re.search(fr'^({hours}+)(:{minutes})?( A|PM)?(?: to )({hours}+)(:{minutes}+)?( A|PM+)$', s)
+        start_hour, start_minutes, am, end_hour, end_minutes, pm = data.groups(':00')
         # print(start_hour, start_minutes, am, end_hour, end_minutes, pm)
         # 9 :00  AM 5 :00  PM
 
-        if start_minutes is None:
-            start_minutes = ':00'
-        if end_minutes is None:
-            end_minutes = ':00'
+        # if start_minutes is None:
+        #     start_minutes = ':00'
+        # if end_minutes is None:
+        #     end_minutes = ':00'
 
         start_time = start_hour + start_minutes
         end_time = end_hour + end_minutes
