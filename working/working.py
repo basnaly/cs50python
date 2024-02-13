@@ -62,6 +62,9 @@ def convert(s):
         if start_format.lstrip() == 'AM' and int(start_hour) < 10:
             start_time = '0' + start_hour + start_minutes
 
+        elif start_format.lstrip() == 'AM':
+            start_time = start_hour + start_minutes
+
         if start_format.lstrip() == 'AM' and int(start_hour) == 12:
             start_time = '00' + start_minutes
 
