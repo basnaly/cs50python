@@ -72,11 +72,11 @@ def convert(s):
         if end_format.lstrip() == 'AM' and int(end_hour) < 10:
             end_time = '0' + end_hour + end_minutes
 
-        if end_format.lstrip() == 'PM' and int(end_hour) == 12:
-            end_time = '12' + end_minutes
-
         if end_format.lstrip() == 'PM':
             end_time = str(int(end_hour) + 12) + end_minutes
+
+        if end_format.lstrip() == 'PM' and int(end_hour) == 12:
+            end_time = '12' + end_minutes
 
         return start_time + ' to ' + end_time
 
