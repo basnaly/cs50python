@@ -78,6 +78,9 @@ def convert(s):
         if end_format.lstrip() == 'AM' and int(end_hour) < 10:
             end_time = '0' + end_hour + end_minutes
 
+        elif end_format.lstrip() == 'AM':
+            end_time = end_hour + end_minutes
+
         if end_format.lstrip() == 'AM' and int(end_hour) == 12:
             end_time = '12' + end_minutes
 
