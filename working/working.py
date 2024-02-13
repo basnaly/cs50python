@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    try:
+    # try:
 
     #     # 9:00 AM to 5:00 PM
     #     # 09:00 AM to 5:00 PM
