@@ -76,7 +76,7 @@ def convert(s):
             end_time = '12' + end_minutes
 
         if end_format.lstrip() == 'PM':
-            end_hour = str(int(end_hour) + 12)
+            end_time = str(int(end_hour) + 12) + end_minutes
 
         return start_time + ' to ' + end_time
 
