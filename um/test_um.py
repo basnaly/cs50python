@@ -15,4 +15,4 @@ def test_dots_argument():
 
 
 def test_uppercase_argument():
-    assert count('')
+    assert count('boundary', Um, helps, ums, to )
