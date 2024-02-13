@@ -60,14 +60,14 @@ def convert(s):
         # print(start_hour, start_minutes, start_format, end_hour, end_minutes, end_format)
 
         if start_format.lstrip() == 'AM' and int(start_hour) < 10:
-            start_hour = '0' + start_hour
+            start_time = '0' + start_hour + start_minutes
 
         if start_format.lstrip() == 'AM' and int(start_hour) == 12:
-            start_hour = '00'
+            start_time = '00' + start_minutes
 
         if start_format.lstrip() == 'PM':
-            start_hour = str(int(start_hour) + 12)
-            
+            start_time = str(int(start_hour) + 12) + start_minutes
+
 
         if end_format.lstrip() == 'AM' and int(end_hour) < 10:
             end_hour = '0' + end_hour
@@ -82,7 +82,7 @@ def convert(s):
         if end_format.lstrip() == 'PM':
             end_hour = str(int(end_hour) + 12)
 
-        return start_hour + start_minutes + ' to ' + end_hour + end_minutes
+        return start_time + ' to ' + end_time
 
     except:
         raise ValueError
