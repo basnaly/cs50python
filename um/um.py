@@ -1,5 +1,4 @@
 import re
-import sys
 
 
 def main():
@@ -8,6 +7,7 @@ def main():
 
 def count(s):
 
+    # Bound around the word 'um' in the pattern
     pattern = r'(\bum\b)'
     matches = re.findall(pattern, s, re.IGNORECASE)
     return len(matches)
