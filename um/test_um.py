@@ -12,3 +12,7 @@ def test_yum_argument():
 
 def test_dots_argument():
     assert count('um...') == 1
+
+
+def test_uppercase_argument():
+    assert count('')
