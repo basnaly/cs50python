@@ -7,7 +7,7 @@ def test_correct_argument():
 
 
 def test_yum_argument():
-    assert count('today, um, is, cold, yum') == 1
+    assert count('regex, um, is, not, easy, yum') == 1
 
 
 def test_dots_argument():
