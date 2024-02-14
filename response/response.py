@@ -4,7 +4,7 @@ import validators
 
 def main():
 
-    email = input("What's your email address?")
+    email = input("What's your email address? ")
 
     is_valid = validators.email()
     if is_valid:
