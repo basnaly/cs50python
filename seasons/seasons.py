@@ -8,7 +8,7 @@ def main():
 
     p = inflect.engine()
     result = p.number_to_words(minutes).capitalize()
-    print(f'{result} minutes.')
+    print(f'{result} minutes')
 
 
 def get_minutes(bithday):
