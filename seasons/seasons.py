@@ -12,8 +12,8 @@ def main():
 
 def get_minutes():
 
-    today = date.today()
-    today_formated = date.fromisoformat(today)
+    today = datetime.now()
+    today_formated = datetime.strf
     print(today_formated)
 
     # bithday = input('Date of Birth: ')
