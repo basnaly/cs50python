@@ -31,5 +31,6 @@ def get_minutes():
         sys.exit('Invalid date')
 
 
-main()
+if __name__ == "__main__":
+    main()
 
