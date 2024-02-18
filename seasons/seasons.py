@@ -12,14 +12,18 @@ def main():
 
 def get_minutes():
 
-    today = date.today()
-    # today_formated = datetime.strftime(today, '%Y-%m-%d')
-    print(today)
+    try:
 
-    bithday = input('Date of Birth: ')
-    bithday_formatted = datatime.strptime()
+        today = date.today()
+        bithday = input('Date of Birth: ')
+        year, month, day = bithday.split('-')
+        bithday_date = date(int(year), int(month), int(day))
+        print(bithday_date)
 
+        sub = today - bithday_date
+        print(sub)
 
+    except
 
 main()
 
