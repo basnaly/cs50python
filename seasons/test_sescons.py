@@ -6,5 +6,5 @@ def main():
     minutes = get_minutes()
 
     p = inflect.engine()
-    
+    result = 
 
