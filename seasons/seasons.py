@@ -1,5 +1,6 @@
 from datetime import date, datetime
 import inflect
+import sys
 
 
 def main():
@@ -20,10 +21,13 @@ def get_minutes():
         bithday_date = date(int(year), int(month), int(day))
         print(bithday_date)
 
-        sub = today - bithday_date
-        print(sub)
+        total_minutes = today - bithday_date
+        print(total_minutes)
+        # return total_minutes
 
-    except
+    except ValueError:
+        sys.exit('Invalid date')
+
 
 main()
 
