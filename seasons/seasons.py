@@ -12,9 +12,9 @@ def main():
 
 def get_minutes():
 
-    today = datetime.now()
-    today_formated = datetime.strf
-    print(today_formated)
+    today = date.today()
+    # today_formated = datetime.strftime(today_formated, '%Y-%m-%d')
+    print(today)
 
     # bithday = input('Date of Birth: ')
     # bithday_formatted =
