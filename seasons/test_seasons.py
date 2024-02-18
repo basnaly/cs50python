@@ -1,5 +1,5 @@
 import pytest
-import get_minutes
+from seasons import get_minutes
 
 
 def test_correct_argument():
