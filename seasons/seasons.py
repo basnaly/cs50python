@@ -1,10 +1,10 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import inflect
 import sys
 
 
 def main():
-    # minutes = get_minutes()
+    minutes = get_minutes()
 
     p = inflect.engine()
     # result = p.number_to_words(minutes).capitalize()
@@ -22,7 +22,7 @@ def get_minutes():
         print(bithday_date)
 
         days = today - bithday_date
-        total_minutes = total_seconds(days) / 60
+        total_minutes = timedelta.total_seconds(days) / 60
         print(total_minutes)
         # return total_minutes
 
