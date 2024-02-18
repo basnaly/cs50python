@@ -4,7 +4,7 @@ import sys
 
 
 def main():
-    minutes = get_minutes()
+    # minutes = get_minutes()
 
     p = inflect.engine()
     # result = p.number_to_words(minutes).capitalize()
