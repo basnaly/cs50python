@@ -17,7 +17,7 @@ def get_minutes(bithday):
         today = date.today()
 
         year, month, day = bithday.split('-')
-        # Transform bithday into date format
+        # Transform bithday into a date format
         bithday_date = date(int(year), int(month), int(day))
 
         # Calculate days between today and bithday
