@@ -4,18 +4,17 @@ import sys
 
 
 def main():
-    minutes = get_minutes()
+    minutes = get_minutes(input('Date of Birth: '))
 
     p = inflect.engine()
     result = p.number_to_words(minutes).capitalize()
     print(f'{result} minutes.')
 
 
-def get_minutes():
+def get_minutes(bithday):
 
     try:
         today = date.today()
-        bithday = input('Date of Birth: ')
 
         year, month, day = bithday.split('-')
         # Transform bithday into date format
