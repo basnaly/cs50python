@@ -3,7 +3,7 @@ import inflect
 
 
 def main():
-    minutes = get_minutes(input('Date of Birth: '))
+    minutes = get_minutes()
 
     p = inflect.engine()
     result = p.number_to_words(minutes).capitalize()
@@ -11,6 +11,11 @@ def main():
 
 
 def get_minutes():
+
+    try:
+        bithday = input('Date of Birth: ')
+
+    except
 
 
 main()
