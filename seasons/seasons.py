@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 import inflect
 
 
@@ -13,8 +13,8 @@ def main():
 def get_minutes():
 
     today = date.today()
-    today_formated = datetime.strftime(today_formated, '%Y-%m-%d')
-    print(today)
+    today_formated = datetime.strftime(today, '%Y-%m-%d')
+    print(today_formated)
 
     # bithday = input('Date of Birth: ')
     # bithday_formatted =
