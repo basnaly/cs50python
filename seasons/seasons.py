@@ -6,8 +6,9 @@ import sys
 def main():
     minutes = get_minutes()
     print(minutes)
+
     p = inflect.engine()
-    result = p.number_to_words(minutes, group=1).capitalize()
+    result = p.number_to_words(minutes).capitalize()
     print(f'{result} minutes.')
 
 
