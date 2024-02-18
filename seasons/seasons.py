@@ -24,6 +24,7 @@ def get_minutes():
         # Calculate days between today and bithday
         days = today - bithday_date
         total_minutes = int(timedelta.total_seconds(days) / 60)
+        print(total_minutes)
         return total_minutes
 
     except ValueError:
