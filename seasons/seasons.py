@@ -8,7 +8,7 @@ def main():
     print(minutes)
 
     p = inflect.engine()
-    result = p.number_to_words(minutes).capitalize()
+    result = p.number_to_words(str(minutes)).capitalize()
     print(f'{result} minutes.')
 
 
