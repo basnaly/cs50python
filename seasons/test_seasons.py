@@ -7,5 +7,5 @@ def test_correct_argument():
 
 
 def test_incorrect_argument():
-    with pytest.raises(ValueError):
+    with pytest.raises(SystemExit):
         get_minutes('April, 24 1995')
