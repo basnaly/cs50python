@@ -17,7 +17,7 @@ def get_minutes():
     print(today)
 
     bithday = input('Date of Birth: ')
-    bithday_formatted = 
+    bithday_formatted = datatime.s
 
 
 
