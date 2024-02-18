@@ -21,7 +21,8 @@ def get_minutes():
         bithday_date = date(int(year), int(month), int(day))
         print(bithday_date)
 
-        total_minutes = today - bithday_date
+        days = today - bithday_date
+        total_minutes = timedelta.total_seconds(days) / 60
         print(total_minutes)
         # return total_minutes
 
