@@ -12,9 +12,8 @@ def main():
 
 def get_minutes():
 
-    try:
-        bithday = input('Date of Birth: ')
-
+    bithday = input('Date of Birth: ')
+    bithday_formatted = 
     except
 
 
