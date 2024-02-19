@@ -34,3 +34,17 @@ class Jar:
         return self._size
 
 
+    @classmethod
+    def get(cls):
+        add_cockie = input('Add cockie: ')
+        eat_cockie = input('Eat cockie: ')
+        return cls(add_cockie, eat_cockie)
+
+
+def main():
+    jar = Jar.get()
+    print(jar)
+
+
+if __name__ == "__main__":
+    main()
