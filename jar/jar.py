@@ -5,6 +5,7 @@ class Jar:
         self.size = 0
         if int(capacity) < 0:
             raise ValueError('Capacity cannot be negative')
+        print(f'Capacity is {self.capacity}')
 
 
     def __str__(self):
