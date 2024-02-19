@@ -9,7 +9,7 @@ class Jar:
 
 
     def __str__(self):
-        return f'{self.capacity}'
+        return f'your Jar has {self.size} cookies while it\'s capacity is {self.capacity}'
 
 
     def deposit(self, n):
@@ -34,9 +34,14 @@ class Jar:
         return self._size
 
 
-    # @capacity.setter
-    # def capacity(self, capacity):
-    #     self._capacity = capacity
+    @size.setter
+    def size(self, size):
+        self._size = size
+
+
+    @capacity.setter
+    def capacity(self, capacity):
+        self._capacity = capacity
 
 
     @classmethod
@@ -46,6 +51,7 @@ class Jar:
 
 def main():
     jar = Jar.get(12)
+    print(jar)
     jar.deposit(3)
     print(jar)
 
