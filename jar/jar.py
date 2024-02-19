@@ -10,10 +10,15 @@ class Jar:
 
 
     def deposit(self, n):
-        return f'{self.capacity} + {self.n}'
+        capacity =  capacity + n
+        if capacity > 12:
+            raise ValueError('Max capacity is 12')
+        return capacity
+
 
     def withdraw(self, n):
-        return f'{self.capacity} - {self.n}'
+        capacity = capacity - n
+        
 
 
     @property
