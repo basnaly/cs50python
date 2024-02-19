@@ -19,7 +19,7 @@ class Jar:
 
     def withdraw(self, n):
         if self.size - n < 0:
-            raise ValueError('Cannot eat more than ')
+            raise ValueError(f'Cannot eat more than {self.size}')
         self.size = self.size - n
 
 
