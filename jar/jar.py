@@ -9,7 +9,7 @@ class Jar:
 
 
     def __str__(self):
-        return f'your Jar has {self.size} cookies while it\'s capacity is {self.capacity}'
+        return f'your Jar has {"🍪" * self.size} cookies while it\'s capacity is {self.capacity}'
 
 
     def deposit(self, n):
