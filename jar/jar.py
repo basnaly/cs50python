@@ -12,7 +12,7 @@ class Jar:
 
 
     def deposit(self, n):
-        capacity =  int(capacity) + n
+        self.size =  self.size + n
         if capacity > 12:
             raise ValueError('Max capacity is 12')
         return capacity
