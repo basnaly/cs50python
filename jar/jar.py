@@ -5,6 +5,7 @@ class Jar:
         if capacity < 0:
             raise ValueError('Capacity cannot be negative')
 
+
     def __str__(self):
         return f'{self.capacity}'
 
@@ -27,7 +28,11 @@ class Jar:
     def capacity(self):
         return self._capacity
 
+
     @property
     def size(self):
         return self._size
 
+
+def main():
+    
