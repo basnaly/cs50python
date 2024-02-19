@@ -34,5 +34,3 @@ class Jar:
         return self._size
 
 
-def main():
-    
