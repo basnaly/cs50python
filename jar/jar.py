@@ -38,9 +38,9 @@ class Jar:
 
     @classmethod
     def get(cls):
-        add_cockie = input('Add cockie: ')
-        eat_cockie = input('Eat cockie: ')
-        return cls(add_cockie, eat_cockie)
+        add = input('Add cockie: ')
+        eat = input('Eat cockie: ')
+        return cls(add, eat)
 
 
 def main():
