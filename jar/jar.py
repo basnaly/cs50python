@@ -38,11 +38,11 @@ class Jar:
     #     self._capacity = capacity
 
 
-    # @classmethod
-    # def get(cls):
-    #     add = input('Add cockie: ')
-    #     eat = input('Eat cockie: ')
-    #     return cls(add, eat)
+    @classmethod
+    def get(cls):
+        add = input('Add cockie: ')
+        eat = input('Eat cockie: ')
+        return cls(add, eat)
 
 
 def main():
