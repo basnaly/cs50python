@@ -10,10 +10,10 @@ class Jar:
 
 
     def deposit(self, n):
-        return f''
+        return f'{self.capacity} + {self.n}'
 
     def withdraw(self, n):
-        ...
+        return f'{self.capacity} - {self.n}'
 
 
     @property
