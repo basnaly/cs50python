@@ -44,8 +44,7 @@ class Jar:
     def get(cls):
         add = input('Add cockie: ')
         eat = input('Eat cockie: ')
-        capacity = int(capacity) + add - eat
-        return cls(capacity)
+        return cls(add, eat)
 
 
 def main():
