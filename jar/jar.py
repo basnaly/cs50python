@@ -2,7 +2,7 @@
 class Jar:
     def __init__(self, capacity=12, add=0, eat=0):
         self.capacity = capacity
-        if capacity < 0:
+        if int(capacity) < 0:
             raise ValueError('Capacity cannot be negative')
         self.add = add
         self.eat = eat
@@ -13,14 +13,14 @@ class Jar:
 
 
     def deposit(self, n):
-        capacity =  capacity + n
+        capacity =  int(capacity) + n
         if capacity > 12:
             raise ValueError('Max capacity is 12')
         return capacity
 
 
     def withdraw(self, n):
-        capacity = capacity - n
+        capacity = int(capacity) - n
         if capacity < 0:
             raise ValueError('Capacity cannot be negative')
         return capacity
@@ -35,12 +35,17 @@ class Jar:
     def size(self):
         return self._size
 
+    @capacity.setter
+    def capacity(self, capacity):
+        self._capacity = capacity
+
 
     @classmethod
     def get(cls):
         add = input('Add cockie: ')
         eat = input('Eat cockie: ')
-        return cls(add, eat)
+        capacity = int(capacity) + add - eat
+        return cls(capacity)
 
 
 def main():
