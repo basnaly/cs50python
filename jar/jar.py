@@ -1,9 +1,11 @@
 
 class Jar:
-    def __init__(self, capacity=12):
+    def __init__(self, capacity=12, add_cockie, eat_cockie):
         self.capacity = capacity
         if capacity < 0:
             raise ValueError('Capacity cannot be negative')
+        self.add_cockie = add_cockie
+        self.eat_cockie = eat_cockie
 
 
     def __str__(self):
