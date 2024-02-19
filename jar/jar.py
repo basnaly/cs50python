@@ -40,14 +40,12 @@ class Jar:
 
 
     @classmethod
-    def get(cls):
-        add = input('Add cockie: ')
-        eat = input('Eat cockie: ')
-        return cls(add, eat)
+    def get(cls, capacity):
+        return cls(capacity)
 
 
 def main():
-    jar = Jar.get()
+    jar = Jar.get(12)
     print(jar)
 
 
