@@ -18,8 +18,7 @@ class Jar:
 
 
     def withdraw(self, n):
-        capacity = int(capacity) - n
-        if capacity < 0:
+        if self.size - n < 0:
             raise ValueError('Capacity cannot be negative')
 
 
