@@ -25,4 +25,9 @@ def test_deposit():
 
 
 def test_withdraw():
-    jar == 
+    jar = Jar()
+    jar.deposit(5) == '🍪🍪🍪🍪🍪'
+    jar.withdraw(2) == '🍪🍪🍪'
+    assert jar.capacity > jar.size
+    with pytest.raises(ValueError):
+        assert jar.withdraw(6)
