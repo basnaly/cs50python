@@ -2,19 +2,32 @@ from fpdf import FPDF
 
 
 class PDF(FPDF):
+
     def header(self):
         # Set font
-        self.set_font('arial', 'B', 20)
+        self.set_font('arial', 'B', 32)
         # Move cursor to the right:
         self.cell(80)
         # Set text color
-        self.set_text_color()
+        self.set_text_color(0, 0, 0)
 
-        # Print title
+        # Print header
         self.cell(30, 10, 'CS50 Shirtificate', border=1, align='C')
         # perform a line break:
         self.ln(20)
 
+    def title(self):
+        # Set font
+        self.set_font('arial', 'B', 16)
+        # Move cursor to the right:
+        self.cell(80)
+        # Set text color
+        self.set_text_color(255, 255, 255)
+
+        # Print title
+        self.cell(30, 10, 'John Harvard took CS50', border=1, align='C')
+        # perform a line break:
+        self.ln(20)
 
 
 pdf = FPDF()
