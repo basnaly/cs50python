@@ -3,9 +3,9 @@ from fpdf import FPDF
 
 class PDF(FPDF):
 
-    def page(self):
+    def load_image('shirtificate.png'):
         # Render image:
-        self.image('shirtificate.png')
+        # self.image('shirtificate.png')
 
     def header(self):
         # Set font
