@@ -19,7 +19,7 @@ class Jar:
 
     def withdraw(self, n):
         if self.size - n < 0:
-            raize ValueError('Size cannot be less than 0!')
+            raise ValueError('Size cannot be less than 0!')
         self.size = sel.size - n
 
 
@@ -31,6 +31,18 @@ class Jar:
     @property
     def size(self):
         return self.size
+
+
+def main():
+    jar = Jar()
+    jar.deposit(5)
+    print(jar)
+    jar.withdraw(2)
+    print(jar)
+
+
+if __name__ == '__main__':
+    main()
 
 
 
