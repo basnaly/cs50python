@@ -3,6 +3,7 @@ from jar import Jar
 
 def test_init():
     jar = Jar()
+    assert 
 
 
 def test_str():
