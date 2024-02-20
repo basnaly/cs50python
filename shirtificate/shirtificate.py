@@ -7,6 +7,8 @@ class PDF(FPDF):
         self.set_font('arial', 'B', 20)
         # Move cursor to the right:
         self.cell(80)
+        # Set text color
+        self.set_text_color()
 
         # Print title
         self.cell(30, 10, 'CS50 Shirtificate', border=1, align='C')
