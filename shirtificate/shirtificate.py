@@ -3,6 +3,9 @@ from fpdf import FPDF
 
 class PDF(FPDF):
 
+    def page(self):
+        self.image('shirtificate.png',)
+
     def header(self):
         # Set font
         self.set_font('arial', 'B', 32)
@@ -30,7 +33,7 @@ class PDF(FPDF):
         self.ln(20)
 
 
-pdf = FPDF()
+pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
 # pdf.set_font('arial', 'B', 18)
 # pdf.cell(40, 10, 'Abc')
