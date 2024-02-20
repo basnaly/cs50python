@@ -3,12 +3,13 @@ from fpdf import FPDF
 
 class PDF(FPDF):
 
-    def load_image('shirtificate.png')
+    # def load_image('shirtificate.png')
         # Render image:
         # if isinstance('shirtificate.png', BytesIO):
         #     return 'shirtificate.png'
 
     def header(self):
+        self.image('/shirtificate.png', 10, 8, 33)
         # Set font
         self.set_font('arial', 'B', 32)
         # Move cursor to the right:
