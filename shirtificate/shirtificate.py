@@ -37,6 +37,7 @@ class PDF(FPDF):
 
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
+pdf.page_background = 'shirtificate.png'
 pdf.add_page()
 
 # pdf.set_font('arial', 'B', 18)
