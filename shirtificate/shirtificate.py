@@ -4,6 +4,7 @@ from fpdf import FPDF
 class PDF(FPDF):
 
     def page(self):
+        # Render image:
         self.image('shirtificate.png',)
 
     def header(self):
