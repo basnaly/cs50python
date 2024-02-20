@@ -13,7 +13,7 @@ def test_str():
     jar.deposit(2)
     assert str(jar) == '🍪🍪'
     jar.deposit(6)
-    assert jar.size == '🍪🍪🍪🍪🍪🍪🍪🍪'
+    assert str(jar) == '🍪🍪🍪🍪🍪🍪🍪🍪'
 
 
 def test_deposit():
