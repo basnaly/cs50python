@@ -18,4 +18,19 @@ class Jar:
 
 
     def withdraw(self, n):
+        if self.size - n < 0:
+            raize ValueError('Size cannot be less than 0!')
+        self.size = sel.size - n
+
+
+    @property
+    def capacity(self):
+        return self._capacity
+
+
+    @property
+    def size(self):
+        return self.size
+
+
 
