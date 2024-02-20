@@ -5,7 +5,8 @@ class PDF(FPDF):
 
     def load_image('shirtificate.png'):
         # Render image:
-        # self.image('shirtificate.png')
+        if isinstance('shirtificate.png', BytesIO):
+            return 'shirtificate.png'
 
     def header(self):
         # Set font
