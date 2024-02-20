@@ -38,6 +38,7 @@ class PDF(FPDF):
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
+pdf.image('shirtificate.png', 30, 10, 100, 200)
 
 # pdf.set_font('arial', 'B', 18)
 # pdf.cell(40, 10, 'Abc')
