@@ -14,6 +14,8 @@ class Jar:
     def deposit(self, n):
         if self.size + n > self.capacity:
             raise ValueError(f'Size cannot be more than capacity of{self.capacity}!')
+        self.size = self.size + n
 
-    
+
+    def withdraw(self, n):
 
