@@ -9,7 +9,7 @@ class PDF(FPDF):
         #     return 'shirtificate.png'
 
     def header(self):
-        self.image('./shirtificate.png', 30, 10, 300, 100)
+        self.image('shirtificate.png', 30, 10, 100, 200)
         # Set font
         self.set_font('arial', 'B', 32)
         # Move cursor to the right:
