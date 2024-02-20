@@ -20,9 +20,9 @@ def test_deposit():
     jar = Jar()
     jar.deposit(3) == '🍪🍪🍪'
     assert jar.capacity > jar.size
-    # with pytest.raises(ValueError):
-    #     assert jar.deposit(15)
+    with pytest.raises(ValueError):
+        assert jar.deposit(10)
 
 
 def test_withdraw():
-    ...
+    jar == 
