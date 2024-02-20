@@ -3,10 +3,10 @@ from fpdf import FPDF
 
 class PDF(FPDF):
 
-    def load_image('shirtificate.png'):
+    def load_image('shirtificate.png')
         # Render image:
-        if isinstance('shirtificate.png', BytesIO):
-            return 'shirtificate.png'
+        # if isinstance('shirtificate.png', BytesIO):
+        #     return 'shirtificate.png'
 
     def header(self):
         # Set font
