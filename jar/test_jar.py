@@ -16,7 +16,8 @@ def test_str():
 
 
 def test_deposit():
-    ...
+    jar = Jar()
+    assert jar.deposit(3) == '🍪🍪🍪'
 
 
 def test_withdraw():
