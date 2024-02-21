@@ -16,7 +16,7 @@ def main():
     pdf.set_font(family='helvetica', style='', size=24)
     pdf.set_text_color(255, 255, 255)
     pdf.y = 130
-    pdf.cell(text='CS50 Shirtificate', center=True, new_y='TOP')
+    pdf.cell(text=name + ' took CS50', center=True, new_y='TOP')
 
     pdf.output('shirtificate.pdf')
 
