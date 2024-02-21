@@ -7,7 +7,7 @@ def main():
 
     pdf = FPDF(orientation='P', unit='mm', format='A4')
     pdf.add_page()
-    pdf.image(30, 10, 'shirtificate.png', keep_aspect_ratio=True)
+    pdf.image('shirtificate.png', keep_aspect_ratio=True)
 
     pdf.set_font(family='helvetica', style='', size=40)
     pdf.y = 40
