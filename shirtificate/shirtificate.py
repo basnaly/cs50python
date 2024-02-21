@@ -7,10 +7,10 @@ def main():
 
     pdf = FPDF(orientation='P', unit='mm', format='A4')
     pdf.add_page()
-    pdf.image('shirtificate.png', 10, 70, 190, keep_aspect_ratio=True)
+    pdf.image(name='shirtificate.png', x=10, y=70, w=190, keep_aspect_ratio=True)
 
-    pdf.set_font(family='helvetica', style='', size=40)
-    pdf.y = 40
+    pdf.set_font(family='helvetica', style='', size=46)
+    pdf.y = 30
     pdf.cell(text='CS50 Shirtificate', center=True, new_y='TOP')
 
     pdf.set_font(family='helvetica', style='', size=24)
