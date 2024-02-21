@@ -10,6 +10,10 @@ def main():
     pdf.image(30, 10 name='shirtificate.png', keep_aspect_ratio=True)
 
     pdf.set_font(family='helvetica', style='', size=40)
-    pdf.cell()
+    pdf.y = 40
+    pdf.cell(text='CS50 Shirtificate', center=True, new_y='TOP')
 
     pdf.output('shirtificate.pdf')
+
+
+main()
