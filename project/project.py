@@ -1,9 +1,9 @@
 
 
 FARM_LIST = [
-    {'type': 'vegatable', 'name': 'carrot', 'package': 'kg', 'price': '0.70'},
-    {'type': 'greenery', 'name': 'parsel', 'package': 'bush', 'price': '0.20'},
-    {'type': 'fruit', 'name': 'apple', 'package': 'kg', 'price': '1.30'},
+    {'type': 'vegatable', 'name': 'carrot', 'price': '0.70/kg'},
+    {'type': 'greenery', 'name': 'parsel', 'price': '0.20/piece'},
+    {'type': 'fruit', 'name': 'apple', 'price': '1.30/kg'},
 ]
 
 
