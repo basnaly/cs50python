@@ -9,7 +9,7 @@ FARM_LIST = [
 
 def main():
     print('Welcome to our online organic farm store!')
-    print('You can order our fresh greenery, vegatables and fruit!')
+    print('You can order our fresh greenery, vegatables and fruit from the list below:')
 
 
 
