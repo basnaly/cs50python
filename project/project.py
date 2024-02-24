@@ -11,11 +11,11 @@ def main():
     print('Welcome to our online organic farm store!')
     print('You can order our fresh greenery, vegatables and fruit from the list below:')
 
-    input_message = 'Pick an option:\n'
+    print('Pick an option:\n')
     for index, item in enumerate(FARM_LIST):
-        input_message += f'{index+1}) {item["name"]} {item["price"]}\n'
+        print(f'{index+1}) {item["name"]} {item["price"]}\n')
 
-
+    print('Your choice: ')
 
 if __name__ == '__main__':
     main()
