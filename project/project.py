@@ -11,7 +11,7 @@ def main():
     print('Welcome to our online organic farm store!')
     print('You can order our fresh greenery, vegatables and fruit from the list below:')
 
-    print('Pick an option:\n')
+    print('Pick you option with comma ',':\n')
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["name"]} {item["price"]}\n')
 
