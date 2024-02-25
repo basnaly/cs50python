@@ -41,26 +41,26 @@ def main():
                 product_quantity = quantity
                 product_price = FARM_LIST[selected_index-1]['price']
                 # product_sum = round(float(product_quantity) * float(product_price), 2)
-                print(product_sum)
+                # print(product_sum)
 
 
-            print(f'You selected: {product_name}, {product_icon} price: {product_price}, quantity: {product_quantity}, sum: {product_sum}')
+            print(f'You selected: {product_name}, {product_icon} price: {product_price}, quantity: {product_quantity}')
 
-            save_product_to_csv(product_name, product_quantity, product_price, product_sum)
+            save_product_to_csv(product_name, product_icon, product_quantity, product_price)
             print('Select another product or exit Ctrl-D')
 
         except ValueError:
             continue
 
 
-def save_product_to_csv(product_name, product_icon, product_quantity, product_price, product_sum):
+def save_product_to_csv(product_name, product_icon, product_quantity, product_price):
     csv_file = 'basket.csv'
     try:
         with open(csv_file, mode='a', newline='\n') as file:
-            writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
+            writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity'])
             writer.writeheader()
             row = ({
-                'name': product_name, 'icon': product_icon, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum
+                'name': product_name, 'icon': product_icon, 'price': product_price, 'quantity': product_quantity,
             })
             writer.writerow(row)
 
