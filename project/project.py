@@ -56,14 +56,15 @@ def main():
             with open(csv_file, mode='a', newline='\n') as file:
                 writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
                 writer.writeheader()
-                row = ({'name': product_name, 'icon': product_icon, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum})
-                save_product_to_csv(row)
+                save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum)
 
         except FileNotFoundError():
             sys.exit('File not found')
 
 
-def save_product_to_csv(row):
+def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum):
+
+    row = ({'name': product_name, 'icon': product_icon, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum})
     writer.writerow(row)
 
 
