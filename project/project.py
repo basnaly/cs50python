@@ -15,9 +15,9 @@ def main():
 
     while True:
         print('Pick you option: ')
-        
+
         for index, item in enumerate(FARM_LIST):
-            print(f'{index+1}) {item["name"]} {item["price"]}\n')
+            print(f'{index+1}) {item["name"]} {item["price"]}')
 
         print('Your choice: ')
 
