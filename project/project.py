@@ -38,9 +38,9 @@ def main():
                 continue
             else:
 
-                product_quantity = quantity
+                product_quantity = int(quantity)
                 product_price = FARM_LIST[selected_index-1]['price']
-                product_sum = round(float(product_quantity) * float(product_price), 2)
+                product_sum = product_quantity * product_price
                 print(product_sum)
 
 
