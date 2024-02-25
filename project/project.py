@@ -1,3 +1,4 @@
+import csv
 
 
 FARM_LIST = [
@@ -46,7 +47,9 @@ def main():
 
 
 def save_product_to_csv(product_name, product_quantity, product_price, product_sum):
-    
+    csv_file_path = 'basket.csv'
+    with open(csv_file_path, mode='a', newline='\n') as file:
+        writer = csv.DictWriter()
 
 
 if __name__ == '__main__':
