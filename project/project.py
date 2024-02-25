@@ -53,7 +53,7 @@ def main():
             csv_file = 'basket.csv'
             with open(csv_file, mode='a', newline='\n') as file:
                 writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
-                writer.writeheader()
+                # writer.writeheader()
                 save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
 
         except FileNotFoundError():
