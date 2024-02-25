@@ -20,6 +20,16 @@ def main():
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
+    try:
+        csv_file = 'basket.csv'
+        with open(csv_file, mode='w', newline='\n') as file:
+            writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
+            writer.writeheader()
+
+    except FileNotFoundError():
+        sys.exit('File not found')
+
+
     while True:
 
         try:
@@ -41,6 +51,7 @@ def main():
                 price, _ = product_price.split('/')
                 product_sum = round(product_quantity * float(price), 2)
 
+            save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
 
             print(f'You selected: {product_name}, {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}')
 
@@ -49,15 +60,6 @@ def main():
         except ValueError:
             continue
 
-        try:
-            csv_file = 'basket.csv'
-            with open(csv_file, mode='a', newline='\n') as file:
-                writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
-                writer.writeheader()
-                save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
-
-        except FileNotFoundError():
-            sys.exit('File not found')
 
 
 def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer):
