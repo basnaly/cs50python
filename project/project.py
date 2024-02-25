@@ -26,7 +26,7 @@ def main():
 
             selected_number = int(input('Your choice: '))
 
-            if selected_number < 0 or selected_number > len(FARM_LIST):
+            if selected_number < 0 or selected_number > len(FARM_LIST) + 1:
                 continue
 
             product_name = FARM_LIST[selected_number]['name']
@@ -49,14 +49,16 @@ def main():
 
 
 def save_product_to_csv(product_name, product_quantity, product_price, product_sum):
-    csv_file_path = 'basket.csv'
-    with open(csv_file_path, mode='a', newline='\n') as file:
-        writer = csv.DictWriter(file, fieldnames=['name', 'price', 'quantity', 'sum'])
-        writer.writeheader()
-        writer.writerow({
-            'name': product_name, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum
-        })
-
+    csv_file = 'basket.csv'
+    try:
+        with open(csv_file, mode='a', newline='\n') as file:
+            writer = csv.DictWriter(file, fieldnames=['name', 'price', 'quantity', 'sum'])
+            writer.writeheader()
+            writer.writerow({
+                'name': product_name, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum
+            })
+    except FileNotFoundError():
+        sys.exit('File not found')
 
 if __name__ == '__main__':
     main()
