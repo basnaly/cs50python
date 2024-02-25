@@ -29,8 +29,8 @@ def main():
             if selected_index < 0 or selected_index > len(FARM_LIST):
                 continue
 
-            product_name = FARM_LIST[selected_index]['name']
-            product_icon = FARM_LIST[selected_index]['icon']
+            product_name = FARM_LIST[selected_index-1]['name']
+            product_icon = FARM_LIST[selected_index-1]['icon']
 
             quantity = float(input('Select quantity, max is 5: '))
 
