@@ -39,11 +39,14 @@ def main():
             product_price = FARM_LIST[selected_number]['price']
             product_sum = round(product_quantity * product_price, 2)
 
+            save_product_to_csv(product_name, product_quantity, product_price, product_sum)
+
         except ValueError:
             continue
 
 
-def
+def save_product_to_csv(product_name, product_quantity, product_price, product_sum):
+    
 
 
 if __name__ == '__main__':
