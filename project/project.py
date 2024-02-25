@@ -28,19 +28,20 @@ def main():
 
             if selected_index < 0 or selected_index > len(FARM_LIST):
                 continue
-
-            product_name = FARM_LIST[selected_index-1]['name']
-            product_icon = FARM_LIST[selected_index-1]['icon']
+            else:
+                product_name = FARM_LIST[selected_index-1]['name']
+                product_icon = FARM_LIST[selected_index-1]['icon']
 
             quantity = float(input('Select quantity, max is 5: '))
 
             if quantity < 0 or quantity > MAX_QUANTITY:
                 continue
+            else:
 
-            product_quantity = quantity
-            product_price = FARM_LIST[selected_index-1]['price']
-            product_sum = round(float(product_quantity) * float(product_price), 2)
-            print(product_sum)
+                product_quantity = quantity
+                product_price = FARM_LIST[selected_index-1]['price']
+                # product_sum = round(float(product_quantity) * float(product_price), 2)
+                print(product_sum)
 
 
             print(f'You selected: {product_name}, {product_icon} price: {product_price}, quantity: {product_quantity}, sum: {product_sum}')
