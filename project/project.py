@@ -26,10 +26,11 @@ def main():
 
             selected_number = int(input('Your choice: '))
 
-            if selected_number < 0 or selected_number > (len(FARM_LIST) + 1):
+            if selected_number < 0 or selected_number > len(FARM_LIST):
                 continue
 
             product_name = FARM_LIST[selected_number]['name']
+            product_icon = FARM_LIST[selected_number]['icon']
 
             selected_quantity = float(input('Select quantity, until 5 kg: '))
 
@@ -39,10 +40,10 @@ def main():
             product_quantity = selected_quantity
             product_price = FARM_LIST[selected_number]['price']
             product_sum = round(float(product_quantity) * float(product_price), 2)
+            
 
 
-
-            print(f'You selected: {product_name}, price: {product_price}, quantity: {product_quantity}, sum: {product_sum}')
+            print(f'You selected: {product_name}, {product_icon} price: {product_price}, quantity: {product_quantity}, sum: {product_sum}')
 
             save_product_to_csv(product_name, product_quantity, product_price, product_sum)
             print('Select another product or exit Ctrl-D')
@@ -51,14 +52,14 @@ def main():
             continue
 
 
-def save_product_to_csv(product_name, product_quantity, product_price, product_sum):
+def save_product_to_csv(product_name, product_icon, product_quantity, product_price, product_sum):
     csv_file = 'basket.csv'
     try:
         with open(csv_file, mode='a', newline='\n') as file:
-            writer = csv.DictWriter(file, fieldnames=['name', 'price', 'quantity', 'sum'])
+            writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
             row = ({
-                'name': product_name, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum
+                'name': product_name, 'icon': product_icon, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum
             })
             writer.writerow(row)
 
