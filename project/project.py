@@ -35,7 +35,7 @@ def main():
 
         product_quantity = selected_quantity
         product_price = FARM_LIST[selected_number]['price']
-        product_sum =
+        product_sum = round(product_quantity * product_price, 2)
 
 
 if __name__ == '__main__':
