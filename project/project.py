@@ -22,7 +22,6 @@ def main():
 
     while True:
 
-
         try:
             selected_index = int(input('Your choice: '))
 
@@ -51,6 +50,9 @@ def main():
 
         except ValueError:
             continue
+
+    try:
+        csv_file = 'basket.csv'
 
 
 def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum):
