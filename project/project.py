@@ -26,7 +26,7 @@ def main():
 
             selected_number = int(input('Your choice: '))
 
-            if selected_number < 0 or selected_number > len(FARM_LIST) + 1:
+            if selected_number < 0 or selected_number > (len(FARM_LIST) + 1):
                 continue
 
             product_name = FARM_LIST[selected_number]['name']
