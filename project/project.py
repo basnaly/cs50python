@@ -18,12 +18,10 @@ def main():
 
     while True:
         print('Pick you option: ')
+        for index, item in enumerate(FARM_LIST):
+            print(f'{index+1}) {item["name"]} {item["price"]}')
 
         try:
-
-            for index, item in enumerate(FARM_LIST):
-                print(f'{index+1}) {item["name"]} {item["price"]}')
-
             selected_number = int(input('Your choice: '))
 
             if selected_number < 0 or selected_number > len(FARM_LIST):
