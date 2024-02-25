@@ -40,10 +40,11 @@ def main():
             product_price = FARM_LIST[selected_number]['price']
             product_sum = round(float(product_quantity) * float(product_price), 2)
 
-            save_product_to_csv(product_name, product_quantity, product_price, product_sum)
+
 
             print(f'You selected: {product_name}, price: {product_price}, quantity: {product_quantity}, sum: {product_sum}')
 
+            save_product_to_csv(product_name, product_quantity, product_price, product_sum)
             print('Select another product or exit Ctrl-D')
 
         except ValueError:
