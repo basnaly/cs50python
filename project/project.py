@@ -54,9 +54,11 @@ def save_product_to_csv(product_name, product_quantity, product_price, product_s
         with open(csv_file, mode='a', newline='\n') as file:
             writer = csv.DictWriter(file, fieldnames=['name', 'price', 'quantity', 'sum'])
             writer.writeheader()
-            writer.writerow({
+            row = ({
                 'name': product_name, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum
             })
+            writer.writerow(row)
+
     except FileNotFoundError():
         sys.exit('File not found')
 
