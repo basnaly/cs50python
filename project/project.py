@@ -20,47 +20,44 @@ def main():
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
-    try:
-        csv_file = 'basket.csv'
-        with open(csv_file, mode='w', newline='\n') as file:
-            writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
-            writer.writeheader()
+    while True:
 
-            while True:
+        try:
+            selected_index = int(input('Your choice: '))
 
-                try:
-                    selected_index = int(input('Your choice: '))
+            if selected_index < 0 or selected_index > len(FARM_LIST):
+                continue
+            else:
+                product_name = FARM_LIST[selected_index-1]['name']
+                product_icon = FARM_LIST[selected_index-1]['icon']
 
-                    if selected_index < 0 or selected_index > len(FARM_LIST):
-                        continue
-                    else:
-                        product_name = FARM_LIST[selected_index-1]['name']
-                        product_icon = FARM_LIST[selected_index-1]['icon']
+            quantity = float(input('Select quantity, max is 5: '))
 
-                    quantity = float(input('Select quantity, max is 5: '))
-                    print(quantity)
+            if quantity < 0 or quantity > MAX_QUANTITY:
+                continue
+            else:
+                product_quantity = float(quantity)
+                product_price = FARM_LIST[selected_index-1]['price']
+                price, _ = product_price.split('/')
+                product_sum = round(product_quantity * float(price), 2)
 
-                    if quantity < 0 or quantity > MAX_QUANTITY:
-                        continue
-                    else:
-                        product_quantity = float(quantity)
-                        product_price = FARM_LIST[selected_index-1]['price']
-                        price, _ = product_price.split('/')
-                        product_sum = round(product_quantity * float(price), 2)
 
-                    save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
+            print(f'You selected: {product_name}, {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}')
 
-                    print(f'You selected: {product_name}, {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}')
+            print('Select another product or exit Ctrl-D')
 
-                    print('Select another product or exit Ctrl-D')
+        except ValueError:
+            continue
 
-                except ValueError as e:
-                    print(e)
-                    continue
+        try:
+            csv_file = 'basket.csv'
+            with open(csv_file, mode='a', newline='\n') as file:
+                writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
+                writer.writeheader()
+                save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
 
-    except FileNotFoundError():
-        sys.exit('File not found')
-
+        except FileNotFoundError():
+            sys.exit('File not found')
 
 
 def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer):
