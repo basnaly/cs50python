@@ -42,7 +42,9 @@ def main():
 
             save_product_to_csv(product_name, product_quantity, product_price, product_sum)
 
-            print(f'(You selected: {product_name}, price: {product_price}, quantity: {product_quantity}, sum: {product_sum})')
+            print(f'You selected: {product_name}, price: {product_price}, quantity: {product_quantity}, sum: {product_sum}')
+
+            print('Select another product or exit Ctrl-D')
 
         except ValueError:
             continue
