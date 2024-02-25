@@ -52,7 +52,7 @@ def main():
 
                     print(f'You selected: {product_name}, {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}')
 
-                    print('Select another product or exit Ctrl-D')
+                    print('Select another product, finish your order or exit Ctrl-D')
 
                 except ValueError as e:
                     print(e)
