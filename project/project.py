@@ -38,9 +38,11 @@ def main():
 
             product_quantity = selected_quantity
             product_price = FARM_LIST[selected_number]['price']
-            product_sum = round(product_quantity * product_price, 2)
+            product_sum = round(float(product_quantity) * float(product_price), 2)
 
             save_product_to_csv(product_name, product_quantity, product_price, product_sum)
+
+            print(f'(You selected: {product_name}, price: {product_price}, quantity: {product_quantity}, sum: {product_sum})')
 
         except ValueError:
             continue
@@ -51,7 +53,9 @@ def save_product_to_csv(product_name, product_quantity, product_price, product_s
     with open(csv_file_path, mode='a', newline='\n') as file:
         writer = csv.DictWriter(file, fieldnames=['name', 'price', 'quantity', 'sum'])
         writer.writeheader()
-        writer.writerow({})
+        writer.writerow({
+            'name': product_name, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum
+        })
 
 
 if __name__ == '__main__':
