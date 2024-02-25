@@ -42,6 +42,7 @@ def main():
                 product_icon = FARM_LIST[selected_index-1]['icon']
 
             quantity = float(input('Select quantity, max is 5: '))
+            print(quantity)
 
             if quantity < 0 or quantity > MAX_QUANTITY:
                 continue
@@ -57,7 +58,8 @@ def main():
 
             print('Select another product or exit Ctrl-D')
 
-        except ValueError:
+        except ValueError as e:
+            print(e)
             continue
 
 
