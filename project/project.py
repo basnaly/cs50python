@@ -40,8 +40,9 @@ def main():
 
                 product_quantity = int(quantity)
                 product_price = FARM_LIST[selected_index-1]['price']
-                product_sum = product_quantity * product_price
-                print(product_sum)
+                price, _ = product_price.split('/')
+                # product_sum = product_quantity * int(price)
+                print(product_quantity, price)
 
 
             print(f'You selected: {product_name}, {product_icon} price: {product_price}, quantity: {product_quantity}')
