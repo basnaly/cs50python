@@ -19,24 +19,24 @@ def main():
     while True:
         print('Pick you option: ')
         for index, item in enumerate(FARM_LIST):
-            print(f'{index+1}) {item["name"]} {item["price"]}')
+            print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
         try:
-            selected_number = int(input('Your choice: '))
+            selected_index = int(input('Your choice: '))
 
-            if selected_number < 0 or selected_number > len(FARM_LIST):
+            if selected_index < 0 or selected_index > len(FARM_LIST):
                 continue
 
-            product_name = FARM_LIST[selected_number]['name']
-            product_icon = FARM_LIST[selected_number]['icon']
+            product_name = FARM_LIST[selected_index]['name']
+            product_icon = FARM_LIST[selected_index]['icon']
 
-            selected_quantity = float(input('Select quantity, until 5 kg: '))
+            quantity = float(input('Select quantity, max is 5: '))
 
-            if selected_quantity < 0 or selected_quantity > 5:
+            if quantity < 0 or quantity > MAX_QUANTITY:
                 continue
 
-            product_quantity = selected_quantity
-            product_price = FARM_LIST[selected_number]['price']
+            product_quantity = quantity
+            product_price = FARM_LIST[selected_index-1]['price']
             product_sum = round(float(product_quantity) * float(product_price), 2)
             print(product_sum)
 
