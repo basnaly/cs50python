@@ -46,13 +46,14 @@ def main():
             print(f'You selected: {product_name}, {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}')
 
             save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum)
+
             print('Select another product or exit Ctrl-D')
 
         except ValueError:
             continue
 
 
-def save_product_to_csv(product_name, product_icon, product_quantity, product_price, product_sum):
+def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum):
     csv_file = 'basket.csv'
     try:
         with open(csv_file, mode='a', newline='\n') as file:
