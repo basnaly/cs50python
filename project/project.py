@@ -44,8 +44,6 @@ def main():
 
             print(f'You selected: {product_name}, {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}')
 
-            save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum)
-
             print('Select another product or exit Ctrl-D')
 
         except ValueError:
@@ -56,13 +54,13 @@ def main():
             with open(csv_file, mode='a', newline='\n') as file:
                 writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
                 writer.writeheader()
-                save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum)
+                save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
 
         except FileNotFoundError():
             sys.exit('File not found')
 
 
-def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum):
+def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer):
 
     row = ({'name': product_name, 'icon': product_icon, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum})
     writer.writerow(row)
