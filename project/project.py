@@ -42,7 +42,7 @@ def main():
                 product_price = FARM_LIST[selected_index-1]['price']
                 price, _ = product_price.split('/')
                 # product_sum = product_quantity * int(price)
-                print(product_quantity, price)
+                print(product_quantity * price)
 
 
             print(f'You selected: {product_name}, {product_icon} price: {product_price}, quantity: {product_quantity}')
