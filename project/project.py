@@ -19,7 +19,15 @@ def main():
         for index, item in enumerate(FARM_LIST):
             print(f'{index+1}) {item["name"]} {item["price"]}')
 
-        print('Your choice: ')
+        selected_number = input('Your choice: ')
+
+        if selected_number < 0 or selected_number > len(FARM_LIST):
+            continue
+
+        product_name = FARM_LIST[selected_number]['name']
+
+        selected_quantity = input()
+
 
 if __name__ == '__main__':
     main()
