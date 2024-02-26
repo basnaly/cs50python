@@ -44,15 +44,21 @@ class Product:
                 if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
-                    quantity = float(quantity)
                     price, _ = product_price.split('/')
-                    sum = round(product_quantity * float(price), 2)
+                    self.sum = round(product_quantity * float(price), 2)
             except  ValueError as e:
                 print(e)
                 continue
 
 
-    def save_product(self):
+    def save_product(self, writer):
+        row = ({
+            'name': self.name,
+            'icon': self.icon,
+            'price': self.price,
+            'quantity': self.quantity,
+            'sum': self.sum})
+        writer.writerow(row)
 
 
 def main():
@@ -69,18 +75,7 @@ def main():
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
 
-            while True:
-
-                try:
-
-
-
-
-                    save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
-
-                    print(f'You selected: {product_name}, {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}')
-
-                    print('Select another product, finish your order or exit Ctrl-D')
+        print('Select another product, finish your order or exit Ctrl-D')
 
                 except
 
@@ -91,8 +86,7 @@ def main():
 
 def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer):
 
-    row = ({'name': product_name, 'icon': product_icon, 'price': product_price, 'quantity': product_quantity, 'sum': product_sum})
-    writer.writerow(row)
+
 
 
 
