@@ -37,7 +37,8 @@ class Product:
                     type = FARM_LIST[selected_index-1]['type']
                     name = FARM_LIST[selected_index-1]['name']
                     icon = FARM_LIST[selected_index-1]['icon']
-                    price = FARM_LIST[selected_index-1]['price']
+                    product_price = FARM_LIST[selected_index-1]['price']
+                    price, _ = product_price.split('/')
 
                 return cls(type, name.title(), icon, price)
 
@@ -54,9 +55,10 @@ class Product:
                 if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
-                        quantity = selected_quantity
-                        float_price, _ = self.price.split('/')
-                        sum = round(quantity * float(float_price), 2)
+                    self.quantity = selected_quantity
+                    self.sum = round(self.quantity * float(self.price), 2)
+
+                return
 
             except  ValueError as e:
                 continue
