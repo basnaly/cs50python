@@ -54,7 +54,7 @@ class Product:
                 continue
 
 
-    def save_product(self, writer):
+    def save_product_to_csv(self, writer):
         row = ({
             'name': self.name,
             'icon': self.icon,
@@ -81,7 +81,7 @@ def main():
             writer.writeheader()
 
             current_product = Product.get_product()
-            current_product.save_product()
+            current_product.save_product_to_csv()
 
         print('abc')
 
