@@ -81,7 +81,7 @@ def main():
             writer.writeheader()
 
             current_product = Product.get_product()
-            current_product.save_product(name, )
+            current_product.save_product(name, icon, price)
 
         print('abc')
 
