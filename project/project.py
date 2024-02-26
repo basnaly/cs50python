@@ -34,23 +34,31 @@ class Product:
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
+                    type = FARM_LIST[selected_index-1]['type']
                     name = FARM_LIST[selected_index-1]['name']
                     icon = FARM_LIST[selected_index-1]['icon']
                     price = FARM_LIST[selected_index-1]['price']
 
+                return cls(type, name.title(), icon, price)
+
+            except  ValueError as e:
+                print(e)
+                continue
+
+
+    def set_quantity(self):
+        while True:
+            try:
                 selected_quantity = float(input('Select quantity, max is 5: '))
 
                 if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
-                    quantity = selected_quantity
-                    price, _ = price.split('/')
-                    sum = round(quantity * float(price), 2)
-
-                return name, icon, price
+                        quantity = selected_quantity
+                        float_price, _ = self.price.split('/')
+                        sum = round(quantity * float(float_price), 2)
 
             except  ValueError as e:
-                print(e)
                 continue
 
 
@@ -81,6 +89,7 @@ def main():
             writer.writeheader()
 
             current_product = Product.get_product()
+            current_product.set_quantity()
             current_product.save_product_to_csv()
 
         print('abc')
