@@ -77,16 +77,8 @@ def main():
 
         print('Select another product, finish your order or exit Ctrl-D')
 
-                except
-
     except FileNotFoundError():
         sys.exit('File not found')
-
-
-
-def save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer):
-
-
 
 
 
