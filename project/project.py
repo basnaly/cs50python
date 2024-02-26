@@ -47,7 +47,7 @@ class Product:
                     price, _ = price.split('/')
                     sum = round(quantity * float(price), 2)
 
-                return cls(name, icon, price)
+                return name, icon, price
 
             except  ValueError as e:
                 print(e)
@@ -81,7 +81,7 @@ def main():
             writer.writeheader()
 
             current_product = Product.get_product()
-            current_product.save_product(name, icon, price)
+            current_product.save_product()
 
         print('abc')
 
