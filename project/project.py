@@ -34,19 +34,18 @@ class Product:
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
-                    self.name = FARM_LIST[selected_index-1]['name']
-                    self.icon = FARM_LIST[selected_index-1]['icon']
-                    self.price = FARM_LIST[selected_index-1]['price']
+                    name = FARM_LIST[selected_index-1]['name']
+                    icon = FARM_LIST[selected_index-1]['icon']
+                    price = FARM_LIST[selected_index-1]['price']
 
                 selected_quantity = float(input('Select quantity, max is 5: '))
-                print(quantity)
 
                 if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
-                    self.quantity = selected_quantity
-                    price, _ = product_price.split('/')
-                    self.sum = round(product_quantity * float(price), 2)
+                    quantity = selected_quantity
+                    price, _ = price.split('/')
+                    sum = round(quantity * float(price), 2)
 
                 return cls(name, icon, price, quantity, sum)
 
@@ -80,7 +79,8 @@ def main():
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
 
-            current_product = Product.get_product(name, icon, price, quantity, sum)
+            current_product = Product.get_product()
+            print(current_product)
 
         print('Select another product or exit by using Ctrl-D')
 
