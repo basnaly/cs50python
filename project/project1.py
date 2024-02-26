@@ -52,6 +52,8 @@ class Product:
                 continue
 
 
+    def save_product(self):
+
 
 def main():
     print('Welcome to our online organic farm store!')
