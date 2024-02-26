@@ -23,7 +23,7 @@ class Product:
 
 
     def __str__(self):
-        return f'You selected: {product_name} {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}'
+        return f'You selected: {self.name} {self.icon} price: ${self.price}, quantity: {self.quantity}, sum: ${self.sum}'
 
 
     @classmethod
@@ -47,7 +47,7 @@ class Product:
                 continue
 
 
-    def set_quantity(self):
+    def set_quantity_sum(self):
         while True:
             try:
                 selected_quantity = float(input('Select quantity, max is 5: '))
@@ -91,10 +91,10 @@ def main():
             writer.writeheader()
 
             current_product = Product.get_product()
-            current_product.set_quantity()
-            current_product.save_product_to_csv()
+            current_product.set_quantity_sum()
+            current_product.save_product_to_csv(writer)
 
-        print('abc')
+        print(current_product)
 
         print('Select another product or exit by using Ctrl-D')
 
