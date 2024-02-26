@@ -1,4 +1,4 @@
-import csv
+import csv, sys
 
 
 FARM_LIST = [
@@ -74,10 +74,11 @@ def main():
         with open(csv_file, mode='w', newline='\n') as file:
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
+            save_product(self)
 
         print('Select another product or exit by using Ctrl-D')
 
-    except FileNotFoundError():
+    except FileNotFoundError:
         sys.exit('File not found')
 
 
