@@ -43,7 +43,6 @@ class Product:
                 return cls(type, name.title(), icon, price)
 
             except  ValueError as e:
-                print(e)
                 continue
 
 
