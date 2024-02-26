@@ -12,6 +12,19 @@ FARM_LIST = [
 MAX_QUANTITY = 5
 
 
+class Product:
+    def __init__(self, type, name, icon, price):
+        self.type = type
+        self.name = name
+        self.icon = icon
+        self.price = price
+        self.quantity = 0
+        self.total = 0
+
+    def __str__(self):
+        return f'You selected: {product_name} {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}'
+
+
 def main():
     print('Welcome to our online organic farm store!')
     print('You can order our fresh greenery, vegatables and fruit from the list below:')
