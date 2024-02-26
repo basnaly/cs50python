@@ -89,13 +89,19 @@ def main():
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
 
-            current_product = Product.get_product()
-            current_product.set_quantity_sum()
-            current_product.save_product_to_csv(writer)
+            while True:
+                try:
 
-        print(current_product)
+                    current_product = Product.get_product()
+                    current_product.set_quantity_sum()
+                    current_product.save_product_to_csv(writer)
 
-        print('Select another product or exit by using Ctrl-D')
+                    print(current_product)
+
+                    print('Select another product or exit by using Ctrl-D')
+
+                except ValueError as e:
+                    continue
 
     except FileNotFoundError:
         sys.exit('File not found')
