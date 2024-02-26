@@ -66,6 +66,7 @@ def main():
     print('You can order our fresh greenery, vegatables and fruit from the list below:')
 
     print('Pick you option: ')
+
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
@@ -74,7 +75,8 @@ def main():
         with open(csv_file, mode='w', newline='\n') as file:
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
-            current_product.save_product(self, writer)
+            
+            current_product = Product.get_product()
 
         print('Select another product or exit by using Ctrl-D')
 
