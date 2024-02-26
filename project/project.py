@@ -60,7 +60,8 @@ class Product:
             'icon': self.icon,
             'price': self.price,
             'quantity': self.quantity,
-            'sum': self.sum})
+            'sum': self.sum
+        })
         writer.writerow(row)
 
 
