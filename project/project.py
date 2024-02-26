@@ -75,11 +75,10 @@ def main():
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
 
-        print('Select another product, finish your order or exit Ctrl-D')
+        print('Select another product or exit by using Ctrl-D')
 
     except FileNotFoundError():
         sys.exit('File not found')
-
 
 
 if __name__ == '__main__':
