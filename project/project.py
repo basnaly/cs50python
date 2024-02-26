@@ -47,7 +47,8 @@ class Product:
                     self.quantity = selected_quantity
                     price, _ = product_price.split('/')
                     self.sum = round(product_quantity * float(price), 2)
-                return cls(name, icon, price, )
+                return cls(name, icon, price, quantity, sum)
+            
             except  ValueError as e:
                 print(e)
                 continue
