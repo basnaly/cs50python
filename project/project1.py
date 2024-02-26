@@ -21,8 +21,15 @@ class Product:
         self.quantity = 0
         self.total = 0
 
+
     def __str__(self):
         return f'You selected: {product_name} {product_icon} price: ${product_price}, quantity: {product_quantity}, sum: ${product_sum}'
+
+
+    @classmethod
+    def get_product(cls):
+        
+
 
 
 def main():
