@@ -34,20 +34,19 @@ class Product:
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
-                    name = FARM_LIST[selected_index-1]['name']
-                    icon = FARM_LIST[selected_index-1]['icon']
-                    product_price = FARM_LIST[selected_index-1]['price']
+                    self.name = FARM_LIST[selected_index-1]['name']
+                    self.icon = FARM_LIST[selected_index-1]['icon']
+                    self.price = FARM_LIST[selected_index-1]['price']
 
-                quantity = float(input('Select quantity, max is 5: '))
+                selected_quantity = float(input('Select quantity, max is 5: '))
                 print(quantity)
 
-                if quantity < 0 or quantity > MAX_QUANTITY:
+                if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
-                    product_quantity = float(quantity)
-
+                    quantity = float(quantity)
                     price, _ = product_price.split('/')
-                    product_sum = round(product_quantity * float(price), 2)
+                    sum = round(product_quantity * float(price), 2)
             except  ValueError as e:
                 print(e)
                 continue
