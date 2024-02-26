@@ -28,7 +28,29 @@ class Product:
 
     @classmethod
     def get_product(cls):
-        
+        while True:
+            try:
+                selected_index = int(input('Your choice: '))
+                if selected_index < 0 or selected_index > len(FARM_LIST):
+                    continue
+                else:
+                    name = FARM_LIST[selected_index-1]['name']
+                    icon = FARM_LIST[selected_index-1]['icon']
+                    product_price = FARM_LIST[selected_index-1]['price']
+
+                quantity = float(input('Select quantity, max is 5: '))
+                print(quantity)
+
+                if quantity < 0 or quantity > MAX_QUANTITY:
+                    continue
+                else:
+                    product_quantity = float(quantity)
+
+                    price, _ = product_price.split('/')
+                    product_sum = round(product_quantity * float(price), 2)
+            except  ValueError as e:
+                print(e)
+                continue
 
 
 
@@ -49,24 +71,9 @@ def main():
             while True:
 
                 try:
-                    selected_index = int(input('Your choice: '))
 
-                    if selected_index < 0 or selected_index > len(FARM_LIST):
-                        continue
-                    else:
-                        product_name = FARM_LIST[selected_index-1]['name']
-                        product_icon = FARM_LIST[selected_index-1]['icon']
 
-                    quantity = float(input('Select quantity, max is 5: '))
-                    print(quantity)
 
-                    if quantity < 0 or quantity > MAX_QUANTITY:
-                        continue
-                    else:
-                        product_quantity = float(quantity)
-                        product_price = FARM_LIST[selected_index-1]['price']
-                        price, _ = product_price.split('/')
-                        product_sum = round(product_quantity * float(price), 2)
 
                     save_product_to_csv(product_name, product_icon, product_price, product_quantity, product_sum, writer)
 
@@ -74,9 +81,7 @@ def main():
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
-                except ValueError as e:
-                    print(e)
-                    continue
+                except
 
     except FileNotFoundError():
         sys.exit('File not found')
