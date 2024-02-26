@@ -76,7 +76,7 @@ def main():
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
 
-            current_product = Product.get_product(self.name, icon, price, quantity, sum)
+            current_product = Product.get_product(name, icon, price, quantity, sum)
 
         print('Select another product or exit by using Ctrl-D')
 
