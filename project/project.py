@@ -44,8 +44,10 @@ class Product:
                 if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
+                    self.quantity = selected_quantity
                     price, _ = product_price.split('/')
                     self.sum = round(product_quantity * float(price), 2)
+                return cls(name, icon, price, )
             except  ValueError as e:
                 print(e)
                 continue
