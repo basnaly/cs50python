@@ -80,7 +80,9 @@ def main():
             writer.writeheader()
 
             current_product = Product.get_product()
-            print(current_product)
+            current_product.save_product()
+
+        print('abc')
 
         print('Select another product or exit by using Ctrl-D')
 
