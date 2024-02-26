@@ -69,12 +69,14 @@ def main():
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
+    current_product = Product()
+
     try:
         csv_file = 'basket.csv'
         with open(csv_file, mode='w', newline='\n') as file:
             writer = csv.DictWriter(file, fieldnames=['name', 'icon', 'price', 'quantity', 'sum'])
             writer.writeheader()
-            save_product(self)
+            current_product.save_product(self, writer)
 
         print('Select another product or exit by using Ctrl-D')
 
