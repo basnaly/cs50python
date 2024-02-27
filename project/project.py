@@ -63,7 +63,8 @@ class Product:
                 continue
 
     def save_product(self):
-        
+        with open('basket.csv', 'w') as file:
+            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price'])
 
 
 def main():
