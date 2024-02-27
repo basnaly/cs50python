@@ -63,7 +63,7 @@ class Product:
                 continue
 
     def save_product(self):
-        
+        row.append
 
 
 
@@ -71,6 +71,10 @@ def main():
 
     print('Welcome to our online organic farm store!')
     print('Order our fresh greenery, vegatables and fruit from the list below:')
+
+    with open('basket.csv', 'w') as file:
+            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price', 'Quantity'])
+            writer.writeheader()
 
     while True:
         try:
@@ -80,6 +84,7 @@ def main():
 
             current_product = Product.get_product()
             current_product.get_quantity()
+            current_product.save_product()
 
         except ValueError:
             continue
