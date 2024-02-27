@@ -89,8 +89,9 @@ def main():
             current_product = Product.get_product()
             current_product.get_quantity()
             current_product.save_product()
-            
+
             list_products = []
+            
 
             print(current_product)
             print('Select another one or exit using Ctrl-D')
