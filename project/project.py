@@ -29,7 +29,8 @@ class Product:
 
     @classmethod
     def get_product(cls):
-        
+
+        input
 
 
 
