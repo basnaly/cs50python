@@ -26,9 +26,7 @@ class Product:
 
 
     def __str__(self):
-        #table = [{'Name': self.name, 'Icon': self.icon, 'Price': self.price, 'Quantity': self.quantity, 'Sum': self.sum}]
         return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}'
-        # return 'You selected:\n' + tabulate(table, headers='keys', tablefmt='grid')
 
     @classmethod
     def get_product(cls):
