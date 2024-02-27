@@ -23,7 +23,7 @@ class Product:
 
 
     def __str__(self):
-        table = [{current}]
+        table = [{self.name} {self.icon}, {self.price}, quantity: {self.quantity}, sum: {self.sum}]
         # return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}'
 
         return tabulate()
