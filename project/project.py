@@ -87,6 +87,7 @@ def main():
             current_product.save_product()
 
             print(product)
+            print('Select another one or exit using Ctrl-D')
 
         except ValueError:
             continue
