@@ -39,9 +39,10 @@ class Product:
                     type = FARM_LIST[selected_index-1]['type']
                     name = FARM_LIST[selected_index-1]['name']
                     icon = FARM_LIST[selected_index-1]['icon']
-                    price = FARM_LIST[selected_index-1]['price']
+                    current_price = FARM_LIST[selected_index-1]['price']
+                    price, _ = current_price.split('/')
 
-                return cls(type, name, icon, price)
+                return cls(type, name.title(), icon, float(price))
 
             except ValueError:
                 continue
@@ -55,7 +56,9 @@ class Product:
                     continue
                 else:
                     self.quantity = selected_quantity
-                    self.price, _ = price(split'/')
+                    self.sum = round(price * float(self.quantity), 2)
+            except ValueError:
+                continue
 
 
 def main():
