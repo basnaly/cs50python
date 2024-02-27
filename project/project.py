@@ -23,7 +23,7 @@ class Product:
 
 
     def __str__(self):
-        return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum} \n Total price: {self.total}'
+        return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}'
 
 
     @classmethod
@@ -86,7 +86,7 @@ def main():
             current_product.get_quantity()
             current_product.save_product()
 
-            print(product)
+            print(current_product)
             print('Select another one or exit using Ctrl-D')
 
         except ValueError:
