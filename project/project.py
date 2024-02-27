@@ -67,7 +67,7 @@ class Product:
     def save_product(self):
          with open('basket.csv', 'a') as file:
             writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price $', 'Quantity', 'Sum $'])
-            writer.writerow({'Name': self.name, 'Icon': self.icon, 'Price/Kg': self.price, 'Quantity': self.quantity, 'Sum $': self.sum})
+            writer.writerow({'Name': self.name, 'Icon': self.icon, 'Price $': self.price, 'Quantity': self.quantity, 'Sum $': self.sum})
 
 def main():
 
@@ -75,7 +75,7 @@ def main():
     print('Order our fresh greenery, vegatables and fruit from the list below:')
 
     with open('basket.csv', 'w') as file:
-            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $'])
+            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price $', 'Quantity', 'Sum $'])
             writer.writeheader()
 
     list_products = []
@@ -94,7 +94,7 @@ def main():
 
             list_products.append({
                 'Name': current_product.name,
-                'Price/Kg': current_product.price,
+                'Price $': current_product.price,
                 'Quantity': current_product.quantity,
                 'Sum $': current_product.sum
             })
@@ -102,8 +102,7 @@ def main():
             for product in list_products:
                 total += product['Sum $']
                 total = round(total, 2)
-
-            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid'))
+            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid', stralign='center'))
             print(f'Total, $: {total}\n')
             print('Select another one or exit using Ctrl-D')
 
