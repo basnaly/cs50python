@@ -104,7 +104,7 @@ def main():
                 total += product['Sum $']
                 total = round(total, 2)
             print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='psql', stralign=['center']))
-            print(f'Total, $: {total}')
+            print(f'Total, $: {total}\n')
             print('Select another one or exit using Ctrl-D')
 
         except ValueError:
