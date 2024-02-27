@@ -63,8 +63,8 @@ class Product:
                 continue
 
     def save_product(self):
-        row.append
-
+         with open('basket.csv', 'a') as file:
+            
 
 
 def main():
