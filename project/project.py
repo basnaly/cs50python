@@ -55,7 +55,7 @@ class Product:
                     continue
                 else:
                     self.quantity = selected_quantity
-                    self.sum = round(price * float(self.quantity), 2)
+                    self.sum = round(self.price * float(self.quantity), 2)
 
                 return
 
