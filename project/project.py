@@ -93,9 +93,9 @@ def main():
             current_product.save_product()
 
             list_products.append(current_product)
+            print('You selected:\n' + tabulate(table, headers='keys', tablefmt='grid'))
 
-
-            print(current_product)
+            # print(current_product)
             print('Select another one or exit using Ctrl-D')
 
         except ValueError:
