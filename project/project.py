@@ -64,8 +64,8 @@ class Product:
 
     def save_product(self):
          with open('basket.csv', 'a') as file:
-            
-
+            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price $', 'Quantity', 'Sum $'])
+            writer.writerow({'Name': self.name, 'Icon': self.icon, 'Price $': self.price, 'Quantity': self.quantity, 'Sum $': self.sum})
 
 def main():
 
@@ -73,7 +73,7 @@ def main():
     print('Order our fresh greenery, vegatables and fruit from the list below:')
 
     with open('basket.csv', 'w') as file:
-            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price', 'Quantity'])
+            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price $', 'Quantity', 'Sum $'])
             writer.writeheader()
 
     while True:
