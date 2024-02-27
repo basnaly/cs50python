@@ -86,13 +86,13 @@ def main():
         try:
             print('Pick you option: ')
             for index, product in enumerate(FARM_LIST, start=1):
-                print(f'{index}) {product["name"]} {product["icon"]} {product["price"]}')
+                 print(f'{index}) {product["name"]} {product["icon"]} {product["price"]}')
 
             current_product = Product.get_product()
             current_product.get_quantity()
             current_product.save_product()
 
-            
+            list_products.append(current_product)
 
 
             print(current_product)
