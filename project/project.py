@@ -102,7 +102,8 @@ def main():
 
             for product in list_products:
                 total += product['Sum $']
-            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='psql', stralign=['center']) + '\nTotal, $: ' {total})
+            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='psql', stralign=['center']))
+            print('Total, $: ' {total})
             print('Select another one or exit using Ctrl-D')
 
         except ValueError:
