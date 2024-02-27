@@ -100,7 +100,7 @@ def main():
                 'Quantity': current_product.quantity,
                 'Sum $': current_product.sum
             })
-            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='psql', colalign=['center']))
+            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='psql', stralign=['center']))
             print('Select another one or exit using Ctrl-D')
 
         except ValueError:
