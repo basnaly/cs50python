@@ -79,6 +79,7 @@ def main():
             writer.writeheader()
 
     list_products = []
+    total = 0
 
     print('Pick you option: ')
 
@@ -98,6 +99,10 @@ def main():
                 'Quantity': current_product.quantity,
                 'Sum $': current_product.sum
             })
+
+            for product in list_products:
+                total += product['Sum $']
+                print(total)
             print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='psql', stralign=['center']))
             print('Select another one or exit using Ctrl-D')
 
