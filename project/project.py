@@ -65,13 +65,17 @@ class Product:
 
 def main():
 
-    print('Abc')
-    print('Edf')
+    print('Welcome to our online organic farm store!')
+    print('Order our fresh greenery, vegatables and fruit from the list below:')
 
     while True:
         try:
+            print('Pick you option: ')
             for index, product in enumerate(FARM_LIST, start=1):
-                print(f'{index}) {product['name']}')
+                print(f'{index}) {product["name"]} {product["icon"]} {product["price"]}')
+
+            current_product = Product.get_product()
+            current_product.get_quantity()
 
         except ValueError:
             continue
