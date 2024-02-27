@@ -102,8 +102,8 @@ def main():
             for product in list_products:
                 total += product['Sum $']
                 total = round(total, 2)
-                
-            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid', stralign='center'))
+
+            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid'))
             print(f'Total, $: {total}\n')
             print('Select another one or exit using Ctrl-D')
 
