@@ -50,7 +50,7 @@ class Product:
             except ValueError:
                 continue
 
-    def get_quantity(self):
+    def get_quantity_sum(self):
 
         while True:
             try:
@@ -89,11 +89,11 @@ def main():
                  print(f'{index}) {product["name"]} {product["icon"]} {product["price"]}')
 
             current_product = Product.get_product()
-            current_product.get_quantity()
+            current_product.get_quantity_sum()
             current_product.save_product()
 
             list_products.append(current_product)
-            list_products = [{'Name': self.name, 'Icon': self.icon, 'Price': self.price, 'Quantity': self.quantity, 'Sum': self.sum}]
+            list_products = [{'Name': self.name, 'Icon': self.icon, 'Price $': self.price, 'Quantity': self.quantity, 'Sum $': self.sum}]
             print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid'))
 
             # print(current_product)
