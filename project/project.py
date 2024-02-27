@@ -86,6 +86,8 @@ def main():
             current_product.get_quantity()
             current_product.save_product()
 
+            print(product)
+
         except ValueError:
             continue
 
