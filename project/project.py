@@ -80,6 +80,8 @@ def main():
             writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price $', 'Quantity', 'Sum $'])
             writer.writeheader()
 
+    list_products = []
+
     while True:
         try:
             print('Pick you option: ')
@@ -90,8 +92,8 @@ def main():
             current_product.get_quantity()
             current_product.save_product()
 
-            list_products = []
             
+
 
             print(current_product)
             print('Select another one or exit using Ctrl-D')
