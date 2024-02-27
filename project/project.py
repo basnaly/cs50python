@@ -71,7 +71,10 @@ def main():
     while True:
         try:
             for index, product in enumerate(FARM_LIST, start=1):
-                print(f'{index}) {product}')
+                print(f'{index}) {product['name']}')
+
+        except ValueError:
+            continue
 
 
 if __name__ == '__main__':
