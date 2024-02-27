@@ -93,7 +93,13 @@ def main():
             current_product.save_product()
 
             list_products.append(current_product)
-            # list_products = [{'Name': current_product.name, 'Icon': current_product.icon, 'Price $': current_product.price, 'Quantity': current_product.quantity, 'Sum $': current_product.sum}]
+            table_products = [{
+                'Name': current_product.name,
+                'Icon': current_product.icon,
+                'Price $': current_product.price,
+                'Quantity': current_product.quantity,
+                'Sum $': current_product.sum
+            } el for el in list_products]
             print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid'))
 
             # print(current_product)
