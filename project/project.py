@@ -93,8 +93,8 @@ def main():
             current_product.save_product()
 
             list_products.append(current_product)
-            table = [{'Name': self.name, 'Icon': self.icon, 'Price': self.price, 'Quantity': self.quantity, 'Sum': self.sum}]
-            print('You selected:\n' + tabulate(table, headers='keys', tablefmt='grid'))
+            list_products = [{'Name': self.name, 'Icon': self.icon, 'Price': self.price, 'Quantity': self.quantity, 'Sum': self.sum}]
+            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid'))
 
             # print(current_product)
             print('Select another one or exit using Ctrl-D')
