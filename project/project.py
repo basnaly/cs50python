@@ -1,4 +1,5 @@
 import csv, sys
+from tabulate import tabulate
 
 
 FARM_LIST = [
@@ -23,10 +24,9 @@ class Product:
 
 
     def __str__(self):
-        table = [{self.name} {self.icon}, {self.price}, quantity: {self.quantity}, sum: {self.sum}]
+        table = [{'Name': self.name, 'Icon': self.icon, 'Price': self.price, 'Quantity': self.quantity, 'Sum': self.sum}]
         # return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}'
-
-        return tabulate()
+        return tabulate(table, headers='keys', tablefmt='grid')
 
     @classmethod
     def get_product(cls):
