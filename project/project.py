@@ -32,7 +32,7 @@ class Product:
 
         while True:
             try:
-                selected_index = int(input('Pick your choice: '))
+                selected_index = int(input('Select product: '))
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
@@ -41,8 +41,21 @@ class Product:
                     icon = FARM_LIST[selected_index-1]['icon']
                     price = FARM_LIST[selected_index-1]['price']
 
+                return cls(type, name, icon, price)
+
             except ValueError:
                 continue
+
+    def get_quantity(self):
+
+        while True:
+            try:
+                selected_quantity = float(input('Select quantity: '))
+                if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
+                    continue
+                else:
+                    self.quantity = selected_quantity
+                    self.price, _ = price(split'/')
 
 
 def main():
