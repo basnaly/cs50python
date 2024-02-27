@@ -20,7 +20,6 @@ class Product:
         self.price = price
         self.quantity = 0
         self.sum = 0
-        self.total = 0
 
 
     def __str__(self):
@@ -57,11 +56,19 @@ class Product:
                 else:
                     self.quantity = selected_quantity
                     self.sum = round(price * float(self.quantity), 2)
+
+                return
+
             except ValueError:
                 continue
 
 
 def main():
+
+    print('Abc')
+    print('Edf')
+
+    for 
 
 
 if __name__ == '__main__':
