@@ -82,9 +82,10 @@ def main():
 
     list_products = []
 
+    print('Pick you option: ')
+
     while True:
         try:
-            print('Pick you option: ')
             for index, product in enumerate(FARM_LIST, start=1):
                  print(f'{index}) {product["name"]} {product["icon"]} {product["price"]}')
 
@@ -100,8 +101,6 @@ def main():
                 'Sum $': current_product.sum
             })
             print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid'))
-
-            # print(current_product)
             print('Select another one or exit using Ctrl-D')
 
         except ValueError:
