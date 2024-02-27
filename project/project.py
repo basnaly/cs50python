@@ -23,9 +23,9 @@ class Product:
 
 
     def __str__(self):
-        table = []
+        table = [{current}]
         # return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}'
-        
+
         return tabulate()
 
     @classmethod
