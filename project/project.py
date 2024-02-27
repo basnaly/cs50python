@@ -68,8 +68,10 @@ def main():
     print('Abc')
     print('Edf')
 
-    for index, product in enumerate(FARM_LIST):
-        print
+    while True:
+        try:
+            for index, product in enumerate(FARM_LIST, start=1):
+                print(f'{index}) {product}')
 
 
 if __name__ == '__main__':
