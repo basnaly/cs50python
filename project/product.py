@@ -61,7 +61,7 @@ class Product:
         row = ({
             'Name': self.name,
             'Icon': self.icon,
-            'Price $': self.price,
+            'Price/Kg': self.price,
             'Quantity': self.quantity,
             'Sum $': self.sum
         })
