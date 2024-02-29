@@ -26,8 +26,8 @@ def create():
                     current_product.save_to_csv(writer)
                     list_products.append(current_product)
 
-                    print(*list_products)
-                    # get_data(list_products)
+                    # print(*list_products)
+                    get_data(list_products)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
@@ -49,9 +49,9 @@ def get_data(list_products):
     # try:
         # with open('basket.csv') as file:
     # reader = csv.DictReader(file)
-    for row in reader:
-        csv_list.append(row)
-    print(tabulate(csv_list, headers='keys', tablefmt='grid'))
+    # for row in reader:
+    #     csv_list.append(row)
+    print(tabulate(*list_products, headers='keys', tablefmt='grid'))
 
     total = 0
     for product in csv_list:
