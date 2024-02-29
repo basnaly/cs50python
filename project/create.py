@@ -26,8 +26,8 @@ def create():
                     current_product.save_to_csv(writer)
                     list_products.append(current_product)
 
-                    # print(list_products)
-                    get_data(list_products)
+                    print(*list_products)
+                    # get_data(list_products)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
