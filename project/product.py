@@ -43,7 +43,6 @@ class Product:
                 continue
 
     def get_quantity_sum(self):
-
         while True:
             try:
                 selected_quantity = float(input('Select quantity: '))
