@@ -27,7 +27,7 @@ def create():
                     list_products.append(current_product)
 
                     # print(list_products)
-                    # get_data(file)
+                    get_data(list_products)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
