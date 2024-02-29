@@ -43,7 +43,7 @@ def create():
         sys.exit('File not found')
 
 
-def get_data(list_products):
+def display_basket(list_products):
     # csv_list = []
     # [{name:'gg'}]
     # try:
@@ -54,9 +54,9 @@ def get_data(list_products):
     print(tabulate(list_products, headers='keys', tablefmt='grid'))
 
     total = 0
-    for product in csv_list:
-        total += float(product['Sum $'])
-    return csv_list, total
+    for product in list_products:
+        total += float(product['sum'])
+    # return csv_list, total
 
     # except FileNotFoundError:
     #     sys.exit('File does not exist')
