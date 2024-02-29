@@ -43,8 +43,9 @@ def create():
         sys.exit('File not found')
 
 
-def get_data(file):
+def get_data(list_products):
     csv_list = []
+    # [{name:'gg'}]
     # try:
         # with open('basket.csv') as file:
     reader = csv.DictReader(file)
