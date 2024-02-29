@@ -26,8 +26,8 @@ def create():
                     current_product.save_to_csv(writer)
                     list_products.append(current_product.__dict__)
 
-                    print(list_products)
-                    # get_data(list_products)
+                    # print(list_products)
+                    get_data(list_products)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
@@ -44,7 +44,7 @@ def create():
 
 
 def get_data(list_products):
-    csv_list = []
+    # csv_list = []
     # [{name:'gg'}]
     # try:
         # with open('basket.csv') as file:
