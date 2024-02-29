@@ -57,51 +57,13 @@ class Product:
             except ValueError:
                 continue
 
-    def save_product(self):
-         with open('basket.csv', 'a') as file:
-            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $'])
-            writer.writerow({'Name': self.name, 'Icon': self.icon, 'Price/Kg': self.price, 'Quantity': self.quantity, 'Sum $': self.sum})
+    def save_to_csv(self, writer):
+        row = ({
+            'Name': self.name,
+            'Icon': self.icon,
+            'Price $': self.price,
+            'Quantity': self.quantity,
+            'Sum $': self.sum
+        })
+        writer.writerow(row)
 
-def main():
-
-    print('Welcome to our online organic farm store!')
-    print('Order our fresh greenery, vegatables and fruit from the list below:')
-
-    with open('basket.csv', 'w') as file:
-            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $'])
-            writer.writeheader()
-
-    list_products = []
-
-
-    print('Pick you option: ')
-
-    while True:
-        try:
-            for index, product in enumerate(FARM_LIST, start=1):
-                 print(f'{index}) {product["name"]} {product["icon"]} {product["price"]}')
-
-            current_product = Product.get_product()
-            current_product.get_quantity_sum()
-            current_product.save_product()
-
-            list_products.append({
-                'Name': current_product.name,
-                'Price/Kg': current_product.price,
-                'Quantity': current_product.quantity,
-                'Sum $': current_product.sum
-            })
-            total = 0
-            for product in list_products:
-                total += product['Sum $']
-                total = round(total, 2)
-            print('You selected:\n' + tabulate(list_products, headers='keys', tablefmt='grid', stralign='center'))
-            print(f'Total, $: {total}\n')
-            print('Select another one or exit using Ctrl-D')
-
-        except ValueError:
-            continue
-
-
-if __name__ == '__main__':
-    main()
