@@ -22,13 +22,7 @@ class Product:
 
     def __str__(self):
         # return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}\n'
-        return f'{
-            'name': {self.name},
-            'icon': {self.icon},
-            'price': {self.price},
-            'quantity': {self.quantity},
-            'sum': {self.sum}
-        }
+        return f'name: {self.name}, icon: {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}\n'
 
 
     @classmethod

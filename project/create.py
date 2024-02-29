@@ -51,7 +51,7 @@ def get_data(list_products):
     # reader = csv.DictReader(file)
     # for row in reader:
     #     csv_list.append(row)
-    print(tabulate(*list_products, headers='keys', tablefmt='grid'))
+    print(tabulate(list_products, headers='keys', tablefmt='grid'))
 
     total = 0
     for product in csv_list:
