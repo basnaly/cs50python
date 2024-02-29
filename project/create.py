@@ -48,7 +48,7 @@ def get_data(list_products):
     # [{name:'gg'}]
     # try:
         # with open('basket.csv') as file:
-    reader = csv.DictReader(file)
+    # reader = csv.DictReader(file)
     for row in reader:
         csv_list.append(row)
     print(tabulate(csv_list, headers='keys', tablefmt='grid'))
