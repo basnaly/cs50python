@@ -25,7 +25,7 @@ def create():
                     current_product.save_to_csv(writer)
 
                     # print(current_product)
-                    data_list, total_sum = get_data()
+                    get_data()
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
