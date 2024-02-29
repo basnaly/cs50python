@@ -25,7 +25,7 @@ def create():
                     current_product.set_quantity_sum()
                     current_product.save_to_csv(writer)
                     list_products.append(current_product)
-
+ 
                     print(current_product)
                     # get_data(file)
 
