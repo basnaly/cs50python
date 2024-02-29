@@ -1,6 +1,6 @@
 import argparse
 
- from create import create
+from create import create
 
 
 def main():
@@ -16,9 +16,6 @@ def main():
         print('Finish')
     else:
         print('Not supported option. Select one of three modes: create, edit or finish.')
-
-
-
 
 
 # if __name__ == '__main__':

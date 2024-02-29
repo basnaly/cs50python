@@ -1,5 +1,5 @@
 import csv, sys
-
+from tabulate import tabulate
 from product import FARM_LIST, Product
 
 
@@ -21,7 +21,7 @@ def create():
             while True:
                 try:
                     current_product = Product.get_product()
-                    current_product.set_quantity_sum()
+                    current_product.get_quantity_sum()
                     current_product.save_to_csv(writer)
 
                     # print(current_product)
