@@ -25,7 +25,7 @@ def create():
                     current_product.save_to_csv(writer)
 
                     # print(current_product)
-                    get_data(writer)
+                    get_data(file)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
@@ -41,12 +41,12 @@ def create():
         sys.exit('File not found')
 
 
-def get_data(writer):
+def get_data(file):
     csv_list = []
     # try:
         # with open('basket.csv') as file:
-        #     reader = csv.DictReader(file)
-    for row in writer:
+    reader = csv.DictReader(file)
+    for row in reader:
         csv_list.append(row)
     print(tabulate(csv_list, headers='keys', tablefmt='grid'))
 
