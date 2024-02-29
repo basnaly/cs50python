@@ -27,7 +27,7 @@ def create():
                     list_products.append(current_product.__dict__)
 
                     # print(list_products)
-                    get_data(list_products)
+                    display_basket(list_products)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
@@ -56,6 +56,7 @@ def display_basket(list_products):
     total = 0
     for product in list_products:
         total += float(product['sum'])
+    print(f'Total: ${total}')
     # return csv_list, total
 
     # except FileNotFoundError:
