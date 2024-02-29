@@ -24,10 +24,10 @@ def create():
                     current_product = Product.get_product()
                     current_product.set_quantity_sum()
                     current_product.save_to_csv(writer)
-                    list_products.append(current_product)
+                    list_products.append(current_product.__dict__)
 
-                    # print(*list_products)
-                    get_data(list_products)
+                    print(list_products)
+                    # get_data(list_products)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
