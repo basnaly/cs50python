@@ -1,8 +1,3 @@
-import csv, sys
-
-# pip install tabulate
-from tabulate import tabulate
-
 
 FARM_LIST = [
     {'type': 'vegatable', 'name': 'carrot', 'icon': '🥕', 'price': '0.70/kg'},
@@ -30,7 +25,6 @@ class Product:
 
     @classmethod
     def get_product(cls):
-
         while True:
             try:
                 selected_index = int(input('Select product: '))
