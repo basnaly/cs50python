@@ -25,7 +25,7 @@ def create():
                     current_product.save_to_csv(writer)
 
                     # print(current_product)
-                    get_data()
+                    get_data(writer)
 
                     print('Select another product, finish your order or exit Ctrl-D')
 
@@ -41,19 +41,19 @@ def create():
         sys.exit('File not found')
 
 
-def get_data():
+def get_data(writer):
     csv_list = []
-    try:
-        with open('basket.csv') as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                csv_list.append(row)
-            print(tabulate(csv_list, headers='keys', tablefmt='grid'))
+    # try:
+        # with open('basket.csv') as file:
+        #     reader = csv.DictReader(file)
+    for row in writer:
+        csv_list.append(row)
+    print(tabulate(csv_list, headers='keys', tablefmt='grid'))
 
-            total = 0
-            for product in csv_list:
-                total += float(product['Sum $'])
-            return csv_list, total
+    total = 0
+    for product in csv_list:
+        total += float(product['Sum $'])
+    return csv_list, total
 
-    except FileNotFoundError:
-        sys.exit('File does not exist')
+    # except FileNotFoundError:
+    #     sys.exit('File does not exist')
