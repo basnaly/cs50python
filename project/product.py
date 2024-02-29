@@ -42,7 +42,7 @@ class Product:
             except ValueError:
                 continue
 
-    def get_quantity_sum(self):
+    def set_quantity_sum(self):
         while True:
             try:
                 selected_quantity = float(input('Select quantity: '))
