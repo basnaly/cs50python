@@ -12,6 +12,7 @@ def create():
         print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
     try:
+        list_products = []
         # Open csv file and clean it
         csv_file = 'basket.csv'
         with open(csv_file, mode='w', newline='\n') as file:
@@ -23,6 +24,7 @@ def create():
                     current_product = Product.get_product()
                     current_product.set_quantity_sum()
                     current_product.save_to_csv(writer)
+                    list_products.append(current_product)
 
                     # print(current_product)
                     get_data(file)
