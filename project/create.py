@@ -44,7 +44,7 @@ def create():
 
 
 def display_basket(list_products):
-    # csv_list = []
+    # list_products = []
     # [{name:'gg'}]
     # try:
         # with open('basket.csv') as file:
