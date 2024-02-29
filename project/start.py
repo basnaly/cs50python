@@ -1,5 +1,3 @@
-# Adds default, type; removes int()
-
 import argparse
 
 parser = argparse.ArgumentParser(description="Meow like a cat")
