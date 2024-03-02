@@ -53,6 +53,9 @@ def edit():
             save_to_cart(table)
 
 
+def print_table(table):
+    
+
 def add(table):
     print('Pick you option: ')
     for index, item in enumerate(FARM_LIST):
