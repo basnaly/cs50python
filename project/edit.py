@@ -15,10 +15,15 @@ def edit():
             for row in reader:
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
-            cprint('What would you like to edit?', 'blue')
-            cprint('To add new one type 1.', 'blue')
-            cprint('To delete type 2, space and the name.', 'blue')
-            cprint('To change quantity type 3, space, the name, space and the quantity you want to change to.', 'blue')
+
+            while True:
+                 try:
+                    cprint('What would you like to edit?', 'blue')
+                    cprint('To add new one type 1.', 'blue')
+                    cprint('To delete type 2, space and the name.', 'blue')
+                    cprint('To change quantity type 3, space, the name, space and the quantity you want to change to.', 'blue')
+                    choice = input('Your choice: ')
+                    if 
 
     except FileNotFoundError:
         sys.exit('File does not exist')
