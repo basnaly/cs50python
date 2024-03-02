@@ -67,7 +67,7 @@ def add(table):
         print(e)
 
 
-def delete(table, name):
+def delete(table, index):
     for row in table:
-        if row['Name'] == name:
-            
+        
+
