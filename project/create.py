@@ -1,6 +1,8 @@
 import csv, sys
 from tabulate import tabulate
 from product import FARM_LIST, Product
+from colorama import Fore, Back, Style
+from termcolor import colored, cprint
 
 
 def create():
@@ -29,14 +31,15 @@ def create():
                     # print(list_products)
                     display_basket(list_products)
 
-                    print('Select another product, finish your order or exit Ctrl-D')
+                    print('Select another product or exit using Ctrl-D')
 
                 except ValueError as e:
                     print(e)
                     continue
 
                 except EOFError:
-                    print('\nYour order list:')
+                    cprint('\nRun `python project.py -m edit` to edit the order.', 'green')
+                    cprint('Run `python project.py -m finish` to complete the order.', 'green')
                     break
 
     except FileNotFoundError:
@@ -44,20 +47,10 @@ def create():
 
 
 def display_basket(list_products):
-    # list_products = []
-    # [{name:'gg'}]
-    # try:
-        # with open('basket.csv') as file:
-    # reader = csv.DictReader(file)
-    # for row in reader:
-    #     csv_list.append(row)
+
     print(tabulate(list_products, headers='keys', tablefmt='grid'))
 
     total = 0
     for product in list_products:
         total += float(product['sum'])
     print(f'Total: ${total}')
-    # return csv_list, total
-
-    # except FileNotFoundError:
-    #     sys.exit('File does not exist')

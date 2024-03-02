@@ -1,6 +1,9 @@
 import argparse
 
 from create import create
+from finish import finish
+
+
 
 
 def main():
@@ -13,7 +16,7 @@ def main():
     elif args.mode == 'edit':
         print('Edit')
     elif args.mode == 'finish':
-        print('Finish')
+        finish()
     else:
         print('Not supported option. Select one of three modes: create, edit or finish.')
 

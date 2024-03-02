@@ -5,7 +5,7 @@ from tabulate import tabulate
 import sys
 
 
-def main():
+def finish():
 
     current_datetime = datetime.datetime.now()
     formatted_datetime = current_datetime.strftime('%Y-%m-%d %H:%M:%S')
@@ -29,7 +29,7 @@ def main():
 
     # Create table
     TABLE_DATA = (
-        (product['Name'], product['Price $'], product['Quantity'], product['Sum $']) for product in data_list
+        (product['Name'], product['Price/Kg'], product['Quantity'], product['Sum $']) for product in data_list
     )
 
     pdf.set_font('Times', size=18)
@@ -38,7 +38,7 @@ def main():
 
         # Create header in table
         row = table.row()
-        for datum in ("Product Name", "Price, $", "Quantity", "Sum, $"):
+        for datum in ("Product Name", "Price/Kg", "Quantity", "Sum, $"):
             row.cell(datum)
 
         # Add rows in table
@@ -71,7 +71,3 @@ def get_data():
 
     except FileNotFoundError:
         sys.exit('File does not exist')
-
-
-if __name__ == '__main__':
-    main()
