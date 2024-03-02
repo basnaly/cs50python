@@ -40,6 +40,7 @@ def edit():
             elif choice[0] == '2':
                 print(choice[1])
                 print('Selected delete')
+                delete(table, choice[1])
 
             elif choice[0] == '3':
                 print('Selected change quantity')
