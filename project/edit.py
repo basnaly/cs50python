@@ -34,3 +34,5 @@ def change_table()
     else:
         print('Not supported option. Select one of three changes: add new, delete exist or change quantity')
 
+
+
