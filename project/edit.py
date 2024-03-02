@@ -37,10 +37,10 @@ def edit():
                 print('abc')
                 add(table)
 
-            # number, name, quantity = choice.split(' ')
+            [number, name, quantity] = choice.split(' ')
 
-            # elif number == '2' and name in table:
-            #     print('Selected delete')
+            elif number == '2' and name in table:
+                print('Selected delete')
 
             # elif number == '3' and name in table:
             #     print('Selected change quantity')
