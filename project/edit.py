@@ -30,7 +30,7 @@ def change_table(table):
         name = item['name']
 
     if args.mode == 'add':
-        print('Add')
+        add(table)
     elif args.mode == 'delete' :
         print('Delete')
     elif args.mode == 'quantity':
@@ -39,10 +39,10 @@ def change_table(table):
         print('Not supported option. Select one of three changes: add new, delete exist or change quantity')
 
 
-def add():
+def add(table):
     print('Pick you option: ')
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
-    
+
 
