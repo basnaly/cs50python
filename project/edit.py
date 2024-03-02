@@ -13,6 +13,7 @@ def edit():
             for row in reader:
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
+            cprint('What would you like to edit?')
 
     except FileNotFoundError:
         sys.exit('File does not exist')
