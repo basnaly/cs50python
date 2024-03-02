@@ -53,7 +53,7 @@ def finish():
     pdf.cell(text=f'Total to pay: ${total_sum}', center=False, new_y='TOP')
 
     pdf.output('order.pdf')
-    print('Your order was created in order.pdf file. Thank you!')
+    print('Your order was created, see order.pdf file. Thank you!')
 
 
 def get_data():
@@ -63,7 +63,7 @@ def get_data():
             reader = csv.DictReader(file)
             for row in reader:
                 csv_list.append(row)
-            print(tabulate(csv_list, headers="keys", tablefmt="grid"))
+            # print(tabulate(csv_list, headers="keys", tablefmt="grid"))
 
             total = 0
             for product in csv_list:
