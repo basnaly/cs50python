@@ -77,4 +77,9 @@ def delete(table, index):
 
 
 def save_to_cart(table):
-    
+    csv_file = 'cart.csv'
+    with open(csv_file, 'r') as file:
+        writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $'])
+            writer.writeheader()
+            for row in table:
+                writer.writerow(row)

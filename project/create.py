@@ -16,7 +16,7 @@ def create():
     try:
         list_products = []
         # Open csv file and clean it
-        csv_file = 'basket.csv'
+        csv_file = 'cart.csv'
         with open(csv_file, mode='w', newline='\n') as file:
             writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $'])
             writer.writeheader()
