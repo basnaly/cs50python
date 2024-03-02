@@ -1,9 +1,10 @@
 import csv, sys
 from tabulate import tabulate
+from termcolor import colored, cprint
 
 
 def edit():
-    print('Here is your order:')
+    cprint('Here is your order:', 'blue')
     try:
         table = []
         csv_file = 'basket.csv'
@@ -11,7 +12,7 @@ def edit():
             reader = csv.DictReader(file)
             for row in reader:
                 table.append(row)
-            print(tabulate(table, headers='keys', tablefmt='grid))
+            print(tabulate(table, headers='keys', tablefmt='grid'))
 
     except FileNotFoundError:
         sys.exit('File does not exist')
