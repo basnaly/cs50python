@@ -11,10 +11,12 @@ def edit():
         csv_file = 'basket.csv'
         with open(csv_file, mode='r') as file:
             reader = csv.DictReader(file)
+            index = 0
             for row in reader:
+                row['Number'] = index
+                index += 1
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
-
 
 
     except FileNotFoundError:
@@ -22,22 +24,20 @@ def edit():
 
     while True:
 
-        for item in table:
-                 item_name = item['Name']
         try:
             cprint('What would you like to edit?', 'blue')
             cprint('To add new one type 1.', 'blue')
-            cprint('To delete type 2, space and the name.', 'blue')
-            cprint('To change quantity type 3, space, the name, space and the quantity you want to change to.', 'blue')
+            cprint('To delete type 2, space and the number.', 'blue')
+            cprint('To change quantity type 3, space, the number, space and the quantity you want to change to.', 'blue')
 
             choice = input('Your choice: ').split(' ')
 
-            print(choice[1], item_name)
+            print(choice[1])
 
             if choice[0] == '1':
                 add(table)
 
-            elif choice[0] == '2' and choice[1] in table:
+            elif choice[0] == '2' and c in table:
                 print('Selected delete')
 
             elif choice[0] == '3' and choice[1].casefold()  == item_name:
