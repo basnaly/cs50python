@@ -25,7 +25,7 @@ def edit():
     while True:
 
         try:
-            cprint('What would you like to edit?', 'blue')
+            cprint('What would you like to edit?', 'blue', attrs=['bold'])
             cprint('To add new one type 1.', 'blue')
             cprint('To delete type 2, space and the number.', 'blue')
             cprint('To change quantity type 3, space, the number, space and the quantity you want to change to.', 'blue')
