@@ -12,7 +12,7 @@ def main():
     if args.mode == 'create':
         create()
     elif args.mode == 'edit':
-        print('Edit')
+        edit()
     elif args.mode == 'finish':
         finish()
     else:
