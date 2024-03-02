@@ -8,7 +8,7 @@ def edit():
     cprint('Here is your order:', 'blue')
     table = []
     try:
-        csv_file = 'basket.csv'
+        csv_file = 'cart.csv'
         with open(csv_file, mode='r') as file:
             reader = csv.DictReader(file)
             index = 0

@@ -29,7 +29,7 @@ def create():
                     list_products.append(current_product.__dict__)
 
                     # print(list_products)
-                    display_basket(list_products)
+                    display_cart(list_products)
 
                     print('Select another product or exit using Ctrl-D')
 
@@ -46,7 +46,7 @@ def create():
         sys.exit('File not found')
 
 
-def display_basket(list_products):
+def display_cart(list_products):
 
     print(tabulate(list_products, headers='keys', tablefmt='grid'))
 
