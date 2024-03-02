@@ -60,13 +60,7 @@ class Product:
                 continue
 
     def save_to_csv(self, writer):
-        row = ({
-            'Name': self.name,
-            'Icon': self.icon,
-            'Price/Kg': self.price,
-            'Quantity': self.quantity,
-            'Sum $': self.sum
-        })
+        row = self.get_product_obj()
         writer.writerow(row)
 
 

@@ -59,7 +59,7 @@ def add(table):
     try:
         current_product = Product.get_product()
         current_product.set_quantity_sum()
-        table.append(current_product.__dict__)
+        table.append(current_product.get_product_obj())
         print(table)
 
         print('Select another product or exit using Ctrl-D')
