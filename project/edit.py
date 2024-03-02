@@ -24,7 +24,6 @@ def edit():
 
         for item in table:
                  item_name = item['Name']
-                 item_quantity = item['Quantity']
         try:
             cprint('What would you like to edit?', 'blue')
             cprint('To add new one type 1.', 'blue')
@@ -41,7 +40,7 @@ def edit():
             elif choice[0] == '2' and choice[1].casefold() == item_name:
                 print('Selected delete')
 
-            elif choice[0] == '3' and choice[1].casefold() in table:
+            elif choice[0] == '3' and choice[1].casefold()  == item_name:
                 print('Selected change quantity')
 
             else:
