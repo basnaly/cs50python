@@ -69,5 +69,5 @@ def add(table):
 
 def delete(table, index):
     for row in table:
-        table.
+        if 
 
