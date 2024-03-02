@@ -49,6 +49,9 @@ def edit():
         except ValueError:
             continue
 
+        except EOFError:
+            
+
 
 def add(table):
     print('Pick you option: ')
