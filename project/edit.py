@@ -37,7 +37,7 @@ def edit():
             if choice[0] == '1':
                 add(table)
 
-            elif choice[0] == '2' and choice[1].casefold() == item_name:
+            elif choice[0] == '2' and choice[1] in table:
                 print('Selected delete')
 
             elif choice[0] == '3' and choice[1].casefold()  == item_name:
