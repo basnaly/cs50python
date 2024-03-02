@@ -72,7 +72,7 @@ def add(table):
 
 
 def delete(table, index):
-    table.remove(index)
+    table.pop(index)
 
 
 def save_to_cart(table):
