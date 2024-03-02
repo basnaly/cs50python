@@ -1,6 +1,7 @@
 import csv, sys
 from tabulate import tabulate
 from termcolor import colored, cprint
+import argparse
 
 
 def edit():
@@ -17,3 +18,19 @@ def edit():
 
     except FileNotFoundError:
         sys.exit('File does not exist')
+
+
+def change_table()
+    parser = argparse.ArgumentParser(description='Process one of three arguments')
+    parser.add_argument('-c', '--change', help='Select one of three changes: add new, delete exist or change quantity', type=str)
+    args = parser.parse_args()
+
+    if args.mode == 'add':
+        print('Add')
+    elif args.mode == 'delete':
+        edit()
+    elif args.mode == 'quantity':
+        print('Add')
+    else:
+        print('Not supported option. Select one of three changes: add new, delete exist or change quantity')
+
