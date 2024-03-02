@@ -45,12 +45,14 @@ def edit():
 
             else:
                 continue
+            print(tabulate(table, headers='keys', tablefmt='grid'))
 
         except ValueError:
             continue
 
         except EOFError:
             save_to_cart(table)
+            break
 
 
 def add(table):
@@ -62,7 +64,6 @@ def add(table):
         current_product = Product.get_product()
         current_product.set_quantity_sum()
         table.append(current_product.get_product_obj())
-        print(tabulate(table, headers='keys', tablefmt='grid'))
 
         # print('Select another product or exit using Ctrl-D')
 
@@ -71,9 +72,7 @@ def add(table):
 
 
 def delete(table, index):
-    for index in table:
-        table.remove(index)
-    print(tabulate(table, headers='keys', tablefmt='grid'))
+    table.remove(index)
 
 
 def save_to_cart(table):
