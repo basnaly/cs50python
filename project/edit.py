@@ -32,7 +32,7 @@ def edit():
 
             choice = input('Your choice: ').split(' ')
 
-            print(choice, item_name)
+            print(choice[1], item_name)
 
             if choice[0] == '1':
                 add(table)
