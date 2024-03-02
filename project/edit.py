@@ -15,14 +15,16 @@ def edit():
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
 
-            for item in table:
-                 item_name = item['Name']
-                 item_quantity = item['Quantity']
+
 
     except FileNotFoundError:
         sys.exit('File does not exist')
 
     while True:
+
+        for item in table:
+                 item_name = item['Name']
+                 item_quantity = item['Quantity']
         try:
             cprint('What would you like to edit?', 'blue')
             cprint('To add new one type 1.', 'blue')
@@ -31,7 +33,7 @@ def edit():
 
             choice = input('Your choice: ').split(' ')
 
-            print(choice)
+            print(choice, item_name)
 
             if choice[0] == '1':
                 add(table)
