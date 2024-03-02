@@ -32,6 +32,7 @@ def edit():
 
             choice = input('Your choice: ')
             number, name, quantity = choice.split(' ')
+            print(number, name, quantity)
 
             if number == '1':
                 print('abc')
