@@ -30,7 +30,7 @@ def change_table()
     elif args.mode == 'delete':
         edit()
     elif args.mode == 'quantity':
-        print('Add')
+        print('Change quantity')
     else:
         print('Not supported option. Select one of three changes: add new, delete exist or change quantity')
 
