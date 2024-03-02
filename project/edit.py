@@ -13,7 +13,7 @@ def edit():
             reader = csv.DictReader(file)
             index = 0
             for row in reader:
-                row['Number'] = index
+                row['Number'] = index + 1
                 index += 1
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
@@ -37,10 +37,11 @@ def edit():
             if choice[0] == '1':
                 add(table)
 
-            elif choice[0] == '2' :
+            elif choice[0] == '2':
+                print(choice[1])
                 print('Selected delete')
 
-            elif choice[0] == '3' and choice[1].casefold()  == item_name:
+            elif choice[0] == '3':
                 print('Selected change quantity')
 
             else:
