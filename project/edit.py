@@ -68,6 +68,7 @@ def add(table):
 
 
 def delete(table, index):
-    for row in table:
-        if 
+    for index in table:
+        table.remove(index)
+    print(table)
 
