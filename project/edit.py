@@ -2,6 +2,7 @@ import csv, sys
 from tabulate import tabulate
 from termcolor import colored, cprint
 import argparse
+from product import FARM_LIST, Product
 
 
 def edit():
@@ -44,5 +45,16 @@ def add(table):
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
 
+    while True:
+        try:
+            current_product = Product.get_product()
+            current_product.set_quantity_sum()
+            table.append(current_product.__dict__)
+            print(table)
 
+            print('Select another product or exit using Ctrl-D')
+
+        except ValueError as e:
+                    print(e)
+                    continue
 
