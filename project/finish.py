@@ -60,7 +60,7 @@ def finish():
 def get_data():
     csv_list = []
     try:
-        with open('basket.csv') as file:
+        with open('cart.csv') as file:
             reader = csv.DictReader(file)
             for row in reader:
                 csv_list.append(row)
