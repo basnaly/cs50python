@@ -16,16 +16,34 @@ def edit():
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
 
+            for item in table:
+                 item_name = item['name']
+                 item_quantity = item['quantity']
+
             while True:
                  try:
                     cprint('What would you like to edit?', 'blue')
                     cprint('To add new one type 1.', 'blue')
                     cprint('To delete type 2, space and the name.', 'blue')
                     cprint('To change quantity type 3, space, the name, space and the quantity you want to change to.', 'blue')
+
                     choice = input('Your choice: ')
                     number, name, quantity = choice.split(' ')
 
+                    if number == '1':
+                         add(table)
+
+                    elif number == '2' and name in table:
+                         print('Selected delete')
+
+                    elif number == '3' and name in table:
+                         print('Selected change quantity')
+
+                    else:
+                         continue
+
                 except ValueError:
+                    continue
 
 
     except FileNotFoundError:
