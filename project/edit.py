@@ -16,10 +16,9 @@ def edit():
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
             cprint('What would you like to edit?', 'blue')
-            cprint('To add new one type 1'
-            cprint('To delete type 2 and `name`,\n')
-
-            change_table(table)
+            cprint('To add new one type 1.', 'blue')
+            cprint('To delete type 2, space and the name.', 'blue')
+            cprint('To change quantity type 3, space, the name, space and the quantity you want to change to.', 'blue')
 
     except FileNotFoundError:
         sys.exit('File does not exist')
