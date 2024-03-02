@@ -26,10 +26,13 @@ def change_table(table):
     parser.add_argument('-c', '--change', help='Select one of three changes: add new, delete exist or change quantity', type=str)
     args = parser.parse_args()
 
+    for item in table:
+        name = item['name']
+
     if args.mode == 'add':
         print('Add')
-    elif args.mode == 'delete':
-        edit()
+    elif args.mode == 'delete' :
+        print('Delete')
     elif args.mode == 'quantity':
         print('Change quantity')
     else:
@@ -37,4 +40,9 @@ def change_table(table):
 
 
 def add():
+    print('Pick you option: ')
+    for index, item in enumerate(FARM_LIST):
+        print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
+
+    
 
