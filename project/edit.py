@@ -50,7 +50,7 @@ def edit():
             continue
 
         except EOFError:
-            
+            save_to_cart(table)
 
 
 def add(table):
@@ -75,3 +75,6 @@ def delete(table, index):
         table.remove(index)
     print(tabulate(table, headers='keys', tablefmt='grid'))
 
+
+def save_to_cart(table):
+    
