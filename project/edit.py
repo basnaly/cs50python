@@ -37,7 +37,7 @@ def edit():
             if choice[0] == '1':
                 add(table)
 
-            elif choice[0] == '2':
+            elif choice[0] == '2' and int(choice[1]) <= len(table):
                 print(choice[1])
                 print('Selected delete')
                 delete(table, choice[1])
