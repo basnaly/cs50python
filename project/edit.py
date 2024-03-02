@@ -59,9 +59,9 @@ def add(table):
         current_product = Product.get_product()
         current_product.set_quantity_sum()
         table.append(current_product.get_product_obj())
-        print(table)
+        print(tabulate(table, headers='keys', tablefmt='grid'))
 
-        print('Select another product or exit using Ctrl-D')
+        # print('Select another product or exit using Ctrl-D')
 
     except ValueError as e:
         print(e)
@@ -70,5 +70,5 @@ def add(table):
 def delete(table, index):
     for index in table:
         table.remove(index)
-    print(table)
+    print(tabulate(table, headers='keys', tablefmt='grid'))
 
