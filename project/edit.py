@@ -31,7 +31,7 @@ def edit():
 
             choice = input('Your choice: ')
 
-            print(choice)
+            print(len(choice))
 
             if choice == '1':
                 print('abc')
