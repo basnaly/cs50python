@@ -69,3 +69,12 @@ class Product:
         })
         writer.writerow(row)
 
+
+    def get_product_obj(self):
+        return {
+            'Name': self.name,
+            'Icon': self.icon,
+            'Price/Kg': self.price,
+            'Quantity': self.quantity,
+            'Sum $': self.sum
+        }
