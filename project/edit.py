@@ -15,12 +15,13 @@ def edit():
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
             cprint('What would you like to edit?')
+            change_table(table)
 
     except FileNotFoundError:
         sys.exit('File does not exist')
 
 
-def change_table():
+def change_table(table):
     parser = argparse.ArgumentParser(description='Process one of three arguments')
     parser.add_argument('-c', '--change', help='Select one of three changes: add new, delete exist or change quantity', type=str)
     args = parser.parse_args()
