@@ -36,10 +36,10 @@ def edit():
             if choice[0] == '1':
                 add(table)
 
-            elif choice[0] == '2' and choice[1] in table:
+            elif choice[0] == '2' and choice[1].casefold() in table:
                 print('Selected delete')
 
-            elif choice[0] == '3' and choice[1] in table:
+            elif choice[0] == '3' and choice[1].casefold() in table:
                 print('Selected change quantity')
 
             else:
