@@ -32,7 +32,7 @@ def edit():
             choice = input('Your choice: ')
             [list] = choice.split(' ')
 
-            print(len(choice))
+            print(list)
 
             if list[0] == '1':
                 print('abc')
