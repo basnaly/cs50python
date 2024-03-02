@@ -16,6 +16,7 @@ def edit():
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
             cprint('What would you like to edit?', 'blue')
+            
             change_table(table)
 
     except FileNotFoundError:
