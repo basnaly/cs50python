@@ -30,22 +30,21 @@ def edit():
             cprint('To change quantity type 3, space, the name, space and the quantity you want to change to.', 'blue')
 
             choice = input('Your choice: ')
-            [list] = choice.split(' ')
+            list = choice.split(' ')
 
             print(list)
 
             if list[0] == '1':
-                print('abc')
                 add(table)
 
             elif list[0] == '2' and list[1] in table:
                 print('Selected delete')
 
-            # elif number == '3' and name in table:
-            #     print('Selected change quantity')
+            elif list[0] == '3' and list[1] in table:
+                print('Selected change quantity')
 
-            # else:
-            #     continue
+            else:
+                continue
 
         except ValueError:
             continue
