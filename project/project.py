@@ -4,8 +4,6 @@ from create import create
 from finish import finish
 
 
-
-
 def main():
     parser = argparse.ArgumentParser(description='Process one of three arguments')
     parser.add_argument('-m', '--mode', help='Select one of three modes: create, edit or finish', type=str)
