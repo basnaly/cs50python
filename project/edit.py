@@ -38,7 +38,7 @@ def edit():
             elif choice[0] == '2' and 0 < int(choice[1]) <= len(table):
                 print(choice[1])
                 print('Selected delete')
-                delete(table, choice[1])
+                delete(table, int(choice[1]))
 
             elif choice[0] == '3':
                 print('Selected change quantity')
@@ -47,7 +47,8 @@ def edit():
                 continue
             print(tabulate(table, headers='keys', tablefmt='grid'))
 
-        except ValueError:
+        except ValueError as e:
+            print(e)
             continue
 
         except EOFError:
