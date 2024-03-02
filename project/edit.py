@@ -1,7 +1,6 @@
 import csv, sys
 from tabulate import tabulate
 from termcolor import colored, cprint
-import argparse
 from product import FARM_LIST, Product
 
 
@@ -31,8 +30,8 @@ def edit():
             cprint('To change quantity type 3, space, the name, space and the quantity you want to change to.', 'blue')
 
             choice = input('Your choice: ')
-            number, name, quantity = choice.split(' ')
-            print(number, name, quantity)
+            # number, name, quantity = choice.split(' ')
+            print(choice)
 
             if number == '1':
                 print('abc')
