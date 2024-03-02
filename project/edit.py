@@ -6,8 +6,8 @@ import argparse
 
 def edit():
     cprint('Here is your order:', 'blue')
+    table = []
     try:
-        table = []
         csv_file = 'basket.csv'
         with open(csv_file, mode='r') as file:
             reader = csv.DictReader(file)
@@ -20,7 +20,7 @@ def edit():
         sys.exit('File does not exist')
 
 
-def change_table()
+def change_table():
     parser = argparse.ArgumentParser(description='Process one of three arguments')
     parser.add_argument('-c', '--change', help='Select one of three changes: add new, delete exist or change quantity', type=str)
     args = parser.parse_args()
@@ -35,4 +35,5 @@ def change_table()
         print('Not supported option. Select one of three changes: add new, delete exist or change quantity')
 
 
+def add():
 
