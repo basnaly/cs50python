@@ -16,7 +16,7 @@ def edit():
                 # row['Name'] = f'{index + 1}. ' + row["Name"]
                 # index += 1
                 table.append(row)
-            print(tabulate(table, headers='keys', tablefmt='grid', showindex=1))
+            print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i in enumerate(table)]))
 
 
     except FileNotFoundError:
