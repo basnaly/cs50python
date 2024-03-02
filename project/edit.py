@@ -13,7 +13,7 @@ def edit():
             reader = csv.DictReader(file)
             index = 0
             for row in reader:
-                row['Number'] = index + 1
+                row['Name'] = f'{index + 1}. ' + row["Name"]
                 index += 1
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid'))
@@ -31,8 +31,6 @@ def edit():
             cprint('To change quantity type 3, space, the number, space and the quantity you want to change to.', 'blue')
 
             choice = input('Your choice: ').split(' ')
-
-            print(choice[1])
 
             if choice[0] == '1':
                 add(table)
