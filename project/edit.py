@@ -34,6 +34,7 @@ def edit():
             number, name, quantity = choice.split(' ')
 
             if number == '1':
+                print('abc')
                 add(table)
 
             elif number == '2' and name in table:
