@@ -50,7 +50,6 @@ def edit():
             continue
 
 
-
 def add(table):
     print('Pick you option: ')
     for index, item in enumerate(FARM_LIST):
@@ -67,3 +66,6 @@ def add(table):
     except ValueError as e:
         print(e)
 
+
+def delete(table, name):
+    
