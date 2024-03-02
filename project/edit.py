@@ -31,7 +31,7 @@ def change_table(table):
 
     if args.mode == 'add':
         add(table)
-    elif args.mode == 'delete' :
+    elif args.mode == 'delete':
         print('Delete')
     elif args.mode == 'quantity':
         print('Change quantity')
