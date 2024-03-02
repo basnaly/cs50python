@@ -3,6 +3,7 @@ from fpdf import FPDF
 import csv
 from tabulate import tabulate
 import sys
+from termcolor import colored, cprint
 
 
 def finish():
@@ -53,7 +54,7 @@ def finish():
     pdf.cell(text=f'Total to pay: ${total_sum}', center=False, new_y='TOP')
 
     pdf.output('order.pdf')
-    print('Your order was created, see order.pdf file. Thank you!')
+    cprint('Your order was created, see order.pdf file. Thank you!', 'red')
 
 
 def get_data():
