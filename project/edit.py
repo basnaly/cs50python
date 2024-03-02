@@ -13,10 +13,10 @@ def edit():
             reader = csv.DictReader(file)
             index = 0
             for row in reader:
-                row['Name'] = f'{index + 1}. ' + row["Name"]
-                index += 1
+                # row['Name'] = f'{index + 1}. ' + row["Name"]
+                # index += 1
                 table.append(row)
-            print(tabulate(table, headers='keys', tablefmt='grid'))
+            print(tabulate(table, headers='keys', tablefmt='grid', showindex=1))
 
 
     except FileNotFoundError:
@@ -52,9 +52,6 @@ def edit():
         except EOFError:
             save_to_cart(table)
 
-
-def print_table(table):
-    
 
 def add(table):
     print('Pick you option: ')
