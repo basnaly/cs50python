@@ -69,4 +69,5 @@ def add(table):
 
 def delete(table, name):
     for row in table:
-        if 
+        if row['Name'] == name:
+            
