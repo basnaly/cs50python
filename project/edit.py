@@ -7,6 +7,7 @@ from product import FARM_LIST, Product
 def edit():
     cprint('Here is your order:', 'blue')
     table = []
+    total = 0
     try:
         csv_file = 'cart.csv'
         with open(csv_file, mode='r') as file:
@@ -14,7 +15,6 @@ def edit():
             for row in reader:
                 table.append(row)
 
-            total = 0
             for item in table:
                 total += float(item['Sum $'])
 
