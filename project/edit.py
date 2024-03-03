@@ -32,7 +32,7 @@ def edit():
             cprint('1. To add new one type: "1".', 'blue')
             cprint('2. To delete type: "2 <x>", where x is the number of the product in the cart.', 'blue')
             cprint('3. To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
-            cprint('4. To exit use Ctrl-D', 'blue')
+            cprint('4. To exit and save use Ctrl-D.', 'blue')
 
             choice = input('Your choice: ').split(' ')
 
@@ -52,7 +52,7 @@ def edit():
             for item in table:
                 total += round(float(item['Sum $']), 2)
 
-            print(tabulate(table, headers='keys', tablefmt='grid'))
+            print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
             cprint(f'Total: ${total}\n', attrs=['bold'])
 
         except ValueError as e:
@@ -88,9 +88,6 @@ def change_quantity(table, index, new_quantity):
     table[index]['Quantity'] = new_quantity
     table[index]['Sum $'] = float(table[index]['Quantity']) * float(table[index]['Price/Kg'])
     print(table[index]['Sum $'])
-    # total = 0
-    # for item in table:
-    #     total += float(item['Sum $'])
 
 
 def save_to_cart(table):
