@@ -42,6 +42,7 @@ def edit():
                 continue
 
             print(tabulate(table, headers='keys', tablefmt='grid'))
+            cprint('Total: ', 'black', attrs=['bold'])
 
         except ValueError as e:
             print(e)
