@@ -41,8 +41,11 @@ def edit():
             else:
                 continue
 
+            total = 0
+            for item in table:
+                total += item['Sum $']
             print(tabulate(table, headers='keys', tablefmt='grid'))
-            cprint('Total: ', 'black', attrs=['bold'])
+            cprint(f'Total: {total}', 'black', attrs=['bold'])
 
         except ValueError as e:
             print(e)
