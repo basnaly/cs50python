@@ -16,8 +16,8 @@ def edit():
 
             total = 0
             for item in table:
-                total += item['Sum $']
-                
+                total += float(item['Sum $'])
+
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
             cprint(f'Total: {total}', 'black', attrs=['bold'])
 
