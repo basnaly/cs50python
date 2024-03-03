@@ -11,7 +11,6 @@ def edit():
         csv_file = 'cart.csv'
         with open(csv_file, mode='r') as file:
             reader = csv.DictReader(file)
-            index = 0
             for row in reader:
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
