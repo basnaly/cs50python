@@ -82,6 +82,7 @@ def delete(table, index):
 def change_quantity(table, index, new_quantity):
     table[index]['Quantity'] = new_quantity
     table[index]['Sum $'] = float(table[index]['Quantity']) * float(table[index]['Price/Kg'])
+    print(table[index]['Sum $'])
     total = 0
     for item in table:
         total += float(item['Sum $'])
