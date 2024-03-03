@@ -38,7 +38,7 @@ def edit():
 
             else:
                 continue
-            
+
             print(tabulate(table, headers='keys', tablefmt='grid'))
 
         except ValueError as e:
@@ -59,8 +59,6 @@ def add(table):
         current_product = Product.get_product()
         current_product.set_quantity_sum()
         table.append(current_product.get_product_obj())
-
-        # print('Select another product or exit using Ctrl-D')
 
     except ValueError as e:
         print(e)
