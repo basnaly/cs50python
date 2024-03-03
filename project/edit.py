@@ -21,10 +21,11 @@ def edit():
     while True:
         try:
             cprint('What would you like to edit?', 'blue', attrs=['bold'])
-            cprint('To add new one type: "1".', 'blue')
-            cprint('To delete type: "2 <x>", where x is the number of the product in the cart.', 'blue')
-            cprint('To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
-            cprint('To exit use Ctrl-D', 'blue')
+            cprint('Your options are:', 'blue')
+            cprint('1. To add new one type: "1".', 'blue')
+            cprint('2. To delete type: "2 <x>", where x is the number of the product in the cart.', 'blue')
+            cprint('3. To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
+            cprint('4. To exit use Ctrl-D', 'blue')
 
             choice = input('Your choice: ').split(' ')
 
