@@ -69,7 +69,7 @@ def delete(table, index):
 
 
 def change_quantity(table, index, new_quantity):
-    ffg
+    table[index]['Quantity'] = new_quantity
 
 
 def save_to_cart(table):
