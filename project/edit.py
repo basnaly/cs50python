@@ -31,7 +31,6 @@ def edit():
                 add(table)
 
             elif choice[0] == '2' and 0 < int(choice[1]) <= len(table):
-                print(choice[1])
                 delete(table, int(choice[1]) - 1)
 
             elif choice[0] == '3':
@@ -39,6 +38,7 @@ def edit():
 
             else:
                 continue
+            
             print(tabulate(table, headers='keys', tablefmt='grid'))
 
         except ValueError as e:
