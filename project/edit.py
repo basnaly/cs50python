@@ -15,12 +15,10 @@ def edit():
                 table.append(row)
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
 
-
     except FileNotFoundError:
         sys.exit('File does not exist')
 
     while True:
-
         try:
             cprint('What would you like to edit?', 'blue', attrs=['bold'])
             cprint('To add new one type: "1".', 'blue')
