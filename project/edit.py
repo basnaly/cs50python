@@ -19,7 +19,7 @@ def edit():
                 total += float(item['Sum $'])
 
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
-            cprint(f'Total: {total}', 'black', attrs=['bold'])
+            cprint(f'Total: ${total}\n', attrs=['bold'])
 
     except FileNotFoundError:
         sys.exit('File does not exist')
