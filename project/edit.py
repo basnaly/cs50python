@@ -69,7 +69,7 @@ def delete(table, index):
 
 
 def change_quantity(table, index, new_quantity):
-    
+    ffg
 
 
 def save_to_cart(table):
