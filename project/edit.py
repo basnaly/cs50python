@@ -13,7 +13,13 @@ def edit():
             reader = csv.DictReader(file)
             for row in reader:
                 table.append(row)
+
+            total = 0
+            for item in table:
+                total += item['Sum $']
+                
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
+            cprint(f'Total: {total}', 'black', attrs=['bold'])
 
     except FileNotFoundError:
         sys.exit('File does not exist')
@@ -41,9 +47,6 @@ def edit():
             else:
                 continue
 
-            total = 0
-            for item in table:
-                total += item['Sum $']
             print(tabulate(table, headers='keys', tablefmt='grid'))
             cprint(f'Total: {total}', 'black', attrs=['bold'])
 
