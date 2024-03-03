@@ -24,6 +24,7 @@ def edit():
             cprint('To add new one type: "1".', 'blue')
             cprint('To delete type: "2 <x>", where x is the number of the product in the cart.', 'blue')
             cprint('To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
+            cprint('To exit ', 'blue')
 
             choice = input('Your choice: ').split(' ')
 
