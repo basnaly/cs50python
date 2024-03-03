@@ -82,6 +82,9 @@ def delete(table, index):
 def change_quantity(table, index, new_quantity):
     table[index]['Quantity'] = new_quantity
     table[index]['Sum $'] = float(table[index]['Quantity']) * float(table[index]['Price/Kg'])
+    total = 0
+    for item in table:
+        total += float(item['Sum $'])
 
 
 def save_to_cart(table):
