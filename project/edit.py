@@ -7,7 +7,7 @@ from product import FARM_LIST, Product
 def edit():
     cprint('Here is your order:', 'blue')
     table = []
-    total = 0
+
     try:
         csv_file = 'cart.csv'
         with open(csv_file, mode='r') as file:
@@ -15,8 +15,9 @@ def edit():
             for row in reader:
                 table.append(row)
 
+            total = 0
             for item in table:
-                total += float(item['Sum $'])
+                total += round(float(item['Sum $']), 2)
 
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
             cprint(f'Total: ${total}\n', attrs=['bold'])
@@ -46,6 +47,10 @@ def edit():
 
             else:
                 continue
+
+            total = 0
+            for item in table:
+                total += round(float(item['Sum $']), 2)
 
             print(tabulate(table, headers='keys', tablefmt='grid'))
             cprint(f'Total: {total}', attrs=['bold'])
