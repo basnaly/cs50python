@@ -47,6 +47,8 @@ def edit():
 
         except EOFError:
             save_to_cart(table)
+            cprint('\nRun `python project.py -m edit` to edit the order.', 'blue')
+            cprint('Run `python project.py -m finish` to complete the order.', 'blue')
             break
 
 
