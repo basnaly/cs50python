@@ -34,7 +34,7 @@ def edit():
                 delete(table, int(choice[1]) - 1)
 
             elif choice[0] == '3':
-                change_quantity(table, int(choice[1]) - 1, int(choice[2]))
+                change_quantity(table, int(choice[1]) - 1, float(choice[2]))
 
             else:
                 continue
