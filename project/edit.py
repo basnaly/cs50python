@@ -34,7 +34,7 @@ def edit():
                 delete(table, int(choice[1]) - 1)
 
             elif choice[0] == '3':
-                print('Selected change quantity')
+                change_quantity(table, int(choice[1]) - 1, int(choice[2]))
 
             else:
                 continue
@@ -66,6 +66,10 @@ def add(table):
 
 def delete(table, index):
     table.pop(index)
+
+
+def change_quantity(table, index, new_quantity):
+    
 
 
 def save_to_cart(table):
