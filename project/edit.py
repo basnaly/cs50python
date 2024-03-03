@@ -53,7 +53,7 @@ def edit():
                 total += round(float(item['Sum $']), 2)
 
             print(tabulate(table, headers='keys', tablefmt='grid'))
-            cprint(f'Total: {total}', attrs=['bold'])
+            cprint(f'Total: {total}\n', attrs=['bold'])
 
         except ValueError as e:
             print(e)
