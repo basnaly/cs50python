@@ -29,8 +29,8 @@ def create():
                     exists_products = [product['name'] for product in list_products]
                     print(exists_products)
                     if current_product.name in exists_products:
-                        cprint('You have already had the product in your order!', 'green')
-                        cprint('If you want to edit this product, please run `python project.py -m edit`')
+                        cprint(f'You already have {current_product.name} in your cart!', 'green')
+                        cprint('If you want to edit this product, please run `python project.py -m edit`', 'green')
                         continue
                     current_product.set_quantity_sum()
                     current_product.save_to_csv(writer)
