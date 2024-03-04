@@ -36,8 +36,7 @@ MAX_QUANTITY = 5
 
 
 class Product:
-    def __init__(self, type, name, icon, price):
-        self.type = type
+    def __init__(self, name, icon, price):
         self.name = name
         self.icon = icon
         self.price = price
@@ -47,7 +46,7 @@ class Product:
 
     def __str__(self):
         # return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}\n'
-        return f'name: {self.name}, icon: {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}\n'
+        return f'Name: {self.name}, Icon: {self.icon}, Price/Kg: {self.price}, Quantity: {self.quantity}, Sum $: {self.sum}\n'
 
 
     @classmethod
