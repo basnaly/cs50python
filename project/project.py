@@ -20,5 +20,4 @@ def main():
         print('Not supported option. Select one of three modes: create, edit or finish.')
 
 
-# if __name__ == '__main__':
 main()
