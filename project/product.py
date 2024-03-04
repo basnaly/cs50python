@@ -5,7 +5,7 @@ FARM_LIST = [
     {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': '1.20/kg'},
     {'Name': 'Apple', 'Icon': '🍎', 'Price/Kg': '4.30/kg'},
     {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': '2.70/kg'},
-    {'Name': 'Potato', 'Icon': '🥔', 'Price/Kg': '1.5/kg'}
+    {'Name': 'Potato', 'Icon': '🥔', 'Price/Kg': '1.5/kg'},
     {'Name': 'Broccoli', 'Icon': '🥦', 'Price/Kg': '4.7/kg'},
     {'Name': 'Corn', 'Icon': '🌽', 'Price/Kg': '3.5/kg'},
     {'Name': 'Grape', 'Icon': '🍇', 'Price/Kg': '21.3/kg'},
