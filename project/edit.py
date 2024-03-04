@@ -31,7 +31,7 @@ def edit():
 
     while True:
         try:
-            # Inform user 
+            # Inform user about options to continue
             cprint('What would you like to edit?', 'blue', attrs=['bold'])
             cprint('Your options are:', 'blue')
             cprint('1. To add new one type: "1".', 'blue')
@@ -41,30 +41,35 @@ def edit():
 
             choice = input('Your choice: ').split(' ')
 
+            # If user selected '1' call add function to add a new product
             if choice[0] == '1':
                 add(table)
 
+            # If user selected '2' call delete function to delete an existing product
             elif choice[0] == '2' and 0 < int(choice[1]) <= len(table):
                 delete(table, int(choice[1]) - 1)
 
+            # If user selected '3' call change_quantity function
             elif choice[0] == '3':
                 change_quantity(table, int(choice[1]) - 1, float(choice[2]))
 
             else:
                 continue
 
+            # Calculate total sum of all products
             total = 0
             for item in table:
                 total += round(float(item['Sum $']), 2)
 
+            # Display corrected list of user's products
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
             cprint(f'Total: ${total}\n', attrs=['bold'])
 
         except ValueError as e:
-            print(e)
             continue
 
         except EOFError:
+            # When user exit using Ctrl-D, call save_to_cart function to save corrected list of user's products
             save_to_cart(table)
             cprint('\nRun `python project.py -m edit` to edit the order.', 'blue')
             cprint('Run `python project.py -m finish` to complete the order.', 'blue')
@@ -73,11 +78,15 @@ def edit():
 
 def add(table):
     print('Pick you option: ')
+
+    # Display farm list
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["Name"]} {item["Icon"]} {item["Price/Kg"]}')
 
     try:
+        # Save current product
         current_product = Product.get_product()
+
         # Check if the current product is already in the cart
         exists_products = [product['Name'] for product in table]
 

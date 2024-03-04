@@ -8,7 +8,7 @@ from termcolor import cprint
 def create():
     cprint('\nHello! Welcome to our online organic farm store!', 'green')
 
-    # Show farm list
+    # Display farm list
     cprint('Pick you option: \n', 'green')
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["Name"]} {item["Icon"]} {item["Price/Kg"]}')
