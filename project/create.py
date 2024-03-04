@@ -35,18 +35,21 @@ def create():
 
                     # Set quantity to the current product and calculate sum
                     current_product.set_quantity_sum()
+
+                    # Save current product to csv file
                     current_product.save_to_csv(writer)
+
+                    # Add current product into list products in dict format
                     list_products.append(current_product.__dict__)
 
-                    # print(list_products)
                     display_cart(list_products)
 
                     cprint('Select another product or exit using Ctrl-D', 'green')
 
                 except ValueError as e:
-                    print(e)
                     continue
 
+                # If user exit using Ctrl-D print next messages:
                 except EOFError:
                     cprint('\nRun `python project.py -m edit` to edit the order.', 'green')
                     cprint('Run `python project.py -m finish` to complete the order.', 'green')
