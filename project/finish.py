@@ -52,7 +52,7 @@ def finish():
     # Add total sum
     pdf.set_font('Times', style='B', size=20)
     # pdf.y = 85, new_y='TOP'
-    pdf->SetMa
+    pdf.set
     pdf.cell(text=f'Total to pay: ${total_sum}', center=False)
 
     pdf.output('order.pdf')
