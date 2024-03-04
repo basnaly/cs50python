@@ -1,5 +1,6 @@
 import csv, sys
 from tabulate import tabulate
+# print install tabulate
 from product import FARM_LIST, Product
 from colorama import Fore, Back, Style
 from termcolor import colored, cprint

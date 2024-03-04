@@ -1,5 +1,6 @@
 import datetime
 from fpdf import FPDF
+# pip install fpdf2
 import csv
 from tabulate import tabulate
 import sys
