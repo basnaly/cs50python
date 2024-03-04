@@ -77,13 +77,7 @@ def add(table):
         exists_products = [product['Name'] for product in table]
         if current_product.name in exists_products:
             cprint(f'You already have {current_product.name} in your cart!', 'blue')
-            cprint(f'Would you like to change the quantity of {current_product.name} ?', 'blue')
-            answer = input('Type `yes` or `no`: ')
-            if answer.casefold() == 'yes':
-                cprint('To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
-            else:
-                cprint('\nRun `python project.py -m edit` to edit the order.', 'blue')
-                cprint('Run `python project.py -m finish` to complete the order.', 'blue')
+            cprint('To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
 
         current_product.set_quantity_sum()
         table.append(current_product.get_product_obj())
