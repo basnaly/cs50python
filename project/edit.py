@@ -80,7 +80,7 @@ def add(table):
             cprint(f'Would you like to change the quantity of {current_product.name} ?', 'blue')
             answer = input('Type `yes` or `no`: ')
             if answer.casefold() == 'yes':
-                cprint('3. To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
+                cprint('To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
             else:
                 cprint('\nRun `python project.py -m edit` to edit the order.', 'blue')
                 cprint('Run `python project.py -m finish` to complete the order.', 'blue')
