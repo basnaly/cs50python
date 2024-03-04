@@ -7,10 +7,10 @@ from termcolor import colored, cprint
 
 
 def create():
-    cprint('Hello! Welcome to our online organic farm store!', 'green')
+    cprint('\nHello! Welcome to our online organic farm store!', 'green')
 
     # Show farm list
-    cprint('Pick you option: ', 'green')
+    cprint('Pick you option: \n', 'green')
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["Name"]} {item["Icon"]} {item["Price/Kg"]}')
 
