@@ -24,12 +24,11 @@ def create():
 
             while True:
                 try:
-                    print(list_products)
                     current_product = Product.get_product()
                     # Check if current product has already in the list products
-                    exists_product = [product['name'] for product in list_products]
+                    exists_products = [product['name'] for product in list_products]
                     print(exists_product)
-                    if current_product.name == exists_product:
+                    if current_product.name == exists_products:
                         cprint('You have already had the product in your order!', 'green')
                         cprint('If you want to edit this product, please run `python project.py -m edit`')
                         continue
