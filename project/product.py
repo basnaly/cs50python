@@ -62,7 +62,7 @@ class Product:
                     current_price = FARM_LIST[selected_index-1]['Price/Kg']
                     price, _ = current_price.split('/')
 
-                return cls(type, name.title(), icon, float(price))
+                return cls(name.title(), icon, float(price))
 
             except ValueError:
                 continue
