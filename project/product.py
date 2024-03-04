@@ -73,11 +73,13 @@ class Product:
     def set_quantity_sum(self):
         while True:
             try:
+                # Save quantity of the produt
                 selected_quantity = float(input('Select quantity: '))
                 if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
                     self.quantity = selected_quantity
+                    # Calculate the sum of the product
                     self.sum = round(self.price * float(self.quantity), 2)
 
                 return
@@ -86,11 +88,13 @@ class Product:
                 continue
 
     def save_to_csv(self, writer):
+        # Save data of product in csv file
         row = self.get_product_obj()
         writer.writerow(row)
 
 
     def get_product_obj(self):
+        # Format product dict
         return {
             'Name': self.name,
             'Icon': self.icon,
