@@ -64,9 +64,11 @@ class Product:
                     continue
                 else:
                     name = FARM_LIST[selected_index-1]['Name']
+                    if 
                     icon = FARM_LIST[selected_index-1]['Icon']
                     current_price = FARM_LIST[selected_index-1]['Price/Kg']
                     price, _ = current_price.split('/')
+
 
                 return cls(name.title(), icon, float(price))
 
