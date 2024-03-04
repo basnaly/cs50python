@@ -7,10 +7,10 @@ from termcolor import colored, cprint
 
 
 def create():
-    print('Hello! Welcome to our online organic farm store!')
+    cprint('Hello! Welcome to our online organic farm store!', 'green')
 
     # Show farm list
-    print('Pick you option: ')
+    cprint('Pick you option: ', 'green')
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["Name"]} {item["Icon"]} {item["Price/Kg"]}')
 
@@ -32,7 +32,7 @@ def create():
                     # print(list_products)
                     display_cart(list_products)
 
-                    print('Select another product or exit using Ctrl-D')
+                    cprint('Select another product or exit using Ctrl-D', 'green')
 
                 except ValueError as e:
                     print(e)
