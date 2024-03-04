@@ -77,7 +77,7 @@ def add(table):
         exists_products = [product['Name'] for product in table]
         if current_product.name in exists_products:
             cprint(f'You already have {current_product.name} in your cart!', 'blue')
-            cprint('If you want to edit this product, please run `python project.py -m edit`', 'blue')
+            cprint('If you want to  this product, please run `python project.py -m edit`', 'blue')
 
         current_product.set_quantity_sum()
         table.append(current_product.get_product_obj())
