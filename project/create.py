@@ -2,8 +2,7 @@ import csv, sys
 from tabulate import tabulate
 # print install tabulate
 from product import FARM_LIST, Product
-from colorama import Fore, Back, Style
-from termcolor import colored, cprint
+from termcolor import cprint
 
 
 def create():
@@ -31,7 +30,7 @@ def create():
                         cprint(f'You already have {current_product.name} in your cart!', 'green')
                         cprint('If you want to edit this product, please run `python project.py -m edit`', 'green')
                         continue
-                    
+
                     current_product.set_quantity_sum()
                     current_product.save_to_csv(writer)
                     list_products.append(current_product.__dict__)
