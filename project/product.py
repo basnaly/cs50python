@@ -60,7 +60,8 @@ class Product:
                     continue
                 elif :
                     cprint('You have already had the product in your order!', 'green')
-                    cprint('If you want to edit this product, please ')
+                    cprint('If you want to edit this product, please run `python project.py -m edit`')
+                    continue
                 else:
                     name = FARM_LIST[selected_index-1]['Name']
                     icon = FARM_LIST[selected_index-1]['Icon']
