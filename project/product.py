@@ -58,7 +58,7 @@ class Product:
                 selected_index = int(input('Select product: '))
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
-                elif :
+                elif selected_index in FARM_LIST[selected_index-1]:
                     cprint('You have already had the product in your order!', 'green')
                     cprint('If you want to edit this product, please run `python project.py -m edit`')
                     continue
