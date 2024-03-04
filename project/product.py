@@ -1,3 +1,5 @@
+from termcolor import colored, cprint
+
 
 FARM_LIST = [
     {'Name': 'Carrot', 'Icon': '🥕', 'Price/Kg': '2.60/kg'},
@@ -56,7 +58,9 @@ class Product:
                 selected_index = int(input('Select product: '))
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
-                elif 
+                elif :
+                    cprint('You have already had the product in your order!', 'green')
+                    cprint('If you want to edit this product, please ')
                 else:
                     name = FARM_LIST[selected_index-1]['Name']
                     icon = FARM_LIST[selected_index-1]['Icon']
