@@ -26,7 +26,7 @@ def create():
                 try:
                     current_product = Product.get_product()
                     # Check if current product has already in the list products
-                    exists_product = [current_product['Name'] for current_product in list_products]
+                    exists_product = [product.Name for product in list_products]
                     print(exists_product)
                     if current_product.name == exists_product:
                         cprint('You have already had the product in your order!', 'green')
