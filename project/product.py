@@ -54,10 +54,12 @@ class Product:
     def get_product(cls):
         while True:
             try:
+                # Save product's index
                 selected_index = int(input('Select product: '))
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
+                    # Save product data according to the selected index
                     name = FARM_LIST[selected_index-1]['Name']
                     icon = FARM_LIST[selected_index-1]['Icon']
                     current_price = FARM_LIST[selected_index-1]['Price/Kg']
