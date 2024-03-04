@@ -25,8 +25,8 @@ def create():
             while True:
                 try:
                     current_product = Product.get_product()
-                    # Check if current product is in the
-                    if current_product['Name'] in [product['Name'] for product in list_products]:
+                    # Check if current product has already in the list products
+                    if current_product.name in [product['Name'] for product in list_products]:
                         cprint('You have already had the product in your order!', 'green')
                         cprint('If you want to edit this product, please run `python project.py -m edit`')
                         continue
