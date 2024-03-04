@@ -52,7 +52,8 @@ def finish():
     # Add total sum
     pdf.set_font('Times', style='B', size=20)
     # pdf.y = 85, new_y='TOP'
-    pdf.cell(text=f'Total to pay: ${total_sum}', center=False)
+    pdf.x = 20
+    pdf.cell(text=f'Total to pay: ${total_sum}', center=False, new_x="TMARGIN",)
 
     pdf.output('order.pdf')
     cprint('Your order was created, see order.pdf file. Thank you!', 'red')
