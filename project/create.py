@@ -33,6 +33,7 @@ def create():
                         cprint('If you want to edit this product, please run `python project.py -m edit`', 'green')
                         continue
 
+                    # Set quantity to the current product and calculate sum
                     current_product.set_quantity_sum()
                     current_product.save_to_csv(writer)
                     list_products.append(current_product.__dict__)
