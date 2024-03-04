@@ -23,7 +23,9 @@ def create():
 
             while True:
                 try:
+                    # Create current product
                     current_product = Product.get_product()
+
                     # Check if the current product is already in the cart
                     exists_products = [product['name'] for product in list_products]
                     if current_product.name in exists_products:
