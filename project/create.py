@@ -49,7 +49,7 @@ def create():
 
 def display_cart(list_products):
 
-    print(tabulate(list_products, headers='keys', tablefmt='grid'))
+    print(tabulate(list_products, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(list_products)]))
 
     total = 0
     for product in list_products:
