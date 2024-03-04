@@ -75,9 +75,11 @@ def add(table):
         current_product = Product.get_product()
         # Check if the current product is already in the cart
         exists_products = [product['Name'] for product in table]
+
         if current_product.name in exists_products:
             cprint(f'You already have {current_product.name} in your cart!', 'blue')
             cprint('To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
+            return
 
         current_product.set_quantity_sum()
         table.append(current_product.get_product_obj())
