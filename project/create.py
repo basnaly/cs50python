@@ -12,7 +12,7 @@ def create():
     # Show farm list
     print('Pick you option: ')
     for index, item in enumerate(FARM_LIST):
-        print(f'{index+1}) {item["name"]} {item["icon"]} {item["price"]}')
+        print(f'{index+1}) {item["Name"]} {item["Icon"]} {item["Price/Kg"]}')
 
     try:
         list_products = []

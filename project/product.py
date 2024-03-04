@@ -58,7 +58,6 @@ class Product:
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
-                    type = FARM_LIST[selected_index-1]['type']
                     name = FARM_LIST[selected_index-1]['name']
                     icon = FARM_LIST[selected_index-1]['icon']
                     current_price = FARM_LIST[selected_index-1]['price']
