@@ -25,6 +25,10 @@ def create():
             while True:
                 try:
                     current_product = Product.get_product()
+                    if current_product in list_products:
+                        cprint('You have already had the product in your order!', 'green')
+                        cprint('If you want to edit this product, please run `python project.py -m edit`')
+                        continue
                     current_product.set_quantity_sum()
                     current_product.save_to_csv(writer)
                     list_products.append(current_product.__dict__)
