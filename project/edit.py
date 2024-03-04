@@ -5,6 +5,7 @@ from product import FARM_LIST, Product
 
 
 def edit():
+    # 
     cprint('Here is your order:', 'blue')
     table = []
 
