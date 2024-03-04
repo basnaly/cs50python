@@ -56,6 +56,7 @@ class Product:
                 selected_index = int(input('Select product: '))
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
+                elif 
                 else:
                     name = FARM_LIST[selected_index-1]['Name']
                     icon = FARM_LIST[selected_index-1]['Icon']
