@@ -57,9 +57,9 @@ class Product:
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
-                    name = FARM_LIST[selected_index-1]['name']
-                    icon = FARM_LIST[selected_index-1]['icon']
-                    current_price = FARM_LIST[selected_index-1]['price']
+                    name = FARM_LIST[selected_index-1]['Name']
+                    icon = FARM_LIST[selected_index-1]['Icon']
+                    current_price = FARM_LIST[selected_index-1]['Price/Kg']
                     price, _ = current_price.split('/')
 
                 return cls(type, name.title(), icon, float(price))
