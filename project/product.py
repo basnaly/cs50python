@@ -1,6 +1,4 @@
-from termcolor import colored, cprint
-
-
+# Create list of farm dict objects
 FARM_LIST = [
     {'Name': 'Carrot', 'Icon': '🥕', 'Price/Kg': '2.60/kg'},
     {'Name': 'Banana', 'Icon': '🍌', 'Price/Kg': '4.80/kg'},
@@ -34,9 +32,11 @@ FARM_LIST = [
     {'Name': 'Ginger root', 'Icon': '🫚', 'Price/Kg': '19.5/kg'},
 ]
 
+# Max quantity to buy
 MAX_QUANTITY = 5
 
 
+# Create class
 class Product:
     def __init__(self, name, icon, price):
         self.name = name
@@ -47,7 +47,6 @@ class Product:
 
 
     def __str__(self):
-        # return f'You selected: {self.name} {self.icon}, price: {self.price}, quantity: {self.quantity}, sum: {self.sum}\n'
         return f'Name: {self.name}, Icon: {self.icon}, Price/Kg: {self.price}, Quantity: {self.quantity}, Sum $: {self.sum}\n'
 
 

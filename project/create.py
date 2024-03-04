@@ -61,8 +61,10 @@ def create():
 
 def display_cart(list_products):
 
+    # Display list products that user added
     print(tabulate(list_products, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(list_products)]))
 
+    # Add total sum after the table
     total = 0
     for product in list_products:
         total += round(float(product['sum']), 2)
