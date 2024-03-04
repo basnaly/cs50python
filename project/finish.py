@@ -69,7 +69,7 @@ def get_data():
 
             total = 0
             for product in csv_list:
-                total += float(product['Sum $'])
+                total += round(float(product['Sum $']), 2)
             return csv_list, total
 
     except FileNotFoundError:
