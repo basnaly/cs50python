@@ -5,21 +5,24 @@ from product import FARM_LIST, Product
 
 
 def edit():
-    # 
     cprint('Here is your order:', 'blue')
     table = []
 
     try:
         csv_file = 'cart.csv'
+        # Read data from csv file
         with open(csv_file, mode='r') as file:
             reader = csv.DictReader(file)
+            # Add the data to table list
             for row in reader:
                 table.append(row)
 
+            # Calculate total sum of the cart
             total = 0
             for item in table:
                 total += round(float(item['Sum $']), 2)
 
+            # Display user's cart
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
             cprint(f'Total: ${total}\n', attrs=['bold'])
 
@@ -28,6 +31,7 @@ def edit():
 
     while True:
         try:
+            # Inform user 
             cprint('What would you like to edit?', 'blue', attrs=['bold'])
             cprint('Your options are:', 'blue')
             cprint('1. To add new one type: "1".', 'blue')
