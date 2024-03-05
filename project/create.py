@@ -50,6 +50,7 @@ def create():
                     cprint('Select another product or exit using Ctrl-D', 'green')
 
                 except ValueError as e:
+                    print(e)
                     continue
 
                 # If user exit using Ctrl-D, print the following messages:
