@@ -113,8 +113,10 @@ def delete(table, index):
 
 def change_quantity(table, index, new_quantity):
 
-    if index < 0:
-        
+    if index < 0 and len(table):
+        print('Index cannot be negative')
+        raise ValueError('Index cannot be negative')
+
 
     # Set new quantity
     table[index]['Quantity'] = new_quantity
