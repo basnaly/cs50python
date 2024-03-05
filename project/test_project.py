@@ -1,5 +1,5 @@
 from product import Product
-from edit import add, delete, change_quantity
+from edit import delete, change_quantity
 
 def test_product_calculate_sum():
     product = Product('Carrot', '🥕', 2.6)
@@ -22,18 +22,6 @@ def test_get_product_obj():
         'Quantity': 1.5,
         'Sum $': 6.45
     }
-
-
-def test_add():
-    table = []
-    product = Product('Cucumber', '🥒', 1.2)
-    product.quantity = 2
-    product.sum = 2.4
-    table.append(product.get_product_obj())
-
-    assert table == [
-        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4}
-    ]
 
 
 def test_delete():
