@@ -13,11 +13,12 @@ def test_get_product_obj():
     product = Product('Apple', '🍎', 4.3)
     product.quantity = 1.5
     product.sum = 6.45
+    product.get_product_obj()
 
-    assert product.get_product_obj({
+    assert product.product_obj = {
         'Name': 'Apple',
         'Icon': '🍎',
         'Price/Kg': 4.3,
         'Quantity': 1.5,
         'Sum $': 6.45
-    })
+    }
