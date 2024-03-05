@@ -56,9 +56,15 @@ def test_change_quantity_error_index():
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4},
         {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
     ]
-    change_quantity(table, -1, 0.5)
+    with pytest.raises(ValueError):
+        change_quantity(table, -1, 0.5)
 
 
 def test_change_quantity_error_quantity():
-
+    table = [
+        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4},
+        {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
+    ]
+    with pytest.raises(ValueError):
+        change_quantity(table, 0, 6)
 
