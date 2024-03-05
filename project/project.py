@@ -6,7 +6,7 @@ from finish import finish
 
 
 def main():
-    # Create cli, that include mode and 3 options:
+    # Accept argument of mode with 3 options:
     parser = argparse.ArgumentParser(description='Process one of three arguments')
     parser.add_argument('-m', '--mode', help='Select one of three modes: create, edit or finish', type=str)
     args = parser.parse_args()

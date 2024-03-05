@@ -1,7 +1,8 @@
 import csv, sys
 from tabulate import tabulate
 from termcolor import colored, cprint
-from product import FARM_LIST, Product
+from product import Product
+from constants import CSV_FILE, FIELDNAMES, FARM_LIST
 
 
 def edit():
@@ -9,9 +10,8 @@ def edit():
     table = []
 
     try:
-        csv_file = 'cart.csv'
         # Read data from csv file
-        with open(csv_file, mode='r') as file:
+        with open(CSV_FILE, mode='r') as file:
             reader = csv.DictReader(file)
             # Add the data to table list
             for row in reader:
@@ -41,11 +41,11 @@ def edit():
 
             choice = input('Your choice: ').split(' ')
 
-            # If user selected '1' call add function to add a new product
+            # If user selected '1' call add function to add a new product to the cart
             if choice[0] == '1':
                 add(table)
 
-            # If user selected '2' call delete function to delete an existing product
+            # If user selected '2' call delete function to delete an existing product from the cart
             elif choice[0] == '2' and 0 < int(choice[1]) <= len(table):
                 delete(table, int(choice[1]) - 1)
 
@@ -56,12 +56,12 @@ def edit():
             else:
                 continue
 
-            # Calculate total sum of all products
+            # Calculate total sum of all the products in the cart
             total = 0
             for item in table:
                 total += round(float(item['Sum $']), 2)
 
-            # Display corrected list of user's products
+            # Display updated list of user's products
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
             cprint(f'Total: ${total}\n', attrs=['bold'])
 
@@ -69,7 +69,7 @@ def edit():
             continue
 
         except EOFError:
-            # When user exit using Ctrl-D, call save_to_cart function to save corrected list of user's products
+            # When user exit using Ctrl-D, call save_to_cart function to save updated list of user's products to csv file
             save_to_cart(table)
             cprint('\nRun `python project.py -m edit` to edit the order.', 'blue')
             cprint('Run `python project.py -m finish` to complete the order.', 'blue')
@@ -84,18 +84,21 @@ def add(table):
         print(f'{index+1}) {item["Name"]} {item["Icon"]} {item["Price/Kg"]}')
 
     try:
-        # Save current product
+        # Create new product
         current_product = Product.get_product()
 
-        # Check if the current product is already in the cart
         exists_products = [product['Name'] for product in table]
 
+        # Check if the current product is already in the cart
         if current_product.name in exists_products:
             cprint(f'You already have {current_product.name} in your cart!', 'blue')
             cprint('To change quantity type: "3 <x> <y>" where x is the number of the product and y is a new amount.', 'blue')
             return
 
+        # Set quantity of the current product and calculate the sum
         current_product.set_quantity_sum()
+
+        # Add the current product into the table
         table.append(current_product.get_product_obj())
 
     except ValueError as e:
@@ -103,18 +106,25 @@ def add(table):
 
 
 def delete(table, index):
+
+    # Delete product from table by its index
     table.pop(index)
 
 
 def change_quantity(table, index, new_quantity):
+
+    # Set new quantity
     table[index]['Quantity'] = new_quantity
+
+    # Calculate sum of the product
     table[index]['Sum $'] = round(float(table[index]['Quantity']) * float(table[index]['Price/Kg']), 2)
 
 
 def save_to_cart(table):
-    csv_file = 'cart.csv'
-    with open(csv_file, 'w') as file:
-        writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $'])
+
+    # Save data from table into csv file
+    with open(CSV_FILE, 'w') as file:
+        writer = csv.DictWriter(file, fieldnames=FIELDNAMES)
         writer.writeheader()
         for row in table:
             writer.writerow(row)

@@ -1,10 +1,10 @@
 import datetime
 from fpdf import FPDF
 # pip install fpdf2
+
 import csv
-from tabulate import tabulate
 import sys
-from termcolor import colored, cprint
+from termcolor import cprint
 
 
 def finish():

@@ -1,46 +1,49 @@
 import csv, sys
 from tabulate import tabulate
 # print install tabulate
-from product import FARM_LIST, Product
+
+from product import Product
 from termcolor import cprint
+from constants import CSV_FILE, FIELDNAMES, FARM_LIST
 
 
 def create():
     cprint('\nHello! Welcome to our online organic farm store!', 'green')
+    cprint('Pick you option: \n', 'green')
 
     # Display farm list
-    cprint('Pick you option: \n', 'green')
     for index, item in enumerate(FARM_LIST):
         print(f'{index+1}) {item["Name"]} {item["Icon"]} {item["Price/Kg"]}')
 
     try:
         list_products = []
-        # Open csv file and clean it
-        csv_file = 'cart.csv'
-        with open(csv_file, mode='w', newline='\n') as file:
-            writer = csv.DictWriter(file, fieldnames=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $'])
+
+        # Open csv file and clean it from previous data
+        with open(CSV_FILE, mode='w', newline='\n') as file:
+            writer = csv.DictWriter(file, fieldnames=FIELDNAMES)
             writer.writeheader()
 
             while True:
                 try:
-                    # Create current product
+                    # Create new product
                     current_product = Product.get_product()
 
-                    # Check if the current product is already in the cart
-                    exists_products = [product['name'] for product in list_products]
+                    exists_products = [product['Name'] for product in list_products]
+
+                    # Check if the new product is already in the cart
                     if current_product.name in exists_products:
                         cprint(f'You already have {current_product.name} in your cart!', 'green')
                         cprint('If you want to edit this product, please run `python project.py -m edit`', 'green')
                         continue
 
-                    # Set quantity to the current product and calculate sum
+                    # Set quantity of the new product and calculate the sum
                     current_product.set_quantity_sum()
 
-                    # Save current product to csv file
+                    # Save new product to csv file
                     current_product.save_to_csv(writer)
 
-                    # Add current product into list products in dict format
-                    list_products.append(current_product.__dict__)
+                    # Add new product into list products as dict
+                    list_products.append(current_product.get_product_obj())
 
                     display_cart(list_products)
 
@@ -49,7 +52,7 @@ def create():
                 except ValueError as e:
                     continue
 
-                # If user exit using Ctrl-D print next messages:
+                # If user exit using Ctrl-D, print the following messages:
                 except EOFError:
                     cprint('\nRun `python project.py -m edit` to edit the order.', 'green')
                     cprint('Run `python project.py -m finish` to complete the order.', 'green')
@@ -67,5 +70,5 @@ def display_cart(list_products):
     # Add total sum after the table
     total = 0
     for product in list_products:
-        total += round(float(product['sum']), 2)
+        total += round(float(product['Sum $']), 2)
     print(f'Total: ${round(total, 2)}')
