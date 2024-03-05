@@ -1,6 +1,6 @@
 import csv, sys
 from tabulate import tabulate
-from termcolor import colored, cprint
+from termcolor import cprint
 from product import Product
 from constants import CSV_FILE, FIELDNAMES, FARM_LIST
 
