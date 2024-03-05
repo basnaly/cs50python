@@ -113,6 +113,9 @@ def delete(table, index):
 
 def change_quantity(table, index, new_quantity):
 
+    if index < 0:
+        
+
     # Set new quantity
     table[index]['Quantity'] = new_quantity
 
