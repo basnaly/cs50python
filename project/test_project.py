@@ -7,3 +7,7 @@ def test_product_calculate_sum():
     product.calculate_sum()
 
     assert product.sum == 5.2
+
+
+def test_get_product_obj():
+    product = Product
