@@ -34,7 +34,7 @@ def finish():
         (product['Name'], product['Price/Kg'], product['Quantity'], product['Sum $']) for product in data_list
     )
 
-    pdf.set_font('Times', size=18)
+    pdf.set_font('Times', size=16)
     pdf.y = 38
     with pdf.table(text_align='CENTER') as table:
 
@@ -50,7 +50,7 @@ def finish():
                 row.cell(datum)
 
     # Add total sum
-    pdf.set_font('Times', style='B', size=20)
+    pdf.set_font('Times', style='B', size=16)
     pdf.cell(0, 30, text=f'Total to pay: ${total_sum}', center=False)
 
     pdf.output('order.pdf')
