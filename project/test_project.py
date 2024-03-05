@@ -38,5 +38,17 @@ def test_add():
 
 def test_delete():
     table = [
+        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4},
+        {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
+    ]
+    table.pop(1)
+
+    assert table == [
+        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4}
+    ]
+
+
+def test_change_quantity():
+    table == [
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4}
     ]
