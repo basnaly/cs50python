@@ -7,8 +7,8 @@ FIELDNAMES=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $']
 
 # Create list of farm dict objects
 FARM_LIST = [
-    ,
-    {'Name': 'Banana', 'Icon': '🍌', 'Price/Kg': '4.80/kg'}{'Name': 'Carrot', 'Icon': '🥕', 'Price/Kg': '2.60/kg'},
+    {'Name': 'Carrot', 'Icon': '🥕', 'Price/Kg': '2.60/kg'},
+    {'Name': 'Banana', 'Icon': '🍌', 'Price/Kg': '4.80/kg'},
     {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': '1.20/kg'},
     {'Name': 'Apple', 'Icon': '🍎', 'Price/Kg': '4.30/kg'},
     {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': '2.70/kg'},
