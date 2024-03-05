@@ -118,8 +118,8 @@ def change_quantity(table, index, new_quantity):
         raise ValueError('Index doesn\'t exist in the table')
 
     if new_quantity < 0 and new_quantity > MAX_QUANTITY:
-        print('New quantity doesn\'t exist in the table')
-        raise ValueError('Index doesn\'t exist in the table')
+        print('New quantity mast be between 0 and 5')
+        raise ValueError('New quantity mast be between 0 and 5')
 
 
     # Set new quantity
