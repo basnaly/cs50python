@@ -56,6 +56,7 @@ class Product:
         # Calculate the sum of the product
         self.sum = round(self.price * float(self.quantity), 2)
 
+
     def save_to_csv(self, writer):
 
         # Save data of product in csv file
