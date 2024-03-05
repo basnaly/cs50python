@@ -1,5 +1,5 @@
 from product import Product
-
+from edit 
 
 def test_product_calculate_sum():
     product = Product('Carrot', '🥕', 2.6)
@@ -41,7 +41,7 @@ def test_delete():
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4},
         {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
     ]
-    table.pop(1)
+    delete(table, 1)
 
     assert table == [
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4}
@@ -53,8 +53,7 @@ def test_change_quantity():
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4},
         {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
     ]
-    table[0]['Quantity'] = 0.5
-    table[0]['Sum $'] = 0.6
+    change_quantity(table, 0, 0.5)
 
     assert table == [
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 0.5, 'Sum $': 0.6},
