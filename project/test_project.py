@@ -49,7 +49,7 @@ def test_delete():
 
 
 def test_change_quantity():
-    table == [
+    table = [
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4},
         {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
     ]
