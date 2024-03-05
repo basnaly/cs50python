@@ -2,7 +2,7 @@ import csv, sys
 from tabulate import tabulate
 from termcolor import cprint
 from product import Product
-from constants import CSV_FILE, FIELDNAMES, FARM_LIST
+from constants import CSV_FILE, FIELDNAMES, FARM_LIST, MAX_QUANTITY
 
 
 def edit():
@@ -46,11 +46,11 @@ def edit():
                 add(table)
 
             # If user selected '2' call delete function to delete an existing product from the cart
-            elif choice[0] == '2' and 0 < int(choice[1]) <= len(table):
+            elif choice[0] == '2':
                 delete(table, int(choice[1]) - 1)
 
             # If user selected '3' call change_quantity function
-            elif choice[0] == '3' and 0 < int(choice[1]) <= len(table):
+            elif choice[0] == '3':
                 change_quantity(table, int(choice[1]) - 1, float(choice[2]))
 
             else:
@@ -117,7 +117,9 @@ def change_quantity(table, index, new_quantity):
         print('Index doesn\'t exist in the table')
         raise ValueError('Index doesn\'t exist in the table')
 
-    if new_quantity < 0
+    if new_quantity < 0 and new_quantity > MAX_QUANTITY:
+        print('New quantity doesn\'t exist in the table')
+        raise ValueError('Index doesn\'t exist in the table')
 
 
     # Set new quantity
