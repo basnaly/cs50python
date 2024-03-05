@@ -10,7 +10,15 @@ def test_product_calculate_sum():
 
 
 def test_get_product_obj():
-    product = Product('Apple', '🍎', 4.3, 1.5, 6.45)
+    product = Product('Apple', '🍎', 4.3)
     product.get_product_obj()
+    product.quantity = 1.5
+    product.calculate_sum() == 6.45
 
-    assert product.
+    assert product.get_product_obj({
+        'Name': 'Apple',
+        'Icon': '🍎',
+        'Price/Kg': 4.3,
+        'Quantity': 1.5,
+        'Sum $': 6.45
+    })
