@@ -10,4 +10,7 @@ def test_product_calculate_sum():
 
 
 def test_get_product_obj():
-    product = Product
+    product = Product('Apple', '🍎', 4.3, 1.5, 6.45)
+    product.get_product_obj()
+
+    assert product.
