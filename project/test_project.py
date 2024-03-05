@@ -23,14 +23,13 @@ def test_get_product_obj():
         'Sum $': 6.45
     }
 
-
-table = [
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': '1.20/kg'},
         {'Name': 'Apple', 'Icon': '🍎', 'Price/Kg': '4.30/kg'},
         {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': '2.70/kg'},
-]
-
 
 def test_add():
     table = []
+    product = Product('Cucumber', '🥒', 1.2)
+    product.quantity = 2
+    product.sum = 2.4
 
