@@ -1,5 +1,7 @@
 from product import Product
 from edit import delete, change_quantity
+import pytest
+
 
 def test_product_calculate_sum():
     product = Product('Carrot', '🥕', 2.6)
@@ -47,5 +49,16 @@ def test_change_quantity():
         {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 0.5, 'Sum $': 0.6},
         {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
     ]
+
+
+def test_change_quantity_error_index():
+    table = [
+        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': 1.20, 'Quantity': 2, 'Sum $': 2.4},
+        {'Name': 'Tomato', 'Icon': '🍅', 'Price/Kg': 2.70, 'Quantity': 1.5, 'Sum $': 4.05}
+    ]
+    change_quantity(table, -1, 0.5)
+
+
+def test_change_quantity_error_quantity():
 
 
