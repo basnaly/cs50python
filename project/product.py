@@ -39,7 +39,7 @@ class Product:
         while True:
             try:
                 # Get quantity of the produt
-                selected_quantity = float(input('Select quantity: '))
+                selected_quantity = float(input('Select quantity, kg: '))
                 if selected_quantity < 0 or selected_quantity > MAX_QUANTITY:
                     continue
                 else:
