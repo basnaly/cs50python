@@ -32,5 +32,5 @@ def test_add():
     table.append(product.get_product_obj())
 
     assert table == [
-        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': '1.20/kg'}
+        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': '1.20/kg', 'Quantity': 2, 'Sum $': 2.4}
     ]
