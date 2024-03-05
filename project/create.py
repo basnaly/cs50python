@@ -71,4 +71,4 @@ def display_cart(list_products):
     total = 0
     for product in list_products:
         total += round(float(product['Sum $']), 2)
-    print(f'Total: ${round(total, 2)}', attrs=['bold')
+    cprint(f'Total: ${round(total, 2)}', attrs=['bold'])
