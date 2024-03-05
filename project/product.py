@@ -20,7 +20,7 @@ class Product:
         while True:
             try:
                 # Get product's index
-                selected_index = int(input('Select product: '))
+                selected_index = int(input('\nSelect product: '))
                 if selected_index < 0 or selected_index > len(FARM_LIST):
                     continue
                 else:
