@@ -32,4 +32,4 @@ def test_add():
     product = Product('Cucumber', '🥒', 1.2)
     product.quantity = 2
     product.sum = 2.4
-
+    table.append(current_product.get_product_obj())
