@@ -34,7 +34,7 @@ FARM_LIST = [
     {'Name': 'Cherries', 'Icon': '🍒', 'Price/Kg': '18.4/kg'},
     {'Name': 'Strawberries', 'Icon': '🍓', 'Price/Kg': '15.8/kg'},
     {'Name': 'Avocado', 'Icon': '🥑', 'Price/Kg': '8.5/kg'},
-    {'Name': 'Blieberries', 'Icon': '🫐', 'Price/Kg': '29.0/kg'},
+    {'Name': 'Bluberries', 'Icon': '🫐', 'Price/Kg': '29.0/kg'},
     {'Name': 'Mango', 'Icon': '🥭', 'Price/Kg': '3.9/kg'},
     {'Name': 'Ginger root', 'Icon': '🫚', 'Price/Kg': '19.5/kg'},
 ]
