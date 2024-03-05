@@ -44,14 +44,17 @@ class Product:
                     continue
                 else:
                     self.quantity = selected_quantity
-
-                    # Calculate the sum of the product
-                    self.sum = round(self.price * float(self.quantity), 2)
+                    self.calculate_sum()
 
                 return
 
             except ValueError:
                 continue
+
+
+    def calculate_sum(self):
+        # Calculate the sum of the product
+        self.sum = round(self.price * float(self.quantity), 2)
 
     def save_to_csv(self, writer):
 
