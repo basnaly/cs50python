@@ -15,7 +15,7 @@ def finish():
     # Get data from csv file
     data_list, total_sum = get_data()
 
-    pdf = FPDF(orientation='L', unit='mm', format='A5')
+    pdf = FPDF(orientation='P', unit='mm', format='A4')
     pdf.add_page()
 
     # Add title
@@ -64,7 +64,6 @@ def get_data():
             reader = csv.DictReader(file)
             for row in reader:
                 csv_list.append(row)
-            # print(tabulate(csv_list, headers="keys", tablefmt="grid"))
 
             total = 0
             for product in csv_list:
