@@ -24,9 +24,13 @@ def test_get_product_obj():
     }
 
 
-def test_add(table):
+def test_add():
     table = []
     product = Product('Cucumber', '🥒', 1.2)
     product.quantity = 2
     product.sum = 2.4
-    table.append(current_product.get_product_obj())
+    table.append(product.get_product_obj())
+
+    assert table == [
+        {'Name': 'Cucumber', 'Icon': '🥒', 'Price/Kg': '1.20/kg'}
+    ]
