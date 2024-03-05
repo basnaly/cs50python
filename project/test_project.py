@@ -31,5 +31,6 @@ table = [
 ]
 
 
-def test_delete(table, index):
+def test_add():
+    table = []
 
