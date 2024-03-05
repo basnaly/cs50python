@@ -23,7 +23,7 @@ def finish():
     pdf.y = 10
     pdf.cell(text=f'Order from F&V farm', center=True, new_y='TOP')
 
-    # Add date
+    # Add date of order
     pdf.set_font('Times', style='', size=16)
     pdf.y = 25
     pdf.x = 10
