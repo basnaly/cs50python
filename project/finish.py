@@ -62,9 +62,12 @@ def get_data():
     try:
         with open('cart.csv') as file:
             reader = csv.DictReader(file)
+
+            # Add the data into csv_list
             for row in reader:
                 csv_list.append(row)
 
+            # Calculate total of the odrer
             total = 0
             for product in csv_list:
                 total += round(float(product['Sum $']), 2)
