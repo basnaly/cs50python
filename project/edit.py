@@ -50,7 +50,7 @@ def edit():
                 delete(table, int(choice[1]) - 1)
 
             # If user selected '3' call change_quantity function
-            elif choice[0] == '3':
+            elif choice[0] == '3' and 0 < int(choice[1]) <= len(table):
                 change_quantity(table, int(choice[1]) - 1, float(choice[2]))
 
             else:
