@@ -1,5 +1,5 @@
 from product import Product
-from edit 
+from edit import add, delete, change_quantity
 
 def test_product_calculate_sum():
     product = Product('Carrot', '🥕', 2.6)
