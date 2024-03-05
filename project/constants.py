@@ -1,7 +1,7 @@
 
 CSV_FILE = 'cart.csv'
 
-# Set fieldnames in 
+# Set fieldnames in csv file
 FIELDNAMES=['Name', 'Icon', 'Price/Kg', 'Quantity', 'Sum $']
 
 
