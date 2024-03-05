@@ -113,10 +113,12 @@ def delete(table, index):
 
 def change_quantity(table, index, new_quantity):
 
+    # Check legal index options
     if index < 0 or index >= len(table):
         print('Index doesn\'t exist in the table')
         raise ValueError('Index doesn\'t exist in the table')
 
+    # Check legal new quantity options
     if new_quantity < 0 or new_quantity > MAX_QUANTITY:
         print('New quantity must be between 0 and 5')
         raise ValueError('New quantity must be between 0 and 5')
