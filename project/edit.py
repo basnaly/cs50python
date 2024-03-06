@@ -24,7 +24,7 @@ def edit():
 
             # Display user's cart
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
-            cprint(f'Total: ${total}\n', attrs=['bold'])
+            cprint(f'Total: ${round(total, 2)}\n', attrs=['bold'])
 
     except FileNotFoundError:
         sys.exit('File does not exist')
@@ -40,18 +40,34 @@ def edit():
             cprint('4. To exit and save use Ctrl-D.', 'blue')
 
             choice = input('Your choice: ').split(' ')
+            print(choice, len(choice))
 
             # If user selected '1' call add function to add a new product to the cart
             if choice[0] == '1':
                 add(table)
 
+            # If user didn't pass the second argument, ask again
+            elif choice[0] == '2' and len(choice) != 2:
+                continue
+
             # If user selected '2' call delete function to delete an existing product from the cart
             elif choice[0] == '2':
-                delete(table, int(choice[1]) - 1)
+
+                if int(choice[1]) > 0 and int(choice[1]) <= len(table):
+                    delete(table, int(choice[1]) - 1)
+                else:
+                    continue
+
+            elif choice[0] == '3' and len(choice) != 3:
+                continue
 
             # If user selected '3' call change_quantity function
             elif choice[0] == '3':
-                change_quantity(table, int(choice[1]) - 1, float(choice[2]))
+
+                if (int(choice[1]) > 0 and int(choice[1]) <= len(table)) and (float(choice[2]) > 0 and float(choice[2]) <= MAX_QUANTITY):
+                    change_quantity(table, int(choice[1]) - 1, float(choice[2]))
+                else:
+                    continue
 
             else:
                 continue
@@ -63,7 +79,7 @@ def edit():
 
             # Display updated list of user's products
             print(tabulate(table, headers='keys', tablefmt='grid', showindex=[i+1 for i,e in enumerate(table)]))
-            cprint(f'Total: ${total}\n', attrs=['bold'])
+            cprint(f'Total: ${round(total, 2)}\n', attrs=['bold'])
 
         except ValueError as e:
             continue
@@ -106,13 +122,11 @@ def add(table):
 
 
 def delete(table, index):
-
     # Delete product from table by its index
     table.pop(index)
 
 
 def change_quantity(table, index, new_quantity):
-
     # Check legal index options
     if index < 0 or index >= len(table):
         print('Index doesn\'t exist in the table')
