@@ -58,7 +58,6 @@ class Product:
 
 
     def save_to_csv(self, writer):
-
         # Save data of product in csv file
         row = self.get_product_obj()
         writer.writerow(row)
