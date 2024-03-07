@@ -1,6 +1,5 @@
 import csv, sys
 from tabulate import tabulate
-# pip install tabulate
 
 from product import Product
 from termcolor import cprint
