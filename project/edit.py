@@ -40,7 +40,6 @@ def edit():
             cprint('4. To exit and save use Ctrl-D.', 'blue')
 
             choice = input('Your choice: ').split(' ')
-            print(choice, len(choice))
 
             # If user selected '1' call add function to add a new product to the cart
             if choice[0] == '1':
