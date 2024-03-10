@@ -10,7 +10,7 @@ def main():
     parser.add_argument('-m', '--mode', help='Select one of three modes: create, edit or finish', type=str)
     args = parser.parse_args()
 
-    if args.mode == 'create':
+    if is_create():
         create()
     elif args.mode == 'edit':
         edit()
@@ -19,6 +19,8 @@ def main():
     else:
         print('Not supported option. Select one of three modes: create, edit or finish.')
 
+def is_create(mode):
+    return mode == 'create'
 
 if __name__ == '__main__':
     main()
