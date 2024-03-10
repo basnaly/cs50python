@@ -1,11 +1,16 @@
 import argparse
 from product import Product
+from main import is_create, is_edit, is_finish
 from edit import delete, change_quantity
 import pytest
 
 
 def test_is_create():
-    
+    assert is_create('Create') == True
+
+
+def test_is_edit():
+    assert is_edit('edit') == True
 
 
 def test_product_calculate_sum():
