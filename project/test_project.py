@@ -1,6 +1,6 @@
 import argparse
 from product import Product
-from main import is_create, is_edit, is_finish
+from project import is_create, is_edit, is_finish
 from edit import delete, change_quantity
 import pytest
 
