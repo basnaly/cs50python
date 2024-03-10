@@ -6,11 +6,27 @@ import pytest
 
 
 def test_is_create():
-    assert is_create('Create') == True
+    assert is_create('create') == True
+
+
+def test_is_create_not_valid():
+    assert is_create('Create') == False
 
 
 def test_is_edit():
     assert is_edit('edit') == True
+
+
+def test_is_edit_not_valid():
+    assert is_edit('change') == False
+
+
+def test_is_finish():
+    assert is_finish('finish') == True
+
+
+def test_is_finish_not_valid():
+    assert is_finish('f') == False
 
 
 def test_product_calculate_sum():
