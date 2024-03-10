@@ -3,6 +3,9 @@ from edit import delete, change_quantity
 import pytest
 
 
+def test_is_create():
+    
+
 def test_product_calculate_sum():
     product = Product('Carrot', '🥕', 2.6)
     product.quantity = 2

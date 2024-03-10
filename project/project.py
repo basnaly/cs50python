@@ -12,9 +12,9 @@ def main():
 
     if is_create(args.mode):
         create()
-    elif args.mode == 'edit':
+    elif is_edit(args.mode):
         edit()
-    elif args.mode == 'finish':
+    elif is_finish(args.mode):
         finish()
     else:
         print('Not supported option. Select one of three modes: create, edit or finish.')
@@ -22,6 +22,15 @@ def main():
 
 def is_create(mode):
     return mode == 'create'
+
+
+def is_edit(mode):
+    return mode == 'edit'
+
+
+def is_finish(mode):
+    return mode == 'finish'
+
 
 if __name__ == '__main__':
     main()
